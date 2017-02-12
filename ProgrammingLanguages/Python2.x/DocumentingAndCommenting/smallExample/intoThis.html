@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0061)https://pythonhosted.org/an_example_pypi_project/pkgcode.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <title>Documentation for the Code — an_example_pypi_project v0.0.5 documentation</title>
+    <link rel="stylesheet" href="./intoThis_files/default.css" type="text/css">
+    <link rel="stylesheet" href="./intoThis_files/pygments.css" type="text/css">
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.5',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="./intoThis_files/jquery.js.download"></script>
+    <script type="text/javascript" src="./intoThis_files/doctools.js.download"></script>
+    <link rel="top" title="an_example_pypi_project v0.0.5 documentation" href="https://pythonhosted.org/an_example_pypi_project/index.html">
+    <link rel="next" title="Building and Uploading Your Sphinx Docs to pypi" href="https://pythonhosted.org/an_example_pypi_project/buildanduploadsphinx.html">
+    <link rel="prev" title="Getting Started With setuptools and setup.py" href="https://pythonhosted.org/an_example_pypi_project/setuptools.html"> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="https://pythonhosted.org/an_example_pypi_project/genindex.html" title="General Index" accesskey="I">index</a></li>
+        <li class="right">
+          <a href="https://pythonhosted.org/an_example_pypi_project/modindex.html" title="Global Module Index" accesskey="M">modules</a> |</li>
+        <li class="right">
+          <a href="https://pythonhosted.org/an_example_pypi_project/buildanduploadsphinx.html" title="Building and Uploading Your Sphinx Docs to pypi" accesskey="N">next</a> |</li>
+        <li class="right">
+          <a href="https://pythonhosted.org/an_example_pypi_project/setuptools.html" title="Getting Started With setuptools and setup.py" accesskey="P">previous</a> |</li>
+        <li><a href="https://pythonhosted.org/an_example_pypi_project/index.html">an_example_pypi_project v0.0.5 documentation</a> »</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-an_example_pypi_project">
+<h1>Documentation for the Code<a class="headerlink" href="https://pythonhosted.org/an_example_pypi_project/pkgcode.html#module-an_example_pypi_project" title="Permalink to this headline">¶</a></h1>
+<p>A pypi demonstration vehicle.</p>
+<div class="section" id="module-useful_1">
+<h2>useful #1 – auto members<a class="headerlink" href="https://pythonhosted.org/an_example_pypi_project/pkgcode.html#module-useful_1" title="Permalink to this headline">¶</a></h2>
+<p>This is something I want to say that is not in the docstring.</p>
+<p><em>Platforms: </em>Unix, Windows</p>
+<dl class="class">
+<dt id="an_example_pypi_project.useful_1.MyPublicClass">
+<em class="property">class </em><tt class="descclassname">an_example_pypi_project.useful_1.</tt><tt class="descname">MyPublicClass</tt><big>(</big><em>foo</em>, <em>bar='baz'</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/an_example_pypi_project/pkgcode.html#an_example_pypi_project.useful_1.MyPublicClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>We use this as a public class example class.</p>
+<p>You never call this class before calling <tt class="xref docutils literal"><span class="pre">public_fn_with_sphinxy_docstring()</span></tt>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An example of intersphinx is this: you <strong>cannot</strong> use <a title="(in Python v2.6)" class="reference external" href="http://docs.python.org/library/pickle.html#module-pickle"><tt class="xref docutils literal"><span class="pre">pickle</span></tt></a> on this class.</p>
+</div>
+<dl class="method">
+<dt id="an_example_pypi_project.useful_1.MyPublicClass.get_foobar">
+<tt class="descname">get_foobar</tt><big>(</big><em>foo</em>, <em>bar=True</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/an_example_pypi_project/pkgcode.html#an_example_pypi_project.useful_1.MyPublicClass.get_foobar" title="Permalink to this definition">¶</a></dt>
+<dd><p>This gets the foobar</p>
+<p>This really should have a full function definition, but I am too lazy.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">get_foobar</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="go">30</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">get_foobar</span><span class="p">(</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">)</span>
+<span class="go">ab</span>
+</pre></div>
+</div>
+<p>Isn’t that what you want?</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="an_example_pypi_project.useful_1.public_fn_with_googley_docstring">
+<tt class="descclassname">an_example_pypi_project.useful_1.</tt><tt class="descname">public_fn_with_googley_docstring</tt><big>(</big><em>name</em>, <em>state=None</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/an_example_pypi_project/pkgcode.html#an_example_pypi_project.useful_1.public_fn_with_googley_docstring" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function does something.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>name (str):  The name to use.</dd>
+<dt>Kwargs:</dt>
+<dd>state (bool): Current state to be in.</dd>
+<dt>Returns: </dt>
+<dd><p class="first">int.  The return code:</p>
+<div class="last highlight-python"><pre>0 -- Success!
+1 -- No good. 
+2 -- Try again. </pre>
+</div>
+</dd>
+<dt>Raises:</dt>
+<dd>AttributeError, KeyError</dd>
+</dl>
+<p>A really great idea.  A way you might use me is</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">public_fn_with_googley_docstring</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">'foo'</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<p>BTW, this always returns 0.  <strong>NEVER</strong> use with <tt class="xref docutils literal"><span class="pre">MyPublicClass</span></tt>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="an_example_pypi_project.useful_1.public_fn_with_sphinxy_docstring">
+<tt class="descclassname">an_example_pypi_project.useful_1.</tt><tt class="descname">public_fn_with_sphinxy_docstring</tt><big>(</big><em>name</em>, <em>state=None</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/an_example_pypi_project/pkgcode.html#an_example_pypi_project.useful_1.public_fn_with_sphinxy_docstring" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function does something.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><em>name</em> (str.) – The name to use.</li>
+<li><em>state</em> (bool.) – Current state to be in.</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">int – the return code.</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">AttributeError, KeyError</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-an_example_pypi_project.useful_2">
+<h2>useful #2 – explicit members<a class="headerlink" href="https://pythonhosted.org/an_example_pypi_project/pkgcode.html#module-an_example_pypi_project.useful_2" title="Permalink to this headline">¶</a></h2>
+<p>This is something I want to say that is not in the docstring.</p>
+<p>A very useful module indeed.</p>
+<dl class="function">
+<dt id="an_example_pypi_project.useful_2.public_fn_with_sphinxy_docstring">
+<tt class="descclassname">an_example_pypi_project.useful_2.</tt><tt class="descname">public_fn_with_sphinxy_docstring</tt><big>(</big><em>name</em>, <em>state=None</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/an_example_pypi_project/pkgcode.html#an_example_pypi_project.useful_2.public_fn_with_sphinxy_docstring" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function does something.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><em>name</em> (str.) – The name to use.</li>
+<li><em>state</em> (bool.) – Current state to be in.</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">int – the return code.</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">AttributeError, KeyError</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="an_example_pypi_project.useful_2._private_fn_with_docstring">
+<tt class="descclassname">an_example_pypi_project.useful_2.</tt><tt class="descname">_private_fn_with_docstring</tt><big>(</big><em>foo</em>, <em>bar='baz'</em>, <em>foobarbas=None</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/an_example_pypi_project/pkgcode.html#an_example_pypi_project.useful_2._private_fn_with_docstring" title="Permalink to this definition">¶</a></dt>
+<dd>I have a docstring, but won’t be imported if you just use <tt class="docutils literal"><span class="pre">:members:</span></tt>.</dd></dl>
+
+<dl class="class">
+<dt id="an_example_pypi_project.useful_2.MyPublicClass">
+<em class="property">class </em><tt class="descclassname">an_example_pypi_project.useful_2.</tt><tt class="descname">MyPublicClass</tt><big>(</big><em>foo</em>, <em>bar='baz'</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/an_example_pypi_project/pkgcode.html#an_example_pypi_project.useful_2.MyPublicClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>We use this as a public class example class.</p>
+<p>You never call this class before calling <a title="an_example_pypi_project.useful_2.public_fn_with_sphinxy_docstring" class="reference internal" href="https://pythonhosted.org/an_example_pypi_project/pkgcode.html#an_example_pypi_project.useful_2.public_fn_with_sphinxy_docstring"><tt class="xref docutils literal"><span class="pre">public_fn_with_sphinxy_docstring()</span></tt></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An example of intersphinx is this: you <strong>cannot</strong> use <a title="(in Python v2.6)" class="reference external" href="http://docs.python.org/library/pickle.html#module-pickle"><tt class="xref docutils literal"><span class="pre">pickle</span></tt></a> on this class.</p>
+</div>
+<dl class="method">
+<dt id="an_example_pypi_project.useful_2.MyPublicClass.get_foobar">
+<tt class="descname">get_foobar</tt><big>(</big><em>foo</em>, <em>bar=True</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/an_example_pypi_project/pkgcode.html#an_example_pypi_project.useful_2.MyPublicClass.get_foobar" title="Permalink to this definition">¶</a></dt>
+<dd><p>This gets the foobar</p>
+<p>This really should have a full function definition, but I am too lazy.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">get_foobar</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="go">30</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">get_foobar</span><span class="p">(</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">)</span>
+<span class="go">ab</span>
+</pre></div>
+</div>
+<p>Isn’t that what you want?</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="an_example_pypi_project.useful_2.MyPublicClass._get_baz">
+<tt class="descname">_get_baz</tt><big>(</big><em>baz=None</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/an_example_pypi_project/pkgcode.html#an_example_pypi_project.useful_2.MyPublicClass._get_baz" title="Permalink to this definition">¶</a></dt>
+<dd><p>A private function to get baz.</p>
+<p>This really should have a full function definition, but I am too lazy.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="https://pythonhosted.org/an_example_pypi_project/index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference external" href="https://pythonhosted.org/an_example_pypi_project/pkgcode.html">Documentation for the Code</a><ul>
+<li><a class="reference external" href="https://pythonhosted.org/an_example_pypi_project/pkgcode.html#module-useful_1">useful #1 – auto members</a></li>
+<li><a class="reference external" href="https://pythonhosted.org/an_example_pypi_project/pkgcode.html#module-an_example_pypi_project.useful_2">useful #2 – explicit members</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="https://pythonhosted.org/an_example_pypi_project/setuptools.html" title="previous chapter">Getting Started With <tt class="docutils literal docutils literal"><span class="pre">setuptools</span></tt> and <tt class="docutils literal docutils literal"><span class="pre">setup.py</span></tt></a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="https://pythonhosted.org/an_example_pypi_project/buildanduploadsphinx.html" title="next chapter">Building and Uploading Your Sphinx Docs to pypi</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="https://pythonhosted.org/an_example_pypi_project/_sources/pkgcode.txt" rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="">
+            <h3>Quick search</h3>
+              <form class="search" action="https://pythonhosted.org/an_example_pypi_project/search.html" method="get">
+                <input type="text" name="q" size="18">
+                <input type="submit" value="Go">
+                <input type="hidden" name="check_keywords" value="yes">
+                <input type="hidden" name="area" value="default">
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="https://pythonhosted.org/an_example_pypi_project/genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="https://pythonhosted.org/an_example_pypi_project/modindex.html" title="Global Module Index">modules</a> |</li>
+        <li class="right">
+          <a href="https://pythonhosted.org/an_example_pypi_project/buildanduploadsphinx.html" title="Building and Uploading Your Sphinx Docs to pypi">next</a> |</li>
+        <li class="right">
+          <a href="https://pythonhosted.org/an_example_pypi_project/setuptools.html" title="Getting Started With setuptools and setup.py">previous</a> |</li>
+        <li><a href="https://pythonhosted.org/an_example_pypi_project/index.html">an_example_pypi_project v0.0.5 documentation</a> »</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      © Copyright 2009, Andrew Carter.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.3.
+    </div>
+  
+</body></html>

@@ -1,0 +1,19 @@
+Algorithms and data structures:
+Book, Steven. S. Skiena, The Algorithm Design Manual
+
+Applied mathamatics:
+College booklets, Neven Elezovic
+
+Programming languages:
+Collection of free book, https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md
+Collection of reference guides, https://learnxinyminutes.com/
+
+Data science or machine learning:
+Website/blog, http://www.dataschool.io/
+
+Solving problems:
+Mathametical problems, https://projecteuler.net/about
+
+Vocabulary:
+a programming language neutral dictionary which establishes a common group of words to describe the same language features
+

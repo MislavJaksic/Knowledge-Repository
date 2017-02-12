@@ -1,0 +1,30 @@
+Setup, generate html docs:
+1) Position your command line in <top level project folder> (tutorial name: "triangle-project")
+2) Type "sphinx-build" and you should see a lot of text
+3) Type "sphinx-quickstart" and answer all the questions (consult the handout.pdf)
+4) Folder called doc will be created with conf.py
+5) You can change conf.py if you mess up the quickstart (it conteins many useful settings)
+6) Position your command line into doc folder
+7) Type "make html" and open _build/html/index.html to see your documentation
+---Optional---
+8) To use autodoc open up conf.py and uncomment or change to sys.path.insert(0, os.path.abspath('..'))
+8a) You have to add <top level project folder> to sys.path
+9) To change the style of documentation, change html_theme in conf.py
+9a) View styles at sphinx.org
+10) You can destroy eveything that was created with "make" with "make clean"
+
+Step by step write api.py guide:
+1) Position your command line in doc
+2) Create an empty file api.rst and open it
+3) Read RST Quick Reference in the handout.pdf to see the RST syntax
+4) Write a part of api.rst, such as the title:
+My Title
+========
+5) Edit index.rst and link api.rst to it
+6) Link by putting three spaces before the name of the file, api
+7) Type "make html" to refresh the html files
+8) To generate docs from .py files, open up api.rst and write: 
+.. automodule:: trianglelib
+   :members:
+---Optional---
+9) You can look up how to use autodoc with sphinx at sphinx.org, extensions
