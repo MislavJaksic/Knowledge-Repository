@@ -20,4 +20,5 @@ else:
   print
   print "When a for loop exhaust the list, it will execute an else condition."
   
-#continue skips to the next loop iteration while break exits the innermost loop or if condiction
+#continue skips to the next loop iteration
+#break exits the innermost loop or if statement

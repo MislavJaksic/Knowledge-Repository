@@ -1,4 +1,5 @@
-#Python's hash table
+#Python's hash table (dictionary)
+
 # {key1:value1, key2:value2, ...}
 dict = {'1' : 'One'}
 dict['2'] = 'Two'

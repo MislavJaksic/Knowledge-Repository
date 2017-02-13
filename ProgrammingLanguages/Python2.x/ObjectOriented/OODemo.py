@@ -1,45 +1,46 @@
 #Class is a blueprint for creating objects
-#All classes inherite from some other class
+#All classes inherit some other class
 #Python "object" != object
 #Python "object" is a generic base Python class
-#Object is what is created from a class
-class Satellite(object): #this is a Python "object"
-  #Class variables are the same for all objects
-  manufacturer = "NASA"
-  
-  #(Attribute) methods are shared between objects
-  #Special method: Called first after creating an instance
-  def __init__(self, velocity, startLongitude, startLatitude):
-    #Assign a value to an instance variable (data attribute)
-	#Instance variables are unique to each object
-    #self.velocity != velocity
-    #self.velocity is an instance variable
-    #velocity is a parameter given upon object creation
-    self.velocity = velocity
-    self.startLongitude = startLongitude
-    self.startLatitude = startLatitude
-	#Composition, satellite has a camera
-	self.camera = Camera(720)
+#Object is what is created (instantiated) from a class
+class Camera(object): #inherit a Python "object"
+  #Class variables are shared by all objects
+  manufacturer = "Nokia"
 
-  #Another (attribute) method
+  #Constructor method: called first after creating an object
+  def __init__(self, size, memory, quality):
+    #Assign a value to an instance variable (data Varribute)
+	#Instance variables are unique to each object
+    #self.size != size
+    #self.size is an instance variable
+    #size is a parameter given upon object creation
+    self.size = size
+    self.memory = memory
+    self.quality = quality
+	#Composition, camera has a lens
+    self.Lens = Lens(720)
+
+  #Method
+  #self is a reference to the object that is calling the method
+  #All methods must have self as their first parameter
   def PrintData(self):
-    print "Printed by Satellite"
+    print "Printed by Camera"
     print "Class variable is {}.". format(self.manufacturer)
-    print "Instance variables are {} {} {}".format(self.velocity,
-    self.startLongitude, self.startLatitude)
+    print "Instance variables are {} {} {}".format(self.size,
+    self.memory, self.quality)
 
   def ImpliedAction(self):
-    print "Satellite implied"
+    print "Camera implied"
 	
   def OverridenAction(self):
-    print "Satellite overriden"
+    print "Camera overriden"
 	
-  def Altered(self):
-    print "Satellite altered"
+  def AlteredAction(self):
+    print "Camera altered"
 
-#Each satellite has one
+#Each Camera has one
 #Demonstrates composition
-class Camera(object):
+class Lens(object):
   
   def __init__(self, resolution):
     self.resolution = resolution
@@ -47,51 +48,55 @@ class Camera(object):
   def TakePhoto(self):
     print "Photo taken"
 	
-#Inheritance, it can imply, override or alter an action on the parent
+#Inheritance, it can imply, override or alter an action of the parent
 #If a child class doesen't have a method you called, a parent method will be called
-class SaturnOne(Satellite):
+class ChildCamera(Camera):
   
-  def __init__(self, velocity, startLongitude, startLatitude):
-    super(SaturnOne, self).__init__(velocity, startLongitude, startLatitude)
+  def __init__(self, size, memory, quality):
+    #super invokes the parent constructor
+    super(ChildCamera, self).__init__(size, memory, quality)
 	
   def PrintData(self):
-    print "Printed by SaturnOne"
+    print "Printed by ChildCamera"
     print "Class variable is {}.". format(self.manufacturer)
-    print "Instance variables are {} {} {}".format(self.velocity,
-    self.startLongitude, self.startLatitude)
+    print "Instance variables are {} {} {}".format(self.size,
+    self.memory, self.quality)
 	
+  #ImpliedAction has been inherited from Camera
+
   def OverridenAction(self):
-    print "Saturn One overriden"
+    print "ChildCamera overriden"
 	
-  def Altered(self):
-    print "Saturn One before satellite altered"
-    super(SaturnOne, self).Altered()
-    print "Saturn One after satellite altered"
+  def AlteredAction(self):
+    print "ChildCamera before Camera altered"
+    super(ChildCamera, self).AlteredAction()
+    print "ChildCamera after Camera altered"
 	
 
-#Create an object from a class Satellite
-satOne = Satellite(-120, 50000, 60000)
-satTwo = Satellite(77, -99, -99)
-#Access class and instance variable
-print Satellite.manufacturer #-> NASA
-print satOne.manufacturer #-> NASA
-print satOne.velocity #-> -120
+#Create an object from a class Camera
+camOne = Camera(-12, 5, 6)
+camTwo = Camera(7, -9, -8)
+#Access class variable
+print Camera.manufacturer #-> Nokia
+#Access instance variable
+print camOne.size #-> -12
 #Use an object's method
 #Methods can be stored just like functions
-satOne.PrintData()
+storeMethod = camOne.PrintData()
+storeMethod #-> Camera, Nokia, -12 5 6
 
 #Add an instance variable to an object
-satOne.anotherAtt = 5
-print satOne.anotherAtt #-> 5
+camOne.anotherVar = 5
+print camOne.anotherVar #-> 5
 
 #Changing a class variable changes it for all objects
-Satellite.manufacturer = "BLANK" # != satOne.manufacturer = "BLANK" !!!
-print satOne.manufacturer #-> BLANK
-print satTwo.manufacturer #-> BLANK
+Camera.manufacturer = "BLANK" # != camOne.manufacturer = "BLANK" !!!
+print camOne.manufacturer #-> BLANK
+print camTwo.manufacturer #-> BLANK
 
 #Create a child class
-USSat = SaturnOne(555, 87, 1235)
-print USSat.manufacturer #-> BLANK
-SaturnOne.manufacturer = "RUS"
-print USSat.manufacturer #-> RUS
-print satOne.manufacturer #-> BLANK
+camThree = ChildCamera(555, 87, 1235)
+print ChildCamera.manufacturer #-> BLANK
+ChildCamera.manufacturer = "RUS"
+print ChildCamera.manufacturer #-> RUS
+print Camera.manufacturer #-> BLANK

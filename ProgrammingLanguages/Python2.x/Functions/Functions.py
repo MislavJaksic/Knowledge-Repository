@@ -1,12 +1,14 @@
 def BeginFunc():
   #Two spaces are used as indents; there are no curly brackets
   
-  outsideVar = 5
-  
-  #A function cannot change an outside variable
-  #because you cannot pass it as a reference
-  print SquareVar(outsideVar) #-> 25
-  print outsideVar #-> 5
+  outsideArray = [0, 1, 2]
+  #A function cannot change at what the outside variable is pointing
+  ChangePointer(outsideArray)
+  print outsideArray #-> [0, 1, 2]
+  #A function can change an outside object
+  #and can return more then one value
+  ChangeArray(outsideArray)
+  print outsideArray #-> [0, 1, 2, 3]
   
   #A simple recursive function
   outsideString = "abdcba"
@@ -19,9 +21,12 @@ def BeginFunc():
   #Call a function with positional arguments
   print storeFunction("abba", 1, "Variable", "arguments") #-> "Yes"
   
-def SquareVar(inputVar):
-  inputVar = inputVar*inputVar
-  return inputVar
+def ChangePointer(inputArray):
+  inputArray = [0, 1, 2, 3]
+
+def ChangeArray(inputArray):
+  inputArray.append(3)
+  return 1, 2, 3, 4
   
 def CheckPalindrome(string, checkPosition=0, *manyArgs):
   """Default argument checkPosition. It is evaluated only once.

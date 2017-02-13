@@ -17,3 +17,11 @@ Mathametical problems, https://projecteuler.net/about
 Vocabulary:
 a programming language neutral dictionary which establishes a common group of words to describe the same language features
 
+Program cookbook:
+a list of common problems and solutions
+
+Evolution programming:
+how to make programs make themsleves better
+
+Design patters:
+an interesting subject; research it

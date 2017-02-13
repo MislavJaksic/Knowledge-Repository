@@ -1,3 +1,5 @@
+#Built in array functions: https://docs.python.org/2/tutorial/datastructures.html#more-on-lists
+
 #Arrays(called lists in Python)
 listOne = [0, 1, 2, 3, 4]
 #Assign a reference; doesen't copy the object
@@ -12,8 +14,8 @@ print listOne.pop() #-> 5
 print listTwo[2] #-> 2
 # Slicing
 # [| 0 | 1 | 2 | 3 | 4 |]
-# 0    1   2   3   4   5
-#-5   -4  -3  -2  -1
+#  0   1   2   3   4   5
+# -5  -4  -3  -2  -1
 print listOne[2:4] #-> [2, 3]
 print listTwo[-4:-3] #-> [1]
 

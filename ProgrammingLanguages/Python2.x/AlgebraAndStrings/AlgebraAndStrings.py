@@ -13,20 +13,15 @@ print False or True #-> True
 print False and True #-> False
 print not False #-> True
 
-#Referencing and pointing
+#Assignment
 #a points at 5
 a = 5
-#b points where a points
+#b points where a points (b points at 5)
 b = a
-print b #-> 5
 #Assignment changes what you point at, not what is stored at that point
 b = 6
 print a #-> 5
 print b #-> 6
-a = 5
-b = a
-a = 6
-print b #-> 5
 
 #Strings
 c = "String"

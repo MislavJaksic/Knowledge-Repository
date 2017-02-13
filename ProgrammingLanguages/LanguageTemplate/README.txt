@@ -11,7 +11,7 @@ Folders
 
 -DocumentingAndCommenting: teaches how to properly document and explain code to users and other programmers as well as how to generate structured documentation from the program's comments
 
--Functions: teaches how to declare a function, how to invoke and pass variables to functions, what if there is an unknown number of parameters or if some have default values
+-Functions: teaches how to declare a function, how to invoke and pass variables to functions, how to pass by reference and pass by value, what if there is an unknown number of parameters or if some have default values, how many variables can a function return
 
 -HashTable: teaches how to make a complicated, but fast and simple to access data structure
 
@@ -25,6 +25,6 @@ Folders
 
 -ObjectOriented: describes what are classes, objects, methods, attributes, inheritance(is a), composition (has a), how objects communicate
 
--Setup: simple program designed to check whether the programming environment has been setup correctly
+-Setup: introduces the language, says what to install and how to run a program designed to check whether the programming environment has been setup correctly
 
 -Testing: teaches the concept of automated unit testing, shows tools that make tests independent

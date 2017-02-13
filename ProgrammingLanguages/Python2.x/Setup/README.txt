@@ -1,8 +1,6 @@
-How to setup the Python interpreter
-===================================
+Setting up Python
+=================
 
-Introduction
-------------
 Python is an interpreter language with a simple and graceful syntax. Interpreter languages come with an interpreter that execute a program as it is being read. As a consequence, there is no distinction between source files and executable files.
 
 Python distribution
