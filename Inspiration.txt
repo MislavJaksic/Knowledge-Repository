@@ -21,7 +21,7 @@ Program cookbook:
 a list of common problems and solutions
 
 Evolution programming:
-how to make programs make themsleves better
+how to make selfimproving programs
 
 Design patters:
 an interesting subject; research it

@@ -1,18 +1,16 @@
 How to setup Java
 =================
 
-Introduction
-------------
-Java is an exclusivly object oriented compiler language. Object oriented languages model every program as if it were an object in the real world. Compiler languages read and transform a source file into an executable file. Java source files are marked by a .java extension, while Java executables have a .class extension. In order to compile a program, Java Development Kit in needed.
+Java is an exclusivley object oriented compiler language. Object oriented languages model every program as if it were an object in the real world. Compiler languages read and transform a source file into an executable file. Java source files are marked with a .java extension, while Java executables have a .class extension. In order to compile a program, Java Development Kit is needed.
 
 Java Development Kit
--------------------
+--------------------
 The Kit can be downloaded from the Oracle website. Once installed, Java source can be complied.
 
 Java compiler, source and executable file
 -----------------------------------------
-A file with a .java extension can be compiled into an .class file by position the command window in the folder where the .java file is and typing "javac <file_name>.java". A <file_name>.class file should appear.
-If javac is no a recognised command, enviroment variables (speficicly System variable Path) have to be modified to include ".../Java/jdk<version_number>/bin" and ".../Java/jdk<version_number>/jre/bin".
+A file with a .java extension can be compiled into an .class file by position the command window in the folder where the .java file is and typing "javac <file_name>.java". A <file_name>.class file should appear in the folder.
+If javac is not a recognised command, environment variables (specifically, System variable Path) have to be modified to include ".../Java/jdk<version_number>/bin" and ".../Java/jdk<version_number>/jre/bin".
 
 Execute a program
 -----------------

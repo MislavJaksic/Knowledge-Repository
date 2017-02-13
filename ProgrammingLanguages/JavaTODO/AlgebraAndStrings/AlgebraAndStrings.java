@@ -1,4 +1,3 @@
-// Class name and <file_name>.java have to match
 public class AlgebraAndStrings
 {
 	public static void main(String[] args)
@@ -24,16 +23,10 @@ public class AlgebraAndStrings
 		Integer intWrapper = new Integer(20); //-> equal to Integer.valueof(20);
 		Character charWrapper = new Character('P');
 		Double dWrapper = new Double(0.5);
-		//Unboxing or unwrapping
+		//Unboxing (unwrapping)
 		System.out.println(intWrapper.intValue()); //-> 20
 		
-		//Upcasting in transforming a reference from a concrete type to a generic Object type
-		Integer concrete = new Integer(5);
-		Object o = concrete;
-		//Downcasting is opposite of upcasting
-		concrete = (Integer) o;
-		
-		//String is not a primitive data type, its an object with its own methods
+		//String is not a primitive data type, it's an object with its own methods
 		String text1 = new String("Hi"); //-> declare and create a new string object
 		String text2 = new String("Hi");
 		String nonObject1 = "Hi"; //-> declares and creates a new string object as well
@@ -67,15 +60,10 @@ public class AlgebraAndStrings
 		System.out.println((char) bigZ); //-> Z
 		System.out.println((int) 'A'); //-> 65
 		
-		//References, values and assignment
-		int one = 1;
-		int two = one; //-> assign value
-		two = 2; //-> one = two = 2 doesen't happen
-		System.out.println(one); //-> 1
-		one = 1;
-		two = one; //-> assign value
-		one = 2;
-		System.out.println(two); //-> 1
-		
+		//Upcasting is transforming a reference from a concrete type to a generic Object type
+		Integer concrete = new Integer(5);
+		Object o = concrete;
+		//Downcasting is opposite of upcasting
+		concrete = (Integer) o;
 	}
 }

@@ -1,4 +1,3 @@
-// Class name and <file_name>.java have to match
 public class Documenting
 {
 	/**

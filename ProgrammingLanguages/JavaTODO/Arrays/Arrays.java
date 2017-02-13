@@ -1,5 +1,5 @@
-//Greater and easier control over a list
-//source: https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
+//Use ArrayList from Java Collections:
+//https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
 import java.util.ArrayList;
 
 public class Arrays
@@ -18,8 +18,10 @@ public class Arrays
 		{
 			member = 0.0;
 		}
-		double[] b = new double[n]; //-> equal to all of the above
-		double c = {0.0, 0.01, 0.002}; //-> assign values and size at declaration
+		//Equal to all of the above
+		double[] b = new double[n]; 
+		//Assign values and size at declaration
+		double c = {0.0, 0.01, 0.002}; 
 		
 		//Access an element
 		System.out.println(a[0]); //-> 0.0
@@ -29,7 +31,7 @@ public class Arrays
 		//Array length is stored in a constant called length
 		System.out.println(a.length); //-> 10
 
-		//An expanding and shrinking list
+		//Java Collection, ArrayList: resizeable array
 		ArrayList<Integer> d = new ArrayList<Integer>();
 		//Add an element
 		d.add(1);

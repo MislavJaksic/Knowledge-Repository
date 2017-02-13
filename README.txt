@@ -1,7 +1,7 @@
 Introducing the Knowledge Repository
 ====================================
 
-Knowledge Repository is a collection of text documents and programs I wrote to remind myself and can teach others about software engineering. Software engineering is a broad subject which is why the Knowledge Repository is subdivided into folders according to topics they cover.
+Knowledge Repository is a collection of text documents and programs which I wrote hoping they will remind me or teach others about software engineering. Software engineering is a broad subject which is why the Knowledge Repository is subdivided into folders according to topics they cover.
 Inspiration file is a list of topics and materials with which the Knowledge Repository will be expanded.
 
 Empty or unfinished folders are marked with a suffix -TODO.
@@ -10,8 +10,7 @@ Each subfolder has its own README which explains what it is and what it contains
 
 Intention
 ---------
-
-As time passes by, I will forget what I once knew and even worse, I will forget how I came to knew these things in the first place. To combat this reality, I have decided to create a digital booklet of booklets with which I will be able to remind myself about the thing I knew. I know that writing the booklet will pay off ten years from now...
+As time passes by, I will forget what I once knew and even worse, I will forget how I came to knew these topic in the first place. To combat this reality, I have decided to create a digital booklet of booklets with which I will be able to remind myself about the subject I once knew. I know that writing the booklet will pay off ten years from now...
 
 Contact
 -------
