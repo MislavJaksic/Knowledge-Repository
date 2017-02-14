@@ -1,4 +1,4 @@
-//Use ArrayList from Java Collections:
+//Use a resizable array ArrayList from Java Collections:
 //https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
 import java.util.ArrayList;
 

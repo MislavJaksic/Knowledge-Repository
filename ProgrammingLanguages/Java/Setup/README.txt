@@ -1,7 +1,7 @@
 How to setup Java
 =================
 
-Java is an exclusivley object oriented compiler language. Object oriented languages model every program as if it were an object in the real world. Compiler languages read and transform a source file into an executable file. Java source files are marked with a .java extension, while Java executables have a .class extension. In order to compile a program, Java Development Kit is needed.
+Java is an exclusively object oriented compiler language. Object oriented languages model every program as if it were an object in the real world. Compiler languages read and transform a source file into an executable file. Java source files are marked with a .java extension, while Java executables have a .class extension. In order to compile a program, Java Development Kit is needed.
 
 Java Development Kit
 --------------------
