@@ -25,3 +25,6 @@ how to make selfimproving programs
 
 Design patters:
 an interesting subject; research it
+
+Expand the programming languages topics:
+graphical user interface, multithreading...
