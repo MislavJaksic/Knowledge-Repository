@@ -1,3 +1,5 @@
+import java.lang.StringBuilder;
+
 public class AlgebraAndStrings
 {
 	public static void main(String[] args)
@@ -39,6 +41,12 @@ public class AlgebraAndStrings
 		System.out.println(nonObject1.equals(nonObject2)); //-> true
 		//Character at position
 		System.out.println(text1.charAt(0)); //-> H
+		
+		//Constructing strings from characters and strings
+		StringBuilder newString = new StringBuilder();
+		//Add to the end
+		newString.append('h'); newString.append("ello");
+		System.out.println(newString.toString()); //-> hello
 		
 		//Transform a string to a number
 		//<data_type>.parse<data_type>(<string_name>)

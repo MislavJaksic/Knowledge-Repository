@@ -5,7 +5,8 @@ import java.util.Map;
 	Discussion: if the length of strings differ, then they cannot be premutations of each other.
 	What is the O time? It is n as I have to pass throught each string once.
 	
-	Should have considered sorting both strings and then comparing them!
+	Should have considered sorting both strings and then comparing them! It's less efficient,
+	but very elegant and short.
 	*/
 public class StringPerm
 {

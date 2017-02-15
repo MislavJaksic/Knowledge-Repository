@@ -22,14 +22,14 @@ public class UniqueStringTest
   {
     UniqueString function = new UniqueString();
 	
-    assertEquals(true, function.UniqueCharsMap("help"));
+    assertEquals(true, function.UniqueCharsMap(" help"));
   }
   @Test
   public void testFour() 
   {
     UniqueString function = new UniqueString();
 	
-    assertEquals(true, function.UniqueCharsMap(" "));
+    assertEquals(false, function.UniqueCharsMap("  "));
   }
   
   
@@ -45,7 +45,7 @@ public class UniqueStringTest
   {
     UniqueString function = new UniqueString();
 	
-    assertEquals(false, function.UniqueChars("hellllllllll"));
+    assertEquals(false, function.UniqueChars("  hellll   llllll"));
   }
   @Test
   public void testSeven() 

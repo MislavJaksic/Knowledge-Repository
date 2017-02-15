@@ -11,3 +11,8 @@ First, compile the class you want to test. Then, compile the class that tests th
 Suggestion
 ----------
 Testing, organising folders and projects is quite cumbersome without an IDE. Get one.
+
+Commands
+--------
+javac -cp .;junit-4.XX.jar <test_name>.java
+java -cp .;junit-4.XX.jar;hamcrest-core-1.3.jar org.junit.runner.JUnitCore <test_name>

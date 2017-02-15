@@ -8,7 +8,7 @@ import java.util.HashMap;
 	What is the O time? It is linear, n if I can remember all the chars that I've seen before the
 	currect char. Hash table has O(1) loopup time. If I may not construct it, then it O(n*n).
 	I'll assume the string is in memory.
-	
+	Whitespaces are also characters.
 	*/
 public class UniqueString
 {
