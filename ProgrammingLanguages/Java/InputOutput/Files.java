@@ -22,7 +22,7 @@ public class Files
 			//Read until you hit a \n or \r
             inputLineStream = new BufferedReader(new FileReader("TestText.txt"));
 			outputLineStream = new PrintWriter(new FileWriter("characteroutput.txt"));
-
+			
             String l;
             while ((l = inputLineStream.readLine()) != null) {
                 System.out.println(l);

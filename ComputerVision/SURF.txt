@@ -1,0 +1,4 @@
+Introduction to SURF
+--------------------
+
+SURF stands for Speeded Up Robust Features, a work which created both a descriptor and a detector.

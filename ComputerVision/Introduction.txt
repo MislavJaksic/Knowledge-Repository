@@ -1,0 +1,32 @@
+Introduction to Computer Vision
+===============================
+
+Computer vision is an area of study that is trying to make computers understand what the picture shows.
+
+Digital pictures
+----------------
+A digital picture is made of discrete points called pixels. It can be thought as a two dimensional array or a hilly three dimensional plane. If a picture is in colour, each pixel has three values assigned to it from an interval of [0, 255] representing the colours red, blue and green. If it doesn't have colour, each pixel has only one value assigned to it. Pictures that don't have colour are called black and white or grayscale pictures. Pixel values are sometimes called intensities.
+A two by two grayscale picture made up of four pixels.
++-----+-----+
+| 090 | 055 |
++-----+-----+
+| 000 | 155 |
++-----+-----+
+
+Comparing pictures
+------------------
+A naive way of comparing pictures would be to compare the pixel intensities of the first pixel in the first pixel with the pixel intensity of the first pixel in the second picture. This method will only work if the pictures are identical, however, if one picture is only slightly rotated or a zoomed in version of the first picture, then the method wouldn't work. Moreover, this method doesn't solve the problem of identifying what subject is present in the picture (an aeroplane, a building, a fan or ...?).
+The way to solve this problem is to describe an area of the picture in such a way that it can be compared with other, similarly described, areas in other pictures. Areas that should be described should be distinct from other areas.
+The described method is executed in three steps: detection step when distinct pixels are found, description step when the area around the distinct pixels is described and a matching step when described areas are compared.
+
+Detector step
+-------------
+Before an area of the picture can be described, distinct pixels have to be found. These pixels are called interest points of keypoints. Detection is performed by a detector, an algorithm that searches for interest points. Interest points are most commonly found around blobs, T-junctions and corners. The most important feature of a detector is that it should reliably find interest points in a picture even if the viewing condictions were changed.
+
+Descriptor step
+---------------
+After the interest points have been found, the area around them should be described. Description is a process of creating a feature vector, a 1 by N matrix where N is the number of features. A feature vector is geometricly interpreted as a point in N dimensional space. Feature vectors have to de distinct and robust to noise, yet they should have a small number of features.
+
+Matching step
+-------------
+After feature vectors have been created, they are matched againt feature vectors of another picture. If the feature vectors have many features, this step will take a long time to compute.
