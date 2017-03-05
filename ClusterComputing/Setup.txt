@@ -1,0 +1,13 @@
+Setup
+=====
+
+Download Apache Spark from the official website. Unpack the distribution in a folder and try to run an interactive shell, such as Python called "pyspark".
+If winutils are missing you need to download the program from a GitHub repository.
+
+Winutils
+--------
+Unpack winutils into a folder next to Apache Spark and open up the command window. Type "set HADOOP_HOME=<winutils_directory_above_bin>" and "set PATH=%HADOOP_HOME%\bin;%PATH%" to setup the system variables so that Apache Spark can use winutils.
+
+Run Spark with Python
+---------------------
+You can run a Python Spark script with "...\<path_to_spark-submit>\spark-submit <program_name>.py"
