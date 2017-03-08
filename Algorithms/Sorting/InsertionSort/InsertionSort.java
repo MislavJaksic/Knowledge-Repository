@@ -3,7 +3,7 @@
 	Discussion: outer loop iterates over elements; inner loop moves backwards;
 				the insertion condition is either: the current element is greater then the comparison element
 				or the array index is out of bounds
-				if the condiction hasn't been met, the comparison element is shifted one place to the right
+				if the condition hasn't been met, the comparison element is shifted one place to the right
 	*/
 public class InsertionSort
 {
