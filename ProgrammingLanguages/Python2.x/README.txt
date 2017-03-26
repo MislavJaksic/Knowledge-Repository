@@ -28,3 +28,11 @@ Folders
 -Setup: introduces the language, says what to install and how to run a program designed to check whether the programming environment has been setup correctly
 
 -Testing: teaches the concept of automated unit testing, shows tools that make tests independent
+
+Python specific
+---------------
+-Decorators: a function that intercepts another function; used for caching results and returning the cache instead of executing a costly function
+
+-Generators: distinguished by a yield keyword upon who's execution the generator stops and then later resumes from that point when invoked again; behaves like an iterable object such as an list
+
+-LambdaFunctions: also known as the anonymous function, they are functions that consist of a single expression in a return statement
