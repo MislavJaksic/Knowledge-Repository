@@ -1,5 +1,5 @@
-Introduction to Computer Vision
-===============================
+Intoduction to Computer Vision
+==============================
 
 Computer vision is an area of study that is trying to make computers understand what the picture shows.
 

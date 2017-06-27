@@ -1,5 +1,5 @@
-Introduction to SURF
---------------------
+SURF
+====
 
 SURF stands for Speeded Up Robust Features, a work which created both a descriptor and a detector. It is based on many previous works whose efforts SURF combines to create a precise, fast and robust detector and descriptor.
 SURF's descriptor and detector are both scale and in-plane rotation invariant (meaning neither rotation nor zooming in or out affect the feature vectors), but for sake of speed, the rotational invariance can be sacrificed (which would create an Upright SURF algorithm). It is possible to make the SURF descriptor invariant to affine transformations using affine normalisation of the ellipse, but this comes at a great cost of speed. SURF doesn't use colour information.

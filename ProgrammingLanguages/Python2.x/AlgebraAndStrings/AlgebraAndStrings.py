@@ -4,21 +4,23 @@ print 6/5 #-> 1
 print 6.0 / 5 #-> 1.2
 #Precise division
 print 1.0/3 - 0.33333333 #-> small number, not zero
-#Exponentiation
 #Data types exist in Pyhon, but they don't have to be explicitly declared
 int(5)
 long(5)
 float(5)
 complex(5, 5)
-#There are also null (called None) and booloean values as well
 
+#Exponentiation
 print 2 ** 10 #-> 1024
+#Divide and truncate (floor division)
+print 15 // 4
 #Modulo
 print 15 % 2 #-> 1
 #Boolean operations
 print False or True #-> True
 print False and True #-> False
 print not False #-> True
+print None
 
 #Assignment
 #a points at 5

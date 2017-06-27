@@ -1,5 +1,5 @@
-Learning Spark, O'Reilly, Karau, Konwinski
-==========================================
+Learning Apache Spark, Spark, O'Reilly, Karau, Konwinski
+========================================================
 
 Apache Spark is a set of APIs that distribute tasks across multiple computers in a cluster.
 

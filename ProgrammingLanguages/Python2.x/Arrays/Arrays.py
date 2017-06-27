@@ -2,6 +2,7 @@
 
 #Arrays(called lists in Python)
 listOne = [0, 1, 2, 3, 4]
+listOne = range(0, 5, 1)
 #Assign a reference; doesen't copy the object
 listTwo = listOne
 #Add element after the last position
