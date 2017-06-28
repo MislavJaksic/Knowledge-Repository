@@ -1,4 +1,4 @@
-REPORT  z_chapter4.
+REPORT  GenDynProg.
 
 *generic and dynamic programming
 *rule one: everything that is a literal (value) must be written in CAPITAL LETTERS
