@@ -11,7 +11,6 @@ As time elapses, I will forget what I knew and even worse, I will forget how I c
 
 Contact
 -------
-
 If you are thinking about writing, do it. Correspondence is a joy to read.
 
 Email: jaksicmislav@gmail.com

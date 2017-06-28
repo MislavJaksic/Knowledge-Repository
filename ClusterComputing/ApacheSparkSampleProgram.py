@@ -11,7 +11,7 @@ sc = SparkContext(conf = conf)
 #Create a RDD
 lines = sc.parallelize(["first line", "second line"])
 #OR
-fileLines = sc.textFile("NUMBERS.txt")
+fileLines = sc.textFile("TestNumbers.txt")
 
 #.persist() command will load the RDD and keep it in memory
 

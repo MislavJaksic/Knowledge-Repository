@@ -1,19 +1,13 @@
-Knowledge Repository
-====================
+Algorithms
+==========
 
-Knowledge Repository is a collection of reference sheets, book summaries and programs about software engineering. Software engineering is a broad subject which is why the Knowledge Repository is subdivided into folders. Each folder covers a single topic or it is in itself subdivided.
-Each subfolder has its own README which explains what it is and what it contains. Empty or unfinished folders are marked with a suffix -TODO.
-Inspiration text file contains a list of topics and materials with which the Knowledge Repository will be expanded.
+An algorithm is a set of instructions. As simple as that. Very useful algorithms are divided into categories and given names based on what they do and so there are search algorithms, sorting algorithms and many others.
+Algorithms in this folder are written is Java, but before they were compiled they were constructed and written on a piece of paper.
 
-Intention
----------
-As time elapses, I will forget what I knew and even worse, I will forget how I came to know what I forgot. To combat this reality, I have decided to create a digital booklet of booklets, hoping it will keep my forgetfulness at bay. Somehow... I know that writing the booklet will pay off ten years from now...
+Search algorithms
+-----------------
+Search algorithms are made for finding data in data structures, very often lists, but it could also be (binary) trees and other structures. There are two famous search algorithms and they are linear search and binary search.
 
-Contact
--------
-
-If you are thinking about writing, do it. Correspondence is a joy to read.
-
-Email: jaksicmislav@gmail.com
-Read around ...|Greenwich Mean Time(+00) 08:00|Central European Time(+01) 09:00| Eastern European Time(+02) 10:00|...
-Write an email as if you were writing a letter.
+Sorting algorithms
+------------------
+Sorting algorithms are written for ordering data. Data can be ordered ascending or descending. Quickly sorting large amounts of data is a common problem and therefor many sorting algorithms were developed. In ascending order of speed some of them are insertion sort, merge sort and quick sort.

@@ -1,8 +1,10 @@
 Programming Languages
 =====================
 
-Programming Languages contains a folder for each language I have researched extensively. Language folders are created from the Language Template folder. The Language Template has empty subfolders named after common language features which are then populated with README and program files.
-Language folders serve as a reference guide, cheat sheet or a demonstration of what the syntax does.
-All programs are written in the following style:
+Programming Languages is subdivided into folders where each folder holds programs written in a different programming language. All programs are designed to introduce the reader to the language syntax which is why all programs share a common structure.
+
+Common structure
+----------------
+The common structure is as follows:
 <explanation_of_the_statement_below>
 <programming_language_statement> <single_comment_sign> -> <result_of_statement_execution>
