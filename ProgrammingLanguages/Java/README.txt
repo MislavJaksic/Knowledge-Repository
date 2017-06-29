@@ -1,30 +1,15 @@
-Introducing the Language Template
-=================================
+Java
 
-Language Template is a framework that partitions programs according to language features. Each folder can have a README that serves as an introduction to the language features, programs or tools stored in the same folder.
+====
 
-Folders
--------
--AlgebraAndStrings: demonstrates how to use mathematical operations, variable declaration, data types, assignment, strings manipulation, how to convert data from one type to another
 
--Arrays: teaches how to create arrays, what they can store and how to manipulate their elements
 
--DocumentingAndCommenting: teaches how to properly document and explain code to users and other programmers as well as how to generate structured documentation from the program's comments
+Java is a compiled object oriented language that carefully balances between speed, security and expressibility. Source code is stored in .java while executables are distinguished by a .class file extension. It is highly recommended to develop Java in an IDE because setting up unit tests is much easier that way.
 
--Functions: teaches how to declare a function, how to invoke and pass variables to functions, how to pass by reference and pass by value, what if there is an unknown number of parameters or if some have default values, how many variables can a function return
 
--HashTable: teaches how to make a complicated, but fast and simple to access data structure
 
--InputOutput: describes how to enter data through the command line, read and write to a file, how to ask for inputs during program execution and format output
+Python specific folders
 
--LearningMaterials: lists the difficulty, length and name of books, instructional material and web sources; personal
+-----------------------
 
--LoopsAndCondictions: explains for, while, do, for in and for each loops as well as if statements
-
--MultipleFoldersProgram: how to organise and structure projects, allow programs to use each other's functions
-
--ObjectOriented: describes what are classes, objects, methods, attributes, inheritance(is a), composition (has a), how objects communicate
-
--Setup: introduces the language, says what to install and how to run a program designed to check whether the programming environment has been setup correctly
-
--Testing: teaches the concept of automated unit testing, shows tools that make tests independent
+Generics: teaches about generic types, how to handle them and when to use them

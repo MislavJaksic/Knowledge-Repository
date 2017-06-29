@@ -27,5 +27,5 @@ Child importing a parent program is demonstrated in the SubSubLevelOneModule. Fi
 Python packages, modules and imports
 ------------------------------------
 In Python, modules are imported and packages contain modules.
-__init__.py files have to be put in every project's folder to signify that that folder is a package.
+__init__.py files have to be put in every project's folder to signify that folder is a package.
 A module will import another packaged module only if it is in a deeper folder or in sys.path. To add a package to sys.path, use "sys.path.insert(0, os.path.abspath('<desired_depth>'))". If a child wants to import a parent, then <desired_depth> is ".." as it will add the folder above the current one to sys.path.

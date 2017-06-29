@@ -8,7 +8,7 @@ def Generate(n):
     i = i + 6
   return list
 
-"""Problem: write a decorator that caches a result
+"""Problem: write a decorator that caches the result
    Discussion: the inner function is executed multiple times, while everything outside it is executed only once"""
 def Memoization(cachedFunction):
   dict = {}

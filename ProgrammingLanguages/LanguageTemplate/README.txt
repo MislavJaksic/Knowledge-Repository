@@ -27,7 +27,7 @@ Folders
 
 -Testing: teaches the concept of automated unit testing, shows tools that make tests independent
 
-Additional folders
-------------------
+Language specific folders
+-----------------------
 
 Some languages can have additional folders which cannot be found in the list above. That is because some languages have special features that deserve to be covered.

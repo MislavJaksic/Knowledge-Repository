@@ -1,5 +1,5 @@
-Introduction to unit testing
-============================
+Python unit testing
+===================
 
 Python programs can be tested using many different modules: unittest, nose, pytest, doctest and mock.
 mock creates false objects that can imitate objects that we are testing. Useful when we don't want to use the internet, but we have to test a function that grabs data from the internet.
