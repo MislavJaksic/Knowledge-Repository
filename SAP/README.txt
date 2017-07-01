@@ -4,12 +4,7 @@ SAP
 SAP stands for Systems, Applications & Products in Data Processing and is the name of the corporation that constructed the Enterprise Resource Planning (ERP) system of the same name. Its purpose is to integrate the business processes such as finance, production planning and sales and distribution into a single system. Therefor, SAP is divided into modules where each module covers only a single process.
 
 Fine tunning
-<<<<<<< HEAD
-
 ------------
-=======
----------
->>>>>>> origin/master
 Each trade society, business and corporation (SAP calls them customers) has similar processes which are already implemented in SAP, but they need to be fine tuned for each customer. This is where ABAP comes in.
 
 ABAP
