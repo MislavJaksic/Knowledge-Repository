@@ -1,5 +1,5 @@
-Introduction to project structuring
-===================================
+Project structuring
+===================
 Structure:
 
 TopLevel

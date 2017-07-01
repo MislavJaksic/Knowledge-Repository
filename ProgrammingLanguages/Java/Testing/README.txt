@@ -1,5 +1,5 @@
-Introduction to unit testing
-============================
+Unit testing
+============
 
 Java program can be tested using the JUnit framework.
 Setting up JUnit is as simple as downloading two .jar files and copying them to ...\Java\jre<version>\lib\ext\ and ...Java\jdk<version>\jre\lib\ext\. Both paths should already be included in the environment variables.

@@ -10,8 +10,7 @@ SAP stands for Systems, Applications & Products in Data Processing and is the na
 
 Fine tunning
 
----------
-
+------------
 Each trade society, business and corporation (SAP calls them customers) has similar processes which are already implemented in SAP, but they need to be fine tuned for each customer. This is where ABAP comes in.
 
 ABAP

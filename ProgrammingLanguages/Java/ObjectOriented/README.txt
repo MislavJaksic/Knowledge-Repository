@@ -1,5 +1,6 @@
-Introduction to object oriented programming in Java
-===================================================
+Object oriented programming
+===========================
+
 In Java everything has to be contained in a class, no matter how simple the program.
 
 Class
