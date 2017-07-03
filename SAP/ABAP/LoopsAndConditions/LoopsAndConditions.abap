@@ -1,22 +1,22 @@
 REPORT  LoopsAndCond.
 
-data boolean type i value 0.
-if boolean = 1.
-  elseif boolean = 0.
-    write / 'Zero'.
-    endif.
+DATA boolean TYPE i VALUE 0.
+IF boolean = 1.
+  ELSEIF boolean = 0.
+    WRITE / 'Zero'.
+    ENDIF.
 
-while boolean > 0.
-  write / 'I didn''t enter while'.
-  endwhile.
+WHILE boolean > 0.
+  WRITE / 'I didn''t enter while'.
+  ENDWHILE.
 
-do 5 times.
-  write sy-index.
-  enddo.
+DO 5 TIMES.
+  WRITE sy-index.
+  ENDDO.
 
-do.
+DO.
   sy-subrc = 5. "intentionally cause an error
-  if sy-subrc <> 0. "if there was en error
-    exit. "exit endless loop
-    endif.
-  enddo.
+  IF sy-subrc <> 0. "if there was en error
+    EXIT. "exit endless loop
+    ENDIF.
+  ENDDO.
