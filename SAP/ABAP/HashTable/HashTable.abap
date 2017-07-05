@@ -19,3 +19,9 @@ INSERT row INTO TABLE hash_table.
 
 READ TABLE hash_table WITH TABLE KEY key_column = 2 INTO row.
 WRITE / row-data_column. "-> Two
+
+row-key_column = 3.
+row-data_column = 'Threeeeee'.
+MODIFY TABLE hash_table WITH row.
+READ TABLE hash_table WITH TABLE KEY key_column = 3 INTO row.
+WRITE / row-data_column. "-> Threeeeee
