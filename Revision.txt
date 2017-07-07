@@ -2,10 +2,10 @@ Revision 1 COMPLETED
 --------------------
 Stopped at Python 2.x. Need to read the READMEs in the folders there.
 
-Revision 2
+Revision 2 COMPLETED
 ----------
 Added SAP. It is bare bones. Add READMEs.
 
-Revision 3
+Revision 3 COMPLETED
 ----------
 It could be better to make additional repositories instead of keeping all folders here.
