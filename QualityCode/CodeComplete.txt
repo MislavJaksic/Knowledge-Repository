@@ -1,1 +1,8 @@
+Code Complete
+=============
 
+Code Complete is a book written by Steve McConnell which explains what is software construction, describes how to build systems and how an excellent process of construction looks like. Code complete argues that software construction is important because it is the only activity that's guaranteed to happen.
+
+Measure twice, cut once
+-----------------------
+The chapter describes how prerequisites and preparation reduce risk of failure and allow for a smooth construction. There are two ways in which prerequisites can be approached: sequentially or iteratively. Sequential approach is appropriate if the application area is familiar, the system design is understood well and if there is little risk. Iterative approach is characterised by the opposite, when the application area is unknown and requirements are volatile.
