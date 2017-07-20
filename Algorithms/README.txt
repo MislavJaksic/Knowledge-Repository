@@ -6,8 +6,8 @@ Algorithms in this folder are written is Java, but before they were compiled the
 
 Search algorithms
 -----------------
-Search algorithms are made for finding data in data structures, very often lists, but it could also be (binary) trees and other structures. There are two famous search algorithms and they are linear search and binary search.
+Search algorithms are made for finding data in data structures, very often lists, but it could also be (binary) trees and other structures. There are two main search algorithms: linear search and binary search.
 
 Sorting algorithms
 ------------------
-Sorting algorithms are written for ordering data. Data can be ordered ascending or descending. Quickly sorting large amounts of data is a common problem and therefor many sorting algorithms were developed. In ascending order of speed some of them are insertion sort, merge sort and quick sort.
+Sorting algorithms order data. Data can be ordered ascending or descending, in data structures or in files. Quickly sorting large amounts of data is a common problem and therefor many sorting algorithms have been developed. From slowest to quickest, here are a few sorting algorithms: insertion sort, merge sort and quick sort.
