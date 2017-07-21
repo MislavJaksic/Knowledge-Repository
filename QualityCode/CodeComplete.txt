@@ -20,4 +20,40 @@ Program organisation - present evidence of considering alternative program organ
 
 Major classes - specify how the classes should be used, describe the responsibility of each class, specify how classes interact with each other, describe alternative class designs.
 
+Data design - describe major files and structures to se used, describe alternatives to the choose data structures, specify contents of databases, why is a database used (instead of a flat file), what views were created and so on. Data should be accessed only by one class.
 
+Business rules - identify them, describe their impact upon the system.
+
+User interface - specify major elements, modularise the architecture, make it flexible so UI element can be swapped, discarded and added without a lot of code changes.
+
+Resource management - describe how database connections, threads and handles are used, estimated memory requirements for extreme and nominal cases.
+
+Security - how are handle buffers, untrusted inputs, encryption and error messages handled.
+
+Performance - speed vs memory vs cost analysis.
+
+Scalability - describe how the system grow.
+
+Internationalisation and localisation - describe which character set is being used, how would translations impact the system, how are strings stored (in a resource file or class and why). Important in interactive systems.
+
+Input and output - where are input and output errors detected.
+
+Error processing - is error detection corrective or detective, passive or active, how are error messages handled, what about exceptions, at what level are errors handled, who has the responsibility to validate inputs. Very important subject!
+
+Fault tolerance - how error resistant is the system, describe the collection of techniques that increase system scalability by detecting errors. 
+
+Architectural feasibility - demonstrate that it is possible to complete the project
+
+Overengineering and robustness - will the system continue if it detects an error, how overengineered should the system be to ensure robustness.
+
+Buy vs build decision - what components should be programmed and which should be downloaded and used.
+
+Reuse decision - what programs are going to be reused.
+
+Change strategy - describe how changes will be handled, what are possible enhancements, how are new data or changes to existing data be anticipated, how changes impact the need to change the code.
+
+General architectural quality - characterised by discussions of classes, information that is hidden in them and reasons why classes are designed in a parcticular way, architecture’s objectives should be clearly stated, architecture should describe the motivations for all major decisions, architecture should be machine and language independent, architecture should explicitly identify risky areas and should contain multiple views.
+
+Programming conventions
+-----------------------
+Specify all programming conventions before a project, so that programs can have excellent integrity and cohesion at code level. Specify how variables will be named, classes, routines and comments.
