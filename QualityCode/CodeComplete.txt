@@ -1,21 +1,21 @@
 Code Complete
 =============
 
-Code Complete is a book written by Steve McConnell which explains what is software construction, describes how to build systems and how an excellent process of construction looks like. Code Complete argues that software construction is important because it is the only activity that's guaranteed to happen.
+Code Complete is a book written by Steve McConnell which explains why is planning in software construction important, describes how to build large maintainable programs and how excellent planning looks like. Code Complete argues that software construction is an important subject because it is the only activity that is guaranteed to happen.
 
-Measure twice, cut once
+Chapter 3: Measure twice, cut once
 -----------------------
-The chapter describes how prerequisites and preparation reduce risk of failure and allow for a smooth construction. There are two ways in which prerequisites can be approached: sequentially or iteratively. Sequential approach is appropriate if the application area is familiar, the system design is understood well and if there is little risk that the project will fail. Iterative approach is appropriate if the opposite is true, when the application area is unknown and requirements are volatile.
+Chapter 3 describes how writing prerequisites and careful preparation reduce risk of failure and allow construction to happen smoothly from beginning till end. There are two ways in which writing prerequisites can be approached: sequentially or iteratively. Sequential approach is appropriate if the application area is familiar, the system design is understood well and if there is little risk that the project will fail. Iterative approach is appropriate if the opposite is true, when making changes is cheap and predictability is not important.
 
 Prerequisites
 -------------
-Prerequisites are made up of many parts and should be specified in a document before the construction begins for reasons given above.
+Prerequisites are an important part of preparing for a project as they are the foundation upon which the software is going to be built.
 
-Problem definition answers the question: what is the problem being solved? Problem definition doesn't specify a solution and should be written from the user's point of view.
+Problem definition prerequisites should define the problem without referencing a solution.
 
-Requirements state what functionality the user wants. Requirements often change and those changes should be managed by making a checklist that will specify what step should be taken, set up a change control procedure or by making the system flexible enough to easily accommodate changes. Requirements are also important because it allows users to agree to them and avoid arguments about what functionality should be implemented.
+Requirements describe what the software will do and are specified as functionalities that the user wants. Requirements often change and those changes should be managed by assessing the quality of requirements, setting up a change control procedure and/or by making the system flexible enough to easily accommodate changes. Requirements are also important because they allows users to agree to them and they avoid arguments about what functionality should be implemented.
 
-Architecture determines the integrity of the system and if you have found the correct solution. Architecture is made up of the following components:
+Architecture determines the integrity of the system and if the correct solution was found. Architecture is made up of the following components:
 Program organisation - present evidence of considering alternative program organisation, describe the role of each program, describe major building blocks and make sure each requirement is covered by at least one building block, specify how building blocks interact with each other. Each building block should have only one area of responsibility and should know as little as possible about other building blocks.
 
 Major classes - specify how the classes should be used, describe the responsibility of each class, specify how classes interact with each other, describe alternative class designs.
@@ -52,7 +52,7 @@ Reuse decision - what programs are going to be reused.
 
 Change strategy - describe how changes will be handled, what are possible enhancements, how are new data or changes to existing data be anticipated, how changes impact the need to change the code.
 
-General architectural quality - characterised by discussions of classes, information that is hidden in them and reasons why classes are designed in a parcticular way, architecture’s objectives should be clearly stated, architecture should describe the motivations for all major decisions, architecture should be machine and language independent, architecture should explicitly identify risky areas and should contain multiple views.
+General architectural quality - characterised by discussions of classes, information that is hidden in them and reasons why classes are designed in a particular way, architecture’s objectives should be clearly stated, architecture should describe the motivations for all major decisions, architecture should be machine and language independent, architecture should explicitly identify risky areas and should contain multiple views.
 
 Programming conventions
 -----------------------
