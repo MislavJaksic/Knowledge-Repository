@@ -22,5 +22,4 @@ forgetfulness at bay. Somehow... I know that writing this booklet will pay off t
 If you are thinking about writing, do it. Correspondence is a joy to read.
 
 >Email: jaksicmislav@gmail.com
-Read around ...|Greenwich Mean Time(+00) 08:00|Central European Time(+01) 09:00| Eastern European Time(+02) 10:00|...
-Write an email as if you were writing a letter.
+>Write an email as if you were writing a letter.

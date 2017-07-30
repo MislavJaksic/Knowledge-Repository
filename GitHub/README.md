@@ -22,7 +22,7 @@ If the README file has a .md  extension and uses the Markdown markup the text wi
     * Another empty sub bullet point to the left
 
 > A thin gray strip should apper on the left of this text and the text itself should be gray. In addition,
-the text should appear 4 spaces away from the left margine.
+>the text should appear 4 spaces away from the left margine.
 
 [Blue hyperlink text to shields IO and badges](https://github.com/badges/shields)
 
