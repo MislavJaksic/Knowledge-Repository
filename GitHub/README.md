@@ -1,14 +1,14 @@
-GitHub will display a README file text below the currect folder's contents if the README file exists.
+GitHub will display a README file text below the current folder's contents if the README file exists.
 If the README file has a .txt extension, the text will be plain, without colour, font and of one size.
-If the README file has a .md  extension and uses the Markdown markup the text wil be rich and colourful.
+If the README file has a .md  extension and uses the Markdown markup the text will be rich and colourful.
 
 # Big letters with a ghostly line below
 
 ## Smaller letters with a ghostly line below
 
-### Smallerer letters with a ghostly line below
+### Smallerer letters
 
-### Smallererer letters with a ghostly line below
+### Smallererer letters
 
 **Bold letters**
 
@@ -16,10 +16,10 @@ If the README file has a .md  extension and uses the Markdown markup the text wi
 
 `Letters on a grey background`
 
-* Bullet point to the left
-* Another bullet point to the left
-    * Sub bullet point to the left
-    * Another sub bullet point to the left
+* Black filled bullet point to the left
+* Another black filled bullet point to the left
+    * Empty sub bullet point to the left
+    * Another empty sub bullet point to the left
 
 > A thin gray strip should apper on the left of this text and the text itself should be gray. In addition,
 the text should appear 4 spaces away from the left margine.
