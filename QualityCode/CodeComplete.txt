@@ -1,10 +1,10 @@
-Code Complete
+﻿Code Complete
 =============
 
 Code Complete is a book written by Steve McConnell which explains why is planning in software construction important, describes how to build large maintainable programs and how excellent planning looks like. Code Complete argues that software construction is an important subject because it is the only activity that is guaranteed to happen.
 
 Chapter 3: Measure twice, cut once
------------------------
+----------------------------------
 Chapter 3 describes how writing prerequisites and careful preparation reduce risk of failure and allow construction to happen smoothly from beginning till end. There are two ways in which writing prerequisites can be approached: sequentially or iteratively. Sequential approach is appropriate if the application area is familiar, the system design is understood well and if there is little risk that the project will fail. Iterative approach is appropriate if the opposite is true, when making changes is cheap and predictability is not important.
 
 Prerequisites
@@ -54,12 +54,15 @@ Change strategy - describe how changes will be handled, what are possible enhanc
 
 General architectural quality - characterised by discussions of classes, information that is hidden in them and reasons why classes are designed in a particular way, architecture’s objectives should be clearly stated, architecture should describe the motivations for all major decisions, architecture should be machine and language independent, architecture should explicitly identify risky areas and should contain multiple views.
 
+Chapter 4: Key Construction Decisions
+-------------------------------------
+
 Programming conventions
 -----------------------
 Specify all programming conventions before a project, so that programs can have excellent integrity and cohesion at code level. Specify how variables will be named, classes, routines and comments.
 
-Design in Construction
-----------------------
+Chapter 5: Design in Construction
+---------------------------------
 Design is a scheme for turning specifications into a working program. Mistakes in design are to be expected and it is much better to make them in design then in construction because it is cheaper to correct them.
 
 There are two types of difficulty in design: accidental and essential. Essential referes to essential property, a property an object must have to be that object. Accidental or optional refers to accidental property, a property that an object just happens to have. Fred Brooks argues in his "No Silver Bullet" paper that accidental problems in software construction have been solved and that all that remains is solving essential problems. Solving essential programs is difficult because software development consists of working out all the details of a highly intricate, interlocking set of concepts. In one word, the problem is complexity and solving it would be to manage complexity.
