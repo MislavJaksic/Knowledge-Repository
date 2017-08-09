@@ -1,137 +1,310 @@
-﻿Code Complete
+Code Complete
 =============
 
-Code Complete is a book written by Steve McConnell which explains why is planning in software construction important, describes how to build large maintainable programs and how excellent planning looks like. Code Complete argues that software construction is an important subject because it is the only activity that is guaranteed to happen.
+Code Complete is a book written by Steve McConnell which explains why planning 
+in software construction is important, describes how to build large maintainable
+programs and how excellent systems looks like. Code Complete argues that
+software construction is an important subject because it is the only activity
+that is guaranteed to happen.
 
 Chapter 3: Measure twice, cut once
 ----------------------------------
-Chapter 3 describes how writing prerequisites and careful preparation reduce risk of failure and allow construction to happen smoothly from beginning till end. There are two ways in which writing prerequisites can be approached: sequentially or iteratively. Sequential approach is appropriate if the application area is familiar, the system design is understood well and if there is little risk that the project will fail. Iterative approach is appropriate if the opposite is true, when making changes is cheap and predictability is not important.
+Chapter 3 describes how writing prerequisites and careful preparation reduce
+risk of failure and allow construction to happen smoothly from beginning until
+the end. There are two ways in which prerequisites can be written: sequentially
+or iteratively. Sequential approach is appropriate if the application area is
+familiar, the system design is understood well and if there is little risk that
+the project will fail. Iterative approach is appropriate if the opposite is true
+and when making changes is cheap and predictability is not important.
 
 Prerequisites
 -------------
-Prerequisites are an important part of preparing for a project as they are the foundation upon which the software is going to be built.
+Prerequisites are an important part of preparing for a project as they are the
+foundation upon which the software is going to be built.
 
-Problem definition prerequisites should define the problem without referencing a solution.
+Problem definition prerequisites should define the problem without referencing
+a solution.
 
-Requirements describe what the software will do and are specified as functionalities that the user wants. Requirements often change and those changes should be managed by assessing the quality of requirements, setting up a change control procedure and/or by making the system flexible enough to easily accommodate changes. Requirements are also important because they allows users to agree to them and they avoid arguments about what functionality should be implemented.
+Requirements describe what the software will do and are specified as
+functionalities that the user wants. Requirements often change and those changes
+should be managed. Requirement changes are managed by assessing the quality of
+existing requirements and then altering them if they are not good enough,
+setting up a change control procedure if they come from clients, by making the
+system flexible enough to easily accommodate changes and keeping an eye on the
+business case for the project. Requirements are also important because they
+allows users to agree to them and they avoid arguments about what functionality
+should be implemented.
 
-Architecture determines the integrity of the system and if the correct solution was found. Architecture is made up of the following components:
-Program organisation - present evidence of considering alternative program organisation, describe the role of each program, describe major building blocks and make sure each requirement is covered by at least one building block, specify how building blocks interact with each other. Each building block should have only one area of responsibility and should know as little as possible about other building blocks.
+Architecture determines the integrity of the system and if the correct solution
+has been found. Architecture is made up of the following components:
+- Program organisation - present evidence of considering alternative program
+organisation, describe the role of each program, describe major building blocks
+and make sure each requirement is covered by at least one building block,
+specify how building blocks interact with each other. Each building block
+should have only one area of responsibility and should know as little as
+possible about other building blocks.
 
-Major classes - specify how the classes should be used, describe the responsibility of each class, specify how classes interact with each other, describe alternative class designs.
+- Major classes - specify how the classes should be used, describe the
+responsibility of each class, specify how classes interact with each other,
+describe alternative class designs.
 
-Data design - describe major files and structures to se used, describe alternatives to the choose data structures, specify contents of databases, why is a database used (instead of a flat file), what views were created and so on. Data should be accessed only by one class.
+- Data design - describe major files and structures to se used, describe
+alternatives to the chosen data structures, specify contents of databases, why
+is a database used (instead of a flat file), what views were created and so on.
+Data should be accessed only by one class.
 
-Business rules - identify them, describe their impact upon the system.
+- Business rules - identify them, describe their impact upon the system.
 
-User interface - specify major elements, modularise the architecture, make it flexible so UI element can be swapped, discarded and added without a lot of code changes.
+- User interface - specify major elements, modularise the architecture, make it
+flexible so UI element can be swapped, discarded and added without a lot of
+code changes.
 
-Resource management - describe how database connections, threads and handles are used, estimated memory requirements for extreme and nominal cases.
+- Resource management - describe how database connections, threads and handles
+are used, estimated memory requirements for extreme and nominal cases.
 
-Security - how are handle buffers, untrusted inputs, encryption and error messages handled.
+- Security - how are handle buffers, untrusted inputs, encryption and error
+messages handled.
 
-Performance - speed vs memory vs cost analysis.
+- Performance - speed vs memory vs cost analysis.
 
-Scalability - describe how the system grow.
+- Scalability - describe how the system grow.
 
-Internationalisation and localisation - describe which character set is being used, how would translations impact the system, how are strings stored (in a resource file or class and why). Important in interactive systems.
+- Internationalisation and localisation - describe which character set is being
+used, how would translations impact the system, how are strings stored (in a
+resource file or class and why). Important in interactive systems.
 
-Input and output - where are input and output errors detected.
+- Input and output - where are input and output errors detected.
 
-Error processing - is error detection corrective or detective, passive or active, how are error messages handled, what about exceptions, at what level are errors handled, who has the responsibility to validate inputs. Very important subject!
+- Error processing - is error detection corrective or detective, passive or
+active, how are error messages handled, what about exceptions, at what level
+are errors handled, who has the responsibility to validate inputs. Very
+important subject!
 
-Fault tolerance - how error resistant is the system, describe the collection of techniques that increase system scalability by detecting errors. 
+- Fault tolerance - how error resistant is the system, describe the collection
+of techniques that increase system scalability by detecting errors. 
 
-Architectural feasibility - demonstrate that it is possible to complete the project
+- Architectural feasibility - demonstrate that it is possible to complete the
+project.
 
-Overengineering and robustness - will the system continue if it detects an error, how overengineered should the system be to ensure robustness.
+- Overengineering and robustness - will the system continue if it detects an
+error, how overengineered should the system be to ensure robustness.
 
-Buy vs build decision - what components should be programmed and which should be downloaded and used.
+- Buy vs build decision - what components should be programmed and which should
+be downloaded and used.
 
-Reuse decision - what programs are going to be reused.
+- Reuse decision - what programs are going to be reused.
 
-Change strategy - describe how changes will be handled, what are possible enhancements, how are new data or changes to existing data be anticipated, how changes impact the need to change the code.
+- Change strategy - describe how changes will be handled, what are possible
+enhancements, how are new data or changes to existing data be anticipated, how
+changes impact the need to change the code.
 
-General architectural quality - characterised by discussions of classes, information that is hidden in them and reasons why classes are designed in a particular way, architecture’s objectives should be clearly stated, architecture should describe the motivations for all major decisions, architecture should be machine and language independent, architecture should explicitly identify risky areas and should contain multiple views.
+- General architectural quality - characterised by discussions of classes,
+information that is hidden in them and reasons why classes are designed in a
+particular way, architecture’s objectives should be clearly stated, architecture
+should describe the motivations for all major decisions, architecture should be
+machine and language independent, architecture should explicitly identify risky
+areas and should contain multiple views.
 
 Chapter 4: Key Construction Decisions
 -------------------------------------
+Working in a familiar programming language increases productivity and so does
+working in a highly expressive language.
 
 Programming conventions
 -----------------------
-Specify all programming conventions before a project, so that programs can have excellent integrity and cohesion at code level. Specify how variables will be named, classes, routines and comments.
+Specify all programming conventions before a project, so that programs can have
+excellent integrity and cohesion at code level. Specify how variables will be
+named, classes, routines and comments.
+
+Programming into a language
+---------------------------
+Most of the important programming principles depend not on specific languages
+but on the way you use them. If your language lacks constructs that you want to
+use or is prone to other kinds of problems, try to compensate for them. Invent
+your own coding conventions, standards, class libraries, and other augmentations.
 
 Chapter 5: Design in Construction
 ---------------------------------
-Design is a scheme for turning specifications into a working program. Mistakes in design are to be expected and it is much better to make them in design then in construction because it is cheaper to correct them.
+Design is a scheme for turning specifications into a working program. Mistakes
+in design are to be expected and it is much better to make them in design then
+in construction because it is cheaper to correct them.
 
-There are two types of difficulty in design: accidental and essential. Essential referes to essential property, a property an object must have to be that object. Accidental or optional refers to accidental property, a property that an object just happens to have. Fred Brooks argues in his "No Silver Bullet" paper that accidental problems in software construction have been solved and that all that remains is solving essential problems. Solving essential programs is difficult because software development consists of working out all the details of a highly intricate, interlocking set of concepts. In one word, the problem is complexity and solving it would be to manage complexity.
+There are two types of difficulty in design: accidental and essential. Essential
+referes to essential property, a property an object must have to be that object.
+Accidental or optional refers to accidental property, a property that an object
+just happens to have. Fred Brooks argues in his "No Silver Bullet" paper that
+accidental problems in software construction have been solved and that all that
+remains is to solve essential problems. Solving essential programs is difficult
+because software development consists of working out all the details of a highly
+intricate, interlocking set of concepts. In one word, the problem is complexity
+and solving it would be to manage complexity.
 
-Ineffective designs arise from three sources: a complex solution to a simple problem, an incorrect simple solution to a complex problem and an inappropriate complex solution to a complex solution. Complexity can therefor be managed by minimizing the amount of essential complexity you have to deal with at any one time and keeping accidental complexity from proliferating.
+Ineffective designs arise from three sources: a complex solution to a simple
+problem, an incorrect simple solution to a complex problem and an inappropriate
+complex solution to a complex solution. Complexity can therefor be managed by
+minimizing the amount of essential complexity you have to deal with at any one
+time and keeping accidental complexity from proliferating.
 
 Desirable Characteristics of a Design
 -------------------------------------
-Minimal complexity - don't make a cleaver design, make it simple and easy to understand. You know your design is good if you can ignore most other parts of the program if you focus on one specific part.
-Ease of maintenance - design a self explanatory system that can be easily maintained.
-Loose coupling - design so that you hold connections among different parts of the program to a minimum.
-Extensibility - make it so that the most likely changes or enhancements cause the system the least trauma.
-Reusability - design the system so pieces of the program can be used again.
-High fan-in - fan in refers to a utility program or a class being used by many other classes or programs.
-Low-to-medium fan-out - refers to a program of a class using many other programs or classes. This should be avoided.
-Portability - design a system so it can be easily moved to another environment.
-Leanness - make sure nothing can be taken away or deleted from the system and everything that can be, should be removed to reduce complexity and the need for testing.
-Stratification - the level of abstraction should be consistent through the program layer.
-Standard techniques - using a standardized, familiar approach will make the system easier to understand.
+- Minimal complexity - don't make a clever design, make it simple and easy to
+understand. You know your design is good if you can ignore most other parts of
+the program when you focus on one specific part.
+
+- Ease of maintenance - design a self explanatory system that can be easily
+maintained.
+
+- Loose coupling - design so that you hold connections among different parts of
+the program to a minimum.
+
+- Extensibility - make it so that the most likely changes or enhancements cause
+the system the least trauma.
+
+- Reusability - design the system so pieces of the program can be used again.
+
+- High fan-in - fan in refers to a utility program or a class being used by many
+other classes or programs.
+
+- Low-to-medium fan-out - refers to a program of a class using many other
+programs or classes. This should be avoided.
+
+- Portability - design a system so it can be easily moved to another environment.
+
+- Leanness - make sure nothing can be taken away or deleted from the system and
+everything that can be, should be removed to reduce complexity and the need for
+testing.
+
+- Stratification - the level of abstraction should be consistent throughout the
+program layer.
+
+- Standard techniques - using a standardized, familiar approach will make the
+system easier to understand.
 
 Levels of Design
 ----------------
 1) Software system - the whole system
-2) Division into Subsystems/Packages  - identify major subsystems, how they are going to interact and communicate, make sure their communication is restricted as much as possible. Think about it in terms of pulling out a subsystem... how much work is it going to be to get the rest of the system working again?
-3) Division into Classes - identify all classes in the system and define their interfaces. Partition the subsystem into smaller parts you can go ahead and implement.
-4) Division into Routines - each class is divided into routines (methods, functions). A class interface defined in 3) will define some routines.
-5) Internal Routine Design - design the detailed functionality of an individual routine.
+
+2) Division into Subsystems/Packages  - identify major subsystems, how they are
+going to interact and communicate, make sure their communication is restricted
+as much as possible. Think about it in terms of pulling out a subsystem... how
+much work is it going to be to get the rest of the system working again?
+
+3) Division into Classes - identify all classes in the system and define their
+interfaces. Partition the subsystem into smaller parts you can go ahead and
+implement.
+
+4) Division into Routines - each class is divided into routines (methods,
+functions). A class interface defined in 3) will define some routines.
+
+5) Internal Routine Design - design the detailed functionality of an individual
+routine.
 
 Design Building Blocks
 ----------------------
-Design is not a deterministic and should be done through the application of heuristics.
-Find Real World Objects - a by the book approach of finding objects in the real world that can be mapped through methods and attributes to synthetic software object and classes. The mapping activities are: identify the objects and their attributes, determine what can be done to each object and what each object is allowed to do to other objects, determined which parts of the object will be visible to other objects, define each object's interface.
-Form Consistent Abstractions - abstractions allows you to ignore irrelevant details.
-Encapsulate Implementation Details - encapsulation forbids you to look at the complexity.
-Inheritance Simplifies the Design - polymorphism. Inheritance allows you to write a general routine to handle general properties of many classes.
-Hide Secrets - information hiding. Each class should hide design decisions from all other classes. Decide which methods can be seen from the outside. Don't let other programs know what they don't have to know because then if you make a change the effects of it would be localised. For example, instead of declaring an attribute int you could declare it as AttType. 
-     Barriers to information hiding are excessive distribution of information such as exposing details about implementation and  having literals instead of constants. Circular dependencies, using class data as global data and prematurely worrying about performance penalties. Ask "What should I hide?" to dissolve many difficult design issues.
-Identify Areas Likely to Change - identify, separate and isolate items that are likely to change. To more easily identify changes, imagine making a small change and then think about what you will have to change to accommodate the improvement.
-Keep Coupling Loose - classes should be loosely related to other classes. The same applies to methods. Minimize the number of connections to other modules, make connections visible and obvious, make sure many other modules can call the  module as easily as possible. Semantic coupling should be avoided because it makes a module know something about the inner workings of another module.
-Look for Common Design Patterns - design pattern an solve many existing problems. Patterns reduce complexity because they are well known abstractions, they reduce errors, they will suggests design alternatives.
-Other Heuristics:
-Aim for Strong Cohesion - methods should support a central purpose
-Build Hierarchies - make a method hierarchy based on which methods calls which, keep the most abstract program, class and method on top.  
-Formalize Class Contracts - through interfaces
-Assign Responsibilities - ask what are the classes' responsibilities.
-Design for Test - think about how you are going to test a class and methods.
-Avoid Failure - consider how software might fail, don't just copy what is successful.
-Choose Binding Time Consciously - think about when should a value be bounded to a variable.
-Make Central Points of Control - make it so that when you have to make a change, you can make it in a single place.
-Consider Using Brute Force - do it. A simple solution that works is better then an elegant solution that doesn't.
-Draw a Diagram - pictures are easier to understand then long sentences.
-Keep Your Design Modular - make a system out of black boxes. You know what goes in and comes out but not what goes on in there... until you open up the black box.
+Design is not a deterministic and should be done through the application of
+heuristics. Here are some of them:
+- Find Real World Objects - a by the book approach of finding objects in the
+real world that can be mapped through methods and attributes to synthetic
+software object and classes. The mapping activities are: identify the objects
+and their attributes, determine what can be done to each object and what each
+object is allowed to do to other objects, determined which parts of the object
+will be visible to other objects, define each object's interface.
 
-At the end of the day, don't get stuck by using a single approach. Try different ones if the first one doesn't work.
+- Form Consistent Abstractions - abstractions allows you to ignore irrelevant
+details.
+
+- Encapsulate Implementation Details - encapsulation forbids you to look at the
+complexity.
+
+- Inheritance Simplifies the Design - polymorphism. Inheritance allows you to
+write a general routine to handle general properties of many classes.
+
+- Hide Secrets - information hiding. Each class should hide design decisions
+from all other classes. Decide which methods can be seen from the outside. Don't
+let other programs know what they don't have to know because then if you make a
+change the effects of it would be localised. For example, instead of declaring
+an attribute int you could declare it as AttType.
+
+Barriers to information hiding are excessive distribution of information such as
+exposing details about implementation and  having literals instead of constants.
+Circular dependencies, using class data as global data and prematurely worrying
+about performance penalties. Ask "What should I hide?" to dissolve many
+difficult design issues.
+
+- Identify Areas Likely to Change - identify, separate and isolate items that
+are likely to change. To more easily identify changes, imagine making a small
+change and then think about what you will have to change to accommodate the
+improvement.
+
+- Keep Coupling Loose - classes should be loosely related to other classes. The
+same applies to methods. Minimize the number of connections to other modules,
+make connections visible and obvious, make sure many other modules can call the
+ module as easily as possible. Semantic coupling should be avoided because it
+makes a module know something about the inner workings of another module.
+
+- Look for Common Design Patterns - design pattern an solve many existing
+problems. Patterns reduce complexity because they are well known abstractions,
+they reduce errors, they will suggests design alternatives.
+
+Other Heuristics:
+- Aim for Strong Cohesion - methods should support a central purpose
+- Build Hierarchies - make a method hierarchy based on which methods calls
+which, keep the most abstract program, class and method on top.  
+- Formalize Class Contracts - through interfaces
+- Assign Responsibilities - ask what are the classes' responsibilities.
+- Design for Test - think about how you are going to test a class and methods.
+- Avoid Failure - consider how software might fail, don't just copy what is
+successful.
+- Choose Binding Time Consciously - think about when should a value be bounded
+to a variable.
+- Make Central Points of Control - make it so that when you have to make a
+change, you can make it in a single place.
+- Consider Using Brute Force - do it. A simple solution that works is better
+then an elegant solution that doesn't.
+- Draw a Diagram - pictures are easier to understand then long sentences.
+- Keep Your Design Modular - make a system out of black boxes. You know what
+goes in and comes out but not what goes on in there... until you open up the
+black box.
+
+At the end of the day, don't get stuck by using a single approach. Try different
+ones if the first one doesn't work.
 
 Design Practices
 ----------------
-Iterating a design will yield better result every time. If you equipped yourself with additional knowledge after designing the system once, go improve it.
+Iterating a design will yield better result every time. If you equipped yourself
+with additional knowledge after designing the system once, go improve it.
 
-Divide and conquer the program. Divide it into smaller programs and then solve each one separately, then look at the bigger picture and solve the more abstract puzzle.
+Divide and conquer the program. Divide it into smaller programs and then solve
+each one separately, then look at the bigger picture and solve the more abstract
+puzzle.
 
-Top down approach decomposes the problem into smaller parts until the design seems far too simple and easy. The problem should be decomposed into many levels of decreasing complexity. It is easy to do because details are left for a later stage. 
+Top down approach decomposes the problem into smaller parts until the design
+seems far too simple and easy. The problem should be decomposed into many levels
+of decreasing complexity. It is easy to do because details are left for a later
+stage. 
 
-Buttom up approach starts at the level of responsibilities which are assigned to concrete classes. Ask yourself what functionality should the system implement, identify objects, group up common objects and continue to do so until you packaged a large part of the system. It identifies utility functionalities early which results in a well designed high level classes.  However, its weakness is its overwhelming complexity.
+Buttom up approach starts at the level of responsibilities which are assigned to
+concrete classes. Ask yourself what functionality should the system implement,
+identify objects, group up common objects and continue to do so until you
+packaged a large part of the system. It identifies utility functionalities early
+which results in a well designed high level classes.  However, its weakness is
+its overwhelming complexity.
 
-Bottom up and top down approaches complement each other. Use both of them. Do bottom up until the system becomes to complex, then switch to top down, until it is too easy, so you switch back to bottom up.
+Bottom up and top down approaches complement each other. Use both of them. Do
+bottom up until the system becomes to complex, then switch to top down, until
+it is too easy, so you switch back to bottom up.
 
-Experimental prototyping is used to partially solve a problem so that you know if your design will work. Prototyping is writing the least amount of throwaway code that is needed to answer a specific design question. Design questions must be specific, the code should be thrown away and you should write the absolute minimum amount of code.
+Experimental prototyping is used to partially solve a problem so that you know
+if your design will work. Prototyping is writing the least amount of throwaway
+code that is needed to answer a specific design question. Design questions must
+be specific, the code should be thrown away and you should write the absolute
+minimum amount of code.
 
-Collaborative design can greatly improve the design. For quality assurance use formal inspections, but if you want to generate design alternatives, you can use a less formal approach.
+Collaborative design can greatly improve the design. For quality assurance use
+formal inspections, but if you want to generate design alternatives, you can use
+a less formal approach.
 
-Capturing your design work can consist of inserting design decisions into the program itself in a form of a comment, you could have a Wiki or a collection of web pages, use a camera to photo drawings or some other method such as using cards or UML.
+Capturing your design work can consist of inserting design decisions into the
+program itself in a form of a comment, you could have a Wiki or a collection of
+web pages, use a camera to photo drawings or some other method such as using
+cards or UML.
