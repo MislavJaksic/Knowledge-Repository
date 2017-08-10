@@ -308,3 +308,206 @@ Capturing your design work can consist of inserting design decisions into the
 program itself in a form of a comment, you could have a Wiki or a collection of
 web pages, use a camera to photo drawings or some other method such as using
 cards or UML.
+
+Chapter 6: Working Classes
+--------------------------
+Class is a collection of data and routines. Classes are a tool that allows
+programmers to ignore parts of the program while they are working on another
+part of it.
+
+Abstract Data Types (ADT)
+-------------------------
+Abstract data type is a collection of data and operations that work on that data.
+ In ADT, data can be a window, font or connection to a database. ADTs allow you
+to work in the problem domain instead of low level implementation (add a cell
+instead of adding an atom to a linked list).
+
+If you use ADTS you benefit from hiding implementation details, changes don't
+affect the whole program, can make the interface more informative, the programs
+will be more obviously correct, programs become self documenting, you don't have
+to pass data around the whole program and you will work with domain specific
+entities rather then implementation details.
+
+Low level data types should be treated as ADTs, common objects such as files
+should also be treated as ADTs and ADTs are independent of the medium (a file
+can be stored in a database today, but in a file tomorow).
+
+In non object oriented languages instances can be handled in the following ways:
+you pass an ID to all the functions together with other parameters, you can
+create a data type that will keep track of the ID for you and pass it to
+functions or can create a function that will change the current instance to
+another instance (not recommended).
+
+Classes can thought of as ADTs plus inheritance and polymorphism.
+
+Good Class Interfaces
+---------------------
+An interface (a collection of public routines) should group routines that
+clearly belong together, expose them to the public and force a class to
+implement the routines.
+
+Each class should implement only one ADT at a consistent level of abstraction
+and the interface should support this by hiding implementation details.
+
+Make sure you implement the correct abstraction.
+
+Pair up opposite methods. If there is a method that turns the light on there
+should be a method that turns the light off.
+
+If some methods are working with half the data and another half are working the
+the other half of the data, split the class into two different classes.
+
+There are two parts to an interface: the programmatic and the semantic part. The
+programmatic part can be enforced by the compiler, while the semantic part
+consists of assumptions about how the interface will be used. If methodA needs
+to used before methodB, that is a semantic part. Try to make sure there are as
+few semantic parts to an interface as possible.
+
+Avoid eroding a class' abstraction through modification. Consider abstraction
+and cohesion together, a class that has good abstraction is likely to have
+strong cohesion.
+
+Good Encapsulation
+------------------
+Encapsulation of implementation details prevents you from looking at the details
+which creates good abstractions. 
+
+Minimizing accessibility to the methods and data, the stricter the better.
+Preserve a good abstraction by exposing a few cohesive methods.
+
+Avoid putting private implementation details into a class’s interface. The
+example of this that was given is insane. It seems to increase complexity by a
+lot.
+
+Don't make assumptions about the users. They can and will use methods in the
+unintended order.
+
+Avoid friend classes.
+
+Favor writing classes and routines that can be read quickly and easily rather
+then those that can be written quickly and easily.
+
+Semantic violations of encapsulation occures when the user is aware of how the
+methods work. For example, instead of using Connect(), the user uses FindInDB()
+because they know FindInDB() performs Connect() automatically. Avoid such
+violations by hiding implementation details and exposing how the class works
+through the interface documentation.
+
+Make coupling loose by making sure the class offers all the methods other
+classes need. Loose coupling is the culmination of being mindful of all the
+above.
+
+Design and Implementation Issues
+--------------------------------
+
+Containment ("has a" relationship) is when a class contains a primitive data
+element or object.
+
+Containment should be implemented thought member data. Avoid doing it though
+private inheritance as it will violate encapsulation.
+
+A class shouldn't have more then about seven data members.
+
+Inheritance ("is a" relationship) is the creation of specialised classes from
+more general ones. Base classes specify common elements.
+ 
+Inheritance should be implemented when the child class is a more specialised
+class of the parent class.
+
+Inheritance should be either prohibited or designed and documented.
+
+Observe the Liskov Substitution Principle(LSP). All the routines defined in the
+parent class should mean the same thing when they’re used in each of the child
+classes.
+
+Don't inherit an implementation because you want to inherit an interface or the
+other way around. If you want to use the implementation but not the interface,
+use containment.
+
+Don't reuse names of methods that cannot be overridden in the child classes.
+
+Consider if you can create an object instead of a new class. There shouldn't be
+a class which has only one instance. A Singleton is an exception.  
+
+Don't create inheritance structure that isn't necessary. There shouldn't be a
+single child class that inherits the parent class.
+
+Don't override a method and make it do nothing. Search for the source of the
+problem and solve it in the parent class.
+
+Avoid making the inheritance tree more then three layers deep.
+
+Instead of checking type, use inheritance and polymorphism. However, there are
+cases where it is important to distinguish types because they are not similar.
+
+Avoid using protected data, use protected accessor methods instead.
+
+Avoid multiple inheritance like the plague!
+
+Make sure inheritance doesn't break the primary imperative: reduce complexity.
+Use inheritance when multiple classes share either data, methods or both or when
+you want the parent class to control the interface.
+
+Member Functions and Data
+-------------------------
+Keep the number of routines in a class small.
+
+Disallow uses by declaring the constructor, assignment operator, or other
+function or operator private if you find you don't want the user to use them.
+
+Minimize the number of different routines called by a class. Minimize the number
+of routine calls to other classes. Observe the Law of Demeter which in a
+simplified form says that an object can call its own methods and the methods of
+the objects it has created.
+
+Minimize the extent to which classes collaborate by keeping the number of kinds
+of instantiated objects low, as well as the number of routine calls to
+instantiated objects and the number of calls on objects returned by other
+instantiated objects.
+
+Constructors
+------------
+Initialize all data members in a constructor.
+
+Enforce a singleton by making a constructor private and exposing a GetInstance()
+method.
+
+Prefer deep copies of object to shallow reference/pointer copy until proven
+otherwise.
+
+Reasons to Create a Class
+-------------------------
+To model a real world object.
+
+To model abstract objects, for example Shape for concrete objects such as
+Circle and Square. Good abstract objects are hard to come up with.
+
+To reduce complexity, to hide information, to forget the details that hide
+within it. It is also valid to create a class to minimize code size, improve
+maintainability.
+
+To isolate complicated algorithms, large data set and strange communication
+protocols. If they are in only one class, replacing them will be easier.
+
+To limit the effect changing the code will have on the system as a whole. Parts
+of the system that are likely to change should be isolated from those that
+aren't.
+
+To hide global data behind accessor methods.
+
+To centralize control over a task, be it accessing a database or a printer.
+Centralize control is an important tool, just like information hiding.
+
+To enable a class to be reused somewhere else. Even if the program is used only
+once in the project it might be better to put it into a class if you see that it
+can be used somewhere else later down the line.
+Instead of preparing classes for reuse while working on a project, prepare them
+after the project has been completed or at the beginning of another project to
+make sure you don't gold plate classes that you aren't going to use after all.
+
+Plan for a family of programs by isolating only those programs that are specific
+to each customer while keeping all other classes the same.
+
+Classes to avoid:
+don't create god classes that do everything, eliminate irrelevant classes and
+avoid classes named after verbs.
