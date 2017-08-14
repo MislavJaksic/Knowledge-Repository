@@ -1,4 +1,4 @@
-Code Complete
+﻿Code Complete
 =============
 
 Code Complete is a book written by Steve McConnell which explains why planning 
@@ -376,9 +376,8 @@ which creates good abstractions.
 Minimizing accessibility to the methods and data, the stricter the better.
 Preserve a good abstraction by exposing a few cohesive methods.
 
-Avoid putting private implementation details into a class’s interface. The
-example of this that was given is insane. It seems to increase complexity by a
-lot.
+Avoid putting private implementation details into a class’s interface. Hide how
+the class performs a function as it will decrease complexity by a lot.
 
 Don't make assumptions about the users. They can and will use methods in the
 unintended order.
