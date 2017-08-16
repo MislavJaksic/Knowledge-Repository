@@ -518,3 +518,159 @@ to each customer while keeping all other classes the same.
 Classes to avoid:
 don't create god classes that do everything, eliminate irrelevant classes and
 avoid classes named after verbs.
+
+Chapter 7: High Quality Routines
+--------------------------------
+A routine is an individual method or procedure invokable for a single purpose.
+
+A low quality routine has, for example the following characteristics: unclear
+routine name, an inconsistent layout, changes input variables, writes to global
+data, doesn't have a single purpose, doesn't handle errors, has hard coded magic
+numbers, has parameters that are not used, has many parameters, parameters are
+poorly ordered. 
+
+Valid Reasons to Create a Routine
+---------------------------------
+One might think that the only reason why a routine should be created is to avoid
+code duplication. This makes modification easier and testing simpler. That is a
+reason, but there are many more.
+
+Reduce complexity by hiding information and implementation details. A routine
+needs to be broken down if it deeply nests loop and conditions.
+
+Introduce intermediate abstractions that will enable you to read the routine as
+if it was programmed in English.
+
+Support subclassing by making sure well factored routines are overridden.
+
+Hide sequences of events that have to happen one after another.
+
+Hide pointer manipulation as it is hard to read and error prone. If the
+operation is performed in one place, it will be easier to change.
+
+Improve portability by isolating parts that depend of the environment.
+
+Simplify complicated boolean tests as naming a function explains the purpose of
+the test and makes sure the details are out of the way.
+
+Improve performance as inefficient code can be more easily replaced.
+
+NOT to ensure all routines are small. Some jobs are performed better in large
+routines. There are plenty of other reasons why you should put code into a
+routine. This is in contrast to the opinion given in Clean Code by Robert 
+
+Martin.
+However, you shouldn't be reluctant to put small pieces of code into their own
+routine, even if it has a single line of code.
+
+Design at the Routine Level
+---------------------------
+Cohesion refers to how closely the operations in a routine are related. A
+Cosine() routine is highly cohesive, while CosineAndTang() is less so.
+
+Functional cohesion is the strongest and best kind of cohesion, occurring when
+a routine performs one and only one operation.
+
+There are cohesions that are undesirable:
+Sequential cohesion exists when a routine contains operations that must be
+performed in a specific order and that share data from step to step. It is
+solved by creating separate routines for each of the operations. That way other
+routines will be able to call one of them without invoking the other.
+
+Communicational cohesion occurs when operations in a routine make use of the
+same data and aren’t related in any other way. Split it into separate routines
+and make another higher level routine that would call both of them.
+
+Temporal cohesion occurs when operations are combined into a routine because
+they are all done at the same time. There routines should only call other
+routines, as if they were event organisers and shouldn't perform any operation
+themselves.
+
+There are cohesions that must be avoided:
+Procedural cohesion occurs when operations in a routine are done in a specified
+order. The routine has procedural cohesion because it puts a set of operations
+in a specified order and the operations don’t need to be combined for any other
+reason. Solve it by separating the routines.
+
+Logical cohesion occurs when several operations are stuffed into the same
+routine and one of the operations is selected by a control flag that’s passed in.
+Break it into multiple routines. The only exception is if the routine is an
+event handler that only executes other routine and doesn't do anything itself.
+
+Coincidental cohesion occurs when the operations in a routine have no
+discernible relationship to each other.
+
+At the end, it is far better to concentrate of functional cohesion rather then
+learning the terminology of what to avoid.
+
+Good Routine Names
+------------------
+Describe all the outputs and side effects of a routine in its name. If the name
+and long and silly, the routine should be broken up into smaller pieces.
+
+Use clear verbs and nouns, avoid vague words and names. It could be that a vague
+name has to be given to a routine because that's what it does, but that is then
+a symptom of a unclear purpose.
+
+If a name of a routine has to be long, make it long. Its better then not
+describing the side effects or using a vague word.
+
+Name a procedure by using a strong verb followed by an object. If you are naming
+methods, you don't have to use encode the name of the object in the routine's
+name because in order to invoke the method, you'll have to perform it on an
+object.
+
+Use opposites precisely.
+
+Find conventional names for common operations. Databases have names such as
+Find(), Insert(), Create(), Remove(), Delete() and so on. Not thinking about the
+syntax saves a lot of brain power.
+
+How Long Can a Routine Be?
+--------------------------
+Let them grow to about 100, 200 lines. Anything more and you should try to break
+it up. 
+
+How to Use Routine Parameters
+-----------------------------
+Order routine parameters by the sequence of operations: input, modify and output.
+
+Similar routines should have their parameters ordered in similar ways.
+
+Always use all the parameters. If you don't use a parameter, don't pass it to
+the routine.
+
+Don't use parameters as working variables. Use local variables as working
+variables. Write distinguishable names for input and working variables. 
+
+Explicitly document your assumptions about the parameters, what values should
+and shouldn't appear, meaning of status codes, which ones are input, output and
+modify parameters and others.
+
+If you are passing the same data over multiple routines, group up the routines
+into a class. Limit the amount of parameters a routine can have. The less
+parameters there are the better.
+
+Prefix input, output and modify variables. This advice should be avoided!
+
+When thinking whether to pass an object or just some of its data members to a
+routine, think what would better maintain the interface abstraction.
+
+If you can, explicitly state which actual parameter will be assigned to a formal
+parameter. (INVOKE fun1(xCord = latitude, yCord = longitude, zCord = elevation))
+
+Make sure that the type of both formal and actual parameters match.
+
+Special Considerations in the Use of Functions
+----------------------------------------------
+A function is a routine that returns a value; a procedure is a routine that does
+not.
+
+Use a function if the primary purpose of the routine is to return the value
+indicated by the function name. Otherwise, use a procedure.
+
+Macro Routines and Inline Routines
+----------------------------------
+Use macros very sparingly as they are hard to understand, test and debug. The
+same is true of inline routines as they break encapsulation.
+
