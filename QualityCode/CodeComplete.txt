@@ -674,3 +674,123 @@ Macro Routines and Inline Routines
 Use macros very sparingly as they are hard to understand, test and debug. The
 same is true of inline routines as they break encapsulation.
 
+Chapter 8: Defensive Programming
+--------------------------------
+Assume that bad data will be passed to your routines and prepare the routines for
+handling bad data.
+
+Protecting Your Program from Invalid Inputs
+-------------------------------------------
+Check values from external sources.
+
+Check values of routine input parameters.
+
+Decide what to do when you detect bad data.
+
+Assertions
+----------
+Assertions state that a condition is true. Often used to document and check if
+ana sumption is satisfied.
+
+Use error handling for conditions you expect to occur and assertions for
+conditions that should NEVER occur.
+
+Don't put executable code into an assertion.
+
+Preconditions are what the calling code promises will be true before calling the
+routine. Postconditions are what the routine promises will be true after it is
+finished executing. Handle them with assertions if the data is coming from a
+trusted routine and with error handling code if the data is coming from an
+external source.
+
+It might be beneficial to use both error handling code and assertions to handle
+the same error.
+
+Error Handling Techniques
+-------------------------
+Return a neutral value, a value that is known to be harmless.
+
+Ignore an incorrect value in a stream of values and take the next value that is
+correct.
+
+Return a value that you returned previously.
+
+Substitute the incorrect value with the closes acceptable value.
+
+Log a warning message to a file.
+
+Return an error code by setting a value, returning an error value or raising an
+exception. It is important to decide which part of the system will handle the
+errors and which one will just report them.
+
+Call a central error handling routine. This will couple the error handling
+routine to the routines that use it.
+
+Display an error message when an error has occurred. This might make the GUI
+inconsistent and hard to localize.
+
+Shutting down is also an option and a very desirable one if you are developing a
+safety critical application.
+
+Robustness is favored by safety critical applications as it emphasises that the
+result must always be correct and if it isn't, its better to shut down.
+Correctness is favored by consumer applications as they emphasize that any
+result is better then shutting down.
+
+Decide on the error handling design at the architecture level and follow it
+consistently throughout the system. 
+
+Exceptions
+----------
+Exceptions are a specific means by which code can pass along errors or
+exceptional events to the code that called it.
+
+Notify other parts of the program about an error.
+
+Throw an exception only for exceptional conditions, for conditions that cannot
+be addressed with any other coding practice.
+
+Always handle exceptions locally if it is possible to handle them locally.
+
+Avoid throwing exceptions in constructors and destructors due to the complicated
+nature of how exceptions are processed in these methods.
+
+Make sure the exception is on a consistent level of abstraction with the class
+interface.
+
+Include in the exception message all the info that led to the exception.
+
+Avoid empty "catch" blocks.
+
+Know the exceptions thrown by the library code you use. If you don't know them,
+create a prototype to flush them out.
+
+Make a centralised exception handler, but know that it will tightly couple all
+the programs that use it.
+
+Standardize the use of exceptions in your project.
+
+Always consider using the alternative to exceptions. It is perfectly valid to
+abort and release all resources when a condition isn't satisfied and let the
+user rerun the program with correct input.
+
+Barricade Your Program to Contain the Damage Caused by Errors
+-------------------------------------------------------------
+Barricade are a set of programs that check all input data and only allow data
+past the barricade if and only if it is clean and safe.
+
+Convert input data to the correct type as soon as possible.
+
+Routines outside the barricade can never assume the data is clean and have to
+use error handling code, but routines inside the barricade should use assertions
+as they assume the data is clean and that the barricades are working properly.
+
+Debugging Aids
+--------------
+Use some resources during development to make sure you can find error easily.
+
+Use offensive programming. Try to make the program fail. Fill up the memory,
+assert conditions, make the program fail hard if it detects an error.
+
+Determining How Much Defensive Programming to Leave in Production Code
+----------------------------------------------------------------------
