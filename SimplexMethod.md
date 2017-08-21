@@ -8,6 +8,16 @@
 |  | 3*x1* + 2*x2* =< 24 |
 |  | *x1*, *x2* > 0 |
 
+Rewrite the maximization function so that P is positive and 0 is on one side of the equation.
+
+If =< add a slack variable to the inequality to convert it to an equality.
+
+| =< to = |
+| -- |
+| *x1* + 2*x2* + *s1* = 16 |
+| *x1* + *x2* + *s2* = 9 |
+| 3*x1* + 2*x2* + *s3* = 24 |
+
 | x1 | x2 | s1 | s2 | s3 | P | C | Comment |
 | -- | -- | -- | -- | -- | -- | -- | -- |
 | 1 | 2 | 1 | 0 | 0 | 0 | 16 |  16/1 = 16 |
