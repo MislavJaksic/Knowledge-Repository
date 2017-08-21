@@ -1,5 +1,6 @@
 ## (Simple) simplex method example
 
+| Problem: |  |
 | -- | -- |
 | Maximize: | P = 40*x1* + 30*x2* |
 | If: | *x1* + 2*x2* =< 16 |
