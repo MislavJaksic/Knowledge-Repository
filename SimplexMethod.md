@@ -16,6 +16,7 @@
 | -40 | -30 | 0 | 0 | 0 | 1 | 0 |    |
 
 8 is the smallest value in C column (it determines the row)
+
 -40 is the smallest value in the last row (it determines the column)
 
 | x1 | x2 | s1 | s2 | s3 | P | C | Comment |
@@ -27,23 +28,33 @@
 
 | x1 | x2 | s1 | s2 | s3 | P | C | Comment |
 | -- | -- | -- | -- | -- | -- | -- | -- |
-| 0 | 4/3 | 1 | 0 | -1 | 0 | 8 |  |
-| 0 | 1/3 | 0 | 1 | -1 | 0 | 1 |  |
-| 1 | 2/3 | 0 | 0 | 1 | 0 | 8 |  |
+| 0 | 4/3 | 1 | 0 | -1 | 0 | 8 | 8\*3/4 = 6 |
+| 0 | 1/3 | 0 | 1 | -1 | 0 | 1 | 1\*3 = 3, multiply row by 3 |
+| 1 | 2/3 | 0 | 0 | 1 | 0 | 8 | 8\*3/2 = 12 |
 | 0 | -10/3 | 0 | 0 | 40 | 1 | 320 |  |
 
+3 is the smallest value in C column (it determines the row)
 
+-10/3 is the smallest value in the last row (it determines the column)
 
 | x1 | x2 | s1 | s2 | s3 | P | C | Comment |
 | -- | -- | -- | -- | -- | -- | -- | -- |
 | 0 | 4/3 | 1 | 0 | -1 | 0 | 8 |  |
-| 0 | 1 | 0 | 3 | -3 | 0 | 3 |  |
+| 0 | 1 | 0 | 3 | -3 | 0 | 3 | set other values in column *x2* to 0 |
 | 1 | 2/3 | 0 | 0 | 1 | 0 | 8 |  |
 | 0 | -10/3 | 0 | 0 | 40 | 1 | 320 |  |
 
 | x1 | x2 | s1 | s2 | s3 | P | C | Comment |
 | -- | -- | -- | -- | -- | -- | -- | -- |
-| 0 | 0 | 1 | -4 | 3 | 0 | 4 |  |
-| 0 | 1 | 0 | 3 | -3 | 0 | 3 |  |
-| 1 | 0 | 0 | -2 | 7 | 0 | 6 |  |
-| 0 | 0 | 0 | 30 | 30 | 1 | 330 |  |
+| 0 | 0 | 1 | -4 | 3 | 0 | 4 | *s1* = 4 |
+| 0 | 1 | 0 | 3 | -3 | 0 | 3 | *x2* = 3 |
+| 1 | 0 | 0 | -2 | 7 | 0 | 6 | *x1* = 6 |
+| 0 | 0 | 0 | 30 | 30 | 1 | 330 | P = 330 |
+
+Stop condition: there are no negative values in the last row
+
+*s2* and *s3* are 0 because they are in mixed values columns.
+
+P = 40\*6 + 30\*3 = 240 + 90 = 330
+
+We have validated the solution by plugging in the numbers into the original equation.
