@@ -10,7 +10,13 @@
 
 Rewrite the maximization function so that P is positive and 0 is on one side of the equation.
 
+If you have to minimize instead of maximize the function, flip the signs of the variable in the objective function and then pretend you are maximizing.
+
 If =< add a slack variable to the inequality to convert it to an equality.
+
+If => add a negative slack variable and an artificial variable to convert it to an equality.
+
+If = add an artificial variable to convert it to a correct equality.
 
 | =< to = |
 | -- |
