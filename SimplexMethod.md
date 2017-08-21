@@ -1,9 +1,12 @@
-| x1 | x2 | s1 | s2 | s3 | P | C |
-| -- | -- | -- | -- | -- | -- | -- |
-| 1 | 2 | 1 | 0 | 0 | 0 | 16 |  16/1 = 16
-| 1 | 1 | 0 | 1 | 0 | 0 | 9 |  9/1 = 9
-| 3 | 2 | 0 | 0 | 1 | 0 | 24 |  24/3 = 8, 8 is the smallest value (it determines the row)
-| -40 | -30 | 0 | 0 | 0 | 1 | 0 |  -40 is the smallest value (it determines the column)
+| x1 | x2 | s1 | s2 | s3 | P | C | Comment |
+| -- | -- | -- | -- | -- | -- | -- | -- |
+| 1 | 2 | 1 | 0 | 0 | 0 | 16 |  16/1 = 16 |
+| 1 | 1 | 0 | 1 | 0 | 0 | 9 |  9/1 = 9 |
+| 3 | 2 | 0 | 0 | 1 | 0 | 24 |  24/3 = 8 |
+| -40 | -30 | 0 | 0 | 0 | 1 | 0 |    |
+
+8 is the smallest value (it determines the row)
+-40 is the smallest value (it determines the column)
 
 | x1 | x2 | s1 | s2 | s3 | P | C |
 | -- | -- | -- | -- | -- | -- | -- |
