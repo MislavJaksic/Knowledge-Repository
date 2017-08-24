@@ -1,6 +1,7 @@
 ## Commenting and documenting in Python
 
-Programs should be commented and documented at the same time. Documentation should be generated from commen
+Programs should be commented and documented at the same time. Documentation should be generated from comments.
+
 You can check if your code conforms to the official PEP8 Python coding convention by invoking
 "pep8 programName.py". If it doesn't, the console will tell you why, line by line.
 
