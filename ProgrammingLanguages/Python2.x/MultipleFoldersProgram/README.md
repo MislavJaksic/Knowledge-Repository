@@ -3,19 +3,27 @@
 Structure:
 
 TopLevel
+
 --__init__.py
+
 --TopLevelModule.py
 
 --SubLevelOne
+
 -- --__init__.py
+
 -- --SubLevelOneModule.py
 
 -- --SubSubLevelOne
+
 -- -- --__init__.py
+
 -- -- --SubSubLevelOneModule.py
 
 --SubLevelTwo
+
 -- --__init__.py
+
 -- --SubLevelTwoModule.py
 
 ### How to make programs use other programs
