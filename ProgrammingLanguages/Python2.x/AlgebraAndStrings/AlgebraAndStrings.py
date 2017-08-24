@@ -20,23 +20,13 @@ print 15 % 2 #-> 1
 print False or True #-> True
 print False and True #-> False
 print not False #-> True
-print None
-
-#Assignment
-#a points at 5
-a = 5
-#b points where a points (b points at 5)
-b = a
-#Assignment changes what you point at, not what is stored at that point
-b = 6
-print a #-> 5
-print b #-> 6
+print None #-> None
 
 #Strings
 c = "String"
 #String length
 print len(c) #-> 6
-#Won't change the string becuase they are immutable
+#Won't change the string because they are immutable
 c.replace("g","") #-> "Strin"
 print c #-> "String"
 
