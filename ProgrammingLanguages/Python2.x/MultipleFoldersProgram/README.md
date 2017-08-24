@@ -28,11 +28,11 @@ TopLevel
 
 ### How to make programs use other programs
 
-A program is a parent if it is in a folder above a child program. The opposite is also true.
+A program is a parent if it is in a folder above a child program.
 Parent importing a child program is demonstrated in the TopLevelModule. Import using "from <folder_path>
 import <module_name>".
-Child importing a parent program is demonstrated in the SubSubLevelOneModule. First, the parents package
-(read folder) has to be added to the sys.path. sys.path is a list of strings where Python is going to search
+Child importing a parent program is demonstrated in the SubSubLevelOneModule. First, the parent's package
+(read folder) has to be added to the sys.path attribute. sys.path attribute is a list of strings where Python is going to search
 for modules to import.
 
 ### Python packages, modules and imports
