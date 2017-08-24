@@ -15,3 +15,5 @@ from that point when invoked again; behaves like an iterable object such as a li
 
 - LambdaFunctions: also known as anonymous functions, they are a single expression that could be written in a
 return statement
+
+- ExcellentLibraries: Python is well know for its excellent libraries. Consult this small list before developing your own
