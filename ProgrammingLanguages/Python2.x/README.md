@@ -17,3 +17,5 @@ from that point when invoked again; behaves like an iterable object such as a li
 return statement
 
 - ExcellentLibraries: Python is well know for its excellent libraries. Consult this small list before developing your own
+
+- Frameworks: they make abstractions easy. Use them if you intend to do exactly what you want you to do
