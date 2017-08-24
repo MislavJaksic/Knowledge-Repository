@@ -1,9 +1,8 @@
 #Built in array functions: https://docs.python.org/2/tutorial/datastructures.html#more-on-lists
 
 #Arrays(called lists in Python)
-listOne = [0, 1, 2, 3, 4]
-listOne = range(0, 5, 1)
-#Assign a reference; doesen't copy the object
+listOne = [0, 1, 2, 3, 4] #or listOne = range(0, 5, 1)
+#Assign a reference; doesn't copy the object!
 listTwo = listOne
 #Add element after the last position
 listTwo.append(5) #-> Changes both lists
@@ -11,9 +10,12 @@ print listOne #-> [0, 1, 2, 3, 4, 5]
 print listTwo #-> [0, 1, 2, 3, 4, 5]
 #Remove the element in the last position
 print listOne.pop() #-> 5
+#Change element
+listOne[0] = 99 #-> [99, 1, 2, 3, 4]
+print listOne[0] #-> 99
 #Access an element
 print listTwo[2] #-> 2
-# Slicing
+# Slicing (same as strings)
 # [| 0 | 1 | 2 | 3 | 4 |]
 #  0   1   2   3   4   5
 # -5  -4  -3  -2  -1
