@@ -1,12 +1,11 @@
 def BeginFunc():
-  #Two spaces are used as indents; there are no curly brackets
+  #Indents are used to indicate beloning
   
   outsideArray = [0, 1, 2]
   #A function cannot change at what the outside variable is pointing
   ChangePointer(outsideArray)
   print outsideArray #-> [0, 1, 2]
   #A function can change an outside object
-  #and can return more then one value
   ChangeArray(outsideArray)
   print outsideArray #-> [0, 1, 2, 3]
   
@@ -19,14 +18,14 @@ def BeginFunc():
   #Store a function as if it were a value
   storeFunction = CheckPalindrome
   #Call a function with positional arguments
-  print storeFunction("abba", 1, "Variable", "arguments") #-> "Yes"
+  print storeFunction("abba", 1, "Other", "arguments") #-> "Yes"
   
 def ChangePointer(inputArray):
   inputArray = [0, 1, 2, 3]
 
 def ChangeArray(inputArray):
   inputArray.append(3)
-  return 1, 2, 3, 4
+  return 1, 2 #-> able to return multiple values
   
 def CheckPalindrome(string, checkPosition=0, *manyArgs):
   """Default argument checkPosition. It is evaluated only once.
@@ -34,7 +33,7 @@ def CheckPalindrome(string, checkPosition=0, *manyArgs):
       Variable number of arguments are stored in *manyArgs.
   """
   if manyArgs is not ():
-    print manyArgs #-> ("Variable", "arguments")
+    print manyArgs #-> ("Other", "arguments")
   stringLength = len(string)
   if stringLength % 2 == 1:
     return "No"
