@@ -1,17 +1,16 @@
 ## Lisp 
 
 For Windows, download LispStick and then double click run.bat to start the
-emacs.
+emacs. The interactive "interpreter" REPL will then open before you.
 
-To save your work, C+x C+f to make/find a file. Type fileName.lisp and
-then save it. Write some code into the file and compile it with C+c C+c
-(be sure to position the cursor at the end of the file). To save your work
-after editing use C+x C+s.
+To save your defun functions, C+x C+f to make/find a file, type fileName.lisp and
+then save it with C+x C+s. Write a defun into the file and compile it with C+c C+c.
+To save your work after editing use C+x C+s.
 
-After compiling files can also be loaded into REPL with
+After compiling, files can also be loaded into REPL with
 (load "fileName.lisp").
 
-You can open up REPL window beside the file editing window with C+c C+z.
+You can open up a REPL window beside the file editing window with C+c C+z.
 
 Lisp uses a Polish prefix notation. Example: (+ 2 3 4 5) -> 14
 
@@ -54,7 +53,7 @@ Lisp uses a Polish prefix notation. Example: (+ 2 3 4 5) -> 14
   (format *query-io* "~a: " prompt)
   (force-output *query-io*)
   (read-line *query-io*))
-#validate input data with parse-integer, y-or-n-p and take a defulat value with or
+#validate input data with parse-integer, y-or-n-p and take a default value with or
 (defun prompt-for-cd ()
   (make-cd
     (prompt-read "Title")
@@ -81,7 +80,7 @@ S-expressions: lists, atoms
 Naming convention:
 * for global variables
 + for constants
-- to seperate words
+- to separate words
 ; for comments
 in emacs indent with TAB
 
@@ -90,11 +89,11 @@ any atom, any nonlist or empty list
 list that has a symbol as its first element
   
 Evaluator can be thought of as a function that takes a Lisp form as an
-arguement and returns a value.
+argument and returns a value.
   Atoms can be self evaluating such as strings and numbers, t and nil as
   well as keyword symbols (:a).
   Function call forms: evaluate the remaining elements of the list as Lisp forms and pass the resulting values to the named function
-  Special form: special evaluation to make sure the lagnuage is capable of implementing if, loop and other features. There are around 25 
+  Special form: special evaluation to make sure the language is capable of implementing if, loop and other features. There are around 25 
   Macro form: extend the Lisp syntax, unlike macros in other languages.
   Macro is a function that takes s-expressions as arguments and returns a
   Lisp form that's then evaluated in place of the macro form. The
@@ -103,7 +102,7 @@ arguement and returns a value.
   Second, the form returned by the macro function--called its expansion
   --is evaluated according to the normal evaluation rules.
   
-Booleans:
+Boolean values:
 t is truth
 nil is false
 (), '() is nil
