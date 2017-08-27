@@ -1,4 +1,4 @@
-Source: The Hacker's Guide to Python, 
+﻿Source: The Hacker's Guide to Python, 
 - atexit allows you to register functions to call when your program exits.
 - argparse provides functions for parsing command line arguments.
 - bisect provides bisection algorithms for sorting lists.
@@ -29,3 +29,32 @@ can use instead of having to write your own lambda expressions.
 - urllib (and urllib2 and urlparse in Python 2.x) provides functions for handling
 and parsing URLs.
 - uuid allows you to generate UUIDs (Universally Unique Identifiers).
+
+Other:
+- funtools
+- memory-profiler
+- Hy
+- cProfile
+- pyprof2calltree
+- timeit
+- tox, detox
+- coverage
+- testrepository
+- subunit
+- testscenarios
+
+Anaconda distribution:
+- Blaze
+- beutifulsoup
+- Bokeh
+- click
+- configparser
+- cryptography
+- curl
+- dask
+- dask.distributed
+- flask
+- html5lib
+
+Python module of the week
+- lists a lot of modules

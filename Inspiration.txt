@@ -34,3 +34,7 @@ Apache Maven
 jsocket, flexispy, IMSI catcher
 
 Lisp: http://paulgraham.com/avg.html is an article that praises Lisp. Maybe when I learn it it will truly change my perspective and way of thinking.
+
+introspection in programming languages
+
+profiling programs (show memory usage and length of execution)
