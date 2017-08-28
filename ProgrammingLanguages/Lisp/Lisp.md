@@ -191,3 +191,15 @@ Macros in Lisp extend the language syntax, they can define new syntactic abstrac
 (loop for i from 1 to 10 collecting i) -> (1 2 3 4 5 6 7 8 9 10)
 (loop for x across "the quick brown fox jumps over the lazy dog"
       counting (find x "aeiou")) -> 11
+
+
+#when macros are run its macro expansion time; when regular code is run its runtime
+#macros will generate code
+(defmacro name (parameter*)
+  "Optional documentation string."
+  body-form*)
+#1)Write a sample call to the macro and the code it should expand into, or vice versa.
+#2)Write code that generates the handwritten expansion from the arguments in the sample call.
+#3)Make sure the macro abstraction doesn't "leak." that call should expand
+
+#Stopped at A Sample Macro: do-primes, Chapter 8
