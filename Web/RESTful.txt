@@ -1,0 +1,119 @@
+URI is also a URL. Almost identical.
+When you type a URI, you send a HTTP request and you get served a HTML document.
+There is a lot of data and services on the web and all of it is accessed using a browser.
+Programmable web is just the same, but instead of serving attractive HTML pages, XML documents are served.
+Once a web browser has submitted its HTTP request it needs render the response in a way a humen iwll understand it.
+Web service client must automatically extract meaning from HTTP responses.
+The web can connect programs just as it can connect humans.
+
+The programmable web is based on HTTP and XML.
+HTTP is a document-based protocol, in which the client puts a document in an envelope
+and sends it to the server which will then respond by putting a response document
+in an envelope and send it to the client.
+
+HTTP GET example:
+An HTTP GET request for http://www.oreilly.com/index.html
+  GET /index.html HTTP/1.1
+  Host: www.oreilly.com
+  User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.7.12)...
+  Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,...
+  Accept-Language: us,en;q=0.5
+  Accept-Encoding: gzip,deflate
+  Accept-Charset: ISO-8859-15,utf-8;q=0.7,*;q=0.7
+  Keep-Alive: 300
+  Connection: keep-alive
+
+HTTP terminology:
+The HTTP method, verb or action: indicates how the client expects the server to process the envelope. In example, GET.
+The path: address of the envelope. Portion of the URI to the right of the hostname. In example, /index.html
+The request headers: bits of metadata. In example, eight of them, Host, User-Agent, Accept, ...
+The entity-body, document or representation: document inside the envelope. Typical GET requests don't have it. In example, there is no entity-body and so the envelope is empty.
+
+HTTP GET response example:
+The response to an HTTP GET request for http://www.oreilly.com/index.html
+  HTTP/1.1 200 OK
+  Date: Fri, 17 Nov 2006 15:36:32 GMT
+  Server: Apache
+  Last-Modified: Fri, 17 Nov 2006 09:05:32 GMT
+  Etag: "7359b7-a7fa-455d8264
+  Accept-Ranges: bytes
+  Content-Length: 43302
+  Content-Type: text/html
+  X-Cache: MISS from www.oreilly.com
+  Keep-Alive: timeout=15, max=1000
+  Connection: Keep-Alive
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+  ...
+  <title>oreilly.com -- Welcome to O'Reilly Media, Inc.</title>
+  ...
+
+HTTP terminology:
+The HTTP response code: says whether its request went well or poorly. In example, its 200 OK.
+The response headers: just as with the request headers. Content-Type gives the media type of the entity-body. In example, text/html.
+The entity-body or representation: fulfillment of the GET request.
+
+
+Method information: how the client can convey its intentions to the server. Most common HTTP methods are GET, HEAD, PUT, DELETE and POST. Some services define their own method information.
+Scoping information: how the client tells the server which part of the data set to operate on. Many web services put scoping information in the path. In http://www.google.com/search?q=REST that would be /search?q=REST.
+
+Example of the same HTTP GET request:
+1) http://flickr.com/photos/tags/penguin
+2) http://api.flickr.com/services/rest/?method=flickr.photos.search&tags=penguin
+
+1) method information is “GET” and the scoping information is “photos tagged ‘penguin.’"
+2) method information is “do a photo search” and the scoping information is “penguin.”
+The difference is at the architecture level.
+
+XPath: read it from right to left. "//photo" means find every photo tag (photo), no matter where it is in the document (//).
+
+
+Architectures:
+1) RESTful, Resource-Oriented Architectures
+Services that look like the Web
+In RESTful architectures, the method information goes into the HTTP method. In Resource-
+Oriented Architectures, the scoping information goes into the URI.
+RESTful web services share a standard vocabulary
+
+2) RPC-Style Architectures
+An RPC-style web service accepts an envelope full of data from its client, and sends a
+similar envelope back. The method and the scoping information are kept inside the
+envelope or as headers.
+Every RPC-style service defines a brand new vocabulary.
+
+3) REST-RPC Hybrid Architectures
+Hybrids that are those services that behave like RESTful, but are designed to be RPC-style services.
+They often use HTTP as a convenient envelope format.
+
+Technologies on the programmanle web:
+HTTP: a request to a RESTful web service puts the method information in the HTTP method and the scoping information in the URI.
+RPC-style web services tend to ignore the HTTP method, looking for method and scoping information somewhere else.
+
+URI: RESTful, resource-oriented service exposes a URI for every piece of data on which the client might want to operate.
+A REST-RPC hybrid exposes a URI for every operation the client might perform: one URI to fetch a piece of data, a different URI to delete that same data.
+An RPC-style service exposes one URI for every processes capable of handling Remote Procedure Calls (RPC). Most often, there is only one such URI, the endpoint.
+  
+XML-RPC: data structure format for representing function calls and their return values.
+
+SOAP: envelope format like HTTP on top of HTTP that uses XML-based envelope format. SOAP is a way of putting data in the envelope.
+
+WS-*: define XML headers for SOAP envelope
+
+WSDL: Web Service Description Language, XML vocabulary used to describe SOAP-based web services. A client can load a WSDL file and know exactly which RPCstyle
+methods it can call, what arguments those methods expect, and which data types
+they return.
+
+WADL: Web Application Description Language, XML vocabulary used to
+describe RESTful web services. As with WSDL, a generic client can load a WADL file
+and be immediately equipped to access the full functionality of the corresponding web
+service.
+
+
+Chapter 2: Writing Web Service Clients
+
+
+
+
+ 
