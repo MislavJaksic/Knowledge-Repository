@@ -155,3 +155,39 @@ Modify macros: use setf to perform an action
 (incf x 10) === (setf x (+ x 10))
 vars swap values -> (rotatef a b)
 add var to var -> (push a b)
+
+Macros in Lisp extend the language syntax, they can define new syntactic abstractions.
+
+#(if condition then-form [else-form])
+(if (> 2 3) "Yup" "Nope") -> "Nope"
+#when and unless allow you to execute multiple Lisp form in then-form and else-form
+(when (spam-p current-message)
+  (file-in-spam-folder current-message)
+  (update-spam-database current-message))
+#cond is a multibranch conditional
+(cond
+  (test-1 form*)
+      ...
+  (test-N form*)
+#boolean operators are: and, or, not
+(and (= 1 2) (= 3 3)) -> NIL
+#looping: do, dolist, dotimes, loop
+(dolist (var list-form)
+  body-form*)
+(dolist (x (list 1 2 3)) (print x) (if (evenp x) (return)))
+(dotimes (i 4) (print i))
+#do is more general and powerful. all step-forms are calculated at the same time using the old values
+(do (variable-definition*)   -> var def is: (var init-form step-form)
+    (end-test-form result-form*)
+  statement*)
+(do ((n 0 (1+ n)) -> n begins as 0, step is n+1
+     (cur 0 next) -> cur begins as 0, step is next
+     (next 1 (+ cur next))) -> next begins as 1, step is cur+next
+    ((= 10 n) cur))
+#use loop if you need to loop over data structures or accumulate values
+(loop -> simple inf loop form
+  body-form*)
+#symbols across, and, below, collecting, counting, finally, for, from, summing, then, and to are some of the loop keywords
+(loop for i from 1 to 10 collecting i) -> (1 2 3 4 5 6 7 8 9 10)
+(loop for x across "the quick brown fox jumps over the lazy dog"
+      counting (find x "aeiou")) -> 11
