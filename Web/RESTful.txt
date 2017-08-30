@@ -133,9 +133,33 @@ JavaScript: XMLHttpRequest
 From command line: program curl
 Lisp: simple-http
 
+There are three kinds of XML parsers:
+1) the document-based strategy of DOM and other treestyle parsers (simplest)
+  - XML document as nested data structure
+  - process XML with XPath, CSS selectors
+  - have to load the whole document into memory
+  - can use random access to grab data
+2) event-based strategy of SAX and “pull” parsers
+  - turns XML into a stream of events, starting and closing tags, XML comments, and entity declarations
+  - pull parser is useful when you need to handle almost every event
+  - SAX parser is useful when you need to handle a few events as you have to register callback functions
+  - cannot randomly access data
+  - need to check XML is well formed of the parser may crash
+
+Good XML parsers:
+Ruby: REXML
+Python: ElementTree
+Java: javax.xml, Xerces, or XMLPull
+C#: System.Xml.XmlReader
+JavaScript: responseXML
+
+More and more web services return JSON documents instead of XML.
+Good JSON parser: visit the JSON website and look for them.
 
 
+WADL file describes HTTP requests: which URIs you can visit, what data those URIs expect you to send, and what data they serve in return.
+WADL library can parse this file and model the space of possible service requests.
+WADL adoptions is extremely poor, but you can write WADL files for someone else's services.
 
-
-
+Chapter 3: What makes RESTful services different?
  
