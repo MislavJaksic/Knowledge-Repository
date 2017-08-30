@@ -63,8 +63,8 @@ Example of the same HTTP GET request:
 1) http://flickr.com/photos/tags/penguin
 2) http://api.flickr.com/services/rest/?method=flickr.photos.search&tags=penguin
 
-1) method information is ìGETî and the scoping information is ìphotos tagged ëpenguin.í"
-2) method information is ìdo a photo searchî and the scoping information is ìpenguin.î
+1) method information is ‚ÄúGET‚Äù and the scoping information is ‚Äúphotos tagged ‚Äòpenguin.‚Äô"
+2) method information is ‚Äúdo a photo search‚Äù and the scoping information is ‚Äúpenguin.‚Äù
 The difference is at the architecture level.
 
 XPath: read it from right to left. "//photo" means find every photo tag (photo), no matter where it is in the document (//).
@@ -112,6 +112,28 @@ service.
 
 
 Chapter 2: Writing Web Service Clients
+In this chapter, a client will be shown that handles RESTful and hybrid services.
+
+Every web service request involves the same three steps:
+1) input data into the HTTp request: the HTTP method, the URI, any HTTP header and any document that needs to go into the entity body.
+2) format the data as an HTTP request, and send it to the appropriate HTTP server
+3) parse the response data
+
+Instead of following this process every time you want to make a web service request, you can write a wrapper method to abstract the process. Some APIs have an official wrappers, but you can always make your own.
+
+Sample client: open a TCP socket connection, send a HTTP request, get the response, close the connection.
+HTTP libraries: almost every language has one, they make an HTTP request. They need quite a few methods to be considered actual usable libraries.
+Good HTTP libraries:
+Ruby: rest-open-uri and net/http
+Python: httplib2
+Java: HttpClient
+C#: System.Web.HTTPWebRequest
+PHP: libcurl
+JavaScript: XMLHttpRequest
+From command line: program curl
+Lisp: simple-http
+
+
 
 
 
