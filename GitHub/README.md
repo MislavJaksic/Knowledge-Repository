@@ -37,6 +37,12 @@ Shields and badges:
 |     Xcode 6.3      	|          Xcode 6.1.1            	|           Xcode 6.0            	|
 |      LLVM 6.1        	|             LLVM 6.1            	|             LLVM 5.0             	|
 
+|  |  |  |
+| -- | -- | -- |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+
 ```xml
 <Looks_like_xml>
 </It_can_also_look_like_html_java_js>
