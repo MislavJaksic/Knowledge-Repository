@@ -114,7 +114,8 @@ handling Remote Procedure Calls (RPC). Most often, there is only one such URI, t
   
 - XML-RPC: data structure format for representing function calls and their return values.
 
-- SOAP: envelope format like HTTP on top of HTTP that uses XML-based envelope format. SOAP is a way of putting data in the envelope.
+- SOAP: envelope format like HTTP on top of HTTP that uses XML-based envelope format. SOAP is a way of putting data
+in the envelope.
 
 - WS-*: define XML headers for SOAP envelope
 
