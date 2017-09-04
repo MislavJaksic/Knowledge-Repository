@@ -291,4 +291,244 @@ In object oriented design, you break down a system into nouns. Each noun is a cl
 A "class" as a HTTP resource exposes only six HTTP methods.
 When tempted to create a new method, create a new resource instead.
 
-Turning Requirements page 109...
+The following process will produce a set of resources that will respond to HTTP methods:
+- Figure out the data set
+- Split the data set into resources
+- For each kind of resource:
+  - Name the resources with URIs
+  - Expose a subset of the uniform interface
+  - Design the representation(s) accepted from the client
+  - Design the representation(s) served to the client
+  - Integrate this resource into existing resources, using hypermedia links and
+forms
+  - Consider the typical course of events: what’s supposed to happen?
+  - Consider error conditions: what might go wrong?
+
+Example: create a web service that will serve maps
+
+Figure out the data set: which maps? Those maps that use 2-D coordinates to
+identify any given point on the map. Maps need to be addressable using latitude
+and longitude. Those can be maps of cities, political maps, maps of celestial
+bodies. Some points on the map are more interesting then others, there points
+are called places. Users will want to return a place name in a point on the map.
+Data set will include mappings of places to points. Places have a certain type:
+cities, hot springs, crater. Service can find a place given its name, type or
+description.
+
+Split the data set into resources: expose the data set as HTTP resources.
+Three commonly exposed kinds of resources:
+- Predefined one off resources for important aspects of the application: top
+level directory, for example a home page. Unique.
+- Resource for every object exposed through the service: each object exposed by
+the service has its own resource set.
+- Resources representing the result of algorithms applied to the data set:
+collection resources, the result of queries. A service either exposes none or an
+infinite number of them. Called algorithmic resources.
+
+Map service needs one special resource that will list all the planets. Every map
+of the planet is also a resource. Those are one off resources.
+
+Every point on the map is a resource. A point might represent a house, a
+mountain or something else. Places are points which are identified by a name
+rather then the coordinates, they too are resources. Those are object resources.
+
+Sample algorithmic resources are: places on Earth called Springfield, towns in
+France with pop less then 1000 and others.
+
+Master list of resources are:
+- list of planets
+- place on a planet, identified by a name
+- geographic points on the planet
+- list of places that match a criteria
+- map of a planet, centered around a point
+
+RESTful services expose both ata and algorithms through resources. Think about
+results of actions instead of actions (methods) themselves.
+
+Name the resources: named after URIs. URIs contain all the scoping info. The
+list of planets is the root URI, http://maps.example.com/.
+Three basic rules for URI design:
+- use path variables to encode hierarchy, /parent/child
+- use punctuation characters in path variables to avoid implying hierarchy where
+none exist, /parent/childOne;ChildTwo
+- use query variables to imply inputs into an algorithm,
+/search?q=jellyfish&start=20
+
+Percent encoding primer: %20 in URI stands for a character that would otherwise
+be considered special.
+
+Sample hierarchy URIs: http://maps.example.com/Mars, http://maps.example.com/Earth
+to identify planets. If you can extend the URI with something like
+/Earth/France/Paris, then you know you have designed a good URI.
+
+No hierarchy URIs: use comma when the order matters (,) and semicolon (;) when
+it doesn't. /Earth/24.9195,17.821 and /Venus/3,-80 .
+
+Different map type URIs: radar/Venus/65.9,7.00 and /geologic/Earth/43.9,-103.46 .
+
+Different map scale URIs: /satellite.10/Earth/41,-112: 1:24,000 and /satellite.1/Earth/41,-112: 1:51,969,000 .
+
+Algorithmic resource URIs: /Mars?show=craters+bigger+than+1km and /Earth/USA/Mount%20Rushmore?show=diners .
+Sometimes, they are not necessary.
+
+Master list of URIs:
+- list of planets: /
+- planet or a place on a planet: /{planet}/[{scoping-information}/][{place-name}],
+the optional variable {scoping-information} will be a hierarchy of places, {place-name}
+will be the name of the place and *show* can be tacked on at the end to access
+algorithmic resources. 
+- map of a planet, or a point on a map: /{map-type}{scale}/{planet}/[{scoping-information}],
+{scoping-information} will be a pair of longitude and latitude values, {scale}
+will be a dot and a number.
+
+Design your representations: decide on the data format that will be send to the
+client. Representation's job is to convey the state of the resource. Representation
+should provide the levers of state, links to nearby resources (new application states).
+The goal is connectedness, the ability to follow one resource to another by
+following links. 
+Representing:
+- the list of planets: between plain text, JSON, XML and XHTML format, use XHTML
+a good XML language for displaying lists of links.
+
+```xhtml
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>Planet List</title>
+</head>
+<body>
+<ul class="planets">
+  <li><a href="/Earth">Earth</a></li>
+  <li><a href="/Venus">Venus</a></li>
+  ...
+</ul>
+</body>
+</html>
+```
+
+- maps and points on maps: maps will be split into 256x256 tiles. When a client
+requests a point, serve a hypermedia file that includes a link to a tiny map
+image. Hypermedia files will also include links to adjacent points.
+
+```xhtml
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>Road Map of Earth</title>
+</head>
+<body>
+...
+<img class="map" src="/road.2/Earth/images/37.0,-95.png" alt="Map tile"/>
+...
+<a class="map_nav" href="46.0518,-95.8">North</a>
+<a class="map_nav" href="41.3776,-89.7698">Northeast</a>
+<a class="map_nav" href="36.4642,-84.5187">East</a>
+<a class="map_nav" href="32.3513,-90.4459">Southeast</a>
+...
+<a class="zoom_in" href="/road.1/Earth/37.0;-95.8">Zoom out</a>
+<a class="zoom_out" href="/road.3/Earth/37.0;-95.8">Zoom in</a>
+...
+</body>
+</html>
+```
+
+- map tiles: 
+
+- planets and other places: follow a link from list of planets to a specific
+planet, then follow more links from there. Places are represented by key-value
+pairs.
+
+```xhtml
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head><title>Earth</title></head>
+<body>
+  <dl class="place">
+    <dt>name</dt> <dd>Earth</dd>
+    <dt>maps</dt>
+      <dd>
+        <ul class="maps">
+          <li><a class="map" href="/road/Earth">Road</a></li>
+          <li><a class="map" href="/satellite/Earth">Satellite</a>
+          ...
+        </ul>
+      </dd>
+<dt>type</dt> <dd>planet</dd>
+<dt>description</dt>
+  <dd>
+  Third planet from Sol. Inhabited by bipeds so amazingly primitive
+  that they still think digital watches are a pretty neat idea.
+  </dd>
+</dl>
+</body>
+</html>
+```
+
+Quick reminder: web services are just web sites for robots. RESTful services look
+like web sites to humans.
+
+- lists of search results: list of links to resources that are already defined.
+
+```xhtml
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head><title>Search results: "Springfield"</title></head>
+<body>
+<p>
+  Places matching <span class="searchterm">Springfield</span>
+  in or around
+  <a class="place" href="/Earth/USA">the United States of America</a>:
+</p>
+<ul>
+  <li>
+    <a class="place" href="/Earth/USA/IL/Springfield">Springfield, IL</a>
+  </li>
+  <li>
+    <a class="place" href="/Earth/USA/MA/Springfield">Springfield, MA</a>
+  </li>
+  <li>
+    <a class="place" href="/Earth/USA/MO/Springfield">Springfield, MO</a>
+  </li>
+  ...
+</body>
+</html>     
+```
+
+Link resources to each other: that is by design, a lot of resources contain
+links to other resources. However, there is no way for a client to generate a
+search URI. Because there are infinitely many things for which a client can do a
+search, you cannot just link to for example "diners". Solve it with HTML forms.
+Send an appropriate HTML form in a representation to tell a client how to plug
+in variables into the query string.
+
+```xhtml
+<form id="searchPlace" method="get" action="">
+  <p>
+    Show places, features, or businesses:
+  <input id="term" repeat="template" name="show" />
+  <input class="submit" />
+  </p>
+</form></screen>
+```
+
+HTTP response: consider possible response codes or HTTP headers that you will
+send out. Read only services have a simple course of events: clients sends a GET
+request to a URI, server sends a response code 200 (OK), HTTP  headers and a
+representation. HEAD is the same, but it omits the representation.
+
+HTTP headers are a large toolkit, but every web service should be built to
+support the conditional HTTP GET.
+Conditional HTTP  GET: implemented in two request headers (If- Modified-Since
+and If-None-Match) and two response headers (Last-Modified and ETag). Because
+most resources seldom change the server should signal the client that it can
+use the cached version of the resource if it hasn't changed.
+
+What might go wrong: accessing a map that doesn't exist (404), place is not in
+the database (303 and send a HTTP response header Location which will contain
+the URI of an alternative resource), impossible latitude or longitude (400),
+a search yields no results (200), the server is overloaded (503) and the server
+is not functioning correctly (500).
