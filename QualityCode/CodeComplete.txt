@@ -794,3 +794,74 @@ assert conditions, make the program fail hard if it detects an error.
 
 Determining How Much Defensive Programming to Leave in Production Code
 ----------------------------------------------------------------------
+
+Chapter 9: Pseudocode Programming Process
+
+A way of designing, documenting and improving classes and routines.
+
+Steps in creating a class:
+- Create a general design for a class: define the class's specific
+responsibilities, define what secrets it will hide and what abstractions will
+the class interface capture. Is the class derived or will others be allowed to
+derive from it? Identify the public methods and non trivial data members.
+- Construct each routine within the class: some routines need other routines and
+these needs can ripple back to the design.
+- Review and test the class as a whole: after testing each routine individually.
+
+Good pseudocode:
+- use English like sentences that precisely describe specific operations
+- avoid syntactic elements, work at the higher level
+- write it at the level of intent, describe the meaning of the approach rather
+then the implementation
+- write at a low enough level that generating code from it will be nearly
+automatic
+
+Using pseudocode makes reviews easier, it supports iterative refinement, makes
+changes easier, minimizes commenting effort and is easier to maintain.
+
+Steps in building a routine: 
+- Design the routine: 
+  - check for prerequisites by making sure it fits well into the design as well
+as checking that it is necessary.
+  - define the problem the routine will solve, what info it hides, its inputs
+and outputs, preconditions it requires and post conditions it guarantees
+  - name the routine with a clear unambiguous name
+  - decide on how to test the routine
+  - make sure you aren't implementing a routine that is already implemented in
+the languages standard library
+  - think about bad inputs, invalid returns
+  - think about efficiency, about speed and memory goals
+  - research the algorithms and data types
+  - write pseudocode and review it
+  - try different ideas in pseudocode and keep the best
+- Code the routine:
+  - write the routine declaration
+  - turn the pseudocode into comments
+  - fill in the code below each comment
+  - check if the code should be further factored
+- Check the code:
+  - manually check the routine for errors, excellent programs understand why the
+routine works
+  - compile it only after you have checked that routine manually first
+  - you can go through the routine line by line in the debugger
+  - test the code using test cases
+  - remove any detected errors and see what caused it
+- Clean up leftovers:
+  - check the interface, parameters, input and output data
+  - check if it does only one thing, that it is loosely coupled, designed
+defensively
+  - check the variables
+  - check statements and logic
+  - check the layout
+  - check the documentation
+  - remove redundant comments
+
+Alternative routine designs:
+- test first development: write a test first, then make sure the routine passes
+it
+- refactoring: use semantic preserving transformations to remove code and make
+it better
+- design by contract: each routine should have pre and postconditions that then
+get verified
+- hacking?: compile to find out errors, it if works don't change it, but because
+it is not systematic, this approach will drive you into a corner 
