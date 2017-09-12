@@ -532,3 +532,124 @@ the database (303 and send a HTTP response header Location which will contain
 the URI of an alternative resource), impossible latitude or longitude (400),
 a search yields no results (200), the server is overloaded (503) and the server
 is not functioning correctly (500).
+
+Chapter 6: Designing Read/Write Resource-Oriented Services
+
+The imaginary web service should be expended with the functionality to let 
+clients store their maps.
+
+User accounts as resources. If they weren't, overloaded POST would have to be 
+used to supply a HTML form to a web application. 
+The benefit is that user account can now be created automatically and accessed 
+thought a uniform interface.
+
+Authentication is the problem of tying a request to a user. 
+
+Authorization is the problem of determining which requests to let through for a 
+given user.
+
+HTTP header called "Authorization" will be filled with credentials, the server 
+will then check it.
+
+Kinds of authentication: HTTP Basic, HTTP Digest, and WSSE (or a custom solution).
+
+To give users privacy, encrypt each HTTP transaction over SSL.
+
+Using HTTPS instead of HTTP prevents other computers from eavesdropping.
+
+How do you know your browser will send your password to the website to which 
+you are logging in and not to some other secret website? Don't trust your browser
+so blindly.
+
+Procedure for turning requirements into read/write resources:
+- Figure out the data set
+- Split the data set into resources
+  For each kind of resource:
+  - Name the resources with URIs
+  - Expose a subset of the uniform interface
+  - Design the representation(s) accepted from the client
+  - Design the representation(s) served to the client
+  - Integrate this resource into existing resources, using hypermedia links and 
+forms
+  - Consider the typical course of events: what’s supposed to happen?
+  - Consider error conditions: what might go wrong?
+
+Figure out the data set: user account is made up of a name and password.
+
+Split the data set into resources: each account is a resource.
+
+Name the resources with URIs: https://maps.example.com/user/{user-name}.
+
+Expose a subset of the uniform interface: if you ever wish there were more HTTP 
+methods, go back to step two and create more resources.
+Observation one: clients will be creating this type of resources.
+Observation two: clients are in change of naming the URI.
+Client will send a PUT request to the account's URI. Client will be able to 
+modify their password, but not their username, client can delete the account, 
+client can ask for the representation (except for the password).
+
+Design the representation(s) accepted from the client: specify how the user 
+creates an account. Account username will be in the URI and the password in the 
+form encoding, CGI escaping representation as a key value pair. To change the 
+password is the same as creating the account in the first place. To change the 
+password, the client needs Authorization. 
+
+Design the Representation(s) to Be Served to the Client: client will use a GET 
+request. The user account information will be send in XHTML format. If the user 
+GETs another's account, it will be sent a different XHTML.
+
+Link This Resource to Existing Resources: add "authenticated" message to the 
+representation to every resource which is a hypermedia that shows the client how
+to retrieve data about its user account. The home page should include a 
+hypermedia link to how a user can create an account.
+
+What’s supposed to happen: a PUT request will create a new user if one doesn't 
+exist and respond with code 201 and send back a response with Location header 
+containing the URI of the account. If the account already exists, the password 
+is modified and the code 200 is sent back. All other HTTP methods, GET, DELETE, 
+work as intended.
+
+What Might Go Wrong?: if the client sends a representation in the wrong format, 
+send the code 415. If the client sends no representation or a very poor one, 
+send back the code 400. If the presentation is illegal, such as the path where 
+you want to store data is inconsistent or the password is empty, then send back 
+either 400 or 409 code. If the client's credentials are wrong, return code 401. 
+If the problem is unspecified, return code 500 or 503.
+
+Now do the resource design procedure all over again for 'custom places'.
+
+Figure Out the Data Set: custom places are created by clients. A client can 
+create any number of places for which I have maps. Every custom place is 
+associated with some user account. Custom places can be private or public. 
+Private custom places can only be viewed and modified by someone who owns the 
+place.
+
+Split the Data Set into Resources: each custom place will be a resource. User 
+account will be expanded to show the list of custom places for that account.
+
+Name the Resources with URIs: custom place is a subordinate resource. Each 
+custom place has a geographic point and a URI pattern 
+/user/{username}/{planet}/{latitude},{longitude}/{place name}.
+
+Expose a Subset of the Uniform Interface: GET and HEAD can be used to retrieve a
+representation. Custom places can be DELETEed and their state change with PUT. 
+Custom places are created by adding a comment to built in places or by creating 
+a brand new custom place. Use POST when adding content to an existing place 
+(create a subordinate resource) and use PUT to create a new custom place.   
+
+Design the Representation(s) Accepted from the Client: when creating a new place,
+the client sends key value pairs as form encoded strings. Variables are planet,
+latitude, longitude and name. Information in the URI as scoping info doesn't 
+have to be repeated in the representation. 
+
+Design the Representation(s) Served to the Client: custom places look the same 
+as built in places. A guide on how an authenticated client can edit a place will 
+be tacked onto the representation. 
+
+Link This Resource to Existing Resources: when an account is DELETEed, delete 
+all the custom places as well. Custom place will have links to user who created 
+it, instructions on how to create a custom place, ...
+
+What’s Supposed to Happen?: as you would expect.
+
+What Might Go Wrong?: as you would expect.
