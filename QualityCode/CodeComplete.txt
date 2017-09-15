@@ -3,7 +3,7 @@
 
 Code Complete is a book written by Steve McConnell which explains why planning 
 in software construction is important, describes how to build large maintainable
-programs and how excellent systems looks like. Code Complete argues that
+programs and how excellent systems look like. Code Complete argues that
 software construction is an important subject because it is the only activity
 that is guaranteed to happen.
 
@@ -864,7 +864,7 @@ it
 it better
 - design by contract: each routine should have pre and postconditions that then
 get verified
-- hacking?: compile to find out errors, it if works don't change it, but because
+- hacking?: compile to find errors, it if works don't change it, but because
 it is not systematic, this approach will drive you into a corner 
 
 Chapter 10: General Issues in Using Variables
