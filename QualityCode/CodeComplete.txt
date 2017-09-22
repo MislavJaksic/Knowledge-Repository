@@ -81,22 +81,28 @@ are errors handled, who has the responsibility to validate inputs. Very
 important subject!
 
 - Fault tolerance - how error resistant is the system, describe the collection
-of techniques that increase system scalability by detecting errors. 
+of techniques that increase system reliability by detecting errors, recovering
+from them and containing their bad effect.
 
 - Architectural feasibility - demonstrate that it is possible to complete the
-project.
+project through explaining how will the system meet the resource constraints,
+performance targets and other risks. 
 
-- Overengineering and robustness - will the system continue if it detects an
-error, how overengineered should the system be to ensure robustness.
+- Overengineering and robustness - will the system continue to work if it 
+detects an error, how overengineered should the system be to ensure robustness.
+Decide whether to make the system robust or to make it as simple as possible.
 
-- Buy vs build decision - what components should be programmed and which should
-be downloaded and used.
+- Buy vs build decision - which programs should be built and which should
+be bought of the shelf. If some are built, state how they are going to
+surpass the ready made libraries and components.
 
-- Reuse decision - what programs are going to be reused.
+- Reuse decision - what programs are going to be reused and how.
 
-- Change strategy - describe how changes will be handled, what are possible
-enhancements, how are new data or changes to existing data be anticipated, how
-changes impact the need to change the code.
+- Change strategy - describe how changes will be handled, that possible
+enhancements were considered and how much they would change the system, how are
+new data or changes to existing data been anticipated, how much does the code
+have to change to if functionalities were altered. Limit the number of places
+where code will have to change.
 
 - General architectural quality - characterised by discussions of classes,
 information that is hidden in them and reasons why classes are designed in a
