@@ -28,4 +28,7 @@ To create a new controller with an action, use a generator. Write: ruby bin/rail
 Views are located in app/views.
 Routing file: config/routes.rb, change your home page; says how to connect requests to actions and controllers.
               root '<controller name>#<action name>' maps requests for the root of the application the the 
-			  <action name> of <controller name>.
+              <action name> of <controller name>.
+Resource is a collection of similar objects. Resources are manipulated through CRUD operations. Rails has a 
+"resources" method which declares a REST resource. Declase resource :<recource name plural> and Rails will 
+create the CRUD automatically.
