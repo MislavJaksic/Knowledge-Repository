@@ -17,7 +17,7 @@ Step 4) is a way to solve the ExecJS error that may appear during the tutorial.
 
 ### Tutorial
 
-To create a new application, position your command line in a folder and write "rails new <name>".
+To create a new application, position your command line in a folder and write "rails new prject_name".
 
 Position your commna dline in the newly created folder and write ruby bin/rails server to start the server on 
 http://localhost:3000.
@@ -32,28 +32,28 @@ Routing decides which controller will recieve a request. There is more then one 
 Actions serve different routes. Actions collect info to provide it to a view.
 
 To create a new controller with an action, use a generator. Write: "ruby bin/rails generate controller 
-<controller name> <action name>"
+controller_name action_name"
 
 Views are located in app/views.
 
 Routing file: config/routes.rb, change your home page; says how to connect requests to actions and controllers.
-              root "<controller name>#<action name>" maps requests for the root of the application the the 
-              <action name> of <controller name>.
+              root "controller_name#action_name" maps requests for the root of the application the the 
+              action_name of controller_name.
 			  
 Resource is a collection of similar objects. Resources are manipulated through CRUD operations. Rails has a 
-"resources" method which declares a REST resource. Declare "resource :<recource name plural>" and Rails will 
+"resources" method which declares a REST resource. Declare "resource :recource_name_plural" and Rails will 
 create the CRUD automatically.
 
 When controllers are generated they are empty. If there is an action <action name> in the controller, then 
-Rails will look for <resource name>/<action name> templete. If it doesn't exit, it will look for 
-application/<action name> as <controller name> inherits from ApplicationController.
+Rails will look for resource_name/action_name templete. If it doesn't exit, it will look for 
+application/action_name as controller_name inherits from ApplicationController.
 
 request.formats: specifies th format (example is ["text/html"]).
 
 request.variant: what kind of physical device will be served a response.
 
-Template: made up of three parts, a action name and two extensions "<action name>.<format>.<handler>" in
-app/views/<resource name> (example new.html.erb in app/views/articles).
+Template: made up of three parts, a action name and two extensions "action_name.format.handler" in
+app/views/resource_name (example new.html.erb in app/views/articles).
 
 Form: created using "form_with". Write it into the template. Fields of the form are passed as parameters to
 Rails.
