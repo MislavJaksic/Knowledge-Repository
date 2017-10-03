@@ -1,6 +1,6 @@
 var array = [0,1]
 
-array.length //-> 3 (always return the highest index plus one)
+array.length //-> 2 (always return the highest index plus one)
 array[0] //-> 0
 array[-1] //-> undefined
 

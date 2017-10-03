@@ -8,6 +8,10 @@ function square(number = 1, ...restArgs) {
 //Function expressions
 let cube = function(number) { return number * number * number }
 cube(2) //-> 8
+//Annonymous function
+function() {
+  console.log("hi");
+}
 
 //Pssible to nest a function within a function
 //Cosure is an expression that can have free variables together with an environment that binds those variables

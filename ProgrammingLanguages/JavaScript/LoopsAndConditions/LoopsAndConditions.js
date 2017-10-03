@@ -1,10 +1,10 @@
 //False values - false, undefined, null, 0 Nan, empty string
 
 let a
-if (a == undefined){
+if (a === undefined){
 	console.log("Is undefined")
 } else if {
-	console.log("Will not be outputted")
+	console.log("Will not be written")
 }
 
 let i = 0
