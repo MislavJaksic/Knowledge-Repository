@@ -1,6 +1,6 @@
-GitHub will display a README file text below the current folder's contents if the README file exists.
-If the README file has a .txt extension, the text will be plain, without colour, font and of one size.
-If the README file has a .md  extension and uses the Markdown markup the text will be rich and colourful.
+You an have GitHub display a description of the current folder by writing a file called README.xxx.
+If .xxx is .txt, the description will be plain: no colour, all letters have the same font and size.
+If .xxx is .md, GitHub will interpret the description as Markdown, a markup language. You can get a taste for what Markdown looks like below.
 
 # Big letters with a ghostly line below
 
