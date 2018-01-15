@@ -1,4 +1,3 @@
-You an have GitHub display a description of the current folder by writing a file called README.xxx.
 If .xxx is .txt, the description will be plain: no colour, all letters have the same font and size.
 If .xxx is .md, GitHub will interpret the description as Markdown, a markup language. You can get a taste for what Markdown looks like below.
 
