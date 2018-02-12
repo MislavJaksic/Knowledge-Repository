@@ -12,6 +12,18 @@ used and why it exists; classes and objects should be nouns such as animals, lio
 get, do; use solution domain names (as oppose to problem domain names); context around the names is as important as
 the names themselves
 
+Names should be descriptive; reveal intent.
+Names should be meaningfully distinct.
+Avoid encoding names.
+Names should not have prefix or suffix.
+Classes and object should be nouns; Customer, Account.
+Methods should be verbs; Delete, Save.
+Have a consistent lexicon; get or fetch, choose one.
+Same name, same purpose, same semantics.
+Use solution domain names; algorithm and pattern names.
+Use problem domain names when there are no solution domain names.
+
+
 Functions: make them small (around five lines long); should do only one thing, but what one thing is depends on the
 level of abstraction; abstraction should be uniform within the same function; the most abstract functions should
 read like English; functions should have as few arguments as possible (no more then three); don't pass flags as
