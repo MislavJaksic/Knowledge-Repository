@@ -31,7 +31,20 @@ function; if a function takes many arguments, try to wrap some of them in a clas
 a function is an event and that it returns nothing; never return a value through the input argument, always return
 a value through the return value; functions should have no side effects; functions should either return information
 about an object or should change the state of the object, never both; if you handle errors with try/catch blocks,
-make them invoke functions, so you can better separate error handling from the rest of the code
+make them invoke functions, so you can better separate error handling from the rest of the code.
+
+Functions should be very short; 4 lines tops.
+Functions should have no more then 2 indent levels.
+Functions should do only one thing at the current level of abstraction.
+Functions should have all statements at one level of abstraction.
+Construct functions as if they are TO paragraphs; step down rule.
+Bury switch/if-else chains deep down in an ABSTRACT FACTORY.
+Functions should have descriptive names; they should do what you expect.
+Functions should have no, one or two arguments; monadic: ask a question or transform the argument and return it;
+if it has more, order them or wrap them in a structure.
+Avoid passing flag arguments.
+Have no side effects; do only what the function name promises.
+
 
 Comments: comment only if there is no other way of teaching others what your code does; they can be used to explain
 intent, to clarify, as a note or as a warning
