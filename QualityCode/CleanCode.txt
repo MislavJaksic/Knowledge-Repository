@@ -44,19 +44,45 @@ Functions should have no, one or two arguments; monadic: ask a question or trans
 if it has more, order them or wrap them in a structure.
 Avoid passing flag arguments.
 Have no side effects; do only what the function name promises.
-
+Avoid output arguments; bad appendFooter(report) -> good report.appendFooter().
+Functions should either answer a question or perform an action, never both.
+Prefer exceptions to returning error codes.
+Extract error handling code into a function.
+Eliminate code duplication; do not repeat yourself.
 
 Comments: comment only if there is no other way of teaching others what your code does; they can be used to explain
-intent, to clarify, as a note or as a warning
+intent, to clarify, as a note or as a warning.
+
+Good comments inform, explain, clarify, warn and amplify. Everything else is a bad comment.
 
 Formatting: write a file as a newspaper article, headline at the top, synopsis in the first paragraph; blank lines
-should separate functions, similar concepts should be kept near each other; don't make files or lines too long
+should separate functions, similar concepts should be kept near each other; don't make files or lines too long.
+
+Small files are better then big files.
+Files should be treated like articles; headline at the top, minutia at the bottom.
+Seperate concepts with a blank line.
+Declare local variables just before they are used.
+Instance variables should be declared at the top of the class.
+The caller function should be above the called function and as close as possible.
+Lines should not be longer then 80 characters; have a good reason to break the rule.
+Agree upon and stick to formatting rules; do not be tempted to break them.
 
 Objects and data structures: they are polar opposites; objects expose function and abstract data while data
 structures expose data and don't care which functions handle them; use data structures (procedural programming) when
 you will need to add new functions in the future; use object (object oriented programming) when you will need to add
 new classes (data types, data structures) in the future; functions in a class should only call a small subset of
-functions as described in the Law of Demeter
+functions as described in the Law of Demeter.
+
+Abstract data through an interface; do not allow other function to know how you store your data.
+Data structures expose data and have no functions.
+Object hide data and expose it through functions.
+Data structures and objects are polar opposites.
+Procedural code makes adding functionality easy; OO code makes adding new classes (data) easy.
+Procedural code makes adding new data structures hard; OO code makes adding new functions hard.
+Avoid hybrids; they are the worst of both procedural and OO worlds.
+Follow the Law of Demeter; method f of class C should only call methods of: C, object created by or passed to f and object as an instance variable of C. 
+Data transfer objects (DTO, no functions), beans (only getters and setters) and active records (beans with some other functions).
+Treat all of the above as if they are data structures; do not put business rules into them as that would make them hybrids.
 
 Error handling: separate error handling from the rest of the code with try and catch blocks; write tests that cause
 errors (Test Driven Development); avoid unchecked exceptions like the plague itself; display informative messages
