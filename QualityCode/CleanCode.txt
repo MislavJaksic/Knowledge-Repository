@@ -87,7 +87,15 @@ Treat all of the above as if they are data structures; do not put business rules
 Error handling: separate error handling from the rest of the code with try and catch blocks; write tests that cause
 errors (Test Driven Development); avoid unchecked exceptions like the plague itself; display informative messages
 when handling exceptions; write exception classes that catch and translate errors; avoid returning null, return a
-special case object or throw an exception
+special case object or throw an exception.
+
+Use exceptions, not return codes.
+If you are going to handle errors, start the function by writing the try block.
+Only use unchecked exceptions.
+Create informative error messages.
+Define exceptions by how they are caught.
+Define the normal flow and the rest using SPECIAL CASE PATTERN.
+Do not return or pass null; throw an exception or return an object.
 
 Boundaries: when using third party code, wrap it in your own code to ensure you can easily handle changes to it;
 write tests for third party API to ensure you understand how it works (Learning Tests)
