@@ -1,15 +1,15 @@
 # Knowledge Repository
 
-Knowledge Repository is a collection of reference sheets, book summaries and programs about software
+The Knowledge Repository is a collection of reference sheets, book summaries and programs about software
 engineering. Software engineering is a broad subject which is why the Knowledge Repository is subdivided into
-folders. Each folder covers a single topic or is further subdivided. Each folder has its own README which
+multiple folders. Each folder covers a single topic or is further subdivided. Each folder has its own README which
 explains the topic and its contents. Empty or unfinished folders are marked with a -TODO suffix.
 
 
 ### Inspiration
 
-Inspiration text file contains a list of topics and materials with which the Knowledge Repository may be
-expanded in the future. The topics are not ordered.
+The Inspiration text file contains a list of topics and materials with which the Knowledge Repository may be
+expanded in the future. The topics are not ordered in any way.
 
 ### Intention
 

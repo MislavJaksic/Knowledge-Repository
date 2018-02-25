@@ -1,6 +1,6 @@
 ## Computer Vision
 
-As a part of an interview, I was asked to research a scientific paper called "Speeded-Up Robust Features"
+As a part of an interview, I was asked to research a scientific paper called "Speeded-Up Robust Features" and
 written by Bay, Ess, Tuytelaars and Gool. This folder's purpose is to preserve what I have learned.
 
 ### Papers analysed
