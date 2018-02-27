@@ -1,6 +1,6 @@
-GitHub will display a description of the current folder if there is a file called README.xxx in the folder.
-If .xxx is .txt, the description will be plain: no colour, all letters have the same font and size.
-If .xxx is .md, GitHub will interpret the description as Markdown, a markup language. You can get a taste for what Markdown looks like below.
+GitHub can display a description of the current folder if there is a file called README.xxx in the folder.
+If .xxx is .txt, the description will be plain: no colour; all letters are of the same font and size.
+If .xxx is .md, the README will be interpreted as a Markdown file. You can get a taste for what Markdown looks like below.
 
 # Big letters with a ghostly line below
 
@@ -8,7 +8,7 @@ If .xxx is .md, GitHub will interpret the description as Markdown, a markup lang
 
 ### Smallerer letters
 
-### Smallererer letters
+#### Smallererer letters
 
 **Bold letters**
 
@@ -16,12 +16,12 @@ If .xxx is .md, GitHub will interpret the description as Markdown, a markup lang
 
 `Letters on a grey background`
 
-* Black filled bullet point to the left
-* Another black filled bullet point to the left
-    * Empty sub bullet point to the left
-    * Another empty sub bullet point to the left
+* Black filled bullet
+* Another black filled bullet point
+    * Empty indented bullet point
+    * Another empty indented bullet point
 
-> A thin gray strip should apper on the left of this text and the text itself should be gray. In addition,
+> A thin gray strip will appear to the left of this paragraph and the text itself will be in a gray box. In addition,
 >the text should appear 4 spaces away from the left margine.
 
 [Blue hyperlink text to shields IO and badges](https://github.com/badges/shields)
