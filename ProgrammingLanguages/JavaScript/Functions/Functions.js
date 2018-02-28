@@ -1,5 +1,5 @@
 //Primitive parameters (numbers, strings, ...) are passed by value
-//Objects, Arrays and similar objects are passed by reference
+//Objects (Arrays, Sets, Maps included) are passed by reference
 
 //Default and "all other arguments" parameters
 function square(number = 1, ...restArgs) { 
@@ -13,9 +13,10 @@ function() {
   console.log("hi");
 }
 
-//Pssible to nest a function within a function
-//Cosure is an expression that can have free variables together with an environment that binds those variables
-//If he expression is a function, the inner function can use the outer function's variables, while the outer functio ncannot use the inner function's variables
+//A function within a function:
+//Closure: the inner function remembers the outer's value, but
+//the outer cannot see the inner's ones values
+
 function outside(x) {
   function inside(y) {
     return x + y;
@@ -23,9 +24,8 @@ function outside(x) {
   return inside;
 }
 
-let closureOne = outside(1)
-let closureTwo = outside(99) //???
+let closureOne = outside(1);
+let closureNineNine = outside(99);
 
-
-
-
+closureOne(1); //-> 2
+closureNineNine(2); //-> 101

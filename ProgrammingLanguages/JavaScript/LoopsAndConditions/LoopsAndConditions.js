@@ -1,4 +1,4 @@
-//False values - false, undefined, null, 0 Nan, empty string
+//False values: false, undefined, null, 0, Nan, empty string
 
 let a
 if (a === undefined){
@@ -20,7 +20,7 @@ do {
 	i++
 } while (i < 10)
 	
-for (let i = 0; i < 10; i++){ // define "let i" or the counter variable may "leek" into another function
+for (let i = 0; i < 10; i++){ // define "let i" or the counter variable may "leek"
 	console.log(i)
 }
 
@@ -34,7 +34,7 @@ for (let property_name in array){
 for (let value of array){ 
 	console.log(value) //-> 0 1
 }
-//Once forEach starts it cannot stopped with return, continue or break 
+//Once forEach starts, it cannot be stopped with return, continue or break 
 array.forEach(function(element) {
   console.log(element);
 });

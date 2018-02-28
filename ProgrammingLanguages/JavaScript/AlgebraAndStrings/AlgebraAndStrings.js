@@ -1,4 +1,5 @@
-//Special JS variable scoping
+//Special JavaScript variable scoping:
+
 //var in a block statement -> doesn't have block scope
 var x = 1
 { var x = 2 }
@@ -9,32 +10,28 @@ let y = 1
 y //-> 1
 //var or let in a function -> variable local to the function
 
-//Variable "hoisting" -> if the variable is declared later, the code will evaluate to undefined instead an error
-
-//var b <- is that hoisting declares implicitly
+//Variable "hoisting" -> if the variable is used before it is declared,
+//                       the code will evaluate to "undefined"
 b //-> undefined
 var b = 5
 b //-> 5
 
-//Declare read only constant
-//const will not be hoisted
+//Read only variables are constants; will not be hoisted
 const NUM_OF_CYCLES = 5
 
-//undefined is an uninitialized value
 let a
-a //-> undefined
-//undefined and operation => Nan
-a + 2 //-> Nan
+a //-> undefined; uninitialized value
+a + 2 //-> Nan; undefined and operation; watch out for it!
 
-//Function declarations gets hoisted
+//Function declarations are hoisted
 foo() //-> 1
 function foo(){console.log(1)}
-//Function expressions don't get hoisted
+//Function expressions aren't hoisted
 bar() //-> ERROR
 var bar = function(){ console.log(1) }
 
 //Data types - primitive - Boolean, null, undefined, Number, String, Symbol
-//           - Objects (equivalent to dictionaries or maps)
+//           - Objects (Arrays, Sets and Maps are also Objects)
 
 //Boolean
 var bool = new Boolean(false);

@@ -1,4 +1,4 @@
-//JavaScript as a prototype-based language has only objects that serve as templates from which other objects are created
+//Objects serve as templates/prototypes from which other objects are created
 
 //Objects have properties associated with them
 var car = new Object()
@@ -27,13 +27,11 @@ let rareHoney = new Honey("purple", 3)
 let commonHoney = new Honey("yellow", 5)
 rareHoney.writeProperties() //-> purple, 3
 
-//Objects can have objects within them (composition)
-
 //Object hierarchy
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
 
 
-//Demonstrated proper inheritance similar to that in truely object oriented languages
+//A demonstration of true inheritance
 
 function ParentObject(parent_value){
   this.parent_value = parent_value;
