@@ -1,3 +1,6 @@
+#A solution to temporal coupling: Context Manager
+#When functions have to be invoked in an order
+
 class Bee(object):
   
   def __init__(self, role):
@@ -12,33 +15,33 @@ class ManagerClass(object):
     self.beeRole = beeRole
   
   def __enter__(self):
-    print "Opened"
+    print "Enter"
     self.aBee = Bee(self.beeRole)
     return self.aBee
   
   def __exit__(self, exc_type, exc_value, traceback):
-    print "Closed"
+    print "Exit"
 	
 with ManagerClass("Queen") as queenBee:
-  print "Created an object"
+  print "Object created"
   print queenBee.GetRole()
   
 #The following with be outputted:
-#Opened
-#Created an object
+#Enter
+#Object created
 #Queen
-#Closed
-#Exception: I'm causing trouble
+#Exit
 
 print
 with ManagerClass("Worker") as workerBee:
-  print "Created an object"
+  print "Object created"
   print workerBee.GetRole()
-  raise Exception("I'm causing trouble")
+  raise Exception("Exception raised after exitting")
+  print "Will never be printed"
   
 #The following with be outputted:
-#Opened
-#Created an object
+#Enter
+#Object created
 #Worker
-#Closed
-#Exception: I'm causing trouble
+#Exit
+#Exception raised after exitting
