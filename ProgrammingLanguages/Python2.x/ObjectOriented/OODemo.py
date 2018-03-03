@@ -1,28 +1,25 @@
-#Class is a blueprint for creating objects
-#All classes inherit some other class
 #Python "object" != object
 #Python "object" is a generic base Python class
 #Object is what is created (instantiated) from a class
-class Camera(object): #inherit a Python "object"
+
+class Camera(object): #inherits a Python "object"
   #Class variables are shared by all objects
   manufacturer = "Nokia"
 
-  #Constructor method: called first after creating an object
+  #Constructor method: called when creating an object
   def __init__(self, size, memory, quality):
-    #Assign a value to an instance variable (data Varribute)
-	#Instance variables are unique to each object
+	  #Instance variables are unique to each object
     #self.size != size
     #self.size is an instance variable
     #size is a parameter given upon object creation
     self.size = size
     self.memory = memory
     self.quality = quality
-	#Composition, camera has a lens
+	  #Composition, camera "has a" lens
     self.Lens = Lens(720)
 
   #Method
   #self is a reference to the object that is calling the method
-  #All methods must have self as their first parameter
   def PrintData(self):
     print "Printed by Camera"
     print "Class variable is {}.". format(self.manufacturer)
@@ -38,8 +35,6 @@ class Camera(object): #inherit a Python "object"
   def AlteredAction(self):
     print "Camera altered"
 
-#Each Camera has one
-#Demonstrates composition
 class Lens(object):
   
   def __init__(self, resolution):
@@ -48,12 +43,11 @@ class Lens(object):
   def TakePhoto(self):
     print "Photo taken"
 	
-#Inheritance, it can imply, override or alter an action of the parent
-#If a child class doesen't have a method you called, a parent method will be called
+#ChildCamera inherits from Camera
 class ChildCamera(Camera):
   
   def __init__(self, size, memory, quality):
-    #super invokes the parent constructor
+    #super invokes the parent constructor, __init__
     super(ChildCamera, self).__init__(size, memory, quality)
 	
   def PrintData(self):
@@ -76,11 +70,12 @@ class ChildCamera(Camera):
 #Create an object from a class Camera
 camOne = Camera(-12, 5, 6)
 camTwo = Camera(7, -9, -8)
+
 #Access class variable
 print Camera.manufacturer #-> Nokia
 #Access instance variable
 print camOne.size #-> -12
-#Use an object's method
+
 #Methods can be stored just like functions
 storeMethod = camOne.PrintData()
 storeMethod #-> Camera, Nokia, -12 5 6

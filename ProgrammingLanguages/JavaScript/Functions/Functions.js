@@ -13,6 +13,10 @@ function() {
   console.log("hi");
 }
 
+function ReturnOnlyOneValue() {
+  return [1, 2, 3, 4] // return an array to return multiple
+}
+
 //A function within a function:
 //Closure: the inner function remembers the outer's value, but
 //the outer cannot see the inner's ones values

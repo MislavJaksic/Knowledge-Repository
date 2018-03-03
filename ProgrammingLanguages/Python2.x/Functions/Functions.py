@@ -1,15 +1,12 @@
 def BeginFunc():
-  #Indents are used to indicate beloning
-  
   outsideArray = [0, 1, 2]
-  #A function cannot change at what the outside variable is pointing
-  ChangePointer(outsideArray)
-  print outsideArray #-> [0, 1, 2]
-  #A function can change an outside object
-  ChangeArray(outsideArray)
-  print outsideArray #-> [0, 1, 2, 3]
   
-  #A simple recursive function
+  ChangePointer(outsideArray)
+  print outsideArray #-> [0, 1, 2]; no change
+  
+  ChangeArray(outsideArray)
+  print outsideArray #-> [0, 1, 2, 3]; array passed by reference
+  
   outsideString = "abdcba"
   print CheckPalindrome(outsideString) #-> "No"
   #Call with a keyword argument
@@ -25,7 +22,7 @@ def ChangePointer(inputArray):
 
 def ChangeArray(inputArray):
   inputArray.append(3)
-  return 1, 2 #-> able to return multiple values
+  return 1, 2 #-> can return multiple values
   
 def CheckPalindrome(string, checkPosition=0, *manyArgs):
   """Default argument checkPosition. It is evaluated only once.
