@@ -35,8 +35,14 @@ var bar = function(){ console.log(1) }
 
 //Boolean
 var bool = new Boolean(false);
-if (bool) // -> true
-if (bool == true) // -> false
+//The value is not undefined of null, its a boolean object
+if (bool){ // -> true
+  console.log(1); // -> 1
+}
+
+if (bool === true){ // -> false
+  console.log(0);
+} 
 
 //Strings
 let stringNumber = "123.45"
