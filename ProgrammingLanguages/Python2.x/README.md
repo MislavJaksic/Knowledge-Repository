@@ -16,6 +16,8 @@ from that point when invoked again; behaves like an iterable object such as a li
 - LambdaFunctions: also known as anonymous functions, they are a single expression that could be written in a
 return statement
 
+- ListComprehension: a concise (one line) way to make a list in Python
+
 - ExcellentLibraries: Python is well know for its excellent libraries. Consult this small list before developing your own
 
 - Frameworks: they make abstractions easy. Use them if you intend to do exactly what you want you to do
