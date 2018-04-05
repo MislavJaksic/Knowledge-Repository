@@ -100,6 +100,11 @@ Do not return or pass null; throw an exception or return an object.
 Boundaries: when using third party code, wrap it in your own code to ensure you can easily handle changes to it;
 write tests for third party API to ensure you understand how it works (Learning Tests)
 
+An interface can be more general then we want. Put it into a class.
+If the interface changes and it is not wrapped with a class, it will be hard to change it.
+Write learning tests, tests for third party code.
+If you don't know what another part of the program is going to look like, create an interface.
+
 Unit tests: write a test before writing code (Test Driven Development); three laws of TDD are: write a failing test,
 write the test until it can fail, write code until the test is passed; test code is as important as all other pieces
 of code; tests allow you to make changes to the code without the fear of introducing mistakes; one assert per test;
