@@ -112,16 +112,37 @@ test should be quick, independent of each other, repeatable in any environment, 
 written before any other code; sometimes it is alright to break the rules that you always apply to the rest of the
 code if it will make your test code more readable
 
+TDD laws: fail a test before writing production code,
+          write a test until it can fail,
+          write production code until it passes the test.
+Test are as important as production code. Keep them clean.
+Build test data, operate on test data and check results.
+Strive for one assert and one concept per test.
+Remember, tests are what makes your code flexible and resistant to bugs in the face of change.
+
 Classes: classes should be short and named after their responsibilities (we did this successfully if we can describe
 the class without using or, but, if or and); systems should be made up of many small classes not a few large classes;
 class cohesion means a lot of functions use a large portion of variables; classes must only have one reason to
 change; classes should be isolated from external change
 
+Class variables should be written at the start of the class.
+Classes should have as few responsibilities as possible.
+A class should one only reason to change (Single Responsibility Principle).
+A system should be made up of many small classes, not a few large ones.
+Aim for high cohesion: most methods use most instance variables.
+Transform parameters into instance variable -> class looses cohesion -> split it into multiple classes.
+Classes should be open for extension but closed for modification (Open Closed Principle).
+Classes should depend upon abstract classes or interfaces (Dependency Inversion Principle).
+
 Systems: separate using from construction; TODO
 
-Examples of how to code cleanly are showcased in case studies in chapters 14, 15 and 16
+Emergance: chapter 12
 
-Rules and references: chapter 17
+Concurrency: chapter 13
+
+Refactoring in practice: beginning at page 193, chapters 14, 15 and 16
+
+Smells and Heuristics: chapter 17, page 285
 
 PATTERNS: abstract factory, special case pattern, adapter pattern, build operate check pattern, template method
 pattern, strategy pattern, decorator
