@@ -6,7 +6,7 @@ object.code //-> 123
 
 //Maps (Python dictionaries; map a key to a value)
 let map = new Map()
-map.set(5, "five")
+map.set(5, "five") //-> maps value "five" to key 5
 map.set(4, "four")
 
 map.size //-> 2
@@ -17,3 +17,6 @@ map.has(5); // true
 
 map.delete(4);
 
+map.forEach(function (value, key, map_itself) {
+  console.log(value) //-> "five"
+});
