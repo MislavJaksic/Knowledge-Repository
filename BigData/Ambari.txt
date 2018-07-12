@@ -1,0 +1,57 @@
+## Ambari
+
+Website: https://ambari.apache.org/
+
+System administration software for managing Hadoop clusters. Apache Hadoop is a software for distributed parellel problem solving.
+
+### Docs
+
+Docs: https://cwiki.apache.org/confluence/collector/pages.action?key=AMBARI
+
+Warning: Under Ambari Design there are a lot of dulic<ates under 2.4.0 and the rest. 2.4.0 seems to be the latest.
+
+### Installation
+
+Ambari and Virtual Machine Installation: https://cwiki.apache.org/confluence/display/AMBARI/Quick+Start+for+New+VM+Users
+Additional info: https://cwiki.apache.org/confluence/display/AMBARI/Quick+Start+Guide
+
+Installation without VMs: https://cwiki.apache.org/confluence/display/AMBARI/Installation+Guide+for+Ambari+2.6.2
+Additional info: https://cwiki.apache.org/confluence/display/AMBARI/Ambari+Development
+
+### Dashboard
+
+https://cwiki.apache.org/confluence/display/AMBARI/Enhanced+Service+Dashboard+-+2.4.0
+
+#### Metrics
+
+https://cwiki.apache.org/confluence/display/AMBARI/Ambari+Server+Metrics
+
+Can add new widgets, constrcuts that display data.
+Widget types: Graph, Gauge, Number, Template
+Widgets are specified in JSON.
+
+Metrics in greater detail: https://cwiki.apache.org/confluence/display/AMBARI/Ambari+Server+Metrics
+
+Ambari Metrics System: https://cwiki.apache.org/confluence/display/AMBARI/Metrics+-+2.4.0
+
+#### Heatmaps
+
+
+
+#### Config History
+
+
+
+### Services
+
+#### Config
+
+https://cwiki.apache.org/confluence/display/AMBARI/Enhanced+Configs+-+2.4.0
+
+### Alerts
+
+https://cwiki.apache.org/confluence/display/AMBARI/Alerts+-+2.4.0
+
+
+
+
