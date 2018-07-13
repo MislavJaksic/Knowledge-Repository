@@ -1,0 +1,151 @@
+## Linux
+
+### Chapter 1
+
+To stop execution, type Ctrl+C
+
+Long options prefixed with --, short options prefixed with -.
+
+Paste text into it with Shift+Insert.
+Hidden directories are prefixed with ..
+Absolute path begins with /, realtive without.
+.. is the parent directory, . is the current directory.
+.sh signifies a script.
+USe Tab to autocomplete words.
+
+Example: ls -lh
+
+man - display info, exit with q
+ls - list, [-l] for long descriptions, [-h] for human readable, [-d] describe directory. [-ld] 
+pwd - current directory
+mkdir - create directory, [-p] create every directory on the path
+cd - change directory
+bash - run a script (.sh)
+
+info - display info
+
+echo - display a message
+
+
+
+### Chapter 2
+
+cp - copy directory, [-r] recursive copy, [-f] force delete
+
+mv - move and rename
+
+rm - remove folder/directory, [-r] recursive delete
+
+rmdir - remove directory if empty
+
+Directories: /bin, /boot, /dev, /etc, /lib, /lost+found, /media, /mnt, /opt, /proc, /sbin, /tmp, /var, /srv, /home, /root, /usr.
+/usr: programs for normal work; has a special structure.
+
+df - memory by patition
+
+du - memory by directory
+
+touch - create an empty file
+
+p for named pipeline, d for directory, s for socket, b for block file, c for char file, 
+
+cat - read a file
+
+stat - file details
+
+file - find file type
+
+head - display a few lines, [-n] for N lines
+
+nano/vim - text editors
+
+
+
+### Chapter 3
+
+stdin, stdout, stderr are standard input, output and error.
+They look like files. They are numbers 0, 1, 2.
+
+keyboard --- stdin ---> cat --- stdout ---> monitor
+cat acts as a filter.
+
+> is a write to file operator.
+Example: ls -l / > /tmp/test != ls -l /
+
+>> is a append data to a file operator.
+
+< is a sent file content to a program operator.
+Example: cat < /ect/password
+
+- represents stdin/stdout operator in commands.
+example: wget -O - http://ftp.hr.debian.org/README
+
+| is a pipe operator.
+Example: ls -l /lib/ | head
+
+ls -l /lib --- stdout ---> --- stdin ---> head ---> monitor
+
+2> is an error output redirection operator.
+Example: ls -l /lib1 2> /tmp/lib5
+
+&> joint stderr and stdout redirection operator.
+2>&1 redirect stderr to stdin operator.
+
+tee redirect stdin to stdout and a file operator.
+
+<< write a file inline operator (here document).
+Example: cat << EOF (write inline until you input EOF)
+
+<<< write a string inline operator (here string).
+Example: cat <<< 'hello' 
+
+Use && and || for conditional execution; what comes before && must return 0.
+Example: false || echo 1
+
+wc is word count.
+Example: ls /usr/include | wc
+
+grep searches for a pattern in a file. 
+Example: grep SEEK_SET /usr/include/stdio.h
+
+sort to sort lines.
+
+uniq checks if there are duplicate lines; has lot of options.
+cut leaves out a character from the file.
+
+find is a complex search command; [-name], [-type], [-size], [-print].
+Example: find /ect -type d -a -size +10k
+
+locate is a much simpler find.
+
+whereis located a manual page for a command.
+
+
+### Chapter 4
+
+Variables are like Python's.
+All variables of of string type.
+There are global and local shell varialbes.
+
+= for assignemnt.
+$= for assign command output to variable.
+
+export 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
