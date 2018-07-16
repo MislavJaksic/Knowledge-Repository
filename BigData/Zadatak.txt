@@ -1,0 +1,54 @@
+1.	Napraviti Kafka producer koji uèitava dat file i upisuje ga u odreðeni topic
+2.	Napraviti measure u influxu koji sprema podatke o interface prometu
+  a.	Napraviti bazu koja se zove raw
+  b.	U njoj napraviti measuer ifOutOctets i na nju staviti tag IP ureðaja i interface id
+3.	Napraviti bazu koja se zove interface
+  a.	Napraviti calculation i retention policy sa raw baze na interface bazu 
+    i.	Izraèunati brzinu na interface u bit per sec ne octet per second
+    ii.	Spremati orginalne podatke dva tjedna nakon toga napraviti uprosjeæavanje na satnoj bazi i spremiti ih mjesec dana
+4.	Napraviti Kafka producer koji èita host i service alarme i upisuje u hive u strukturu (alarms raw – 2018 – june – IP)
+  a.	Timestamp, state, status code, 0/1, host/service, info
+5.	Napraviti skriptu za uèitavanje referentnih podataka u reddis
+6.	Napraviti "job" koji radi agregaciju podataka u alarmima u novu hive strukturu (alarms agg – 2018 – june – IP – host / service)
+  a.	Start_time, end_time, info, service, hostname, cisid, location id
+
+Zovite ako negdje zapnete
+0912033914
+
+Davor
+
+Interpretacija zadatka:
+
+Kafka producer? -> moze citati file
+Kafka topic?
+
+Influx measure? -> sprema podatake
+U Influxu napraviti "raw" bazu podataka.
+Napravi measure "ifOutOctets" u Influx i na nju stavi IP i ID uredaja.
+
+Napravi bazu "interface".
+Na bazi "interface" napravi calculation and retentions policy.
+Calculation and retentions policy znaci pretvoriti brzinu iz bit/sec u octet/sec.
+calculation and retentions policy znaci spremaj podatake 2 tjedna a onda uprosjeæavanje na satnoj bazi i spremiti ih mjesec dana.
+
+Kafka producer? x2 -> cita podatke i upisuje u Hive strukturu
+Hive structure?
+Hive struktura je alarms raw – 2018 – june – IP.
+N-torke su Timestamp, state, status code, 0/1, host/service, info.
+
+Skripta za ucitavanje podataka u Redis.
+
+Napravi da se podaci agregiraju.
+Podaci se spremaju u Hive strukturu alarms agg – 2018 – june – IP – host / service.
+N-torke su Start_time, end_time, info, service, hostname, cisid, location id.
+
+
+Hive struktura: vjerojatno se misli na "external table" koja ima u sebi "location" parametar.
+"Dva redka" na sastanku u petak vjerojatno znaci, jedan redak za "service" a jedan za "host".
+To se prevodi s dvije tablice. NE!
+Podaci su razliciti, ali imena stupaca su ista. To implicira da je samo jedna tablica.
+Pronadi kako napraviti "external table" u Hive s dva izvora podataka.
+
+
+
+ 

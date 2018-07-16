@@ -1,0 +1,38 @@
+## Hortonworks-Redis-Ambari
+
+### Current state of Ambari 
+
+Ambari tutorial: https://cwiki.apache.org/confluence/display/AMBARI/Quick+Start+for+New+VM+Users
+Additional info: https://cwiki.apache.org/confluence/display/AMBARI/Quick+Start+Guide
+
+The Virtual Machine has Ambari setup already.
+The setup progress up until at least "Install the HDP Stack" in the Ambari tutorial.
+This is because I already have a URL: http://<something-something>:8080.
+Ambari might be setup even further.
+
+### Possible manual installation
+
+Installation without VMs: https://cwiki.apache.org/confluence/display/AMBARI/Installation+Guide+for+Ambari+2.6.2
+Additional info: https://cwiki.apache.org/confluence/display/AMBARI/Ambari+Development
+
+### Currently installed
+
+Actual installation: https://hortonworks.com/downloads/
+
+Instllation instructions: https://hortonworks.com/tutorial/sandbox-deployment-and-install-guide/
+
+Hortonworks Sanbox HDP.
+
+It is running in a Docker container.
+
+### Access the host machine
+
+Using SSH (Secure Shell) or telnet. Use Putty for example.
+
+
+
+Location of Kafka in Docker container:
+/usr/hdp/current/kafka-broker
+
+Install Python's pip on CentOS Hortonworks HDP:
+sudo yum install python-pip

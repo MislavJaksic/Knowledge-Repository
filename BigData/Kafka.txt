@@ -1,0 +1,47 @@
+## Kafka
+
+### Introduction
+
+http://kafka.apache.org/intro
+
+Distributed streaming platform.
+Kafka is run as a cluster; stores streams of "records" in categories called "topics".
+
+Producer: publish records to topics.
+Consumer: subscribe to topics and process streams of records.
+Streams: application as a stream processor; take input stream from topic and transform into an output stream which outputs to a topic.
+Connector: connect topics to existing systems.
+
+Topic: category/feed to which records are published; a partitioned log; partition is a sequence of records; has a retention policy;   
+
+### Quickstart
+
+http://kafka.apache.org/quickstart
+Operations is detail: http://kafka.apache.org/documentation/#operations
+
+Steps:
+Download.
+
+Start Servers: both ZooKeeper and Kafka.
+
+Create topic: list with bin/kafka-topics.sh --list --zookeeper localhost:2181;
+              create with bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+
+Send message:
+Start consumer:
+Set up broker cluster:
+Connect to import/export data:
+Process data:
+
+
+
+
+
+
+
+
+
+
+
+
+
