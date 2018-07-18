@@ -1,0 +1,48 @@
+## Kafka Definitive Guide
+
+### Meet Kafka
+
+...
+
+Publish/subscribe messaging system, a distributed streaming tool.
+Message is a unit of data (a row or record in a database).
+Messages can have keys. Keys control message partitioning.
+Batch is a collection of messages.
+
+Schema is a structure to which all messages have to adhere. Apache Avro, JSON, XML or other.
+
+Topics are categories (database tables or folders). Topics are often broken down into partitions.
+Stream is
+
+Producer creates new messsages to a topic.
+Consumer reads messages by subscribing to topics. Consumers are part of a consumer group. 
+
+Broker is a Kafka server. Broker recieves messages and grants them to consumers.
+Cluster is a group of brokers. One broker is the cluster controller.
+
+...
+
+
+### Installing Kafka
+
+...
+
+### Kafka Producers: Writing Messages to Kafka
+
+Producers write to Kafka, Consumers read from Kafka and applications do both.
+Producer manadatory properties:
+* bootstrap.server: host:port pairs of brokers with which the producer will try to establish a connection.
+* key.serializer: class that will serialize keys; may need to implement your own.
+* value.serializer: class that will serialize values.
+
+...
+
+### Building Data Pipelines
+
+...
+
+Use producer-consumer when you can modify an application. Use Connect twhen you cannot (such as when using a database you didn't construct).
+
+Connect moves data between Kafka and other datastores.
+
+...

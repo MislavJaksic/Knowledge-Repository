@@ -20,18 +20,29 @@ http://kafka.apache.org/quickstart
 Operations is detail: http://kafka.apache.org/documentation/#operations
 
 Steps:
-Download.
+Download: wget http://ftp.carnet.hr/misc/apache/kafka/1.1.0/kafka_2.11-1.1.0.tgz
 
-Start Servers: both ZooKeeper and Kafka.
+Start Servers: ZooKeeper: bin/zookeeper-server-start.sh config/zookeeper.properties
+               Kafka: bin/kafka-server-start.sh config/server.properties
+Each one has some properties and a start script.
+You have to install Java before either will start.
 
-Create topic: list with bin/kafka-topics.sh --list --zookeeper localhost:2181;
-              create with bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+Create topic: list: bin/kafka-topics.sh --list --zookeeper localhost:2181;
+              [script_name] [command] [invoke_zookeeper] [host:port_of_broker]
+              create: bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+              [script_name] [command] [invoke_zookeeper] [host:port_of_broker] [replication] [partitioning] [topic_name]
 
-Send message:
-Start consumer:
-Set up broker cluster:
-Connect to import/export data:
-Process data:
+Send message: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+              [script_name] [command] TODO
+
+Start consumer: bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+                [script_name] [command] TODO
+
+Set up broker cluster: TODO
+
+Connect to import/export data: 
+
+Process data: 
 
 
 

@@ -11,7 +11,8 @@ Hidden directories are prefixed with ..
 Absolute path begins with /, realtive without.
 .. is the parent directory, . is the current directory.
 .sh signifies a script.
-USe Tab to autocomplete words.
+Use Tab to autocomplete words.
+Use sudo -i on Ubuntu to gain admin access.
 
 Example: ls -lh
 
