@@ -126,12 +126,61 @@ whereis located a manual page for a command.
 
 Variables are like Python's.
 All variables of of string type.
-There are global and local shell varialbes.
+There are global and local shell variables.
+.sh are scripts.
+.sh scripts are run with the bash command.
+Watch out for whitespaces, they can prevent the script execution.
 
-= for assignemnt.
-$= for assign command output to variable.
+= for assignment.
+$= for redirecting output to a variable.
 
-export 
+export convrets a variable into a global one for child processes.
+
+echo $var_name
+local makes a varialbe local to a script.
+
+Conditions, tests are [ ]. There are quite a few operators.
+Return 0 if True.
+Example: [1 -eq 1] // -> returns 0, meaning True
+
+Wildcards are substitute characters.
+? is one character.
+* is any character.
+[xyz] is one amoung these.
+^ is the invertor, negation.
+\ is an escape operator.
+
+
+### Chapter 5
+
+Regular expressions:
+x is character x.
+^ is start of the line.
+$ is end of the line.
+. is any character.
+[xy] is any character in  the set.
+[^xy] is any character not in the set.
+\[ escape [, so that you can search by it.
+| OR
+x* appears many times or not at all.
+x+ appears at least once.
+x? appears once or not at all.
+x{n} appears n times.
+x{n,m} appears between n and m times.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
