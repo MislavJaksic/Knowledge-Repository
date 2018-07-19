@@ -50,7 +50,7 @@ touch - create an empty file
 
 p for named pipeline, d for directory, s for socket, b for block file, c for char file, 
 
-cat - read a file
+cat - read a filegre
 
 stat - file details
 
