@@ -6,6 +6,7 @@
   a.	Napraviti calculation i retention policy sa raw baze na interface bazu 
     i.	Izraèunati brzinu na interface u bit per sec ne octet per second
     ii.	Spremati orginalne podatke dva tjedna nakon toga napraviti uprosjeæavanje na satnoj bazi i spremiti ih mjesec dana
+
 4.	Napraviti Kafka producer koji èita host i service alarme i upisuje u hive u strukturu (alarms raw – 2018 – june – IP)
   a.	Timestamp, state, status code, 0/1, host/service, info
 5.	Napraviti skriptu za uèitavanje referentnih podataka u reddis
@@ -48,6 +49,8 @@ Hive struktura: vjerojatno se misli na "external table" koja ima u sebi "locatio
 To se prevodi s dvije tablice. NE!
 Podaci su razliciti, ali imena stupaca su ista. To implicira da je samo jedna tablica.
 Pronadi kako napraviti "external table" u Hive s dva izvora podataka.
+
+Kako bi dobio bolji pogled, krenut cu of Kafka. Ona ce mi omoguciti da podatke polako citam, preobrazavam i spremam.
 
 
 
