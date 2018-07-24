@@ -1,0 +1,30 @@
+## Hive
+
+### Installation
+
+You need to have both Java and Hadoop installed.
+
+Download Hive. Unpack it with tar -xzvf apache-hive-x.y.z-bin.tar.gz.
+
+Add to .bashrc.
+
+export HIVE_HOME=/path/to/your/hive !!
+export PATH=$PATH:$HIVE_HOME/bin
+export CLASSPATH=$CLASSPATH:/path/to/your/hadoop/lib/*:. !!
+export CLASSPATH=$CLASSPATH:/path/to/your/hive/lib/*:. !!
+
+Use command to refresh the script: source ~/.bashrc
+
+Check paths and create config file from a template.
+cd $HIVE_HOME/conf
+cp hive-env.sh.template hive-env.sh
+
+hive.env.sh
+
+Add export HADOOP_HOME=/path/to/your/hadoop !!
+
+### Test installation
+
+Don't forget to run start-dfs.sh, also known as Hadoop first.
+
+Test using bin/hive in the /path/to/your/hive folder.

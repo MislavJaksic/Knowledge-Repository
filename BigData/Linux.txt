@@ -13,6 +13,7 @@ Absolute path begins with /, realtive without.
 .sh signifies a script.
 Use Tab to autocomplete words.
 Use sudo -i on Ubuntu to gain admin access.
+Set PATH in /etc/environment.
 
 Example: ls -lh
 
