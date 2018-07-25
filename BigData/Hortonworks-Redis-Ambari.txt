@@ -32,7 +32,11 @@ Using SSH (Secure Shell) or telnet. Use Putty for example.
 
 
 Location of Kafka in Docker container:
-/usr/hdp/current/kafka-broker
+/usr/hdp/x.y.z/kafka
 
 Install Python's pip on CentOS Hortonworks HDP:
 sudo yum install python-pip
+
+Blue are folders, cyan are shortcuts, grey are documents.
+
+Our little Kafka broker (on the Influx server): 192.168.50.56:9094

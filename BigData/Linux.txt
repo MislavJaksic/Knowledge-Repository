@@ -14,6 +14,9 @@ Absolute path begins with /, realtive without.
 Use Tab to autocomplete words.
 Use sudo -i on Ubuntu to gain admin access.
 Set PATH in /etc/environment.
+ps to show running processes.
+kill to destroy a process.
+Search in nano with CTRL+w.
 
 Example: ls -lh
 
@@ -168,35 +171,3 @@ x+ appears at least once.
 x? appears once or not at all.
 x{n} appears n times.
 x{n,m} appears between n and m times.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

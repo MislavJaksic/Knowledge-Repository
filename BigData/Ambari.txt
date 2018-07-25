@@ -8,7 +8,7 @@ System administration software for managing Hadoop clusters. Apache Hadoop is a 
 
 Docs: https://cwiki.apache.org/confluence/collector/pages.action?key=AMBARI
 
-Warning: Under Ambari Design there are a lot of dulic<ates under 2.4.0 and the rest. 2.4.0 seems to be the latest.
+Warning: Under Ambari Design there are a lot of duplicates under 2.4.0 and the rest. 2.4.0 seems to be the latest.
 
 ### Installation
 

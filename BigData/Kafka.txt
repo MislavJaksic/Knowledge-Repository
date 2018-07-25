@@ -120,37 +120,3 @@ Transforms:
 Creating a Connector:
 SourceConnector or SinkConnector.
 Implement two interfaces: Connector and Task.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

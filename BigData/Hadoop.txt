@@ -2,19 +2,21 @@
 
 ### Installation
 
+https://www.tutorialspoint.com/hive/hive_installation.htm
+
 You have to install Java.
 
 Download Hadoop. Unpack with tar xzf hadoop-x.y.z.tar.gz.
 
 Add to .bashrc.
 
-export HADOOP_HOME=/path/to/your/hadoop!!
-export HADOOP_MAPRED_HOME=$HADOOP_HOME 
-export HADOOP_COMMON_HOME=$HADOOP_HOME 
-export HADOOP_HDFS_HOME=$HADOOP_HOME 
-export YARN_HOME=$HADOOP_HOME
-export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native export
-PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+ export HADOOP_HOME=/path/to/your/hadoop!!
+ export HADOOP_MAPRED_HOME=$HADOOP_HOME 
+ export HADOOP_COMMON_HOME=$HADOOP_HOME 
+ export HADOOP_HDFS_HOME=$HADOOP_HOME 
+ export YARN_HOME=$HADOOP_HOME
+ export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native export
+ PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
 
 Use command to refresh the script: source ~/.bashrc
 
@@ -23,12 +25,14 @@ In hadoop-env.sh change export JAVA_HOME=... to /where/you/installed/java/jdkx.y
 In the following files add the following between <configuration> elements:
 
 core-site.xml
+
 <property> 
   <name>fs.default.name</name> 
   <value>hdfs://localhost:9000</value> 
 </property>
       	
 hdfs-site.xml
+
 <property> 
   <name>dfs.replication</name> 
   <value>1</value> 
@@ -43,14 +47,15 @@ hdfs-site.xml
 </property>
 
 yarn-site.xml
+
 <property> 
   <name>yarn.nodemanager.aux-services</name> 
   <value>mapreduce_shuffle</value> 
 </property>
  
-mapred-site.xml should be renamed with the cp command.
+mapred-site.xml should be renamed with the cp command: cp mapred-site.xml.template mapred-site.xml
 
-cp mapred-site.xml.template mapred-site.xml
+mapred-site.xml
 
 <property> 
   <name>mapreduce.framework.name</name> 
