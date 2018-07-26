@@ -1,0 +1,29 @@
+## IntelliJ IDEA
+
+A student licence, a professional licence and a there is also a free licence. 
+
+### Installation and setup
+
+Quite simple. Nothing out of the ordinary.
+
+### Learning to use an IDE
+
+Help -> Tip of the Day: for quick tips.
+
+CTRL+N: open class.
+CTRL+SHIFT+N: open file.
+CTRL+Space: code completion.
+ALT+SHIFT+7: find all places where a name is used.
+CTRL+Q: view documentation.
+CTRL+B: jump to declaration.
+SHIFT+F6: rename.
+CTRL+O: override methods.
+CTRL+I: implement interface.
+CTRL+SHIFT+Space: code complete with suitable variables.
+ALT+Insert: generate getters and setters.
+CTRL+ALT+T: surround selected with code (try/catch).
+CTRL+ALT+B: jump to the implementation an abstract method.
+SHIFT+F1: view external documentation.
+... and many many more tips.
+
+CTRL+SHIFT+NumPad-/+: collapse/uncollapse all.
