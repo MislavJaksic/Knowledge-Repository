@@ -1,12 +1,14 @@
 ## IntelliJ IDEA
 
-A student licence, a professional licence and a there is also a free licence. 
+https://www.jetbrains.com/idea/
+
+There is a student licence, a professional licence and also a free licence. 
 
 ### Installation and setup
 
-Quite simple. Nothing out of the ordinary.
+Quite simple. Nothing out of the ordinary. Follow the online instructions.
 
-### Learning to use an IDE
+### Learning how to use IntelliJ IDEA
 
 Help -> Tip of the Day: for quick tips.
 
@@ -24,6 +26,6 @@ ALT+Insert: generate getters and setters.
 CTRL+ALT+T: surround selected with code (try/catch).
 CTRL+ALT+B: jump to the implementation an abstract method.
 SHIFT+F1: view external documentation.
-... and many many more tips.
+... and there are even more tips.
 
 CTRL+SHIFT+NumPad-/+: collapse/uncollapse all.

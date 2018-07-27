@@ -1,66 +1,75 @@
 ## Linux
 
+FER class: https://www.fer.unizg.hr/predmet/okosl/materijali
+
 ### Chapter 1
 
-To stop execution, type Ctrl+C
-
-Long options prefixed with --, short options prefixed with -.
-
-Paste text into it with Shift+Insert.
-Hidden directories are prefixed with ..
-Absolute path begins with /, realtive without.
+Tips and tricks:
+Paste text with Shift+Insert.
+Hidden directories are prefixed with a dot (.).
+Absolute paths begins with / and relative paths don't.
 .. is the parent directory, . is the current directory.
-.sh signifies a script.
-Use Tab to autocomplete words.
+_script_name.sh signifies a script.
+Use Tab to automatically complete words.
 Use sudo -i on Ubuntu to gain admin access.
-Set PATH in /etc/environment.
-ps to show running processes.
-kill to destroy a process.
-Search in nano with CTRL+w.
+Set PATH in /etc/environment or, even better, .bashrc located in root.
+Use ps to show which processes are running.
+Use kill to shutdown a process.
+Search in nano with CTRL+W.
+The program scite is an alternative to Notepad++ on Linux.
+Install _program_name.tar.gz software with "tar -xzvf _program_name.tar.gz".
 
+To stop execution, type Ctrl+C.
+
+Long options prefixed with --, short options are prefixed with -.
+Options can be chained together.
 Example: ls -lh
 
-man - display info, exit with q
-ls - list, [-l] for long descriptions, [-h] for human readable, [-d] describe directory. [-ld] 
-pwd - current directory
-mkdir - create directory, [-p] create every directory on the path
+man - show command manual; exit with q
+
+ls - list; [-l] for long descriptions, [-h] for human readable, [-d] describe directory
+
+pwd - show current directory path
+
+mkdir - create directory; [-p] create every directory on the path
+
 cd - change directory
+
 bash - run a script (.sh)
 
-info - display info
+info - show command info
 
-echo - display a message
+echo - show a message
 
 
 
 ### Chapter 2
 
-cp - copy directory, [-r] recursive copy, [-f] force delete
+(Main) directories: /bin, /boot, /dev, /etc, /lib, /lost+found, /media, /mnt, /opt, /proc, /sbin, /tmp, /var, /srv, /home, /root, /usr.
+/usr: programs for normal work; has a special structure.
 
-mv - move and rename
+cp - copy directory; [-r] recursive copy
 
-rm - remove folder/directory, [-r] recursive delete
+mv - move and/or rename from A to B
+
+rm - remove folder/directory; [-r] recursive delete, [-f] force delete
 
 rmdir - remove directory if empty
 
-Directories: /bin, /boot, /dev, /etc, /lib, /lost+found, /media, /mnt, /opt, /proc, /sbin, /tmp, /var, /srv, /home, /root, /usr.
-/usr: programs for normal work; has a special structure.
+df - show memory by partition
 
-df - memory by patition
-
-du - memory by directory
+du - show memory by directory
 
 touch - create an empty file
-
 p for named pipeline, d for directory, s for socket, b for block file, c for char file, 
 
-cat - read a filegre
+cat - read a file
 
-stat - file details
+stat - show file details
 
 file - find file type
 
-head - display a few lines, [-n] for N lines
+head - display a few lines; [-N] for N lines
 
 nano/vim - text editors
 
@@ -69,90 +78,91 @@ nano/vim - text editors
 ### Chapter 3
 
 stdin, stdout, stderr are standard input, output and error.
-They look like files. They are numbers 0, 1, 2.
+They look like files. Assigned numbers 0, 1, 2 respectively.
 
 keyboard --- stdin ---> cat --- stdout ---> monitor
 cat acts as a filter.
 
-> is a write to file operator.
+> - write to file operator.
 Example: ls -l / > /tmp/test != ls -l /
 
->> is a append data to a file operator.
+>> - append data to a file operator.
 
-< is a sent file content to a program operator.
+< - sent file content to a program operator.
 Example: cat < /ect/password
 
 - represents stdin/stdout operator in commands.
 example: wget -O - http://ftp.hr.debian.org/README
 
-| is a pipe operator.
+| - pipe operator.
 Example: ls -l /lib/ | head
 
 ls -l /lib --- stdout ---> --- stdin ---> head ---> monitor
 
-2> is an error output redirection operator.
+2> - error output redirection operator.
 Example: ls -l /lib1 2> /tmp/lib5
 
-&> joint stderr and stdout redirection operator.
+&> - joint stderr and stdout redirection operator.
 2>&1 redirect stderr to stdin operator.
 
-tee redirect stdin to stdout and a file operator.
+tee - redirect stdin to stdout and a file operator.
 
-<< write a file inline operator (here document).
+<< - write a file inline operator (here document).
 Example: cat << EOF (write inline until you input EOF)
 
-<<< write a string inline operator (here string).
+<<< - write a string inline operator (here string).
 Example: cat <<< 'hello' 
 
 Use && and || for conditional execution; what comes before && must return 0.
 Example: false || echo 1
 
-wc is word count.
+wc - word count.
 Example: ls /usr/include | wc
 
-grep searches for a pattern in a file. 
+grep - search for a pattern in a file. 
 Example: grep SEEK_SET /usr/include/stdio.h
 
-sort to sort lines.
+sort - sort lines.
 
-uniq checks if there are duplicate lines; has lot of options.
+uniq - check if there are duplicate lines; has lot of options.
 cut leaves out a character from the file.
 
-find is a complex search command; [-name], [-type], [-size], [-print].
+find - complex search command; [-name], [-type], [-size], [-print].
 Example: find /ect -type d -a -size +10k
 
-locate is a much simpler find.
+locate - a much simpler find.
 
-whereis located a manual page for a command.
+whereis - locate a manual page for a command.
+
 
 
 ### Chapter 4
 
-Variables are like Python's.
-All variables of of string type.
+Linux variables are like Python's.
+All variables are strings.
 There are global and local shell variables.
-.sh are scripts.
-.sh scripts are run with the bash command.
-Watch out for whitespaces, they can prevent the script execution.
+_script_name.sh scripts are run with the bash command.
+Watch out for whitespaces! They make script execution harder as they confuse the Command Line parser.
 
-= for assignment.
-$= for redirecting output to a variable.
+= - assignment
+$= - redirect output to a variable
 
-export convrets a variable into a global one for child processes.
+export - convert a variable into a global one for child processes
 
-echo $var_name
-local makes a varialbe local to a script.
+echo $_var_name - show variable's value
+local - make a variable local to a script
 
-Conditions, tests are [ ]. There are quite a few operators.
+Conditions and tests are written within [ ]. There are quite a few operators.
 Return 0 if True.
 Example: [1 -eq 1] // -> returns 0, meaning True
 
-Wildcards are substitute characters.
-? is one character.
-* is any character.
-[xyz] is one amoung these.
-^ is the invertor, negation.
-\ is an escape operator.
+Wildcards are substitute characters:
+? is one character,
+* is any character,
+[xyz] is one among these,
+^ is the not operator,
+\ is an escape character.
+
 
 
 ### Chapter 5
