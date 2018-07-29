@@ -1,0 +1,183 @@
+## Linux
+
+FER class: https://www.fer.unizg.hr/predmet/okosl/materijali
+
+### Chapter 1
+
+Tips and tricks:
+Paste text with Shift+Insert.
+Hidden directories are prefixed with a dot (.).
+Absolute paths begins with / and relative paths don't.
+.. is the parent directory, . is the current directory.
+_script_name.sh signifies a script.
+Use Tab to automatically complete words.
+Use sudo -i on Ubuntu to gain admin access.
+Set PATH in /etc/environment or, even better, .bashrc located in root.
+Use ps to show which processes are running.
+Use kill to shutdown a process.
+Search in nano with CTRL+W.
+The program scite is an alternative to Notepad++ on Linux.
+Install _program_name.tar.gz software with "tar -xzvf _program_name.tar.gz".
+
+To stop execution, type Ctrl+C.
+
+Long options prefixed with --, short options are prefixed with -.
+Options can be chained together.
+Example: ls -lh
+
+man - show command manual; exit with q
+
+ls - list; [-l] for long descriptions, [-h] for human readable, [-d] describe directory
+
+pwd - show current directory path
+
+mkdir - create directory; [-p] create every directory on the path
+
+cd - change directory
+
+bash - run a script (.sh)
+
+info - show command info
+
+echo - show a message
+
+
+
+### Chapter 2
+
+(Main) directories: /bin, /boot, /dev, /etc, /lib, /lost+found, /media, /mnt, /opt, /proc, /sbin, /tmp, /var, /srv, /home, /root, /usr.
+/usr: programs for normal work; has a special structure.
+
+cp - copy directory; [-r] recursive copy
+
+mv - move and/or rename from A to B
+
+rm - remove folder/directory; [-r] recursive delete, [-f] force delete
+
+rmdir - remove directory if empty
+
+df - show memory by partition
+
+du - show memory by directory
+
+touch - create an empty file
+p for named pipeline, d for directory, s for socket, b for block file, c for char file, 
+
+cat - read a file
+
+stat - show file details
+
+file - find file type
+
+head - display a few lines; [-N] for N lines
+
+nano/vim - text editors
+
+
+
+### Chapter 3
+
+stdin, stdout, stderr are standard input, output and error.
+They look like files. Assigned numbers 0, 1, 2 respectively.
+
+keyboard --- stdin ---> cat --- stdout ---> monitor
+cat acts as a filter.
+
+> - write to file operator.
+Example: ls -l / > /tmp/test != ls -l /
+
+>> - append data to a file operator.
+
+< - sent file content to a program operator.
+Example: cat < /ect/password
+
+- represents stdin/stdout operator in commands.
+example: wget -O - http://ftp.hr.debian.org/README
+
+| - pipe operator.
+Example: ls -l /lib/ | head
+
+ls -l /lib --- stdout ---> --- stdin ---> head ---> monitor
+
+2> - error output redirection operator.
+Example: ls -l /lib1 2> /tmp/lib5
+
+&> - joint stderr and stdout redirection operator.
+2>&1 redirect stderr to stdin operator.
+
+tee - redirect stdin to stdout and a file operator.
+
+<< - write a file inline operator (here document).
+Example: cat << EOF (write inline until you input EOF)
+
+<<< - write a string inline operator (here string).
+Example: cat <<< 'hello' 
+
+Use && and || for conditional execution; what comes before && must return 0.
+Example: false || echo 1
+
+wc - word count.
+Example: ls /usr/include | wc
+
+grep - search for a pattern in a file. 
+Example: grep SEEK_SET /usr/include/stdio.h
+
+sort - sort lines.
+
+uniq - check if there are duplicate lines; has lot of options.
+cut leaves out a character from the file.
+
+find - complex search command; [-name], [-type], [-size], [-print].
+Example: find /ect -type d -a -size +10k
+
+locate - a much simpler find.
+
+whereis - locate a manual page for a command.
+
+
+
+### Chapter 4
+
+Linux variables are like Python's.
+All variables are strings.
+There are global and local shell variables.
+_script_name.sh scripts are run with the bash command.
+Watch out for whitespaces! They make script execution harder as they confuse the Command Line parser.
+
+= - assignment
+$= - redirect output to a variable
+
+export - convert a variable into a global one for child processes
+
+echo $_var_name - show variable's value
+local - make a variable local to a script
+
+Conditions and tests are written within [ ]. There are quite a few operators.
+Return 0 if True.
+Example: [1 -eq 1] // -> returns 0, meaning True
+
+Wildcards are substitute characters:
+? is one character,
+* is any character,
+[xyz] is one among these,
+^ is the not operator,
+\ is an escape character.
+
+
+
+### Chapter 5
+
+Regular expressions:
+x is character x.
+^ is start of the line.
+$ is end of the line.
+. is any character.
+[xy] is any character in  the set.
+[^xy] is any character not in the set.
+\[ escape [, so that you can search by it.
+| OR
+x* appears many times or not at all.
+x+ appears at least once.
+x? appears once or not at all.
+x{n} appears n times.
+x{n,m} appears between n and m times.

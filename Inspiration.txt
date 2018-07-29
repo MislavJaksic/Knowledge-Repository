@@ -14,9 +14,6 @@ a programming language neutral dictionary which establishes a common group of wo
 Program cookbook:
 a list of common problems and solutions
 
-Evolution programming:
-how to make selfimproving programs
-
 Design patters:
 an interesting subject; research it
 

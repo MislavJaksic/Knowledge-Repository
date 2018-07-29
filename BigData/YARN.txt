@@ -1,8 +1,0 @@
-## YARN
-
-yarn -help
-
-(Able to kill queues and applications)
-yarn application -list
-
-

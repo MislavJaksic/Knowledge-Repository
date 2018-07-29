@@ -1,0 +1,9 @@
+## Putty
+
+For remotly connecting to another computer.
+Can use SSH (Secure Shell) or telnet.
+
+### Installation
+
+MSI Windows Installer 64 bit: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+

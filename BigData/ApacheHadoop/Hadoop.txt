@@ -1,0 +1,260 @@
+## Hadoop
+
+### Installation
+
+http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/SingleCluster.html
+
+Java must be installed.
+ssh must be installed.
+
+Install them with:
+sudo apt-get install ssh
+sudo apt-get install rsync
+
+Download Hadoop. Unpack with "tar -xzvf hadoop-x.y.z.tar.gz".
+
+* /path/to/your/hadoop/etc/hadoop/hadoop-env.sh
+Set "export JAVA_HOME="/path/to/your/java/jre_x.y.z""
+Test using bin/hadoop. A short list should be shown.
+
+Hadoop can run in three modes: standalone, pseudo-distributed or fully-distributed.
+By default, it runs in standalone mode as a single Java process.
+
+You should be able to execute a MapReduce job right away:
+´´´
+mkdir input
+cp etc/hadoop/*.xml input
+bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-x.y.z.jar grep input output 'dfs[a-z.]+'
+cat output/*
+´´´
+
+Now, to set Hadoop to work in pseudo-distributed mode...
+
+In the following files add the following:
+
+* etc/hadoop/core-site.xml
+´´´
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://localhost:9000</value>
+    </property>
+</configuration>
+´´´
+
+* etc/hadoop/hdfs-site.xml
+´´´
+<configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+</configuration>
+´´´
+
+Try to connect to localhost with "shh localhost".
+If you cannot, execute:
+´´´
+ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+chmod 0600 ~/.ssh/authorized_keys
+´´´
+Once connected, use "exit" to logout from the session.
+
+Format the filesystem with "bin/hdfs namenode -format". This will wipe all folders on the HDFS.
+Start NameNode and DataNode daemons with "sbin/start-dfs.sh".
+Browse the NameNode at "http://localhost:50070/".
+
+Make HDFS directories:
+´´´
+bin/hdfs dfs -mkdir /user
+bin/hdfs dfs -mkdir /user/<username>
+´´´
+... which is equivalent to:
+´´´
+bin/hdfs dfs ...
+´´´
+
+Test with the previous input directory and execute MapReduce job:
+´´´
+bin/hdfs dfs -put etc/hadoop input
+bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-x.y.z.jar grep input output 'dfs[a-z.]+'
+´´´
+
+View the output with:
+´´´
+bin/hdfs dfs -get output output
+cat output/*
+´´´
+
+When done, use "sbin/stop-dfs.sh" to stop the deamons.
+
+Additionally, you can set up YARN to work in pseudo-distributed mode.
+
+* etc/hadoop/mapred-site.xml
+´´´
+<configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+</configuration>
+´´´
+
+* etc/hadoop/yarn-site.xml
+´´´
+<configuration>
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+</configuration>
+´´´
+
+Start ResourceManager and NodeManager daemon with "sbin/start-yarn.sh".
+Browse the ResourceManager at "http://localhost:8088/".
+
+Note: both "start-dfs.sh" and "start-yarn.sh" have to be running!
+Try executing a MapReduce job: bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-x.y.z.jar grep input output 'dfs[a-z.]+'
+
+View the output with:
+´´´
+bin/hdfs dfs -get output output
+cat output/*
+´´´
+
+When done, use "sbin/stop-yarn.sh" to stop the deamons.
+
+
+### Cluster setup
+
+http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html
+
+Site configurations are of great import:
+* etc/hadoop/core-site.xml
+* etc/hadoop/hdfs-site.xml
+* etc/hadoop/yarn-site.xml
+* etc/hadoop/mapred-site.xml
+
+TODO: Talks in greater detail about the configuration.
+
+
+### (Unofficial) installation
+
+https://www.tutorialspoint.com/hive/hive_installation.htm
+
+You have to install Java.
+
+Download Hadoop. Unpack with "tar -xzvf hadoop-x.y.z.tar.gz".
+
+Set Hadoop to work in pseudo-distributed mode.
+
+Add to .bashrc.
+´´´
+export HADOOP_HOME=/path/to/your/hadoop
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native export
+PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+´´´
+
+source ~/.bashrc - refresh the file
+
+In hadoop-env.sh change "export JAVA_HOME=..." to "/where/you/installed/java/jdkx.y.z_version".
+
+In the following files add the following <elements> between <configuration> elements:
+
+* core-site.xml
+´´´
+<property>
+  <name>fs.default.name</name>
+  <value>hdfs://localhost:9000</value>
+</property>
+´´´
+
+* hdfs-site.xml
+´´´
+<property> 
+  <name>dfs.replication</name> 
+  <value>1</value> 
+</property> 
+<property> 
+  <name>dfs.name.dir</name> 
+  <value>file:///path/to/your/hadoop/hadoopinfra/hdfs/namenode </value>
+</property> 
+<property> 
+  <name>dfs.data.dir</name>
+  <value>file:///path/to/your/hadoop/hadoopinfra/hdfs/datanode </value>
+</property>
+´´´
+
+* yarn-site.xml
+´´´
+<property> 
+  <name>yarn.nodemanager.aux-services</name> 
+  <value>mapreduce_shuffle</value> 
+</property>
+´´´
+
+* mapred-site.xml
+Create and rename mapred-site.xml using "cp mapred-site.xml.template mapred-site.xml".
+´´´
+<property> 
+  <name>mapreduce.framework.name</name> 
+  <value>yarn</value> 
+</property>
+´´´
+
+
+### Test installation
+
+Test one: "hdfs namenode -format"
+
+Desired output:
+´´´
+...
+... INFO util.ExitUtil: Exiting with status 0
+...
+´´´
+
+
+Test two: start Hadoop with "start-dfs.sh". Conversely, shut it down with stop-dfs.sh.
+
+Desired output:
+´´´
+Starting namenodes on [localhost] 
+...
+Starting secondary namenodes [0.0.0.0]
+...
+´´´
+If the connection is refused do the following:
+Add the following lines to "path/to/your/hadoop/etc/hadoop/hadoop-env.sh" file.
+´´´
+# My addition to solve the refused connection problem when running start-dfs.sh
+export HADOOP_SSH_OPTS="-p 22"
+´´´
+Then, install openssh with "sudo apt-get install openssh-server".
+
+
+Test three: start YARN with start-yarn.sh.  Conversely, shut it down with stop-yarn.sh.
+
+Desired output:
+´´´
+...
+localhost: starting nodemanager, logging to ...
+´´´
+
+
+Test four: try to access Hadoop and its clusters by visiting "http://localhost:50070/" and "http://localhost:8088/".
+
+
+### Hadoop test
+
+After running both "start-dfs.sh" and "start-yarn.sh" you should so the following:
+execute "bin/hadoop fs -ls /",
+visit http://localhost:50070/,
+visit http://localhost:8088/,
+
+

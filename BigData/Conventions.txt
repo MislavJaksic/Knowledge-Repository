@@ -1,2 +1,0 @@
-Hive data in HDFS:
-if there are two words, connect them with underscore "_".

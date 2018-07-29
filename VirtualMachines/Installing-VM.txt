@@ -1,0 +1,12 @@
+Tips and tricks at the bottom of: http://www.zemris.fer.hr/predmeti/os/
+
+Host is the operating system which runs the virtual machine.
+VMWare or VirtualBox to run the virtual machine.
+Download Ubuntu or a similar Virtual Image.
+
+Using VirtualBox: create a Virtual Machine. Allocate enough RAM and hard disk memory.
+                  upon running it the first time, select the .iso image or the drive in which there is a DVD with hte operating system.
+To share the clipboard/Drag'nDrop files, check the option under General Settings on the running VM.
+
+Using VMWare: mount the .iso image of the operating system.
+
