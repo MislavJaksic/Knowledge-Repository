@@ -138,3 +138,15 @@ Example:
  STORED AS ORC
  tblproperties("transactional"="true");
 
+
+### Hive test
+
+
+
+After starting Hadoop with "start-dfs.sh" and "start-yarn.sh" and HiveServer2 with "bin/hiveserver2" do the following:
+
+start Beeline with "bin/beeline",
+
+execute "!connect jdbc:hive2://localhost:10000" or "bin/beeline -u jdbc:hive2://$HS2_HOST:$HS2_PORT" if connecting remotely,
+
+execute "!tables" and "!dbinfo".
