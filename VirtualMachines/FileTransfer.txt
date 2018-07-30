@@ -1,0 +1,7 @@
+## File transfer
+
+Either use pscp for transfers between Windows and a remote server or ...
+
+... if you need to transfer between the Docker image and the host, use the docker cp comand.
+
+Example: docker cp transfer_object.txt sandbox-hdp:/usr/transfer_object.txt.
