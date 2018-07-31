@@ -67,7 +67,15 @@ Start Beeline with "bin/beeline".
 Execute "!connect jdbc:hive2://localhost:10000". If connecting remotely, use "bin/beeline -u jdbc:hive2://$HS2_HOST:$HS2_PORT".
 Test the connection with "!tables". If it works, you are in!
 
-TODO Configuration Management Overview and beyond...
+
+https://cwiki.apache.org/confluence/display/Hive/HiveDerbyServerMode
+
+Install and configure Apache Derby.
+TODO... Installing Derby.
+
+
+https://cwiki.apache.org/confluence/display/Hive/AdminManual+Configuration
+TODO... Fine tune the config.
 
 
 ### (Unofficial) installation
@@ -99,11 +107,6 @@ In the following files append the following:
 ´´´
 export HADOOP_HOME=/path/to/your/hadoop
 ´´´
-
-
-### Configure Metastore - Apache Derby
-
-https://cwiki.apache.org/confluence/display/Hive/AdminManual+Configuration
 
 TODO Stopped at Step 8: Verifying Hive Installation ...
 
