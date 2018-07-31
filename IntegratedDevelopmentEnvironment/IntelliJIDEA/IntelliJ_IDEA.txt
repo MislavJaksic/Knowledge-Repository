@@ -29,3 +29,11 @@ SHIFT+F1: view external documentation.
 ... and there are even more tips.
 
 CTRL+SHIFT+NumPad-/+: collapse/uncollapse all.
+
+### Maven project
+
+Create from File -> New...
+You can add dependencies by simply copying the XML from the Maven Central Repository into the "pom.xml".
+You can package the project into a .jar by adding <packaging>jar</packaging> into "pom.xml".
+You can open the Maven project view by clicking on the icon in the bottom left corner of the window.
+If you want to transfer the project, package the whole project into a .zip or something similar and install it with "mvn install".
