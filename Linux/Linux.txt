@@ -2,22 +2,29 @@
 
 FER class: https://www.fer.unizg.hr/predmet/okosl/materijali
 
-### Chapter 1
+### Tips and Tricks
 
 Tips and tricks:
 Paste text with Shift+Insert.
-Hidden directories are prefixed with a dot (.).
-Absolute paths begins with / and relative paths don't.
-.. is the parent directory, . is the current directory.
-_script_name.sh signifies a script.
 Use Tab to automatically complete words.
 Use sudo -i on Ubuntu to gain admin access.
-Set PATH in /etc/environment or, even better, .bashrc located in root.
 Use ps to show which processes are running.
 Use kill to shutdown a process.
+
+_script_name.sh signifies a script.
+Install _program_name.tar.gz software with "tar -xzvf _program_name.tar.gz".
+
+Absolute paths begins with / and relative paths don't.
+.. is the parent directory, . is the current directory.
+Hidden directories are prefixed with a dot (.).
+
+Set PATH in /etc/environment or, even better, .bashrc located in root.
+
 Search in nano with CTRL+W.
 The program scite is an alternative to Notepad++ on Linux.
-Install _program_name.tar.gz software with "tar -xzvf _program_name.tar.gz".
+
+
+### Chapter 1
 
 To stop execution, type Ctrl+C.
 
