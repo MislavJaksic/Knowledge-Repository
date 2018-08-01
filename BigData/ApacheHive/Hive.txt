@@ -125,14 +125,14 @@ https://community.hortonworks.com/articles/49949/test-7.html
 
 hive-site.xml
 
-Hive.txn.manager                = org.apache.hadoop.hive.ql.lockmgr.DbTxnManager
-Hive.compactor.initiator.on     = true
-Hive.compactor.worker.threads   = 1 (greater then 0)
+hive.txn.manager                = org.apache.hadoop.hive.ql.lockmgr.DbTxnManager
+hive.compactor.initiator.on     = true
+hive.compactor.worker.threads   = 1 (greater then 0)
 
-Hive.support.concurrency        = true
-Hive.enforce.bucketing          = true
-Hive.exec.dynamic.partition.mode= nonstrict
-Hive.txn.timeout                = 300
+hive.support.concurrency        = true
+hive.enforce.bucketing          = true
+hive.exec.dynamic.partition.mode= nonstrict
+hive.txn.timeout                = 300
 
 Table has to be "store as orc" and "transactional"="true" and must be bucketed but not sorted and users need to have special permissions.
 Example:
