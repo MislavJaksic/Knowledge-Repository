@@ -32,8 +32,29 @@ CTRL+SHIFT+NumPad-/+: collapse/uncollapse all.
 
 ### Maven project
 
-Create from File -> New...
+##### Create a project
+
+Create from File -> New... -> Maven -> ...
+If you want, you can create an Archtype, a template project or you can just click Next.
+Fill in both of these:
+* groupId - creator's ID
+* artifactId - JAR or project name
+
+
+### Adding dependencies
+
 You can add dependencies by simply copying the XML from the Maven Central Repository into the "pom.xml".
+Sometimes it can be hard to find the right JAR in all of the mayn subfolders of an external project. You can download the [JARExplorer](https://github.com/javalite/jar-explorer) to aid you in your search.
+
+
+#### Build, plugins and packaging
+
 You can package the project into a .jar by adding <packaging>jar</packaging> into "pom.xml".
-You can open the Maven project view by clicking on the icon in the bottom left corner of the window.
+To package the project, that is, execute the Maven goal "mvn package" you can open the Maven project view. Click on the icon in the bottom left corner of the window.
+Plugins can range from utilities, to those that allow you to execute the project from the command line like "exec-maven-plugin".
+
+
+#### Deployment
+
 If you want to transfer the project, package the whole project into a .zip or something similar and install it with "mvn install".
+If you have the "exec-maven-plugin", you can execute the project from the command line with "mvn exec:java". 
