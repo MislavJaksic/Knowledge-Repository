@@ -1,0 +1,35 @@
+## Hive Streaming
+
+Allows data to be appended continously into Hive.
+
+
+### Configuration
+
+https://cwiki.apache.org/confluence/display/Hive/Streaming+Data+Ingest
+https://community.hortonworks.com/articles/49949/test-7.html
+
+In the "hive-site.xml" change the following configuration properties:
+
+hive.txn.manager                = org.apache.hadoop.hive.ql.lockmgr.DbTxnManager
+hive.compactor.initiator.on     = true
+hive.compactor.worker.threads   = 1 (greater then 0)
+
+hive.support.concurrency        = true
+hive.enforce.bucketing          = true
+hive.exec.dynamic.partition.mode= nonstrict
+hive.txn.timeout                = 300
+
+
+### Additional considerations
+
+A streaming table has to be configured as follows:
+* has to be stored as ORC (syntax: "stored as orc")
+* has to be transactional (syntax: "tblproperties("transactional"="true")")
+* must be bucketed but not sorted (syntax: "clustered by (colName) into 10 buckets")
+* the client user has to have permissions to write to the table and create partitions
+
+Example:
+ CREATE TABLE alarms (stamp TIMESTAMP, state STRING, status_code STRING, down TINYINT, type STRING, info STRING)
+ CLUSTERED BY(stamp) INTO 10 BUCKETS
+ STORED AS ORC
+ tblproperties("transactional"="true");
