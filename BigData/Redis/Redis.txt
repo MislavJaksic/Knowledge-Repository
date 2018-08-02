@@ -14,7 +14,7 @@ DEL server:name
 SETNX server:name "bravo" // -> SET-if-not-exist
 
 SET connections 2
-INCR connections // -> atomic increment (no collissions)
+INCR connections // -> atomic increment (no collisions)
 
 SET resource:lock "Redis Demo"
 EXPIRE resource:lock 120 // -> delete after 120 sec

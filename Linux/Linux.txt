@@ -2,6 +2,7 @@
 
 FER class: https://www.fer.unizg.hr/predmet/okosl/materijali
 
+
 ### Tips and Tricks
 
 Tips and tricks:
@@ -49,7 +50,6 @@ info - show command info
 echo - show a message
 
 
-
 ### Chapter 2
 
 (Main) directories: /bin, /boot, /dev, /etc, /lib, /lost+found, /media, /mnt, /opt, /proc, /sbin, /tmp, /var, /srv, /home, /root, /usr.
@@ -79,7 +79,6 @@ file - find file type
 head - display a few lines; [-N] for N lines
 
 nano/vim - text editors
-
 
 
 ### Chapter 3
@@ -142,7 +141,6 @@ locate - a much simpler find.
 whereis - locate a manual page for a command.
 
 
-
 ### Chapter 4
 
 Linux variables are like Python's.
@@ -169,7 +167,6 @@ Wildcards are substitute characters:
 [xyz] is one among these,
 ^ is the not operator,
 \ is an escape character.
-
 
 
 ### Chapter 5

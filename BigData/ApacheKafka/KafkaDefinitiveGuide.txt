@@ -15,17 +15,19 @@ Schema is a structure to which all messages have to adhere. Apache Avro, JSON, X
 
 Topics are categories (database tables or folders). Topics are broken down into partitions.
 Partitions are commit logs, ordered, append-only data structures.
-Stream is a single topic, regardless how many partitions it has, moving data from a producer to a consumer in real time.
+Stream is a single topic, regardless how many partitions it has, moving data from a producer to a consumer
+in real time.
 
-Producer creates new messsages to a topic.
+Producer creates new messages to a topic.
 Consumer reads messages by subscribing to topics. Consumers are part of a consumer group. 
 
-Broker is a Kafka server. Broker recieves messages and grants them to consumers.
+Broker is a Kafka server. Broker receives messages and grants them to consumers.
 Cluster is a group of brokers. One broker is the cluster controller.
-Partitions are owned by a single broker, called a leader of a partition. It provides redundacncy.
-Retention is how long data is going to be kept in a topic or how big the topic can get or what key it has according to log compaction.  
+Partitions are owned by a single broker, called a leader of a partition. It provides redundancy.
+Retention is how long data is going to be kept in a topic or how big the topic can get or what key it has
+according to log compaction.  
 
-Multiple clusteres are required for large scale projects.
+Multiple clusters are required for large scale projects.
 
 Why use Kafka?
 Multiple producers.
@@ -49,7 +51,7 @@ TODO
 ### Kafka Producers: Writing Messages to Kafka
 
 Producers write to Kafka, Consumers read from Kafka and applications do both.
-Producer manadatory properties:
+Producer mandatory properties:
 * bootstrap.server: host:port pairs of brokers with which the producer will try to establish a connection.
 * key.serializer: class that will serialize keys; may need to implement your own.
 * value.serializer: class that will serialize values.
@@ -60,8 +62,9 @@ TODO
 
 TODO
 
-Use producer-consumer when you can modify an application. Use Connect twhen you cannot (such as when using a database you didn't construct).
+Use producer-consumer when you can modify an application. Use Connect when you cannot (such as when using a
+database you didn't construct).
 
-Connect moves data between Kafka and other datastores.
+Connect moves data between Kafka and other data stores.
 
 TODO

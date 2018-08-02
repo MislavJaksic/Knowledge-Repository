@@ -2,7 +2,8 @@
 
 https://ambari.apache.org/
 
-System administration software for managing Hadoop clusters. Apache Hadoop is a software for distributed parallel problem solving.
+System administration software for managing Hadoop clusters. Apache Hadoop is a software for distributed parallel
+problem solving.
 
 
 ### Docs
@@ -44,7 +45,8 @@ TODO
 
 #### Heatmaps
 
-The "Heatmaps" show all kinds of useful metrics, such as memory allocation, processor speed and similar physical characterics.
+The "Heatmaps" show all kinds of useful metrics, such as memory allocation, processor speed and similar physical
+characteristics.
 
 
 #### Config History
@@ -55,7 +57,8 @@ The "Config History" tab shows all the current and previous "Config Groups" chan
 ### Services
 
 The "Services" tab shows all the installed services.
-Services with a green check mark are active, those with a black doctor's bag are in Maintenance mode and those with a computer icon are inactive.
+Services with a green check mark are active, those with a black doctor's bag are in Maintenance mode and those
+with a computer icon are inactive.
 
 
 #### Config
@@ -68,9 +71,11 @@ On the "Services" tab a number of services can be selected.
 Upon selection each one has a "Summary" and "Configs" tab. (Note: some also have "Heatmaps") 
 The "Configs" tab has "Settings" and "Advanced" tabs. 
 In the "Advanced" tab a number of properties can be changed. (Note: not all properties are displayed)
-If some properties are missing you can attempt to add them by opening one of the "Custom _conf_file" dropdowns and clicking "Add Property ...".
+If some properties are missing you can attempt to add them by opening one of the "Custom _conf_file" dropdowns
+and clicking "Add Property ...".
 
-In addition, you can change the config group by clicking on the "Manage Config Groups". There you can duplicate the current settings and then change them. When done, you can assign a host to the appropriate settings group.
+In addition, you can change the config group by clicking on the "Manage Config Groups". There you can duplicate
+the current settings and then change them. When done, you can assign a host to the appropriate settings group.
 
 
 ### Alerts

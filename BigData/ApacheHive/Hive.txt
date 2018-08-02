@@ -134,7 +134,8 @@ hive.enforce.bucketing          = true
 hive.exec.dynamic.partition.mode= nonstrict
 hive.txn.timeout                = 300
 
-Table has to be "store as orc" and "transactional"="true" and must be bucketed but not sorted and users need to have special permissions.
+Table has to be "store as orc" and "transactional"="true" and must be bucketed but not sorted and users
+need to have special permissions.
 Example:
  CREATE TABLE alarms (stamp TIMESTAMP, state STRING, status_code STRING, down TINYINT, type STRING, info STRING)
  CLUSTERED BY(stamp) INTO 10 BUCKETS
@@ -146,7 +147,8 @@ Example:
 
 
 
-After starting Hadoop with "start-dfs.sh" and "start-yarn.sh" and HiveServer2 with "bin/hiveserver2" do the following:
+After starting Hadoop with "start-dfs.sh" and "start-yarn.sh" and HiveServer2 with "bin/hiveserver2" do the
+following:
 
 start Beeline with "bin/beeline",
 

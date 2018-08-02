@@ -1,18 +1,24 @@
 ## Kafka
 
+Kafka is a distributed streaming platform. It sends data between programs using a publish-subscribe
+mechanism. 
+
+
 ### Introduction
 
 http://kafka.apache.org/intro
 
-Distributed streaming platform.
 Kafka is run as a cluster; stores streams of "records" in categories called "topics".
 
 Producer: publish records to topics.
 Consumer: subscribe to topics and process streams of records.
-Streams: application as a stream processor; take input stream from topic and transform into an output stream which outputs to a topic.
+Streams: application as a stream processor; take input stream from topic and transform into an output
+stream which outputs to a topic.
 Connector: connect topics to existing systems.
 
-Topic: category/feed to which records are published; a partitioned log; partition is a sequence of records; has a retention policy;   
+Topic: category/feed to which records are published; a partitioned log; partition is a sequence of records;
+has a retention policy;   
+
 
 ### Quickstart
 
@@ -22,29 +28,30 @@ Operations is detail: http://kafka.apache.org/documentation/#operations
 Steps:
 Download: wget http://ftp.carnet.hr/misc/apache/kafka/1.1.0/kafka_2.11-1.1.0.tgz
 
-Start Servers: ZooKeeper: bin/zookeeper-server-start.sh config/zookeeper.properties
-               Kafka: bin/kafka-server-start.sh config/server.properties
+Start Servers: ZooKeeper: bin/zookeeper-server-start.sh config/zookeeper.properties;
+               Kafka: bin/kafka-server-start.sh config/server.properties;
 Each one has some properties and a start script.
 You have to install Java before either will start.
 
 Create topic: list: bin/kafka-topics.sh --list --zookeeper localhost:2181;
-              [script_name] [command] [invoke_zookeeper] [host:port_of_broker]
-              create: bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
-              [script_name] [command] [invoke_zookeeper] [host:port_of_broker] [replication] [partitioning] [topic_name]
+              [script_name] [command] [invoke_zookeeper] [host:port_of_broker];
+              create: bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test;
+              [script_name] [command] [invoke_zookeeper] [host:port_of_broker] [replication] [partitioning] [topic_name];
 
-Send message: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
-              [script_name] [command] TODO
+Send message: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test;
+              [script_name] [command] TODO;
 
-Start consumer: bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
-                [script_name] [command] [bootstrap_server_to_connect] [topic_name] [begin_reading_from/offset]
+Start consumer: bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning;
+                [script_name] [command] [bootstrap_server_to_connect] [topic_name] [begin_reading_from/offset];
 
-Set up broker cluster: TODO
+Set up broker cluster: TODO;
 
-Connect to import/export data: import/export data from and to Kafka; runs connectors
-                               bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties config/connect-file-sink.properties
-                               [script_name] [connect_config] [connector_one_config] [connector_two_config]
-                               above is mearly an example of two connectors, one reading afile, another outputting to a file
-                               config files determine how they are going to behave
+Connect to import/export data: import/export data from and to Kafka; runs connectors;
+                               bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties config/connect-file-sink.properties;
+                               [script_name] [connect_config] [connector_one_config] [connector_two_config];
+                               above is merely an example of two connectors, one reading a file, another
+                               outputting to a file;
+                               config files determine how they are going to behave;
 
 Process data: TODO
 

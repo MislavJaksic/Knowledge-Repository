@@ -1,6 +1,7 @@
 ## Hadoop
 
-Apache Hadoop is a framework for distributed computing. It stored data, executes operations and gathers results from multiple remote computers.
+Apache Hadoop is a framework for distributed computing. It stored data, executes operations and gathers results
+from multiple remote computers.
 
 ### Installation
 
@@ -257,6 +258,4 @@ Test four: try to access Hadoop and its clusters by visiting "http://localhost:5
 After running both "start-dfs.sh" and "start-yarn.sh" you should do the following:
 execute "bin/hadoop fs -ls /",
 visit http://localhost:50070/,
-visit http://localhost:8088/,
-
-
+visit http://localhost:8088/.

@@ -1,6 +1,6 @@
 ## Hive Streaming
 
-Allows data to be appended continously into Hive.
+Allows data to be appended continuously into Hive.
 
 
 ### Configuration
