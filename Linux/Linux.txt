@@ -5,24 +5,36 @@ FER class: https://www.fer.unizg.hr/predmet/okosl/materijali
 
 ### Tips and Tricks
 
-Tips and tricks:
-Paste text with Shift+Insert.
-Use Tab to automatically complete words.
-Use sudo -i on Ubuntu to gain admin access.
-Use ps to show which processes are running.
-Use kill to shutdown a process.
+Commands:
+* paste text with Shift+Insert
+* Tab to automatically complete words
+* "sudo -i" on Ubuntu to gain admin access
+* "ps" to show which processes are running
+* "kill" to shutdown a process
 
-_script_name.sh signifies a script.
-Install _program_name.tar.gz software with "tar -xzvf _program_name.tar.gz".
+Running and installing software:
+* _script_name.sh is a script
+* install _program_name.tar.gz software with "tar -xzvf _program_name.tar.gz"
 
-Absolute paths begins with / and relative paths don't.
-.. is the parent directory, . is the current directory.
-Hidden directories are prefixed with a dot (.).
+Paths and files:
+* absolute paths begins with / and relative paths don't
+* .. is the parent directory, . is the current directory
+* hidden directories are prefixed with a dot (.)
+* by convention, put personal non-binary files into /opt 
 
-Set PATH in /etc/environment or, even better, .bashrc located in root.
+PATH and network:
+* set PATH in /etc/environment or, even better, .bashrc located in root
+* set DNS resolution in /etc/hosts so you can use names instead of numbers
+* "scp [-P _port] _file_name _username@_hostname_OR_IP:/opt/_filename" to transfer files to the remote host (including Docker)
+* often used ports are 22 and 2222
+* "ifconfig" to look up IPs and other network interface information
+* "netstat" to look up network statistics
+* "ip addr", "ip link", "ip -s" supercede "ifconfig"
+* "ip -s", "ss", "ip route" sepercede "netstat"
 
-Search in nano with CTRL+W.
-The program scite is an alternative to Notepad++ on Linux.
+Editing:
+* search in nano with CTRL+W
+* scite is an alternative to Notepad++ on Linux
 
 
 ### Chapter 1

@@ -1,6 +1,7 @@
 ## Virtual machines
 
-A virtual machine is an operating system running in an existing operating system on the host machine's hardware .
+A virtual machine is an operating system running in an existing operating system on the host machine's hardware.
+Virtual machines abstract hardware unlike containerisation software which abstracts the operating system.
 
 
 ### Virtualisation software
