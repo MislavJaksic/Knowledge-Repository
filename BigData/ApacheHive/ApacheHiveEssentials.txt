@@ -2,9 +2,11 @@
 
 Apache Hive Essentials is a book written by Dayong Du.
 
+
 ### Overview of Big Data and Hive
 
 TODO
+
 
 ### Setting up the Hive Environment
 
@@ -22,6 +24,7 @@ You can use an IDE.
 
 Note: don't forget to activate Apache Hive using start-dfs.sh script
 Note: you can stop Hive using stop-dfs.sh
+
 
 ### Data Definition and Description
 
@@ -44,6 +47,7 @@ Partition: scan only part of the table; faster queries.
 Buckets: cluster databases; better performance.
 
 View: logical structure; simplify queries.
+
 
 ### Data Selection and Scope
 

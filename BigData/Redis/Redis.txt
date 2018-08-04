@@ -6,6 +6,7 @@ Features: NoSQL DB also known as key-value store
 
 All keys must be unique.
 
+
 ### Commands
 
 SET server:name "fido" // -> value: fido; key: server:name

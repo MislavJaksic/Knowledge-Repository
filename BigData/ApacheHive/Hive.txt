@@ -1,5 +1,8 @@
 ## Hive
 
+Apache Hive is a data warehouse built on top of Apache Hadoop.
+
+
 ### Installation
 
 https://cwiki.apache.org/confluence/display/Hive/AdminManual+Installation

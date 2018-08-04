@@ -2,6 +2,7 @@ Tutorials: https://hortonworks.com/tutorials/
 
 ## Develop with Hadoop - Hello World
 
+
 ### Learning the Ropes of the HDP Sandbox
 
 https://hortonworks.com/tutorial/learning-the-ropes-of-the-hortonworks-sandbox/
@@ -28,10 +29,12 @@ Example: scp -P 2222 root@<something-something>:<sandbox_directory_file> <local_
 Sandbox Welcome Page: <something-something>:8888 (NOT WORKING)
 
 Explore Ambari: <something-something>:8080
-                
+         
+       
 ### Hadoop Tutorial – Getting Started with HDP
 
 https://hortonworks.com/tutorial/hadoop-tutorial-getting-started-with-hdp/
+
 
 #### Concepts
 
@@ -60,12 +63,14 @@ Hive View 2.0: next to login credentials, in a dropdown box, "Hive View 2.0"; si
 Pig: simplify MapReduce scripts using Pig Latin language; for script data processing.
 Pig View: next to login credentials, in a dropdown box, "Pig View"; simple GUI.
 
+
 #### Loading (Sensor) Data into HDFS
 
 Open Files View.
 Go to /user/<someone>, for example /user/maria_dev.
 Create a new folder and upload the files there.
 Select folder and change Write permissions to solid BLUE.
+
 
 #### Hive - Data ETL (Extract, Transform, Load)
 
@@ -85,6 +90,7 @@ You can write queries in the Query Tab.
 TEZ View: view DAGs (Directed Acyclic Graph); for troubleshooting results.
 
 Possible to create a table from SELECT. CTAS (Create Table As Select).
+
 
 #### Pig - Risk Factor
 
@@ -114,6 +120,7 @@ To get our final result, we join by the driverid the count of events in e with t
 Now it is real simple to calculate the risk factor by dividing the miles driven by the number of events
 Note: add -useHCatalog to the argument box; that way Pig will load the proper libraries
 ```
+
 
 #### Spark - Risk Factor (With Zeppelin Notebook)
 
@@ -152,6 +159,7 @@ hiveContext.sql("create table riskfactor as select * from finalresults").toDF() 
 
 Note: Spark can be used from the shell. Connect to the Docker/VirtualBox and type spark-shell.
 
+
 #### Data Reporting With Zeppelin
 
 Neat way to visualize data.
@@ -161,10 +169,10 @@ SELECT * FROM riskfactor
 
 Then play with the settings.
 
+
 #### Data Reporting with Microsoft Excel for Windows
 
 TODO
-
 
 
 ### How to Process Data with Apache Hive
@@ -210,6 +218,7 @@ SELECT d.driverId, d.name, t.total_hours, t.total_miles from drivers d
 JOIN (SELECT driverId, sum(hours_logged)total_hours, sum(miles_logged)total_miles FROM timesheet GROUP BY driverId ) t
 ON (d.driverId = t.driverId); //-> create final table
 
+
 ### How to Process Data with Apache Pig
 
 https://hortonworks.com/tutorial/how-to-process-data-with-apache-pig/
@@ -218,11 +227,13 @@ Scripting language for Apache Hadoop. Data analysis as data flow.
 
 TODO
 
+
 ### Interactive Query for Hadoop with Apache Hive on Apache Tez
 
 https://hortonworks.com/tutorial/interactive-query-for-hadoop-with-apache-hive-on-apache-tez/
 
 TODO
+
 
 ### Interactive SQL on Hadoop with Hive LLAP
 
@@ -231,6 +242,7 @@ https://hortonworks.com/tutorial/interactive-sql-on-hadoop-with-hive-llap/
 Hive LLAP is an interactive query tool.
 
 TODO
+
 
 ### Loading and Querying Data with Hadoop
 
@@ -242,6 +254,7 @@ FROM omniturelogs // -> EXECUTION TAKES A LONG TIME
 
 CREATE TABLE webloganalytics as ... // -> create final table
 
+
 ### Using Hive ACID Transactions to Insert, Update and Delete Data
 
 https://hortonworks.com/tutorial/using-hive-acid-transactions-to-insert-update-and-delete-data/
@@ -250,7 +263,9 @@ Enable ACID Operations in the Config.
 
 TODO
 
+
 ### Manage Files on HDFS via Cli/Ambari Files View
+
 
 #### Manage Files on HDFS with the Command Line
 

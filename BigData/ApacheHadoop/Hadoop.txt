@@ -3,6 +3,7 @@
 Apache Hadoop is a framework for distributed computing. It stored data, executes operations and gathers results
 from multiple remote computers.
 
+
 ### Installation
 
 http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/SingleCluster.html
