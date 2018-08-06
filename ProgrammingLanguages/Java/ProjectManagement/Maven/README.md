@@ -2,7 +2,6 @@
 
 Maven is a Java project management tool. It allows authors to easily publish their work and allows users to automatically fetch all the dependencies.
 
-
 ### Installation
 
 Download Maven. Unpack with "tar xzvf apache-maven-x.y.z-bin.tar.gz".
@@ -10,7 +9,6 @@ Add "export PATH=/your/path/to/apache-maven-x.y.z/bin:$PATH" to .bashrc.
 Set JAVA_HOME if it isn't already with "export JAVA_HOME=/your/path/to/java/jdk-x.y.z" to .bashrc.
 JRE will not do! Use a JDK.
 Test with "mvn -v".
-
 
 ### Short introduction into Maven
 
@@ -32,7 +30,6 @@ This will create a directory "my-app". In it, there are "src" and "pom.xml" file
 
 By executing a phase "mvn package", Maven will complete all phases up to and including the one specified.
 
-
 ### Introduction to Maven
 
 https://maven.apache.org/guides/getting-started/index.html
@@ -51,7 +48,6 @@ Archetype is a project template.
 * description - project description
 
 TODO
-
 
 ### Maven plugins
 

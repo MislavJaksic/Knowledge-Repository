@@ -1,4 +1,4 @@
-// Class name and <file_name>.java have to match
+// Class name and _file_name.java have to match
 public class SimpleProgram
 {
 	public static void main(String[] args)
