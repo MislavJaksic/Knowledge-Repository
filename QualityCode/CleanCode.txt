@@ -75,7 +75,7 @@ functions as described in the Law of Demeter.
 
 Abstract data through an interface; do not allow other function to know how you store your data.
 Data structures expose data and have no functions.
-Object hide data and expose it through functions.
+Objects hide data and expose it through functions.
 Data structures and objects are polar opposites.
 Procedural code makes adding functionality easy; OO code makes adding new classes (data) easy.
 Procedural code makes adding new data structures hard; OO code makes adding new functions hard.
