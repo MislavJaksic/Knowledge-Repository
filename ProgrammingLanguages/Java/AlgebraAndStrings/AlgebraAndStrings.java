@@ -1,23 +1,25 @@
+import java.lang.String;
 import java.lang.StringBuilder;
 
 public class AlgebraAndStrings
 {
 	public static void main(String[] args)
 	{
-		//Primitive data types; have wrappers; size in bytes; says what it stores
-		//Declare data type and assign data
+		//Primitive data types
 		//Declarations can only be made once
-		byte SizeOneInt = 5;
-		short SizeTwoInt = 49;
-		int SizeFourInt = 4231;
-		long SizeEightInt = 97643182;
+		byte eight_bit_int = 127;
+		short sixteen_bit_int = 32767;
+		int thirtytwo_bit_int = 999999;
+		long sixtyfour_bit_int = 9999999L;
+    float thirtytwo_bit_float = 345.45f;
+		double sixtyfour_bit_float = 54.6477885544;
 		
-		char SizeTwoChar = 'M'; //-> has to be single quotes
-		
-		boolean Logical = true;
-		
-		float SizeFourDecimal = 345.45f; //-> must have f at the end
-		double SizeEightDecimal = 54.6477885544;
+		char sixteen_bit_char = 'M'; //-> has to be single quotes
+		boolean logic_value = true;
+    int null_value = null;
+    String string = "Hello\n"; //-> immutable
+    
+    //Operators: + - * / %, == || &&, instanceof
 		
 		//Wrappers provide methods to primitive types
 		//Wrappers are immutable objects
