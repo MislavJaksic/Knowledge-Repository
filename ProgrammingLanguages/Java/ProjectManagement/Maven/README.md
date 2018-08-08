@@ -19,7 +19,6 @@ Artifact is just another word for project name.
 
 Maven Central Repository is a public .jar warehouse where the dependencies dwell.
 
-
 https://maven.apache.org/users/index.html
 
 Create a directory and execute the following: "mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false".
@@ -48,6 +47,50 @@ Archetype is a project template.
 * description - project description
 
 TODO
+
+### Maven pom.xml
+
+Add the first plugin if you want to run the project with "mvn exec:java".
+Add the second plugin to force the correct Java version. 
+```
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.2.1</version>
+            <configuration>
+                <mainClass>MAIN_CLASS</mainClass>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.7.0</version>
+            <configuration>
+                <source>DESIRED_JAVA_VERSION</source>
+                <target>DESIRED_JAVA_VERSION</target>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+```
+
+Add to package the project into a specific format. 
+```
+<packaging>jar</packaging>
+```
+
+Add dependencies for each external API.
+```
+<dependencies>
+    <dependency>
+        <groupId>GET_FROM</groupId>
+        <artifactId>MAVEN</artifactId>
+        <version>CENTRAL_REPOSITORY</version>
+    </dependency>
+</dependencies>
+```
 
 ### Maven plugins
 
