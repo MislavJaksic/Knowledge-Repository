@@ -55,6 +55,10 @@ Connect to import/export data: import/export data from and to Kafka; runs connec
 
 Process data: TODO
 
+### Kafka Custom Consumer
+
+Configuration: http://kafka.apache.org/documentation/#consumerconfigs
+
 
 ### Kafka Connect
 
