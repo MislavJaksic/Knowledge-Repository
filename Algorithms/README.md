@@ -1,14 +1,14 @@
 ## Algorithms
 
-An algorithm is a set of instructions. Its as simple as that. The algorithms are divided into folders by category
+An algorithm is a set of instructions. Its as simple as that. Algorithms are divided into folders by category
 and given names based on what they do or how they behave. There are search algorithms, sorting algorithms and
 many others. Algorithms in this folder are written is Java, but before they were compiled they were constructed
-and tested on a piece of paper.
+and checked on a piece of paper.
 
 ### Search algorithms
 
 Search algorithms find data in data structures, very often lists, but they could also be trees or some other
-structures. There are two main search algorithms: linear search and binary search.
+structure. There are two main search algorithms: linear search and binary search.
 
 ### Sorting algorithms
 
