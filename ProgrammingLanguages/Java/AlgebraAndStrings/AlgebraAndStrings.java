@@ -1,10 +1,9 @@
 import java.lang.String;
 import java.lang.StringBuilder;
 
-public class AlgebraAndStrings
-{
-	public static void main(String[] args)
-	{
+public class AlgebraAndStrings {
+  
+	public static void main(String[] args) {
 		//Primitive data types
 		//Declarations can only be made once
 		byte eight_bit_int = 127;
@@ -20,6 +19,9 @@ public class AlgebraAndStrings
     String string = "Hello\n"; //-> immutable
     
     //Operators: + - * / %, == || &&, instanceof
+    
+    //Expressions - made of variables, operators and method invocations; evaluate to a single value
+    //Statements - expression statements, declaration statements and control flow statements
 		
 		//Wrappers provide methods to primitive types
 		//Wrappers are immutable objects

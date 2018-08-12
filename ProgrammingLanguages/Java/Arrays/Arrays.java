@@ -3,10 +3,8 @@ https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html
 //https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
 import java.util.ArrayList;
 
-public class Arrays
-{
-	public static void main(String[] args)
-	{
+public class Arrays {
+	public static void main(String[] args) {
 		int n = 10;
 		//Declare an array of unknown size that will hold doubles
     //Once decided, the array size cannot be changed
@@ -14,8 +12,7 @@ public class Arrays
     //Initialise an array by assigning a value to each element
 		//a = {0.0, 0.0, 0.0} //-> cannot do that!
     slow = new double[n];
-		for (double member : slow)
-		{
+		for (double member : slow) {
 			member = 0.0;
 		}
     System.out.println(slow[4]); //-> 0.0

@@ -45,7 +45,7 @@ If you get an error, see below.
   <!-- ... solution ends -->
 ´´´
 
-Instead of using HiveCLI which is depricated, you can use Beeline and HiveServer2.
+Instead of using HiveCLI which is deprecated, you can use Beeline and HiveServer2.
 
 https://cwiki.apache.org/confluence/display/Hive/Setting+Up+HiveServer2
 
@@ -121,34 +121,30 @@ Don't forget to run start-dfs.sh, also known as Hadoop, first.
 Test using bin/hive in the /path/to/your/hive folder.
 
 
-### Hive Streaming
+### Hive partitions
 
-https://cwiki.apache.org/confluence/display/Hive/Streaming+Data+Ingest
-https://community.hortonworks.com/articles/49949/test-7.html
+You should think of partitions as folders. These values are not part of any row, but they can be used for analasys.
 
-hive-site.xml
-
-hive.txn.manager                = org.apache.hadoop.hive.ql.lockmgr.DbTxnManager
-hive.compactor.initiator.on     = true
-hive.compactor.worker.threads   = 1 (greater then 0)
-
-hive.support.concurrency        = true
-hive.enforce.bucketing          = true
-hive.exec.dynamic.partition.mode= nonstrict
-hive.txn.timeout                = 300
-
-Table has to be "store as orc" and "transactional"="true" and must be bucketed but not sorted and users
-need to have special permissions.
 Example:
- CREATE TABLE alarms (stamp TIMESTAMP, state STRING, status_code STRING, down TINYINT, type STRING, info STRING)
- CLUSTERED BY(stamp) INTO 10 BUCKETS
- STORED AS ORC
- tblproperties("transactional"="true");
+´´´
+CREATE TABLE alarms (stamp TIMESTAMP, state STRING, status_code STRING, is_up TINYINT, alarm_type STRING, info STRING)
+PARTITIONED BY (data_name STRING, year STRING, month STRING, ip STRING)
+CLUSTERED BY(status_code) INTO 4 BUCKETS
+STORED AS ORC;
+´´´
+
+With Hive 3.0.0 you can dynamically partition data while streaming. (Source: https://cwiki.apache.org/confluence/display/Hive/Streaming+Data+Ingest+V2#HiveStreamingConnection)
+You can also partition data dynamically by selecting and then inserting it into a partitioned table. (Source: https://cwiki.apache.org/confluence/display/Hive/DynamicPartitions)
+
+Example:
+´´´
+INSERT OVERWRITE TABLE alarms PARTITION (data_name = "alarms_raw", year, month, ip)
+SELECT stamp, state, status_code, is_up, alarm_type, info, year, month, ip FROM unpartitioned_alarms;
+´´´
+Note: data_name is partitioned statically; year, month and ip are partitioned dynamically.
 
 
 ### Hive test
-
-
 
 After starting Hadoop with "start-dfs.sh" and "start-yarn.sh" and HiveServer2 with "bin/hiveserver2" do the
 following:
@@ -158,3 +154,13 @@ start Beeline with "bin/beeline",
 execute "!connect jdbc:hive2://localhost:10000" or "bin/beeline -u jdbc:hive2://$HS2_HOST:$HS2_PORT" if connecting remotely,
 
 execute "!tables" and "!dbinfo".
+
+
+### Hive troubleshooting
+
+* Problem 1: Hortonworks Hive Out of Memory/VERTEX_FAILURE
+
+Example: https://community.rapidminer.com/t5/RapidMiner-Radoop-Forum/Performance-Node-Out-of-Memory-Error/m-p/35303#M72
+Possible solution: https://community.hortonworks.com/articles/14309/demystify-tez-tuning-step-by-step.html
+Possible solution: https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.3.4/bk_installing_manually_book/content/determine-hdp-memory-config.html
+
