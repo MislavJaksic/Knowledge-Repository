@@ -39,7 +39,7 @@ If .xxx is .md, the README will be interpreted as a Markdown file. You can get a
 [Hyperlink with the link at the bottom]: https://www.mozilla.org
 
 Embedded image:
-![alternative_text_for_embedded_image](https://github.com/MislavJaksic/KnowledgeRepository/tree/master/GitHub/Markdown/mozilla_logo_48.png)
+![alternative_text_for_embedded_image](https://github.com/MislavJaksic/KnowledgeRepository/blob/master/GitHub/Guides/MasteringMarkdown/mozilla_logo_48.png)
 
 > Blockquote; a thin gray strip will appear to the left of this paragraph and the text itself will be in a gray box. In addition,
 > the text should appear 4 spaces away from the left margine.
