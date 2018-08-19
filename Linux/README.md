@@ -1,53 +1,54 @@
 ## Linux
 
-Linux is a free operating system. There are many varieties of Linux, from those without a GUI to those that
-look and operate in a similar way to Windows. Many Linux operating systems are free and come with a plethora of
-free tools, such as OpenOffice instead of Microsoft Office.
+Linux is a free operating system famous for its kernel. There are [many varieties of Linux](https://distrowatch.com/). There are those that
+look like Windows to those without a graphical interface. Linux comes with a plethora of free office, system
+monitoring and programming tools, such as OpenOffice and top.
 
-Each operating system is a bit different, so take care when executing commands.
+Each Linux operating system is a bit different, so take core not to mix up installation instructions or
+command syntax.
 
-### [Distribution list](https://distrowatch.com/)
+### Linux distributions
 
 You can look up Linux distribution on the website.
 
 [Manjaro](https://manjaro.org/) - quite popular
 
-[Ubuntu](https://www.ubuntu.com/) - similar to Windows
+[Ubuntu](https://www.ubuntu.com/) - Desktop is similar to Windows; Server has no interface
+
+[CentOS](https://www.centos.org/) - useful as a server
 
 ### Installation
 
-There are different ways of installing each Linux distribution.
-They can be installed from a USB, using a DVD or using a virtualisation software.
+Linux distribution can be installed from a USB, using a DVD or using virtualisation software.
 
 ### Tips and Tricks
 
 Commands:
-* paste text with Shift+Insert
-* Tab to automatically complete words
-* "sudo -i" on Ubuntu to gain admin access
-* "ps" to show which processes are running
-* "kill" to shutdown a process
+* SHIFT+INSERT to paste
+* TAB automatically completes words
+* "sudo _command" to grant admin access to "_command"
+* "ps" list running processes
+* "kill" to quit a process
 
 Running and installing software:
-* _script_name.sh is a script
-* install _program_name.tar.gz software with "tar -xzvf _program_name.tar.gz"
+* "_script_name.sh" is a script
+* "tar -xzvf _program_name.tar.gz" will install "_program_name.tar.gz"
 
 Paths and files:
-* absolute paths begins with / and relative paths don't
-* .. is the parent directory, . is the current directory
-* hidden directories are prefixed with a dot (.)
-* by convention, put personal non-binary files into /opt 
+* absolute paths begin with "/", relative paths don't
+* ".." is the parent directory, "." is the current directory
+* hidden directories are prefixed with "."
 
 PATH and network:
-* set PATH in /etc/environment or, even better, .bashrc located in root
-* set DNS resolution in /etc/hosts so you can use names instead of numbers
-* "scp [-P _port] _file_name _username@_hostname_OR_IP:/opt/_filename" to transfer files to the remote host (including Docker)
-* often used ports are 22 and 2222
+* set PATH in "/etc/environment" or ".bashrc" located in root
+* set DNS in "/etc/hosts"
+* "scp [-P _port] _file_name _username@_hostname_OR_IP:/opt/_filename" to transfer files
+* SSH port is 22
 * "ifconfig" to look up IPs and other network interface information
-* "netstat" to look up network statistics
 * "ip addr", "ip link", "ip -s" supercede "ifconfig"
+* "netstat" to look up network statistics
 * "ip -s", "ss", "ip route" supercede "netstat"
 
 Editing:
-* search in nano with CTRL+W
+* CTRL+W to search in nano
 * scite is an alternative to Notepad++ on Linux
