@@ -3,10 +3,7 @@
 Kafka is a distributed streaming platform. It sends data between programs using a publish-subscribe
 mechanism. 
 
-
-### Introduction
-
-http://kafka.apache.org/intro
+### [Introduction](http://kafka.apache.org/intro)
 
 Kafka is run as a cluster; stores streams of "records" in categories called "topics".
 
@@ -19,54 +16,52 @@ Connector: connect topics to existing systems.
 Topic: category/feed to which records are published; a partitioned log; partition is a sequence of records;
 has a retention policy;   
 
+### [Quickstart](http://kafka.apache.org/quickstart)
 
-### Quickstart
+Both Java needs to be installed and configured.
 
-http://kafka.apache.org/quickstart
-Operations is detail: http://kafka.apache.org/documentation/#operations
+First, download and install Kafka.
 
-Steps:
-Download: wget http://ftp.carnet.hr/misc/apache/kafka/1.1.0/kafka_2.11-1.1.0.tgz
+To start Kafka start Zookeeper and Kafka:
+> ZooKeeper: bin/zookeeper-server-start.sh config/zookeeper.properties;
+> Kafka: bin/kafka-server-start.sh config/server.properties;
 
-Start Servers: ZooKeeper: bin/zookeeper-server-start.sh config/zookeeper.properties;
-               Kafka: bin/kafka-server-start.sh config/server.properties;
-Each one has some properties and a start script.
-You have to install Java before either will start.
+Topics are constructs that abstract data in Kafka.
+> List topics: bin/kafka-topics.sh --list --zookeeper localhost:2181
+> [script_name] [command] [invoke_zookeeper] [host:port_of_broker]
+> Create simple topic: bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+> [script_name] [command] [invoke_zookeeper] [host:port_of_broker] [replication] [partitioning] [topic_name]
 
-Create topic: list: bin/kafka-topics.sh --list --zookeeper localhost:2181;
-              [script_name] [command] [invoke_zookeeper] [host:port_of_broker];
-              create: bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test;
-              [script_name] [command] [invoke_zookeeper] [host:port_of_broker] [replication] [partitioning] [topic_name];
+Producers are constructs that send data to a Kafka topic.
+> Command line producer: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+> [script_name] [command] TODO
 
-Send message: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test;
-              [script_name] [command] TODO;
-
-Start consumer: bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning;
-                [script_name] [command] [bootstrap_server_to_connect] [topic_name] [begin_reading_from/offset];
+Consumers are constructs that read data from a Kakfa topic.
+> bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+> [script_name] [command] [bootstrap_server_to_connect] [topic_name] [begin_reading_from/offset]
 
 Set up broker cluster: TODO;
 
-Connect to import/export data: import/export data from and to Kafka; runs connectors;
-                               bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties config/connect-file-sink.properties;
-                               [script_name] [connect_config] [connector_one_config] [connector_two_config];
-                               above is merely an example of two connectors, one reading a file, another
-                               outputting to a file;
-                               config files determine how they are going to behave;
+Kafka Connect is a construct that import and exports data to and from Kafka.
+> Import/export connector pair: bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties config/connect-file-sink.properties
+> [script_name] [connect_config] [connector_one_config] [connector_two_config]
+> One Connector is reading and the other writing to a file.
+> Configuration files deermine how Connectors behave.
+Connect to import/export data: import/export data from and to Kafka; runs connectors; 
 
 Process data: TODO
 
-### Kafka Custom Consumer
+[Useful Kafka operations](http://kafka.apache.org/documentation/#operations) 
 
-Configuration: http://kafka.apache.org/documentation/#consumerconfigs
+### Kafka Consumer
 
+[Kafka consumer configuration](http://kafka.apache.org/documentation/#consumerconfigs)
 
-### Kafka Connect
-
-http://kafka.apache.org/documentation.html#connect
+### [Kafka Connect](http://kafka.apache.org/documentation.html#connect)
 
 bin/connect-standalone.sh config/connect-standalone.properties [connector1.properties] ...
 
-connect-standalone.properties is for worker configuration. Some configs are mandatory.
+connect-standalone.properties stores worker configuration. Some configs are mandatory.
 * bootstrap.servers: list of Kafka brokers (servers)
 * key.converter: class converts between Connect format and serialized form that Kafka accepts
 * value.converter: class converts between Connect format and serialized form that Kafka accepts
@@ -104,6 +99,7 @@ Connector config for transformations:
 * transforms.$alias.$transformationSpecificConfig: config for transformations
 
 Example:
+```
 name=local-file-source
 connector.class=FileStreamSource
 tasks.max=1
@@ -116,15 +112,10 @@ transforms.InsertSource.type=org.apache.kafka.connect.transforms.InsertField$Val
 transforms.InsertSource.static.field=data_source // -> field name
 transforms.InsertSource.static.value=test-file-source // -> field value
 
-Transforms:
-"foo"
-"bar"
-"hello world"
-
-... into:
-{"line":"foo","data_source":"test-file-source"}
-{"line":"bar","data_source":"test-file-source"}
-{"line":"hello world","data_source":"test-file-source"}
+"foo" becomes {"line":"foo","data_source":"test-file-source"}
+"bar" becomes {"line":"bar","data_source":"test-file-source"}
+"hello world" becomes {"line":"hello world","data_source":"test-file-source"}
+```
 
 ... TODO
 

@@ -4,7 +4,7 @@ Apache Hive is a data warehouse built on top of Apache Hadoop.
 
 ### [Installation](https://cwiki.apache.org/confluence/display/Hive/AdminManual+Installation)
 
-Both Java and Hadoop need to be installed and ocnfigured.
+Both Java and Hadoop need to be installed and configured.
 
 Download Hive. Unpack with "tar -xzvf hive-x.y.z.tar.gz".
 

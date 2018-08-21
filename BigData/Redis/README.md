@@ -1,11 +1,8 @@
-##Redis
+## [Redis](https://redis.io/)
 
-Website: https://redis.io/
-
-Features: NoSQL DB also known as key-value store
+A NoSQL DB, a key-value store.
 
 All keys must be unique.
-
 
 ### Commands
 
@@ -36,7 +33,7 @@ SMEMBERS superpowers // -> return all members of a set
 SUNION superpower birdpower // -> combine sets without duplicates and returns a list
 
 //Ordered sets
-// Each entry has a value and a score by with it will sort
+//  Each entry has a value and a score by with it will sort
 
 //Hashes
 HSET user:1000 name "John Smith" // -> map between string field and value 

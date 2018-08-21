@@ -2,7 +2,6 @@
 
 Kafka Definitive Guide in a book written by Narkhede, Shapira and Palino.
 
-
 ### Meet Kafka
 
 A system of transferring data between applications.
@@ -49,7 +48,6 @@ Stream processing:
 
 TODO
 
-
 ### Kafka Producers: Writing Messages to Kafka
 
 Producers write to Kafka, Consumers read from Kafka and applications do both.
@@ -59,7 +57,6 @@ Producer mandatory properties:
 * value.serializer: class that will serialize values.
 
 TODO
-
 
 ### Building Data Pipelines
 
