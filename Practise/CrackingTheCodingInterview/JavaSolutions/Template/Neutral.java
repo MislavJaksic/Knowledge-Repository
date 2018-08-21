@@ -1,5 +1,5 @@
 /**
-	Problems: ""
+	Problem: ""
 	Discussion:
 	*/
 public class Neutral
