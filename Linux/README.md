@@ -29,8 +29,10 @@ Commands:
 * "sudo _command" to grant admin access to "_command"
 * "ps" list running processes
 * "kill" to quit a process
+* "find / -iname '*_file_name*' -path '*_path_to_file_name*' > _output_file" for searching
+* "bash _script_name.sh" runs a script
 
-Running and installing software:
+Installing software:
 * "_script_name.sh" is a script
 * "tar -xzvf _program_name.tar.gz" will install "_program_name.tar.gz"
 
