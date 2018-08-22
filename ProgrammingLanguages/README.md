@@ -1,11 +1,11 @@
-## Programming Languages
+## Programming languages
 
-The Programming Languages is subdivided into folders by languages and then each leanguage folder is further
-subdivided based on the topic that a program in them demostrates. All programs are designed to introduce the
-reader to the language's syntax which is why all language folders share a common folder substructure.
+Languages are subdivided into folders and then they are further subdevided by topic. Topics range from how to setup
+a language to constructs such as lambda expressions. Each folder has a simple program designed to teach the
+reader.
 
-### Common language statement structure
+### Program structure
 
-It is as follows:
-<explanation_of_the_statement_below>
-<programming_language_statement> <single_comment_sign> -> <result_of_statement_execution>
+The programs are all structured in the same way:
+> _comment_explaining_the_expression_or_statement
+> _expression_or_statement _single_comment_sign -> _result
