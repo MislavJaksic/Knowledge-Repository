@@ -34,8 +34,9 @@ A streaming table has to be:
 
 Example:
 ´´´
-CREATE TABLE alarms (stamp TIMESTAMP, state STRING, status_code STRING, down TINYINT, type STRING, info STRING)
-CLUSTERED BY(status_code) INTO 4 BUCKETS
+CREATE TABLE alarms_raw (stamp TIMESTAMP, state STRING, state_code STRING, status TINYINT, alarm_type STRING, info STRING)
+PARTITIONED BY (year STRING, month STRING, ip STRING)
+CLUSTERED BY(state) INTO 4 BUCKETS
 STORED AS ORC
 tblproperties("transactional"="true");
 ´´´
