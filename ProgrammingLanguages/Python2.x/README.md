@@ -7,17 +7,17 @@ has thousands of well documented libraries.
 
 ### Python specific folders
 
-- Decorators: a function that intercepts another function; used for caching results and returning the cache
+* Decorators: a function that intercepts another function; used for caching results and returning the cache
 instead of executing a costly function
 
-- Generators: distinguished by a yield keyword upon whose execution the generator stops and then later resumes
+* Generators: distinguished by a yield keyword upon whose execution the generator stops and then later resumes
 from that point when invoked again; behaves like an iterable object such as a list
 
-- LambdaFunctions: also known as anonymous functions, they are a single expression that could be written in a
+* LambdaFunctions: also known as anonymous functions, they are a single expression that could be written in a
 return statement
 
-- ListComprehension: a concise (one line) way to make a list in Python
+* ListComprehension: a concise (one line) way to make a list in Python
 
-- ExcellentLibraries: Python is well know for its excellent libraries. Consult this small list before developing your own
+* ExcellentLibraries: Python is well know for its excellent libraries. Consult this small list before developing your own
 
-- Frameworks: they make abstractions easy. Use them if you intend to do exactly what you want you to do
+* Frameworks: they make abstractions easy. Use them if you intend to do exactly what you want you to do
