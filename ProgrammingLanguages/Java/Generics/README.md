@@ -1,14 +1,15 @@
 ## Java generics
 
-A generic is a data type, but written as if it was a parameter. Interfaces, classes and methods can be generic
-(parameterised). There can be more then one generic at the same time. Arrays cannot have generic types.
+Generics are similar to data types. They allow you to specify what is stored in a data structure. Interfaces,
+classes and methods can be generic (parameterised). There can be more then one generic at the same time. Arrays
+cannot have generic types.
 
 ### Generic classes
 
-Generic classes are marked by <T>, where T stands for any non primitive data type. When you crate an object
-from a generic class you have to specifiy a data type that will replace the parameter T. Object data have
-replaced the generic data type with different data types are not the same.
-Static attributes and methods annot share the same generic as the class.
+Generic classes are marked with a <T>. <T> is a type parameter. <T> has to be replaced at invocation with an
+actual type argument. <T> can be replaced by any data type that is not a primitive.
+
+Static attributes and methods cannot share the same generic as the class.
 
 ### Generic methods
 
@@ -23,3 +24,12 @@ Arguments can hold references to generic, parameterised classes.
 ### Bounded types
 
 It is possible to restrict which data types can replace the generic.
+
+### Type parameter naming convention
+
+E - Element (used extensively by the Java Collections Framework)
+K - Key
+N - Number
+T - Type
+V - Value
+S,U,V,... - 2nd, 3rd, 4th, ...
