@@ -1,7 +1,7 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.ArrayList; //-> these are implementations
+import java.util.LinkedList; //-> there are also more abstract interfaces:
+import java.util.HashMap; //-> List, Map, Set
+import java.util.HashSet; //-> use the interface when returning a structure to hide its implementation
 
 public class DataStructures {
 

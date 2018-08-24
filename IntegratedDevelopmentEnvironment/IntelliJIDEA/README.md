@@ -65,6 +65,13 @@ SHIFT+F1: view external documentation.
 
 CTRL+SHIFT+NumPad-/+: collapse/uncollapse all.
 
+### IntelliJ plugins
+
+If you want to install a plugin, download it from [JetBrains](https://plugins.jetbrains.com/).
+
+Go to "Settings" (CTRL + ALT + S) and got to the "Plugins" tab.
+Click on "Install plugin from disk..." and choose a plugin you want to install.
+
 ### Maven project
 
 ##### Create a project
