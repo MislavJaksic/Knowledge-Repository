@@ -23,8 +23,8 @@ Both Java needs to be installed and configured.
 First, download and install Kafka.
 
 To start Kafka start Zookeeper and Kafka:
-> ZooKeeper: bin/zookeeper-server-start.sh config/zookeeper.properties;
-> Kafka: bin/kafka-server-start.sh config/server.properties;
+> ZooKeeper: bin/zookeeper-server-start.sh config/zookeeper.properties
+> Kafka: bin/kafka-server-start.sh config/server.properties
 
 Topics are constructs that abstract data in Kafka.
 > List topics: bin/kafka-topics.sh --list --zookeeper localhost:2181

@@ -1,6 +1,9 @@
-## Apache Spark
+## [Apache Spark](https://spark.apache.org/docs/latest/index.html)
 
-Apache Spark allows a computation to be performed across many different computers at the same time. It
+Apache Spark performs computations in a computing cluster. It has a rich API including Spark SQL, MLlib,
+GraphX and Spark streaming.
+
+ to be performed across many different computers at the same time. It
 abstracts a dataset by creating a Resilient Distributed Dataset (RDD) and allows the user to apply functions
 and transformations to it. It also abstracts the computer cluster through the Spark Context.
 
