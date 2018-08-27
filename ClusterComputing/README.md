@@ -3,9 +3,33 @@
 Apache Spark performs computations in a computing cluster. It has a rich API including Spark SQL, MLlib,
 GraphX and Spark streaming.
 
- to be performed across many different computers at the same time. It
-abstracts a dataset by creating a Resilient Distributed Dataset (RDD) and allows the user to apply functions
-and transformations to it. It also abstracts the computer cluster through the Spark Context.
+### [Quick start](https://spark.apache.org/docs/latest/quick-start.html)
+
+Simple Maven application:
+```
+import org.apache.spark.sql.SparkSession;
+import org.apache.spark.sql.Dataset;
+
+public class SimpleApp {
+  public static void main(String[] args) {
+    String file = "_some_file.md"; // Should be some file on your system
+    SparkSession spark = SparkSession.builder().appName("Simple Application").getOrCreate();
+    Dataset<String> file_data = spark.read().textFile(file).cache(); //load data
+
+    long numAs = file_data.filter(s -> s.contains("a")).count(); //filter with predicate function then count
+    long numBs = file_data.filter(s -> s.contains("b")).count();
+    
+    spark.stop();
+  }
+}
+```
+
+Package it using Maven (mvn package) and then execute the program using:
+* "/path/to/spark/bin/spark-submit --class "SimpleApp" --master local[4] target/simple-project-1.0.jar"
+
+### [RDD Programming Guide](https://spark.apache.org/docs/latest/rdd-programming-guide.html)
+
+
 
 ### [Spark Streaming](https://spark.apache.org/docs/latest/streaming-programming-guide.html)
 
