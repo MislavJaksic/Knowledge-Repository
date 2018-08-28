@@ -5,6 +5,10 @@ GraphX and Spark streaming.
 
 ### [Quick start](https://spark.apache.org/docs/latest/quick-start.html)
 
+#### Interactive Analysis with the Spark Shell
+
+#### Self-Contained Applications
+
 Simple Maven application:
 ```
 import org.apache.spark.sql.SparkSession;
@@ -22,14 +26,54 @@ public class SimpleApp {
     spark.stop();
   }
 }
+// you also need to set Maven dependencies: spark-sql_VERSION
 ```
-
 Package it using Maven (mvn package) and then execute the program using:
 * "/path/to/spark/bin/spark-submit --class "SimpleApp" --master local[4] target/simple-project-1.0.jar"
 
 ### [RDD Programming Guide](https://spark.apache.org/docs/latest/rdd-programming-guide.html)
 
+RDD (Resilient Distributed Datasets) are data that can be operated on in parallel. They can be created in
+diferent ways.
+* .parallelize(_collection)
+* or from an external data source
 
+RDD operations are divided based on how they act:
+transformations are lazy and are stored instead on being computed right away,
+actions cause all transformations to be executed and then they return values.
+
+You can often pass a function to Spark using lambda expressions or inner classes that implement the Function
+interface.
+
+[Local vs cluster mode](https://spark.apache.org/docs/latest/rdd-programming-guide.html#local-vs-cluster-modes) is a cautionary tale of what happens when you try to execute a local function where
+the normal rules of closure apply in a distributed environment which has its own rules.
+
+Some RDD operations can only be performed on datasets that are made of key-value pairs.
+
+The list of transformations is quite big, but some of the most commo nones are:
+* map - pass each element through a function
+* filter - return only those elements that satisfy a boolean function
+* flatMap - pass each element through a function and return anywhere from 0-n elements
+* mapPartitions - pass each RDD partition (block) through a function ([can reduce overhead](https://stackoverflow.com/questions/33655920/when-to-use-mapparitions-and-mappartitionswithindex))
+* mapPartitionsWithIndex - pass each RDD partition (block) through a function where each partition will have an index
+
+* sample - return a random data sample
+
+* union - return a union of two datasets
+* intersection - return an intersection of two datasets
+* distinct - return a dataset without any duplicates
+
+* groupByKey - when given (K, V) pairs return (K, Iterable<V>) pairs
+* reduceByKey - 
+* aggreateByKey
+* sortByKey
+* join
+* cogroup
+* cartesian
+* pipe
+* coalesce
+* repartition
+* repartitionAndSortWithinPartition
 
 ### [Spark Streaming](https://spark.apache.org/docs/latest/streaming-programming-guide.html)
 
