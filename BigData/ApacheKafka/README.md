@@ -1,4 +1,4 @@
-## Kafka
+## [Kafka](https://kafka.apache.org/)
 
 Kafka is a distributed streaming platform. It sends data between programs using a publish-subscribe
 mechanism. 

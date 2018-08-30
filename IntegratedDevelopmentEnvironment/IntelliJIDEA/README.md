@@ -65,6 +65,13 @@ SHIFT+F1: view external documentation.
 
 CTRL+SHIFT+NumPad-/+: collapse/uncollapse all.
 
+### Generate JavaDocs
+
+Before you generate JavaDoc make sure your project structure is sound and that you have documented everything
+according to the [rules](https://github.com/MislavJaksic/KnowledgeRepository/tree/master/ProgrammingLanguages/Java/Documenting).
+
+Under "Tools" -> "Generate JavaDoc...".
+
 ### IntelliJ plugins
 
 If you want to install a plugin, download it from [JetBrains](https://plugins.jetbrains.com/).

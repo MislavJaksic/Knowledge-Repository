@@ -1,4 +1,4 @@
-## Hive
+## [Apache Hive](https://hive.apache.org/)
 
 Apache Hive is a data warehouse built on top of Apache Hadoop.
 
