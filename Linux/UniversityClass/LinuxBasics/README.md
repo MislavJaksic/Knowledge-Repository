@@ -302,4 +302,4 @@ iwconfig, iw - wireless configuration
 
 dhclient, dhcpcd - DHCP clients
 
-There is a Network manager which has a GUI and does not use the previously mention files.
+There is a Network manager which has a GUI and does not use the previously mentioned files.

@@ -29,8 +29,11 @@ Commands:
 * "sudo _command" to grant admin access to "_command"
 * "ps" list running processes
 * "kill" to quit a process
+* "apt/apk/yum" to install a program
 * "find / -iname '*_file_name*' -path '*_path_to_file_name*' > _output_file" for searching
 * "bash _script_name.sh" runs a script
+* "netcat -l -p _port" to create a server listening on _port
+* "uname -a"/"lsb_release -a" to print OS info
 
 Installing software:
 * "_script_name.sh" is a script
