@@ -1,16 +1,25 @@
 ## Virtual machines
 
-A VM (Virtual Machine) is an isolated guest operating system running inside a host operating system. VMs
-abstract hardware unlike software containers which abstract the operating system. VMs work in isolation from
-one another.
+VM is an isolated guest operating system running on a host operating system. VMs are isolated from one another
+and from the host OS.
+
 VMs can be easily destroyed and rebuilt which means that making mistakes in a VM is cheap.
+VMs preserve OS settings, making deployment easier.
+
+### Benefits of using a virtual machine
+
+Increases hardware utilisation.
+Allows the installation of a different OS on an existing OS.
+Bundles OS configuration and programs so they can be transported.
+Makes catastrophic errors that would normally crash an OS very easy to repair.
+Emulators can even run 64-bit instructions on 32-bit hardware.
 
 ### Virtualisation software
 
-Virtualisation software create VMs from a VM image.
-A VM image is just a copy of a VM, all of its applications, programs and settings.
-VMWare and VirtualBox are the most well known virtualisation software.
-There is also a processor emulator [QEMU](https://www.qemu.org/).
+Virtualisation software uses VM images, templates, to create VMs.
+A VM image is just a bundle of programs and OS settings which can be created from an existing VM.
+VMWare and VirtualBox are the most well known virtualisation programs.
+[QEMU](https://www.qemu.org/) is a processor emulator.
 
 ### Installation
 

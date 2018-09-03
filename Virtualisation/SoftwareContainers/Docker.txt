@@ -1,9 +1,0 @@
-## Docker
-
-Docker is a containerisation software that abstracts the operating system. That is in stark contrast to virtual machines which abstract hardware.
-
-
-### Docker commands
-
-docker cp - copy a file from the host to the Docker container
-Example: docker cp transfer_object.txt sandbox-hdp:/usr/transfer_object.txt
