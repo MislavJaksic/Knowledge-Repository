@@ -37,23 +37,24 @@ The "Config History" tab shows all the current and previous "Config Groups" chan
 ### Services
 
 The "Services" tab shows all the installed services.
-> Service marks:
-> Green check mark means "Active"
-> Black doctor's bag means "in Maintenance mode"
-> Computer icon means "Inactive"
+| Service symbol | Meaning |
+| :--- | :---: |
+| Green check mark | "Active" |
+| Black doctor's bag | "in Maintenance mode" |
+| Computer icon | "Inactive" |
 
 #### [Config](https://cwiki.apache.org/confluence/display/AMBARI/Enhanced+Configs+-+2.4.0)
 
 Configs set in Ambari override all manually set configurations.
 
-On the "Services" tab a number of services can be selected. 
-Each service has a "Summary" and "Configs" tab. (Note: some also have "Heatmaps") 
-The "Configs" tab has "Settings" and "Advanced" tabs. 
-In the "Advanced" tab a number of properties can be changed. (Note: not all properties are displayed)
+On the "Services" tab a number of services can be selected.  
+Each service has a "Summary" and "Configs" tab. (Note: some also have "Heatmaps")  
+The "Configs" tab has "Settings" and "Advanced" tabs.  
+In the "Advanced" tab a number of properties can be changed. (Note: not all properties are displayed)  
 If some properties are missing you can attempt to add them by opening one of the "Custom _conf_file" dropdowns
-and clicking "Add Property ...".
+and clicking "Add Property ...".  
 
 In addition, you can change the config group by clicking on the "Manage Config Groups". There, you can duplicate
-the current settings and then change them. When done, you can assign a host to the appropriate settings group.
+the current settings and then change them. When done, you can assign a host to the appropriate settings group.  
 
 ### [Alerts](https://cwiki.apache.org/confluence/display/AMBARI/Alerts+-+2.4.0)

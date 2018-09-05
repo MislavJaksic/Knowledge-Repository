@@ -32,6 +32,9 @@ If .xxx is .md, the README will be interpreted as a Markdown file. You can get a
     1. Ordered sublist
     2. Ordered sublist item
 
+You can break up a paragraph  
+with two spaces.
+
 [Hyperlink without tooltip](https://www.mozilla.org)
 [Hyperlink with a tooltip](https://www.mozilla.org "Mozilla Website")
 [Hyperlink with the link at the bottom]
