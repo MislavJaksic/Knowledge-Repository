@@ -26,44 +26,44 @@ In the following files add the following <elements> between <configuration> elem
 * core-site.xml
 ```
 <property>
-  <name>fs.default.name</name>
-  <value>hdfs://localhost:9000</value>
+    <name>fs.default.name</name>
+    <value>hdfs://localhost:9000</value>
 </property>
 ```
 
 * hdfs-site.xml
 ```
 <property> 
-  <name>dfs.replication</name> 
-  <value>1</value> 
+    <name>dfs.replication</name> 
+    <value>1</value> 
 </property> 
 <property> 
-  <name>dfs.name.dir</name> 
-  <value>file:///path/to/your/hadoop/hadoopinfra/hdfs/namenode </value>
+    <name>dfs.name.dir</name> 
+    <value>file:///path/to/your/hadoop/hadoopinfra/hdfs/namenode </value>
 </property> 
 <property> 
-  <name>dfs.data.dir</name>
-  <value>file:///path/to/your/hadoop/hadoopinfra/hdfs/datanode </value>
+    <name>dfs.data.dir</name>
+    <value>file:///path/to/your/hadoop/hadoopinfra/hdfs/datanode </value>
 </property>
 ```
 
 * yarn-site.xml
 ```
 <property> 
-  <name>yarn.nodemanager.aux-services</name> 
-  <value>mapreduce_shuffle</value> 
+    <name>yarn.nodemanager.aux-services</name> 
+    <value>mapreduce_shuffle</value> 
 </property>
 ```
 
 * mapred-site.xml
-Create and rename mapred-site.xml using "cp mapred-site.xml.template mapred-site.xml".
 ```
+Execute: "cp mapred-site.xml.template mapred-site.xml".
+
 <property> 
-  <name>mapreduce.framework.name</name> 
-  <value>yarn</value> 
+    <name>mapreduce.framework.name</name> 
+    <value>yarn</value> 
 </property>
 ```
-
 
 ### Test installation
 
@@ -86,8 +86,10 @@ Starting namenodes on [localhost]
 Starting secondary namenodes [0.0.0.0]
 ...
 ```
+
 If the connection is refused do the following:
-Add the following lines to "path/to/your/hadoop/etc/hadoop/hadoop-env.sh" file.
+
+add the following lines to "path/to/your/hadoop/etc/hadoop/hadoop-env.sh" file:
 ```
 # My addition to solve the refused connection problem when running start-dfs.sh
 export HADOOP_SSH_OPTS="-p 22"

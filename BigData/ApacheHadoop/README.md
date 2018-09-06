@@ -35,7 +35,7 @@ cat output/*
 
 If you want Hadoop to work in pseudo-distributed mode, do the following:
 
-Change the following files:
+In the following files add the following <elements> between <configuration> elements:
 
 * etc/hadoop/core-site.xml
 ```
@@ -92,7 +92,7 @@ When done, use "sbin/stop-dfs.sh" to stop the deamons.
 
 Additionally, you can set up YARN to work in pseudo-distributed mode.
 
-Change the following files:
+In the following files add the following <elements> between <configuration> elements:
 
 * etc/hadoop/mapred-site.xml
 ```

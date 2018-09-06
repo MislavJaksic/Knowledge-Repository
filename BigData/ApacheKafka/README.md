@@ -7,11 +7,11 @@ mechanism.
 
 Kafka is run as a cluster; stores streams of "records" in categories called "topics".
 
-Producer: publish records to topics.
-Consumer: subscribe to topics and process streams of records.
+Producer: publish records to topics.  
+Consumer: subscribe to topics and process streams of records.  
 Streams: application as a stream processor; take input stream from topic and transform into an output
-stream which outputs to a topic.
-Connector: connect topics to existing systems.
+stream which outputs to a topic.  
+Connector: connect topics to existing systems.  
 
 Topic: category/feed to which records are published; a partitioned log; partition is a sequence of records;
 has a retention policy;   
@@ -22,31 +22,41 @@ Both Java needs to be installed and configured.
 
 First, download and install Kafka.
 
-To start Kafka start Zookeeper and Kafka:
-> ZooKeeper: bin/zookeeper-server-start.sh config/zookeeper.properties
-> Kafka: bin/kafka-server-start.sh config/server.properties
+To start Kafka start Zookeeper and Kafka:  
+```
+ZooKeeper: bin/zookeeper-server-start.sh config/zookeeper.properties
+Kafka: bin/kafka-server-start.sh config/server.properties
+```
 
 Topics are constructs that abstract data in Kafka.
-> List topics: bin/kafka-topics.sh --list --zookeeper localhost:2181
-> [script_name] [command] [invoke_zookeeper] [host:port_of_broker]
-> Create simple topic: bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
-> [script_name] [command] [invoke_zookeeper] [host:port_of_broker] [replication] [partitioning] [topic_name]
+```
+List topics: bin/kafka-topics.sh --list --zookeeper localhost:2181
+[script_name] [command] [invoke_zookeeper] [host:port_of_broker]
+Create simple topic: bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+[script_name] [command] [invoke_zookeeper] [host:port_of_broker] [replication] [partitioning] [topic_name]
+```
 
 Producers are constructs that send data to a Kafka topic.
-> Command line producer: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
-> [script_name] [command] TODO
+```
+Command line producer: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+[script_name] [command] TODO
+```
 
 Consumers are constructs that read data from a Kakfa topic.
-> bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
-> [script_name] [command] [bootstrap_server_to_connect] [topic_name] [begin_reading_from/offset]
+```
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+[script_name] [command] [bootstrap_server_to_connect] [topic_name] [begin_reading_from/offset]
+```
 
 Set up broker cluster: TODO;
 
 Kafka Connect is a construct that import and exports data to and from Kafka.
-> Import/export connector pair: bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties config/connect-file-sink.properties
-> [script_name] [connect_config] [connector_one_config] [connector_two_config]
-> One Connector is reading and the other writing to a file.
-> Configuration files deermine how Connectors behave.
+```
+Import/export connector pair: bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties config/connect-file-sink.properties
+[script_name] [connect_config] [connector_one_config] [connector_two_config]
+One Connector is reading and the other writing to a file.
+Configuration files deermine how Connectors behave.
+```
 Connect to import/export data: import/export data from and to Kafka; runs connectors; 
 
 Process data: TODO
@@ -69,17 +79,17 @@ connect-standalone.properties stores worker configuration. Some configs are mand
 Standalone mode config:
 * offset.storage.file.filename: file in which offset is stored
 
-bin/connect-distributed.sh config/connect-distributed.properties
-Distributed mode balances workload.
-Connector config is done using REST API.
-Standalone mode config:
+bin/connect-distributed.sh config/connect-distributed.properties  
+Distributed mode balances workload.  
+Connector config is done using REST API.  
+Standalone mode config:  
 * group.id: cluster name
 * config.storage.topic: for storing connector and task config
 * offset.storage.topic: for storing offsets
 * status.storage.topic: for storing statuses
 
-Connector configurations are key-value pairs.
-Common connector options:
+Connector configurations are key-value pairs.  
+Common connector options:  
 * name: connector name
 * connector.class: Java class
 * tasks.max: max task number
@@ -92,8 +102,8 @@ Each sink connector must set one of these:
 
 http://kafka.apache.org/documentation.html#connect_transforms
 
-Connectors can transform messages on the fly.
-Connector config for transformations:
+Connectors can transform messages on the fly.  
+Connector config for transformations:  
 * transforms: list order of transformation
 * transforms.$alias.type: class names for transformations
 * transforms.$alias.$transformationSpecificConfig: config for transformations
@@ -119,6 +129,6 @@ transforms.InsertSource.static.value=test-file-source // -> field value
 
 ... TODO
 
-Creating a Connector:
-SourceConnector or SinkConnector.
-Implement two interfaces: Connector and Task.
+Creating a Connector:  
+SourceConnector or SinkConnector.  
+Implement two interfaces: Connector and Task.  
