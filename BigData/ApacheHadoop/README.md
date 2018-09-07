@@ -2,26 +2,26 @@
 
 Apache Hadoop is a framework for distributed computing. It stores data, executes operations and gathers results
 from multiple remote computers.
+
 | Hadoop components | Description |
 | :--- | :--- |
-| Hadoop Common | utility module that supports other modules |
-| Hadoop Distributed File System (HDFS) | file system for distributing data in a robust way |
-| Hadoop Yet Another Resource Negotiator (YARN) | cluster manager and job scheduler |
-| Hadoop MapReduce | module for parallel processing |
+| Hadoop Common | Utility module that supports other modules |
+| Hadoop Distributed File System (HDFS) | File system for distributing data in a robust way |
+| Hadoop Yet Another Resource Negotiator (YARN) | Cluster manager and job scheduler |
+| Hadoop MapReduce | mModule for parallel processing |
 
 ### [Single cluster installation](http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/SingleCluster.html)
 
-Both Java and ssh must be installed.
 ```
-Install them with:
+Install Java and ssh prerequisites with:
 sudo apt-get install ssh
 sudo apt-get install rsync
 ```
 
-Download Hadoop. Unpack with "tar -xzvf hadoop-x.y.z.tar.gz".
+Download Hadoop. Unpack it with "tar -xzvf hadoop-x.y.z.tar.gz".
 
-Edit "/path/to/your/hadoop/etc/hadoop/hadoop-env.sh" by adding "export JAVA_HOME=/path/to/your/java/jre_x.y.z".  
-Test changes using "bin/hadoop". A short list should appear.
+Add "export JAVA_HOME=/path/to/your/java/jre_x.y.z" to "/path/to/your/hadoop/etc/hadoop/hadoop-env.sh".  
+Test changes using "bin/hadoop". A short list should appear.  
 
 Hadoop can run in one of three modes: standalone (default, as a single Java process), pseudo-distributed or fully-distributed.
 
@@ -148,4 +148,4 @@ Run "start-yarn.sh".
 Execute "bin/hadoop fs -ls /".  
 Visit "http://localhost:50070/".  
 Visit "http://localhost:8088/".  
-If all outputs are normal, your Hadoop is ready to execute queries.  
+If all outputs are normal, Hadoop is ready to execute queries.  

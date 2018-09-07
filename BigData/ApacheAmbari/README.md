@@ -1,21 +1,23 @@
 ## [Ambari](https://ambari.apache.org/)
 
-System administration software for managing Hadoop clusters. Apache Hadoop is a software for distributed parallel
+Aapche Ambari is a administration software for managing Hadoop clusters. Apache Hadoop is a software for distributed parallel
 problem solving.
 
 ### [Documentation](https://cwiki.apache.org/confluence/collector/pages.action?key=AMBARI)
 
-Warning: some docs are duplicates. 2.4.0 documentation seems to be the most up to date.
+Warning: some pages are duplicates of other pages. 2.4.0 documentation seems to be the most up to date.
 
 ### Installation
 
-[Ambari, VirtualBox, Vagrant and Hadoop Stack Installation](https://cwiki.apache.org/confluence/display/AMBARI/Quick+Start+for+New+VM+Users)
-[Quick Start Guide](https://cwiki.apache.org/confluence/display/AMBARI/Quick+Start+Guide)
+See [Ambari, VirtualBox, Vagrant and Hadoop Stack Installation](https://cwiki.apache.org/confluence/display/AMBARI/Quick+Start+for+New+VM+Users).  
+See [Quick Start Guide](https://cwiki.apache.org/confluence/display/AMBARI/Quick+Start+Guide).  
 
-[Tools for building Ambari](https://cwiki.apache.org/confluence/display/AMBARI/Ambari+Development)
-[Build and install without VM](https://ambari.apache.org/)
+See [Tools for building Ambari](https://cwiki.apache.org/confluence/display/AMBARI/Ambari+Development).  
+See [Build and install without VM](https://ambari.apache.org/).  
 
 ### [Dashboard](https://cwiki.apache.org/confluence/display/AMBARI/Enhanced+Service+Dashboard+-+2.4.0)
+
+Dashboard has a lot of colourful widgets.
 
 #### [Metrics](https://cwiki.apache.org/confluence/display/AMBARI/Ambari+Server+Metrics)
 
@@ -45,16 +47,18 @@ The "Services" tab shows all the installed services.
 
 #### [Config](https://cwiki.apache.org/confluence/display/AMBARI/Enhanced+Configs+-+2.4.0)
 
-Configs set in Ambari override all manually set configurations.
+Configs set in Ambari override all manual configurations.
 
 On the "Services" tab a number of services can be selected.  
-Each service has a "Summary" and "Configs" tab. (Note: some also have "Heatmaps")  
-The "Configs" tab has "Settings" and "Advanced" tabs.  
-In the "Advanced" tab a number of properties can be changed. (Note: not all properties are displayed)  
-If some properties are missing you can attempt to add them by opening one of the "Custom _conf_file" dropdowns
+* Each service has a "Summary" and "Configs" tab. (Note: some also have "Heatmaps")  
+    * The "Configs" tab has "Settings" and "Advanced" tabs.  
+        * In the "Advanced" tab a number of properties can be changed. (Note: not all properties are displayed)  
+            * If some properties are missing you can attempt to add them by opening one of the "Custom _conf_file" dropdowns
 and clicking "Add Property ...".  
 
-In addition, you can change the config group by clicking on the "Manage Config Groups". There, you can duplicate
-the current settings and then change them. When done, you can assign a host to the appropriate settings group.  
+Config group can be changed by clicking on the "Manage Config Groups". There, you can duplicate the current
+settings and then change them. When done, you can assign a host to the appropriate settings group.  
 
 ### [Alerts](https://cwiki.apache.org/confluence/display/AMBARI/Alerts+-+2.4.0)
+
+TODO

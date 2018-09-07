@@ -6,7 +6,7 @@ Apache Hive is a data warehouse built on top of Apache Hadoop.
 
 Both Java and Hadoop need to be installed and configured.
 
-Download Hive. Unpack with "tar -xzvf hive-x.y.z.tar.gz".
+Download Hive. Unpack it with "tar -xzvf hive-x.y.z.tar.gz".
 
 Add to PATHs to .bashrc:
 ```
@@ -98,7 +98,7 @@ Example: https://community.rapidminer.com/t5/RapidMiner-Radoop-Forum/Performance
 Possible solution: https://community.hortonworks.com/articles/14309/demystify-tez-tuning-step-by-step.html  
 Possible solution: https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.3.4/bk_installing_manually_book/content/determine-hdp-memory-config.html  
 
-* Problem 2: "... Relative path in absolute URI"
+* Problem 2: "... relative path in absolute URI ..."
 
 Add:
 ```
