@@ -1,7 +1,7 @@
 ## [Apache Spark](https://spark.apache.org/docs/latest/index.html)
 
-Apache Spark performs computations in a computing cluster. It has a rich API including Spark SQL, MLlib,
-GraphX and Spark streaming.
+Apache Spark performs computations in a computer cluster. It has a rich API including Spark SQL, MLlib,
+GraphX and Spark Streaming.
 
 ### [Quick start](https://spark.apache.org/docs/latest/quick-start.html)
 
@@ -28,8 +28,11 @@ public class SimpleApp {
 }
 // you also need to set Maven dependencies: spark-sql_VERSION
 ```
+
 Package it using Maven (mvn package) and then execute the program using:
-* "/path/to/spark/bin/spark-submit --class "SimpleApp" --master local[4] target/simple-project-1.0.jar"
+```
+/path/to/spark/bin/spark-submit --class "SimpleApp" --master local[4] target/simple-project-1.0.jar
+```
 
 ### [RDD Programming Guide](https://spark.apache.org/docs/latest/rdd-programming-guide.html)
 
@@ -38,9 +41,9 @@ diferent ways.
 * .parallelize(_collection)
 * or from an external data source
 
-RDD operations are divided based on how they act:
-transformations are lazy and are stored instead on being computed right away,
-actions cause all transformations to be executed and then they return values.
+RDD operations are divided based on how they act:  
+transformations are lazy and are stored instead on being computed right away,  
+actions cause all transformations to be executed and then they return values.  
 
 You can often pass a function to Spark using lambda expressions or inner classes that implement the Function
 interface.
@@ -89,8 +92,8 @@ SparkConf is a configuration object for Spark.
 
 #### [StreamingContext](https://spark.apache.org/docs/latest/api/java/index.html?org/apache/spark/streaming/api/java/JavaStreamingContext.html)
 
-(Java)StreamingContext is the many entry point into Spark Streaming; created with the SparkConf and batch Duration.
-Then, you will need to do the following:
+(Java)StreamingContext is the many entry point into Spark Streaming; created with the SparkConf and batch Duration.  
+Then, you will need to do the following:  
 * define the input source
 * set computations and transformations to be performed
 * start receiving data with streaming_context.start()
@@ -100,9 +103,9 @@ Then, you will need to do the following:
 
 #### [DStream creation](https://spark.apache.org/docs/latest/streaming-programming-guide.html#transformations-on-dstreams)
 
-DStream abstracts data, RDDs. Each one has a Receiver. Can be basic or advanced.
-Basic sources are files and TCP sockets. TODO
-Advanced are Kafka, Flume and Kinesis.
+DStream abstracts data, RDDs. Each one has a Receiver. Can be basic or advanced.  
+Basic sources are files and TCP sockets. TODO  
+Advanced are Kafka, Flume and Kinesis.  
 
 #### DStream transformations
 
@@ -113,9 +116,9 @@ DStream transformations can create a new DStream or change an existing one.
 Maven dependency:
 ```
 <dependency>
-  <groupId>org.apache.spark</groupId>
-  <artifactId>spark-streaming-kafka-0-10_2.11</artifactId>
-  <version>2.3.1</version>
+    <groupId>org.apache.spark</groupId>
+    <artifactId>spark-streaming-kafka-0-10_2.11</artifactId>
+    <version>2.3.1</version>
 </dependency>
 ```
 
@@ -127,16 +130,16 @@ Creating an RDD; Obtaining Offsets; ... TODO
 
 ### [Spark SQL, DataFrames and Datasets Guide](https://spark.apache.org/docs/latest/sql-programming-guide.html)
 
-Spark SQL is a more advanced API then Spark RDD. Most often it is used to execute SQL queries.
-Spark SQL interacts well with Apache Hive, a database built on top of Hadoop which has a Hive Metastore.
+Spark SQL is a more advanced API then Spark RDD. Most often it is used to execute SQL queries.  
+Spark SQL interacts well with Apache Hive, a database built on top of Hadoop which has a Hive Metastore.  
 
 Spark SQL produces either Dataset or DataFrame using command line, JDBC or ODBC.
 
-Dataset is a distributed collection. They can be manipulated using transformations (map, filter, ...). Database API is available for Java/Scala and python does not need it.
-DataFrame is a Dataset, but organised into named columns. 
+Dataset is a distributed collection. They can be manipulated using transformations (map, filter, ...). Database API is available for Java/Scala and python does not need it.  
+DataFrame is a Dataset, but organised into named columns.   
 
-First, create a SparkSession. (Note: Spark 2.0 supports Hive features even without you having to setup Hive)
-There are many ways in which DataFrames can be created:
+First, create a SparkSession. (Note: Spark 2.0 supports Hive features even without you having to setup Hive)  
+There are many ways in which DataFrames can be created:  
 ```
 spark_session.read().json(...);
 spark_session.sql(...);
@@ -149,8 +152,8 @@ data_frame.select(col("name"), col("age").plus(1)); //-> select name and age, bu
 data_frame.filter(col("age").gt(21)); //-> select people older then 21
 data_frame.groupBy("age").count(); //-> count people by age
 ```
-[DataSet Javadoc](https://spark.apache.org/docs/latest/api/java/org/apache/spark/sql/Dataset.html)
-[DataFrame Function Javadoc](https://spark.apache.org/docs/latest/api/java/org/apache/spark/sql/functions.html)
+[DataSet Javadoc](https://spark.apache.org/docs/latest/api/java/org/apache/spark/sql/Dataset.html)  
+[DataFrame Function Javadoc](https://spark.apache.org/docs/latest/api/java/org/apache/spark/sql/functions.html)  
 
 Run SQL queries with:
 ```
