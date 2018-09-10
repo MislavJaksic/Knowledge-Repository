@@ -39,10 +39,11 @@ The "Config History" tab shows all the current and previous "Config Groups" chan
 ### Services
 
 The "Services" tab shows all the installed services.
+
 | Service symbol | Meaning |
 | :--- | :---: |
 | Green check mark | "Active" |
-| Black doctor's bag | "in Maintenance mode" |
+| Black doctor's bag | "In Maintenance mode" |
 | Computer icon | "Inactive" |
 
 #### [Config](https://cwiki.apache.org/confluence/display/AMBARI/Enhanced+Configs+-+2.4.0)

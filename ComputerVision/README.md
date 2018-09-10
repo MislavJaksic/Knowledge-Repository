@@ -5,6 +5,6 @@ Bay, Ess, Tuytelaars and Gool. This folder's purpose is to preserve what I have 
 
 ### Papers analysed
 
-SURF: Speeded Up Robust Features
-SIFT: Scale Invarient Feature Transformations
-An Analysis of SURF
+SURF: Speeded Up Robust Features  
+SIFT: Scale Invarient Feature Transformations  
+An Analysis of SURF  

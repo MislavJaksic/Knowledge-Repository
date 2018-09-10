@@ -82,14 +82,14 @@ Standalone mode config:
 bin/connect-distributed.sh config/connect-distributed.properties  
 Distributed mode balances workload.  
 Connector config is done using REST API.  
-Standalone mode config:  
+Standalone mode config:
 * group.id: cluster name
 * config.storage.topic: for storing connector and task config
 * offset.storage.topic: for storing offsets
 * status.storage.topic: for storing statuses
 
 Connector configurations are key-value pairs.  
-Common connector options:  
+Common connector options:
 * name: connector name
 * connector.class: Java class
 * tasks.max: max task number
@@ -103,7 +103,7 @@ Each sink connector must set one of these:
 http://kafka.apache.org/documentation.html#connect_transforms
 
 Connectors can transform messages on the fly.  
-Connector config for transformations:  
+Connector config for transformations:
 * transforms: list order of transformation
 * transforms.$alias.type: class names for transformations
 * transforms.$alias.$transformationSpecificConfig: config for transformations
