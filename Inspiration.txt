@@ -20,8 +20,6 @@ an interesting subject; research it
 Expand the programming languages topics:
 graphical user interface, multithreading...
 
-Apache Maven
-
 jsocket, flexispy, IMSI catcher
 
 Lisp: http://paulgraham.com/avg.html is an article that praises Lisp. Maybe when I learn it it will truly change my perspective and way of thinking.
@@ -41,3 +39,5 @@ Pragramtic Programmer book
 MD5, RH algorithm, GNU core utils
 
 RabbitMQ, WildFlySwarm
+
+React and node.js for "JavaScript projects"
