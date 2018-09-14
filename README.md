@@ -21,5 +21,7 @@ forgetfulness at bay. Somehow... I know that writing this booklet will pay off t
 
 If you are thinking about writing, do it. Correspondence is a joy to read.
 
->Email: jaksicmislav@gmail.com
->Write an email as if you were writing a letter.
+```
+Email: jaksicmislav@gmail.com
+Write an email as if you were writing a letter.
+```
