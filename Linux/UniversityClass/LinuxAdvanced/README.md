@@ -2,15 +2,15 @@
 
 ### Chapter 1
 
-> Short version:
-> Processor reads BIOS/UEFI from ROM.
-> BIOS/UEFI find the bootloader using MBR/GPT.
-> Bootloader is loaded.
-> Bootloader runs the OS.
-> OS reads initrd/initramfs which reads the rest of the kernel.
-> The kernel runs the init/systemd with PID 1.
-> init/systemd runs all the background processes.
-> User is given control.
+> Short version:  
+> Processor reads BIOS/UEFI from ROM.  
+> BIOS/UEFI find the bootloader using MBR/GPT.  
+> Bootloader is loaded.  
+> Bootloader runs the OS.  
+> OS reads initrd/initramfs which reads the rest of the kernel.  
+> The kernel runs the init/systemd with PID 1.  
+> init/systemd runs all the background processes.  
+> User is given control.  
 
 BIOS (Basic Input and Output System) comes with every ROM (Read-Only Memory).
 BIOS will executes POST (Power On Self Test), testing the motherboard and devices connected to it.

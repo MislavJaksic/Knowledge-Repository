@@ -26,7 +26,7 @@ $HADOOP_HOME/bin/hadoop fs -chmod g+w   /user/hive/warehouse
 ```
 You can browse the HDFS with "$HADOOP_HOME/bin/hadoop fs -ls /".
 
-Try running "$HIVE_HOME/bin/hive" and if it doesen't work, see Hive troubleshooting section.  
+Try running "$HIVE_HOME/bin/hive" and if it doesen't work, see the Hive troubleshooting section.  
 HiveCLI is deprecated, use Beeline and HiveServer2 instead.  
 
 [Settings up Beeline and HiveServer2](https://cwiki.apache.org/confluence/display/Hive/Setting+Up+HiveServer2)

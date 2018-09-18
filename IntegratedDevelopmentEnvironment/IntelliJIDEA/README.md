@@ -13,8 +13,8 @@ Create code/insert template: ALT+INSERT
 
 Code Completion: CTRL+SPACE
 
-Show usages: CTRL+ALT+F7
-Show implementations: CTRL+ALT+B
+Show usages: CTRL+ALT+F7  
+Show implementations: CTRL+ALT+B  
 
 IntelliJ supports refactoring of all kinds.
 
@@ -24,15 +24,15 @@ Reformat code: CTRL+ALT+L
 
 Version Control: ALT+9
 
-Compile/make: CTRL+F9
-Run: SHIFT+F10
-Debug: SHIFT+F9
+Compile/make: CTRL+F9  
+Run: SHIFT+F10  
+Debug: SHIFT+F9  
 
-[Working with App Servers](https://www.jetbrains.com/help/idea/application-servers-support.html)
-Examples of App Servers: Geronimo, Google App Engine, Tomcat, TomEE, WebLogic...
+[Working with App Servers](https://www.jetbrains.com/help/idea/application-servers-support.html)  
+Examples of App Servers: Geronimo, Google App Engine, Tomcat, TomEE, WebLogic...  
 
-Supports working with Maven and Gradle.
-Supports migrating from NetBeans and Eclipse.
+Supports working with Maven and Gradle.  
+Supports migrating from NetBeans and Eclipse.  
 
 ### [Configuring IntelliJ](https://www.jetbrains.com/help/idea/configuring-project-and-ide-settings.html)
 
@@ -40,28 +40,28 @@ TODO
 
 ### [Configuring projects](https://www.jetbrains.com/help/idea/working-with-projects.html)
 
-TODO
-and many more subjects...
+TODO  
+and many more subjects...  
 
 ### Learning how to use IntelliJ IDEA
 
 Help -> Tip of the Day: for quick tips.
 
-CTRL+N: open class.
-CTRL+SHIFT+N: open file.
-CTRL+Space: code completion.
-ALT+SHIFT+7: find all places where a name is used.
-CTRL+Q: view documentation.
-CTRL+B: jump to declaration.
-SHIFT+F6: rename.
-CTRL+O: override methods.
-CTRL+I: implement interface.
-CTRL+SHIFT+Space: code complete with suitable variables.
-ALT+Insert: generate getters and setters.
-CTRL+ALT+T: surround selected with code (try/catch).
-CTRL+ALT+B: jump to the implementation an abstract method.
-SHIFT+F1: view external documentation.
-... and there are even more tips.
+CTRL+N: open class.  
+CTRL+SHIFT+N: open file.  
+CTRL+Space: code completion.  
+ALT+SHIFT+7: find all places where a name is used.  
+CTRL+Q: view documentation.  
+CTRL+B: jump to declaration.  
+SHIFT+F6: rename.  
+CTRL+O: override methods.  
+CTRL+I: implement interface.  
+CTRL+SHIFT+Space: code complete with suitable variables.  
+ALT+Insert: generate getters and setters.  
+CTRL+ALT+T: surround selected with code (try/catch).  
+CTRL+ALT+B: jump to the implementation an abstract method.  
+SHIFT+F1: view external documentation.  
+... and there are even more tips.  
 
 CTRL+SHIFT+NumPad-/+: collapse/uncollapse all.
 
@@ -76,18 +76,18 @@ Under "Tools" -> "Generate JavaDoc...".
 
 If you want to install a plugin, download it from [JetBrains](https://plugins.jetbrains.com/).
 
-Go to "Settings" (CTRL + ALT + S) and got to the "Plugins" tab.
-Click on "Install plugin from disk..." and choose a plugin you want to install.
+Go to "Settings" (CTRL + ALT + S) and got to the "Plugins" tab.  
+Click on "Install plugin from disk..." and choose a plugin you want to install.  
 
 ### Maven project
 
 ##### Create a project
 
-Create from File -> New... -> Maven -> ...
-If you want, you can create an Archtype, a template project or you can just click Next.
-Fill in both of these:
-* groupId - creator's ID
-* artifactId - JAR or project name
+Create from File -> New... -> Maven -> ...  
+If you want, you can create an Archtype, a template project or you can just click Next.  
+Fill in both of these:  
+* groupId - creator's ID  
+* artifactId - JAR or project name  
 
 ### Adding dependencies
 
@@ -97,14 +97,14 @@ download the [JARExplorer](https://github.com/javalite/jar-explorer) to aid you 
 
 #### Build, plugins and packaging
 
-You can package the project into a .jar by adding <packaging>jar</packaging> into "pom.xml".
+You can package the project into a .jar by adding <packaging>jar</packaging> into "pom.xml".  
 To package the project, that is, execute the Maven goal "mvn package" you can open the Maven project view. Click
-on the icon in the bottom left corner of the window.
+on the icon in the bottom left corner of the window.  
 Plugins can range from utilities, to those that allow you to execute the project from the command line like
-"exec-maven-plugin".
+"exec-maven-plugin".  
 
 #### Deployment
 
 If you want to transfer the project, package the whole project into a .zip or something similar and install it
-with "mvn install".
-If you have the "exec-maven-plugin", you can execute the project from the command line with "mvn exec:java". 
+with "mvn install".  
+If you have the "exec-maven-plugin", you can execute the project from the command line with "mvn exec:java".  

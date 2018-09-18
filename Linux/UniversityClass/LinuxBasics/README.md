@@ -4,9 +4,11 @@
 
 To stop execution, type Ctrl+C.
 
-Long options prefixed with --, short options are prefixed with -.
-Options can be chained together.
-Example: ls -lh
+Long options prefixed with --, short options are prefixed with -.  
+Options can be chained together.  
+```
+ls -lh
+```
 
 man - show command manual; exit with "q"
 
@@ -57,8 +59,8 @@ df - show memory by partition
 
 du - show memory by directory
 
-touch - create an empty file
-p for named pipeline, d for directory, s for socket, b for block file, c for char file, 
+touch - create an empty file  
+p for named pipeline, d for directory, s for socket, b for block file, c for char file  
 
 cat - read a file
 
@@ -79,28 +81,33 @@ keyboard --- stdin ---> cat --- stdout ---> monitor
 cat acts as a filter.
 
 \> - write to file operator.
-> Example of >:
-> ls -l / > /tmp/test != ls -l /
+```
+ls -l / > /tmp/test != ls -l
+```
 
 \>> - append data to a file operator.
 
 < - sent file content to a program operator.
-> Example of <:
-> cat < /ect/password
+```
+cat < /ect/password
+```
 
 - represents stdin/stdout operator in commands.
-> Example of -:
-> wget -O - http://ftp.hr.debian.org/README
+```
+wget -O - http://ftp.hr.debian.org/README
+```
 
 | - pipe operator.
-> Example of |:
-> ls -l /lib/ | head
+```
+ls -l /lib/ | head
+```
 
 ls -l /lib --- stdout ---> --- stdin ---> head ---> monitor
 
 2> - error output redirection operator.
-> Example of 2>:
-> ls -l /lib1 2> /tmp/lib5
+```
+ls -l /lib1 2> /tmp/lib5
+```
 
 &> - joint stderr and stdout redirection operator.
 2>&1 redirect stderr to stdin operator.
@@ -108,24 +115,29 @@ ls -l /lib --- stdout ---> --- stdin ---> head ---> monitor
 tee - redirect stdin to stdout and a file operator.
 
 << - write a file inline operator (here document).
-> Example of <<:
-> cat << EOF //-> write inline until you input EOF
+```
+cat << EOF //-> write inline until you input EOF
+```
 
 <<< - write a string inline operator (here string).
-> Example of <<<:
-> cat <<< 'hello'
+```
+cat <<< 'hello'
+```
 
 Use && and || for conditional execution; what comes before && must return 0.
-> Example of ||:
-> false || echo 1
+```
+false || echo 1
+```
 
 wc - word count.
-> Example of wc:
-> ls /usr/include | wc
+```
+ls /usr/include | wc
+```
 
 grep - search for a pattern in a file.
-> Example of grep:
-> grep SEEK_SET /usr/include/stdio.h
+```
+grep SEEK_SET /usr/include/stdio.h
+```
 
 sort - sort lines.
 
@@ -133,8 +145,9 @@ uniq - check if there are duplicate lines; has lot of options.
 cut leaves out a character from the file.
 
 find - complex search command; \[-name\], \[-type\], \[-size\], \[-print\].
-> Example of find:
-> find /ect -type d -a -size +10k
+```
+find /ect -type d -a -size +10k
+```
 
 locate - a much simpler find.
 
@@ -158,8 +171,9 @@ local - make a variable local to a script
 
 Conditions and tests are written within \[ \]. There are quite a few operators.
 Return 0 if True.
-> Example of \[\]:
-> \[1 -eq 1\] // -> returns 0, meaning True
+```
+\[1 -eq 1\] // -> returns 0, meaning True
+```
 
 Wildcards are substitute characters:
 ? is one character,
@@ -185,17 +199,19 @@ x? - appears once or not at all.
 x{n} - appears n times.
 x{n,m} - appears between n and m times.
 
-> Examples of regex:
-> ^foo //-> find characters "foo" at the beginning of the line.
-> sigh$ //-> find characters "sigh" at the end of the line.
-> .*\[^aA\]$ //-> find a line that does not end with "a" or "A".
+```
+^foo //-> find characters "foo" at the beginning of the line.
+sigh$ //-> find characters "sigh" at the end of the line.
+.*\[^aA\]$ //-> find a line that does not end with "a" or "A".
+```
 
 grep - use simple regex
 egrep - use complex regex
 
 sed - Stream EDitor
-> Example of sed:
-> sed -r "s/windows/linux" file.txt //-> substitute the first appearance of "windows" with "linux" in "file.txt"
+```
+sed -r "s/windows/linux" file.txt //-> substitute the first appearance of "windows" with "linux" in "file.txt"
+```
 
 ### Chapter 6: user management
 
@@ -221,12 +237,14 @@ su - Switch User; without arguments switches to root; \[_username\] switch to sp
 View permissions with "ls -l".
 There are 9 permission characters. 1-3 for user, 4-6 for group, 7-9 for everyone.
 "r" for read, "w" for write, "x" for execute.
-> Example of file permissions:
-> - rw- r-- r-- 1 mislav users 0 Feb 4 20:29 text.txt
+```
+- rw- r-- r-- 1 mislav users 0 Feb 4 20:29 text.txt
+```
 
 chmod _mode _object - change a permission (mode)
-> Example of multiple permission changes:
-> chmod u=x,go=r text.txt
+```
+chmod u=x,go=r text.txt
+```
 
 TODO page 39 onwards...
 
@@ -252,13 +270,15 @@ There are different shells in Linux: sh, bash, csh, ksh, ...
 Bash is a popular shell.
 Can be used interactively.
 Each script can specify a preferred shell.
-> Example of bash shell preference:
-> #! /bin/bash
+```
+#! /bin/bash
+```
 
 When a shell executes a process it creates a job.
 Jobs can be executing in the background.
-> Example of background execution:
-> _command &
+```
+_command &
+```
 
 CTRL+Z - suspend process in the foreground
 fg/bg - unsuspend process in foreground/background
@@ -287,18 +307,20 @@ Network interfaces: eth0, eth1, ...; - ethernet
                     lo; - loopback
 ifconfig, route or ip - make transient TCP/IP configuration changes
 /etc/network/interfaces - interface configuration
-> Examples of interface configuration:
-> auto eth0 //-> start eth0 at startup
-> iface eth0 inet static //-> eth0 is given a static IP
-> iface eth1 inet dhcp //-> eth1 will look for a dynamic IP
+```
+auto eth0 //-> start eth0 at startup
+iface eth0 inet static //-> eth0 is given a static IP
+iface eth1 inet dhcp //-> eth1 will look for a dynamic IP
+```
 
 /etc/init.d/networking restart - restart networking service
 iwconfig, iw - wireless configuration
 
 /etc/resolv.conf - DNS config
-> Examples of DNS resolution:
-> nameserver 8.8.8.8
-> nameserver 8.8.4.4
+```
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+```
 
 dhclient, dhcpcd - DHCP clients
 

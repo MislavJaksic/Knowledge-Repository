@@ -2,9 +2,9 @@
 
 Linux is a free operating system famous for its kernel. There are [many varieties of Linux](https://distrowatch.com/). There are those that
 look like Windows to those without a graphical interface. Linux comes with a plethora of free office, system
-monitoring and programming tools, such as OpenOffice and top.
+monitoring and programming tools, such as OpenOffice and utility program top.
 
-Each Linux operating system is a bit different, so take core not to mix up installation instructions or
+Each Linux operating system is a bit different, so take care not to mix up installation instructions or
 command syntax.
 
 ### Linux distributions

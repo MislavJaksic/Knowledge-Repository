@@ -59,14 +59,14 @@ In the following files add the following <elements> between <configuration> elem
 
 Try to connect to localhost with "shh localhost".  
 Once connected, use "exit" to logout from the session.  
-If you cannot do so, execute:  
+If you cannot to localhost, execute the following:  
 ```
 ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 chmod 0600 ~/.ssh/authorized_keys
 ```
 
-Format the file system with "bin/hdfs namenode -format". (Warning: this will wipe all folders on the HDFS!)  
+Format the file system with "bin/hdfs namenode -format". The command will wipe all folders on the HDFS.  
 Start NameNode and DataNode daemons with "sbin/start-dfs.sh".  
 Browse the NameNode at "http://localhost:50070/".  
 
@@ -117,7 +117,7 @@ In the following files add the following <elements> between <configuration> elem
 Start ResourceManager and NodeManager daemon with "sbin/start-yarn.sh".  
 Browse the ResourceManager at "http://localhost:8088/".  
 
-(Warning: both "start-dfs.sh" and "start-yarn.sh" have to be running!)  
+Make sure both "start-dfs.sh" and "start-yarn.sh" are running.  
 Try executing a MapReduce job:  
 ```
 bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-x.y.z.jar grep input output 'dfs[a-z.]+'

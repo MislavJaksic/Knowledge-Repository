@@ -1,6 +1,6 @@
 ## [Ambari](https://ambari.apache.org/)
 
-Aapche Ambari is a administration software for managing Hadoop clusters. Apache Hadoop is a software for distributed parallel
+Apache Ambari is an administration software for managing Hadoop clusters. Apache Hadoop is a software for distributed and parallel
 problem solving.
 
 ### [Documentation](https://cwiki.apache.org/confluence/collector/pages.action?key=AMBARI)
@@ -21,9 +21,9 @@ Dashboard has a lot of colourful widgets.
 
 #### [Metrics](https://cwiki.apache.org/confluence/display/AMBARI/Ambari+Server+Metrics)
 
-Can add new widgets, constructs that display data.
-Widget types: Graph, Gauge, Number, Template
-Widgets are specified in JSON.
+Can add new widgets, constructs that display data.  
+Widget types: Graph, Gauge, Number, Template.  
+Widgets are specified in JSON.  
 
 [Ambari Metrics System](https://cwiki.apache.org/confluence/display/AMBARI/Metrics+-+2.4.0)
 
