@@ -102,3 +102,17 @@ Command: docker service ps _service_name
 
 Command: docker cp - copy a file from the host to the Docker container
 Example: docker cp transfer_object.txt sandbox-hdp:/usr/transfer_object.txt
+
+### Dockerfile commands
+
+ADD
+COPY
+ENV
+EXPOSE
+FROM
+LABEL
+STOPSIGNAL
+USER
+VOLUME
+WORKDIR
+ONBUILD

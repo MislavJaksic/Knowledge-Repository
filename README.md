@@ -14,8 +14,8 @@ expanded in the future. The topics are not ordered in any way.
 ### Intention
 
 As time elapses, I will forget what I knew and even worse, I will forget how I came to know what I forgot.
-To combat this reality, I have decided to create a this digital booklet of booklets, hoping it will keep
-forgetfulness at bay. Somehow... I know that writing this booklet will pay off ten years from now...
+To combat this reality I have decided to create this digital booklet of booklets, hoping it will keep
+forgetfulness at bay. Somehow I know that writing this booklet will pay off ten years from now...
 
 ### Contact
 

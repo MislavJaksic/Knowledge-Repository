@@ -14,13 +14,12 @@ function() {
 }
 
 function ReturnOnlyOneValue() {
-  return [1, 2, 3, 4] // return an array to return multiple
+  return [1, 2, 3, 4] // return multiple values
 }
 
 //A function within a function:
 //Closure: the inner function remembers the outer's value, but
 //the outer cannot see the inner's ones values
-
 function outside(x) {
   function inside(y) {
     return x + y;

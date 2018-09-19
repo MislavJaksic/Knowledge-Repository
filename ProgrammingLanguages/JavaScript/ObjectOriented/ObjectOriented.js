@@ -2,7 +2,6 @@
 
 //Objects have properties associated with them
 var car = new Object()
-
 car["colour"] = "red"
 car.year = "1999"
 
