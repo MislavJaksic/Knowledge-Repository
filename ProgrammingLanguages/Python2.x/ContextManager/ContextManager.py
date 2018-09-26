@@ -26,7 +26,7 @@ with ManagerClass("Queen") as queenBee:
   print "Object created"
   print queenBee.GetRole()
   
-#The following with be outputted:
+#Output:
 #Enter
 #Object created
 #Queen
@@ -39,7 +39,7 @@ with ManagerClass("Worker") as workerBee:
   raise Exception("Exception raised after exitting")
   print "Will never be printed"
   
-#The following with be outputted:
+#Output:
 #Enter
 #Object created
 #Worker

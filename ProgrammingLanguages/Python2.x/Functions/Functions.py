@@ -39,13 +39,9 @@ def CheckPalindrome(string, checkPosition=0, *manyArgs):
   if string[checkPosition] == string[stringLength - checkPosition - 1]:
     return CheckPalindrome(string, checkPosition + 1)
   else:
-	return "No"
+	  return "No"
 
 #Tell the program where to begin
 #Must be at the bottom of the program
 if __name__ == '__main__':
   BeginFunc()
-
-#Equal to writing:
-
-#BeginFunc()

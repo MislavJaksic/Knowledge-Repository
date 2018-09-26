@@ -1,5 +1,6 @@
 #Vector in mathematics notation
 #Lists in Python syntax
+#list = [expression for item in list if condition..if condition]
 
 #S = {x² : x in {0 ... 9}}
 S = [x**2 for x in range(10)]

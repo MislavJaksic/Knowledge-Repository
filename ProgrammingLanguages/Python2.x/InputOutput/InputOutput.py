@@ -14,6 +14,9 @@ file = open("fileName.txt", "rU")
 print file.read(1) #-> 'A'; the first char in the file
 #Close a file
 file.close()
+#OR
+with open("fileName.txt", "rU") as file:
+  print file.read(1)
 
 #Destroy an existing file and create a new empty file
 file = open("fileName.txt", "w")

@@ -7,18 +7,22 @@ else:
 i = -1
 if i:
   print "Any other number is treated as True."
+elif i == 5:
+  pass
+  
+while False:
+  print "Never executes"
   
 list = [0, 1, 2, 3, 4, 5]
 for number in list: #-> 1 2 3 4 5
   print number,
-print
   
 #range(<integer>) creates a list [0, ..., <integer - 1>]
 for i in range(3): #-> 0 1 2
   print i,
 else:
   print
-  print "When a for loop exhaust the list, it will execute an else condition."
+  print "When a for loop exhaust the list, it will execute the else condition."
   
 #continue skips to the next loop iteration
 #break exits the innermost loop or if statement
