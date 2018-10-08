@@ -37,7 +37,7 @@ Archetype is a project template.
 * project - top-level element in all Maven poms
 * modelVersion - POM version
 * groupId - creator's ID
-* artifactId -JAR or project name
+* artifactId - JAR or project name
 * packaging - package type for the project (e.g. JAR, WAR, EAR, etc.)
 * version - project version
 * name - displayed project name
