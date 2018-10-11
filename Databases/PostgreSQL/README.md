@@ -2,11 +2,14 @@
 
 ### [Installation](https://www.postgresql.org/download/)
 
+[Additonal instructions](http://www.postgresqltutorial.com/)
+
 Each operating system has a different way of installing PostgreSQL.  
 As an example, PostgreSQL 10 will be installed on Ubuntu LTS 18.04.  
 
 Use the following command to install PostgreSQL:
 ```
+sudo apt-get update
 sudo apt-get install postgresql-10
 
 Note: if you get an error "Could not get lock..." then just wait a few minutes for apt to finish or consult the web page below.
@@ -40,6 +43,29 @@ psql
 Note: use \q to exit psql
 ```
 
+### [Installing pgadmin](http://queirozf.com/entries/installing-postgresql-and-pgadmin-on-ubuntu)
+
+You can install a pgAdmin, an administration interface, on Ubuntu with:
+```
+sudo apt-get install pgadmin3
+
+pgadmin3
+```
+You need to register a new server, but first you need to set a password. Execute the following:
+```
+psql
+\password <your_username>
+Enter your password: <postres_password>
+```
+```
+Name: <catchy_name>
+Host: localhost
+Port: by default, its 5432
+Maintenance DB: postgres
+Username: <your_username>
+Password: <postres_password>
+```
+
 ### [Tutorial](https://www.postgresql.org/docs/10/static/tutorial-accessdb.html) 
 
 Play around with some of the commands:
@@ -52,5 +78,16 @@ SELECT 2 + 2;
 
 Note: to exit a documentation screen just press q
 ```
+TODO
 
-### [Tutorial](https://www.postgresql.org/docs/10/static/tutorial-table.html)
+### PgAdmin interface
+
+After installing and registering a PostgreSQL server
+
+### [PostgreSQL and Python psycopg](http://www.postgresqltutorial.com/postgresql-python/)
+
+It can be installed using Anaconda:
+```
+conda search psycopg2
+conda install psycopg2
+```
