@@ -35,6 +35,7 @@ createuser --interactive
 
 Note: PostgreSQL roles are seperate from Linux usernames
 ```
+When you have created a Postgres role, go back and create a database with the same username.
 
 If you have a role and a database, you can execute the following command:
 ```
@@ -48,15 +49,21 @@ Note: use \q to exit psql
 You can install a pgAdmin, an administration interface, on Ubuntu with:
 ```
 sudo apt-get install pgadmin3
-
-pgadmin3
 ```
+
 You need to register a new server, but first you need to set a password. Execute the following:
 ```
 psql
 \password <your_username>
 Enter your password: <postres_password>
 ```
+
+Run the PgAdmin interace with:
+```
+pgadmin3
+```
+
+After setting up a password, click "Add a connection to a server" and register it:
 ```
 Name: <catchy_name>
 Host: localhost
@@ -64,6 +71,24 @@ Port: by default, its 5432
 Maintenance DB: postgres
 Username: <your_username>
 Password: <postres_password>
+```
+
+### PgAdmin interface
+
+After installing and registering a PostgreSQL server note a few buttons:
+```
+Refresh
+Execute arbitrary SQL queries
+Expand schemas list
+Show data in selected table
+```
+
+### [PostgreSQL and Python psycopg](http://www.postgresqltutorial.com/postgresql-python/)
+
+It can be installed using Anaconda:
+```
+conda search psycopg2
+conda install psycopg2
 ```
 
 ### [Tutorial](https://www.postgresql.org/docs/10/static/tutorial-accessdb.html) 
@@ -79,15 +104,3 @@ SELECT 2 + 2;
 Note: to exit a documentation screen just press q
 ```
 TODO
-
-### PgAdmin interface
-
-After installing and registering a PostgreSQL server
-
-### [PostgreSQL and Python psycopg](http://www.postgresqltutorial.com/postgresql-python/)
-
-It can be installed using Anaconda:
-```
-conda search psycopg2
-conda install psycopg2
-```
