@@ -1,4 +1,3 @@
-#include <iostream>
 #include "HeaderFile.h"
 
 int main()
