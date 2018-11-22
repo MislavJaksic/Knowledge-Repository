@@ -1,6 +1,6 @@
 ## [Hadoop](http://hadoop.apache.org/)
 
-Apache Hadoop is a framework for distributed computing. It stores data, executes operations and gathers results
+Apache Hadoop is a distributed computing framework. It stores data, executes operations and gathers results
 from multiple remote computers.
 
 | Hadoop components | Description |
@@ -8,7 +8,7 @@ from multiple remote computers.
 | Hadoop Common | Utility module that supports other modules |
 | Hadoop Distributed File System (HDFS) | File system for distributing data in a robust way |
 | Hadoop Yet Another Resource Negotiator (YARN) | Cluster manager and job scheduler |
-| Hadoop MapReduce | mModule for parallel processing |
+| Hadoop MapReduce | Module for parallel processing |
 
 ### [Single cluster installation](http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/SingleCluster.html)
 
@@ -139,7 +139,7 @@ The following site configurations are of great import:
 * etc/hadoop/yarn-site.xml
 * etc/hadoop/mapred-site.xml
 
-TODO: it continues by talkin in greater detail about the configuration.
+TODO: it continues by talking in greater detail about the configuration.
 
 ### Running Hadoop
 

@@ -1,11 +1,12 @@
 ## [Ambari](https://ambari.apache.org/)
 
-Apache Ambari is an administration software for managing Hadoop clusters. Apache Hadoop is a software for distributed and parallel
-problem solving.
+Apache Ambari is an administrative software for managing Hadoop clusters. Apache Hadoop is a software for
+distributed and parallel problem solving.
 
 ### [Documentation](https://cwiki.apache.org/confluence/collector/pages.action?key=AMBARI)
 
-Warning: some pages are duplicates of other pages. 2.4.0 documentation seems to be the most up to date.
+Warning: some pages are duplicates. 2.4.0 documentation seems to be the most up to date documentation at the
+date of publication.
 
 ### Installation
 

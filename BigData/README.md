@@ -1,6 +1,7 @@
 ## Big Data
 
-Big Data is a subset of analytical problems where there is so much data that it either cannot be stored in RAM
+Big Data is a subset of analytical problems where the volume of data is so large that it either cannot be stored in RAM
 or it cannot be processed sufficiently fast by a single computer.
 
-Collecting, transporting and analysing data in a distributed environment spawns unique problems.
+To solve Big Data problems, we need to use a distributed environment. Collecting, transporting and analysing
+data on multiple computers in parallel spawns complex problems, Big Data problems.
