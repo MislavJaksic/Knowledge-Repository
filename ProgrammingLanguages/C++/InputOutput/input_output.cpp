@@ -1,7 +1,12 @@
-#include "InputOutput.h"
+#include "input_output.h"
 
-int main(void)
+int main(int argc, char *argv[])
 {
+    //command line arguments
+    std::cout << argc << std::endl;
+    for (int count=0; count < argc; ++count)
+        std::cout << count << ": " << argv[count] << std::endl;
+ 
     //console input/output
     GetInt();
     GetString();

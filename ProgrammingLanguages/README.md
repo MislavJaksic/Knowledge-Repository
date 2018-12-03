@@ -1,11 +1,11 @@
 ## Programming languages
 
-Languages are subdivided into folders and then they are further subdevided by topic. Topics range from how to setup
+Each languages has its own folder which is further subdevided by topic. Topics range from how to setup
 a language to constructs such as lambda expressions. Each folder has a simple program designed to teach the
-reader.
+reader and optinally a short README.
 
 ### Program structure
 
-The programs are all structured in the same way:
+The programs are all structured in a similar manner:
 > _comment_explaining_the_expression_or_statement
-> _expression_or_statement _single_comment_sign -> _result
+> _expression_or_statement _comment_sign -> _result

@@ -1,11 +1,11 @@
-#include "DataTypes.h"
+#include "data_types.h"
 
 int main(void)
 {
     //definition
     //basic, primitive or built-in types
-    bool boolean;
-    char character;
+    bool boolean = true;
+    char character = 'a'; //not "a"!
     int integer;
     float single_precision;
     double double_precision;
@@ -22,9 +22,10 @@ int main(void)
 
     //strings
     std::string name{"John Doe"};
-    int len = static_cast<int>(name.length());
+    unsigned int len = name.length();
+    char character = name[0];
 
-    //aliasing data types
+    //aliasing data types (better then typedef!)
     using an_integer_t = int;
     an_integer_t number{5};
 

@@ -1,4 +1,4 @@
-#include "DataStructures.h"
+#include "main.h"
 
 namespace ColourNames
 {
@@ -6,7 +6,7 @@ enum Colours
 {
     COLOUR_BLACK,
     COLOUR_RED,
-    COLOUR_PINK
+    COLOUR_PINK,
     MAX_COLOURS
 };
 }
@@ -22,11 +22,11 @@ struct Employee
 int main(void)
 {
     //enums
-    ColourNames::Colours colour{COLOUR_RED};
+    ColourNames::Colours colour{ColourNames::COLOUR_RED};
     std::cout << colour << std::endl; // 1
 
-    
-    
+
+
     //structs
     Employee joe;
     joe.id = 14;
@@ -36,20 +36,28 @@ int main(void)
 
     Employee frank{2,28,0.0}; //id = 2,age = 28,wage = 0.0
     std::cout << frank.wage << std::endl; // 0
-    
-    
-    
+
+
+
     //built-in arrays
     std::array<double, 5> built_in_array{9.0,7.2};
     AcceptBuiltInArrays(built_in_array);
 
-    //built-in vector
+    //built-in vector, extremely versatile!
     std::vector<int> built_in_vector{3,5,7};
-    built_in_vector.size();
     built_in_vector.resize(10);
-    
-    
-    
+    std::cout << std::endl;
+    std::cout << built_in_vector.size() << std::endl; //length (how many init elements)
+    std::cout << built_in_vector.capacity() << std::endl; //capacity (how many are allocated)
+    std::cout << built_in_vector.at(0) << std::endl;
+    std::cout << built_in_vector[0] << std::endl;
+
+    built_in_vector.push_back(11); //push
+    built_in_vector.back(); //top
+    built_in_vector.pop_back(); //pop
+
+
+
     //manual arrays
     int scores[ColourNames::MAX_COLOURS]; //3 integer fixed array
     scores[0] = 55555;
@@ -59,11 +67,11 @@ int main(void)
     int *array_pointer{&scores[0]};
     std::cout << *array_pointer << std::endl; //value=55555
     PrintArray(scores, len);
-    
+
     std::sort(scores, scores+len); //parameters is array range (using pointer arithmetic)
-    
-    
-    
+
+
+
     //dynamic memory
     int *dynamic_int = new int{5}; //allocate and assign value
     delete dynamic_int; //deallocate
