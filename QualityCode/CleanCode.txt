@@ -1,12 +1,11 @@
-"Clean code" from Clean Code
-============================
+## "Clean code" from Clean Code
 
 Clean code is defined in the book by the same name written by Robert C. Martin as code that can be easily understood
 and quickly read by programmers. Clean code is written in the hopes that it will allow programmers to more easily
 maintain it in the future.
 
-Principles of Clean Code
-------------------------
+### Principles of Clean Code
+
 Meaningful names: if you have to assign a name, come up with a short name that clearly says what it does, how it is
 used and why it exists; classes and objects should be nouns; functions should be verbs; use solution domain names
 (as oppose to problem domain names); context around the names is as important as the names themselves.

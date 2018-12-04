@@ -1,43 +1,43 @@
-Algorithms and data structures:
-Book, Steven. S. Skiena, The Algorithm Design Manual
+Algorithms and data structures:  
+Book, Steven. S. Skiena, The Algorithm Design Manual  
 
-Programming languages:
-Collection of free book, https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md
-Collection of reference guides, https://learnxinyminutes.com/
+Programming languages:  
+Collection of free book, https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md  
+Collection of reference guides, https://learnxinyminutes.com/  
 
-Data science or machine learning:
-Website/blog, http://www.dataschool.io/
+Data science or machine learning:  
+Website/blog, http://www.dataschool.io/  
 
-Vocabulary:
-a programming language neutral dictionary which establishes a common group of words to describe the same language features
+Vocabulary:  
+a programming language neutral dictionary which establishes a common group of words to describe the same language features  
 
-Program cookbook:
-a list of common problems and solutions
+Program cookbook:  
+a list of common problems and solutions  
 
-Design patters:
-an interesting subject; research it
+Design patters:  
+an interesting subject; research it  
 
-Expand the programming languages topics:
-graphical user interface, multithreading...
+Expand the programming languages topics:  
+graphical user interface, multithreading...  
 
-jsocket, flexispy, IMSI catcher
+jsocket, flexispy, IMSI catcher  
 
-Lisp: http://paulgraham.com/avg.html is an article that praises Lisp. Maybe when I learn it it will truly change my perspective and way of thinking.
+Lisp: http://paulgraham.com/avg.html is an article that praises Lisp. Maybe when I learn it it will truly change my perspective and way of thinking.  
 
-introspection in programming languages
+introspection in programming languages  
 
-profiling programs (show memory usage and length of execution)
+profiling programs (show memory usage and length of execution)  
 
-SQL, Ada, PHP, Ruby, Haskell
+SQL, Ada, PHP, Ruby, Haskell  
 
-Flask (Python)
+Flask (Python)  
 
-Ruby on Rails, JIRA, unified functional testing, loadrunner, SauceLabs, BrowserStack, applitools, vagrant, docker, VirtualBox, J2EE, PostgreSQL, Spring
+Ruby on Rails, JIRA, unified functional testing, loadrunner, SauceLabs, BrowserStack, applitools, vagrant, docker, VirtualBox, J2EE, PostgreSQL, Spring  
 
-Pragramtic Programmer book
+Pragramtic Programmer book  
 
-MD5, RH algorithm, GNU core utils
+MD5, RH algorithm, GNU core utils  
 
-RabbitMQ, WildFlySwarm
+RabbitMQ, WildFlySwarm  
 
-React and node.js for "JavaScript projects"
+React and node.js for "JavaScript projects"  

@@ -1,6 +1,10 @@
 ## Project documentation
 
+
+
 ### Problem
+
+
 
 ### Requirements and functionalities
 
@@ -44,3 +48,5 @@ What the user wants. Enumerate the requirements.
 - General architectural quality -
 
 ### Programming conventions
+
+

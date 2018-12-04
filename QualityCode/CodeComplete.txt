@@ -1,5 +1,4 @@
-﻿Code Complete
-=============
+﻿## Code Complete
 
 Code Complete is a book written by Steve McConnell which explains why planning 
 in software construction is important, describes how to build large maintainable
@@ -7,8 +6,8 @@ programs and how excellent systems look like. Code Complete argues that
 software construction is an important subject because it is the only activity
 that is guaranteed to happen.
 
-Chapter 3: Measure twice, cut once
-----------------------------------
+## Chapter 3: Measure twice, cut once
+
 Chapter 3 describes how writing prerequisites and careful preparation reduce
 risk of failure and allow construction to happen smoothly from beginning until
 the end. There are two ways in which prerequisites can be written: sequentially
@@ -17,8 +16,8 @@ familiar, the system design is understood well and if there is little risk that
 the project will fail. Iterative approach is appropriate if the opposite is true
 and when making changes is cheap and predictability is not important.
 
-Prerequisites
--------------
+### Prerequisites
+
 Prerequisites are an important part of preparing for a project as they are the
 foundation upon which the software is going to be built.
 
@@ -111,26 +110,26 @@ should describe the motivations for all major decisions, architecture should be
 machine and language independent, architecture should explicitly identify risky
 areas and should contain multiple views.
 
-Chapter 4: Key Construction Decisions
--------------------------------------
+## Chapter 4: Key Construction Decisions
+
 Working in a familiar programming language increases productivity and so does
 working in a highly expressive language.
 
-Programming conventions
------------------------
+### Programming conventions
+
 Specify all programming conventions before a project, so that programs can have
 excellent integrity and cohesion at code level. Specify how variables will be
 named, classes, routines and comments.
 
-Programming into a language
----------------------------
+### Programming into a language
+
 Most of the important programming principles depend not on specific languages
 but on the way you use them. If your language lacks constructs that you want to
 use or is prone to other kinds of problems, try to compensate for them. Invent
 your own coding conventions, standards, class libraries, and other augmentations.
 
-Chapter 5: Design in Construction
----------------------------------
+## Chapter 5: Design in Construction
+
 Design is a scheme for turning specifications into a working program. Mistakes
 in design are to be expected and it is much better to make them in design then
 in construction because it is cheaper to correct them.
@@ -151,8 +150,8 @@ complex solution to a complex solution. Complexity can therefor be managed by
 minimizing the amount of essential complexity you have to deal with at any one
 time and keeping accidental complexity from proliferating.
 
-Desirable Characteristics of a Design
--------------------------------------
+### Desirable Characteristics of a Design
+
 - Minimal complexity - don't make a clever design, make it simple and easy to
 understand. You know your design is good if you can ignore most other parts of
 the program when you focus on one specific part.
@@ -186,8 +185,8 @@ program layer.
 - Standard techniques - using a standardized, familiar approach will make the
 system easier to understand.
 
-Levels of Design
-----------------
+### Levels of Design
+
 1) Software system - the whole system
 
 2) Division into Subsystems/Packages  - identify major subsystems, how they are
@@ -204,8 +203,8 @@ functions). A class interface defined in 3) will define some routines.
 5) Internal Routine Design - design the detailed functionality of an individual
 routine.
 
-Design Building Blocks
-----------------------
+### Design Building Blocks
+
 Design is not a deterministic and should be done through the application of
 heuristics. Here are some of them:
 - Find Real World Objects - a by the book approach of finding objects in the
@@ -274,8 +273,8 @@ black box.
 At the end of the day, don't get stuck by using a single approach. Try different
 ones if the first one doesn't work.
 
-Design Practices
-----------------
+### Design Practices
+
 Iterating a design will yield better result every time. If you equipped yourself
 with additional knowledge after designing the system once, go improve it.
 
@@ -314,14 +313,14 @@ program itself in a form of a comment, you could have a Wiki or a collection of
 web pages, use a camera to photo drawings or some other method such as using
 cards or UML.
 
-Chapter 6: Working Classes
---------------------------
+## Chapter 6: Working Classes
+
 Class is a collection of data and routines. Classes are a tool that allows
 programmers to ignore parts of the program while they are working on another
 part of it.
 
-Abstract Data Types (ADT)
--------------------------
+### Abstract Data Types (ADT)
+
 Abstract data type is a collection of data and operations that work on that data.
 In ADT, data can be a window, font or connection to a database. ADTs allow you
 to work in the problem domain instead of low level implementation (add a cell
@@ -345,14 +344,14 @@ instance to another instance (not recommended).
 
 Classes can thought of as ADTs plus inheritance and polymorphism.
 
-Good Class Interfaces
----------------------
+### Good Class Interfaces
+
 An interface (a collection of public routines) should group routines that
 clearly belong together, expose them to the public and force a class to
 implement the routines.
 
-Good Abstraction
-----------------
+### Good Abstraction
+
 Each class should implement only one ADT at a consistent level of abstraction
 and the interface should support this by hiding implementation details.
 
@@ -374,8 +373,8 @@ Avoid eroding a class' abstraction through modification. Consider abstraction
 and cohesion together, a class that has good abstraction is likely to have
 strong cohesion.
 
-Good Encapsulation
-------------------
+### Good Encapsulation
+
 Encapsulation of implementation details prevents you from looking at the details
 which creates good abstractions. 
 
@@ -403,14 +402,14 @@ Make coupling loose by making sure the class offers all the methods other
 classes need. Loose coupling is the culmination of being mindful of all the
 above.
 
-Design and Implementation Issues
---------------------------------
+### Design and Implementation Issues
+
 Containment, inheritance, member functions and data, class coupling,
 constructors, and value-vs.-reference objects are as important as defining
 a good interface.
 
-Containment
------------
+### Containment
+
 Containment ("has a" relationship) is when a class contains a primitive data
 element or object.
 
@@ -419,8 +418,8 @@ private inheritance as it will violate encapsulation.
 
 A class shouldn't have more then about seven data members.
 
-Inheritance
------------
+### Inheritance
+
 Inheritance ("is a" relationship) is the creation of specialised classes from
 more general ones. Base classes specify common elements.
  
@@ -461,8 +460,8 @@ Make sure inheritance doesn't break the primary imperative: reduce complexity.
 Use inheritance when multiple classes share either data, methods or both or when
 you want the parent class to control the interface.
 
-Member Functions and Data
--------------------------
+### Member Functions and Data
+
 Keep the number of routines in a class small.
 
 Disallow uses by declaring the constructor, assignment operator, or other
@@ -478,8 +477,8 @@ of instantiated objects low, as well as the number of routine calls to
 instantiated objects and the number of calls on objects returned by other
 instantiated objects.
 
-Constructors
-------------
+### Constructors
+
 Initialize all data members in a constructor.
 
 Enforce a singleton by making a constructor private and exposing a GetInstance()
@@ -488,8 +487,8 @@ method.
 Prefer deep copies of object to shallow reference/pointer copy until proven
 otherwise.
 
-Reasons to Create a Class
--------------------------
+### Reasons to Create a Class
+
 To model a real world object.
 
 To model abstract objects, for example Shape for concrete objects such as
@@ -525,8 +524,8 @@ Classes to avoid:
 don't create god classes that do everything, eliminate irrelevant classes and
 avoid classes named after verbs.
 
-Chapter 7: High Quality Routines
---------------------------------
+## Chapter 7: High Quality Routines
+
 A routine is an individual method or procedure invokable for a single purpose.
 
 A low quality routine has, for example the following characteristics: unclear
@@ -535,8 +534,8 @@ data, doesn't have a single purpose, doesn't handle errors, has hard coded magic
 numbers, has parameters that are not used, has many parameters, parameters are
 poorly ordered. 
 
-Valid Reasons to Create a Routine
----------------------------------
+### Valid Reasons to Create a Routine
+
 One might think that the only reason why a routine should be created is to avoid
 code duplication. This makes modification easier and testing simpler. That is a
 reason, but there are many more.
@@ -569,8 +568,8 @@ Martin.
 However, you shouldn't be reluctant to put small pieces of code into their own
 routine, even if it has a single line of code.
 
-Design at the Routine Level
----------------------------
+### Design at the Routine Level
+
 Cohesion refers to how closely the operations in a routine are related. A
 Cosine() routine is highly cohesive, while CosineAndTang() is less so.
 
@@ -609,8 +608,8 @@ discernible relationship to each other.
 At the end, it is far better to concentrate of functional cohesion rather then
 learning the terminology of what to avoid.
 
-Good Routine Names
-------------------
+### Good Routine Names
+
 Describe all the outputs and side effects of a routine in its name. If the name
 and long and silly, the routine should be broken up into smaller pieces.
 
@@ -632,13 +631,13 @@ Find conventional names for common operations. Databases have names such as
 Find(), Insert(), Create(), Remove(), Delete() and so on. Not thinking about the
 syntax saves a lot of brain power.
 
-How Long Can a Routine Be?
---------------------------
+### How Long Can a Routine Be?
+
 Let them grow to about 100, 200 lines. Anything more and you should try to break
 it up. 
 
-How to Use Routine Parameters
------------------------------
+### How to Use Routine Parameters
+
 Order routine parameters by the sequence of operations: input, modify and output.
 
 Similar routines should have their parameters ordered in similar ways.
@@ -667,34 +666,34 @@ parameter. (INVOKE fun1(xCord = latitude, yCord = longitude, zCord = elevation))
 
 Make sure that the type of both formal and actual parameters match.
 
-Special Considerations in the Use of Functions
-----------------------------------------------
+### Special Considerations in the Use of Functions
+
 A function is a routine that returns a value; a procedure is a routine that does
 not.
 
 Use a function if the primary purpose of the routine is to return the value
 indicated by the function name. Otherwise, use a procedure.
 
-Macro Routines and Inline Routines
-----------------------------------
+### Macro Routines and Inline Routines
+
 Use macros very sparingly as they are hard to understand, test and debug. The
 same is true of inline routines as they break encapsulation.
 
-Chapter 8: Defensive Programming
---------------------------------
+## Chapter 8: Defensive Programming
+
 Assume that bad data will be passed to your routines and prepare the routines for
 handling bad data.
 
-Protecting Your Program from Invalid Inputs
--------------------------------------------
+### Protecting Your Program from Invalid Inputs
+
 Check values from external sources.
 
 Check values of routine input parameters.
 
 Decide what to do when you detect bad data.
 
-Assertions
-----------
+### Assertions
+
 Assertions state that a condition is true. Often used to document and check if
 ana sumption is satisfied.
 
@@ -712,8 +711,8 @@ external source.
 It might be beneficial to use both error handling code and assertions to handle
 the same error.
 
-Error Handling Techniques
--------------------------
+### Error Handling Techniques
+
 Return a neutral value, a value that is known to be harmless.
 
 Ignore an incorrect value in a stream of values and take the next value that is
@@ -746,8 +745,8 @@ result is better then shutting down.
 Decide on the error handling design at the architecture level and follow it
 consistently throughout the system. 
 
-Exceptions
-----------
+### Exceptions
+
 Exceptions are a specific means by which code can pass along errors or
 exceptional events to the code that called it.
 
@@ -780,8 +779,8 @@ Always consider using the alternative to exceptions. It is perfectly valid to
 abort and release all resources when a condition isn't satisfied and let the
 user rerun the program with correct input.
 
-Barricade Your Program to Contain the Damage Caused by Errors
--------------------------------------------------------------
+### Barricade Your Program to Contain the Damage Caused by Errors
+
 Barricade are a set of programs that check all input data and only allow data
 past the barricade if and only if it is clean and safe.
 
@@ -791,18 +790,18 @@ Routines outside the barricade can never assume the data is clean and have to
 use error handling code, but routines inside the barricade should use assertions
 as they assume the data is clean and that the barricades are working properly.
 
-Debugging Aids
---------------
+### Debugging Aids
+
 Use some resources during development to make sure you can find error easily.
 
 Use offensive programming. Try to make the program fail. Fill up the memory,
 assert conditions, make the program fail hard if it detects an error.
 
-Determining How Much Defensive Programming to Leave in Production Code
-----------------------------------------------------------------------
+### Determining How Much Defensive Programming to Leave in Production Code
 
-Chapter 9: Pseudocode Programming Process
-=========================================
+
+## Chapter 9: Pseudocode Programming Process
+
 
 A way of designing, documenting and improving classes and routines.
 
@@ -873,11 +872,11 @@ get verified
 - hacking?: compile to find errors, it if works don't change it, but because
 it is not systematic, this approach will drive you into a corner 
 
-Chapter 10: General Issues in Using Variables
-=============================================
+## Chapter 10: General Issues in Using Variables
 
-Initializing Variables
-----------------------
+
+### Initializing Variables
+
 You should declare variables even if the compiler doesn't require you to.
 
 Initialize each variable as it’s declared.
@@ -897,8 +896,8 @@ Don't ignore your compiler's warnings when it comes to variables.
 Initialize working memory at the beginning of your program. Fill it with zeroes 
 as it is a neutral value.
 
-Scope
------
+### Scope
+     
 Scope or visibility refers to the extent to which your variables are known and 
 can be referenced throughout a program.
 
@@ -920,19 +919,19 @@ By minimizing scope, it is harder to write the program because the area where
 you can access the variable is limited, however, the program becomes much easier
 to read.
 
-Persistence
------------
+### Persistence
+           
 Until the end of the block of code, until they are explicitly deleted, until the 
 end of the program or they persist forever.
 Make sure variables persist for the shortest possible time.
 
-Binding time
-------------
+### Binding time
+            
 Describes when the variable and its value are bound together. It is better to 
 bind them later, so your code can be more flexible.
 
-Relationship Between Data Types and Control Structures
-------------------------------------------------------
+### Relationship Between Data Types and Control Structures
+                                                      
 Sequential data translates to sequential statements in a program.
 
 Selective data translates to if and case statements in a program.
@@ -940,21 +939,21 @@ Selective data translates to if and case statements in a program.
 Iterative data translates to for, repeat, and while looping structures in a 
 program.
 
-Each Variable for Exactly One Purpose
--------------------------------------
+### Each Variable for Exactly One Purpose
+                                     
 Use a single variable for a single purpose.
 
 Avoid hidden meanings in variables such as using it to store a return value, 
-unless it is -1 which means that an error occurred. It is fine to return an error
+unless it is  1 which means that an error occurred. It is fine to return an error
 code, but you must catch it as soon as possible to avoid confusion.
 
 Make sure that all declared variables are used.
 
-Chapter 11: The Power of Variable Names
-=======================================
+## Chapter 11: The Power of Variable Names
 
-Choosing Good Names
--------------------
+
+### Choosing Good Names
+
 The name should fully and accurately describe the entity the variable represents.
 
 Names should be specific, descriptive and as short as possible. Don't use 
@@ -968,8 +967,8 @@ for short scopes, longer names for longer scopes.
 Qualifiers such as Max, Total, Average should be at the end of the name, unless 
 there is a very specific reason why it shouldn't be.
 
-Naming Specific Types Of Data
------------------------------
+### Naming Specific Types Of Data
+
 Loop indexes: if loops are nested, use descriptive names, but if there is a 
 single simple loop, you can use one letter names.
 
@@ -987,8 +986,8 @@ remember to sets of names and the way they are paired up.
 Constants: capitalized and descriptive, not literal (FIVE is bad, CYCLES_NEEDED 
 is good).
 
-Naming conventions
-------------------
+### Naming conventions
+
 They create an easily recognisable pattern which aids the reader.
 
 Differentiate between variable names and routine names. Example: variableName vs.
@@ -1002,8 +1001,8 @@ enumerated types, input only parameters.
 Format names by using either CamelCase or underscore (_). Underscore (_) seems 
 to be a more readable.
 
-Kinds of name to avoid
-----------------------
+### Kinds of name to avoid
+
 Avoid misleading names or abbreviations. Avoid names with similar meanings. 
 Avoid variables with different meanings but similar names.
 
@@ -1013,11 +1012,11 @@ Don’t differentiate variable names solely by capitalization.
 
 Don’t use names that are totally unrelated to what the variables represent.
 
-Chapter 12: Fundamental Data Types
-==================================
+## Chapter 12: Fundamental Data Types
 
-Numbers in general
-------------------
+
+### Numbers in general
+
 Avoid magic number because they are hard to maintain. Zeroes and ones are 
 alright to use.
 
@@ -1027,12 +1026,12 @@ occur.
 Avoid mixed type comparison. Comparing a float to an integer will almost always 
 result in a false value.
 
-Integers
---------
+### Integers
+
 Be careful with integer division and overflow.
 
-Float
------
+### Float
+
 Avoiding adding or subtracting number that have greatly different magnitudes. 
 
 Avoid equality comparisons, as they will almost always be false.
@@ -1040,8 +1039,8 @@ Avoid equality comparisons, as they will almost always be false.
 Anticipate rounding errors. There are language libraries which implement data 
 types sensitive to these errors.
 
-Characters and strings
-----------------------
+### Characters and strings
+
 Avoid magic characters and string.
 
 Watch for off by one errors.
@@ -1053,8 +1052,8 @@ a program.
 
 Decide on a consistent conversion strategy among string types.
 
-Boolean variables
------------------
+### Boolean variables
+
 Use boolean variables to indicate what the if test is suppose to do (check for 
 completion, error condition or something else).
 
@@ -1062,18 +1061,18 @@ Use boolean variables to simplify tests with many comparisons.
 
 Create your own boolean type if there is no such thing in the language.
 
-Enumerated types
-----------------
+### Enumerated types
 
-Named constants
----------------
+
+### Named constants
+
 Use named constants in data declarations as well as in parts of the program that 
 needs them. 
 
 Avoid literal values. Make them into constants.
 
-Arrays
-------
+### Arrays
+
 Make sure that all array indexes are within the bounds of the array.
 
 Consider using container classes that can only be accessed sequentially instead 
@@ -1083,12 +1082,13 @@ Check the end point of an array.
 
 If an array is multidimensional, understand the correct order of subscripts.
 
-Creating Your Own Types
------------------------
+### Creating Your Own Types
+
 Create your own type even if it is the same as integer or float. This is because
 if you ever need to change the data type, you can simply change the type of your
 custom created type, whereas if you didn't create a custom type, you would have 
 to search for all the types and change them.
 
-Chapter 13: Unusual Data Types
-==============================
+## Chapter 13: Unusual Data Types
+
+

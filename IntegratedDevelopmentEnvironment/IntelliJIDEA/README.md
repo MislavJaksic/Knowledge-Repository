@@ -1,28 +1,28 @@
 ## [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 
-There is a student licence, a professional licence and also a free licence (Community Edition).
-Community Edition has quite a few restrictions (for example neither Node.js nor Django can be integrated).
+There is a student licence, a professional licence, but also a free licence (Community Edition).  
+Community Edition has quite a few restrictions (for example neither Node.js nor Django can be integrated).  
 
 ### [Installation](https://www.jetbrains.com/help/idea/install-and-set-up-product.html)
 
-Quite simple. Nothing out of the ordinary. Follow the online instructions.
+Quite simple. Nothing out of the ordinary. Follow the online instructions.  
 
 ### [Discover IntelliJ](https://www.jetbrains.com/help/idea/discover-intellij-idea.html)
 
-Create code/insert template: ALT+INSERT
+Create code/insert template: ALT+INSERT  
 
-Code Completion: CTRL+SPACE
+Code Completion: CTRL+SPACE  
 
 Show usages: CTRL+ALT+F7  
 Show implementations: CTRL+ALT+B  
 
-IntelliJ supports refactoring of all kinds.
+IntelliJ supports all kinds of refactoring.  
 
-Inspections and fixes: ALT+ENTER
+Inspections and fixes: ALT+ENTER  
 
-Reformat code: CTRL+ALT+L
+Reformat code: CTRL+ALT+L  
 
-Version Control: ALT+9
+Version Control: ALT+9  
 
 Compile/make: CTRL+F9  
 Run: SHIFT+F10  
