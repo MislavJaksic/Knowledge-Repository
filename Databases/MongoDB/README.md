@@ -213,7 +213,7 @@ var finalise = function (key, reduced_values) {
   return reduced_values;
 };
 // output: {key: "mmm", reduced_values: {count: 1, quantity: 5, average: 0.2}} and 
-//         {key: "nnn", reduced_values: {count: 3, quantity: 20, average: 6.6}}
+//         {key: "nnn", reduced_values: {count: 3, quantity: 20, average: 6.66}}
 
 // if a collection "map_reduce_example" already exists, merge it instead of overwritting
 // as input into map, consider only those that satisfy the condition "$gt: new Date('01/01/2012')"
@@ -240,6 +240,12 @@ db._collection.createIndex({_attribute: 1}) # 1 == ASCENDING, -1 == DESCENDING
 ```
 
 [Find out if your query uses an index](https://docs.mongodb.com/master/tutorial/analyze-query-plan/)
+
+```
+db._collection.find({_attribute: {$gte: 100}}).explain("executionStats")
+// if COLLSCAN exists in winningPlan, no index is used
+// if IXSCAN exists in winningPlan, an index is used
+```
 
 ## [Mongo replication](https://docs.mongodb.com/master/replication/)
 
