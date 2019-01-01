@@ -12,7 +12,6 @@ Latex files end with an .tax extension.
 Latex files have a preamble and a body.  
 Latex files can display images, tables, equations, hyperlinks and much more by importing a package.  
 
-
 ```latex
 % preamble: before the document body
 
@@ -28,11 +27,11 @@ Latex files can display images, tables, equations, hyperlinks and much more by i
 \usepackage{graphicx} % image package
 \graphicspath{ {images/} } % image package is told to look for pictures in folder "this_folder/images"
 
+\usepackage{float} % "place table at an exact point" package
 
 
 \title{First document} % part of almost every document
 \author{Hubert Farnsworth}
-\thanks{Thanks!}
 \date{February 2014} % use the command "\today" to use the compile time date
 
 
@@ -42,6 +41,11 @@ Latex files can display images, tables, equations, hyperlinks and much more by i
 
 
 \maketitle % make the preamble elements appear (title, author and date)
+
+
+
+\tableofcontents % create table of contents based on section, subsection and chapter commands
+                 % add others manually with \addcontentsline
 
 
 
@@ -55,10 +59,9 @@ Latex files can display images, tables, equations, hyperlinks and much more by i
 
 
 
-
 \begin{figure}[h] % figure (picture) construct
     \centering
-    \includegraphics[width=0.25\textwidth]{mozilla_logo} % display picture called "mozilla_logo" if it can be located by graphicx package
+    %\includegraphics[width=0.8\textwidth]{mozilla_logo} % display picture called "mozilla_logo" if it can be located by graphicx package
     \caption{text below the picture}
     \label{fig:picture_label}
 \end{figure}
@@ -80,7 +83,7 @@ Picture page reference: \pageref{fig:picture_label}
 
 
 
-Inline equation $E=mc^2$ stats and ends with a dollar sign.
+Inline equation $E=mc^2$ starts and ends with a dollar sign.
 
 \begin{equation} % display mode equation using amsmath package
 E=mc^2
@@ -106,9 +109,6 @@ Double backslash or newline command to insert a breakpoint. Not recommended.
 
 
 
-\tableofcontents % create table of contents based on section, subsection and chapter commands
-                 % add others manually with \addcontentsline
-
 \section{Numbered section (1.1 for example)}
  
 Text.
@@ -132,14 +132,15 @@ Latex table generator: https://www.tablesgenerator.com/
 
 \begin{center}
 
-\begin{table}
+\begin{table}[H]
 \centering
 
 \begin{tabular}{ |l|c|r| } % left, center and right aligned columns, | separated by a vertical line
- cell1 & cell2 & cell3 \\ % & to break table entry, \\ to go to the next table line
- cell4 & cell5 & cell6 \\  
- cell7 & cell8 & cell9   
-/hline                    % add horitontal line to the bottom of the table 
+\hline                   % add horitontal line to the top of the table 
+cell1 & cell2 & cell3 \\ % & to break table entry, \\ to go to the next table line
+cell4 & cell5 & cell6 \\  
+cell7 & cell8 & cell9 \\
+\hline                   % add horitontal line to the bottom of the table 
 \end{tabular}
 
 \caption{text below table}
@@ -272,7 +273,6 @@ File: \href{run:./file.txt}{File.txt}
 
 ### [Advanced: multiple columns](https://www.overleaf.com/learn/latex/Multiple_columns)
 
-
 ```latex
 \documentclass{article}
 \usepackage[utf8]{inputenc}
@@ -297,5 +297,44 @@ no information?  Is there...
 
 \end{multicols}
  
+\end{document}
+```
+
+### [Advanced: visualisation and plotting](https://www.overleaf.com/learn/latex/Pgfplots_package)
+
+```latex
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{pgfplots}
+\pgfplotsset{width=11cm,compat=1.15}
+
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}[
+    title={Temperature dependence of CuSO$_4\cdot$5H$_2$O solubility},
+    xlabel={Temperature [Celsius]},
+    ylabel={Solubility [g per 100 g water]},
+    xmin=0, xmax=100,
+    ymin=0, ymax=120,
+    legend pos=north west,
+    xmajorgrids=true,
+    ymajorgrids=true,
+    grid style=dashed,
+]
+
+\addplot[
+    color=blue,
+    mark=triangle,
+    ]
+    coordinates {
+    (0,23.1)(10,27.5)(20,32)(30,37.8)(40,44.6)(60,61.8)(80,83.8)(100,114)
+    };
+    \legend{CuSO$_4\cdot$5H$_2$O}
+    
+\end{axis}
+\end{tikzpicture}
+
 \end{document}
 ```

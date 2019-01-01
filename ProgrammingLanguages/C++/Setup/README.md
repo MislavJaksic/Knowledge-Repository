@@ -1,8 +1,13 @@
 ## Setup
 
-C is the first language (beside Pascal) that I learned... and forgot. It is compiled, just like Java; it is
-exceptionally fast, but it makes you juggle with memory allocation.
+C++ is a compiled, strongly typed language that allows the user to manipulate memory allocation.  
+C++ is very fast, but complex and verbose.  
 
-### [IDE: CodeBlocks](https://github.com/MislavJaksic/KnowledgeRepository/tree/master/IntegratedDevelopmentEnvironment/CodeBlocks)
+### Setting up without an IDE
 
-It is recommended that you install CodeBlocks, as it will help you get started with the language.
+I wouldn't recommend it. Linking, compiling and complex command line parameters make programming without an IDE very hard.  
+
+### [IDE: CodeBlocks](http://www.codeblocks.org/)
+
+CodeBlocks is a very simple C/C++ IDE for both Windows and Linux.  
+For more information, follow the [GitHub link](https://github.com/MislavJaksic/KnowledgeRepository/tree/master/IntegratedDevelopmentEnvironment/CodeBlocks).  

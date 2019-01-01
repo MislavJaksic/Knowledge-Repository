@@ -257,7 +257,7 @@ TODO
 
 ## [mongoimport](https://docs.mongodb.com/manual/reference/program/mongoimport/)
 
-Can import data in extended JSON, CSV or TSC format, UTF-8 encoding.  
+Mongo can import data in extended JSON, CSV or TSC format if it is UTF-8 encoded.  
 Use from the command line.  
 
 ```

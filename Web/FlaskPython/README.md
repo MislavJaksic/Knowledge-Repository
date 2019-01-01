@@ -1,63 +1,23 @@
 ## [Flask](http://flask.pocoo.org/)
 
-Flask is a Python microframework. By itself, it doesen't consign you to any database or abstraction layer.  
-If you need any of the mentioned functionalities, you can extend Flask using extensions.  
+Flask is a web microframework. By itself, it doesen't consign you to any database or data abstraction layer.  
+If you need the mentioned functionalities, you can extend Flask using extensions.  
 
 ### [Installation](http://flask.pocoo.org/docs/1.0/installation/#installation)
 
 Get Python 3.x.  
 Get the pip package.
-Get virtualenv package.
-Create a virtual environment inside a Flask project.
+Get the virtualenv package.
+Create a virtual environment inside a Flask project folder.  
 
-### [Tutorial](http://flask.pocoo.org/docs/1.0/tutorial/)
+### [Example project]()
 
-```
-Project layout:
-/home/user/Projects/flask-tutorial
-├── flaskr/
-│   ├── __init__.py
-│   ├── database.py
-│   ├── schema.sql
-│   ├── authentication.py
-│   ├── blog.py
-│   ├── templates/
-│   │   ├── base.html
-│   │   ├── authentication/
-│   │   │   ├── login.html
-│   │   │   └── register.html
-│   │   └── blog/
-│   │       ├── create.html
-│   │       ├── index.html
-│   │       └── update.html
-│   └── static/
-│       └── style.css
-├── tests/
-│   ├── conftest.py
-│   ├── data.sql
-│   ├── test_factory.py
-│   ├── test_database.py
-│   ├── test_authentication.py
-│   └── test_blog.py
-├── venv/
-├── setup.py
-├── MANIFEST.in
-└── other files...
-```
+See example project.
 
-#### Application Setup
+### Run Flask
 
-[Flask()](http://flask.pocoo.org/docs/1.0/api/#flask.Flask)  
-[_flask_instance.config.from_mapping()](http://flask.pocoo.org/docs/1.0/api/#flask.Config.from_mapping)  
-[_flask_instance.config.from_pyfile()](http://flask.pocoo.org/docs/1.0/api/#flask.Config.from_pyfile)  
-[_flask_instance.instance_path](http://flask.pocoo.org/docs/1.0/api/#flask.Flask.instance_path)  
-[SECRET_KEY](http://flask.pocoo.org/docs/1.0/config/#SECRET_KEY)  
-
-[Decorator @_flask_instance.route()](http://flask.pocoo.org/docs/1.0/api/#flask.Flask.route)  
-
-
-
-_folder: on the same level as venv by default, is a package (has __init__.py)  
+Key:  
+_folder: on the same level as venv by default; is a package (has __init__.py)  
 _application_factory: called "create_app" by default, returns a Flask instance  
 
 Linux and Mac:  
@@ -78,169 +38,102 @@ flask run
 Open: http://127.0.0.1:5000/hello
 ```
 
-#### Define and Access the Database
+### Flask
 
-[Namespace object g](http://flask.pocoo.org/docs/1.0/api/#flask.g)  
-
-[_flask_instance.current_app](http://flask.pocoo.org/docs/1.0/api/#flask.current_app)  
-[_flask_instance.open_resource()](http://flask.pocoo.org/docs/1.0/api/#flask.Flask.open_resource)  
-[_flask_instance.teardown_appcontext()](http://flask.pocoo.org/docs/1.0/api/#flask.Flask.teardown_appcontext)  
-
-[connect()](https://docs.python.org/3/library/sqlite3.html#sqlite3.connect)  
-[sqlite3.Row](https://docs.python.org/3/library/sqlite3.html#sqlite3.Row)  
-
-[command()](https://click.palletsprojects.com/en/7.x/api/#click.command)  
-[_clicl_group.add_command()](https://click.palletsprojects.com/en/7.x/api/#click.Group.add_command)  
-
-
-
-SQLite is a free, serverless, sequential database that is also built into Python.  
-
-g is a namespace object that can store data during an application context.  
-current_app allows access to the application without having to import it.  
-
-sqlite3.Row makes SQLite mimic Python tuples when returning data.  
-
-You can define, register and run a Flask command.  
+Sample layout:
 ```
-Define:   @click.command(_command_name)
-Register: during _flask_instance creation
-Run:      flask _command_name
+/home/user/Projects/flask-tutorial
+├── flaskr/
+│   ├── __init__.py
+│   ├── db.py
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── auth/
+│   │   │   └── ...
+│   │   └── blog/
+│   │       └── ...
+│   └── static/
+│       └── style.css
+├── tests/
+│   └── ...
+├── venv/
+├── setup.py
+└── MANIFEST.in
 ```
 
-#### Blueprints and Views
+__init__.py should return a Flask instance. Flask instance must know where it is located.  
+Flask instance can register teardown function (those activated upon exit), blueprints and views, command, ...  
+Flask config is a dictionary with a lot of default value. You can add more for later use. You can load it from a file or fill it with another dictionary.  
 
-[Blueprint()](http://flask.pocoo.org/docs/1.0/api/#flask.Blueprint)  
-[_flask_instance.register_blueprint()](http://flask.pocoo.org/docs/1.0/api/#flask.Flask.register_blueprint)  
-[_blueprint.route()](http://flask.pocoo.org/docs/1.0/api/#flask.Blueprint.route)  
-[_blueprint.before_app_request()](http://flask.pocoo.org/docs/1.0/api/#flask.Blueprint.before_app_request)  
+Flask has an instance folder, one which should store data that is not to be commited to version control.  
+Use open_resources to open files relative to the location of the Flask module.  
 
-[_request.method](http://flask.pocoo.org/docs/1.0/api/#flask.Request.method)  
-[_request.form](http://flask.pocoo.org/docs/1.0/api/#flask.Request.form)  
+[flask.Flask(import_name)](http://flask.pocoo.org/docs/1.0/api/#flask.Flask)  
+[_flask_instance.add_url_rule(rule)](http://flask.pocoo.org/docs/1.0/api/#flask.Flask.add_url_rule)  
+[_flask_instance.register_blueprint(blueprint)](http://flask.pocoo.org/docs/1.0/api/#flask.Flask.register_blueprint)  
+[_flask_instance.teardown_appcontext(f)](http://flask.pocoo.org/docs/1.0/api/#flask.Flask.teardown_appcontext)  
+[_flask_instance.cli (is click.Group)](http://flask.pocoo.org/docs/1.0/api/#flask.Flask.cli)  
+[click.Group.add_command(command)](https://click.palletsprojects.com/en/7.x/api/#click.Group)  
 
-[generate_password_hash()](http://werkzeug.pocoo.org/docs/0.14/utils/#werkzeug.security.generate_password_hash)  
-[check_password_hash()](http://werkzeug.pocoo.org/docs/0.14/utils/#werkzeug.security.check_password_hash)  
+[Instance folder](http://flask.pocoo.org/docs/1.0/config/#instance-folders)  
+[_flask_instance.open_resource(resource/file)](http://flask.pocoo.org/docs/1.0/api/#flask.Flask.open_resource)  
+[_flask_instance.default_config](http://flask.pocoo.org/docs/1.0/api/#flask.Flask.default_config)  
 
-[_connection.fetchone()](https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.fetchone)  
-[_connection.fetchall()](https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.fetchall)  
-[_connection.execute()](https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.execute)  
-[_connection.commit()](https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.commit)  
+### Proxies
 
-[url_for()](http://flask.pocoo.org/docs/1.0/api/#flask.url_for)  
-[redirect()](http://flask.pocoo.org/docs/1.0/api/#flask.redirect)  
-[flash()](http://flask.pocoo.org/docs/1.0/api/#flask.flash)  
-[render_template()](http://flask.pocoo.org/docs/1.0/api/#flask.render_template)  
+g is unique to each request. It can store and transport data between functions.  
+current_app points to _flask_instance handling the request. It allows you to interact with it without having to import it.  
+session acts like a signed cookie across multiple requests. You must have a secure SECRET_KEY.  
 
-[session](http://flask.pocoo.org/docs/1.0/api/#flask.session)   
+[g](http://flask.pocoo.org/docs/1.0/api/?highlight=g#flask.g)  
+[flask.current_app()](http://flask.pocoo.org/docs/1.0/api/#flask.current_app)  
+[flask.session](http://flask.pocoo.org/docs/1.0/api/?highlight=session#flask.session)  
 
-
+### Views and Blueprints
 
 View is a code that responds to a (HTTP) request. Views create a response.  
 
-Blueprint is a related group of Views.  
-Blueprints register views with the Flask instance.  
-Blueprints can prefix URLs they register.  
-Blueprint route functions and register their URLs.  
-Blueprints can register function that have to be executed before any other view functions.  
+Blueprint is a related group of Views. They route and register functions and their URLs.  
+Blueprints may prefix URLs they register.  
+Functions can be registered so that they are executed before anything else or upon entering a specific URL.  
 
-Request has a method. Some methods include: POST, GET...  
-Request can have a form dictionary which is filled when a user submits data through a HTML form.  
+[Blueprint()](http://flask.pocoo.org/docs/1.0/api/#flask.Blueprint)  
+[@_blueprint.route(rule, methods=(None))](http://flask.pocoo.org/docs/1.0/api/#flask.Blueprint.route)  
+[@_blueprint.before_app_request(f)](http://flask.pocoo.org/docs/1.0/api/#flask.Blueprint.before_app_request)  
 
-Storing passwords is a art unto itself. Make sure it is "salted" and hashed.  
+### Misc funcions
 
-Connections to the database can execute SQL queries, commit INSERTs and get results.  
+url_for() will generate a URL for you based on the routing anf function name.  
+redirect() will redirect the caller to a location and provide them with a response code.  
+render_template() will render a HTML template from the template folder.  
 
-Endpoint is a decorator that registers a function. Endpoint is a name associated with a view, a function name.  
-If an Endpoint is registered with a Blueprint, the Blueprint name is prepended to the Endpoint name.  
-Generate a URL for an endpoint, don't write out the URL.  
-Redirection means returning a response that directs a client to another URL.  
-Messages can be flashed to the user.  
-HTML templates can be rendered from their own folder.  
+[flask.url_for(endpoint)](http://flask.pocoo.org/docs/1.0/api/#flask.url_for)  
+[flask.redirect(location)](http://flask.pocoo.org/docs/1.0/api/#flask.redirect)  
+[flask.render_template(template)](http://flask.pocoo.org/docs/1.0/api/#flask.render_template)   
 
-Session is a dictionary that acts like a signed cookie across requests.  
+### Requests
 
-#### Templates and Static Files
+Request is what Flask recieves with every (HTTP) user request.
+They have a method and a form dictionary which stores data.  
 
-Templates are placeholder HTML files.  
-{{ }} denote an expression. {% %} denote a control flow statement.  
+[Request()](http://flask.pocoo.org/docs/1.0/api/#flask.Request)  
+[_request.method](http://flask.pocoo.org/docs/1.0/api/#flask.Request.method)  
+[_request.form](http://flask.pocoo.org/docs/1.0/api/#flask.Request.form)  
 
-#### Blog
+### Templates
 
+g is available in all templates.  
 
+Flask uses Jinja templates.  
+{% ... %} for Statements  
+{{ ... }} for Expressions  
+{# ... #} for Comments <- rare  
+#  ... ## for Line Statements <- rare  
 
-### [Quickstart](http://flask.pocoo.org/docs/1.0/quickstart/#quickstart)
+{% block _block_name %} will be overrriden by other templates which use {% extends "_HTML_file_name" %}.  
 
-To see how to set up an application, see "Larger Application".
-You can view the result on http://127.0.0.1:5000/.
-There are multiple [deployment options](http://flask.pocoo.org/docs/1.0/deploying/#deployment).
+[Jinja templates](http://jinja.pocoo.org/docs/2.10/templates/)  
 
-To swap between development and production mode use:
-```
-export FLASK_ENV=development # refreshes the service after each program change
-export FLASK_ENV=production
-```
+### Click commands
 
-url_for("_function_name", args...) - build and return a URL from .route() and args
-```
-Example:
-@app.route('/user/login/<username>')
-def profile(username):
-  return '{}\'s profile'.format(username)
-  
-url_for('profile', username='John Doe', unknown="hello") # returns /user/login/John%20Doe?unknown=hello
-```
-
-You can specify which HTTP methods you wil accept at that URL.
-Flask can server static files (even though that's the job of a server):
-```
-url_for('static', filename='style.css') # file is located in static/style.css
-```
-
-You can generate a web page from a template.
-All templates are located in the templates folder.
-```
-@app.route('/hello/<name>')
-def hello(name=None):
-    return render_template('hello.html', name=name)
-```
-```
-<!doctype html> <!- Can access request, session, g objects and get_flashed_messages() function -->
-<title>Hello from Flask</title>
-{% if name %}
-  <h1>Hello {{ name }}!</h1>
-{% else %}
-  <h1>Hello, World!</h1>
-{% endif %}
-```
-
-All info that the user sends is in the global request object.
-
-You can upload and serve files using Flask.
-
-TODO http://flask.pocoo.org/docs/1.0/quickstart/#cookies
-
-
-
-### [Patterns for Flask](http://flask.pocoo.org/docs/1.0/patterns/)
-
-#### [Larger Applications](http://flask.pocoo.org/docs/1.0/patterns/packages/)
-
-See flask_service_blueprint.zip file.
-
-#### [Uploading Files](http://flask.pocoo.org/docs/1.0/patterns/fileuploads/#uploading-files)
-
-```
-UPLOAD_FOLDER = '/path/to/the/uploads'
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
-
-app = Flask(__name__) # drop in a "Larger Application"
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-```
-
-### API
-
-[Request](http://flask.pocoo.org/docs/1.0/api/#flask.Request)
-* .method stores the HTTP metohd
-* .form stores form data (if POST or PUT methods are used)
-* .args.get("key", "") stores URL paramaters
-* .files["_HTML _attr_name"] stores uploaded files in a dictionary
+TODO
