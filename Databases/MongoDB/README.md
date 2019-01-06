@@ -162,12 +162,10 @@ mapReduce algorithm maps, combines, shuffles and reduces data from N nodes into 
 ...
 {
 _id: ObjectId("..."),
-cust_id: "abc123",
-ord_date: new Date("Oct 04, 2012"),
-status: 'A',
-price: 25,
-items: [{unit: "mmm", quantity: 5, price: 2.5},
-        {unit: "nnn", quantity: 5, price: 2.5}]
+customer_id: 1557,
+customer_country: USA,
+staff_id: 234,
+staff_country: Philippines
 }
 ...
 ```
@@ -176,52 +174,81 @@ items: [{unit: "mmm", quantity: 5, price: 2.5},
 // map function is applied to each document in the collection
 // input: a document
 var map = function() {
-  for (var i = 0; i < this.items.length; i++) {
-    var key = this.items[i].unit;
-    var value = {count: 1, quantity: this.items[i].quantity};
-    emit(key, value);
-  }
-};
-// output: {key: "mmm", value: {count: 1, quantity: 5}} and 
-//         {key: "nnn", value: {count: 1, quantity: 5}} and
-//         {key: "nnn", value: {count: 2, quantity: 15}
-
-// reduce function is applied to each group of values where all members of a group share a common key
-// input: values grouped by a common key
-//        keyUnit: "mmm", countObjectValues: {count: 1, quantity: 5} and
-//        keyUnit: "nnn", countObjectValues: [{count: 1, quantity: 5}, {count: 2, quantity: 15}]
-var reduce = function(keyUnit, countObjectValues) {
-  reduced_values = {count: 0, quantity: 0};
-
-  for (var i = 0; i < countObjectValues.length; i++) {
-    reduced_values.count += countObjectValues[i].count;
-    reduced_values.quantity += countObjectValues[i].quantity;
-  }
-
-  return reduced_values;
-};
-// output: {keyUnit: "mmm", reduced_values: {count: 1, quantity: 5}} and 
-//         {keyUnit: "nnn", reduced_values: {count: 3, quantity: 20}}
-
-// finalise function is applied to each reduced value and their key
-// input: reduced values and their key
-//        {key: "mmm", reduced_values: {count: 1, quantity: 5}} and 
-//        {key: "nnn", reduced_values: {count: 3, quantity: 20}}
-var finalise = function (key, reduced_values) {
-  reduced_values.average = reduced_values.quantity / reduced_values.count;
+  let staff_id = this.staff_id
+  let staff_country = this.staff_country
   
+  let customer_id = this.customer_id
+  let customer_country = this.customer_country
+  
+  if (staff_country === "Philippines") {
+    let key = staff_id
+    let value = {"id":[customer_id], "country":[customer_country]}
+    
+    emit(key, value)
+  }
+};
+// output: {key: "234", value: {"id": [1557], "country": [USA]}} and other key-value pairs
+
+// input: key and its grouped up values
+//        {key: "234", value: {"id": [1557], "country": [USA]}} and
+//        {key: "567", value: [{"id": [1544], "country": [Austria]}, {"id": [123], "country": [Hungary]}, {"id": [123], "country": [Hungary]}]}
+// key value pairs are group by key and the reduce function is applied to each key group
+// requirements: reduce function output must be the same as the map function output
+// that is because a reduce function may be called multiple times for each key
+var reduce = function(key, values) {
+  let reduced_values = {"id":[], "country":[]}
+
+  for (var i = 0; i < values.length; i++) {
+    let value = values[i]
+    let customer_id = value.id
+    let customer_country = value.country
+    
+    reduced_values.id.push(customer_id)
+    reduced_values.country.push(customer_country)
+  }
+
   return reduced_values;
 };
-// output: {key: "mmm", reduced_values: {count: 1, quantity: 5, average: 0.2}} and 
-//         {key: "nnn", reduced_values: {count: 3, quantity: 20, average: 6.66}}
+// intermediate output: {key: "234", value: {"id": [1557], "country": [USA]}} and
+//                      {key: "567", value: [{"id": [1544, 123], "country": [Austria, Hungary]}, {"id": [123], "country": [Hungary]}]}
+// final output: {key: "234", value: {"id": [1557], "country": [USA]}} and
+//               {key: "567", value: {"id": [1544, 123, 123], "country": [Austria, Hungary, Hungary]}}
 
-// if a collection "map_reduce_example" already exists, merge it instead of overwritting
-// as input into map, consider only those that satisfy the condition "$gt: new Date('01/01/2012')"
+// input: reduced values and their key
+//        {key: "234", value: {"id": [1557], "country": [USA]}} and
+//        {key: "567", value: {"id": [1544, 123, 123], "country": [Austria, Hungary, Hungary]}}
+// allows for some final alterations to the reduced values
+var finalise = function (key, reduced_values) {
+  let final_reduced_values = {"id":[], "country":[]}
+  let distincter = []
+
+  let ids = reduced_values.id
+  let countries = reduced_values.country
+
+  for (let i = 0; i < ids.length; i++) {
+    let id = ids[i]
+    let country = countries[i]
+
+    if (distincter.indexOf(id) === -1) {
+      distincter.push(id)
+
+      final_reduced_values.id.push(id)
+      final_reduced_values.country.push(country)
+    }
+  }
+  
+  return final_reduced_values;
+};
+// output: {key: "234", value: {"id": [1557], "country": [USA]}} and
+//         {key: "567", value: {"id": [1544, 123], "country": [Austria, Hungary]}}
+
+// if a collection "map_reduce_example" already exists, merge instead of overwritting
+// as input into map, consider only those that satisfy the condition "$gt: 55"
 db.orders.mapReduce(
   map,
   reduce,
   {out: {merge: "map_reduce_example"},
-   query: {ord_date: {$gt: new Date('01/01/2012')}},
+   query: {"staff:id": {$gt: 55}},
    finalize: finalise}
 )
 ```
