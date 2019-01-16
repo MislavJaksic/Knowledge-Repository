@@ -338,3 +338,137 @@ no information?  Is there...
 
 \end{document}
 ```
+
+### [Advanced: bibliography](https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX)
+
+```latex
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage[english]{babel}
+
+\usepackage{biblatex} %Imports biblatex package
+\addbibresource{sample.bib} %Import the bibliography file
+
+\begin{document}
+Let's cite! The Einstein's journal paper \cite{einstein} and the Dirac's book \cite{dirac} are physics related items. 
+
+\printbibliography %Prints bibliography
+
+\end{document}
+
+```
+
+### [Advanced: presentation](https://www.overleaf.com/learn/latex/Beamer)
+
+```latex
+\documentclass{beamer}
+
+usepackage[utf8]{inputenc}
+
+\mode<presentation> {
+\usetheme{Madrid}
+}
+
+\title[Short title]{Long title} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{John Doe} % Your name
+\institute[Institute] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Full institute name \\ % Your institution for the title page
+}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+\section{First section}
+
+\begin{frame}
+\frametitle{Title}
+
+\begin{block}{Block title}
+A block of text
+\end{block}
+
+\begin{itemize}
+\item Item one
+\item Item two
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Two columns}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+
+\column{.45\textwidth} % Left column and width
+\textbf{Heading}
+\begin{enumerate}
+\item Statement
+\item Explanation
+\item Example
+\end{enumerate}
+
+\column{.5\textwidth} % Right column and width
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
+
+\end{columns}
+\end{frame}
+
+\section{Second section}
+
+\begin{frame}
+\frametitle{Table}
+\begin{table}
+\begin{tabular}{l l l}
+\toprule
+\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+\midrule
+Treatment 1 & 0.0003262 & 0.562 \\
+Treatment 2 & 0.0015681 & 0.910 \\
+Treatment 3 & 0.0009271 & 0.296 \\
+\bottomrule
+\end{tabular}
+\caption{Table caption}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Theorem}
+\begin{theorem}[Mass--energy equivalence]
+$E = mc^2$
+\end{theorem}
+\end{frame}
+
+\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+\frametitle{Verbatim}
+\begin{example}[Theorem Slide Code]
+\begin{verbatim}
+\begin{frame}
+\frametitle{Theorem}
+\begin{theorem}[Mass--energy equivalence]
+$E = mc^2$
+\end{theorem}
+\end{frame}\end{verbatim}
+\end{example}
+\end{frame}
+
+\begin{frame}
+\frametitle{Figure}
+Uncomment the code on this slide to include your own image from the same directory as the template .TeX file.
+%\begin{figure}
+%\includegraphics[width=0.8\linewidth]{test}
+%\end{figure}
+\end{frame}
+
+\end{document}
+```
