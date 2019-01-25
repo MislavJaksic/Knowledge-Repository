@@ -1,4 +1,4 @@
-# Knowledge Repository
+## Knowledge Repository
 
 The Knowledge Repository is a collection of notes, reference sheets, book summaries and programs about software
 engineering. Software engineering is a broad subject which is why the repository is divided into multiple
