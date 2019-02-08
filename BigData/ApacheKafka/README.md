@@ -1,7 +1,6 @@
 ## [Kafka](https://kafka.apache.org/)
 
-Kafka is a distributed streaming platform. It sends data between programs using a publish-subscribe
-mechanism. 
+Kafka is a distributed streaming platform. It brokers data between programs using a publish-subscribe mechanism. 
 
 ### [Introduction](http://kafka.apache.org/intro)
 
@@ -9,20 +8,22 @@ Kafka is run as a cluster; stores streams of "records" in categories called "top
 
 Producer: publish records to topics.  
 Consumer: subscribe to topics and process streams of records.  
-Streams: application as a stream processor; take input stream from topic and transform into an output
-stream which outputs to a topic.  
+Streams: application as a stream processor; take the input stream from a topic and transform it into an output stream which outputs to a topic.  
 Connector: connect topics to existing systems.  
 
-Topic: category/feed to which records are published; a partitioned log; partition is a sequence of records;
-has a retention policy;   
+Topic: category/feed to which records are published; has a partitioned log.  
+Each partition in a log is ordered and immutable sequence of records. Partitions may be scattered over many nodes. Each record has an offset. The Kafka cluster controls when to delete the records using a retention policy.  
 
 ### [Quickstart](http://kafka.apache.org/quickstart)
 
-Both Java needs to be installed and configured.
+Java needs to be installed and configured.
 
-First, download and install Kafka.
+First, download and install Kafka using a binary.
+```
+tar -xzf kafka_x.x-x.x.x.tgz
+```
 
-To start Kafka start Zookeeper and Kafka:  
+To start Kafka, first start Zookeeper:  
 ```
 ZooKeeper: bin/zookeeper-server-start.sh config/zookeeper.properties
 Kafka: bin/kafka-server-start.sh config/server.properties
