@@ -10,4 +10,6 @@ highly recommended to develop Java programs in an IDE because setting up unit te
 
 * ProjectManagement: about managing dependencies, deployment, installation, program packaging
 
+* Spring: about a popular open source framework
+
 * UtilityPrograms: about very useful less well known programs and tools

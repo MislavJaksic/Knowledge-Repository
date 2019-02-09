@@ -51,7 +51,7 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --f
 
 Set up broker cluster: TODO;
 
-Kafka Connect is a construct that import and exports data to and from Kafka.
+Kafka Connect is a construct that imports and exports data to and from Kafka.
 ```
 Import/export connector pair: bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties config/connect-file-sink.properties
 [script_name] [connect_config] [connector_one_config] [connector_two_config]
@@ -61,6 +61,8 @@ Configuration files deermine how Connectors behave.
 Connect to import/export data: import/export data from and to Kafka; runs connectors; 
 
 Process data: TODO
+
+Kafka AdminClient is a construct that manages information about Kafka. You can also take a look at ZookeeperClient.  
 
 [Useful Kafka operations](http://kafka.apache.org/documentation/#operations) 
 
