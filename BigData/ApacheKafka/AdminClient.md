@@ -4,32 +4,30 @@
 
 Resources: broker, topic or unknown  
 
-Create Admin Client  
+Create Admin Client -> specify at least a bootstrap.server  
 
+Create Topic -> create a new topic  
+Create Topic Partitions -> increase the number of topic partitions  
 Create ACL -> Access Control List, security  
 Create Delegation Token -> Kerberos, security  
-Create Topic Partitions -> increase the number of topic partitions  
-Create Topic -> create a new topic  
 
-Describe ALC  
-Describe Cluster  
-Describe Config  
-Describe Consumer Group  
-Describe Delegation Token  
-Describe Log Dir  
-Describe Topic  
+Describe Topic -> describe topic in cluster  
+Describe Cluster -> get nodes in cluster  
+Describe Config -> get broker/topic configs  
+Describe Consumer Group -> describe group in cluster  
+Describe Log Dir -> get info of all logs on a broker  
+Describe ALC -> security  
+Describe Delegation Token -> security  
 
 Update Resource Configs -> only topics currently  
 
-Delete ALC  
-Delete Consumer Group  
-Delete Records  
-Delete Topics  
-Expire Delegation Token  
+Delete Topics -> delete topic  
+Delete Records -> delete records with offset smaller then x  
+Delete Consumer Group -> delete group  
+Delete ALC -> security  
+Expire Delegation Token -> security  
 
-List Consumer Group Offset  
-List Consumer Groups  
-List Topics  
-Metrics  
-
-TODO Look at ZkClient methods  
+List Consumer Group Offset -> get offset list  
+List Consumer Groups -> get group list  
+List Topics -> get topic list  
+Metrics -> get AdminClient metadata  

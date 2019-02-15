@@ -49,7 +49,9 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --f
 [script_name] [command] [bootstrap_server_to_connect] [topic_name] [begin_reading_from/offset]
 ```
 
-Set up broker cluster: TODO;
+Kafka cluster can be made of only one node.  
+To create a multi node cluster start multiple Kafka instances.  
+Note that they should all have different broker IDs and ports.  
 
 Kafka Connect is a construct that imports and exports data to and from Kafka.
 ```
@@ -135,3 +137,15 @@ transforms.InsertSource.static.value=test-file-source // -> field value
 Creating a Connector:  
 SourceConnector or SinkConnector.  
 Implement two interfaces: Connector and Task.  
+
+## Nomenclature
+
+Cluster - a group of Kafka instances/nodes/servers  
+Broker - a deamon in charge of a node/server  
+Node - a topic partition store in a cluster overseen by a broker  
+Topic - a category/feed to which records are published  
+Partition - a partitioned log owned by a topic  
+Replica - a copy of the cluster leader node  
+Consumer - an application, a program which reads data to a topic  
+Producer - an application, a program which publishes data to a topic  
+Stream - an application, a program which reads data, transforms data and publishes the same to another topic  
