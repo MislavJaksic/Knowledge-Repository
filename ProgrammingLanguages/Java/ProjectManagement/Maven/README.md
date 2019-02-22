@@ -1,102 +1,215 @@
-## Maven
+## [Maven](https://maven.apache.org/)
 
-Maven is a Java project management tool. It allows authors to easily publish their work and allows users to automatically fetch all the dependencies.
+Maven is a Java project management tool. It takes care of builds, docs, reports, dependencies, SCMs, releases and distribution.  
+Maven allows authors to package and publish projects with all their dependencies and plugins.  
+Maven allows users to run the project with out of the box.  
 
-### Installation
+### [Installation](https://maven.apache.org/install.html)
 
-Download Maven. Unpack with "tar xzvf apache-maven-x.y.z-bin.tar.gz".  
-Add "export PATH=/your/path/to/apache-maven-x.y.z/bin:$PATH" to .bashrc.  
-Set JAVA_HOME if it isn't already with "export JAVA_HOME=/your/path/to/java/jdk-x.y.z" to .bashrc.  
-JRE will not do! Use a JDK.  
-Test with "mvn -v".  
+IDEs such as Eclipse Java comes with Maven already preinstalled.  
 
-On the other hand, you could just use an IDE which comes with Maven.
+On Linux (Ubuntu):  
+```
+:$ mvn ->  sudo apt install maven
+:$ sudo apt install maven -> maven is installed
+```
 
-### [Short introduction into Maven](http://java.zemris.fer.hr/nastava/opjj/book-2015-09-30.pdf)
+On Linux (Ubuntu):  
+1) [Download Maven](https://maven.apache.org/download.cgi), suggested archive: binary tar.gz
+2) Unpack and install the archive; see [Linux commands](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/Linux)
+3) Execute the following commands:
+```
+:$ pwd -> /
+:$ nano .bashrc -> add "export PATH=/your/path/to/apache-maven-x.y.z/bin:$PATH"
+                -> add "export JAVA_HOME=/your/path/to/java/jdk-x.y.z"; JRE will not do!
+:$ mvn -v -> Apache Maven x.y.z ...
+```
 
-Each project has a groupId, artifactId and version.  
-Artifact is just another word for project name.  
+### [Maven in 5 Minutes](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
 
-Maven Central Repository is a public .jar warehouse where the dependencies dwell.
+To create a Maven Project execute:  
+```
+:$ mvn archetype:generate -DgroupId=mjaksic -DartifactId=hello-world -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+```
+More about the [Archetype plugin](https://maven.apache.org/guides/introduction/introduction-to-archetypes.html).
 
-### [Maven in 5 Minutes](https://maven.apache.org/users/index.html)
+Some Maven Archetype D parameters:  
+```
+-DgroupId=_group_id -> author/organisation ID; example "mjaksic"
+-DartifactId=_artifact_id -> project ID; example "hello-world"
+-DarchetypeArtifactId=_archetype_artifact -> Archetype plugin artifact; example "maven-archetype-quickstart"
+-DarchetypeVersion=1.4 -> -
+-DinteractiveMode=false -> -
+```
 
-Create a directory and execute the following: "mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false".  
-Generate is a goal, archetype is a plugin.  
+Archetype plugin generates a Maven Project.  
+Project Object Model (POM) is the most important Maven settings file, "pom.xml".  
 
-This will create a directory "my-app". In it, there are "src" and "pom.xml" files.  
-"pom.xml" is Project Object Model and where the Maven project can be configured.  
+Maven Lifecycle Phases (they map to Maven Goals):
+1) validate
+2) compile
+3) test
+4) package
+5) integration-test
+6) verify
+7) install
+8) deploy
 
-By executing a phase "mvn package", Maven will complete all phases up to and including the one specified.
+* clean
+* site
 
-### [Introduction to Maven](https://maven.apache.org/guides/getting-started/index.html)
+### [Maven Getting Started Guide](https://maven.apache.org/guides/getting-started/index.html)
 
-Archetype is a project template.
+Archetype is a Maven plugin, a templating toolkit.  
 
-"pom.xml" is of extreme importance. Here are some of the more important settings:
-* project - top-level element in all Maven poms
-* modelVersion - POM version
-* groupId - creator's ID
-* artifactId - JAR or project name
-* packaging - package type for the project (e.g. JAR, WAR, EAR, etc.)
-* version - project version
-* name - displayed project name
-* url - project site location
-* description - project description
+"pom.xml" contents:  
+```
+<project xmlns="..."> -> top element
+  <modelVersion>4.0.0</modelVersion> -> pom.xml version
+  
+  <groupId>mjaksic</groupId> -> author/organisation ID
+  <artifactId>hello-world</artifactId> -> project ID
+  
+  <packaging>jar</packaging> -> how to package this project
+  
+  <version>1.0-SNAPSHOT</version> -> project version
+  <name>Maven Quick Start Archetype</name> -> project name
+  <url>http://maven.apache.org</url> -> project url
+  
+  <dependencies> -> project dependencies; enables "import"
+    <dependency> -> sample dependency, JUnit 4
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
+```
+
+To compile/test the project execute:  
+```
+:$ mvn compile -> compile
+:$ mvn test -> compile and test
+```
+
+To package/install the project (for example construct a JAR) execute:  
+```
+:$ mvn package -> pack into JAR/WAR/...
+:$ mvn install -> installs the JAR/WAR/...
+```
+
+You can add plugins and configure them in "pom.xml" like:  
+```
+...
+<build>
+  <plugins> -> plugins; they look like dependencies
+    <plugin> -> sample plugin
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.3</version>
+      <configuration> -> plugin configuration
+        <source>1.5</source>
+        <target>1.5</target>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+...
+```
+
+You can add resources to the project package (JAR/WAR/...) such as properties.  
+Place the properties/settings in:  
+```
+".../resources/META-INF/_settings_file_name.properties"
+```
+
+Build time values can be filtered/referenced from inside the resource file/"pom.xml":
+```
+<build>
+  <resources>
+    <resource>
+      <directory>src/main/resources</directory>
+      <filtering>true</filtering>
+    </resource>
+  </resources>
+</build>
+```
+```
+<properties>
+  <_property_name>_property_value</_property_name>
+</properties>
+```
+
+External dependencies must have at least four elements:  
+```
+...
+<dependency>
+  <groupId>mjaksic</groupId>
+  <artifactId>hello-world</artifactId>
+  <version>0.1</version>
+  <scope>compile/test/runtime</scope>
+</dependency>
+...
+```
+You can search Maven Repositories for external dependencies.  
+
+Deploy package (JAR/WAR/...) to a remote/private repository.  
+TODO  
+
+Generate documentation.  
+TODO  
+
+### [Configuring Maven](https://maven.apache.org/guides/mini/guide-configuring-maven.html)
+
+Three levels of configuration.  
 
 TODO
 
-### Maven pom.xml
+### [Introduction to Repositories](https://maven.apache.org/guides/introduction/introduction-to-repositories.html)
 
-Add the first plugin if you want to run the project with "mvn exec:java".  
-Add the second plugin to force the correct Java version.
-```
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>exec-maven-plugin</artifactId>
-            <version>1.2.1</version>
-            <configuration>
-                <mainClass>MAIN_CLASS</mainClass>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.7.0</version>
-            <configuration>
-                <source>DESIRED_JAVA_VERSION</source>
-                <target>DESIRED_JAVA_VERSION</target>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
-```
+A Maven repository in holds artifacts and dependencies.  
 
-Add to package the project into a specific format. 
-```
-<packaging>jar</packaging>
-```
+TODO
 
-Add dependencies for each external API.
-```
-<dependencies>
-    <dependency>
-        <groupId>GET_FROM</groupId>
-        <artifactId>MAVEN</artifactId>
-        <version>CENTRAL_REPOSITORY</version>
-    </dependency>
-</dependencies>
-```
+### [Introduction to the Dependency Mechanism](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html)
 
-### Maven plugins
+A core feature of Maven.  
 
-https://maven.apache.org/plugins/index.html
+TODO  
 
-There are a lot of plugins for Maven.  
-Some are officially supported, some are at code.google.com or MojoHaus.  
+### [Maven POM XML Descriptor](https://maven.apache.org/ref/3.6.0/maven-model/maven.html)
 
-https://www.mojohaus.org/exec-maven-plugin/usage.html:
-* run project from command line with "mvn exec:java"
-* add <mainClass> into pom to specify where the main class is located
+TODO  
+
+### [Creating a site](https://maven.apache.org/guides/mini/guide-site.html)
+
+TODO
+
+### [Available Plugins](https://maven.apache.org/plugins/)
+
+There are build plugins.  
+There are reporting plugins.  
+There are unofficial plugins.  
+
+TODO  
+
+### [MojoHaus Plugins](https://www.mojohaus.org/plugins.html)
+
+TODO  
+
+### [Guide to Configuring Plug-ins](https://maven.apache.org/guides/mini/guide-configuring-plugins.html)
+
+TODO
+
+### [Archetype plugin](https://maven.apache.org/guides/introduction/introduction-to-archetypes.html)
+
+Maven Project templating toolkit.  
+
+TODO
+
+### [Maven Release Plugin](https://maven.apache.org/maven-release/maven-release-plugin/)
+
+Release a project with Maven.  
+
+TODO  

@@ -12,7 +12,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class CalculatorTests {
 	/*
-	 * Instantiated for each test.
+	 * Instantiated for each test. A fixture.
 	 */
 	Calculator calculator = new Calculator();
 	
