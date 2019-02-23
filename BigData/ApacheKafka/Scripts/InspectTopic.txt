@@ -1,0 +1,3 @@
+bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic replicated_test
+
+bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic partitioned_test

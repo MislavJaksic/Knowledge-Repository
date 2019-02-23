@@ -1,10 +1,12 @@
-## Kafka Admin Client  
+## AdminClient
 
-### Capabilities  
+Kafka AdminClient manages topics, brokers and security.  
+
+### Functionality
 
 Resources: broker, topic or unknown  
 
-Create Admin Client -> specify at least a bootstrap.server  
+Create Admin Client -> specify at least the bootstrap.server  
 
 Create Topic -> create a new topic  
 Create Topic Partitions -> increase the number of topic partitions  

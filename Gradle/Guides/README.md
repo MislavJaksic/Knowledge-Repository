@@ -2,7 +2,8 @@
 
 ### [Build scans](https://guides.gradle.org/creating-build-scans/)
 
-Build scan is a record of a build.  
+Build scan is a record of a build: what happened and why.  
+
 Construct it with:  
 ```
 ./gradlew build --scan

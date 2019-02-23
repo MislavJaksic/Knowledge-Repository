@@ -1,6 +1,16 @@
 ## Gradle
 
+Gradle packages projects for deployment.  
+Gradle has a lot of plugins and automation tools.  
+Gradle scales as your project grows.  
+
 ### [Install](https://gradle.org/install/)
 
 Make sure you have Java 7 or greater.  
-Install Gradle either manually, using a command line installation tool or through Gradle wrapper.  
+
+Gradle can be installed:  
+* using a package manager
+* manually
+* with Gradle Wrapper
+
+IDEs come with Gradle already installed.  
