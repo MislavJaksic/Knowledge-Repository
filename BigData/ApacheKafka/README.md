@@ -22,7 +22,7 @@ Java needs to be installed and configured.
 
 First, download and install Kafka using a binary.
 ```
-tar -xzf kafka_x.x-x.x.x.tgz
+$: tar -xzf kafka_x.x-x.x.x.tgz
 ```
 
 #### Step 2

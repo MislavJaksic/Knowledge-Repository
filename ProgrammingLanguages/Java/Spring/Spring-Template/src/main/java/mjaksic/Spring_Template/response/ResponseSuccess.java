@@ -1,4 +1,4 @@
-package mjaksic.Spring_Template.spring;
+package mjaksic.Spring_Template.response;
 
 public class ResponseSuccess {
 	private final boolean is_successful;

@@ -39,3 +39,12 @@ Add a Springfox and Swagger UI dependencies.
 Add a SwaggerConfig bean.  
 
 Visit localhost:8080/swagger-ui.html.  
+
+### Configuration and properties file
+
+Create or find an "application.properties" file under "src/main/resources":  
+```
+conf.secret-number = 42
+```
+Create a Java Bean for the configuration and annotate it.  
+Annotate the configuration Bean where you want to use it.  

@@ -1,4 +1,4 @@
-package mjaksic.Spring_Template.spring;
+package mjaksic.Spring_Template.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
+import mjaksic.Spring_Template.response.ResponseData;
+import mjaksic.Spring_Template.response.ResponseSuccess;
+
+@RestController
 public class RESTController {
 	private Map<String, ResponseData> value_store = new HashMap<String, ResponseData>();
 	

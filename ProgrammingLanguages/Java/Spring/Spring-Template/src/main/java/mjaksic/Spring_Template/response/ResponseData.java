@@ -1,4 +1,4 @@
-package mjaksic.Spring_Template.spring;
+package mjaksic.Spring_Template.response;
 
 public class ResponseData {
 	private final int number;
