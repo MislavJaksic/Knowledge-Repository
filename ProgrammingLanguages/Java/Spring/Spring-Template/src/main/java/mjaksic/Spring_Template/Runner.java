@@ -8,6 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Send HTTP requests using, for example, Postman
  */
 
+/*
+ * SpringBootApplication -> scan packages for components and auto configures and registers configuration Beans
+ */
 @SpringBootApplication
 public class Runner {
     public static void main(String[] args) {

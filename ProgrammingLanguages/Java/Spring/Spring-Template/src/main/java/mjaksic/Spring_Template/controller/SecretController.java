@@ -4,15 +4,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import mjaksic.Spring_Template.configuration.CustomProperties;
+import mjaksic.Spring_Template.config.ExternalConfig;
 import mjaksic.Spring_Template.response.ResponseSecret;
 
+/*
+ * Autowired -> dependency injection
+ */
 @RestController
-public class SecretConfigController {
+public class SecretController {
+	private ExternalConfig config;
+	
+	
+	
 	@Autowired
-	private CustomProperties config;
-	
-	
+	public SecretController(ExternalConfig config) {
+		this.config = config;
+	}
 	
 	@GetMapping("/secret")
 	public ResponseSecret GetSecretConfigNumber() {

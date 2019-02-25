@@ -13,6 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 import mjaksic.Spring_Template.response.ResponseData;
 import mjaksic.Spring_Template.response.ResponseSuccess;
 
+/*
+ * RestController -> registers a REST class
+ * XMapping -> maps resources and HTTP methods
+ * RequestParam -> parameter in the URI
+ * RequestBody -> JSON body that has to be passed in the HTTP request
+ */
 @RestController
 public class RESTController {
 	private Map<String, ResponseData> value_store = new HashMap<String, ResponseData>();

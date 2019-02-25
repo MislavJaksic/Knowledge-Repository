@@ -15,7 +15,16 @@ For running the packaged Maven project.
 
 ### [Usage](https://www.mojohaus.org/exec-maven-plugin/usage.html)
 
-To run the package execute:  
+To run the project by executing:  
 ```
 mvn exec:java
+```
+
+### Running a JAR
+
+Package the project then execute it using java:
+```
+mvn package
+
+java -jar _name.jar
 ```
