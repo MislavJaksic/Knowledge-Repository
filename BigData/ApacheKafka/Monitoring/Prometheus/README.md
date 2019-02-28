@@ -42,3 +42,8 @@ Start Prometheus by executing:
 ```
 ./prometheus --config.file=prometheus.yml
 ```
+
+View metrics using the Prometheus' expression browser:  
+```
+http://localhost:9090/graph
+```
