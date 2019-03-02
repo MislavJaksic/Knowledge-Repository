@@ -119,7 +119,7 @@ $: bin/connect-standalone.sh config/connect-standalone.properties config/connect
 [script_name] [connect_config] [connector_one_config] [connector_two_config]
 ```
 Configuration files define the Connector's behaviour.  
-The first Connector is a "source" and the second Connector is a "sink".  đ
+The first Connector is a "source" and the second Connector is a "sink".  
 
 The Connectors will continuously process data as you append data to the file.  
 
