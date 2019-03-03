@@ -31,7 +31,6 @@ $: sudo apt install git-all -> Debian, Ubuntu, ...
 
 On Windows:  
 * either download and install the executable  
-* or download GitHub Desktop which comes with "git-bash.exe"  
 * or get a command line installer such as [Scoop](https://github.com/MislavJaksic/Knowledge-Repository/Scoop) and execute:
 ```
 scoop install git

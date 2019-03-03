@@ -9,7 +9,7 @@ Gradle scales as your project grows.
 Make sure you have Java 7 or greater.  
 
 Gradle can be installed:  
-* using a package manager
+* using a package manager such as [Scoop](https://github.com/MislavJaksic/Knowledge-Repository/Scoop)
 * manually
 * with Gradle Wrapper
 
