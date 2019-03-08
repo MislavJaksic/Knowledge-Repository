@@ -8,6 +8,10 @@ highly recommended to develop Java programs in an IDE because setting up unit te
 
 * Generics: about generic types, how to use and handle them
 
+* JMX:
+
+* Logging:
+
 * ProjectManagement: about managing dependencies, deployment, installation, program packaging
 
 * Spring: about a popular open source framework
