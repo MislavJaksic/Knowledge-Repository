@@ -1,6 +1,6 @@
-### [exec-maven-plugin](https://www.mojohaus.org/exec-maven-plugin/index.html)
+### [Exec Maven Plugin](https://www.mojohaus.org/exec-maven-plugin/index.html)
 
-For running the packaged Maven project.  
+Runs packaged Maven project (jars, wars, ...).  
 
 ```
 <plugin>

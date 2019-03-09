@@ -2,6 +2,18 @@
 
 Kafka is a distributed streaming platform. It brokers data between programs using a publish-subscribe mechanism. 
 
+### Nomenclature
+
+Cluster - a group of Kafka nodes/instances/servers lead by a Zookeeper instance  
+Broker - a Kafka deamon in charge of a node  
+Node - a "database" for topic partitions  
+Topic - a category/feed to which records are published  
+Partition - a partitioned log owned by a topic  
+Replica - a copy of the cluster leader node  
+Consumer - an application, a program which reads data to a topic  
+Producer - an application, a program which publishes data to a topic  
+Stream - an application, a program which reads data, transforms data and publishes the same to another topic  
+
 ### [Introduction](http://kafka.apache.org/intro)
 
 Kafka is run as a cluster; stores streams of "records" in categories called "topics".
@@ -158,15 +170,3 @@ TODO
 Kafka has a lot of different [configuration settings](http://kafka.apache.org/documentation/#configuration).  
 
 See a sample production server configuration.  
-
-### Nomenclature
-
-Cluster - a group of Kafka instances/nodes/servers  
-Broker - a deamon in charge of a node/server  
-Node - a topic partition store in a cluster overseen by a broker  
-Topic - a category/feed to which records are published  
-Partition - a partitioned log owned by a topic  
-Replica - a copy of the cluster leader node  
-Consumer - an application, a program which reads data to a topic  
-Producer - an application, a program which publishes data to a topic  
-Stream - an application, a program which reads data, transforms data and publishes the same to another topic  

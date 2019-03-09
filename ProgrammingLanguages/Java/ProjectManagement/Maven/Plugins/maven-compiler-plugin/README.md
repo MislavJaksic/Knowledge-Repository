@@ -1,6 +1,6 @@
-## [maven-compiler-plugin](https://maven.apache.org/plugins/maven-compiler-plugin/index.html)
+## [Maven Compiler Plugin](https://maven.apache.org/plugins/maven-compiler-plugin/index.html)
 
-Force Maven to compile the project with a specific Java version.  
+Forces Maven to compile the project with a specific Java version.  
 
 ```
 <plugin>

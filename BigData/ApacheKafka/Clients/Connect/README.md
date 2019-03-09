@@ -15,7 +15,7 @@ Kafka Connectors can be run in two modes:
 
 #### Standalone mode
 
-In standalone mode the Connectors is a single process.  
+In standalone mode the Connectors is run a single process.  
 
 Run a Connector in standalone mode by executing:  
 ```
@@ -139,3 +139,53 @@ TODO
 Creating a Connector:  
 SourceConnector or SinkConnector.  
 Implement two interfaces: Connector and Task.  
+
+### Kafka Connect Construction
+
+Place the Kafka Connect .jar either in the default location or change the plugin.path in worker configuration:
+```
+ -> Worker configuration
+/opt/connectors
+```
+
+```
+$: bin/connect-standalone.sh config/connect-standalone.properties connector.properties
+```
+
+Explicit configurations:  
+* worker - connect-standalone.properties  
+* connector - connector.properties  
+
+Worker configuration "connect-standalone.properties":  
+```
+bootstrap.servers=localhost:9092
+
+key.converter=org.apache.kafka.connect.json.JsonConverter
+value.converter=org.apache.kafka.connect.json.JsonConverter
+
+key.converter.schemas.enable=true
+value.converter.schemas.enable=true
+
+offset.storage.file.filename=/tmp/connect.offsets
+
+offset.flush.interval.ms=10000
+
+plugin.path=/opt/connectors,/path/to/jar/file
+```
+
+
+
+Implicit configurations:  
+* logging - connect-log4j.properties
+
+Kafka Connect Source Connector/Task order of execution:  
+1) Connector - version()  
+2) Connector - config()  
+3) Connector - start()  
+4) Connector - taskClass()  
+5) Connector - taskConfigs()  
+6) Task - version()  
+7) Task - start()  
+8) Task - poll()  
+9) Task - stop()  
+10) Connector - stop()  
