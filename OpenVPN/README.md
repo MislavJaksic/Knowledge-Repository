@@ -66,7 +66,7 @@ $: sudo openvpn --config _file_name.ovpn
 
 A few useful command for checking if the connection has been established are:
 ```
-$: ifconfig -> show network interfaces
+$: ifconfig -> show network interfaces; discover tunnel IP
 $: route -n -> show IP routing table
 ```
 
