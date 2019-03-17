@@ -33,7 +33,7 @@ On Windows:
 * either download and install the executable  
 * or get a command line installer such as [Scoop](https://github.com/MislavJaksic/Knowledge-Repository/Scoop) and execute:
 ```
-scoop install git
+$: scoop install git
 ```
 
 To configure Git execute:  
@@ -60,18 +60,17 @@ Don't forget to add a README and a .gitignore file.
 
 Clone an existing Git repository by executing:
 ```
-$: git clone https://github.com/libgit2/libgit2 Project-Name -> example GitHub project
+$: git clone https://github.com/libgit2/libgit2 [Local-Folder-Name] -> set a folder name
 ```
 
 List files which are being tracked by Git by executing:
 ```
-$: git status
-$: git status -s -> verbose version
+$: git status [-s] ; short/verbose version
 ```
 
 Track a file so you can commit it by executing:
 ```
-$: git add _file_name
+$: git add File-Name.any
 ```
 
 After changing a file you can see the difference between the staged files execute:  
@@ -83,60 +82,85 @@ $: git difftool -> graphical/external view
 Commit changes by executing:  
 ```
 $: git commit -m "This is a commit message"
-$: git commit -a -m "..." -> auto add all files, skip the staging process
+$: git commit [-a] -m "..." -> auto add all files, skip the staging process
 ```
 
 Remove/stop tracking a file by executing:  
 ```
-$: git rm _file_name
+$: git rm File-Name.any
 ```
 
 Rename or move a file by executing:
 ```
-$: git mv _file_name _file_name
+$: git mv ./File-Name.any ./new/path/New-File-Name.any
 ```
 
 View the commit log by executing:
 ```
 $: git log
-$: git log -p -> view difference between commits
-$: git log --stat
-$: git log --graph
+$: git log [-p] -> view difference between commits
+$: git log [--stat]
+$: git log [--graph]
  -> there are a lot of different flags
 ```
 
 Replace/undo your last commit with a new one by executing:
 ```
-$: git commit -amend -> replace last commit with this one
-$: git reset HEAD _file_name -> unstage file
-$: git checkout -- _file_name -> discard changes
+$: git commit -amend             -> replace last commit with this one
+$: git reset HEAD File-Name.any  -> unstage file
+$: git checkout -- File-Name.any -> discard local changes
 ```
 
 #### Working with Remotes
 
 List remote repositories by executing:  
 ```
-$: git remote
-$: git remote -v
-$: git remote show _repo_shortname -> show info about a repository
+$: git remote [-v] [show Repository-Name] -> show info about a repository
 ```
 
 Add a new remote repository by executing:  
 ```
-$: git remote add _repo_shortname _url
+$: git remote add Repository-Name _url
 ```
 
 Fetch/pull a remote repository by executing:  
 ```
-$: git fetch _repo_shortname
-$: git pull _repo_shortname -> fetch and merge
+$: git fetch Repository-Name
+$: git pull Repository-Name -> fetch and merge
 ```
 
 Push commits by executing:  
 ```
-$: git push _repo_shortname _branch_name
+$: git push Repository-Name Branch-Name
 ```
 
 #### Git Branching
 
 TODO
+
+#### Git Cheatsheet
+
+```
+$: git init -> init local Git repository, add README.md and .gitignore
+$: git clone https://github.com/repo-name [Local-Project-Name] -> init existing repository
+
+$: git status -s -> check state
+$: git diff / difftool -> commited and staged file difference
+$: git add File-Name.any -> track a file
+$: git rm File-Name.any -> stop tracking a file
+$: git mv ./File-Name.any ./new/path/New-File-Name.any -> rename/move a file
+
+$: git commit [-a] -m "This is a commit message" -> auto add all files, skip the staging process
+$: git commit -amend -> replace last commit with this one
+$: git reset HEAD File-Name.any -> unstage file
+$: git checkout -- File-Name.any -> discard local changes
+
+$: git remote [-v] [show Repository-Name] -> show info about a repository
+$: git remote add Repository-Name URL -> add remote repository
+
+$: git fetch Repository-Name -> get files you don't have
+$: git pull Repository-Name -> get files you don't have and merge them
+$: git push Repository-Name Branch-Name -> set commited files into a Git repositroy
+
+$: git log [-p / --stat / --graph] -> and many more flags to inspect the log
+```
