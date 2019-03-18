@@ -2,82 +2,81 @@
 
 ### Chapter 1: basic commands
 
-To stop execution, type Ctrl+C.
+Stop execution -> CTRL+C.
 
-Long options prefixed with --, short options are prefixed with -.  
+Long options are prefixed with --, short options are prefixed with -.  
 Options can be chained together.  
 ```
-ls -lh
+$: ls -lh -> same as below
+$: ls -l -h -> same as above
 ```
 
-man - show command manual; exit with "q"
+Basic commands:
+```
+$: man -> manual; "q" to exit
+$: info -> command info
+$: ls [-l -h -d] -> list; -l as long, -h as human, -d as describe
+$: pwd -> current directory path
+$: echo -> print value
 
-ls - list; \[-l\] for long descriptions, \[-h\] for human readable, \[-d\] describe directory
+$: cd -> change directory
+$: mkdir [-p] -> create directory; -p create all directories on path
 
-pwd - show current directory path
-
-mkdir - create directory; \[-p\] create every directory on the path
-
-cd - change directory
-
-bash - run a ".sh" script
-
-info - show command info
-
-echo - show a message
+$: bash -> run script
+```
 
 ### Chapter 2: directories
 
-(Main) directories:
-* /bin - user and admin tools
-* /boot - OS kernel and bootup tools
-* /dev - files which represent devices
-* /etc - configuration files
-* /lib - operating system modules
-* /lost+found - directories restored after OS failure
-* /media - mobile devices (USB, DVD drives)
-* /mnt - manually add mobile devices (USB, DVD)
-* /opt - for programs not part of the OS
-* /proc - virtual files that change with the state of the OS
-* /sbin - system programs
-* /tmp - temporary files
-* /var - logs, email or other often shifting files
-* /srv - service, HTTP server and FTP files
-* /home - 
-* /root - root user directory
-* /usr - has /bin and /sbin; programs for normal work 
+Main common root directories:
+* /bin -> user and admin tools
+* /boot -> OS kernel and bootup tools
+* /dev -> files which represent devices
+* /etc -> configuration files
+* /lib -> operating system modules
+* /lost+found -> directories restored after OS failure
+* /media -> mobile devices (USB, DVD drives)
+* /mnt -> manually add mobile devices (USB, DVD)
+* /opt -> for programs not part of the OS
+* /proc -> virtual files that change with the state of the OS
+* /sbin -> system programs
+* /tmp -> temporary files
+* /var -> logs, email or other often shifting files
+* /srv -> service, HTTP server and FTP files
+* /home -> user home directory
+* /root -> root user directory
+* /usr -> has /bin and /sbin; programs for normal work 
 
-cp - copy directory; \[-r\] recursive copy
+```
+touch -> create an empty file; p for named pipeline, d for directory, s for socket, b for block file, c for char file  
+file -> find file type
+head [-N] -> print few lines; -N for N lines
+cat -> read file
+stat -> show file details
 
-mv - move and/or rename from A to B
+nano/vim -> text editors
 
-rm - remove folder/directory; \[-r\] recursive delete, \[-f\] force delete
+mv -> move/rename file
+cp [-r] -> copy directory; -r as recursive copy
 
-rmdir - remove directory if empty
+rm [-r -f] -> remove directory; -r as recursive delete, -f as force delete
+rmdir -> remove directory if empty
 
-df - show memory by partition
-
-du - show memory by directory
-
-touch - create an empty file  
-p for named pipeline, d for directory, s for socket, b for block file, c for char file  
-
-cat - read a file
-
-stat - show file details
-
-file - find file type
-
-head - display a few lines; \[-N\] for N lines
-
-nano/vim - text editors
+df -> show memory by partition
+du -> show memory by directory
+```
 
 ### Chapter 3: command line input and output
 
-stdin, stdout, stderr are standard input, output and error.
-They look like files. Assigned numbers 0, 1, 2 respectively.
+stdin -> standard input, number 0  
+stdout -> standard output, number 1  
+stderr -> standard error, number 2  
+All three look like files.  
 
-keyboard --- stdin ---> cat --- stdout ---> monitor
+```
+( keyboard --- stdin ) ---> ( cat --- stdout ) ---> ( monitor )
+```
+STOPPED RIGHT HERE
+
 cat acts as a filter.
 
 \> - write to file operator.

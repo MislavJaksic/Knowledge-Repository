@@ -1,16 +1,14 @@
 ## Linux
 
-Linux is a free operating system famous for its kernel.  
-There are [many varieties of Linux](https://distrowatch.com/). They range from those that look like Windows
-to those without a graphical interface.  
-Linux comes with a plethora of free office, system monitoring and programming tools, such as OpenOffice and
-the utility program top.  
-
-Each Linux OS is a bit different, so take care not to mix up installation instructions or command syntax.  
+Linux is a family of operating systems famous for its kernel.  
+Linux comes with a lot of free office, system monitoring and programming tools, such as OpenOffice and
+proccess control program top.  
 
 ### Linux distributions
 
-You can look up Linux distribution on the website.
+There are [many varieties of Linux](https://distrowatch.com/). They range from those that look like Windows
+to those without a graphical interface.  
+Each Linux OS is different, so take care not to mix up installation instructions or command syntax.  
 
 [Manjaro](https://manjaro.org/) - quite popular
 
@@ -20,41 +18,79 @@ You can look up Linux distribution on the website.
 
 ### Installation
 
-Linux distribution can be installed from a USB, using a DVD or using virtualisation software.
+Linux distributions can be installed using a USB, a DVD or a virtualisation software such as [VirtualBox](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/Virtualisation/VirtualMachines/VirtualBox).
 
-### Tips and Tricks
+### Paths and directories
 
-Commands:
-* SHIFT+INSERT to paste
-* TAB automatically completes words
-* "sudo _command" to grant admin access to "_command"
-* "ps" list running processes
-* "kill" to quit a process
-* "apt/apk/yum" to install a program
-* "find / -iname '*_file_name*' -path '*_path_to_file_name*' > _output_file" for searching
-* "bash _script_name.sh" runs a script
-* "netcat -l -p _port" to create a server listening on _port
-* "uname -a"/"lsb_release -a" to print OS info
+Absolute path -> begins with "/"  
+Relative path -> begins without "/"  
 
-Installing software:
-* "_script_name.sh" is a script
-* "tar -xzvf _program_name.tar.gz" will install "_program_name.tar.gz"
+Current directory -> is "."
+Parent directory -> is ".."
+Hidden directory -> begins with "."
 
-Paths and files:
-* absolute paths begin with "/", relative paths don't
-* ".." is the parent directory, "." is the current directory
-* hidden directories are prefixed with "."
+### Common hotkeys and commands
 
-PATH and network:
-* set PATH in "/etc/environment" or ".bashrc" located in root
-* set DNS in "/etc/hosts"
-* "scp [-P _port] _file_name _username@_hostname_OR_IP:/opt/_filename" to transfer files
-* SSH port is 22
-* "ifconfig" to look up IPs and other network interface information
-* "ip addr", "ip link", "ip -s" supercede "ifconfig"
-* "netstat" to look up network statistics
-* "ip -s", "ss", "ip route" supercede "netstat"
+Hotkeys:
+* Paste -> SHIFT+INSERT
+* Autocomplete -> TAB; double TAB
 
-Editing:
-* CTRL+W to search in nano
-* scite is an alternative to Notepad++ on Linux
+Common commands:
+```
+$: sudo Any-Command -> admin access
+
+$: man Any-Command -> manual; "q" to exit
+$: info Any-Command -> command info
+$: ls -> list
+S: pwd -> current directory path
+$: echo $Value-Name -> print value
+
+$: cd /path -> change directory
+$: mkdir Name -> create directory
+
+$: bash Script-Name.sh -> run script
+
+$: ps -> list PIDs
+$: kill PID -> SIGTERM/soft shutdown
+$: kill -9 PID -> SIGKILL/hard shutdown
+
+$: apt ... -> Ubuntu install manager
+$: apk ... -> 
+$: yum ... -> Centos install manager
+$: tar -xzvf _program_name.tar.gz Package.tar.gz -> install/unpack
+
+$: find /root/of/search -iname "File-Name.*" -> find file
+
+$: uname -a -> Ubuntu OS info
+$: lsb_release -a -> Centos OS info
+```
+
+### Network command
+
+```
+$: netcat -l -p PORT -> create listener server
+
+$: ifconfig -> network interfaces
+$: netstat -> network statistics
+$: ip addr -> 
+$: ip link -> 
+$: ip route -> 
+$: ss -> 
+$: ip -s -> 
+
+$: scp [-P PORT] /source/path/File-Name USERNAME@HOST/IP-PORT:/destination/path
+```
+
+### Editing files
+
+Hotkeys:
+* search -> SHIFT+W
+
+### Setting PATH and DNS
+
+Set PATH in:
+* /etc/environment
+* .bashrc which is in root
+
+Set DNS in:
+* /etc/hosts

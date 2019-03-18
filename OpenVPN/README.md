@@ -2,11 +2,11 @@
 
 ### [Installation](https://openvpn.net/community-resources/installing-openvpn/)
 
-Tip: you can find out "x.y.z" by visiting the download page  
+Tip: you can find "x.y.z" on the download page  
 
 On Windows:  
 ```
-Double click the executable and install OpenVPN.
+Double click the executable and install OpenVPN
 ```
 
 On Linux:  
@@ -14,18 +14,18 @@ On Linux:
 $: sudo apt install openvpn
 ```
 
-Or if you are feeling adventureuos:  
+Or if you are feeling adventurous:  
 ```
 -> Download openvpn-x.y.z.tar.gz
 
 $: tar xfz openvpn-x.y.z.tar.gz
--> Descend into openvpn-x.y.z folder
+$: cd openvpn-x.y.z
 $: ./configure
 $: make
 $: make install
 ```
 
-If you get an error "... no acceptable C compiler in $PATH" execute:  
+Error "... no acceptable C compiler in $PATH" is solved by executing:  
 ```
 $: apt-get update
 $: apt-get upgrade
@@ -36,14 +36,14 @@ $: sudo apt-get install build-essential
 
 #### [Command Line Interface](https://openvpn.net/community-resources/running-openvpn-from-a-console-window/)
 
-Create a _file_name.ovpn file based on the example in:
+Create a File-Name.ovpn file based on the example in:
 ```
 \Program Files\OpenVPN\config\sample.ovpn.txt
 ```
 
-Double click on the file or execute:
+Double click the file or execute:
 ```
-openvpn --config _file_name.ovpn
+openvpn --config File-Name.ovpn
 ```
 
 #### [Windows Service](https://openvpn.net/community-resources/running-openvpn-as-a-windows-service/)
@@ -54,23 +54,31 @@ TODO
 
 #### Command Line Interface
 
-Create a _file_name.ovpn file based on the example in:
+Create a File-Name.ovpn file based on the example in:
 ```
 \Program Files\OpenVPN\config\sample.ovpn.txt
 ```
 
-Connect to the client/server by executing:  
+Tunnel to the remote computer by executing:  
 ```
-$: sudo openvpn --config _file_name.ovpn
+$: sudo openvpn --config File-Name.ovpn -> optional: enter password
 ```
 
-A few useful command for checking if the connection has been established are:
+You can check if the connection has been established by executing:
 ```
 $: ifconfig -> show network interfaces; discover tunnel IP
 $: route -n -> show IP routing table
 ```
 
-#### [How to for OpenVPN 2.2.x](https://openvpn.net/community-resources/how-to/)
+### Connect to remote computer
+
+Connect to a remote computer:  
+* using [Putty](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/RemoteComputing/Putty)
+* or [SSH](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/RemoteComputing/SSH)
+
+### Other topics
+
+#### [HOW-TO OpenVPN 2.2.x](https://openvpn.net/community-resources/how-to/)
 
 TODO
 
