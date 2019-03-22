@@ -138,6 +138,20 @@ $: git push Repository-Name Branch-Name
 
 TODO
 
+### GitIgnore
+
+* [GitHub's .gitignore collection](https://github.com/github/gitignore)
+
+Apply .gitignore by executing:   
+```
+$: git add .
+$: git commit -m "Set .gitignore"
+$: git rm -r --cached .
+$: git add .
+$: git commit -m "Applied .gitignore"
+$: git push Repository-Name Branch-Name
+```
+
 #### Git Cheatsheet
 
 ```

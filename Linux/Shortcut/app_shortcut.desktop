@@ -1,0 +1,11 @@
+#/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/path/to/executable
+Name=NAME
+Comment=COMMENT
+Icon=/path/to/icon
+
+# Check the box "Allow executing a file as a program" under Properties->Permissions

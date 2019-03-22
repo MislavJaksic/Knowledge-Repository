@@ -15,26 +15,46 @@ Kafka Connectors can be run in two modes:
 
 #### Standalone mode
 
-In standalone mode the Connectors is run a single process.  
+In standalone mode the Connectors is run in a single process.  
 
 Run a Connector in standalone mode by executing:  
 ```
 $: bin/connect-standalone.sh config/connect-standalone.properties [connector1.properties]..[connectorN.properties]
+$: [runner-script] [worker-configuration] [connector-configuration] ...
 ```
-Worker configuration in "_name.properties" defines the behaviour of the Connector.  
 
-General worker configuration:  
-* bootstrap.servers - list of Kafka brokers (servers)
-* key.converter - transforms message keys; converts between the Connect format and the serialized form that Kafka accepts  
-* value.converter - transforms message values; converts between the Connect format and the serialized form that Kafka accepts  
+Important worker configuration:
+```
+bootstrap.servers=localhost:9092 -> Kafka brokers
 
-Standalone mode configuration:  
-* offset.storage.file.filename - file in which offset is stored  
+key.converter=JsonConverter      -> transforms message keys from the Connect format and to a serialized Kafka format
+value.converter=JsonConverter    -> transforms message values from the Connect format and to a serialized Kafka format
+
+key.converter.schemas.enable=true
+value.converter.schemas.enable=true
+
+offset.flush.interval.ms=10000
+
+plugin.path=/opt/connecors       -> path to Connector plugin (.jar, ...)
+```
+
+Standalone mode connector configuration:
+```
+name=jmx-connector           -> connector name
+connector.class=JMXConnector -> Connector's location within a package (.jar, ...)
+tasks.max=1                  -> requested number of workers/tasks under a connector 
+
+offset.storage.file.filename=/tmp/connect.offsets -> optional; file in which offset is stored  
+
+# More external configs that will be passed to the Connector
+zookeeper.ip_ports=...
+kafka.destination.topic=...
+```
 
 These parameters need to be set up to three times:
-1) for management access
-2) for Kafka sink tasks
-3) for Kafka source tasks
+1) once for management access
+2) once for Kafka sink tasks
+3) once for Kafka source tasks
 
 #### Distributed mode
 
@@ -59,13 +79,6 @@ Connector configurations are key-value pairs.
 In standalone mode they are defined in a properties file.  
 In distributed mode they are defined in a JSON file.  
 
-Common connector options are:  
-* name - unique Connector name
-* connector.class - Java class for the Connector; example: "org.apache.kafka.connect.file.FileStreamSinkConnector"
-* tasks.max - max task number
-* key.converter - overrides the default key converter; optional
-* value.converter - overrides worker value converter; optional
-
 Sink Connectors must also set one of the following:  
 * topics - CSV list of topics used as input for this sink Connector
 * topics.regex - Java regex of topics used as input for this sink Connector
@@ -73,31 +86,6 @@ Sink Connectors must also set one of the following:
 #### Transformations
 
 TODO  
-
-Connectors can transform messages on the fly.  
-Connector config for transformations:
-* transforms: list order of transformation
-* transforms.$alias.type: class names for transformations
-* transforms.$alias.$transformationSpecificConfig: config for transformations
-
-Example:
-```
-name=local-file-source
-connector.class=FileStreamSource
-tasks.max=1
-file=test.txt
-topic=connect-test
-transforms=MakeMap, InsertSource // -> order of transforms
-transforms.MakeMap.type=org.apache.kafka.connect.transforms.HoistField$Value // -> transform type
-transforms.MakeMap.field=line // -> field name
-transforms.InsertSource.type=org.apache.kafka.connect.transforms.InsertField$Value // -> transform type
-transforms.InsertSource.static.field=data_source // -> field name
-transforms.InsertSource.static.value=test-file-source // -> field value
-
-"foo" becomes {"line":"foo","data_source":"test-file-source"}
-"bar" becomes {"line":"bar","data_source":"test-file-source"}
-"hello world" becomes {"line":"hello world","data_source":"test-file-source"}
-```
 
 #### REST API
 
@@ -112,7 +100,6 @@ Kafka Connector cross cluster communication configuration:
 * rest.advertised.listener 
 
 REST API endpoints can be seen [here](https://kafka.apache.org/documentation/#connect_rest).
-
 
 #### Connector Development Guide
 
@@ -141,39 +128,6 @@ SourceConnector or SinkConnector.
 Implement two interfaces: Connector and Task.  
 
 ### Kafka Connect Construction
-
-Place the Kafka Connect .jar either in the default location or change the plugin.path in worker configuration:
-```
- -> Worker configuration
-/opt/connectors
-```
-
-```
-$: bin/connect-standalone.sh config/connect-standalone.properties connector.properties
-```
-
-Explicit configurations:  
-* worker - connect-standalone.properties  
-* connector - connector.properties  
-
-Worker configuration "connect-standalone.properties":  
-```
-bootstrap.servers=localhost:9092
-
-key.converter=org.apache.kafka.connect.json.JsonConverter
-value.converter=org.apache.kafka.connect.json.JsonConverter
-
-key.converter.schemas.enable=true
-value.converter.schemas.enable=true
-
-offset.storage.file.filename=/tmp/connect.offsets
-
-offset.flush.interval.ms=10000
-
-plugin.path=/opt/connectors,/path/to/jar/file
-```
-
-
 
 Implicit configurations:  
 * logging - connect-log4j.properties
