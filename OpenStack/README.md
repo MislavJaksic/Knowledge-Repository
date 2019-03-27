@@ -34,10 +34,10 @@ You may need to provide a key for authentication.
 
 If logged in to the <source> system:  
 ```
-$: sudo scp /path/to/_file_name username@IP/NAME:/path/to/destination
+$: sudo scp -i Optional-Key /path/to/_file_name username@IP/NAME:/path/to/destination
 ```
 
 If permission is denied execute:  
 ```
-$: sudo chmod /path/to/destination
+$: sudo chmod 777 /path/to/destination
 ```

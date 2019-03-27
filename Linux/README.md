@@ -2,7 +2,7 @@
 
 Linux is a family of operating systems famous for its kernel.  
 Linux comes with a lot of free office, system monitoring and programming tools, such as OpenOffice and
-proccess control program top.  
+process control program top.  
 
 ### Linux distributions
 
@@ -22,18 +22,22 @@ Linux distributions can be installed using a USB, a DVD or a virtualisation soft
 
 ### Paths and directories
 
+```
 Absolute path -> begins with "/"  
 Relative path -> begins without "/"  
 
 Current directory -> is "."
 Parent directory -> is ".."
 Hidden directory -> begins with "."
+```
 
 ### Common hotkeys and commands
 
 Hotkeys:
-* Paste -> SHIFT+INSERT
-* Autocomplete -> TAB; double TAB
+```
+Paste -> SHIFT+INSERT
+Autocomplete -> TAB; double TAB
+```
 
 Common commands:
 ```
@@ -84,7 +88,9 @@ $: scp [-P PORT] /source/path/File-Name USERNAME@HOST/IP-PORT:/destination/path
 ### Editing files
 
 Hotkeys:
-* search -> SHIFT+W
+```
+Search -> SHIFT+W
+```
 
 ### Setting PATH and DNS
 

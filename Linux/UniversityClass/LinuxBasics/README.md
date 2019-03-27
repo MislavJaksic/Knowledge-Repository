@@ -2,7 +2,7 @@
 
 ### Chapter 1: basic commands
 
-Stop execution -> CTRL+C.
+Stop execution -> CTRL+C
 
 Long options are prefixed with --, short options are prefixed with -.  
 Options can be chained together.  

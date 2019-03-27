@@ -720,7 +720,7 @@ correct.
 
 Return a value that you returned previously.
 
-Substitute the incorrect value with the closes acceptable value.
+Substitute the incorrect value with the closest acceptable value.
 
 Log a warning message to a file.
 

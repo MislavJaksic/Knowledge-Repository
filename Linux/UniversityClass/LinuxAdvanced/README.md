@@ -2,51 +2,56 @@
 
 ### Chapter 1
 
-> Short version:  
-> Processor reads BIOS/UEFI from ROM.  
-> BIOS/UEFI find the bootloader using MBR/GPT.  
-> Bootloader is loaded.  
-> Bootloader runs the OS.  
-> OS reads initrd/initramfs which reads the rest of the kernel.  
-> The kernel runs the init/systemd with PID 1.  
-> init/systemd runs all the background processes.  
-> User is given control.  
+Short version:  
+```
+Processor reads BIOS/UEFI from ROM.  
+BIOS/UEFI find the bootloader using MBR/GPT.  
+Bootloader is loaded.  
+Bootloader runs the OS.  
+OS reads initrd/initramfs which reads the rest of the kernel.  
+The kernel runs the init/systemd with PID 1.  
+init/systemd runs all the background processes.  
+User is given control.  
+```
 
-BIOS (Basic Input and Output System) comes with every ROM (Read-Only Memory).
-BIOS will executes POST (Power On Self Test), testing the motherboard and devices connected to it.
-BIOS can configure the bootup.
-BIOS can be configured.
+BIOS (Basic Input and Output System) comes with every ROM (Read-Only Memory).  
+BIOS will executes POST (Power On Self Test), testing the motherboard and devices connected to it.  
+BIOS can configure the bootup.  
+BIOS can be configured.  
 
-UEFI (Unified Extensible Firmware Interface) is a better BIOS.
-Both BIOS/UEFI are a layer between the OS and firmware.
+UEFI (Unified Extensible Firmware Interface) is BIOS but better.  
+Both BIOS/UEFI are layers between the OS and firmware.  
 
-Hard disks have partitions formatted using a specified file system.
-Partitions are used for functional and logic data separation.
-Partition info is stored in MBR/GPT (Master Boot Record)/(GUID Partition Table).
+Hard disks have file system specified formatted partitions.  
+Partitions are used for functional and logic data separation.  
+Partition info is stored in MBR/GPT (Master Boot Record)/(GUID Partition Table).  
 
-MBR contains the bootstrap code, partition table and a magic number. Can support up to 4 partitions.
-GPT is a better MBR, but only works with UEFI.
+MBR contains the bootstrap code, partition table and a magic number. Can support up to 4 partitions.  
+GPT is a better MBR, but only works with UEFI.  
 
-Bootloader is executed after POST.
-Bootloader runs the OS kernel.
-GRUB (GRand Unified Bootloader) is a well known bootloader.
+Bootloader is executed after POST.  
+Bootloader runs the OS kernel.  
+GRUB (GRand Unified Bootloader) is a well known bootloader.  
 
-Kernel is the core of an OS, in control of every other process with special memory protection.
-Kernel will read the initrd/initramfs (INITial RamDisk).
+Kernel is the core of an OS, in control of every other process with special memory protection.  
+Kernel will read the initrd/initramfs (INITial RamDisk).  
 
-initrd assists the kernel in starting the root file system.
-initrd is a small file system which is required to handle a larger file system.
-init is responsible for starting the OS.
-init will start after the kernel.
-systemd is a better init.
-systemd can be configured using unit files.
-systemctl - systemd control
-Add systemd services by adding unit files to "/etc/systemd/system/".
-Example:  /etc/systemd/system/_program_name.service
-systemctl daemon-reload - restart after adding user files
-systemctl start _program_name - run newly added service
+initrd assists the kernel in starting the root file system.  
+initrd is a small file system which is required to handle a larger file system.  
+init is responsible for starting the OS.  
+init will start after the kernel.  
 
-Example of a systemd service unit file:
+systemd is init but better.  
+systemd can be configured using unit files.  
+systemctl - systemd control  
+
+Add systemd services by adding unit files to "/etc/systemd/system/".  
+```
+$: systemctl daemon-reload -> restart after adding user files
+$: systemctl start Service-Name -> run newly added service
+```
+
+Example of a systemd service unit file:  
 ```
 [Unit]
 Description=A Short Unit Description
@@ -54,10 +59,10 @@ After=network.target # sample restriction: don't run before network design
 [Service]
 Type=simple
 User=my_username
-ExecStart=/opt/_program_name.sh
+ExecStart=/opt/Service-Name.sh
 # You can add lines like:
-# ExecStop=/opt/_program_name.sh --stop # stop a program if it exists
-# ExecReload=/opt/_program_name.sh --reload # restart a program if it exists
+# ExecStop=/opt/Service-Name.sh --stop # stop a program if it exists
+# ExecReload=/opt/Service-Name.sh --reload # restart a program if it exists
 
 # You can specify env vars
 Restart=always # systemd will restart a program if it is not alive
