@@ -24,6 +24,21 @@ May solve the dreded "NoClassDefFoundError".
 </plugin>
 ```
 
+### [Selecting contents for the UBER jar](https://maven.apache.org/plugins/maven-shade-plugin/examples/includes-excludes.html)
+
+To only include selected artifacts:
+```
+...
+  <configuration>
+    <artifactSet>
+      <includes>
+        <include>Group-ID:Artifact-ID</include>
+      </includes>
+    </artifactSet>
+  </configuration>
+...
+```
+
 ### [Usage](http://maven.apache.org/plugins/maven-shade-plugin/usage.html)
 
 TODO
