@@ -1,3 +1,0 @@
-## JMX monitoring
-
-TODO

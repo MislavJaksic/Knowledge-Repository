@@ -1,7 +1,0 @@
-cp config/server.properties config/server-X.properties
-nano config/server-X.properties -> change "broker.id", "listeners", "log.dirs"
-
-bin/zookeeper-server-start.sh config/zookeeper.properties &
-bin/kafka-server-start.sh config/server.properties &
-bin/kafka-server-start.sh config/server-1.properties &
-bin/kafka-server-start.sh config/server-2.properties &
