@@ -11,23 +11,6 @@ Construct it with:
 They can be published to a [website](https://scans.gradle.com/).  
 It is recommended you create a .gradle/init.d script to automate the process.  
 
-### [New Gradle build](https://guides.gradle.org/creating-new-gradle-builds/)
-
-Create a folder.  
-Initialize a Gradle project with:  
-```
-gradle init
-```
-Select the desired options.  
-To create a task modify the "build.gradle" script.  
-Execute the script with:
-```
-./gradlew _task_name
-```
-To add a plugin modify the "build.gradle" script.  
-
-There are a number of Gradle commands such as: tasks, _task_name --scan, properties.  
-
 ### [Gradle and Java](https://guides.gradle.org/building-java-libraries/)
 
 Create a folder.  
