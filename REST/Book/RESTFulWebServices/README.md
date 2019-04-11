@@ -1,33 +1,34 @@
 ﻿# RESTful Web Services
 
-Written by Leonard Richardson and Sam Ruby it talks about RESTful, Resource-Oriented web services.  
+Written by Leonard Richardson and Sam Ruby. The book talks about RESTful, Resource-Oriented web services.  
 
 What follows is a brief summary of their book.  
 
+
+
 ## Chapter 1: Programmable Web
 
-URI is also a URL. Almost identical.  
+URI is a URL.  
 Type a URI into a browser and you get a HTML page.  
-Web browser: a gateway to many services and data. No need to install them.  
+Web browser is a gateway to programs and data on the human web. No need for installation.  
 
 The programmable web is just like the human web, but it serves XML instead of HTML documents.
 
-A browser just shows the human the document.  
-A service has to determine the meaning of the dcoument has well.  
-
-The web connects programs just like it does with humans.
+A browser shows the document to a human.  
+A service has to determine the meaning of the document as well.  
 
 ### Kinds of Things on the Programmable Web
 
 The programmable web is based on HTTP and XML.  
+
 Classify services not by technology (URI, SOAP, XML_RRPS, ...) but by architecture.  
 
 ### HTTP: Documents in Envelopes
 
-HTTP, a document protocol, it puts a document into an envelope to be sent.  
-HTTP is only strict about how the envelope, not what goes into it.  
+HTTP, a document protocol. It puts a document into an envelope.  
+HTTP is strict about the look of an envelope, not about its contents.  
 
-HTTP GET request for "http://www.oreilly.com/index.html":
+HTTP GET REQUEST for "http://www.oreilly.com/index.html":
 ```
 GET /index.html HTTP/1.1
 Host: www.oreilly.com
@@ -40,13 +41,13 @@ Keep-Alive: 300
 Connection: keep-alive
 
 [HTTP Method] [Path] [Version]
-[Request Header]
+[Request Header: Value]
 ...
-[Request Header]
+[Request Header: Value]
 [Entity-Body]
 ```
 
-HTTP GET response from http://www.oreilly.com/index.html:  
+HTTP GET RESPONSE from http://www.oreilly.com/index.html:  
 ```
 HTTP/1.1 200 OK
 Date: Fri, 17 Nov 2006 15:36:32 GMT
@@ -68,49 +69,75 @@ Connection: Keep-Alive
 ...
 
 [Version] [Response Code]
-[Request Header]
+[Response Header: Value]
 ...
-[Request Header]
+[Response Header: Value]
 [Entity-Body]
 ```
 
 ```
 HTTP Method      -> how the server should process the envelope
-Response Code    -> consequences of the request
+Response Code    -> request consequences
 Path             -> address; portion of the URI after the hostname
 Request Headers  -> metadata
 Response Headers -> metadata
 Entity-Body      -> document
 ```
 
-Response header "Content-Type" determines the media type in "Entity-Body".  
-For text documents its "text/html", for structured text "application/xml" and for images "image/jpeg".  
+Response header "Content-Type" determines the media type in "Entity-Body".
+```
+text/html       -> text documents
+application/xml -> structured text
+image/jpeg      -> images 
+```
 
 ### Method Information
 
+Method info tells the server what the client wants to do.  
+
+HTTP methods:  
+```
+GET
+HEAD
+PUT
+DELETE
+POST
+```
+
+#### XPath primer
+
+XPath is used to slice XML.  
+XPath is read from right to left.  
+
+Example, //photo:  
+* photo -> "find every photo tag"
+* //    -> "no matter where it is"
+
+### Scoping information
+
+Scoping info tells the server on which data the client wants to operate.  
+
+Scope can be in:  
+```
+The URI
+On the path
+In Entity-Body
+```
+
+### Competing Architectures
+
+RESTful, RPC and REST RPC hybrids.  
+
+RESTful services that look like the Web are resource oriented.  
+
+RESTful:  
+```
+Method info -> in the HTTP method
+Scope info  -> in the URI
+```
+
+```
 TODO
-
-- Method information: how the client can convey its intentions to the server. Most common HTTP methods are GET, HEAD,
-PUT, DELETE and POST. Some services define their own method information.
-- Scoping information: how the client tells the server which part of the data set to operate on. Many web services
-put scoping information in the path. In http://www.google.com/search?q=REST that would be /search?q=REST.
-
-Example of identical HTTP GET requests (difference is at the architecture level):
-| HTTP GET request | Method information | Scoping information |
-| -- | -- | -- |
-| http://flickr.com/photos/tags/penguin | GET | "Photos tagged 'penguin'" |
-| http://api.flickr.com/services/rest/?method=flickr.photos.search&tags=penguin | "Do a photo search" | 'Penguin' |
-
-XPath primer: XPath is read from right to left. "//photo" means: find every photo tag (photo), no matter where it is in the
-document (//).
-
-Architectures:
-- RESTful, Resource-Oriented Architectures
-  - Services should look like the rest of the web.
-  - In RESTful architectures, the method information goes into the HTTP method. In Resource-Oriented Architectures,
-the scoping information goes into the URI.
-  - RESTful web services share a standard vocabulary.
-
 - RPC-Style Architectures
   - RPC-style web service accepts an envelope full of data from its client, and sends a similar envelope back. The
 method and the scoping information are kept inside the envelope or as headers.
@@ -144,64 +171,115 @@ data types they return.
 - WADL: Web Application Description Language, XML vocabulary used to describe RESTful web services. As with WSDL, a
 generic client can load a WADL file and be immediately equipped to access the full functionality of the
 corresponding web service.
+```
+
+
 
 ## Chapter 2: Writing Web Service Clients
 
-In this chapter, a client will be shown that handles RESTful and hybrid services.
+### Web Services Are Web Sites
 
-Every web service request involves the same three steps:
-- Input data into the HTTP request: the HTTP method, the URI, any HTTP header and any document that needs to go into
-the entity body.
-- Format the data as an HTTP request, and send it to the appropriate HTTP server.
-- Rarse the response data.
+Web service request consists of:
+1) Coming up with request data
+2) Creating a request
+3) Parsing a response
 
-Instead of following this process every time you want to make a web service request, you can write a wrapper method
-to abstract the process. Some APIs have an official wrappers, but you can always make your own.
+The process is abstracted by using wrappers.  
 
-Sample client: open a TCP socket connection, send a HTTP request, get the response, close the connection.
-HTTP libraries: almost every language has one, they make an HTTP request. They need quite a few methods to be
-considered actual usable libraries.
+### Making the Request: HTTP Libraries
 
->Good HTTP libraries:
->  Ruby: rest-open-uri and net/http
->  Python: httplib2
->  Java: HttpClient
->  C#: System.Web.HTTPWebRequest
->  PHP: libcurl
->  JavaScript: XMLHttpRequest
->  From command line: program curl
->  Lisp: simple-http
+Must have features:  
+```
+HTTPS, SSL
+GET, HEAD, POST, PUT, DELETE
+Custom Entity-Body
+Custom HTTP Header
+Access to Entity-Body, Response Code and Headers
+HTTP proxy communication
+```
 
-There are three kinds of XML parsers:
-- the document-based strategy of DOM and other treestyle parsers (simplest)
-  - XML document as nested data structure
-  - process XML with XPath, CSS selectors
-  - have to load the whole document into memory
-  - can use random access to grab data
-- event-based strategy of SAX and “pull” parsers
-  - turns XML into a stream of events, starting and closing tags, XML comments, and entity declarations
-  - pull parser is useful when you need to handle almost every event
-  - SAX parser is useful when you need to handle a few events as you have to register callback functions
-  - cannot randomly access data
-  - need to check XML is well formed of the parser may crash
+Nice to have features:  
+```
+OPTIONS, TRACE, MOVE
+Data compression
+Cache
+Authentication
+Follow HTTP redirects
+HTTP cookie strings
+```
 
->Good XML parsers:
->  Ruby: REXML
->  Python: ElementTree
->  Java: javax.xml, Xerces, or XMLPull
->  C#: System.Xml.XmlReader
->  JavaScript: responseXML
+Good HTTP libraries:
+```
+CLI        -> curl
+C#         -> System.Web.HTTPWebRequest
+Java       -> HttpClient
+Python     -> httplib2
+JavaScript -> XMLHttpRequest
+Ruby       -> rest-open-uri and net/http
+PHP        -> libcurl
+Lisp       -> simple-http
+```
 
-More and more web services return JSON documents instead of XML.
+### Processing the Response: XML Parsers
 
->Good JSON parser: visit the JSON website and look for them.
+Three kinds of XML parsers and strategies: 
+* tree style, document, DOM parsers
+* event style, stream, "pull" parsers
+* event style, stream, SAX parsers
 
-WADL file describes HTTP requests: which URIs you can visit, what data those URIs expect you to send, and what data
-they serve in return.
-WADL library can parse this file and model the space of possible service requests.
-WADL adoptions is extremely poor, but you can write WADL files for someone else's services.
+DOM parser:  
+```
+Simple, tree, data structure parser
+Use DOM, XPath, CSS selectors
+Can access any elements many times
+Must load the whole document into memory
+```
+
+Pull parser:  
+```
+XML to event stream
+Get events one by one and act on most
+Memory efficient
+Consumes events and must parse again for access
+XML must we well formed
+```
+
+SAX parser:  
+```
+XML to event stream
+Get events one by one and act on only a few
+Memory efficient
+Consumes events and must parse again for access
+XML must we well formed
+```
+
+Good XML parsers:
+```
+C#         -> System.Xml.XmlReader
+Java       -> javax.xml, Xerces, or XMLPull
+Python     -> ElementTree
+JavaScript -> responseXML
+Ruby       -> REXML
+```
+
+### JSON Parsers: Handling Serialized Data
+
+JSON as an alternative to XML.  
+Recommends against using JSON.  
+
+### Clients Made Easy with WADL
+
+Web Application Description Language (WADL).  
+Abstracts different REST clients.  
+
+
 
 ## Chapter 3: What makes RESTful services different?
+
+```
+TODO
+### Example: Object-Oriented Design of S3
+
 
 Two well known RESTful services are: the Atom Publishing Protocol (APP) and Amazon’s Simple Storage Service (S3).
 
@@ -233,75 +311,146 @@ Instead of writing a custom client for every service you could either use WADL t
 ActiveResource that makes it easy to write clients for some kinds of web services.
 
 The author wrote a Python client that does the same as the Ruby one.
+```
+
+
 
 ## Chapter 4: Resource Oriented Architecture (ROA)
 
-ROA is a way of turning a problem into a problem into a RESTful service: URIs, HTTP and XML that work like the rest
-of the web.
+RESTful architecture: Resource Oriented Architecture (ROA).  
+It says how to turn a problem into URIs, HTTP and XML.  
 
-Keep the following in mind: RESTful strives keep the scoping info in the URI (principle of addressability) and the
-method info in the HTTP method (principle of the uniform interface).
+### Resource Oriented Architecture
 
-A resource is anything that is important enough to be referenced. That is too vague, here are a few examples: latest
-version of the software, first blog entry for October 24, 2006, info about jellyfish, next five prime number after
-1024, ...
-A resource has to have at least one URI. URI is the name and the address of the resource.
+Turns requirements into resources.  
+An architecture among many.  
 
-URIs should be descriptive, have a structure and be predictable. 
-Multiple URIs can point to the same resource, but there should be a reason why.
+### What’s a Resource?
 
-1) Addressability is a property of an application to logically and understandably expose resources through convenient
-URIs. 
-Example of addressability: http://www.google.com/search?q=jellyfish can be inferred from the base URI
-http://www.google.com.
+A construct that deserves to have an address.  
 
-2) Statelessness means that every HTTP request happens in complete isolation, the client should include all the info
-in the HTTP request and the server should never relies on info provided by some other request.
-Practically, that means every state of the server should have its own URI. There should be no sequencing of requests,
-they should be invoked in any order.
-Statelessness should be a property of the server, but it doesn't have to be a property of the client.
-  Application state lives on the client. Example: current query and current page are examples of the state living on
-the client. It is different for each client. Web service only cares about the client state when it makes a request.
-  Resource state lives on the server. It is the same for every client.
-Cookies and API keys that limit you to x number of request per day violate statelessness. API key is stored on the
-client, but the request counter is stored on the server to keep users from cheating.
+### URIs
 
-Representation is data about the current state of a resource. The resource can be represented in multiple ways.
-It is possible for a representation to create a new resource as well as a resource being a source of representations.
-Each resource representation should be given its own URI. Another way is to only expose a Platonic form URi and to
-then ask the client which representation it would prefer.
+URI is the address and name of a resource.  
 
-3) Connectedness (links) is a property of a server to guide the path of the client by serving hypermedia links,
-forms. A web service is connected to the extent that you can put the service in different states by following links.
+URIs should be predictable. They should have an intuitive structure.  
 
-4) Uniform Interface means using the basic methods HTTP provides to perform common operations.
-HTTP GET, PUT, DELETE: GET gets a representation of a resource, PUT creates a new or overwrites an existing
-resource, DELETE removes the existing resource.
-HTTP HEAD, OPTIONS: HEAD gets a metadata only representation, OPTIONS checks which HTTP methods the resource
-supports.
-HTTP POST: used to create subordinate resources, a way of creating a new resource without having to know its exact
-URI, used for appending information to an existing resource (unlike PUT which overrides it).
-Difference between POST and PUT: use PUT when the client decides which URI it will give the resource and use POST
-when the server decides which URI it will give the resource. POST is also for appending data while PUT for
-overriding data.
+A resource can have multiple URIs that differ in intention.  
+A URI can point to only one resource.  
 
-POST overloading is when POST is used for providing a data handling process with a block of data. This is bad as it
-is mimicking many different non-HTTP methods as one single HTTP method. However, sometimes it is unavoidable.
+### Addressability
 
-Safe HTTP methods are GET and HEAD because they never change the server state. You can make such requests once, ten
-times or never at all and their result will always be the same. They will cause side effects, but those are not the
-clients problem because it didn't ask for them.
-Idempotency is the property of an operation to have the same effect no matter if you apply it once or multiple times.
-Example: multiply with zero, 4*0 == 4*0*0*0*0
-Idempotent HTTP methods are PUT and DELETE.
+Addressable applications exposes a URI for every resource they can serve.  
 
-Safety and idempotency are important as they make HTTP request reliable even over an unreliable network.
-POST is not idempotent nor safe.
+Example: http://www.google.com/search?q=jellyfish
 
-The uniform interface is important because having one enables clients to use them more easily, like they use other
-services on the web.
+### Statelessness
+
+Statelessness means that every HTTP request happens in complete isolation.  
+Never remember previous requests.  
+Send all necessary information with each request.  
+No temporal coupling.  
+
+Server states must have a URI.  
+Example: http://www.google.com/search?q=jellyfish&start=10
+
+Allows scaling.  
+Allows caching.  
+
+### Application State Versus Resource State
+
+Application state is on the client.  
+The client makes it known to the server in every request.  
+
+Resource state is on the server.  
+It is the same for every client.  
+
+Cookies are a huge problem.  
+Counting the number of client requests is a huge problem.  
+
+### Representations
+
+Each resource is represented in at least one way.  
+
+### Deciding Between Representations
+
+Give each resource representation its own URI.  
+Alternatively, specify a Platonic URI, which points to a default representation.  
+
+### Connectedness and Links
+
+```
+"Hypermedia as the engine of application state" -> state in links
+```
+
+Send links to "nearby" resources with the representation itself.  
+
+Links are "levers of state".  
+
+### Uniform Interface
+
+Use HTTP methods.  
+
+GET: fetch; response Entity-Body has a representation  
+DELETE: delete; any response  
+PUT: create or modify; request Entity-Body has a resource  
+
+HEAD: fetch only metadate  
+OPTIONS: check supported HTTP methods; response has an "Allow" header  
+
+POST: create subordinate resource or append info to existing respresentation  
+POST is defined in RFC 2616.  
+
+PUT vs POST: who decides which URI is assigned to a resource?
+PUT -> client decides
+POST -> server decides
+
+#### Overloaded POST
+
+When POST is used to provide a block of data and asks a block of data in return.  
+POST is mimicking many different non-HTTP methods.  
+Don't do it.  
+
+However, sometimes overloading is unavoidable.
+
+### Safety
+
+GET and HEAD are safe.  
+They never change the server state.  
+They cause no side effects (for which the client is responsible or cares about).  
+
+### Idempotence
+
+GET, HEAD, PUT and DELETE are idempotent.  
+Their effect is the same if you call them once or many times.  
+
+#### Why safety and idempotence matter
+
+They make HTTP request reliable even over an unreliable network.  
+
+### Overall
+
+ROA concepts are:
+```
+Resources
+URIs
+Representations
+Links between resources
+```
+
+ROA properties are:
+```
+Addressability
+Statelessness
+Connectedness
+Uniform Interface
+```
+
+
 
 ## Chapter 5: Designing Read Only ROA
+
+TODO
 
 Author will design a service that serves info about maps.
 
