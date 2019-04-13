@@ -395,10 +395,10 @@ GET: fetch; response Entity-Body has a representation
 DELETE: delete; any response  
 PUT: create or modify; request Entity-Body has a resource  
 
-HEAD: fetch only metadate  
+HEAD: fetch only metadata  
 OPTIONS: check supported HTTP methods; response has an "Allow" header  
 
-POST: create subordinate resource or append info to existing respresentation  
+POST: create subordinate resource or append info to existing representation  
 POST is defined in RFC 2616.  
 
 PUT vs POST: who decides which URI is assigned to a resource?
@@ -450,113 +450,166 @@ Uniform Interface
 
 ## Chapter 5: Designing Read Only ROA
 
-TODO
+An example of a read only RESTful service.  
 
-Author will design a service that serves info about maps.
+RESTful services should look like web sites to humans.  
 
-In object oriented design, you break down a system into nouns. Each noun is a class. ROA is similar.
-A "class" as a HTTP resource exposes only six HTTP methods.
-When tempted to create a new method, create a new resource instead.
+### Resource Design
 
-The following process will produce a set of resources that will respond to HTTP methods:
-- Figure out the data set
-- Split the data set into resources
-- For each kind of resource:
-  - Name the resources with URIs
-  - Expose a subset of the uniform interface
-  - Design the representation(s) accepted from the client
-  - Design the representation(s) served to the client
-  - Integrate this resource into existing resources, using hypermedia links and
-forms
-  - Consider the typical course of events: what’s supposed to happen?
-  - Consider error conditions: what might go wrong?
+Break up the problem top down.  
+Each noun is a class.  
+Turn verbs into nouns.  
 
-Example: create a web service that will serve maps
+Example: "Reader subscribes to a Column."  
+```
+Reader
+Subscription -> represents the relationship between Reader and Column
+Column
+```
 
-Figure out the data set: which maps? Those maps that use 2-D coordinates to
-identify any given point on the map. Maps need to be addressable using latitude
-and longitude. Those can be maps of cities, political maps, maps of celestial
-bodies. Some points on the map are more interesting then others, there points
-are called places. Users will want to return a place name in a point on the map.
-Data set will include mappings of places to points. Places have a certain type:
-cities, hot springs, crater. Service can find a place given its name, type or
-description.
+Don't add functions to a class, add resources.  
 
-Split the data set into resources: expose the data set as HTTP resources.
-Three commonly exposed kinds of resources:
-- Predefined one off resources for important aspects of the application: top
-level directory, for example a home page. Unique.
-- Resource for every object exposed through the service: each object exposed by
-the service has its own resource set.
-- Resources representing the result of algorithms applied to the data set:
-collection resources, the result of queries. A service either exposes none or an
-infinite number of them. Called algorithmic resources.
+### Turning Requirements Into Read-Only Resources
 
-Map service needs one special resource that will list all the planets. Every map
-of the planet is also a resource. Those are one off resources.
+```
+Identify the data
+Split the data into resources
+For each resource type:
+  Name them with URIs
+  Expose a subset of the uniform interface
+  Design the representation(s) accepted from the client
+  Design the representation(s) served to the client
+  Integrate this resource into existing resources, using hypermedia links and forms
+  Consider the typical course of events: what’s supposed to happen?
+  Consider error conditions: what might go wrong?
+```
 
-Every point on the map is a resource. A point might represent a house, a
-mountain or something else. Places are points which are identified by a name
-rather then the coordinates, they too are resources. Those are object resources.
+### Figure Out the Data Set
 
-Sample algorithmic resources are: places on Earth called Springfield, towns in
-France with pop less then 1000 and others.
+All 2D maps, addressable by longitude and latitude.  
+A map is anchored by a coordinate.  
+Places are points of interest. They have a name.  
 
-Master list of resources are:
-- list of planets
-- place on a planet, identified by a name
-- geographic points on the planet
-- list of places that match a criteria
-- map of a planet, centered around a point
+You may need to repeat this step many times.  
 
-RESTful services expose both ata and algorithms through resources. Think about
-results of actions instead of actions (methods) themselves.
+### Split the Data Set into Resources
 
-Name the resources: named after URIs. URIs contain all the scoping info. The
-list of planets is the root URI, http://maps.example.com/.
-Three basic rules for URI design:
-- use path variables to encode hierarchy, /parent/child
-- use punctuation characters in path variables to avoid implying hierarchy where
-none exist, /parent/childOne;ChildTwo
-- use query variables to imply inputs into an algorithm,
-/search?q=jellyfish&start=20
+A resource is anything that can have a URI.  
 
-Percent encoding primer: %20 in URI stands for a character that would otherwise
-be considered special.
+Three resource types:
+```
+Unique resources       -> homepage, admin
+Object resources       -> any class object
+Algorithmic resources  -> resources as a result of an operation
+```
 
-Sample hierarchy URIs: http://maps.example.com/Mars, http://maps.example.com/Earth
-to identify planets. If you can extend the URI with something like
-/Earth/France/Paris, then you know you have designed a good URI.
+In the example, resources are:
+* list of planets
+* list of places that match a criteria
+* place on a planet, identified by a name
+* geographic points on the planet
+* map of a planet, centered around a point
 
-No hierarchy URIs: use comma when the order matters (,) and semicolon (;) when
-it doesn't. /Earth/24.9195,17.821 and /Venus/3,-80 .
+Expose data and algorithms through resources.  
+Think about action results rather then actions.  
 
-Different map type URIs: radar/Venus/65.9,7.00 and /geologic/Earth/43.9,-103.46 .
+### Name the Resources
 
-Different map scale URIs: /satellite.10/Earth/41,-112: 1:24,000 and /satellite.1/Earth/41,-112: 1:51,969,000 .
+URI design:  
+```
+Encode hierarchy into path variables
+Put punctuations if there is no hierarchy
+Query variables imply inputs
+```
 
-Algorithmic resource URIs: /Mars?show=craters+bigger+than+1km and /Earth/USA/Mount%20Rushmore?show=diners .
-Sometimes, they are not necessary.
+Much harder then you think. Use a pen and paper.  
 
-Master list of URIs:
-- list of planets: /
-- planet or a place on a planet: /{planet}/[{scoping-information}/][{place-name}],
-the optional variable {scoping-information} will be a hierarchy of places, {place-name}
-will be the name of the place and *show* can be tacked on at the end to access
-algorithmic resources. 
-- map of a planet, or a point on a map: /{map-type}{scale}/{planet}/[{scoping-information}],
-{scoping-information} will be a pair of longitude and latitude values, {scale}
-will be a dot and a number.
+### Encode Hierarchy into Path Variables
 
-Design your representations: decide on the data format that will be send to the
-client. Representation's job is to convey the state of the resource. Representation
-should provide the levers of state, links to nearby resources (new application states).
-The goal is connectedness, the ability to follow one resource to another by
-following links. 
-Representing:
-- the list of planets: between plain text, JSON, XML and XHTML format, use XHTML
-a good XML language for displaying lists of links.
+Path variables hierarchically organise scoping information.  
 
+Example: http://maps.example.com/Earth/USA/Mount%20Rushmore
+
+### No Hierarchy? Use Commas or Semicolons
+
+Scoping info with no hierarchy is separated by a colon or semicolon.  
+```
+Colon     -> order is important
+Semicolon -> order doesn't matter
+```
+
+Example: http://maps.example.com/Earth/24.9195,17.821
+Example: http://colour.blender.com/color-blends/red;blue
+
+### Algorithmic Resource? Use Query Variables
+
+Use query variables for algorithmic resources.  
+
+Example: http://maps.example.com/Earth/Indonesia?show=oil+tankers&show=container+ships
+
+### Design Your Representations
+
+Send the representation of the state of a resource.  
+
+Provide links to nearby resources, "levers of state".  
+
+"Nearby" can mean:  
+```
+Pagination, next
+Possible new application state
+Resource state
+...
+```
+
+Provide links to resource state, GET, PUT, HEAD and so on.  
+
+### Link the Resources to Each Other
+
+You can use HTML forms to lead to other resources.  
+
+### The HTTP Response
+
+Representations go into Entity-Body.  
+
+Response code signals what happened.  
+
+Use headers if you must.  
+
+#### Conditional HTTP GET
+
+Only returns the representation if the data has changed.  
+Look it up in Chapter 8.  
+
+Response headers:
+```
+Last-Modified
+ETag
+```
+
+Request headers:
+```
+If-Modified-Since
+If-None-Match
+```
+
+### What Might Go Wrong?
+
+Think of the responses if a failure occurs.  
+
+Response codes:  
+```
+200 -> OK
+304 -> Not Modified
+404 -> Not Found
+303 -> See Other
+400 -> Bad Request
+503 -> Service Unavailable
+500 -> Internal Server Error
+```
+
+#### Examples of responses
+
+List of planets:  
 ```xhtml
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -574,10 +627,7 @@ a good XML language for displaying lists of links.
 </html>
 ```
 
-- maps and points on maps: maps will be split into 256x256 tiles. When a client
-requests a point, serve a hypermedia file that includes a link to a tiny map
-image. Hypermedia files will also include links to adjacent points.
-
+Maps and points on maps:  
 ```xhtml
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -601,12 +651,7 @@ image. Hypermedia files will also include links to adjacent points.
 </html>
 ```
 
-- map tiles: 
-
-- planets and other places: follow a link from list of planets to a specific
-planet, then follow more links from there. Places are represented by key-value
-pairs.
-
+Planets and other places:  
 ```xhtml
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -634,11 +679,7 @@ pairs.
 </html>
 ```
 
-Quick reminder: web services are just web sites for robots. RESTful services look
-like web sites to humans.
-
-- lists of search results: list of links to resources that are already defined.
-
+Lists of search results:  
 ```xhtml
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -665,13 +706,7 @@ like web sites to humans.
 </html>     
 ```
 
-Link resources to each other: that is by design, a lot of resources contain
-links to other resources. However, there is no way for a client to generate a
-search URI. Because there are infinitely many things for which a client can do a
-search, you cannot just link to for example "diners". Solve it with HTML forms.
-Send an appropriate HTML form in a representation to tell a client how to plug
-in variables into the query string.
-
+Link resources to each other with HTML forms:  
 ```xhtml
 <form id="searchPlace" method="get" action="">
   <p>
@@ -682,25 +717,11 @@ in variables into the query string.
 </form></screen>
 ```
 
-HTTP response: consider possible response codes or HTTP headers that you will
-send out. Read only services have a simple course of events: clients sends a GET
-request to a URI, server sends a response code 200 (OK), HTTP  headers and a
-representation. HEAD is the same, but it omits the representation.
 
-HTTP headers are a large toolkit, but every web service should be built to
-support the conditional HTTP GET.
-Conditional HTTP  GET: implemented in two request headers (If- Modified-Since
-and If-None-Match) and two response headers (Last-Modified and ETag). Because
-most resources seldom change the server should signal the client that it can
-use the cached version of the resource if it hasn't changed.
-
-What might go wrong: accessing a map that doesn't exist (404), place is not in
-the database (303 and send a HTTP response header Location which will contain
-the URI of an alternative resource), impossible latitude or longitude (400),
-a search yields no results (200), the server is overloaded (503) and the server
-is not functioning correctly (500).
 
 Chapter 6: Designing Read/Write Resource-Oriented Services
+
+TODO
 
 The imaginary web service should be expended with the functionality to let 
 clients store their maps.
