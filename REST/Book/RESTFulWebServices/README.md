@@ -534,7 +534,7 @@ Example: http://maps.example.com/Earth/USA/Mount%20Rushmore
 
 Scoping info with no hierarchy is separated by a colon or semicolon.  
 ```
-Colon     -> order is important
+Comma     -> order is important
 Semicolon -> order doesn't matter
 ```
 

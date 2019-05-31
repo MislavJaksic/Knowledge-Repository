@@ -2,15 +2,27 @@
 
 ### Installation
 
+#### Windows
+
 Download the [Haskell Platform](https://www.haskell.org/platform/).  
-Make sure you have 3GB of disk space.  
+
+Run "cabal user-config init" and make sure it includes:  
+```
+extra-prog-path: C:\Program Files\Haskell Platform\x.y.z\msys\usr\bin
+extra-lib-dirs: C:\Program Files\Haskell Platform\x.y.z\mingw\lib
+extra-include-dirs: C:\Program Files\Haskell Platform\x.y.z\mingw\include
+```
+
+Run WinGHCi!  
 
 ### Features
 
-Haskell natively supports [literal programming](https://wiki.haskell.org/Literate_programming).
+* everything is a function
+* everything is immutable (always create a new structure)
+* everything is an expression
+* has no side effects unless they are explicitely stated (pure/impure)
 
-Purely functional programming language are stateless. This is unlike in imperative programming languages such
-as C, Java or Python where a state can change.
+Haskell natively supports [literal programming](https://wiki.haskell.org/Literate_programming).  
 
 ### Terminal and Haskell file
 
