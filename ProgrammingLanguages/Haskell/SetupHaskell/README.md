@@ -24,8 +24,22 @@ Run WinGHCi!
 
 Haskell natively supports [literal programming](https://wiki.haskell.org/Literate_programming).  
 
-### Terminal and Haskell file
+Haskell has an interactive interpreter (much like Python/JavaScript), but can also compile.  
+
+### Literal programming
+
+Module has an extension .lhs.  
+Module can be written in Bird style.  
+
+### Interpreter
 
 Open the terminal with "ghci".  
-Create a file called "<file_name>.hs".  
-Load the file into the terminal with :l <file_name>.  
+Create a file called "_module_name.hs".  
+Load the file into the terminal with :l _module_name.  
+
+### Compile
+
+Compile a module with "ghc --make _module_name.hs"
+Run with "./_module_name".  
+OR  
+Compile and run with "runhaskell _module_name.hs".  

@@ -1,13 +1,9 @@
--- in maths: S = {2*x | x e N, x <= 10}
--- read: S is a set made up of natural numbers less then 10 that are then multiplied by 2
--- result: [2, ..., 20]
--- in Haskell: [<expression> | <elements..>, <predicates..>]
-set = [2*x | x <- [1..10]]
+=== LIST COMPREHENSION ===
 
-highLowOdd numbers = [if x > 20 then "High" else "Low" | x <- numbers, even x]
--- highLowOdd [18..22] -- ->["Low", "Low", "High"]
+[ _expression | _element.._element, _predicate.._predicate]
 
-rightTriangles = [ (a,b,c) | c <- [1..10], b <- [1..c], a <- [1..b], a^2 + b^2 == c^2]
+> trueFalse = [x*y `mod` 2 == 0 | x <- [1..3], y <- [1..3], x*y /= 1, x*y /= 9] -- -> [T, F, T, T, T, F, T]
+
 
 
 

@@ -1,7 +1,18 @@
--- guards are made up of a condition and an expression
--- if a condition is True, execute the expression; if it is False, check the next guard's condition
-rectanglePerimiter :: (RealFloat a) => a -> a -> String
-rectanglePerimiter height width
+=== GUARDS ===
+
+Similar to pattern matching.
+Execute the first pattern that matches.
+
+> grade :: Int -> Int
+> grade score 
+>   | score < 50 = 1
+>   | score < 63 = 2
+>   | score < 76 = 3
+>   | score < 89 = 4
+>   | otherwise  = 5
+
+size :: (RealFloat a) => a -> a -> String
+size height width
     | perimiter < 10.0 = "Small rectangle"
     | perimiter < 30.0 = "Medium rectangle"
     | otherwise = "Big rectangle" --catch-all
