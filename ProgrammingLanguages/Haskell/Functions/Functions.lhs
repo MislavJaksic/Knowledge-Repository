@@ -19,8 +19,27 @@ _function_name _param.._param = _expression
 > doubleAndAddTwo :: (Num a) => a -> a -> a
 > doubleAndAddTwo x y = 2*x + 2*y
 
+
+
 -- function application is using $ as the lowest operator instead of using parentheses
-> equal = (sqrt (3 + 4 + 9)) == (sqrt $ 3 + 4 + 9)
+equal = (sqrt (3 + 4 + 9)) == (sqrt $ 3 + 4 + 9)
 
 -- function composition means (f . g)(x) = f(g(x))
-> result = map (negate . abs) [2,-4,-6] -- map abs first, then map negate to the result, [-2,-4,-6]
+result = map (negate . abs) [2,-4,-6] -- map abs first, then map negate to the result, [-2,-4,-6]
+
+
+
+
+divideByTen :: (Floating a) => a -> a
+divideByTen = (/10)
+
+smallList = [20,40,80]
+
+-- filter and map can be used instead of list comprehension
+mapResult = map divideByTen smallList -- map applies a function o a list, result=[2,4,8]
+filterResult = filter (>20) smallList -- filter filters out those that do not satisfy the predicate, result=[40,80]
+
+
+-- takeWhile takes a predicate and a list
+-- returns all the elements before the predicate became false
+whileResult = (takeWhile (<4) [1,2..]) -- [1,2,3,4]

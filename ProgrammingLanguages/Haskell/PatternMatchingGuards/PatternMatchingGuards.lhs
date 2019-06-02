@@ -26,4 +26,25 @@ The name references the pattern.
 
 > capital :: String -> String  
 > capital "" = "Empty string, whoops!"  
-> capital all@(x:xs) = "The first letter of " ++ all ++ " is " ++ [x]  
+> capital all@(x:xs) = "The first letter of " ++ all ++ " is " ++ [x]
+
+=== CASE EXPRESSION ===
+
+Pattern matching is syntactics sugar for case expressions.
+
+> say' :: (Integral a) => a -> String
+> say' x = case x of 1 -> "One"
+>                    2 -> "Two"
+>                    x -> "Not one or two"
+
+=== GUARDS ===
+
+Similar to pattern matching.
+Execute the first pattern that matches.
+
+> say'' :: (Integral a) => a -> String
+> say'' x 
+>   | x == 1 = "One"
+>   | x == 2 = "Two"
+>   | otherwise = "Not one or two"
+    
