@@ -72,4 +72,58 @@ read "5" :: Float -- -> 5.0
 read "[1,2,3,4]" :: [Int] -- -> [1,2,3,4]
 read "(3, 'a')" :: (Int, Char) -- -> (3, 'a')
 
+=== NEW DATA TYPES ===
 
+Algebraic data types enumerate all possible values.
+
+> data Tricolour = Red | Green | Blue
+
+"Tricolour" is a new type while "Red", "Green" and "Blue" are data/value constructors.
+"Red", "Green" and "Blue" are nullary constructors because they are values, parameterless functions.
+"Tricolour" is an enumeration.
+Data constructors are functions just like any other.
+
+Type and data constructor name have the same name ("Point") when there is only one data constructor.
+"Circle" and "Rectangle" data constructors are of type "Shape".
+An analogy: "True" and "False" are of type "Bool".
+Types can derive typeclasses (Show, Ord, ...).
+
+> data Point = Point Float Float deriving (Show)
+> data Shape = Circle Point Float | Rectangle Point Point deriving (Show)
+
+> surface :: Shape -> Float
+> surface (Circle _ r) = pi * r ^ 2
+> surface (Rectangle (Point x1 y1) (Point x2 y2)) = (abs $ x2 - x1) * (abs $ y2 - y1)
+
+=== RECORDS ===
+
+An alternative way of defining a type.
+
+A bad, tedious and wordy way:
+  data Car = Car String String Int deriving (Show)
+
+  company :: Car -> String
+  company (Car c _ _) = c
+
+  model :: Car -> String
+  model (Car _ m _) = m
+
+  year :: Car -> Int
+  year (Car _ _ y) = y
+
+A better way:
+
+> data Car = Car { company :: String
+>                , model :: String
+>                , year :: Int
+>                } deriving (Show)
+
+> oldTimer = Car {company="Ford", model="Mustang", year=1967}
+
+Partial initialization is allowed but data will be "undefined".
+
+> partDef = Car {company="Ford", year=2000}
+
+Record data can be "modified".
+
+> newTimer = oldTimer {year=2000}

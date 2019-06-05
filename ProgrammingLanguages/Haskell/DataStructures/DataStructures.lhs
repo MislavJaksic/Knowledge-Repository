@@ -1,7 +1,7 @@
-import qualified Data.List as hs.list
-import qualified Data.Char as hs.char
-import qualified Data.Map as hs.map
-import qualified Data.Set as hs.set
+> import qualified Data.List as L
+> import qualified Data.Char as C
+> import qualified Data.Map as M
+> import qualified Data.Set as S
 
 === LISTS ===
 
@@ -70,112 +70,112 @@ Tuples are heterogenous and finite.
 > s = snd tuple -- -> 2
 > pairs = zip [1,2] ["one", "two", "three", "four"] -- -> [(1,"one"),(2,"two")]
 
+=== DATA.LIST FUNCTIONS ===
 
+L.intersperse
+L.intercalate
+L.transpose
+L.concat
+L.concatMap
+L.and
+L.or
+L.any
+L.iterate
+L.splitAt
+L.takeWhile
+L.dropWhile
+L.span
+L.break
+L.sort
+L.group
+L.inits
+L.tails
+L.isInfixOf
+L.isPrefix
+L.isSuffixOf
+L.elem
+L.notElem
+L.partition
+L.find
+L.elemIndex
+L.elemIndicies
+L.findIndex
+L.findIndices
+L.zip3
+L.zip4
+L.zipWith3
+L.zipWith4
+L.lines
+L.unlines
+L.words
+L.unwords
+L.nub
+L.delete
+L.\\
+L.union
+L.intersect
+L.insert
 
-hs.list.intersperse
-hs.list.intercalate
-hs.list.transpose
-hs.list.concat
-hs.list.concatMap
-hs.list.and
-hs.list.or
-hs.list.any
-hs.list.iterate
-hs.list.splitAt
-hs.list.takeWhile
-hs.list.dropWhile
-hs.list.span
-hs.list.break
-hs.list.sort
-hs.list.group
-hs.list.inits
-hs.list.tails
-hs.list.isInfixOf
-hs.list.isPrefix
-hs.list.isSuffixOf
-hs.list.elem
-hs.list.notElem
-hs.list.partition
-hs.list.find
-hs.list.elemIndex
-hs.list.elemIndicies
-hs.list.findIndex
-hs.list.findIndices
-hs.list.zip3
-hs.list.zip4
-hs.list.zipWith3
-hs.list.zipWith4
-hs.list.lines
-hs.list.unlines
-hs.list.words
-hs.list.unwords
-hs.list.nub
-hs.list.delete
-hs.list.\\
-hs.list.union
-hs.list.intersect
-hs.list.insert
+=== DATA.CHAR FUNCTIONS ===
 
+C.isControl
+C.isSpace
+C.isLower
+C.isUpper
+C.isAlpha
+C.isAlphaNum
+C.isPrint
+C.isDigit
+C.isOctDigit
+C.isHexDigit
+C.isLetter
+C.isMark
+C.isNumber
+C.isPunctuation
+C.isSymbol
+C.isSeparator
+C.isAscii
+C.isLatin1
+C.isAsciiUpper
+C.isAsciiLower
 
+C.toUpper
+C.toLower
+C.toTitle
+C.digitToInt
+C.intToDigit
+C.ord
 
-hs.char.isControl
-hs.char.isSpace
-hs.char.isLower
-hs.char.isUpper
-hs.char.isAlpha
-hs.char.isAlphaNum
-hs.char.isPrint
-hs.char.isDigit
-hs.char.isOctDigit
-hs.char.isHexDigit
-hs.char.isLetter
-hs.char.isMark
-hs.char.isNumber
-hs.char.isPunctuation
-hs.char.isSymbol
-hs.char.isSeparator
-hs.char.isAscii
-hs.char.isLatin1
-hs.char.isAsciiUpper
-hs.char.isAsciiLower
+=== DATA.MAP FUNCTIONS ===
 
-hs.char.toUpper
-hs.char.toLower
-hs.char.toTitle
-hs.char.digitToInt
-hs.char.intToDigit
-hs.char.ord
+M.empty
+M.insert
+M.null
+M.size
+M.singleton
+M.lookup
+M.member
+M.map
+M.filter
+M.toList
+M.keys
+M.elems
+M.fromListWith
+M.insertWith
 
+=== DATA.SET FUNCTIONS ===
 
-
-hs.map.empty
-hs.map.insert
-hs.map.null
-hs.map.size
-hs.map.singleton
-hs.map.lookup
-hs.map.member
-hs.map.map
-hs.map.filter
-hs.map.toList
-hs.map.keys
-hs.map.elems
-hs.map.fromListWith
-hs.map.insertWith
-
-
-
-hs.set.fromList
-hs.set.intersection
-hs.set.difference
-hs.set.union
-hs.set.null
-hs.set.size
-hs.set.member
-hs.set.empty
-hs.set.singleton
-hs.set.insert
-hs.set.delete
-hs.set.map
-hs.set.filter
-hs.set.toList
+S.fromList
+S.intersection
+S.difference
+S.union
+S.null
+S.size
+S.member
+S.empty
+S.singleton
+S.insert
+S.delete
+S.map
+S.filter
+S.toList
