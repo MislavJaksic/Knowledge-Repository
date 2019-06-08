@@ -52,17 +52,17 @@ Polymorphic functions have type variables.
 === TYPECLASSES AND ANNOTATIONS ===
 
 Typeclass is a type interface.
-A type that implements a typeclass supports its behaviour.
+A type that implements a typeclass instances its behaviour.
 
-Eq type supports equality testing.
-Ord type can be ordered.
-Show type can be represented as a string.
-Read type takes a String type and transforms it into another type.
-Enum type enables sequancial enumeration.
-Bounded type has a upper and lower bound.
-Num type behaves like numbers.
-Integral type behaves like a whole number, integer.
-Floating type behaves like a floating point number.
+Eq - support equality testing.
+Ord - can be ordered.
+Show - can be represented as a string.
+Read - take a String type and transform it into another type.
+Enum - values have predecessors and successors.
+Bounded - has an upper and lower bound.
+Num - behaves like a number.
+Integral - behaves like a whole number, integer.
+Floating - behaves like a decimal number, floating point.
 
 Type annotations are explicit annotation after the expression.
 
@@ -71,6 +71,8 @@ read "5" :: Float -- -> 5.0
 (read "5" :: Float) * 4 -- -> 20
 read "[1,2,3,4]" :: [Int] -- -> [1,2,3,4]
 read "(3, 'a')" :: (Int, Char) -- -> (3, 'a')
+
+Don't write typeclasses in data declarations.
 
 === NEW DATA TYPES ===
 
@@ -118,12 +120,131 @@ A better way:
 >                , year :: Int
 >                } deriving (Show)
 
-> oldTimer = Car {company="Ford", model="Mustang", year=1967}
+> oldTimer = Car {year=1967, model="Mustang", company="Ford"}
+> oldTimer' = Car 1967 "Mustang" "Ford"
 
 Partial initialization is allowed but data will be "undefined".
 
 > partDef = Car {company="Ford", year=2000}
 
-Record data can be "modified".
+Record data can be "modified" by returning a new record.
+You can set default values in the same way.
 
 > newTimer = oldTimer {year=2000}
+
+=== TYPE PARAMETERS ===
+
+Type constructors take types as parameters and output a type.
+
+> data Vector a = Vector a a a deriving (Show)  
+  
+> vplus :: (Num t) => Vector t -> Vector t -> Vector t  
+> (Vector i j k) `vplus` (Vector l m n) = Vector (i+l) (j+m) (k+n)  
+
+Vector can be of any type as long as it is a Num.
+
+=== MAYBE AND EITHER TYPE ===
+
+"Maybe" is used when a value is optional or when an error can occur.
+
+data Maybe a = Nothing | Just a
+
+"Either" is used when we want to return an error message.
+
+data Either a b = Left a | Right b
+
+=== INFIX OPERATORS ===
+
+> infixr 5 :-:
+> (:-:) = Cons
+
+> concat = 1 :-: 2 :-: []
+
+Operator priority ranges from 0 to 9.
+
+=== RECURSIVE DATA STRUCTURES ===
+
+A binary search tree.
+A "Tree" is either "EmptyTree" or is a "Node" with value "a", left sub-"Tree" and right sub-"Tree".
+
+> data Tree a = EmptyTree | Node a (Tree a) (Tree a) deriving (Show, Read, Eq)
+
+Singleton is just a "Node" with value "a".
+
+> singleton :: a -> Tree a  
+> singleton x = Node x EmptyTree EmptyTree  
+
+Either insert value "a" into an "EmptyTree" or value "a" into a "Node".
+
+> treeInsert :: (Ord a) => a -> Tree a -> Tree a  
+> treeInsert x EmptyTree = singleton x  
+> treeInsert x (Node a left right)   
+>     | x == a = Node x left right  
+>     | x < a  = Node a (treeInsert x left) right  
+>     | x > a  = Node a left (treeInsert x right)  
+    
+> treeElem :: (Ord a) => a -> Tree a -> Bool  
+> treeElem x EmptyTree = False  
+> treeElem x (Node a left right)  
+>     | x == a = True  
+>     | x < a  = treeElem x left  
+>     | x > a  = treeElem x right  
+
+> nums = [8,6,4,1,7,3,5]  
+> numsTree = foldr treeInsert EmptyTree nums -- -> constructs a complex tree
+
+=== NEW TYPECLASSS ===
+
+"Class" is used to define a new typeclass.
+"a" is a type variable that will become an instance of typeclass "Eq".
+Function type declarations follow.
+
+class Eq a where  
+    (==) :: a -> a -> Bool  
+    (/=) :: a -> a -> Bool  
+    x == y = not (x /= y)  
+    x /= y = not (x == y)  
+    
+data TrafficLight = Red | Yellow | Green
+
+A type can be made an instance of a typeclass.
+Typeclass functions are made specifically for the type.
+Minimal complete definition is the minimum number of functions a typeclasse has to implement.
+
+instance Eq TrafficLight where  
+    Red == Red = True  
+    Green == Green = True  
+    Yellow == Yellow = True  
+    _ == _ = False  
+
+instance Show TrafficLight where  
+    show Red = "Red light"  
+    show Yellow = "Yellow light"  
+    show Green = "Green light"  
+
+Subclass is a typeclass defined with another typeclass.
+    
+class (Eq a) => Num a where  
+   ...    
+
+TYPE CONSTRUCTORS /= TYPE VALUE! Remember that well.
+
+Bad definition:
+  instance Eq Maybe where  
+      ...    
+      
+Better definition:
+  instance (Eq m) => Eq (Maybe m) where  
+      Just x == Just y = x == y  
+      Nothing == Nothing = True  
+      _ == _ = False  
+      
+=== KINDS ===
+
+Kinds are "types of types".
+"Int", "Maybe", and "Either" are type constructors of different kind.
+
+Int :: * -- -> this kind is an ordinary type
+Maybe :: * -> * -- -> this kind is an unary type: input and output an ordinary type
+
+

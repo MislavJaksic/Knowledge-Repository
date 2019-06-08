@@ -138,6 +138,11 @@ $: git push Repository-Name Branch-Name
 
 TODO
 
+???git checkout -b BRANCH_NAME???
+???git push origin HEAD???
+???git merge BRANCH_NAME???
+???git rebase BRANCH_NAME???
+
 ### GitIgnore
 
 * [GitHub's .gitignore collection](https://github.com/github/gitignore)
