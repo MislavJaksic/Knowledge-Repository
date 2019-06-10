@@ -1,8 +1,8 @@
 === LOCAL DEFINITIONS, WHERE BINDINGS ===
 
-Compute a value once in the where block.
+Compute a value once in the "where" block.
 
-Good reasons to use where:
+Good reasons to use "where":
 * if an expression is being repeated locally
 * if this makes your code more comprehensive
 * for documentation
@@ -18,14 +18,14 @@ Good reasons to use where:
 
 === LET-IN ===
 
-Let is extremely local and used a few times.
-Similar to where.
+"let" is extremely local and used a few times.
+Similar to "where".
 
-Difference between where and let:
-* where is declared at the end of a function and is visible only to the last clause, including the guards
-* let can be declared everywhere and is by itself an expression
+Difference between "where" and "let":
+* "where" is declared at the end of a function and is visible only to the last clause, including the guards
+* "let" can be declared everywhere and is by itself an expression
 
-Use where over let.
+Use "where" over "let".
 
 > cylinder :: (RealFloat a) => a -> a -> a
 > cylinder r h =

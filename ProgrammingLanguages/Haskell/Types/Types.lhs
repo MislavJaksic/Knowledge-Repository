@@ -1,16 +1,16 @@
 === TYPES ===
 
 A type begins with a capital letter.
-Common types: Int, Integer, Float, Double, Bool, Char, Ordering, ().
+Common types are: Int, Integer, Float, Double, Bool, Char, Ordering, ().
 
-:: means "has type of".
+:: means: has type of.
 
 In the interpreter:
-:t 'a'         -- ->'a' :: Char
-:t True        -- ->True :: Bool
-:t "HELLO!"    -- ->"HELLO!" :: [Char]
-:t (True, 'a') -- ->(True, 'a') :: (Bool, Char)
-:t 4 == 5      -- ->4 == 5 :: Bool
+:t 'a'         -- -> 'a' :: Char
+:t True        -- -> True :: Bool
+:t "HELLO!"    -- -> "HELLO!" :: [Char]
+:t (True, 'a') -- -> (True, 'a') :: (Bool, Char)
+:t 4 == 5      -- -> 4 == 5 :: Bool
 
 Functions should have a type declaration.
 A function can take multiple parameters.
@@ -24,7 +24,7 @@ The last type is the return type.
 
 === TYPE SYNONYMS ===
 
-A type alias, synonym begins with a capital letter.
+A type alias (synonym) begins with a capital letter.
 
 > type IdNumber  = Int
 > type FirstName = String
@@ -44,7 +44,7 @@ A type variable, polymorphic type begins with a lowercase letter.
 A generic type.
 Polymorphic functions have type variables.
 
-:t head -- ->head :: [a] -> a
+:t head -- -> head :: [a] -> a
 
 > swap' :: (a, b) -> (b, a)
 > swap' x = (snd x, fst x)
@@ -54,13 +54,13 @@ Polymorphic functions have type variables.
 Typeclass is a type interface.
 A type that implements a typeclass instances its behaviour.
 
-Eq - support equality testing.
-Ord - can be ordered.
-Show - can be represented as a string.
-Read - take a String type and transform it into another type.
-Enum - values have predecessors and successors.
-Bounded - has an upper and lower bound.
-Num - behaves like a number.
+Eq       - support equality testing.
+Ord      - can be ordered.
+Show     - can be represented as a string.
+Read     - take a String type and transform it into another type.
+Enum     - has predecessors and successors.
+Bounded  - has an upper and lower bound.
+Num      - behaves like a number.
 Integral - behaves like a whole number, integer.
 Floating - behaves like a decimal number, floating point.
 
@@ -127,7 +127,7 @@ Partial initialization is allowed but data will be "undefined".
 
 > partDef = Car {company="Ford", year=2000}
 
-Record data can be "modified" by returning a new record.
+Record data can be modified by returning a new record.
 You can set default values in the same way.
 
 > newTimer = oldTimer {year=2000}
@@ -141,7 +141,7 @@ Type constructors take types as parameters and output a type.
 > vplus :: (Num t) => Vector t -> Vector t -> Vector t  
 > (Vector i j k) `vplus` (Vector l m n) = Vector (i+l) (j+m) (k+n)  
 
-Vector can be of any type as long as it is a Num.
+Vectors can be of any type as long as they are a Num.
 
 === MAYBE AND EITHER TYPE ===
 
@@ -226,7 +226,7 @@ Subclass is a typeclass defined with another typeclass.
     
 class (Eq a) => Num a where  
    ...    
-
+        
 TYPE CONSTRUCTORS /= TYPE VALUE! Remember that well.
 
 Bad definition:
@@ -239,6 +239,20 @@ Better definition:
       Nothing == Nothing = True  
       _ == _ = False  
       
+> class YesNo a where  
+>   yesno :: a -> Bool  
+
+> instance YesNo Int where  
+>     yesno 0 = False  
+>     yesno _ = True  
+
+> instance YesNo (Maybe a) where  
+>     yesno (Just _) = True  
+>     yesno Nothing = False  
+
+> yesnoIf :: (YesNo y) => y -> a -> a -> a  
+> yesnoIf yesnoVal yesResult noResult = if yesno yesnoVal then yesResult else noResult  
+      
 === KINDS ===
 
 Kinds are "types of types".
@@ -247,4 +261,15 @@ Kinds are "types of types".
 Int :: * -- -> this kind is an ordinary type
 Maybe :: * -> * -- -> this kind is an unary type: input and output an ordinary type
 
+=== FUNCTOR ===
 
+Types that can be mapped over.
+
+class Functor f where  
+    fmap :: (a -> b) -> f a -> f b  
+    
+> instance Functor Tree where  
+>     fmap f EmptyTree = EmptyTree  
+>     fmap f (Node x leftsub rightsub) = Node (f x) (fmap f leftsub) (fmap f rightsub)  
+    
+=== FOLDABLE ===

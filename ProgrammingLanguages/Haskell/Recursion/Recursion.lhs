@@ -1,17 +1,18 @@
 === RECURSION ===
 
+A recursive function is one which calls itself.
 Most problems can be solved recursively.
-Solve the simplest, base case.
-Solve the edge cases.
+Solve the simplest base case first, then the edge case.
+The output is smaller then the input.
 
 > factorial :: (Integral a) => a -> a
 > factorial 0 = 1
 > factorial x = x * factorial (x - 1)
 
-> fibbonaci :: (Integral a) => a -> a
-> fibbonaci 0 = 1
-> fibbonaci 1 = 1
-> fibbonaci x = fibbonaci (x - 1) + fibbonaci (x - 2)
+> fibonacci :: (Integral a) => a -> a
+> fibonacci 0 = 1
+> fibonacci 1 = 1
+> fibonacci x = fibonacci (x - 1) + fibonacci (x - 2)
 
 Structural recursion processes a data structure.
 
@@ -22,8 +23,8 @@ Structural recursion processes a data structure.
 === CORECURSION ===
 
 Opposite of recursion.
+Construct rather then decompose.
 The output is larger then the input.
-Construct reather then decompose.
 
 > cycle' :: a -> [a]
 > cycle' x = x : cycle' x

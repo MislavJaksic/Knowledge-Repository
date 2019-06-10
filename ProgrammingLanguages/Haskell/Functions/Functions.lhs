@@ -1,6 +1,6 @@
 === DEFINING VALUES AND FUNCTIONS ===
 
-Parameterless function, a constant value:
+Values are functions without parameters:
 
 > string = "String"
 
@@ -8,38 +8,38 @@ Function which takes one parameter:
 
 > double x = x + x
 
-Infix function notation:
+Infix notation:
 
 > one = 5 `div` 3 -- -> 1
 
-Function declaration:
-_type_declaration :: (_class_constraint)..(_class_constraint) => _param.._param -> _output
+Function are declared like so:
+_type_declaration :: (_class_constraint)..(_class_constraint) => _param -> .. -> _param -> _output
 _function_name _param.._param = _expression
 
-> number :: (Num a) => a -> a -> a
+> number :: (Num a) => a -> a -> a -- -> Num is a _class_constraint; x and y are a and a
 > number x y = x*10 + y
 
 === CURRIED FUNCTIONS ===
 
-A higer-order function is a function that returns a function and/or takes a function as argument.
-A function can take only one parameter.
-If it takes more, it has been curried.
+A higher-order function is a function that takes a function as input or output.
+On paper, a function can take only one parameter.
+If it takes two or more it has to be curried.
 
 "->" is right associative, meaning they group up to the right:
-number :: (Num a) => a -> a -> a -- -> takes two parameters
-is the same as
 number :: (Num a) => a -> (a -> a) -- -> takes one parameter, returns a function that takes one parameter and returns a value
+EQUAL TO
+number :: (Num a) => a -> a -> a -- -> takes two parameters
 
 Function application is right associative.
 
-number 1 2 -- -> takes two parameters
-is the same as
 (number 1) 2 -- -> takes one parameter, returns a function that takes one parameter and returns a value
+EQUAL  TO
+number 1 2 -- -> takes two parameters
 
 === PARTIAL APPLICATION ===
 
-You can define a new function by giving an old function too few arguments.
-The order of parameters is important when defining a function.
+Define a new function by giving another function too few arguments.
+The order of parameters is important when defining a partially applied function.
 This is called eta reduction.
 
 > fifty = number 5 -- -> defined x, but not y
@@ -49,21 +49,21 @@ This is called eta reduction.
 
 Partial application of an infix function.
 
-> addTwo = (+2)
+> addTwo = (+2) -- -> assumes that a parameter, x, is missing
 
 > prependZero :: [Integer] -> [Integer]
 > prependZero = (0:)
 
 === HIGHER-ORDER FUNCTIONS ===
 
-A higer-order function is a function that returns a function and/or takes a function as argument.
+A higher-order function is a function that takes a function as input or output.
 
 > applyTwice :: (a -> a) -> a -> a -- -> mandatory brackets because of right association
 > applyTwice f x = f (f x)
 
 === MAP ===
 
-Takes a function and lists of equal length, then joins the while applying the function.
+Takes a function and a list, then applies the function.
 
 > map' :: (a -> b) -> [a] -> [b]
 > map' _ []     = []
@@ -71,7 +71,7 @@ Takes a function and lists of equal length, then joins the while applying the fu
 
 === FILTER ===
 
-Take a predicate functions and a list, then returns a truth list.
+Takes a predicate functions and a list, then returns a boolean list.
 
 > filter' :: (a -> Bool) -> [a] -> [a]
 > filter' _ [] = []
@@ -81,25 +81,24 @@ Take a predicate functions and a list, then returns a truth list.
 
 === TAKE WHILE ===
 
-Take a predicate functions and a list, then returns all elements before the predicate became false.
+Takes a predicate functions and a list, then returns all elements before the predicate became false.
 
 > whileResult = (takeWhile (<4) [1,2..]) -- [1,2,3,4]
 
 === LAMBDA EXPRESSIONS ===
 
-Lambdas are anonymous, throwaway functions.
-Lambdas begin with \ and define paramaters before ->.
+Lambda are anonymous, throwaway functions.
+Lambda begins with \ and defines parameters before ->.
 
-Lambda of:
 incList = map (+1)
-is:
+EQUAL TO
 incList = map (\x -> x + 1)
 
-Use sparelingly!
+Use sparingly!
 
 === COMPOSITION AND POINTFREE STYLE ===
 
-Composition of functions: (f . g . h)(x) = f (g (h x))
+Mathematical composition: (f . g . h)(x) = f (g (h x))
 Composition is right associative.
 
 > applyTwice' :: (a -> a) -> a -> a
@@ -108,11 +107,11 @@ Composition is right associative.
 > increasePositives :: [Integer] -> [Integer]
 > increasePositives = map (+1) . filter (>0)
 
-Pointfree style is a way of writing which leaves out arguments.
+Pointfree style is a way of defining functions without writing parameters.
 
 === FUNCTION APPLICATION ===
 
-$ is the lowest operator.
+$ is an operator with the lowest infixl (precedence).
 Removes the need for brackets.
 
 > fa = sum (map sqrt [1..130])
@@ -131,5 +130,4 @@ map'' f xs = foldr (\x acc -> f x : acc) [] xs
 
 foldl is more efficient then foldr.
 
-Scans are similar to folds.
-Scans output all intermediate accumulators.
+Scans are similar to folds, but output all intermediate accumulators.

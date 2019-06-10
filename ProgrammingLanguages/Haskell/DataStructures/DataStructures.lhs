@@ -5,17 +5,15 @@
 
 === LISTS ===
 
-Lists are homogenous.
+Lists are homogeneous and may be infinite.
 
 > numbers = [1,2,3]
 > string = "hello"
 
-Extend lists:
+Values can be added to existing lists.
 
 > extendNumber = [1,2,3] ++ [4,5,6] -- -> [1,2,3,4,5,6]
 > extendString = "hello" ++ " " ++ "world" -- -> "hello world"
-
-Add value to beginning:
 
 > headNumber = (-2) : (-1) : 0 : [1,2,3] -- -> [-2,-1,0,1,2,3]
 > headString = 'H' : "askell" -- -> "Haskell"
@@ -62,13 +60,15 @@ Infinite ranges:
 
 === TUPLES ===
 
-Tuples are heterogenous and finite.
+Tuples are heterogeneous and finite.
 
 > tuple = ('A', 2)
 
 > f = fst tuple -- -> 'A'
 > s = snd tuple -- -> 2
 > pairs = zip [1,2] ["one", "two", "three", "four"] -- -> [(1,"one"),(2,"two")]
+
+"()" is called a unit. An empty tuple type.
 
 === DATA.LIST FUNCTIONS ===
 
