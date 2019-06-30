@@ -1,17 +1,17 @@
 ## [Git](https://git-scm.com/)
 
-Git is a distributed version control system. It keeps track of changes to files and lets you recall specific version later.  
+Git is a distributed version control system. It tracks file changes and lets you recall previous version.  
 
-### [ProGit Book](https://git-scm.com/book/en/v2)
+### [ProGit](https://git-scm.com/book/en/v2)
 
 #### Getting started
 
-Git doesn't use delta based version control, that is, it doesn't keep track about changes to each file.  
-Instead, Git takes a snapshot of all your files every time you make a commit and references each file.  
+Git doesn't use delta based version control, that is, it doesn't track file changes.  
+Instead, Git takes a snapshot of every file every time you make a commit and references each file.  
 
 Nearly all Git operations are local, ensures integrity using hashes and doesn't delete data.  
 
-Files can occupy one of three stages in Git:  
+Files are in one of three stages:  
 * committed - stored in a repository  
 * modified - changes have not been stored  
 * staged - has been marked for committing  
@@ -31,7 +31,7 @@ $: sudo apt install git-all -> Debian, Ubuntu, ...
 
 On Windows:  
 * either download and install the executable  
-* or get a command line installer such as [Scoop](https://github.com/MislavJaksic/Knowledge-Repository/Scoop) and execute:
+* or get a command line installer such as [Scoop](https://scoop.sh/) and execute:
 ```
 $: scoop install git
 ```
@@ -43,7 +43,7 @@ $: git config
  -> /.gitconfig - configs specific to a user  
  -> config - configs that apply to a Git directory  
  
-$: git config --global user.name "MislavJaksic"
+$: git config --global user.name "Mislav Jaksic"
 $: git config --global user.email jaksicmislav@gmail.com
 $: git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
 

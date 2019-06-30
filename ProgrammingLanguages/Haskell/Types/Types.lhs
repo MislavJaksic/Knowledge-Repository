@@ -80,7 +80,7 @@ Algebraic data types enumerate all possible values.
 
 > data Tricolour = Red | Green | Blue
 
-"Tricolour" is a new type while "Red", "Green" and "Blue" are data/value constructors.
+"Tricolour" is a new type while "Red", "Green" and "Blue" are data constructors.
 "Red", "Green" and "Blue" are nullary constructors because they are values, parameterless functions.
 "Tricolour" is an enumeration.
 Data constructors are functions just like any other.
