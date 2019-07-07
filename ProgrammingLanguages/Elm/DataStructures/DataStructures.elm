@@ -1,29 +1,13 @@
--- === VALUES ===
-
-"hello" ++ "world"
-(2 + 3) * 4
-9 / 2
-9 // 2
-
--- === FUNCTIONS ===
-
-double n = n * 2
-
-double 2
-double -7
-
-(\n -> n < 0) 4
-
 -- === LISTS ===
 
 numbers = [1,4,3,2]
 
-List.isEmpty numbers
-List.length numbers
-List.reverse numbers
-List.sort numbers
+List.isEmpty numbers -- -> False
+List.length numbers -- -> 4
+List.reverse numbers -- -> [2,3,4,1]
+List.sort numbers -- -> [1,2,3,4]
 
-List.map double numbers
+List.map double numbers -- -> [2,8,6,4]
 
 -- === TUPLES ===
 
@@ -33,14 +17,14 @@ List.map double numbers
 
 -- === RECORDS ===
 
-bill = { name = "Gates", age = 62 }
+bill = {name = "Gates", age = 62}
 
-bill.name
-.name bill
+bill.name -- -> "Gates"
+.name bill -- -> "Gates"
 
 under70 {age} = age < 70
-under70 bill
-under70 { species = "Triceratops", age = 68000000 }
+under70 bill -- -> True
+under70 {species = "Triceratops", age = 68000000} -- -> False
 
-{ bill | name = "Nye" }
-{ bill | age = 22 }
+{bill | name = "Nye"} -- -> {age = 62, name = "Nye"}
+{bill | age = 22} -- -> {age = 22, name = "Gates"}
