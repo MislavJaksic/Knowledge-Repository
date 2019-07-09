@@ -17,3 +17,10 @@ $: stack exec haskell-project-exe
 
 src/ is where the library files are located.  
 app/ is where the executable files are located.  
+
+### Testing
+
+Setup [hspec](https://hspec.github.io/) and run:
+```
+$: stack build --test
+```

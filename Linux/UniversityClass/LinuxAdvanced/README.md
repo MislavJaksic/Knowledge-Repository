@@ -145,8 +145,9 @@ ssh_config stores all the ssh keys.
 nginx is a free, simple and fast HTTP server.
 To protect the communication you can use TCL.
 To use TCL you need a Certificate issued by a Certification Authority.
-[Let's Encrypt](https://letsencrypt.org/) is a CA that issued certificates for free.
-[nginx and Let's Encrypt Tutorial](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04)
+[Let's Encrypt](https://letsencrypt.org/) is a CA that issued certificates for free.  
+[nginx and Let's Encrypt Tutorial](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04)  
+[CertBot and Let's Encrypt](https://certbot.eff.org/)  
 
 DNS (Domain Name System) assignes your IP address a memorable name.
 dig - Domain Information Grouper; DNS lookup utility

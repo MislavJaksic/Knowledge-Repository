@@ -1,12 +1,14 @@
-﻿## Code Complete
+﻿# Code Complete
 
-Code Complete is a book written by Steve McConnell which explains why planning 
-in software construction is important, describes how to build large maintainable
-programs and how excellent systems look like. Code Complete argues that
-software construction is an important subject because it is the only activity
-that is guaranteed to happen.
+Code Complete, written by Steve McConnell, explains why planning software construction is important.  
+It describes how to build large maintainable projects.  
+Code Complete argues that software construction is important because it is the only activity that is guaranteed to happen.  
 
 ## Chapter 3: Measure twice, cut once
+
+When are you ready to begin construction?
+
+Prerequisites and preparation: risk reduction.
 
 Chapter 3 describes how writing prerequisites and careful preparation reduce
 risk of failure and allow construction to happen smoothly from beginning until

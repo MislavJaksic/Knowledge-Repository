@@ -16,3 +16,6 @@
 
 -- === SUBSCRIPTIONS ===
 
+-- subscriptions : Model -> Sub Msg
+-- subscriptions model =
+--   Time.every 1000 Tick

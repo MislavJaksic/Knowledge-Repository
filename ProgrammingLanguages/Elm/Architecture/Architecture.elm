@@ -5,6 +5,10 @@
 --   Update — a way to update your state
 --   View — a way to view your state as HTML
 
+-- === MODULES ===
+
+-- defined around a type, a model
+
 -- === MODEL ===
 
 -- Defines an immutable state with which the user can interact through messages.
@@ -24,13 +28,3 @@
 -- Elm HTML node functions take:
 --  * a list of attributes
 --  * a list of child nodes
-
--- div [_attributes] [_children]
-
--- === BUTTONS ===
-
--- button [onClick _msg] [text "_text"]
-
--- === TEXT FIELDS AND FORMS ===
-
--- input [type_ _type, placeholder "_backgound_text", value _value, onInput _msg] []

@@ -22,6 +22,9 @@ Install Elm with "npm install -g elm".
 ```
 $: elm repl    -> open terminal
 $: elm reactor -> build a simple Elm project
-$: elm make    -> build a complex Elm project
 $: elm install -> get Elm package from "https://package.elm-lang.org/"
+
+$: elm make    -> build a complex Elm project
+$: elm make src/_name.elm -> "compile" to HTML
+$: elm make src/_name.elm --output=_name.js -> "compile" to JavaScript
 ```

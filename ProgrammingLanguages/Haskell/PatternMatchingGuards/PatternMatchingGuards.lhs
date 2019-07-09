@@ -20,6 +20,12 @@ _ means: ignore this value.
 > sum' [] = 0  
 > sum' (x:xs) = x + sum' xs
 
+> tell :: (Show a) => [a] -> String  
+> tell [] = "Empty"  
+> tell (x:[]) = "One element"
+> tell (x:y:[]) = "Two elements"
+> tell (x:y:_) = "At least two elements"
+
 Pattern (as-pattern) is an annotation.
 Pattern (as-pattern) is made up of a name and @.
 The name references the pattern.

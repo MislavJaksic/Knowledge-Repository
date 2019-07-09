@@ -119,14 +119,14 @@ Removes the need for brackets.
 
 === FOLD AND SCAN ===
 
-Folds take a binary function, a starting value and a list.
+Folds take a binary function, an accumulator starting value and a list.
 Folds return a single value, an accumulator.
 
-sum'' :: (Num a) => [a] -> a
-sum'' = foldl (+) 0
+> sum'' :: (Num a) => [a] -> a
+> sum'' = foldl (+) 0
 
-map'' :: (a -> b) -> [a] -> [b]
-map'' f xs = foldr (\x acc -> f x : acc) [] xs
+> map'' :: (a -> b) -> [a] -> [b]
+> map'' f xs = foldr (\x acc -> f x : acc) [] xs
 
 foldl is more efficient then foldr.
 
