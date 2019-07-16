@@ -20,6 +20,23 @@ Structural recursion processes a data structure.
 > getMax [x] = x
 > getMax (x:xs) = max x (getMax xs)
 
+=== ACCUMULATOR RECURSION ===
+
+Return the result once you've hit the base case.
+Don't traverse upwords if you don't have to.
+
+> sum' :: Num a => [a] -> a
+> sum' xs = sum xs 0
+>   where sum []     s = s
+>         sum (x:xs) s = sum xs (x + s)
+
+> reverse' :: [a] -> [a]
+> reverse' xs = rev xs []
+>   where rev []     ys = ys
+>         rev (x:xs) ys = rev xs (x:ys)
+
+Save memory and time.
+
 === CORECURSION ===
 
 Opposite of recursion.

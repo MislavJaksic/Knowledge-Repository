@@ -61,6 +61,26 @@ A higher-order function is a function that takes a function as input or output.
 > applyTwice :: (a -> a) -> a -> a -- -> mandatory brackets because of right association
 > applyTwice f x = f (f x)
 
+Useful HOF functions:
+zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]
+takeWhile :: (a -> Bool) -> [a] -> [a]
+dropWhile :: (a -> Bool) -> [a] -> [a]
+break :: (a -> Bool) -> [a] -> ([a], [a]) 
+partition :: (a -> Bool) -> [a] -> ([a], [a])
+any :: (a -> Bool) -> [a] -> Bool
+all :: (a -> Bool) -> [a] -> Bool
+findIndices :: (a -> Bool) -> [a] -> [Int]
+sortBy :: (a -> a -> Ordering) -> [a] -> [a]
+groupBy :: (a -> a -> Bool) -> [a] -> [[a]]
+deleteBy :: (a -> a -> Bool) -> a -> [a] -> [a]
+maximumBy :: (a -> a -> Ordering) -> [a] -> a
+minimumBy :: (a -> a -> Ordering) -> [a] -> a
+nubBy :: (a -> a -> Bool) -> [a] -> [a]
+
+comparing :: Ord a => (b -> a) -> b -> b -> Ordering
+
+on :: (b -> b -> c) -> (a -> b) -> a -> a -> c
+
 === MAP ===
 
 Takes a function and a list, then applies the function.
@@ -121,6 +141,16 @@ Removes the need for brackets.
 
 Folds take a binary function, an accumulator starting value and a list.
 Folds return a single value, an accumulator.
+
+Right fold takes a combining function, a starting value and a list.
+It evaluates to:
+f x1 (f x2 (f x3 z))
+OR
+x1 `f` (x2 `f` (x3 `f` z)))
+
+Left fold takes a combining function, a starting value and a list.
+It evaluates to:
+f (f (f z x1) x2) x3
 
 > sum'' :: (Num a) => [a] -> a
 > sum'' = foldl (+) 0
