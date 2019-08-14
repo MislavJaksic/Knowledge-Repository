@@ -1,6 +1,6 @@
 ## [Docker](https://www.docker.com/resources/what-container)
 
-Docker is a containerisation program.
+Docker is a containerization program.
 
 ### [Install Docker](https://docs.docker.com/install/)
 
