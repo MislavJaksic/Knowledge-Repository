@@ -69,6 +69,22 @@ $: uname -a -> Ubuntu OS info
 $: lsb_release -a -> Centos OS info
 ```
 
+Pipeline commands:
+```
+|, >, >> -> pipe output, write to file and append to file
+```
+
+Pattern matching:
+```
+$: ... | grep "search-term"
+
+$: ... | grep -i "sEarch-term" -> case insensitive
+
+$: ... | grep -v "search-term" -> NOT
+$: ... | grep "term1\|term2" -> OR
+$: ... | grep -E "term1|term2" -> OR
+```
+
 ### Network command
 
 ```

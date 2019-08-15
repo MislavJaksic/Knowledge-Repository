@@ -1,6 +1,6 @@
 ## Unit testing
 
-Java program can be tested using one of the JUnit frameworks.
+Java program can be tested using a framework.
 
 ### Manual testing
 
