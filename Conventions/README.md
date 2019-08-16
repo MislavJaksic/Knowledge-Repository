@@ -1,8 +1,29 @@
 ## GitHub convention
 
+### Markdown conventions
+
+The top title is:  
 ```
-Top title: ##
-Prefix commands with: $:
-Variable name: Var-Name
-Inline comment: ->
+##
 ```
+
+Command prefix:  
+```
+$:
+```
+
+Variable name:  
+```
+Separated-By-Minus
+OR
+_underscored
+```
+
+Inline comment:  
+```
+->
+```
+
+### Text conventions
+
+Don't break up sentences if they are longer then X characters.  

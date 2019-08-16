@@ -1,3 +1,3 @@
 ## Stack
 
-A stack is a collection of programming tools.
+A stack is a collection of synergetic programming tools.
