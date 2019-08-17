@@ -1,4 +1,4 @@
-## Integrated Development Environment (IDE)
+## IDE (Integrated Development Environment)
 
 An IDE is a software designed to assist programmers in creating programs and organising projects.
 

@@ -67,8 +67,7 @@ CTRL+SHIFT+NumPad-/+: collapse/uncollapse all.
 
 ### Generate JavaDocs
 
-Before you generate JavaDoc make sure your project structure is sound and that you have documented everything
-according to the [rules](https://github.com/MislavJaksic/KnowledgeRepository/tree/master/ProgrammingLanguages/Java/Documenting).
+Before you generate JavaDoc make sure your project structure is sound and that you have documented everything according to the [rules](https://github.com/MislavJaksic/KnowledgeRepository/tree/master/ProgrammingLanguages/Java/Documenting).
 
 Under "Tools" -> "Generate JavaDoc...".
 
@@ -92,19 +91,15 @@ Fill in both of these:
 ### Adding dependencies
 
 You can add dependencies by simply copying the XML from the Maven Central Repository into the "pom.xml".
-Sometimes it can be hard to find the right JAR in all of the many subfolders of an external project. You can
-download the [JARExplorer](https://github.com/javalite/jar-explorer) to aid you in your search.
+Sometimes it can be hard to find the right JAR in all of the many subfolders of an external project. You can download the [JARExplorer](https://github.com/javalite/jar-explorer) to aid you in your search.  
 
 #### Build, plugins and packaging
 
 You can package the project into a .jar by adding <packaging>jar</packaging> into "pom.xml".  
-To package the project, that is, execute the Maven goal "mvn package" you can open the Maven project view. Click
-on the icon in the bottom left corner of the window.  
-Plugins can range from utilities, to those that allow you to execute the project from the command line like
-"exec-maven-plugin".  
+To package the project, that is, execute the Maven goal "mvn package" you can open the Maven project view. Click on the icon in the bottom left corner of the window.  
+Plugins can range from utilities, to those that allow you to execute the project from the command line like "exec-maven-plugin".  
 
 #### Deployment
 
-If you want to transfer the project, package the whole project into a .zip or something similar and install it
-with "mvn install".  
+If you want to transfer the project, package the whole project into a .zip or something similar and install it with "mvn install".  
 If you have the "exec-maven-plugin", you can execute the project from the command line with "mvn exec:java".  

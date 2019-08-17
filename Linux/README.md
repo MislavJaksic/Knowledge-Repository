@@ -1,20 +1,16 @@
 ## Linux
 
 Linux is a family of operating systems famous for its kernel.  
-Linux comes with a lot of free office, system monitoring and programming tools, such as OpenOffice and
-process control program top.  
+Linux comes with a lot of free office, system monitoring and programming tools, such as OpenOffice and process control program top.  
 
 ### Linux distributions
 
-There are [many varieties of Linux](https://distrowatch.com/). They range from those that look like Windows
-to those without a graphical interface.  
+There are [many varieties of Linux](https://distrowatch.com/). They range from those that look like Microsoft Windows to those without a GUI.  
 Each Linux OS is different, so take care not to mix up installation instructions or command syntax.  
 
-[Manjaro](https://manjaro.org/) - quite popular
-
-[Ubuntu](https://www.ubuntu.com/) - Desktop is similar to Windows; Server has no interface
-
-[CentOS](https://www.centos.org/) - useful as a server
+* [Manjaro](https://manjaro.org/) - quite popular
+* [Ubuntu](https://www.ubuntu.com/) - Desktop is similar to Windows; Server has no interface
+* [CentOS](https://www.centos.org/) - useful as a server
 
 ### Installation
 
