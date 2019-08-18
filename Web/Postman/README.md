@@ -28,5 +28,3 @@ Body:
   "replication_number" : "1"
 }
 ```
-
-

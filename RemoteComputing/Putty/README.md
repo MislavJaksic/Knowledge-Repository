@@ -1,6 +1,6 @@
 ## Putty
 
-A program for connecting to another remote computer.
+A program for connecting to a remote computer.  
 Uses SSH (Secure SHell) and telnet.  
 
 ### Installation

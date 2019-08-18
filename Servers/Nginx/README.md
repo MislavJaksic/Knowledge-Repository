@@ -1,7 +1,8 @@
 ## [Nginx](https://www.nginx.com/resources/wiki/)
 
-nginx is a free, simple and fast HTTP server. It can also be much more then that.  
-To protect the communication you can use TCL.  
+nginx is a free, simple and fast HTTP server, but it can also be much more then that.  
+
+To protect communication you can use TCL.  
 To use TCL you need a Certificate issued by a Certification Authority.  
 [Let's Encrypt](https://letsencrypt.org/) is a CA that issued certificates for free.  
 [nginx and Let's Encrypt Tutorial](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04)  
@@ -31,7 +32,7 @@ Directives can be simple or block.
 Simple directive end with ;.  
 Block directives end with {} and they include additional instructions.  
 Context is when a block directive is made of directives.  
-# is a line comment.  
+\# is a line comment.  
 
 Serving static content is quite simple, but requires nginx to be configured.  
 Open nginx cofiguration file "sudo nano /etc/nginx/nginx.conf".  

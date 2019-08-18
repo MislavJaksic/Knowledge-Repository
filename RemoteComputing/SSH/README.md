@@ -1,6 +1,6 @@
 ## SSH
 
-SSH stands for Secure SHell.
+SSH stands for Secure SHell.  
 
 ### [The Black Magic of SSH by Bo Jeanes](https://vimeo.com/54505525)
 
@@ -23,7 +23,7 @@ TODO
 
 Connect by executing:
 ```
-sudo ssh -i Key-File username@IP/NAME
+$: sudo ssh -i Key-File username@IP/NAME
 ```
 
 The Key-File looks like:  
