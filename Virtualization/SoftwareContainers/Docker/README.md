@@ -4,19 +4,38 @@ Docker is a containerization program.
 
 ### [Install Docker](https://docs.docker.com/install/)
 
-Ubuntu example:  
-sudo apt-get update  
-sudo apt-get install apt-transport-https ca-certificates curl software-properties-common  
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -  
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"  
+#### Linux (Ubuntu)
 
-sudo apt-get update  
-sudo apt-get install docker-ce  
-sudo docker run hello-world  
+```
+$: sudo apt-get update  
+$: sudo apt-get install apt-transport-https ca-certificates curl software-properties-common  
+$: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -  
+$: sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"  
+```
+
+```
+$: sudo apt-get update  
+$: sudo apt-get install docker-ce  
+$: sudo docker run hello-world  
+```
+
+#### [Post-installation for Linux](https://docs.docker.com/install/linux/linux-postinstall/)
+
+Non-root users will have to prefix every command with "sudo". Avoid it with:
+```
+$: sudo groupadd docker
+$: sudo usermod -aG docker $USER
+-> RESTART VM/Linux
+$: docker run hello-world
+```
+
+### [Get started](https://docs.docker.com/get-started/)
+
+From setting up your environment to deploying an app.
 
 ### Docker Hub/Store
 
-Docker images can be browser, download and uploaded from and to the Hub.  
+Docker images can be browsed, download and uploaded from and to the Hub.  
 There are quite a few interesting and useful images.  
 
 #### Alpine 
