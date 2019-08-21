@@ -19,7 +19,7 @@ $: docker ps - list running containers
 $: docker image ls --all - list images
 
 $: docker run hello-world - run test image
-$: docker run Image-Name - run image
+$: docker run Image-Tag - run image
 ```
 
 ### 2: Containers
@@ -55,15 +55,15 @@ CMD ["python", "app.py"]
 #### Build the image
 
 ```
-$: docker build --tag=_tag Dockerfile-Directory - build an image with a tag from a Dockerfile
+$: docker build --tag=Image-Tag Dockerfile-Path - build an image with a tag from a Dockerfile
 ```
 
 #### Run the image
 
 ```
-$: docker run -p Outside-Port:Image-Port _tag - run image and map ports
+$: docker run -p Outside-Port:Image-Port Image-Tag - run image and map ports
 
-$: docker run -d -p Outside-Port:Image-Port _tag - run in the background, detached mode
+$: docker run -d -p Outside-Port:Image-Port Image-Tag - run in the background, detached mode
 $: docker container stop Container-Id - "SIGTERM"
 $: docker container kill Container-Id - "SIGKILL"
 ```
@@ -76,7 +76,7 @@ Repository is a collection of images.
 ```
 $: docker login - connect to a registry
 
-$: docker tag _image Docker-Id/_repository:_tag - associate a local image with a repository on a registry
+$: docker tag Image-Tag Docker-Id/_repository:_tag - associate a local image with a repository on a registry
 $: docker push Docker-Id/_repository:_tag - upload image to registry
 
 $: docker run -p Outside-Port:Image-Port Docker-Id/_repository:_tag - run remote image from a registry
@@ -88,7 +88,7 @@ $: docker run -p Outside-Port:Image-Port Docker-Id/_repository:_tag - run remote
 $: docker container rm Container-Id - remove container
 $: docker container rm $(docker container ls -a -q) - remove all containers
 
-$: docker image rm _image - remove image
+$: docker image rm Image-Tag - remove image
 $: docker image rm $(docker image ls -a -q) - remove all images
 ```
 
@@ -164,32 +164,27 @@ Swarm mode - makes your machine a swarm manager
 #### Setup swarm
 
 ```
-$: docker swarm init - machine becomes a swarm manager; enter swarm mode
-
 Linux with VirtualBox:
 $: docker-machine create --driver virtualbox Vm-Name1 - create VM
 $: docker-machine create --driver virtualbox Vm-Name2
 
 $: docker-machine ls - list VMs
 
-$: docker-machine ssh Vm-Name1 "docker swarm init --advertise-addr Vm-Ip" - add a swarm manager
-$: docker-machine ssh Vm-Name2 "docker swarm join --token <token> <ip>:2377" - add a worker
+$: docker-machine ssh Vm-Name1 "docker swarm init --advertise-addr Vm-Ip1" - add a swarm manager
+$: docker-machine ssh Vm-Name2 "docker swarm join --token Swarm-Join-Token Vm-Ip1" - add a worker
 
 $: docker-machine ssh Vm-Name1 "docker node ls" - list swarm
 
 $: docker-machine ssh Vm-Name "docker swarm leave" - leave swarm
 ```
 
+Connect host shell with VM:
 ```
 $: docker-machine env Vm-Name1 - removes the need for the "docker-machine ssh" wrapper
 
 Linux:
-export DOCKER_TLS_VERIFY="1"
-export DOCKER_HOST="Vm-Url1"
-export DOCKER_CERT_PATH="/Users/sam/.docker/machine/machines/Vm-Name1"
-export DOCKER_MACHINE_NAME="Vm-Name1"
-
 $: eval $(docker-machine env myvm1) - connect host shell to Docker Machine VM
+
 $: docker-machine ls - list VMs; there should be a single asterisk in the row ACTIVE
 ```
 
@@ -216,7 +211,7 @@ You can:
 
 After making changes run:
 ```
-$: docker stack deploy - update swarm
+$: docker stack deploy -c docker-compose.yml Stack-Name - update swarm
 ```
 
 #### Cleanup and reboot
@@ -235,11 +230,6 @@ $: docker-machine rm $(docker-machine ls -q) - delete all VM
 Linux:
 eval $(docker-machine env -u) - unset environment variables; disconnect shell from VM
 ```
-
-
-docker stack deploy -c <file> <app>  # Deploy an app; command shell must be set to talk to manager (myvm1), uses local Compose file
-docker-machine scp docker-compose.yml myvm1:~ # Copy file to node's home dir (only required if you use ssh to connect to manager and deploy the app)
-docker-machine ssh myvm1 "docker stack deploy -c <file> <app>"   # Deploy an app using ssh (you must have first copied the Compose file to myvm1)
 
 ### 5: Stacks
 
@@ -260,7 +250,7 @@ services:
     ports:
       - "Outside-Port:Image-Port"
     volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock" # gives access to the host’s socket file; map files
+      - "/var/run/docker.sock:/var/run/docker.sock" # gives access to the host’s socket file; map files; define mount point in container
     deploy:
       placement:
         constraints: [node.role == manager] # service will only run on a swarm manager (never a worker)
@@ -284,7 +274,7 @@ $: docker stack deploy -c docker-compose.yml Stack-Name - update stack
 $: docker service ls
 ```
 
-#### Add persistance
+#### Add persistence
 
 Append docker-compose.yml with:  
 ```
@@ -324,51 +314,8 @@ $: docker stack deploy -c docker-compose.yml Stack-Name - update stack
 $: docker service ls
 ```
 
-### 6: Depoly your app
+### 6: Deploy your app
 
-Wherever there is a Docker Engine, you can depoly your app.
-
-
-#### Extra credit (Dockerfile)
-
-RUN vs CMD vs ENTRYPOINT
-
-Shell form:  
-```
-_instruction _command
-
-RUN apt-get install python3
-CMD echo "Hello world"
-ENTRYPOINT echo "Hello world"
-```
-Executes /bin/sh -c _command under the hood.  
-Shell form is a subset of exec form.  
-
-Exec form:
-```
-_instruction> ["_executable", "_param1", "_param2", ...]
-
-RUN ["apt-get", "install", "python3"]
-CMD ["/bin/echo", "Hello world"]
-ENTRYPOINT ["/bin/echo", "Hello world"]
-```
-There is no shell processing as the executable is called directly.  
-Exec form is a superset of shell form.  
-
-Docker image layer
-Almost every line in Dockerfile adds a new layer to the image and creates an intermediate image.  
-When image layers overlap, they are built only once.  
-
-RUN
-Execute a command and create a new layer on top of the current image. Used to install applications and packages.  
-If you want to chain commands into a single layer use &&.
-
-CMD
-Set the default command. It will be run only if you don't specify a CLI argument when running the container.  
-
-ENTRYPOINT
-Like CMD, but its arguments cannot be overwritten. Prefer ENTRYPOINT over CMD when building an executable image.  
-
-
+Wherever there is a Docker Engine, you can deploy your app.
 
 
