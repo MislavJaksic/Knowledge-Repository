@@ -180,5 +180,10 @@ ENTRYPOINT
 Like CMD, but its arguments cannot be overwritten. Prefer ENTRYPOINT over CMD when building an executable image.  
 
 
+####
+
+aliases and networks and network resolution
+
+docker exec -it Container-Name bash - interact with live container
 
 

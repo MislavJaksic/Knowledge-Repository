@@ -47,7 +47,6 @@ EXPOSE _port - expose port outside the container
 
 ENV NAME Env-Var-Name - define environment variable
 
-# Run app.py when the container launches
 CMD ["python", "app.py"]
 
 ```
@@ -82,9 +81,12 @@ $: docker push Docker-Id/_repository:_tag - upload image to registry
 $: docker run -p Outside-Port:Image-Port Docker-Id/_repository:_tag - run remote image from a registry
 ```
 
-#### Additional commands
+#### Remove resources
 
 ```
+$: docker system prune - remove dangling resources
+$: docker system prune -a - remove all resources
+
 $: docker container rm Container-Id - remove container
 $: docker container rm $(docker container ls -a -q) - remove all containers
 
