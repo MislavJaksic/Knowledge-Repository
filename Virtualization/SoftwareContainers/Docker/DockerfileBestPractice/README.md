@@ -1,4 +1,4 @@
-## (Best practices for writing Dockerfiles)[https://docs.docker.com/develop/develop-images/dockerfile_best-practices/]
+## [Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
 Use .dockerignore to keep image size and built time to a minimum.  
 Use different "docker build" build syntax when it is convenient.  
@@ -12,7 +12,7 @@ Sort multi-line commands in descending order.
 
 #### FROM
 
-Use (Alpine)[https://hub.docker.com/_/alpine/] as a base image.  
+Use [Alpine](https://hub.docker.com/_/alpine/) as a base image.  
 
 #### LABEL
 
@@ -41,6 +41,9 @@ apt-get install -y foo
 
 ```
 DON'T:
+FROM ubuntu:18.04
+RUN apt-get update
+RUN apt-get install -y curl
 
 DO:
 RUN apt-get update && apt-get install -y \
@@ -63,8 +66,8 @@ RUN apt-get update && apt-get install -y \
     reprepro \
     ruby1.9.1 \
     ruby1.9.1-dev \
-    s3cmd=1.1.* \
- && rm -rf /var/lib/apt/lists/*
+    s3cmd=1.1.* && \
+    rm -rf /var/lib/apt/lists/*
 ```
 
 ##### Piping
@@ -99,9 +102,9 @@ RUN unset ADMIN_USER
 
 DO:
 FROM alpine
-RUN export ADMIN_USER="mark" \
-    && echo $ADMIN_USER > ./mark \
-    && unset ADMIN_USER
+RUN export ADMIN_USER="mark" && \
+    echo $ADMIN_USER > ./mark && \
+    unset ADMIN_USER
 CMD sh
   Result:
 ```
@@ -119,10 +122,9 @@ RUN tar -xJf /usr/src/things/big.tar.xz -C /usr/src/things
 RUN make -C /usr/src/things all
 
 DO:
-RUN mkdir -p /usr/src/things \
-    && curl -SL http://example.com/big.tar.xz \
-    | tar -xJC /usr/src/things \
-    && make -C /usr/src/things all
+RUN mkdir -p /usr/src/things && \
+    wget -O - http://example.com/big.tar.xz | tar -xJC /usr/src/things && \
+    make -C /usr/src/things all
 ```
 
 #### ENTRYPOINT
@@ -144,7 +146,7 @@ For any mutable or user-serviceable parts an image.
 
 #### USER
 
-Set the least previlige user.  
+Set to the least privilege user.  
 Don't set it to "sudo".  
 
 #### WORKDIR
@@ -156,3 +158,5 @@ Use it to shorten RUN, CMD and ENTRYPOINT paths.
 
 Executes commands in child images before any of the child's commands.  
 Always build images that don't have any ONBUILD commands.  
+
+

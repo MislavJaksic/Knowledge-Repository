@@ -1,4 +1,4 @@
-## (Dockerfile reference)[https://docs.docker.com/engine/reference/builder/]
+## [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
 
 ### Usage
 
@@ -271,7 +271,7 @@ Like CMD, but its arguments cannot be overwritten. Prefer ENTRYPOINT over CMD wh
 COPY is same as ADD but without the tar and remote url handling.
 ```
 
-Source: (code comment)[https://github.com/moby/moby/blob/670c8696a29825b23208496bd4d8e88b5faa7773/builder/dispatchers.go#L77]
+Source: [code comment](https://github.com/moby/moby/blob/670c8696a29825b23208496bd4d8e88b5faa7773/builder/dispatchers.go#L77)
 
 
 
@@ -285,6 +285,6 @@ For build-time customization.
 
 For run-time customization.  
 
-Source: (blog guide)[https://vsupalov.com/docker-arg-env-variable-guide/]
+Source: [blog guide](https://vsupalov.com/docker-arg-env-variable-guide/)
 
 
