@@ -29,20 +29,22 @@ $: sudo usermod -aG docker $USER
 $: docker run hello-world
 ```
 
-### [Get started](https://docs.docker.com/get-started/)
-
-From setting up your environment to deploying an app.
-
 ### Docker Hub/Store
 
-Docker images can be browsed, download and uploaded from and to the Hub.  
-There are quite a few interesting and useful images.  
+Docker images can be browsed, download from and uploaded to the Hub.  
+Interesting images:
+```
+alpine - tiny OS
+ubuntu - OS
+baseimage - fixed Ubuntu
+openjdk - preinstalled Java
+```
 
 #### Alpine 
 
-Doesen't have "bash"; use "sh".  
-Doesen't have "apt"; use "apk".  
-Doesen't have "netcat"; use "nc".  
+Doesn't have "bash"; use "sh".  
+Doesn't have "apt"; use "apk".  
+Doesn't have "netcat"; use "nc".  
 Interact with "sudo docker container run --interactive --tty alpine /bin/sh".  
 
 ### Docker commands
@@ -83,7 +85,7 @@ Command: docker container stop _container_name[:_tag]
 * gracefully stop a container
 
 Command: docker container rm [_options] _container_name[:_tag]
-* permenantly remove a container
+* permanently remove a container
 * [--force] force shutdown and remove the container
 
 Command: docker login -u _docker_id -p _password
@@ -122,27 +124,28 @@ Command: docker service ps _service_name
 Command: docker cp - copy a file from the host to the Docker container
 Example: docker cp transfer_object.txt sandbox-hdp:/usr/transfer_object.txt
 
-### Dockerfile commands
+### Best practice
 
-ADD
-COPY
-ENV
-EXPOSE
-FROM
-LABEL
-STOPSIGNAL
-USER
-VOLUME
-WORKDIR
-ONBUILD
+#### System
 
+Prune Docker from time to time.  
 
+Keep code as modular as possible.  
 
+#### Dockerfile
 
-#### Extra credit (Dockerfile)
+For testing don't be afraid to put each command in its own layer.  
+For production merge all package update and install layers into one.  
 
+Download and untar:
+```
+RUN wget -O - http://example.com/big.tar.xz | tar -xJC /usr/src/things
+```
 
-
+Avoid permission denied:
+```
+RUN chmod +x /path/to/file.ext
+```
 
 ####
 
