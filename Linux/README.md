@@ -11,6 +11,7 @@ Each Linux OS is different, so take care not to mix up installation instructions
 * [Manjaro](https://manjaro.org/) - quite popular
 * [Ubuntu](https://www.ubuntu.com/) - Desktop is similar to Windows; Server has no interface
 * [CentOS](https://www.centos.org/) - useful as a server
+* [Alpine](https://alpinelinux.org) - for routers, firewalls, VPNs and servers; tiny
 
 ### Installation
 
@@ -29,62 +30,76 @@ Hidden directory -> begins with "."
 
 ### Common hotkeys and commands
 
-Hotkeys:
-```
-Paste -> SHIFT+INSERT
-Autocomplete -> TAB; double TAB
-```
-
 Common commands:
 ```
-$: sudo Any-Command -> admin access
-
 $: man Any-Command -> manual; "q" to exit
 $: info Any-Command -> command info
-$: ls -> list
-S: pwd -> current directory path
-$: echo $Value-Name -> print value
 
+S: pwd -> list directory path
+$: ls -> list directory
 $: cd /path -> change directory
-$: mkdir Name -> create directory
+
+$: apt/apt-get ... -> Ubuntu package manager
+$: yum ... -> CentOS package manager
+$: apk ... -> Alpine package manager
+$: tar -xzvf Package-Name -> extract/untar
 
 $: bash Script-Name.sh -> run script
+$: sh Script-Name.sh
 
-$: ps -> list PIDs
+$: sudo Any-Command -> run as admin/superuser
+$: chmod Access-Modifiers File-Name -> modify access restrictions
+
+
+
+$: mkdir Dir-Name -> create directory
+$: cp _source _destination -> copy
+$: mv _source _destination -> move/cut
+
+$: echo $Value-Name -> list env var value
+$: export Value-Name=_value -> set env var value
+
+$: ps -> list Process IDs (PID)
 $: kill PID -> SIGTERM/soft shutdown
 $: kill -9 PID -> SIGKILL/hard shutdown
-
-$: apt ... -> Ubuntu install manager
-$: apk ... -> 
-$: yum ... -> Centos install manager
-$: tar -xzvf _program_name.tar.gz Package.tar.gz -> install/unpack
-
-$: find /root/of/search -iname "File-Name.*" -> find file
 
 $: uname -a -> Ubuntu OS info
 $: lsb_release -a -> Centos OS info
 ```
 
-Pipeline commands:
+Pipe and file commands:
 ```
-|, >, >> -> pipe output, write to file and append to file
+| -> pipe output
+> -> overwrite a file
+>> -> append to file
 ```
 
 Pattern matching:
 ```
-$: ... | grep "search-term"
+$: ... | grep "Search-Term" -> filter
 
-$: ... | grep -i "sEarch-term" -> case insensitive
+$: ... | grep -i "search-term" -> case insensitive
 
-$: ... | grep -v "search-term" -> NOT
+$: ... | grep -v "Search-Term" -> NOT
 $: ... | grep "term1\|term2" -> OR
 $: ... | grep -E "term1|term2" -> OR
 ```
 
-### Network command
+Misc hotkeys:
+```
+Paste -> SHIFT+INSERT
+Search -> SHIFT+W
+
+Autocomplete -> TAB; double TAB
+
+Switch workspace -> CTRL+ALT+UP/DOWN
+```
+
+### Network commands
 
 ```
 $: netcat -l -p PORT -> create listener server
+$: nc ...
 
 $: ifconfig -> network interfaces
 $: netstat -> network statistics
@@ -95,13 +110,6 @@ $: ss ->
 $: ip -s -> 
 
 $: scp [-P PORT] /source/path/File-Name USERNAME@HOST/IP-PORT:/destination/path
-```
-
-### Editing files
-
-Hotkeys:
-```
-Search -> SHIFT+W
 ```
 
 ### Setting PATH and DNS

@@ -32,20 +32,53 @@ $: docker run hello-world
 ### Docker Hub/Store
 
 Docker images can be browsed, download from and uploaded to the Hub.  
-Interesting images:
+[Sample images](https://docs.docker.com/samples/):  
 ```
 alpine - tiny OS
 ubuntu - OS
-baseimage - fixed Ubuntu
+centos - OS
+baseimage - "fixed" Ubuntu
+
+ibmjava - tiny Java
 openjdk - preinstalled Java
+openliberty - Java for microservices
+
+rabbitmq - messaging broker
+flink - stream and batch processer
+storm - realtime computation system
+zookeeper - distributed coordinator
+
+httpd - Apache HTTP server
+nginx - server
+rapidoid - server for Java
+tomcat - Java server
+
+aerospike - flask and RAM database
+arangodb - flexible model database
+couchbase - NoSQL database
+create - SQL database
+influxdb - timeseries database
+mongo - document database
+mysql - relational database
+neo4j - graph database
+orientdb - grapg NoSQL database
+postgres - relational database
+rethinkdb - document database
+
+memcached - object caching system
+redis - key-value store
+
+mediawiki - wiki
+xwiki - wiki
+
+consul - datacenter runtime
+elasticsearch - search and analytics engine
+kapacitor - time series processing, monitoring, and alerting
+kibana - visalize ElasticSearch
+odoo - open source ERP
+rocker.chat - open source chat solution
 ```
-
-#### Alpine 
-
-Doesn't have "bash"; use "sh".  
-Doesn't have "apt"; use "apk".  
-Doesn't have "netcat"; use "nc".  
-Interact with "sudo docker container run --interactive --tty alpine /bin/sh".  
+There are many more official images on Docker Hub.  
 
 ### Docker commands
 
@@ -124,18 +157,21 @@ Command: docker service ps _service_name
 Command: docker cp - copy a file from the host to the Docker container
 Example: docker cp transfer_object.txt sandbox-hdp:/usr/transfer_object.txt
 
+
+
 ### Best practice
 
 #### System
 
 Prune Docker from time to time.  
 
-Keep code as modular as possible.  
+Keep the code as modular as possible.  
 
 #### Dockerfile
 
-For testing don't be afraid to put each command in its own layer.  
-For production merge all package update and install layers into one.  
+When testing don't be afraid to put each command in its own layer.  
+Don't optimize too early! You can always reduce the image size later.  
+For production, merge all package update and install layers into one.  
 
 Download and untar:
 ```
@@ -146,6 +182,8 @@ Avoid permission denied:
 ```
 RUN chmod +x /path/to/file.ext
 ```
+
+
 
 ####
 
