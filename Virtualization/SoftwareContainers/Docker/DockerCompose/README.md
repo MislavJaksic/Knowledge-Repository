@@ -94,3 +94,9 @@ networks:
 volumes:
   db-data:
 ```
+
+#### TODO
+
+aliases and networks and network resolution
+
+

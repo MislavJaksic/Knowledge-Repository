@@ -4,7 +4,7 @@ Docker is a containerization program.
 
 ### [Install Docker](https://docs.docker.com/install/)
 
-#### Linux (Ubuntu)
+#### Ubuntu Linux
 
 ```
 $: sudo apt-get update
@@ -29,7 +29,7 @@ $: sudo usermod -aG docker $USER
 $: docker run hello-world
 ```
 
-### Docker Hub/Store
+### [Docker Hub](https://hub.docker.com/)
 
 Docker images can be browsed, download from and uploaded to the Hub.  
 [Sample images](https://docs.docker.com/samples/):  
@@ -44,7 +44,7 @@ openjdk - preinstalled Java
 openliberty - Java for microservices
 
 rabbitmq - messaging broker
-flink - stream and batch processer
+flink - stream and batch processor
 storm - realtime computation system
 zookeeper - distributed coordinator
 
@@ -53,15 +53,15 @@ nginx - server
 rapidoid - server for Java
 tomcat - Java server
 
-aerospike - flask and RAM database
+aerospike - flash and RAM database
 arangodb - flexible model database
 couchbase - NoSQL database
-create - SQL database
-influxdb - timeseries database
+crate - SQL database
+influxdb - time series database
 mongo - document database
 mysql - relational database
 neo4j - graph database
-orientdb - grapg NoSQL database
+orientdb - graph NoSQL database
 postgres - relational database
 rethinkdb - document database
 
@@ -71,10 +71,10 @@ redis - key-value store
 mediawiki - wiki
 xwiki - wiki
 
-consul - datacenter runtime
+consul - data center runtime
 elasticsearch - search and analytics engine
 kapacitor - time series processing, monitoring, and alerting
-kibana - visalize ElasticSearch
+kibana - visualize ElasticSearch
 odoo - open source ERP
 rocker.chat - open source chat solution
 ```
@@ -82,82 +82,61 @@ There are many more official images on Docker Hub.
 
 ### Docker commands
 
-Command: docker image build [_options] _build_context_path | URL
-* create a new image using Dockerfile in the build context path
-* [--tag _image_name:[_tag]] Docker image name
-
-Command: docker container run [_options] _image_name[:_tag] [_command] [_args]
-* download the _image_name if you don't have it stored
-* create a container from an image
-* pass and execute a command with arguments into the container
-* [--name _container_name[:_tag]]               assign a name to the container
-* [--interactive] required if running shell     create an interactive session; keep an STDIN open
-* [--detach]                                    run container in the background
-* [--publish _host_port:_container_port]        direct traffic from host port to container port 
-* [--tty] required for some _commands           display terminal name (TeleTYpewriter)
-* [--rm]                                        remove container after it is shutdown
-* [--mount type=bind,source=_path,target=_path] mirror changes of a host source to a target inside a container; changes don't persist
-* [-e _env_var=_value]                          set environment variables
-
-Command: docker container ls [_options]
-* list all running containers
-* [--all] list all containers, running or not
-
-Command: docker container logs _container_name[:_tag]
-* fetch the logs of a container
-
-Command: docker container top _container_name[:_tag]
-* display the running processes of a container
-
-Command: docker container exec [_options] _container_name[:_tag] _command
-* execute a command in a running container
-* [--interactive]
-* [-tty]
-
-Command: docker container stop _container_name[:_tag]
-* gracefully stop a container
-
-Command: docker container rm [_options] _container_name[:_tag]
-* permanently remove a container
-* [--force] force shutdown and remove the container
-
-Command: docker login -u _docker_id -p _password
-* login to Docker image registry
-
-Command: docker image push _image_name:[_tag]
-* after logging in, upload Docker image
-* [Location of uploaded Docker images](https://hub.docker.com/r/_docker_id/)
+```
+$: docker container ls -a - list all containers
 
 
 
-Command: docker swarm init [_options]
-* create a manager node and initialise the swarm
-* lists a command for creating a worker node
-* [--advertise-addr _ip] address of the swarm 
+$: docker build --tag=Image-Tag Dockerfile-Path - build an image with a tag from a Dockerfile
 
-Command: docker swarm join [_options] _ip:_port
-* [--token _token] create a worker node and connect it to a swarm
+$: docker run -d -P --name Container-Name Docker-Id/_repository - run without terminal and with port map
+  -d: detach container from the terminal
+  -P: publish exposed ports to random ports
+  --name: give container a name
+  
+  -i: interactive
+  --rm: remove container after shutdown
+  
+$: docker container stop Container-Name - gracefully stop a container
 
-Command: docker node ls
-* list the manager and worker nodes in the swarm
-
-Command: docker stack deploy [_options] _stack_name
-* deploy or update a stack
-* [--compose-file=_path] path to the Docker compose file
-
-Command: docker stack ls
-* list all stacks
-
-Command: docker stack services _stack_name
-* list services in a stack
-
-Command: docker service ps _service_name
-* list service jobs
-
-Command: docker cp - copy a file from the host to the Docker container
-Example: docker cp transfer_object.txt sandbox-hdp:/usr/transfer_object.txt
+$: docker container rm Container-Name - remove container
 
 
+
+$: docker container logs Container-Name - list logs
+
+$: docker container top Container-Name - list running processes
+
+
+
+$: docker container exec -it Container-Name _command - browse the container
+  -i: interact
+  -t: TTY; pretty print
+
+
+
+$: docker login - connect to a registry
+
+$: docker tag Image-Tag Docker-Id/_repository:_tag - associate a local image with a repository on a registry
+
+$: docker push Docker-Id/_repository:_tag - upload image to registry
+
+
+
+$: docker swarm init - create swarm and add a manager
+
+$: docker swarm join --token Swarm-Join-Token _ip - add a worker
+
+$: docker node ls - list swarm nodes
+
+$: docker stack ls - list stacks
+
+$: docker stack services Stack-Name - list stack services
+
+$: docker stack deploy -c docker-compose.yml Stack-Name - run service stack
+
+$: docker service ps Service-Name - list services
+```
 
 ### Best practice
 
@@ -182,13 +161,5 @@ Avoid permission denied:
 ```
 RUN chmod +x /path/to/file.ext
 ```
-
-
-
-####
-
-aliases and networks and network resolution
-
-docker exec -it Container-Name bash - interact with live container
 
 

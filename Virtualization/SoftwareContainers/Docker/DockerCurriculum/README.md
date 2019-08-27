@@ -4,7 +4,11 @@ Note: I have not followed this tutorial from beginning to end. That is because i
 
 ### Introduction
 
+Skipped.  
+
 ### Getting started
+
+Skipped.  
 
 ### Hello World
 
@@ -23,9 +27,9 @@ $: docker run --rm Docker-Id/_repository:_tag
   --rm delete container after it stopped
   
 $: docker run -d -P --name Container-Name Docker-Id/_repository - run without terminal and with port map
-  -d detach container from the terminal
-  -P publish exposed ports to random ports
-  --name give container a name
+  -d: detach container from the terminal
+  -P: publish exposed ports to random ports
+  --name: give container a name
   
 $: docker port Container-Name - list port map; Inside-Port -> Outside-Port
 ```
@@ -126,5 +130,7 @@ volumes:
 ```
 
 ### Conclusion
+
+Skipped.  
 
 
