@@ -1,5 +1,6 @@
 ## [Compose file reference](https://docs.docker.com/compose/compose-file/)
 
+Example:
 ```
 version: "3.7"
 services:
@@ -94,6 +95,14 @@ networks:
 volumes:
   db-data:
 ```
+
+### Service configuration reference
+
+Compose file is a YML file defining services, networks and volumes.  
+
+### build
+
+#### context, dockerfile, args, cache_from, labels, shm_size, target
 
 #### TODO
 

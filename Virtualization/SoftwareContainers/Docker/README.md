@@ -37,7 +37,6 @@ Docker images can be browsed, download from and uploaded to the Hub.
 alpine - tiny OS
 ubuntu - OS
 centos - OS
-baseimage - "fixed" Ubuntu
 
 ibmjava - tiny Java
 openjdk - preinstalled Java
