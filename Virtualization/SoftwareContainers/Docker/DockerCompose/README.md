@@ -104,7 +104,128 @@ Compose file is a YML file defining services, networks and volumes.
 
 #### context, dockerfile, args, cache_from, labels, shm_size, target
 
-#### TODO
+### cap_add, cap_drop
+
+### cgroup_parent
+
+### command
+
+### configs
+
+#### long and short syntax
+
+### container_name
+
+### credential_spec
+
+### depends_on
+
+### deploy
+
+#### endpoint_mode, labels, mode, placement, replicas, resources, restart_policy, rollback_config, update_config
+
+### devices
+
+### depends_on
+
+### dns
+
+### dns_search
+
+### entrypoint
+
+### env_file
+
+### environment
+
+### expose
+
+### external_links
+
+### extra_hosts
+
+### healthcheck
+
+### image
+
+### init
+
+### isolation
+
+### labels
+
+### links
+
+### logging
+
+### network_mode
+
+### networks
+
+#### aliases, ipv4_address, ipv6_address
+
+### pid
+
+### ports
+
+#### short and long syntax
+
+### restart
+
+### secrets
+
+#### short and long syntax
+
+### security_opt
+
+### stop_grace_period
+
+### stop_signal
+
+### sysctls
+
+### tmpfs
+
+### ulimits
+
+### userns_mode
+
+### volumes
+
+#### short and long syntax
+
+#### volumes for services, swarms, and stack files
+
+#### caching options for volume mounts (Docker Desktop for Mac)
+
+#### domainname, hostname, ipc, mac_address, privileged, read_only, shm_size, stdin_open, tty, user, working_dir
+
+### Specifying durations
+
+### Specifying byte values
+
+### Volume configuration reference
+
+#### driver, driver_opts, external, labels, name
+
+### Network configuration reference
+
+#### driver, bridge, overlay, host or none, driver_opts, attachable, enable_ipv6, ipam, internal, labels, external, name
+
+### configs configuration reference
+
+### secrets configuration reference
+
+### Variable substitution
+
+### Extension fields
+
+
+
+
+
+
+
 
 aliases and networks and network resolution
 
