@@ -39,7 +39,7 @@ ubuntu - OS
 centos - OS
 
 ibmjava - tiny Java
-openjdk - preinstalled Java
+openjdk - full Java
 openliberty - Java for microservices
 
 rabbitmq - messaging broker

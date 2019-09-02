@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 public class CalculatorTest {
 	Calculator calculator = new Calculator(); // fixture; instantiated for each test
 	
-	public static Stream<Arguments> numberProvider() {
+	static Stream<Arguments> numberProvider() {
 		return Stream.of(
 				Arguments.of(1, 2, 3),
 				Arguments.of(4, 5, 9)
@@ -44,7 +44,7 @@ public class CalculatorTest {
 	
 	@ParameterizedTest
 	@MethodSource("numberProvider")
-	public void massAddTest(int a, int b, int expected) { // vary arguments, let the test stay the same
+	void massAddTest(int a, int b, int expected) { // vary arguments, let the test stay the same
 		assertEquals(expected, calculator.add(a).add(b).result());
 	}
 	
