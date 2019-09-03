@@ -2,33 +2,53 @@
 
 ### Setup
 
-Install Python_3.x.
-Update pip package: "python -m pip install --upgrade pip".  
-Install virtualenv package: "pip install virtualenv".  
+```
+# Install Python 3
+
+$: python -m pip install --upgrade pip
+
+$: pip install virtualenv
+```
 
 ### Create a virtual environment
 
-Create a virtual environment: "virtualenv venv". "venv" is a customary name for a python virtual environment.  
+```
+$: virtualenv venv - calling a virtual environment venv is customary
+```
+You can delete the environment by simply deleting the "venv" folder.  
 
-Linux: activate and deactivate virtual environment: "source venv/bin/activate"; "deactivate"  
-Windows: relax the script execution policy: "Set-ExecutionPolicy RemoteSigned"  
-. . . . .activate and deactivate virtual environment: ".\venv\Scripts\activate"; "deactivate" 
+#### Linux
 
-You may delete your virtual environment by simply deleting the "venv" folder. 
+```
+$: source venv/bin/activate
+
+$: deactivate
+```
+
+#### Windows
+
+```
+# Set execution policy:
+$: Set-ExecutionPolicy RemoteSigned
+
+$: .\venv\Scripts\activate
+
+$: deactivate
+```
 
 ### Inside a virtual environment
 
-The virtual environments isolate Python dependencies (specific version packages) from the rest of your computer.  
-Without a virtual environment you may never be sure that someday a package version isn't going to break your program.  
+A virtual environment isolates Python project's packages from other projects.  
+Without a virtual environment a package update required for one project may cause another project to stop working.  
 
-Install requirements: "pip install -r requirements.txt".  
+```
+$: pip install -r requirements.txt
+```
 
 ### Requirements.txt
 
-Requirements.txt specify project dependencies.  
-You should install new Python packages through Requirements.txt.  
-
-Install new packages: "pip install -r requirements.txt".  
+Requirements.txt specifies which packages the project requires.  
+Only install new Python packages through Requirements.txt.  
 
 ### Tests
 
