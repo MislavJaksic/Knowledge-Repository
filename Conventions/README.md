@@ -19,6 +19,11 @@ OR
 _underscored
 ```
 
+Line comment:
+```
+#
+```
+
 Inline comment:  
 ```
 ->
@@ -26,4 +31,11 @@ Inline comment:
 
 ### Text conventions
 
-Don't break up sentences if they are longer then X characters.  
+```
+DO
+
+DON'T
+Break up sentences if they are longer then X characters.  
+```
+
+
