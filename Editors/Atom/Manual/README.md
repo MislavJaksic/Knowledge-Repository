@@ -26,6 +26,6 @@ CTRL+SHIFT+F -> search and replace the entire project
 #### Snippets
 
 Generate code from a few character snippets.  
-Access snippets.cson from File->Snippets....
+Access snippets.cson from File -> Snippets....
 
 #### Version control in Atom

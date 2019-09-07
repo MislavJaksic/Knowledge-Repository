@@ -15,8 +15,9 @@ Shows a file minimap.
 ```
 Base   -> linter
 Java   -> linter-checkstyle
-Python -> linter-pycodestyle
+Python -> linter-flake8
 ```
+Note: you need to have flake8 installed.  
 
 ### atom-beautify
 
