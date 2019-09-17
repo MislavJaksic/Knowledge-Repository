@@ -2,9 +2,9 @@
 
 Virtualization is a process of creating isolated, distinct, and secure environments.  
 There are different kinds of virtualisation:  
-* hardware,
-* OS,
-* networks.
+* hardware
+* OS
+* networks
 
 ### Virtual machines
 

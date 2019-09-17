@@ -9,15 +9,32 @@ VirtualBox is a virtualization program that manages VMs.
 To create a VM you first need to download a VM image.  
 During the VM setup you will be asked to provide a VM image.  
 The VM will then be created.  
-Check if the VM has enough memory, disk space and processor cores.  
+
+Check if the VM has enough:
+* memory
+* disk space
+* processor cores
 
 ### [Guest additions](https://www.virtualbox.org/manual/ch04.html)
 
-Guest additions allow data to be transfered between the VM and the host OS.  
-Install guest additions by opening a VM, clicking "Devices" and then selecting "Insert Guest Additions".  
+Guest additions allow data to be transferred between the VM and the host OS.  
 
-To share a copy-paste clipboard, click "Settings" and under "General" tab select "Advanced". There, enable "Shared Clipboard".  
-Shared folders TODO  
+```
+# Install guest additions
+Open VM -> "Devices" -> "Insert Guest Additions" -> Install
+```
+
+```
+# Share a copy-paste clipboard
+Open VM -> "Devices" -> "Shared Clipboard"
+```
+
+```
+# Shared folders
+Open VM -> -> "Devices" -> "Shared Folders" -> "Shared Folders Settings" -> "Adds new shared folder"
+# Recommended: Auto-mount and Make Permanent
+# Restart is required
+```
 
 ### [Networking](https://www.virtualbox.org/manual/ch06.html)
 
@@ -39,9 +56,9 @@ With port forwarding, the VM could be accessed from the Internet.
 #### [Port forwarding NAT](https://www.virtualbox.org/manual/ch06.html#natforward)
 
 Port forwarding is telling VirtualBox to which host ports it should listen.  
-When the host recieves a packet, they are then resent to the VM on the specified port.  
+When the host receives a packet, they are then resent to the VM on the specified port.  
 You can never have a service on a VM and on a host listen to the same port.  
- 
+
 To configure port forwarding click on "Settings", "Network", choose a NAT adapter, expand the options with "Advanced" and then click "Port forwarding".  
 
 | Examples | Protocol | Host IP | Host Port | Guest IP | Guest IP |

@@ -38,3 +38,7 @@ Perform git commands.
 ### snippet-generator
 
 Quickly create code snippets.  
+
+### wordcount
+
+Counts words and characters.  
