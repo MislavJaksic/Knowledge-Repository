@@ -2,38 +2,37 @@
 
 Note: after installing a package you may need to restart Atom.  
 
+### atom-beautify
+
+Formats code.  
+
 ### file-icons
 
 Shows colourful icons.  
 
-### minimap
+### git-plus
 
-Shows a file minimap.  
+Perform git commands.  
+
+### highlight-selected
+
+Highlights the same words in a file.  
 
 ### linter
 
 ```
 Base   -> linter
 Java   -> linter-checkstyle
-Python -> linter-flake8
+Python -> linter-flake8      # needs flake8 installed
 ```
-Note: you need to have flake8 installed.  
 
-### atom-beautify
+### minimap
 
-Formats code.  
-
-### highlight-selected
-
-Highlights the same words in a file.  
+Shows a file minimap.  
 
 ### platformio-ide-terminal
 
 Open a terminal where your file is.  
-
-### git-plus
-
-Perform git commands.  
 
 ### snippet-generator
 

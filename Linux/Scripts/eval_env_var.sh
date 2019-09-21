@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Set local env var
-source "/path/to/Script-Name.sh"
+# Set env var
+source "/opt/helper/discover-host.sh"
 
 # Replace placeholder names with env var values
-eval "echo \"$(cat /path/to/File-With-Placeholders.ext)\"" > /path/to/File-With-Replaced-Values.ext
+eval "echo \"$(cat /opt/helper/server.properties.template)\"" > /opt/kafka_2.12-2.3.0/config/server.properties
