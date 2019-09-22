@@ -1,8 +1,20 @@
 ## [Kubernetes](https://kubernetes.io/)
 
-Kubernetes is a container orchestra conductor, where the orchestra are containers located on different machines.
+Kubernetes is a container orchestra conductor.
 
-### [Install a single-node Kubernetes](https://kubernetes.io/docs/setup/minikube/)
+### [Glossary](https://kubernetes.io/docs/reference/glossary/?fundamental=true)
+
+Kubernetes uses a lot of terms. You can look them up here.  
+
+### [Tasks](https://kubernetes.io/docs/tasks/)
+
+Steps to produce a result.  
+
+### [Tutorials](https://kubernetes.io/docs/tutorials/)
+
+How to accomplish a goal larger than a task.  
+
+<!-- ### [Install a single-node Kubernetes](https://kubernetes.io/docs/setup/minikube/)
 
 This setup will create a single node inside a VM.
 
@@ -18,6 +30,4 @@ After install all ofhe required programs you can continue with the tutorial.
 ### [Running Kubernetes locally](https://kubernetes.io/docs/setup/minikube/#managing-your-cluster)
 
 Start/stop/delete the cluster with:
-* minikube start/stop/delete
-
-
+* minikube start/stop/delete -->
