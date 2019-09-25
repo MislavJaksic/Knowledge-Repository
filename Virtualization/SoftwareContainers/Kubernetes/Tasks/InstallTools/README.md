@@ -72,7 +72,10 @@ $: egrep -q 'vmx|svm' /proc/cpuinfo && echo yes || echo no
 # Note: if it says "no" you have to run it without VM drivers
 ```
 
-Install VirtualBox.  
+```
+# Note: install VirtualBox
+```
+
 
 #### Debian/Ubuntu (deb)
 
