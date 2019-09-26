@@ -14,12 +14,12 @@ kubectl is a CLI for executing Kubernetes API.
 
 ```
 $: minikube version
-$: minikube start
+$: minikube start --vm-driver=_driver
 
 $: kubectl version
 
-$: kubectl cluster-info
-$: kubectl get nodes
+$: kubectl cluster-info  #-> IPs of master and KubeDNS
+$: kubectl get nodes  #-> list nodes
 ```
 
 ### [Deploy an app](https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/)
@@ -31,8 +31,6 @@ Deployment Controller continuously monitors created instances.
 Kubectl can create Deployments.  
 
 ```
-# Note: must commands are $: kubectl _action _resource
-
 $: kubectl run kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --port=8080  # DEPRECATED
 
 $: kubectl get deployments
