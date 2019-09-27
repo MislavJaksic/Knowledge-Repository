@@ -16,19 +16,17 @@ kubectl is a CLI for executing Kubernetes API.
 $: minikube version
 $: minikube start --vm-driver=_driver
 
-$: kubectl version
+$: kubectl version  #-> lists client and server versions
 
-$: kubectl cluster-info  #-> IPs of master and KubeDNS
+$: kubectl cluster-info  #-> IPs of Kubernetes master and KubeDNS
 $: kubectl get nodes  #-> list nodes
 ```
 
 ### [Deploy an app](https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/)
 
-Deployment instructs Kubernetes how to create instances of your application.  
-
-Deployment Controller continuously monitors created instances.  
-
 Kubectl can create Deployments.  
+Deployment instructs Kubernetes how to create an instances of your application.  
+Deployment Controller continuously monitors created instances.  
 
 ```
 $: kubectl run kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --port=8080  # DEPRECATED
@@ -66,7 +64,9 @@ $: kubectl get - list resource
 $: kubectl describe - show detailed information about a resource
 $: kubectl logs - print the logs from a container in a pod
 $: kubectl exec - execute a command on a container in a pod
+```
 
+```
 $: kubectl get pods
 $: kubectl describe pods
 $: kubectl proxy
