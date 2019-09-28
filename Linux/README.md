@@ -63,8 +63,16 @@ $: ps -> list Process IDs (PID)
 $: kill PID -> SIGTERM/soft shutdown
 $: kill -9 PID -> SIGKILL/hard shutdown
 
-$: uname -a -> Ubuntu OS info
-$: lsb_release -a -> Centos OS info
+$: lsb_release -a -> OS info
+$: uname -m -> list architecture
+  # armv5* == armv5
+  # armv6* == armv6
+  # armv7* == arm
+  # aarch64 == arm64
+  # x86 == 386
+  # x86_64 == amd64
+  # i686 == 386
+  # i386 == 386
 ```
 
 Pipe and file commands:
@@ -103,16 +111,18 @@ $: nc ...
 
 $: ifconfig -> network interfaces
 $: netstat -> network statistics
-$: ip addr -> 
-$: ip link -> 
-$: ip route -> 
-$: ss -> 
-$: ip -s -> 
+$: ip addr ->
+$: ip link ->
+$: ip route ->
+$: ss ->
+$: ip -s ->
 
 $: scp [-P PORT] /source/path/File-Name USERNAME@HOST/IP-PORT:/destination/path
 ```
 
 ### Setting PATH and DNS
+
+Place an executable in "/usr/local/bin" and you'll be able to run it.  
 
 Set PATH in:
 * /etc/environment

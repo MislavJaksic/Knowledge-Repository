@@ -80,7 +80,7 @@ Service defines a logical set of Pods and enables external traffic exposure, loa
 Service is defined using YAML.  
 Service targets a set of Pods using a LabelSelector.  
 
-Service is exposed through a type in the ServiceSpec:
+Service is exposed through a type in the Service spec:
 * ClusterIP (default) - Service only reachable from within the cluster
 * NodePort - Service accessible from outside the cluster using <NodeIP>:<NodePort>
 * LoadBalancer - an external load balancer assigns a fixed, external IP to the Service

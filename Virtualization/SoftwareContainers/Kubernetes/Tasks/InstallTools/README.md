@@ -59,7 +59,7 @@ It is created when you either:
 $: kubectl cluster-info [dump]
 # Note: if connection is refused either deploy Minikube first or check your configuration
 ```
-#### Optional kubectl configurations: enableing shell autocompletion
+#### Optional kubectl configurations: enabling shell autocompletion
 
 TODO
 
@@ -73,7 +73,8 @@ $: egrep -q 'vmx|svm' /proc/cpuinfo && echo yes || echo no
 ```
 
 ```
-# Note: install VirtualBox
+# Install VirtualBox
+# Note: other VM drivers are available
 ```
 
 
@@ -105,12 +106,14 @@ TODO
 $: minikube start --vm-driver=virtualbox
 $: minikube stop
 $: minikube delete
+```
 
+```
 $: minikube config set vm-driver virtualbox
-```
-
-```
+$: minikube config set cpus 4
 $: minikube config set memory 4096
+
+$: minikube config view
 ```
 
 ## Additional resources
