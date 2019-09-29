@@ -96,7 +96,7 @@ Labels are key/value which:
 
 ```
 $: kubectl get services
-$: kubectl expose deployment/Service-Name --type="NodePort" --port 8080
+$: kubectl expose deployment/Deployment-Name --type="NodePort" --port 8080
 $: kubectl describe services/Service-Name
 $: curl Minikube-IP:Service-NodePort
 
@@ -113,7 +113,7 @@ $: kubectl delete service -l _label  # Pod still exits but is unreachable from t
 Scaling is accomplished by changing the number of Pod replicas in a Deployment.  
 
 ```
-$: kubectl scale deployments/Service-Name --replicas=4
+$: kubectl scale deployments/Deployment-Name --replicas=4
 ```
 
 ### [Update your app](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)
@@ -126,7 +126,7 @@ Rolling updates allow:
 * CICD
 
 ```
-$: kubectl set image deployments/Service-Name Service-Name=New-Container
-$: kubectl rollout status deployments/Service-Name
-$: kubectl rollout undo deployments/Service-Name
+$: kubectl set image deployments/Deployment-Name Deployment-Name=New-Container
+$: kubectl rollout status deployments/Deployment-Name
+$: kubectl rollout undo deployments/Deployment-Name
 ```
