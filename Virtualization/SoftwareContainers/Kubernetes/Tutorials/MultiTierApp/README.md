@@ -4,17 +4,6 @@
 ### Setup Redis Master
 
 ```
-$: kubectl apply -f redis-master-deployment.yaml  # create Deployment and Pod
-
-                                          # Server started, Redis version 2.8.19
-$: kubectl logs -f redis-master-ID   ->   # WARNING: The TCP backlog setting of 511 ...
-                                          * The server is now ready to accept connections on port 6379
-
-$: kubectl apply -f redis-master-service.yaml  # create a Service and expose the Pod
-$: kubectl get service
-```
-
-```
 apiVersion: apps/v1                        apiVersion: v1
 kind: Deployment                           kind: Service
 metadata:                                  metadata:
@@ -46,13 +35,18 @@ spec:                                          role: master
         - containerPort: 6379
 ```
 
+```
+$: kubectl apply -f redis-master-deployment.yaml  # create Deployment and Pod
+
+                                          # Server started, Redis version 2.8.19
+$: kubectl logs -f redis-master-ID   ->   # WARNING: The TCP backlog setting of 511 ...
+                                          * The server is now ready to accept connections on port 6379
+
+$: kubectl apply -f redis-master-service.yaml  # create a Service and expose the Pod
+$: kubectl get service
+```
+
 ### Setup Redis Slave
-
-```
-$: kubectl apply -f redis-slave-deployment.yaml
-
-$: kubectl apply -f redis-slave-service.yaml
-```
 
 ```
 apiVersion: apps/v1                                          apiVersion: v1
@@ -89,25 +83,13 @@ spec:                                                            role: slave
         - containerPort: 6379
 ```
 
+```
+$: kubectl apply -f redis-slave-deployment.yaml
+
+$: kubectl apply -f redis-slave-service.yaml
+```
+
 ### Setup Guestbook Frontend
-
-```
-$: kubectl apply -f frontend-deployment.yaml
-
-$: kubectl apply -f frontend-service.yaml
-
-# If Service NodePort:
-$: minikube service frontend --url  #-> http://_ip:_port
-# If Service LoadBalancer:
-$: kubectl get service frontend  #-> copy-paste the EXTERNAL-IP into a browser
-
-$: kubectl get services  #->
-  # NAME           TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)
-  # frontend       NodePort    10.110.17.204    <none>        80:30832/TCP
-  # kubernetes     ClusterIP   10.96.0.1        <none>        443/TCP
-  # redis-master   ClusterIP   10.101.127.218   <none>        6379/TCP
-  # redis-slave    ClusterIP   10.103.27.75     <none>        6379/TCP
-```
 
 ```
 apiVersion: apps/v1                                        apiVersion: v1
@@ -140,6 +122,24 @@ spec:                                                          tier: frontend
           value: dns                                       
         ports:                                             
         - containerPort: 80
+```
+
+```
+$: kubectl apply -f frontend-deployment.yaml
+
+$: kubectl apply -f frontend-service.yaml
+
+# If Service NodePort:
+$: minikube service frontend --url  #-> http://_ip:_port
+# If Service LoadBalancer:
+$: kubectl get service frontend  #-> copy-paste the EXTERNAL-IP into a browser
+
+$: kubectl get services  #->
+  # NAME           TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)
+  # frontend       NodePort    10.110.17.204    <none>        80:30832/TCP
+  # kubernetes     ClusterIP   10.96.0.1        <none>        443/TCP
+  # redis-master   ClusterIP   10.101.127.218   <none>        6379/TCP
+  # redis-slave    ClusterIP   10.103.27.75     <none>        6379/TCP
 ```
 
 ### Scale the app
