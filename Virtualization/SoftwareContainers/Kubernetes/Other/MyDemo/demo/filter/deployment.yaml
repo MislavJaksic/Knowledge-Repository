@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: filter-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tier: filter-tier
+  template:
+    metadata:
+      labels:
+        tier: filter-tier
+    spec:
+      containers:
+      - name: filter
+        image: mj753951/filter:demo
+        ports:
+          - containerPort: 5002
+      restartPolicy: Always
