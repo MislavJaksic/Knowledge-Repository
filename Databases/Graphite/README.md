@@ -15,7 +15,7 @@ metric_path value timestamp\n
 ### [Graphite Docker](https://hub.docker.com/r/graphiteapp/docker-graphite-statsd/tags)
 
 ```
-$: docker run -d --name graphite --restart=always -p 80:80 -p 2003-2004:2003-2004 -p 2023-2024:2023-2024 -p 8125:8125/udp -p 8126:8126  -v /tmp/graphite_docker/graphite/conf:/opt/graphite/conf -v /tmp/graphite_docker/graphite/storage:/opt/graphite/storage -v /tmp/graphite_docker/statsd/config:/opt/statsd/config graphiteapp/docker-graphite-statsd
+$: docker run -d --name graphite -p 80:80 -p 2003-2004:2003-2004 -p 2023-2024:2023-2024 -p 8125:8125/udp -p 8126:8126  -v /tmp/graphite_docker/graphite/conf:/opt/graphite/conf -v /tmp/graphite_docker/graphite/storage:/opt/graphite/storage -v /tmp/graphite_docker/statsd/config:/opt/statsd/config graphiteapp/docker-graphite-statsd
 ```
 
 #### Feeding metrics

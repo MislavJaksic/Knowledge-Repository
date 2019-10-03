@@ -1,0 +1,5 @@
+interface Node {        type User implements Node {
+  id: ID!                 id: ID!
+}                         name: String!
+                          age: Int!
+                        }
