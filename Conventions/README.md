@@ -24,9 +24,9 @@ Line comment:
 #
 ```
 
-Inline comment:  
+Output comment:  
 ```
-->
+#->
 ```
 
 ### Text conventions
@@ -37,5 +37,3 @@ DO
 DON'T
 Break up sentences if they are longer then X characters.  
 ```
-
-
