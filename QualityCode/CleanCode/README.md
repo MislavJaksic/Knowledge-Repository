@@ -1,147 +1,141 @@
 ## "Clean code" from Clean Code
 
-Clean code is defined in the book by the same name written by Robert C. Martin as code that can be easily understood
-and quickly read by programmers. Clean code is written in the hopes that it will allow programmers to more easily
-maintain it in the future.
+Clean code is written by Robert C. Martin.  
+It is code that can be easily read and understood by programmers.  
+Clean code is easier to maintain.  
 
-### Principles of Clean Code
+### Meaningful names
 
-Meaningful names: if you have to assign a name, come up with a short name that clearly says what it does, how it is
-used and why it exists; classes and objects should be nouns; functions should be verbs; use solution domain names
-(as oppose to problem domain names); context around the names is as important as the names themselves.
+```
+Names are descriptive; reveal intent.  
+Names are distinct.  
+Avoid encoding names.  
+Names don't have a prefix or suffix.  
+Have a consistent lexicon; get or fetch, choose one.  
+Same name, same purpose, same semantics.  
+Use solution domain names: algorithm and pattern names.  
+Use domain specific names when there are no solution domain names.  
+Provide context to the variables with other names; create a structure.  
+```
 
-Names should be descriptive; reveal intent.
-Names should be meaningfully distinct.
-Avoid encoding names.
-Names should not have prefix or suffix.
-Classes and object should be nouns; Customer, Account.
-Methods should be verbs; Delete, Save.
-Have a consistent lexicon; get or fetch, choose one.
-Same name, same purpose, same semantics.
-Use solution domain names; algorithm and pattern names.
-Use problem domain names when there are no solution domain names.
-Provide context to the variables with other names; create a structure.
+### Functions
 
-Functions: make them small (around five lines long); should do only one thing, but what one thing is depends on the
-level of abstraction; abstraction should be uniform within the same function; the most abstract functions should
-read like English; functions should have as few arguments as possible (no more then three); don't pass flags as
-arguments; when passing two or more arguments, order them; write the ordering of the arguments into the name of the
-function; if a function takes many arguments, try to wrap some of them in a class or a structure; make it clear that
-a function is an event and that it returns nothing; never return a value through the input argument, always return
-a value through the return value; functions should have no side effects; functions should either return information
-about an object or should change the state of the object, never both; if you handle errors with try/catch blocks,
-make them invoke functions, so you can better separate error handling from the rest of the code.
+```
+Functions are short; 4 lines tops.  
+Functions have no more then 2 indent levels.  
+Functions do only one thing at the current level of abstraction.  
+Functions have all statements at one level of abstraction.  
+Construct functions as if they are TO paragraphs; the Stepdown rule.  
+Bury switch/if-else chains deep down in an ABSTRACT FACTORY.  
+Functions have descriptive names; they do what you expect.
+Functions have no, one or two arguments; monadic: ask a question or transform the argument and return it, not both.  
+If a function has more then two arguments, order them or wrap them in a structure.  
+Don't pass flag arguments.  
+Have no side effects; do only what the function name promises.  
+Avoid output arguments: DON'T appendFooter(report), DO report.appendFooter().  
+Functions should either answer a question or perform an action, never both.  
+Prefer exceptions to returning error codes.  
+Extract error handling code into a function.  
+Eliminate code duplication; do not repeat yourself.  
+```
 
-Functions should be very short; 4 lines tops.
-Functions should have no more then 2 indent levels.
-Functions should do only one thing at the current level of abstraction.
-Functions should have all statements at one level of abstraction.
-Construct functions as if they are TO paragraphs; step down rule.
-Bury switch/if-else chains deep down in an ABSTRACT FACTORY.
-Functions should have descriptive names; they should do what you expect.
-Functions should have no, one or two arguments; monadic: ask a question or transform the argument and return it;
-if it has more, order them or wrap them in a structure.
-Avoid passing flag arguments.
-Have no side effects; do only what the function name promises.
-Avoid output arguments; bad appendFooter(report) -> good report.appendFooter().
-Functions should either answer a question or perform an action, never both.
-Prefer exceptions to returning error codes.
-Extract error handling code into a function.
-Eliminate code duplication; do not repeat yourself.
+### Comments
 
-Comments: comment only if there is no other way of teaching others what your code does; they can be used to explain
-intent, to clarify, as a note or as a warning.
-
+```
 Good comments inform, explain, clarify, warn and amplify. Everything else is a bad comment.
+```
 
-Formatting: write a file as a newspaper article, headline at the top, synopsis in the first paragraph; blank lines
-should separate functions, similar concepts should be kept near each other; don't make files or lines too long.
+### Formatting
 
-Small files are better then big files.
-Files should be treated like articles; headline at the top, minutia at the bottom.
-Seperate concepts with a blank line.
-Declare local variables just before they are used.
-Instance variables should be declared at the top of the class.
-The caller function should be above the called function and as close as possible.
-Lines should not be longer then 80 characters; have a good reason to break the rule.
-Agree upon and stick to formatting rules; do not be tempted to break them.
+```
+Small files are better then big files.  
+Files should be treated like articles; headline at the top, minutia at the bottom.  
+Separate concepts with a blank line.  
+Declare local variables just before they are used.  
+Instance variables should be declared at the top of the class.  
+The caller function should be above the called function and as close as possible.  
+Lines should not be longer then 80 characters; have a good reason to break the rule.  
+Agree upon and stick to formatting rules; do not be tempted to break them.  
+```
 
-Objects and data structures: they are polar opposites; objects expose function and abstract data while data
-structures expose data and don't care which functions handle them; use data structures (procedural programming) when
-you will need to add new functions in the future; use object (object oriented programming) when you will need to add
-new classes (data types, data structures) in the future; functions in a class should only call a small subset of
-functions as described in the Law of Demeter.
+### Objects and data structures
 
-Abstract data through an interface; do not allow other function to know how you store your data.
-Data structures expose data and have no functions.
-Objects hide data and expose it through functions.
-Data structures and objects are polar opposites.
-Procedural code makes adding functionality easy; OO code makes adding new classes (data) easy.
-Procedural code makes adding new data structures hard; OO code makes adding new functions hard.
-Avoid hybrids; they are the worst of both procedural and OO worlds.
-Follow the Law of Demeter; method f of class C should only call methods of: C, object created by or passed to f and object as an instance variable of C. 
-Data transfer objects (DTO, no functions), beans (only getters and setters) and active records (beans with some other functions).
-Treat all of the above as if they are data structures; do not put business rules into them as that would make them hybrids.
+```
+Abstract data through an interface; do not allow other function to know how you store your data.  
+Data structures expose data and have no functions.  
+Objects hide data and expose it through functions.  
+Data structures and objects are polar opposites.  
+Procedural code makes adding functionality easy; OO code makes adding new classes (data) easy.  
+Procedural code makes adding new data structures hard; OO code makes adding new functions hard.  
+Avoid hybrids; they are the worst of both procedural and OO worlds.  
+Follow the Law of Demeter; function f of class C should only call functions of: C, objects that are instance variables of C and objects created by or passed to f.  
+Data transfer objects (DTO, no functions), beans (only getters and setters) and active records (beans with some other functions).  
+Treat all of the above like data structures; do not put business rules into them.  
+```
 
-Error handling: separate error handling from the rest of the code with try and catch blocks; write tests that cause
-errors (Test Driven Development); avoid unchecked exceptions like the plague itself; display informative messages
-when handling exceptions; write exception classes that catch and translate errors; avoid returning null, return a
-special case object or throw an exception.
+### Error handling
 
-Use exceptions, not return codes.
-If you are going to handle errors, start the function by writing the try block.
-Only use unchecked exceptions.
-Create informative error messages.
-Define exceptions by how they are caught.
-Define the normal flow and the rest using SPECIAL CASE PATTERN.
-Do not return or pass null; throw an exception or return an object.
+```
+Use exceptions, not return codes.  
+If you are going to handle errors, start the function by writing the try block.  
+Only use unchecked exceptions; those that are not checked at runtime.  
+Create informative error messages.  
+Define exceptions by how they are caught.  
+Define the normal flow and the rest using SPECIAL CASE PATTERN.  
+Do not return or pass null; throw an exception or return an object.  
+```
 
-Boundaries: when using third party code, wrap it in your own code to ensure you can easily handle changes to it;
-write tests for third party API to ensure you understand how it works (Learning Tests)
+### Boundaries
 
-An interface can be more general then we want. Put it into a class.
-If the interface changes and it is not wrapped with a class, it will be hard to change it.
+```
+Wrap third party code into a class.
 Write learning tests, tests for third party code.
 If you don't know what another part of the program is going to look like, create an interface.
+```
 
-Unit tests: write a test before writing code (Test Driven Development); three laws of TDD are: write a failing test,
-write the test until it can fail, write code until the test is passed; test code is as important as all other pieces
-of code; tests allow you to make changes to the code without the fear of introducing mistakes; one assert per test;
-test should be quick, independent of each other, repeatable in any environment, return boolean values and should be
-written before any other code; sometimes it is alright to break the rules that you always apply to the rest of the
-code if it will make your test code more readable
+### Unit tests
 
+```
 TDD laws: fail a test before writing production code,
-          write a test until it can fail,
+          write a test only until it can fail,
           write production code until it passes the test.
 Test are as important as production code. Keep them clean.
 Build test data, operate on test data and check results.
 Strive for one assert and one concept per test.
 Remember, tests are what makes your code flexible and resistant to bugs in the face of change.
+```
 
-Classes: classes should be short and named after their responsibilities (we did this successfully if we can describe
-the class without using or, but, if or and); systems should be made up of many small classes not a few large classes;
-class cohesion means a lot of functions use a large portion of variables; classes must only have one reason to
-change; classes should be isolated from external change
+### Classes
 
+```
 Class variables should be written at the start of the class.
 Classes should have as few responsibilities as possible.
-A class should one only reason to change (Single Responsibility Principle).
-A system should be made up of many small classes, not a few large ones.
-Aim for high cohesion: most methods use most instance variables.
+A class has only one reason to change (Single Responsibility Principle).
+A system is made up of many small classes, not a few large ones.
+Aim for high cohesion: most functions use most instance variables.
 Transform parameters into instance variable -> class looses cohesion -> split it into multiple classes.
 Classes should be open for extension but closed for modification (Open Closed Principle).
 Classes should depend upon abstract classes or interfaces (Dependency Inversion Principle).
+```
 
-Systems: separate using from construction; TODO
+### Systems
 
-Emergance: chapter 12
+TODO
 
-Concurrency: chapter 13
+### Emergence
 
-Refactoring in practice: beginning at page 193, chapters 14, 15 and 16
+TODO
 
-Smells and Heuristics: chapter 17, page 285
+### Concurrency
 
-PATTERNS: abstract factory, special case pattern, adapter pattern, build operate check pattern, template method
-pattern, strategy pattern, decorator
+TODO
+
+### Successive refinement
+
+TODO
+
+### Smells and Heuristics
+
+TODO
+
+PATTERNS: abstract factory, special case pattern, adapter pattern, build operate check pattern, template method pattern, strategy pattern, decorator

@@ -9,9 +9,9 @@ There are [many varieties of Linux](https://distrowatch.com/). They range from t
 Each Linux OS is different, so take care not to mix up installation instructions or command syntax.  
 
 * [Manjaro](https://manjaro.org/) - quite popular
-* [Ubuntu](https://www.ubuntu.com/) - Desktop is similar to Windows; Server has no interface
+* [Ubuntu](https://www.ubuntu.com/) - the Desktop version is similar to Windows; the Server version has no interface
 * [CentOS](https://www.centos.org/) - useful as a server
-* [Alpine](https://alpinelinux.org) - for routers, firewalls, VPNs and servers; tiny
+* [Alpine](https://alpinelinux.org) - for routers, firewalls, VPNs, servers and containers; tiny
 
 ### Installation
 

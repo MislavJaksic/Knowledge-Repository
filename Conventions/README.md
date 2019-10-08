@@ -1,6 +1,10 @@
 ## GitHub convention
 
-### Markdown conventions
+### Folder conventions
+
+Folder names have no special characters and are CamelCased.  
+
+### Text conventions
 
 The top title is:  
 ```
@@ -26,13 +30,19 @@ Line comment:
 
 Output comment:  
 ```
-#->
+$: _command  #->
 ```
 
-### Text conventions
+Long output comment:
+```
+$: _command  #->
+  # -a _descriptionA
+  # -b _descriptionB
+```
 
 ```
 DO
+Horizontally align text if it fits the screen.  
 
 DON'T
 Break up sentences if they are longer then X characters.  
