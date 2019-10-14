@@ -15,7 +15,7 @@ $: sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/u
 
 ```
 $: sudo apt-get update
-$: sudo apt-get install docker-ce
+$: sudo apt-get install docker-ce docker-ce-cli containerd.io
 $: sudo docker run hello-world
 ```
 
@@ -92,10 +92,10 @@ $: docker run -d -P --name Container-Name Docker-Id/_repository - run without te
   -d: detach container from the terminal
   -P: publish exposed ports to random ports
   --name: give container a name
-  
+
   -i: interactive
   --rm: remove container after shutdown
-  
+
 $: docker container stop Container-Name - gracefully stop a container
 
 $: docker container rm Container-Name - remove container
@@ -160,5 +160,3 @@ Avoid permission denied:
 ```
 RUN chmod +x /path/to/file.ext
 ```
-
-
