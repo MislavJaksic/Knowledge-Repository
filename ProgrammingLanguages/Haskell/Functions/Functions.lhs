@@ -65,7 +65,7 @@ Useful HOF functions:
 zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]
 takeWhile :: (a -> Bool) -> [a] -> [a]
 dropWhile :: (a -> Bool) -> [a] -> [a]
-break :: (a -> Bool) -> [a] -> ([a], [a]) 
+break :: (a -> Bool) -> [a] -> ([a], [a])
 partition :: (a -> Bool) -> [a] -> ([a], [a])
 any :: (a -> Bool) -> [a] -> Bool
 all :: (a -> Bool) -> [a] -> Bool
@@ -91,7 +91,7 @@ Takes a function and a list, then applies the function.
 
 === FILTER ===
 
-Takes a predicate functions and a list, then returns a boolean list.
+Takes a predicate function and a list, then returns a boolean list.
 
 > filter' :: (a -> Bool) -> [a] -> [a]
 > filter' _ [] = []

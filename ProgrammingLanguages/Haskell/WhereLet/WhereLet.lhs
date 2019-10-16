@@ -18,7 +18,7 @@ Good reasons to use "where":
 
 === LET-IN ===
 
-"let" is extremely local and used a few times.
+"let" is extremely local.
 Similar to "where".
 
 Difference between "where" and "let":

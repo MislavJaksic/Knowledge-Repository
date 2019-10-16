@@ -45,6 +45,7 @@ Basic functions:
 > getSum = sum [1,2,3]  -- -> 6
 > getProduct = product [1,2,3]  -- -> 6
 > isElemInList = 2 `elem` [1,2,3]  -- -> True
+> withoutDuplicates = L.nub [1, 2, 3, 1, 1, 2]  -- -> [1,2,3]
 
 === LIST RANGES ===
 

@@ -16,11 +16,11 @@ Functions should have a type declaration.
 A function can take multiple parameters.
 The last type is the return type.
 
-> addThree :: Int -> Int -> Int -> Int  
-> addThree x y z = x + y + z  
+> addThree :: Int -> Int -> Int -> Int
+> addThree x y z = x + y + z
 
-> addThree' :: (Int, Int, Int) -> Int  
-> addThree' (x y z) = x + y + z  
+> addThree' :: (Int, Int, Int) -> Int
+> addThree' (x y z) = x + y + z
 
 === TYPE SYNONYMS ===
 
@@ -50,6 +50,9 @@ Polymorphic functions have type variables.
 > swap' x = (snd x, fst x)
 
 === TYPECLASSES AND ANNOTATIONS ===
+
+Typeclasses are a set of types. They are analogues to interfaces.
+Types are a set of values. They are analogues to classes.
 
 Typeclass is a type interface.
 A type that implements a typeclass instances its behaviour.
@@ -136,10 +139,10 @@ You can set default values in the same way.
 
 Type constructors take types as parameters and output a type.
 
-> data Vector a = Vector a a a deriving (Show)  
-  
-> vplus :: (Num t) => Vector t -> Vector t -> Vector t  
-> (Vector i j k) `vplus` (Vector l m n) = Vector (i+l) (j+m) (k+n)  
+> data Vector a = Vector a a a deriving (Show)
+
+> vplus :: (Num t) => Vector t -> Vector t -> Vector t
+> (Vector i j k) `vplus` (Vector l m n) = Vector (i+l) (j+m) (k+n)
 
 Vectors can be of any type as long as they are a Num.
 
@@ -171,26 +174,26 @@ A "Tree" is either "EmptyTree" or is a "Node" with value "a", left sub-"Tree" an
 
 Singleton is just a "Node" with value "a".
 
-> singleton :: a -> Tree a  
-> singleton x = Node x EmptyTree EmptyTree  
+> singleton :: a -> Tree a
+> singleton x = Node x EmptyTree EmptyTree
 
 Either insert value "a" into an "EmptyTree" or value "a" into a "Node".
 
-> treeInsert :: (Ord a) => a -> Tree a -> Tree a  
-> treeInsert x EmptyTree = singleton x  
-> treeInsert x (Node a left right)   
->     | x == a = Node x left right  
->     | x < a  = Node a (treeInsert x left) right  
->     | x > a  = Node a left (treeInsert x right)  
-    
-> treeElem :: (Ord a) => a -> Tree a -> Bool  
-> treeElem x EmptyTree = False  
-> treeElem x (Node a left right)  
->     | x == a = True  
->     | x < a  = treeElem x left  
->     | x > a  = treeElem x right  
+> treeInsert :: (Ord a) => a -> Tree a -> Tree a
+> treeInsert x EmptyTree = singleton x
+> treeInsert x (Node a left right)
+>     | x == a = Node x left right
+>     | x < a  = Node a (treeInsert x left) right
+>     | x > a  = Node a left (treeInsert x right)
 
-> nums = [8,6,4,1,7,3,5]  
+> treeElem :: (Ord a) => a -> Tree a -> Bool
+> treeElem x EmptyTree = False
+> treeElem x (Node a left right)
+>     | x == a = True
+>     | x < a  = treeElem x left
+>     | x > a  = treeElem x right
+
+> nums = [8,6,4,1,7,3,5]
 > numsTree = foldr treeInsert EmptyTree nums -- -> constructs a complex tree
 
 === NEW TYPECLASSS ===
@@ -199,60 +202,60 @@ Either insert value "a" into an "EmptyTree" or value "a" into a "Node".
 "a" is a type variable that will become an instance of typeclass "Eq".
 Function type declarations follow.
 
-class Eq a where  
-    (==) :: a -> a -> Bool  
-    (/=) :: a -> a -> Bool  
-    x == y = not (x /= y)  
-    x /= y = not (x == y)  
-    
+class Eq a where
+    (==) :: a -> a -> Bool
+    (/=) :: a -> a -> Bool
+    x == y = not (x /= y)
+    x /= y = not (x == y)
+
 data TrafficLight = Red | Yellow | Green
 
 A type can be made an instance of a typeclass.
 Typeclass functions are made specifically for the type.
 Minimal complete definition is the minimum number of functions a typeclasse has to implement.
 
-instance Eq TrafficLight where  
-    Red == Red = True  
-    Green == Green = True  
-    Yellow == Yellow = True  
-    _ == _ = False  
+instance Eq TrafficLight where
+    Red == Red = True
+    Green == Green = True
+    Yellow == Yellow = True
+    _ == _ = False
 
-instance Show TrafficLight where  
-    show Red = "Red light"  
-    show Yellow = "Yellow light"  
-    show Green = "Green light"  
+instance Show TrafficLight where
+    show Red = "Red light"
+    show Yellow = "Yellow light"
+    show Green = "Green light"
 
 Subclass is a typeclass defined with another typeclass.
-    
-class (Eq a) => Num a where  
-   ...    
-        
+
+class (Eq a) => Num a where
+   ...
+
 TYPE CONSTRUCTORS /= TYPE VALUE! Remember that well.
 
 Bad definition:
-  instance Eq Maybe where  
-      ...    
-      
+  instance Eq Maybe where
+      ...
+
 Better definition:
-  instance (Eq m) => Eq (Maybe m) where  
-      Just x == Just y = x == y  
-      Nothing == Nothing = True  
-      _ == _ = False  
-      
-> class YesNo a where  
->   yesno :: a -> Bool  
+  instance (Eq m) => Eq (Maybe m) where
+      Just x == Just y = x == y
+      Nothing == Nothing = True
+      _ == _ = False
 
-> instance YesNo Int where  
->     yesno 0 = False  
->     yesno _ = True  
+> class YesNo a where
+>   yesno :: a -> Bool
 
-> instance YesNo (Maybe a) where  
->     yesno (Just _) = True  
->     yesno Nothing = False  
+> instance YesNo Int where
+>     yesno 0 = False
+>     yesno _ = True
 
-> yesnoIf :: (YesNo y) => y -> a -> a -> a  
-> yesnoIf yesnoVal yesResult noResult = if yesno yesnoVal then yesResult else noResult  
-      
+> instance YesNo (Maybe a) where
+>     yesno (Just _) = True
+>     yesno Nothing = False
+
+> yesnoIf :: (YesNo y) => y -> a -> a -> a
+> yesnoIf yesnoVal yesResult noResult = if yesno yesnoVal then yesResult else noResult
+
 === KINDS ===
 
 Kinds are "types of types".
@@ -265,11 +268,11 @@ Maybe :: * -> * -- -> this kind is an unary type: input and output an ordinary t
 
 Types that can be mapped over.
 
-class Functor f where  
-    fmap :: (a -> b) -> f a -> f b  
-    
-> instance Functor Tree where  
->     fmap f EmptyTree = EmptyTree  
->     fmap f (Node x leftsub rightsub) = Node (f x) (fmap f leftsub) (fmap f rightsub)  
-    
+class Functor f where
+    fmap :: (a -> b) -> f a -> f b
+
+> instance Functor Tree where
+>     fmap f EmptyTree = EmptyTree
+>     fmap f (Node x leftsub rightsub) = Node (f x) (fmap f leftsub) (fmap f rightsub)
+
 === FOLDABLE ===
