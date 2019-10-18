@@ -130,3 +130,12 @@ Set PATH in:
 
 Set DNS in:
 * /etc/hosts
+
+### Generating a new SSH key pair
+
+```
+$: ssh-keygen -t ed25519 -C "SSH-Key-Name"  -> generates a public-private key pair
+  # Enter file in which to save the key (/home/_user/.ssh/id_ed25519): /home/_user/.ssh/id_ed25519-Name
+$: cat /home/_user/.ssh/id_ed25519-Name.pub  -> prints the PUBLIC key
+  # ssh-ed25519 A-Long-String SSH-Key-Name
+```
