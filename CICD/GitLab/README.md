@@ -13,7 +13,7 @@ DevOps Lifecycle:
 * monitor: collect metrics
 * secure: secure apps
 
-### [Generating a new SSH key pair](https://gitlab.com/help/ssh/README#generating-a-new-ssh-key-pair)
+## [Generating a new SSH key pair](https://gitlab.com/help/ssh/README#generating-a-new-ssh-key-pair)
 
 Without an SSH key you have to input your username and password every time you execute a git command.  
 
