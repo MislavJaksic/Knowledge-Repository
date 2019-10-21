@@ -1,1 +1,0 @@
-For greater control and documentation refer to the previous README and sample demo.
