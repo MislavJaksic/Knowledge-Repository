@@ -25,7 +25,7 @@ public class Documenting {
      * @param b Any integer except zero.
      * @return A float, a result of the division.
      * @exception ArithmeticException If b is zero.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/">Java 8 API</a>
+     * @see <a href="https:// docs.oracle.com/javase/8/docs/api/">Java 8 API</a>
      * @see docs.programs.Documenting#Division(float, float)
      */
     public float Division(int a, int b) {

@@ -4,18 +4,18 @@ public class Functions {
         int x = 2;
         int n = 10;
         double x_to_nth = nPowerX(x, n);
-        System.out.println(x_to_nth); //-> a big number
+        System.out.println(x_to_nth);  // -> a big number
 
         PassByValue(x, n);
-        System.out.println(x); //-> 2
-        System.out.println(n); //-> 10
+        System.out.println(x);  // -> 2
+        System.out.println(n);  // -> 10
 
         sumAll(1, 2, 3, 4, 5);
     }
 
-    //Functions are declared as follows:
-    //"_visibility _is_static _is_final _return_type _function_name(_parameter_types_and_names)"
-    //Its called a function signature
+    // Functions are declared as follows:
+    // "_visibility _is_static _is_final _return_type _function_name(_parameter_types_and_names)"
+    // Its called a function signature
     private static final double nPowerX(int x, int n) {
         if (n == 0) {
             return 1;
@@ -33,12 +33,12 @@ public class Functions {
         y = swapper;
     }
 
-    //Variable number of arguments
+    // Variable number of arguments
     private static void sumAll(int... numbers) {
         for (int number : numbers) {
-            System.out.print(number); //-> 12345
+            System.out.print(number);  // -> 12345
         }
     }
-    
-    //Java supports overloading, not default paramater values
+
+    // Java supports overloading, not default paramater values
 }

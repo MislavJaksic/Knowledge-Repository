@@ -1,28 +1,27 @@
 import sys
+from pathlib import Path  # for working with paths
 
-#You can input data throught the command line
-for commandLineArgument in sys.argv:
-  #sys.argv[0] is always the script name
-  print(commandLineArgument, end=' ') #-> InputOutputAndFiles.py <first_command_line_arg> <second_...>
-#Ask for user input and display message
-print(input("Type something in:")) #-> what the user inputs
 
-#Define how you will use the file
-file = open("fileName.txt", "rU")
-#Read a byte of data
-print(file.read(1)) #-> 'A'; the first char in the file
-#Close a file
+for command_line_arg in sys.argv:
+    # sys.argv[0] is always the script name
+    print(command_line_arg, end=' ')  # prints "$: InputOutputAndFiles.py <first_command_line_arg> <second_...>"
+
+print(input("Type something in:"))  # -> what the user inputs
+
+file = open("file_name.txt", "rU")  # "r", "w", "a" options
+print(file.read(1))  # -> 'A'; the first char in the file
 file.close()
-#OR
-with open("fileName.txt", "rU") as file:
-  print(file.read(1)) #-> A
+# OR
+with open("file_name.txt", "rU") as file:
+    print(file.read(1))  # -> A
 
-#Destroy an existing file and create a new empty file
-file = open("fileName.txt", "w")
-#Write at the end of a file
+file = open("file_name.txt", "w")  # destroy an existing file and create a new empty file
 file.write("ABCD")
 file.close()
 
-#Output a fancy string
-print("This is a {} string in a well {} format. It has {} paramaters.".format("fancy", "defined", 3))
-#-> "This is a fancy string in a well defined format. It has 3 paramaters."
+
+user = "Jane"
+action = "buy"
+print("user={}, action={}".format(user, action))  # -> user=Jane, action=buy
+# OR
+f"user={user}, action={action}"  # -> user=Jane, action=buy

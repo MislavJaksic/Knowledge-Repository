@@ -1,2 +1,2 @@
-//Doesen't really apply to JavaScript
-//Input handlers
+// Doesen't really apply to JavaScript
+// Input handlers

@@ -1,36 +1,36 @@
-//Objects serve as templates/prototypes from which other objects are created
+// Objects serve as templates/prototypes from which other objects are created
 
-//Objects have properties associated with them
+// Objects have properties associated with them
 var car = new Object()
 car["colour"] = "red"
 car.year = "1999"
 
-car.colour //-> red
-car["year"] //-> 1999
+car.colour  // -> red
+car["year"]  // -> 1999
 
 for (let property in car) {
-	console.log(property) //-> colour, year
+	console.log(property)  // -> colour, year
 }
 
 function writeProperties() {
 	console.log(this.colour)
 	console.log(this.taste)
 }
-//Constructor function
+// Constructor function
 function Honey(colour, taste) {
 	this.colour = colour
 	this.taste = taste
-	this.writeProperties = writeProperties //add function as a method
+	this.writeProperties = writeProperties  // add function as a method
 }
 let rareHoney = new Honey("purple", 3)
 let commonHoney = new Honey("yellow", 5)
-rareHoney.writeProperties() //-> purple, 3
+rareHoney.writeProperties()  // -> purple, 3
 
-//Object hierarchy
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+// Object hierarchy
+// https:// developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
 
 
-//A demonstration of true inheritance
+// A demonstration of true inheritance
 
 function ParentObject(parent_value){
   this.parent_value = parent_value;
@@ -70,9 +70,9 @@ parent = new ParentObject(2);
 
 child = new ChildObject(3, 5);
 
-parent.ImpliedMethod(); //-> 2
-parent.OverridenMethod(); //-> 2
+parent.ImpliedMethod();  // -> 2
+parent.OverridenMethod();  // -> 2
 
-child.ImpliedMethod(); //-> 3
-child.OverridenMethod(); //-> 5
-child.AlteredMethod(); //-> 3 5 3
+child.ImpliedMethod();  // -> 3
+child.OverridenMethod();  // -> 5
+child.AlteredMethod();  // -> 3 5 3

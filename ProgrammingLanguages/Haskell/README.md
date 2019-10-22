@@ -18,3 +18,26 @@ Haskell is a functional programming language which is:
 
 ### Haskell specific folders
 
+There are a lot of specific folders because Haskell is a functional language.  
+
+* Basics:
+
+* Interpreter:
+
+* ListComprehension:
+
+* Module:
+
+* Other:
+
+* PatternMatchingGuards:
+
+* Recursion:
+
+* Types:
+
+* WhereLet:
+
+* Document, ProjectManagement and Testing: deleted in favour of a project template repository
+
+* ObjectOriented: deleted because it isn't supported by Haskell

@@ -1,5 +1,5 @@
 public final class GrandChild extends Child {
-    //Classes marked with final cannot be inherited
+    // Classes marked with final cannot be inherited
 
     public GrandChild() {
         super();

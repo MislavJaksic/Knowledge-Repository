@@ -1,5 +1,5 @@
 public class InterfaceImplementor implements SimpleInterface {
-    //Class has to implement all interface methods
+    // Class has to implement all interface methods
     
     private int number = 0;
 

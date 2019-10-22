@@ -1,22 +1,22 @@
 public class Generics {
 
     public static void main(String[] args) {
-        //Upon instantiation T is replaced by a specific data type (non primitive)
+        // Upon instantiation T is replaced by a specific data type (non primitive)
         GenericClass<Integer> integer_generic = new GenericClass<>();
         integer_generic.setGenericMethod(25);
-        System.out.println(integer_generic.getGenericMethod()); //-> 25
+        System.out.println(integer_generic.getGenericMethod());  // -> 25
         
         GenericClass<String> string_generic = new GenericClass<>();
         string_generic.setGenericMethod("Twenty five");
         System.out.println(string_generic.getGenericMethod()); // -> Twenty five
 
-        System.out.println(GenericFunction(5)); //-> 5
-        System.out.println(GenericFunction("Return me!")); //-> Return me!
+        System.out.println(GenericFunction(5));  // -> 5
+        System.out.println(GenericFunction("Return me!"));  // -> Return me!
         
 
-        PrintData(string_generic);//-> Twenty five
+        PrintData(string_generic);// -> Twenty five
 
-        BoundedMethod((Integer) 25); //-> 25
+        BoundedMethod((Integer) 25);  // -> 25
     }
 
     public static <P> P GenericFunction(P input) {
@@ -36,7 +36,7 @@ public class Generics {
 class GenericClass<T> {
     private T data;
 
-    //Cannot be overloaded because its generic
+    // Cannot be overloaded because its generic
     public void setGenericMethod(T input) {
         this.data = input;
     }

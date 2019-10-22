@@ -1,8 +1,8 @@
 public class Child extends Parent {
-    //Child inherits from a Parent; keyword extends
+    // Child inherits from a Parent; keyword extends
     
     public Child() {
-        super(); //super(<paramaters>) calls a constructor of the parent class; must be the first statement in a constructor
+        super(); // super(<paramaters>) calls a constructor of the parent class; must be the first statement in a constructor
         System.out.println("CHILD contructor");
 
     }
@@ -16,7 +16,7 @@ public class Child extends Parent {
         System.out.println("CHILD static");
     }
 
-    //Final methods cannot be overridden
+    // Final methods cannot be overridden
     /*
     public final void Final() {
         System.out.println("PARENT final");
@@ -24,7 +24,7 @@ public class Child extends Parent {
     */
     
     public void ChildMethod() {
-        super.ParentMethod(); //super.<parent_method> can be used to invoke methods of the parent class
+        super.ParentMethod(); // super.<parent_method> can be used to invoke methods of the parent class
         System.out.println("CHILD method");
     }
 }

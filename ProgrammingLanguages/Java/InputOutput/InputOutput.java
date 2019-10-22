@@ -1,4 +1,4 @@
-//Library for greater input control
+// Library for greater input control
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -14,7 +14,7 @@ public class InputOutput {
         RequestUserInput();
         ReadAndWriteFiles();
         
-        //Formatted string output
+        // Formatted string output
         String.format("%s and then %d", "String", 123);
     }
 
@@ -25,15 +25,15 @@ public class InputOutput {
     }
     
     private static void RequestUserInput() {
-        //Ask user for input
+        // Ask user for input
         Scanner ask_for_input = new Scanner(System.in);
         System.out.println("Please input an integer:");
         double number = ask_for_input.nextInt();
-        System.out.println(number); //-> user's input
+        System.out.println(number);  // -> user's input
     }
     
     private static void ReadAndWriteFiles() {
-        //Read until you hit a \n or \r
+        // Read until you hit a \n or \r
         try (BufferedReader input_stream = new BufferedReader(new FileReader("input.txt"))) {
             try (BufferedWriter output_stream = new BufferedWriter(new FileWriter("output.txt"))) {
                 

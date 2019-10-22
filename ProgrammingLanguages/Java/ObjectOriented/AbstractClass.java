@@ -1,6 +1,6 @@
-//Abstract classes cannot be instantiated
+// Abstract classes cannot be instantiated
 public abstract class AbstractClass {
-    //Inheritor wil either also be abstract or will implement the methods
+    // Inheritor wil either also be abstract or will implement the methods
 
     public abstract void AbstractMethod();
     

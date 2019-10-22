@@ -1,8 +1,8 @@
 ## Java
 
-Java is a compiled, object oriented language that carefully balances speed, security and expressibility. The
-source code is stored in .java files while executables are recognised by a .class file extension. It is
-highly recommended to develop Java programs in an IDE because setting up unit tests is much easier that way.
+Java is a compiled language.  
+It balances speed, security and verbosity.  
+It's recommended to use an IDE when developing Java programs.  
 
 ### Java specific folders
 
@@ -10,10 +10,8 @@ highly recommended to develop Java programs in an IDE because setting up unit te
 
 * JMX:
 
+* LibrariesFrameworks: about libraries and tools
+
 * Logging:
 
 * ProjectManagement: about managing dependencies, deployment, installation, program packaging
-
-* Spring: about a popular open source framework
-
-* UtilityPrograms: about very useful less well known programs and tools
