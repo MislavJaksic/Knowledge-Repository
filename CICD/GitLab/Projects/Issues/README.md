@@ -24,4 +24,8 @@ Issues are managed from the issue page, list, board, reference and epic.
 Issue page manages an issue.  
 Issues list is where you can search and filter issues.  
 Issues boards are Kanban boards.  
-Issues are crosslinked by mentioning them.  
+
+### Crosslinking issues
+
+Issues are crosslinked using an URL or ID:
+* Group-Name/Subgroup-Name/Project-Name#Issue-Number

@@ -10,7 +10,7 @@ The Kit can be downloaded from the Oracle website. Once installed, Java source c
 
 Java source files are marked with a .java extension, while Java executables have a .class extension. A Java source file can be compiled into a Java executable by positioning the command line into the folder where the Java source file is located and invoking the Java compiler, "javac _file_name.java". A _file_name.class file will then appear in the same folder.
 
-If "javac" is not a recognised command, environment variables (specifically, System variable Path) have to be modified to include ".../Java/jdk<version_number>/bin" and ".../Java/jdk<version_number>/jre/bin".
+If "javac" is not a recognised command, environment variables (specifically, System variable Path) have to be modified to include ".../Java/jdk<version_number>/bin" and ".../Java/jdk<version_number>/jre/bin" (if it exists).
 
 ### Java launcher and program execution
 

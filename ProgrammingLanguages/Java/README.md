@@ -10,8 +10,8 @@ It's recommended to use an IDE when developing Java programs.
 
 * JMX:
 
-* LibrariesFrameworks: about libraries and tools
+* LibrariesFrameworks: libraries and tools
 
 * Logging:
 
-* ProjectManagement: about managing dependencies, deployment, installation, program packaging
+* ProjectManagement: managing dependencies, deployment, installation, program packaging

@@ -133,6 +133,15 @@ Set DNS in:
 
 ### Generating a new SSH key pair
 
+#### Windows
+
+```
+$: git-gui
+# Note: Help -> Show SSH Key -> Generate Key -> Copy (Public Key) To Clipboard
+```
+
+#### Linux
+
 ```
 $: ssh-keygen -t ed25519 -C "SSH-Key-Name"  -> generates a public-private key pair
   # Enter file in which to save the key (/home/_user/.ssh/id_ed25519): /home/_user/.ssh/id_ed25519-Name
