@@ -30,12 +30,12 @@ Line comment:
 
 Output comment:  
 ```
-$: _command  #->
+$: _command  # ->
 ```
 
 Long output comment:
 ```
-$: _command  #->
+$: _command  # ->
   # -a _descriptionA
   # -b _descriptionB
 ```

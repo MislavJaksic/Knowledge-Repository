@@ -1,0 +1,12 @@
+image: ruby:2.6.5  # Docker image
+
+pages:  # job name
+  stage: deploy  # stage name
+  script:  # what should be run
+  - bundle install  # install dependencies
+  - bundle exec jekyll build -d public  # build the website in "public"
+  artifacts:
+    paths:
+    - public  # location of the website
+  only:
+  - pages  # run job only after pushing to the "pages" branch

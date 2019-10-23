@@ -13,6 +13,17 @@ DevOps Lifecycle:
 * monitor: collect metrics
 * secure: secure apps
 
+### GitLab Docs: Plan
+
+Paying customer features: Burndown CHarts, Epics, Related Issues (but not cross-referencing), Roadmap, Service Desk.  
+
+### GitLab Docs: Create
+
+#### GitLab Docs: Create: Projects and Groups
+
+Paying customer features: Advanced global search, Advanced syntax search, Contribution analytics, File locking, Issues Analytics.  
+
+
 ## [Generating a new SSH key pair](https://gitlab.com/help/ssh/README#generating-a-new-ssh-key-pair)
 
 Without an SSH key you have to input your username and password every time you execute a git command.  
@@ -34,4 +45,6 @@ $: git fetch origin  -> test if it works
   # ECDSA key fingerprint is SHA256:HbW3g8zUjNSksFbqTiUWPWg2Bq1x8xdGUrliXFzSnUw.
   # Are you sure you want to continue connecting (yes/no)? yes
   # Warning: Permanently added 'gitlab.com,35.231.145.151' (ECDSA) to the list of known hosts.
+OR
+$: ssh -T git@gitlab.com
 ```
