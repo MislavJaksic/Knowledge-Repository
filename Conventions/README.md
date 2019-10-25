@@ -4,6 +4,18 @@
 
 Folder names have no special characters and are CamelCased.  
 
+### Hyperlink conventions
+
+Use relative not absolute links on GitHub.  
+
+```
+[Relative folder](RelativeLink)
+[Relative file](RelativeLink/README.md)
+
+[Absolute folder](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/Conventions/RelativeLink)
+[Absolute file](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/Conventions/RelativeLink/README.md)
+```
+
 ### Text conventions
 
 The top title is:  
