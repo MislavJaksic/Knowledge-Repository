@@ -10,12 +10,13 @@ Static Site Generators (SSG):
 * Hexo
 * Brunch
 
-How it works:
+How it works:  
 * create a project
-* create a folder "public" in the repository
-* place your website into "public"
-* setup GitLab's CICD ".gilab-ci.yml"
+* setup GitLab's CICD ".gitlab-ci.yml" file
+* push commits to a branch
 * setup the domain
+* view GitLab Pages
+
 These steps can be tested by creating a GitLab project from a GitLab Pages template.  
 
-If you’re using self-managed instances things are a bit different.  
+Things are a bit different if you’re using self-managed instances.  

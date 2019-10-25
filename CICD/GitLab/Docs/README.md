@@ -19,7 +19,7 @@ Paying customer features: Burndown Charts, Epics, Related Issues (but not cross-
 
 ### Create
 
-#### Create: Projects and Groups
+#### Projects and Groups
 
 Paying customer features: Advanced global search, Advanced syntax search, Contribution analytics, File locking, Issues Analytics.  
 

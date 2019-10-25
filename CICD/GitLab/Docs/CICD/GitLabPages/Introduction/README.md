@@ -3,7 +3,6 @@
 GitLab Pages requirements:
 * instance domain
 * ".gitlab-ci.yml"file
-* directory called "public"
 * GitLab Runner
 
 GitLab Pages on GitLab.com:

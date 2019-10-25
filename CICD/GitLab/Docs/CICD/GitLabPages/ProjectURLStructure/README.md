@@ -3,19 +3,19 @@
 You will need:
 * a repository in a project
 * ".gitlab-ci.yml"
-* directory called "public"
 
 You can also have:
 * a custom domain
 * DNS, SSL/TLS certificate
 
-It is suggested you fork an existing project and start from there.  
+It's suggested you fork an existing project and start from there.  
 
-### Create a project from scratch
+To create a page from scratch:
+* create a project
+* create an orphaned pages branch
+* setup ".gitlab-ci.yml"
+* setup the website content and baseurl configuration
+* push the commits
+* open the website
 
-Create a project.  
-Create an orphaned pages branch.  
-Setup ".gitlab-ci.yml".  
-Setup the website content and baseurl configuration.  
-Push the commits.  
-Open the website.  
+[How to do it with Jekyll](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/CICD/GitLab/Docs/CICD/GitLabPages/CICDGitLabPages)

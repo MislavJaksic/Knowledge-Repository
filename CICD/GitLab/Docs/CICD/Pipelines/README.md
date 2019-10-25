@@ -1,6 +1,6 @@
 ## [Creating and using CI/CD pipelines](https://docs.gitlab.com/ee/ci/pipelines.html)
 
-Claim: Jenkins doesn't scale, is a plugin hell and has lots of points of failure.  
+Claim: Jenkins doesn't scale, is a plugin hell and has many points of failure.  
 
 ### Introduction
 
@@ -10,7 +10,7 @@ Jobs are executed by Runners.
 
 ### Visualizing pipelines
 
-What is parallel and what is sequential can be vizualized.  
+What is parallel and what is sequential can be visualized.  
 
 A graph can be:
 * regular
@@ -21,7 +21,7 @@ A graph can be:
 Defined in ".gitlab-ci.yml".  
 Additional configs are available though the GitLab UI.  
 
-Pipelines can run only for merge requests.  
+Pipelines can be set to run only for merge requests.  
 
 ### Multi-project pipelines
 
@@ -31,10 +31,10 @@ Paying customer feature.
 
 Pipelines are executed automatically, however ...  
 
-Manually execute a pipeline by:
-* click CICD -> Pipelines -> Run Pipelines
-* select a branch in "Create for"
-* enter environment variables
+You can manually execute a pipeline by:
+* clicking CICD -> Pipelines -> Run Pipelines
+* selecting a branch in "Create for"
+* entering environment variables
 
 API endpoints can control pipelines.  
 

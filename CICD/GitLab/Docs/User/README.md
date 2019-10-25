@@ -1,12 +1,15 @@
 ## [User Docs](https://docs.gitlab.com/ee/user/index.html)
 
+GitLab users can use a lot of features.  
+
 ### Concepts
 
-* demo
+Article links:
+* GitLab demo
 * GitLab Workflow
 * all in GitLab
-* microservices
-* innersourcing
+* trends: microservices
+* trends: innersourcing
 
 ### Use cases
 

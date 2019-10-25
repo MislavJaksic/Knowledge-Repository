@@ -6,9 +6,9 @@ JUnit test reports display the report on the merge request.
 ### How it works
 
 GitLab Runner uploads JUnit XML files as artefacts.  
-On a merge request head and base branch's JUnit test reports are compared.  
+When merge is requested, head and base branch's JUnit test reports are compared.  
 
-These results will appear in the merge request:
+Results will appear in the merge request:
 * newly failed tests
 * existing failures
 * resolved failures
@@ -35,6 +35,8 @@ Job-Name:
 #### Ruby
 
 ```
+image: ?
+
 ## Use https://github.com/sj26/rspec_junit_formatter to generate a JUnit report with rspec
 ruby:
   stage: test
@@ -51,6 +53,8 @@ ruby:
 ### Go
 
 ```
+image: ?
+
 ## Use https://github.com/jstemmer/go-junit-report to generate a JUnit report with go
 golang:
   stage: test
@@ -74,11 +78,15 @@ java:
   artifacts:
     reports:
       junit: build/test-results/test/TEST-*.xml
+
+# Note: if it doesen't work, try junit: build/test-results/test/**/TEST-*.xml
 ```
 
 #### Java Maven (Surefire/Failsafe)
 
 ```
+image: ?
+
 java:
   stage: test
   script:
@@ -93,6 +101,8 @@ java:
 #### C/C++
 
 ```
+image: ?
+
 cpp:
   stage: test
   script:
