@@ -41,7 +41,7 @@ Features:
 * personal settings
 * authentication
 * permissions
-* lots of other misc features
+* lots of miscellaneous features
 
 ### Groups
 
@@ -56,8 +56,8 @@ Use resolvable threads to inline code review through merge requests.
 ### Other
 
 Features such as:
-* GitLab Flavored Markdown (GFM)
-* todos: for  issues and merge requests
+* GitLab Flavoured Markdown (GFM)
+* to-dos: for  issues and merge requests
 * search: everything is indexed
 * snippets: blocks of code
 * integrations: use other services with GitLab
