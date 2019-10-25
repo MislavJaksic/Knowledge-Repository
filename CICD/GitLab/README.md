@@ -12,7 +12,8 @@ $: git config --global user.name "User-Name"
 $: git config --global user.email User-Name@Email-Domain
 ```
 
-[Instructions]()
+[Instructions file](Docs/User/SSH/README.md)
+[Instructions folder](Docs/User/SSH)
 
 ### GitLab Workflow
 
