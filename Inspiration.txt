@@ -8,15 +8,6 @@ Collection of reference guides, https://learnxinyminutes.com/
 Data science or machine learning:  
 Website/blog, http://www.dataschool.io/  
 
-Vocabulary:  
-a programming language neutral dictionary which establishes a common group of words to describe the same language features  
-
-Program cookbook:  
-a list of common problems and solutions  
-
-Design patters:  
-an interesting subject; research it  
-
 Expand the programming languages topics:  
 graphical user interface, multithreading...  
 
@@ -30,9 +21,7 @@ profiling programs (show memory usage and length of execution)
 
 SQL, Ada, PHP, Ruby, Haskell  
 
-Flask (Python)  
-
-Ruby on Rails, JIRA, unified functional testing, loadrunner, SauceLabs, BrowserStack, applitools, vagrant, docker, VirtualBox, J2EE, PostgreSQL, Spring  
+JIRA, unified functional testing, loadrunner, SauceLabs, BrowserStack, applitools, vagrant, J2EE
 
 Pragramtic Programmer book  
 
