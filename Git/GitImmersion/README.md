@@ -24,6 +24,7 @@ $: git config --global core.safecrlf true
 
 ### Tour
 
+```
 Create repository:
 $: git init
 
@@ -52,7 +53,7 @@ Command aliasing:
 In .gitconfig write
 [alias]
   _alias = _command
-  
+
 Get previous version:
 $: git checkout _commit_hash
 
@@ -75,7 +76,7 @@ Rebase vs merge:
 don't rebase when
   - the branch is shared with others
   - commit branch history is important
-  
+
 Close repository:
 $: git clone _repository [_local_name]
 
@@ -83,7 +84,7 @@ View remote repositories:
 $: git remote [show _repository]
 
 Fetch changes (but on't merge them):
-$: git fetch 
+$: git fetch
 
 Fetch changes and merge branches:
 $: git pull
@@ -97,3 +98,4 @@ file commands
 
 branch commands
 
+```

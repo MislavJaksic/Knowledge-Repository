@@ -5,15 +5,15 @@ SSH stands for Secure SHell.
 ### [The Black Magic of SSH by Bo Jeanes](https://vimeo.com/54505525)
 
 OpenSSH:  
-* connection fowarder  
+* connection forwarder  
 * transfer protocol  
 * force command execution on a per public kay basis  
 
-#### Connection fowarding
+#### Connection forwarding
 
-Remote, local, dynamic X11, agent fowarding  
+Remote, local, dynamic X11, agent forwarding  
 
-Remote port fowarding / inbound tunneling:  
+Remote port forwarding / inbound tunnelling:  
 expose local services to remote clients over your connection  
 makes SSH bind a port on the SSH server  
 
