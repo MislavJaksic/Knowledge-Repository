@@ -1,12 +1,18 @@
 ## Knowledge Repository
 
-The Knowledge Repository is a collection of notes, references, book summaries and examples. Software engineering is a broad subject which is why there are so many folders.  
-Each folder covers a single topic. Each folder has its own README which explains its purpose and contents.
+The Knowledge Repository is a collection of notes, references, book summaries and examples. Each piece of knowledge has a title and a source.  
 
-### Intention
+### The Problem
 
-As time elapses, I will forget what I knew and even worse, I will forget how I came to know what I forgot.  
-To combat this reality I have decided to create this digital booklet of booklets, hoping it will keep forgetfulness at bay. Somehow I know that writing this booklet will pay off ten years from now...  
+The more I learn the more I forget.  
+To avoid forgetting, I have to revise.  
+The more knowledge I have the more time I'll spend revising instead acquiring new knowledge.  
+If I spend more time revising then learning I will fall behind.  
+
+### The Solution
+
+To combat this, I've created a way to store knowledge outside my body: the Knowledge Repository.  
+In it I can store what I know and how I was able to acquiring this  knowledge in the first place.  
 
 ### Contact
 

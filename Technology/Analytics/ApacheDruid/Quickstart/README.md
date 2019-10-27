@@ -1,17 +1,14 @@
 ## [Single-Server Quickstart](https://druid.apache.org/docs/latest/tutorials/index.html)
 
-Cannot be installed on Windows.  
-
 ### Install
 
-You will need:
-* Java 8 (8u92+)
-* Linux, Mac OS X, or other Unix-like OS
-Note: must be Java 8!  
+You will need:  
+* Java 8 (8u92+) [must be Java 8]  
+* Linux, Mac OS X, or other Unix-like OS [Druid cannot be installed on Windows]  
 
-For a single-server micro-quickstart configuration:
-* 4 CPUs
-* 16GB of RAM
+For a single-server micro-quickstart you will need:  
+* 4 CPUs  
+* 16GB of RAM  
 
 ```
 $: tar -xzf apache-druid-Druid-Version.tar.gz
@@ -24,35 +21,35 @@ $: wget -O - https://archive.apache.org/dist/zookeeper/zookeeper-Zookeeper-Versi
 ### Start Druid
 
 ```
-$: bin/start-micro-quickstart 
+$: bin/start-micro-quickstart
+# Note: visit http://localhost:8888  
 ```
-Visit: http://localhost:8888  
 
 Cluster metadata and segments are at: /path/to/druid/var  
 Logs are at: /path/to/druid/var/sv
 
 ### [Loading a file](https://druid.apache.org/docs/latest/tutorials/tutorial-batch.html)
 
-Demonstrates batch file loading.  
+Demonstrates how to batch load a file.  
 
 ```
-Visit: localhost:8888  
+# Note: visit localhost:8888  
 Load data -> Local disk -> Firehose type: local                               -> Preview ->
                         -> Base directory: quickstart/tutorial/
                         -> File filter: wikiticker-2015-09-12-sampled.json.gz
-                        
--> Next: Parse data -> Parser to use: json -> 
+
+-> Next: Parse data -> Parser to use: json ->
                     -> Flatten?: no
 
 -> Next: Parse time -> Column/Constant? -> Next: Transform -> Next: Filter ->
 
 -> Next: Configure schema -> Specify dimension?: yes ->
                           -> Rollup?: no
-                          
+
 -> Next: Partition -> Next: Tune -> Next: Publish -> Name: wikipedia -> Submit
 ```
 Refresh Tasks until you see a green light.  
-Refresh Datasources until you see a green light.  
+Refresh data sources until you see a green light.  
 
 ```
 Query -> SELECT * FROM "wikipedia"
@@ -81,7 +78,7 @@ Using dsql.
 
 ### [Writing an ingestion spec](https://druid.apache.org/docs/latest/tutorials/tutorial-ingestion-spec.html)
 
-How to ingest custome data.  
+How to ingest custom data.  
 
 ### [Transforming input data](https://druid.apache.org/docs/latest/tutorials/tutorial-transform-spec.html)
 

@@ -1,9 +1,11 @@
 ## [Agile Manifesto](https://agilemanifesto.org/)
 
-* Individuals and interactions > processes and tools  
-* Working software > comprehensive documentation  
-* Customer collaboration > contract negotiation  
-* Responding to change > following a plan  
+```
+Individuals and interactions over processes and tools  
+Working software             over comprehensive documentation  
+Customer collaboration       over contract negotiation  
+Responding to change         over following a plan  
+```
 
 Principles:
 * deliver software early and continuously

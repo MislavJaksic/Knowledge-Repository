@@ -100,13 +100,6 @@ def main(args):
     modifier = 0
     reroll_penalty = -1
 
-    # rolls = Rolls2d6(sample_size, modifier, smart_threshold)
-    # print(rolls)
-    #
-    # rolls = Rolls2d6(sample_size, modifier, smart_threshold)
-    # rolls.reroll()
-    # print(rolls)
-
     rolls = Rolls2d6(sample_size, modifier, smart_threshold, reroll_penalty)
     rolls.smart_reroll_all()
     print(rolls)
