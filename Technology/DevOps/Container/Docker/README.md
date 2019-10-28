@@ -4,6 +4,10 @@ Docker is a containerization program.
 
 ### [Install Docker](https://docs.docker.com/install/)
 
+```
+$: sudo apt-get remove docker docker-engine docker.io containerd runc  # uninstall older Docker
+```
+
 #### Ubuntu Linux
 
 ```
@@ -21,11 +25,11 @@ $: sudo docker run hello-world
 
 #### [Post-installation for Linux](https://docs.docker.com/install/linux/linux-postinstall/)
 
-Non-root users will have to prefix every command with "sudo". Avoid it with:
+Non-root users will have to prefix every command with "sudo". Avoid it by executing:
 ```
 $: sudo groupadd docker
 $: sudo usermod -aG docker $USER
--> RESTART VM/Linux
+# Note: restart "Linux"
 $: docker run hello-world
 ```
 
