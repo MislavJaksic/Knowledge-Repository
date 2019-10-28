@@ -8,12 +8,14 @@ Kanban matches the amount of work in progress (WIP) to team's capacity.
 You will need:  
 * a board  
 * cards  
+
 A Kanban board visualizes the flow of work.  
 
 A basic three-step workflow:  
 * To-Do  
 * In-Progress/Doing  
 * Done  
+
 You may want to add other steps such as code review.  
 
 Kanban cards should only include critical information.  

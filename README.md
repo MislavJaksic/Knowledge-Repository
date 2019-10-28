@@ -7,7 +7,7 @@ The Knowledge Repository is a collection of notes, references, book summaries an
 The more I learn the more I forget.  
 To avoid forgetting, I have to revise.  
 The more knowledge I have the more time I'll spend revising instead acquiring new knowledge.  
-If I spend more time revising then learning I will fall behind.  
+If I spend more time revising then learning, I will fall behind.  
 
 ### The Solution
 

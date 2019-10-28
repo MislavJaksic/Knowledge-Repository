@@ -1,3 +1,3 @@
 ## Databases
 
-About data storage systems and database management systems.  
+About data storage and database management systems.  

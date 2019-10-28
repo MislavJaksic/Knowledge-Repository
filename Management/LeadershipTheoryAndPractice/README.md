@@ -17,9 +17,11 @@ Position power comes from a title:
 * legitimate power (judge)  
 * reward power (supervisor)  
 * coercive power (coach)  
+
 Personal comes from followers:  
 * referent power (teacher)  
 * expert power (tour guide)  
+
 Power as a shared resource deemphasizes the idea that leaders are power wielders.  
 
 Leadership and management overlap.  
@@ -36,12 +38,14 @@ Consistently identified traits are:
 * determination  
 * integrity  
 * sociability  
+
 Big Five personality traits in order of association with leadership are:  
 * extraversion  
 * conscientiousness  
 * openness  
 * low neuroticism  
 * agreeableness  
+
 Leaders who are sensitive to their and the emotions of others are more effective.  
 Personality assessment instruments can identify leaders.  
 
@@ -55,6 +59,7 @@ Three-skill approach to effective leadership:
 * technical  
 * human  
 * conceptual  
+
 Different management levels require different skills:  
 * low requires technical and human skills  
 * middle requires all three skills  
@@ -104,10 +109,12 @@ Least Preferred Co-worker (LPC) personality-like measure delineates:
 * highly task motivated, low LPCs  
 * socio-independent, middle LPCs  
 * relationship motivated, high LPCs  
+
 Situations are measured on:  
 * leader–member relations  
 * task structure  
 * position power  
+
 Low LPCs are effective in extremes and high LPCs in moderately favourable situations.  
 
 Contingency theory is backed by a lot of research, emphasises situation-leader pairs and is predictive.  
@@ -120,6 +127,7 @@ Employees will be motivated if:
 * they feel competent  
 * they think their efforts will be rewarded  
 * if they find the payoff for their work valuable  
+
 Leaders should select a style (directive, supportive, participative, or achievement oriented) that will help followers achieve their goals.  
 
 Leadership-task pairs:

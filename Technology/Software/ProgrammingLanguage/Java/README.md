@@ -8,10 +8,6 @@ It's recommended to use an IDE when developing Java programs.
 
 * Generics: about generic types, how to use and handle them
 
-* JMX:
-
 * LibrariesFrameworks: libraries and tools
 
 * Logging:
-
-* ProjectManagement: managing dependencies, deployment, installation, program packaging

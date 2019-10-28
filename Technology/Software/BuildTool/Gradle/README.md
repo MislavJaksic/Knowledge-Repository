@@ -1,17 +1,12 @@
-## Gradle
+## [Gradle](https://gradle.org/)
 
-Gradle packages projects for deployment.  
-Gradle has lots of plugins and automation tools.  
-Gradle scales as your project grows.  
+Pitch:
+* accelerate developer productivity
+* build anything
+* automate everything
+* deliver faster
 
-### [Install Gradle](https://gradle.org/install/)
-
-Make sure you have Java 8 or higher.  
-
-Gradle can be installed:  
-* using a package manager such as [Scoop](https://github.com/MislavJaksic/Knowledge-Repository/Scoop)
-* manually
-* with Gradle Wrapper
+The Gradle User Guide organises Gradle Docs much better then the website.  
 
 Many IDEs come with Gradle already installed.  
 
