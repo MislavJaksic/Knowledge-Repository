@@ -25,3 +25,7 @@ It's complicated. Use a package manager.
 ```
 $: gradle -v
 ```
+
+### Troubleshooting Gradle
+
+TODO
