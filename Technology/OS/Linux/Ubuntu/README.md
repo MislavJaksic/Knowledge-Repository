@@ -10,9 +10,11 @@ Install Guest Additions.
 Run Software Update
 Run sudo apt-get update
 
+Setup Git
+
+Install Docker: [Instructions]()
+
 #### Installing software
 
 Git
 Docker
-Kafka
-Eclipse

@@ -1,87 +1,17 @@
 ## [Docker](https://www.docker.com/resources/what-container)
 
-Docker is a containerization program.
-
-### [Install Docker](https://docs.docker.com/install/)
-
-```
-$: sudo apt-get remove docker docker-engine docker.io containerd runc  # uninstall older Docker
-```
-
-#### Ubuntu Linux
-
-```
-$: sudo apt-get update
-$: sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
-$: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-$: sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-```
-
-```
-$: sudo apt-get update
-$: sudo apt-get install docker-ce docker-ce-cli containerd.io
-$: sudo docker run hello-world
-```
-
-#### [Post-installation for Linux](https://docs.docker.com/install/linux/linux-postinstall/)
-
-Non-root users will have to prefix every command with "sudo". Avoid it by executing:
-```
-$: sudo groupadd docker
-$: sudo usermod -aG docker $USER
-# Note: restart "Linux"
-$: docker run hello-world
-```
+Docker is a containerization program.  
 
 ### [Docker Hub](https://hub.docker.com/)
 
 Docker images can be browsed, download from and uploaded to the Hub.  
-[Sample images](https://docs.docker.com/samples/):  
-```
-alpine - tiny OS
-ubuntu - OS
-centos - OS
+[Sample images](Docs/Samples/SampleApplications/SamplesHome)
 
-ibmjava - tiny Java
-openjdk - full Java
-openliberty - Java for microservices
-
-rabbitmq - messaging broker
-flink - stream and batch processor
-storm - realtime computation system
-zookeeper - distributed coordinator
-
-httpd - Apache HTTP server
-nginx - server
-rapidoid - server for Java
-tomcat - Java server
-
-aerospike - flash and RAM database
-arangodb - flexible model database
-couchbase - NoSQL database
-crate - SQL database
-influxdb - time series database
-mongo - document database
-mysql - relational database
-neo4j - graph database
-orientdb - graph NoSQL database
-postgres - relational database
-rethinkdb - document database
-
-memcached - object caching system
-redis - key-value store
-
-mediawiki - wiki
-xwiki - wiki
-
-consul - data center runtime
-elasticsearch - search and analytics engine
-kapacitor - time series processing, monitoring, and alerting
-kibana - visualize ElasticSearch
-odoo - open source ERP
-rocker.chat - open source chat solution
-```
 There are many more official images on Docker Hub.  
+
+### Install
+
+[Instructions](Docs/Guides/GetDocker/DockerEngineCommunity)
 
 ### Docker commands
 
@@ -141,13 +71,13 @@ $: docker stack deploy -c docker-compose.yml Stack-Name - run service stack
 $: docker service ps Service-Name - list services
 ```
 
-### Best practice
+### Best practices
 
-#### System
+```
+$: docker system prune [--all]  # deletes cache
+```
 
-Prune Docker from time to time.  
-
-Keep the code as modular as possible.  
+Keep the Dockerfile code as modular as possible.  
 
 #### Dockerfile
 
@@ -155,12 +85,11 @@ When testing don't be afraid to put each command in its own layer.
 Don't optimize too early! You can always reduce the image size later.  
 For production, merge all package update and install layers into one.  
 
-Download and untar:
+:
 ```
-RUN wget -O - http://example.com/big.tar.xz | tar -xJC /usr/src/things
+RUN wget -O - http://example.com/big.tar.xz | tar -xJC /usr/src/things  # download and untar
 ```
 
-Avoid permission denied:
 ```
-RUN chmod +x /path/to/file.ext
+RUN chmod +x /path/to/file.ext  # grant permission
 ```

@@ -1,6 +1,6 @@
 ## [Docker Curriculum](https://docker-curriculum.com/)
 
-Note: I have not followed this tutorial from beginning to end. That is because it repeats concepts from [Get started: get started with Docker](https://docs.docker.com/get-started/).
+Note: I didn't followed this tutorial from beginning to end. It repeats concepts from [Get started: get started with Docker](https://docs.docker.com/get-started/).
 
 ### Introduction
 
@@ -16,7 +16,7 @@ Skipped.
 $: docker run -i -t Image-Name _command _param1 _param2 ... - interact in pretty print
   -i enables input and output
   -t format output
-  
+
 $: docker container prune - delete stopped containers
 ```
 
@@ -25,12 +25,12 @@ $: docker container prune - delete stopped containers
 ```
 $: docker run --rm Docker-Id/_repository:_tag
   --rm delete container after it stopped
-  
+
 $: docker run -d -P --name Container-Name Docker-Id/_repository - run without terminal and with port map
   -d: detach container from the terminal
   -P: publish exposed ports to random ports
   --name: give container a name
-  
+
 $: docker port Container-Name - list port map; Inside-Port -> Outside-Port
 ```
 
@@ -80,7 +80,7 @@ The host can access each container on 0.0.0.0, but containers can't.
 ```
 Docker network - isolates container communication and provides automatic service discovery
   Docker network: bridge - default Docker container network
-  
+
 Bridge network type - containers connected to the same bridge can communicate
 ```
 
@@ -132,5 +132,3 @@ volumes:
 ### Conclusion
 
 Skipped.  
-
-

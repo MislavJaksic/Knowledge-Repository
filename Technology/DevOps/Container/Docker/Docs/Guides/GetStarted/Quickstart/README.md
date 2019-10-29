@@ -118,7 +118,7 @@ services:
       restart_policy:
         condition: Restart-Condition
     ports:
-      - "Outside-Port:Image-Port" # map ports 
+      - "Outside-Port:Image-Port" # map ports
     networks:
       - Network-Name # load balanced network
 networks:
@@ -239,14 +239,14 @@ eval $(docker-machine env -u) - unset environment variables; disconnect shell fr
 Stack - group of services that share dependencies and can be scaled
 ```
 
-#### Add a new service 
+#### Add a new service
 
 Append docker-compose.yml with:  
 ```
 version: "3"
 services:
   ...
-  
+
   Service-Name2:
     image: Docker-Id/_repository:_tag
     ports:
@@ -258,7 +258,7 @@ services:
         constraints: [node.role == manager] # service will only run on a swarm manager (never a worker)
     networks:
       - Network-Name
-  
+
   ...
 ```
 
@@ -319,5 +319,3 @@ $: docker service ls
 ### 6: Deploy your app
 
 Wherever there is a Docker Engine, you can deploy your app.
-
-

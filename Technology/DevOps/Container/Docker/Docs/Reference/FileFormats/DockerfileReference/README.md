@@ -286,5 +286,3 @@ For build-time customization.
 For run-time customization.  
 
 Source: [blog guide](https://vsupalov.com/docker-arg-env-variable-guide/)
-
-

@@ -40,6 +40,13 @@ $: git config --global user.email User-Name@Email-Domain
 
 [Instructions](Docs/User/General/SSH)
 
+Check that you are using Git over SSH:
+```
+$: git remote -v  # ->
+  # origin	git@_domain:path/to/file.git (fetch)
+  # origin	git@_domain:path/to/file.git (push)
+```
+
 ### Web IDE
 
 For tiny commits you can use your browser.  

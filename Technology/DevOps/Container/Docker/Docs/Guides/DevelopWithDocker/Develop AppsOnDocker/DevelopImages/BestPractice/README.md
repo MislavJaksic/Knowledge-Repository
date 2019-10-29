@@ -158,5 +158,3 @@ Use it to shorten RUN, CMD and ENTRYPOINT paths.
 
 Executes commands in child images before any of the child's commands.  
 Always build images that don't have any ONBUILD commands.  
-
-

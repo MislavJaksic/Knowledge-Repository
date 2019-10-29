@@ -228,5 +228,3 @@ Compose file is a YML file defining services, networks and volumes.
 
 
 aliases and networks and network resolution
-
-
