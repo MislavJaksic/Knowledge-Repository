@@ -10,4 +10,4 @@ I wouldn't recommend it. Linking, compiling and complex command line parameters 
 ### [IDE: CodeBlocks](http://www.codeblocks.org/)
 
 CodeBlocks is a very simple C/C++ IDE for both Windows and Linux.  
-For more information, follow the [GitHub link](https://github.com/MislavJaksic/KnowledgeRepository/tree/master/IntegratedDevelopmentEnvironment/CodeBlocks).  
+For more information, follow the [GitHub link](https://github.com/MislavJaksic/BROKENLINK).  

@@ -1,8 +1,8 @@
 ## Java
 
 Java is a compiled language.  
+Java is very object oriented.  
 It balances speed, security and verbosity.  
-It's recommended to use an IDE when developing Java programs.  
 
 ### Java specific folders
 

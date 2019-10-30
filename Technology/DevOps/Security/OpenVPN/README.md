@@ -120,8 +120,8 @@ $: route -n -> show IP routing table
 ### Connect to remote computer
 
 Connect to a remote computer:  
-* using [Putty](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/RemoteComputing/Putty)
-* or [SSH](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/RemoteComputing/SSH)
+* using [Putty](../Putty)
+* or [SSH](../SSH)
 
 ### Other topics
 

@@ -30,7 +30,7 @@ If you want to forward traffic to the virtual machine you have to open a port on
 
 #### VirtualBox port forwarding
 
-[VirtualBox: Port forwarding NAT](https://github.com/MislavJaksic/KnowledgeRepository/tree/master/Virtualisation/VirtualMachines/VirtualBox/README.md)
+[VirtualBox: Port forwarding NAT](../../DevOps/VirtualMachine/VirtualBox)
 
 #### VMWare
 

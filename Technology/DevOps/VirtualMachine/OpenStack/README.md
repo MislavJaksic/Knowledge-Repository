@@ -24,8 +24,8 @@ Key Pairs - choose a key for authentication
 #### Connect to an Image Instance
 
 Connect to a remote computer:  
-* using [Putty](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/RemoteComputing/Putty)
-* or [SSH](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/RemoteComputing/SSH)
+* using [Putty](../../Security/Putty)
+* or [SSH](../../Security/SSH)  
 
 Connect using MGMT network IP. DEV network is for intra cluster communication.  
 You may need to provide a key for authentication.  

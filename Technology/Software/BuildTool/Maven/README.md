@@ -16,7 +16,7 @@ On Linux (Ubuntu):
 
 On Linux (Ubuntu):  
 1) [Download Maven](https://maven.apache.org/download.cgi), suggested archive: binary tar.gz
-2) Unpack and install the archive; see [Linux commands](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/Linux)
+2) Unpack and install the archive; see [Linux commands](https://github.com/MislavJaksic/BROKENLINK)
 3) Execute the following commands:
 ```
 :$ pwd -> /
@@ -66,16 +66,16 @@ Archetype is a Maven plugin, a templating toolkit.
 ```
 <project xmlns="..."> -> top element
   <modelVersion>4.0.0</modelVersion> -> pom.xml version
-  
+
   <groupId>mjaksic</groupId> -> author/organisation ID
   <artifactId>hello-world</artifactId> -> project ID
-  
+
   <packaging>jar</packaging> -> how to package this project
-  
+
   <version>1.0-SNAPSHOT</version> -> project version
   <name>Maven Quick Start Archetype</name> -> project name
   <url>http://maven.apache.org</url> -> project url
-  
+
   <dependencies> -> project dependencies; enables "import"
     <dependency> -> sample dependency, JUnit 4
       <groupId>junit</groupId>

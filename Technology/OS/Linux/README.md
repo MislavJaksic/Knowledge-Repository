@@ -15,7 +15,7 @@ Each Linux OS is different, so take care not to mix up installation instructions
 
 ### Installation
 
-Linux distributions can be installed using a USB, a DVD or a virtualisation software such as [VirtualBox](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/Virtualisation/VirtualMachines/VirtualBox).
+Linux distributions can be installed using a USB, a DVD or a virtualisation software such as [VirtualBox](../../DevOps/VirtualMachines/VirtualBox).
 
 ### Paths and directories
 

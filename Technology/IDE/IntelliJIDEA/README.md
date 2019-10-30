@@ -67,7 +67,7 @@ CTRL+SHIFT+NumPad-/+: collapse/uncollapse all.
 
 ### Generate JavaDocs
 
-Before you generate JavaDoc make sure your project structure is sound and that you have documented everything according to the [rules](https://github.com/MislavJaksic/KnowledgeRepository/tree/master/ProgrammingLanguages/Java/Documenting).
+Before you generate JavaDoc make sure your project structure is sound and that you have documented everything according to the [rules](https://github.com/MislavJaksic/BROKENLINK).
 
 Under "Tools" -> "Generate JavaDoc...".
 

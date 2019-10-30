@@ -18,4 +18,4 @@ To create a page from scratch:
 * push the commits
 * open the website
 
-[How to do it with Jekyll](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/CICD/GitLab/Docs/CICD/GitLabPages/CICDGitLabPages)
+[GitLab Pages with Jekyll](../CICDGitLabPages)   
