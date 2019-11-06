@@ -1,4 +1,4 @@
-﻿# Code Complete
+﻿## Code Complete
 
 Code Complete, written by Steve McConnell, explains why planning software construction is important.  
 It describes how to build large maintainable projects.  
@@ -87,9 +87,9 @@ from them and containing their bad effect.
 
 - Architectural feasibility - demonstrate that it is possible to complete the
 project through explaining how will the system meet the resource constraints,
-performance targets and other risks. 
+performance targets and other risks.
 
-- Overengineering and robustness - will the system continue to work if it 
+- Overengineering and robustness - will the system continue to work if it
 detects an error, how overengineered should the system be to ensure robustness.
 Decide whether to make the system robust or to make it as simple as possible.
 
@@ -378,7 +378,7 @@ strong cohesion.
 ### Good Encapsulation
 
 Encapsulation of implementation details prevents you from looking at the details
-which creates good abstractions. 
+which creates good abstractions.
 
 Minimizing accessibility to the methods and data, the stricter the better.
 Preserve a good abstraction by exposing a few cohesive methods.
@@ -424,7 +424,7 @@ A class shouldn't have more then about seven data members.
 
 Inheritance ("is a" relationship) is the creation of specialised classes from
 more general ones. Base classes specify common elements.
- 
+
 Inheritance should be implemented when the child class is a more specialised
 class of the parent class.
 
@@ -534,7 +534,7 @@ A low quality routine has, for example the following characteristics: unclear
 routine name, an inconsistent layout, changes input variables, writes to global
 data, doesn't have a single purpose, doesn't handle errors, has hard coded magic
 numbers, has parameters that are not used, has many parameters, parameters are
-poorly ordered. 
+poorly ordered.
 
 ### Valid Reasons to Create a Routine
 
@@ -564,7 +564,7 @@ Improve performance as inefficient code can be more easily replaced.
 
 NOT to ensure all routines are small. Some jobs are performed better in large
 routines. There are plenty of other reasons why you should put code into a
-routine. This is in contrast to the opinion given in Clean Code by Robert 
+routine. This is in contrast to the opinion given in Clean Code by Robert
 
 Martin.
 However, you shouldn't be reluctant to put small pieces of code into their own
@@ -636,7 +636,7 @@ syntax saves a lot of brain power.
 ### How Long Can a Routine Be?
 
 Let them grow to about 100, 200 lines. Anything more and you should try to break
-it up. 
+it up.
 
 ### How to Use Routine Parameters
 
@@ -648,7 +648,7 @@ Always use all the parameters. If you don't use a parameter, don't pass it to
 the routine.
 
 Don't use parameters as working variables. Use local variables as working
-variables. Write distinguishable names for input and working variables. 
+variables. Write distinguishable names for input and working variables.
 
 Explicitly document your assumptions about the parameters, what values should
 and shouldn't appear, meaning of status codes, which ones are input, output and
@@ -745,7 +745,7 @@ Correctness is favored by consumer applications as they emphasize that any
 result is better then shutting down.
 
 Decide on the error handling design at the architecture level and follow it
-consistently throughout the system. 
+consistently throughout the system.
 
 ### Exceptions
 
@@ -827,8 +827,8 @@ automatic
 Using pseudocode makes reviews easier, it supports iterative refinement, makes
 changes easier, minimizes commenting effort and is easier to maintain.
 
-Steps in building a routine: 
-- Design the routine: 
+Steps in building a routine:
+- Design the routine:
   - check for prerequisites by making sure it fits well into the design as well
 as checking that it is necessary.
   - define the problem the routine will solve, what info it hides, its inputs
@@ -872,7 +872,7 @@ it better
 - design by contract: each routine should have pre and postconditions that then
 get verified
 - hacking?: compile to find errors, it if works don't change it, but because
-it is not systematic, this approach will drive you into a corner 
+it is not systematic, this approach will drive you into a corner
 
 ## Chapter 10: General Issues in Using Variables
 
@@ -886,7 +886,7 @@ Initialize each variable as it’s declared.
 Initialize each variable close to where it’s first used. Principle of Proximity:
 keep related actions together.
 
-Use final or const when possible. If not, use a coding convention such as 
+Use final or const when possible. If not, use a coding convention such as
 capitalize a name if it is a constant.
 
 Make sure counters are reset at proper times.
@@ -895,15 +895,15 @@ Initialize a class’s member data in its constructor.
 
 Don't ignore your compiler's warnings when it comes to variables.
 
-Initialize working memory at the beginning of your program. Fill it with zeroes 
+Initialize working memory at the beginning of your program. Fill it with zeroes
 as it is a neutral value.
 
 ### Scope
-     
-Scope or visibility refers to the extent to which your variables are known and 
+
+Scope or visibility refers to the extent to which your variables are known and
 can be referenced throughout a program.
 
-Keep the variable "alive" for as short a time as possible. 
+Keep the variable "alive" for as short a time as possible.
 
 Minimize the scope by:
 Initialize variables used in a loop immediately before the loop.
@@ -914,38 +914,38 @@ Group related statements.
 
 Break groups of related statements into separate routines.
 
-Begin with most restricted visibility, and expand the variable’s scope only if 
+Begin with most restricted visibility, and expand the variable’s scope only if
 necessary.
 
-By minimizing scope, it is harder to write the program because the area where 
+By minimizing scope, it is harder to write the program because the area where
 you can access the variable is limited, however, the program becomes much easier
 to read.
 
 ### Persistence
-           
-Until the end of the block of code, until they are explicitly deleted, until the 
+
+Until the end of the block of code, until they are explicitly deleted, until the
 end of the program or they persist forever.
 Make sure variables persist for the shortest possible time.
 
 ### Binding time
-            
-Describes when the variable and its value are bound together. It is better to 
+
+Describes when the variable and its value are bound together. It is better to
 bind them later, so your code can be more flexible.
 
 ### Relationship Between Data Types and Control Structures
-                                                      
+
 Sequential data translates to sequential statements in a program.
 
 Selective data translates to if and case statements in a program.
 
-Iterative data translates to for, repeat, and while looping structures in a 
+Iterative data translates to for, repeat, and while looping structures in a
 program.
 
 ### Each Variable for Exactly One Purpose
-                                     
+
 Use a single variable for a single purpose.
 
-Avoid hidden meanings in variables such as using it to store a return value, 
+Avoid hidden meanings in variables such as using it to store a return value,
 unless it is  1 which means that an error occurred. It is fine to return an error
 code, but you must catch it as soon as possible to avoid confusion.
 
@@ -958,34 +958,34 @@ Make sure that all declared variables are used.
 
 The name should fully and accurately describe the entity the variable represents.
 
-Names should be specific, descriptive and as short as possible. Don't use 
+Names should be specific, descriptive and as short as possible. Don't use
 abbreviations.
 
 Get names from the problem domain rather then from the solution domain.
 
-The length of the name should be tied to the length of its scope. Short names 
+The length of the name should be tied to the length of its scope. Short names
 for short scopes, longer names for longer scopes.
 
-Qualifiers such as Max, Total, Average should be at the end of the name, unless 
+Qualifiers such as Max, Total, Average should be at the end of the name, unless
 there is a very specific reason why it shouldn't be.
 
 ### Naming Specific Types Of Data
 
-Loop indexes: if loops are nested, use descriptive names, but if there is a 
+Loop indexes: if loops are nested, use descriptive names, but if there is a
 single simple loop, you can use one letter names.
 
 Status variables: don't name them flags! Use a descriptive name.
 
 Temporary variables: try not to use them.
 
-Boolean variables: done, error, found and success/ok are all excellent boolean 
+Boolean variables: done, error, found and success/ok are all excellent boolean
 names. They should imply true or false. Use positive boolean names (not negative
 such as notFound, notSuccess).
 
-Enumerated types: erm... try not to use them. If you do, you will have to 
+Enumerated types: erm... try not to use them. If you do, you will have to
 remember to sets of names and the way they are paired up.
 
-Constants: capitalized and descriptive, not literal (FIVE is bad, CYCLES_NEEDED 
+Constants: capitalized and descriptive, not literal (FIVE is bad, CYCLES_NEEDED
 is good).
 
 ### Naming conventions
@@ -997,20 +997,20 @@ RoutineName().
 
 Differentiate between classes and objects, types and variables.
 
-Identify global variables, member variables, type definition, named constants, 
+Identify global variables, member variables, type definition, named constants,
 enumerated types, input only parameters.
 
-Format names by using either CamelCase or underscore (_). Underscore (_) seems 
+Format names by using either CamelCase or underscore (_). Underscore (_) seems
 to be a more readable.
 
 ### Kinds of name to avoid
 
-Avoid misleading names or abbreviations. Avoid names with similar meanings. 
+Avoid misleading names or abbreviations. Avoid names with similar meanings.
 Avoid variables with different meanings but similar names.
 
-Avoid numerals in names. Avoid misspelled words in names. 
+Avoid numerals in names. Avoid misspelled words in names.
 
-Don’t differentiate variable names solely by capitalization. 
+Don’t differentiate variable names solely by capitalization.
 
 Don’t use names that are totally unrelated to what the variables represent.
 
@@ -1019,13 +1019,13 @@ Don’t use names that are totally unrelated to what the variables represent.
 
 ### Numbers in general
 
-Avoid magic number because they are hard to maintain. Zeroes and ones are 
+Avoid magic number because they are hard to maintain. Zeroes and ones are
 alright to use.
 
-Anticipate divide by zero errors. Wherever division happens, this error could 
+Anticipate divide by zero errors. Wherever division happens, this error could
 occur.
 
-Avoid mixed type comparison. Comparing a float to an integer will almost always 
+Avoid mixed type comparison. Comparing a float to an integer will almost always
 result in a false value.
 
 ### Integers
@@ -1034,11 +1034,11 @@ Be careful with integer division and overflow.
 
 ### Float
 
-Avoiding adding or subtracting number that have greatly different magnitudes. 
+Avoiding adding or subtracting number that have greatly different magnitudes.
 
 Avoid equality comparisons, as they will almost always be false.
 
-Anticipate rounding errors. There are language libraries which implement data 
+Anticipate rounding errors. There are language libraries which implement data
 types sensitive to these errors.
 
 ### Characters and strings
@@ -1049,14 +1049,14 @@ Watch for off by one errors.
 
 Know how your language handles Unicode.
 
-Decide on an internationalization/localization strategy early in the lifetime of 
+Decide on an internationalization/localization strategy early in the lifetime of
 a program.
 
 Decide on a consistent conversion strategy among string types.
 
 ### Boolean variables
 
-Use boolean variables to indicate what the if test is suppose to do (check for 
+Use boolean variables to indicate what the if test is suppose to do (check for
 completion, error condition or something else).
 
 Use boolean variables to simplify tests with many comparisons.
@@ -1068,8 +1068,8 @@ Create your own boolean type if there is no such thing in the language.
 
 ### Named constants
 
-Use named constants in data declarations as well as in parts of the program that 
-needs them. 
+Use named constants in data declarations as well as in parts of the program that
+needs them.
 
 Avoid literal values. Make them into constants.
 
@@ -1077,7 +1077,7 @@ Avoid literal values. Make them into constants.
 
 Make sure that all array indexes are within the bounds of the array.
 
-Consider using container classes that can only be accessed sequentially instead 
+Consider using container classes that can only be accessed sequentially instead
 of arrays. Stacks, queues, sets and similar data structures.
 
 Check the end point of an array.
@@ -1088,9 +1088,7 @@ If an array is multidimensional, understand the correct order of subscripts.
 
 Create your own type even if it is the same as integer or float. This is because
 if you ever need to change the data type, you can simply change the type of your
-custom created type, whereas if you didn't create a custom type, you would have 
+custom created type, whereas if you didn't create a custom type, you would have
 to search for all the types and change them.
 
 ## Chapter 13: Unusual Data Types
-
-

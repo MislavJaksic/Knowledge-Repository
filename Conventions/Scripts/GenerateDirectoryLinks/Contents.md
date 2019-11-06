@@ -38,9 +38,10 @@
         * VirtualMachine
             * [OpenStack](Technology/DevOps/VirtualMachine/OpenStack)
             * [VirtualBox](Technology/DevOps/VirtualMachine/VirtualBox)
-            * [VMWare](Technology/DevOps/VirtualMachine/VMWare)
     * Editor
         * [Atom](Technology/Editor/Atom)
+    * ERP
+        * [SAP](https://github.com/MislavJaksic/SAP-ABAP-Development)
     * IDE
         * [CodeBlocks](Technology/IDE/CodeBlocks)
         * [Eclipse](Technology/IDE/Eclipse)
@@ -54,6 +55,7 @@
     * Software
         * BuildTool
             * [Bazel](Technology/Software/BuildTool/Bazel)
+            * [Gradle](https://github.com/MislavJaksic/Gradle-Tutorial)
             * [Maven](Technology/Software/BuildTool/Maven)
         * CodeQuality
             * [CleanCode](Technology/Software/CodeQuality/CleanCode)
@@ -61,34 +63,43 @@
         * DataScience
             * [ComputerVision](Technology/Software/DataScience/ComputerVision)
         * DesignPattern
+            * [DesignPatterns](https://github.com/MislavJaksic/Design-Patterns)
             * [MicroserviceGuide](Technology/Software/DesignPattern/MicroserviceGuide)
         * ProgrammingLanguage
-            * [ABAP](Technology/Software/ProgrammingLanguage/ABAP)
+            * [ABAP](https://github.com/MislavJaksic/SAP-ABAP-Development/tree/master/ABAP)
             * [C++](Technology/Software/ProgrammingLanguage/C++)
             * [Elm](Technology/Software/ProgrammingLanguage/Elm)
             * [Haskell](Technology/Software/ProgrammingLanguage/Haskell)
             * [Java](Technology/Software/ProgrammingLanguage/Java)
+                * [Spring](https://github.com/MislavJaksic/Spring-Guides-Tutorials)
             * [JavaScript](Technology/Software/ProgrammingLanguage/JavaScript)
             * [Lisp](Technology/Software/ProgrammingLanguage/Lisp)
             * [Python3.x](Technology/Software/ProgrammingLanguage/Python3.x)
     * Streaming
+        * [ApacheKafka](https://github.com/MislavJaksic/Kafka-In-Theory-And-Practice)
         * [ApacheSpark](Technology/Streaming/ApacheSpark)
     * Utility
+        * [CollageLabs](https://github.com/MislavJaksic/College-Labs)
         * [HomeNetworking](Technology/Utility/HomeNetworking)
+        * [Latex](https://github.com/MislavJaksic/Latex-Overleaf)
         * PackageManager
             * [Chocolatey](Technology/Utility/PackageManager/Chocolatey)
             * [Scoop](Technology/Utility/PackageManager/Scoop)
+        * [Practise](https://github.com/MislavJaksic/Practise)
     * Video
+        * [Asciinema](Technology/Video/Asciinema)
         * [OBS](Technology/Video/OBS)
         * [OpenShot](Technology/Video/OpenShot)
     * Visualize
         * [Grafana](Technology/Visualize/Grafana)
     * Web
         * API
+            * [GraphQL](https://github.com/MislavJaksic/GraphQL-Tutorial)
             * [Postman](Technology/Web/API/Postman)
             * REST
                 * [RESTFulWebServices](Technology/Web/API/REST/RESTFulWebServices)
         * Framework
+            * [Flask](https://github.com/MislavJaksic/Flask-Tutorial)
             * [RubyOnRails](Technology/Web/Framework/RubyOnRails)
         * StaticSiteGenerator
             * [Jekyll](Technology/Web/StaticSiteGenerator/Jekyll)

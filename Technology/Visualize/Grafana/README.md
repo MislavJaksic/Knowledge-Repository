@@ -19,7 +19,7 @@ $: sudo service grafana-server stop
 ### [Getting Started](https://grafana.com/docs/guides/getting_started/)
 
 ```
-http://localhost:3000/
+# Note: visit http://localhost:3000/
 # Note: default username and password are "admin"
 ```
 

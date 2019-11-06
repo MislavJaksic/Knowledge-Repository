@@ -1,4 +1,4 @@
-﻿# RESTful Web Services
+﻿## RESTful Web Services
 
 Written by Leonard Richardson and Sam Ruby. The book talks about RESTful, Resource-Oriented web services.  
 
@@ -88,7 +88,7 @@ Response header "Content-Type" determines the media type in "Entity-Body".
 ```
 text/html       -> text documents
 application/xml -> structured text
-image/jpeg      -> images 
+image/jpeg      -> images
 ```
 
 ### Method Information
@@ -156,7 +156,7 @@ information somewhere else.
 operate. A REST-RPC hybrid exposes a URI for every operation the client might perform: one URI to fetch a piece of
 data, a different URI to delete that same data. An RPC-style service exposes one URI for every processes capable of
 handling Remote Procedure Calls (RPC). Most often, there is only one such URI, the endpoint.
-  
+
 - XML-RPC: data structure format for representing function calls and their return values.
 
 - SOAP: envelope format like HTTP on top of HTTP that uses XML-based envelope format. SOAP is a way of putting data
@@ -222,7 +222,7 @@ Lisp       -> simple-http
 
 ### Processing the Response: XML Parsers
 
-Three kinds of XML parsers and strategies: 
+Three kinds of XML parsers and strategies:
 * tree style, document, DOM parsers
 * event style, stream, "pull" parsers
 * event style, stream, SAX parsers
@@ -723,20 +723,20 @@ Chapter 6: Designing Read/Write Resource-Oriented Services
 
 TODO
 
-The imaginary web service should be expended with the functionality to let 
+The imaginary web service should be expended with the functionality to let
 clients store their maps.
 
-User accounts as resources. If they weren't, overloaded POST would have to be 
-used to supply a HTML form to a web application. 
-The benefit is that user account can now be created automatically and accessed 
+User accounts as resources. If they weren't, overloaded POST would have to be
+used to supply a HTML form to a web application.
+The benefit is that user account can now be created automatically and accessed
 thought a uniform interface.
 
-Authentication is the problem of tying a request to a user. 
+Authentication is the problem of tying a request to a user.
 
-Authorization is the problem of determining which requests to let through for a 
+Authorization is the problem of determining which requests to let through for a
 given user.
 
-HTTP header called "Authorization" will be filled with credentials, the server 
+HTTP header called "Authorization" will be filled with credentials, the server
 will then check it.
 
 Kinds of authentication: HTTP Basic, HTTP Digest, and WSSE (or a custom solution).
@@ -745,7 +745,7 @@ To give users privacy, encrypt each HTTP transaction over SSL.
 
 Using HTTPS instead of HTTP prevents other computers from eavesdropping.
 
-How do you know your browser will send your password to the website to which 
+How do you know your browser will send your password to the website to which
 you are logging in and not to some other secret website? Don't trust your browser
 so blindly.
 
@@ -757,7 +757,7 @@ Procedure for turning requirements into read/write resources:
   - Expose a subset of the uniform interface
   - Design the representation(s) accepted from the client
   - Design the representation(s) served to the client
-  - Integrate this resource into existing resources, using hypermedia links and 
+  - Integrate this resource into existing resources, using hypermedia links and
 forms
   - Consider the typical course of events: what’s supposed to happen?
   - Consider error conditions: what might go wrong?
@@ -768,74 +768,74 @@ Split the data set into resources: each account is a resource.
 
 Name the resources with URIs: https://maps.example.com/user/{user-name}.
 
-Expose a subset of the uniform interface: if you ever wish there were more HTTP 
+Expose a subset of the uniform interface: if you ever wish there were more HTTP
 methods, go back to step two and create more resources.
 Observation one: clients will be creating this type of resources.
 Observation two: clients are in change of naming the URI.
-Client will send a PUT request to the account's URI. Client will be able to 
-modify their password, but not their username, client can delete the account, 
+Client will send a PUT request to the account's URI. Client will be able to
+modify their password, but not their username, client can delete the account,
 client can ask for the representation (except for the password).
 
-Design the representation(s) accepted from the client: specify how the user 
-creates an account. Account username will be in the URI and the password in the 
-form encoding, CGI escaping representation as a key value pair. To change the 
-password is the same as creating the account in the first place. To change the 
-password, the client needs Authorization. 
+Design the representation(s) accepted from the client: specify how the user
+creates an account. Account username will be in the URI and the password in the
+form encoding, CGI escaping representation as a key value pair. To change the
+password is the same as creating the account in the first place. To change the
+password, the client needs Authorization.
 
-Design the Representation(s) to Be Served to the Client: client will use a GET 
-request. The user account information will be send in XHTML format. If the user 
+Design the Representation(s) to Be Served to the Client: client will use a GET
+request. The user account information will be send in XHTML format. If the user
 GETs another's account, it will be sent a different XHTML.
 
-Link This Resource to Existing Resources: add "authenticated" message to the 
+Link This Resource to Existing Resources: add "authenticated" message to the
 representation to every resource which is a hypermedia that shows the client how
-to retrieve data about its user account. The home page should include a 
+to retrieve data about its user account. The home page should include a
 hypermedia link to how a user can create an account.
 
-What’s supposed to happen: a PUT request will create a new user if one doesn't 
-exist and respond with code 201 and send back a response with Location header 
-containing the URI of the account. If the account already exists, the password 
-is modified and the code 200 is sent back. All other HTTP methods, GET, DELETE, 
+What’s supposed to happen: a PUT request will create a new user if one doesn't
+exist and respond with code 201 and send back a response with Location header
+containing the URI of the account. If the account already exists, the password
+is modified and the code 200 is sent back. All other HTTP methods, GET, DELETE,
 work as intended.
 
-What Might Go Wrong?: if the client sends a representation in the wrong format, 
-send the code 415. If the client sends no representation or a very poor one, 
-send back the code 400. If the presentation is illegal, such as the path where 
-you want to store data is inconsistent or the password is empty, then send back 
-either 400 or 409 code. If the client's credentials are wrong, return code 401. 
+What Might Go Wrong?: if the client sends a representation in the wrong format,
+send the code 415. If the client sends no representation or a very poor one,
+send back the code 400. If the presentation is illegal, such as the path where
+you want to store data is inconsistent or the password is empty, then send back
+either 400 or 409 code. If the client's credentials are wrong, return code 401.
 If the problem is unspecified, return code 500 or 503.
 
 Now do the resource design procedure all over again for 'custom places'.
 
-Figure Out the Data Set: custom places are created by clients. A client can 
-create any number of places for which I have maps. Every custom place is 
-associated with some user account. Custom places can be private or public. 
-Private custom places can only be viewed and modified by someone who owns the 
+Figure Out the Data Set: custom places are created by clients. A client can
+create any number of places for which I have maps. Every custom place is
+associated with some user account. Custom places can be private or public.
+Private custom places can only be viewed and modified by someone who owns the
 place.
 
-Split the Data Set into Resources: each custom place will be a resource. User 
+Split the Data Set into Resources: each custom place will be a resource. User
 account will be expanded to show the list of custom places for that account.
 
-Name the Resources with URIs: custom place is a subordinate resource. Each 
-custom place has a geographic point and a URI pattern 
+Name the Resources with URIs: custom place is a subordinate resource. Each
+custom place has a geographic point and a URI pattern
 /user/{username}/{planet}/{latitude},{longitude}/{place name}.
 
 Expose a Subset of the Uniform Interface: GET and HEAD can be used to retrieve a
-representation. Custom places can be DELETEed and their state change with PUT. 
-Custom places are created by adding a comment to built in places or by creating 
-a brand new custom place. Use POST when adding content to an existing place 
+representation. Custom places can be DELETEed and their state change with PUT.
+Custom places are created by adding a comment to built in places or by creating
+a brand new custom place. Use POST when adding content to an existing place
 (create a subordinate resource) and use PUT to create a new custom place.   
 
 Design the Representation(s) Accepted from the Client: when creating a new place,
 the client sends key value pairs as form encoded strings. Variables are planet,
-latitude, longitude and name. Information in the URI as scoping info doesn't 
-have to be repeated in the representation. 
+latitude, longitude and name. Information in the URI as scoping info doesn't
+have to be repeated in the representation.
 
-Design the Representation(s) Served to the Client: custom places look the same 
-as built in places. A guide on how an authenticated client can edit a place will 
-be tacked onto the representation. 
+Design the Representation(s) Served to the Client: custom places look the same
+as built in places. A guide on how an authenticated client can edit a place will
+be tacked onto the representation.
 
-Link This Resource to Existing Resources: when an account is DELETEed, delete 
-all the custom places as well. Custom place will have links to user who created 
+Link This Resource to Existing Resources: when an account is DELETEed, delete
+all the custom places as well. Custom place will have links to user who created
 it, instructions on how to create a custom place, ...
 
 What’s Supposed to Happen?: as you would expect.
@@ -846,10 +846,10 @@ Chapter 7: A Service Implementation
 
 Appendix A: a list of real RESTful services from which you could learn.
 
-Django (Python), Restlet (Java) and Ruby on Rails are frameworks that help you 
+Django (Python), Restlet (Java) and Ruby on Rails are frameworks that help you
 expose resources.
 
-The author will use Ruby on Rails to construct the application very similar to 
+The author will use Ruby on Rails to construct the application very similar to
 del.icio.us, a website where users can share bookmarks.
 1) Create a Rails application:
 $ rails bookmarks
@@ -860,21 +860,21 @@ $ script/plugin install acts_as_taggable
 $ script/plugin install http_authentication
 $ gem install atom-tools
 
-3) Installed a database "bookmarks_development" and configured the 
+3) Installed a database "bookmarks_development" and configured the
 config/database.yaml so Rails can connect to it.
 
 4) Figuring Out the Data Set:
 Resources: user accounts, bookmarks, tags and bundles.
-User accounts: have a password and username, full name and email address and a 
+User accounts: have a password and username, full name and email address and a
 list of subordinate resources: bookmarks.
-Bookmarks: belongs to a user, has a URI, short and long description, timestamp, 
+Bookmarks: belongs to a user, has a URI, short and long description, timestamp,
 collection of tags, flag that says if it is public.
 URI's: have a notion of newness.
 Tags: have a name.
 Bundles: user's decision to group up bookmarks.
 
 5) Create a database schema and put it into db/migrate/001_initial_schema.rb:
- 
+
 class InitialSchema < ActiveRecord::Migration
   # Create the database tables on a Rails migration.
   def self.up
@@ -936,37 +936,37 @@ $ rake db:migrate
 
 7) Resource Design:
 Bookmarks API:
-posts/get: Search your posts by tag or date, or search for a specific bookmarked 
+posts/get: Search your posts by tag or date, or search for a specific bookmarked
 URI.
 
-posts/recent: Fetch the n most recent posts by the authenticated user. The 
-client may apply a tag filter: “fetch the n most recent posts that the 
+posts/recent: Fetch the n most recent posts by the authenticated user. The
+client may apply a tag filter: “fetch the n most recent posts that the
 authenticated user tagged with tag t”.
 
-posts/dates: Fetch the number of posts by the authenticated user for each day: 
-perhaps five posts on the 12th, two on the 15th, and so on. The client may apply 
+posts/dates: Fetch the number of posts by the authenticated user for each day:
+perhaps five posts on the 12th, two on the 15th, and so on. The client may apply
 a tag filter here, too.
 
-posts/all: Fetch all posts for the authenticated user, ever. The client may 
+posts/all: Fetch all posts for the authenticated user, ever. The client may
 apply a tag filter.
 
-posts/update: Check when the authenticated user last posted a bookmark. Clients 
+posts/update: Check when the authenticated user last posted a bookmark. Clients
 are supposed to check this before deciding to call the expensive posts/all.
 
-posts/add: Create a bookmark for a URI. The client must specify a short 
-description. It may choose to specify a long description, a set of tags, and a 
-timestamp. A bookmark may be public or private (the default is public). A client 
-may not bookmark the same URI more than once: calling posts/add again overwrites 
+posts/add: Create a bookmark for a URI. The client must specify a short
+description. It may choose to specify a long description, a set of tags, and a
+timestamp. A bookmark may be public or private (the default is public). A client
+may not bookmark the same URI more than once: calling posts/add again overwrites
 the old post with new information.
 
 posts/delete: Deletes a user’s post for a particular URI.
 Tags API:
 tags/get: Fetch a list of tags used by the authenticated user.
 
-tags/rename: Rename one of the authenticated user’s tags. All posts tagged with 
+tags/rename: Rename one of the authenticated user’s tags. All posts tagged with
 the old name will now be tagged with the new name instead.
 Bundles API:
-tags/bundles/all: Fetch the user’s bundles. The resulting document lists the 
+tags/bundles/all: Fetch the user’s bundles. The resulting document lists the
 bundles, and each bundle lists the tags it contains.
 
 tags/bundles/set: Group several tags together into a (possibly new) bundle.
@@ -979,43 +979,43 @@ Interesting functions:
 
 /tag/{tag-name}: Fetch bookmarks tagged with a particular tag, from all users.
 
-/url/{URI-MD5}: Fetch the list of users who have bookmarked a particular URI. 
+/url/{URI-MD5}: Fetch the list of users who have bookmarked a particular URI.
 The {URI-MD5} happens to be the MD5 hash of the URI, but from the average client’s
-point of view that’s not important: it’s an opaque string of bytes that somehow 
+point of view that’s not important: it’s an opaque string of bytes that somehow
 identifies a URI within the del.icio.us system.
 
-/recent: Fetch the most recently posted bookmarks, from all users. The 
+/recent: Fetch the most recently posted bookmarks, from all users. The
 del.icio.us home page also shows this information.
 
 8) REST is Rails:
-Rails doesn't let you define your resources directly, but instead divides up an 
+Rails doesn't let you define your resources directly, but instead divides up an
 application's functionalities into controllers.
-Controllers expose the resources and have special methods that correspond to the 
+Controllers expose the resources and have special methods that correspond to the
 methods of HTTP's uniform interface.
-Lists and items are two resources that show up all the time. Every database 
-table is a list that contains items. Rails assumes you can make every resource 
+Lists and items are two resources that show up all the time. Every database
+table is a list that contains items. Rails assumes you can make every resource
 you expose into either a list or an item.
-Root URI is http://localhost:3000/v1. When it says /users, the ful URI is 
+Root URI is http://localhost:3000/v1. When it says /users, the ful URI is
 http://localhost:3000/v1/users.
 
 9) Users controller:
-Class called UserController exposes a list of users at URI /users. It also 
-exposes a resource for every user on the system at a URI that also incorporates 
-the user ID in the database (example users/52). Resources expose a subset of the 
-HTTP's uniform interface which is defined in the superclass of all controller 
+Class called UserController exposes a list of users at URI /users. It also
+exposes a resource for every user on the system at a URI that also incorporates
+the user ID in the database (example users/52). Resources expose a subset of the
+HTTP's uniform interface which is defined in the superclass of all controller
 classes.
-To create new users, use UsersController#create. Don't want to let users get the 
-list of all users. /users/52 is ugly, implement the full username. Implement 
+To create new users, use UsersController#create. Don't want to let users get the
+list of all users. /users/52 is ugly, implement the full username. Implement
 POST, GET, PUT and DELETE.
 
 10) Bookmarks controller:
-Base URI is /users/{username}/bookmarks. Expose a bookmark as a MD5 hash 
+Base URI is /users/{username}/bookmarks. Expose a bookmark as a MD5 hash
 (/v1/users/leonardr/bookmarks/55020a5384313579a5f11e75c1818b89).
 Create bookmarks by sending POST to its own bookmark list resource.
 BookmarksController implements: index, create, show, update and delete.
 
 11) User tags controller:
-Base URI is /users/{username}/tags. 
+Base URI is /users/{username}/tags.
 
 STOPPED AT PAGE 177
 12) Calendar Controller:
@@ -1025,12 +1025,12 @@ STOPPED AT PAGE 177
 14) Bundles Controller:
 
 
-On page 179 there is a large table detailing the operations and HTTP interface 
+On page 179 there is a large table detailing the operations and HTTP interface
 on the service.
 
 15) Implementation: The routes.rb File:
 Implement controllers as Ruby classes and map URI's to classes using routes.rb.
-There are six controller classes: UsersController, BookmarksController, 
+There are six controller classes: UsersController, BookmarksController,
 TagsController, CalendarController, RecentController, and UrisController.
 
 # service/config/routes.rb
@@ -1071,8 +1071,7 @@ end
 21) Heart of the application:
 
 A) Controller Code:
-First, define a base class ApplicationController, then define the other six 
+First, define a base class ApplicationController, then define the other six
 controllers.
 
 STOPPED AT 188
-

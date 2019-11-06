@@ -2,9 +2,12 @@
 
 ### Install
 
+Note: cannot be installed on Windows
+
 You will need:  
 * Java 8 (8u92+) [must be Java 8]  
-* Linux, Mac OS X, or other Unix-like OS [Druid cannot be installed on Windows]  
+* Linux, Mac OS X, or other Unix-like OS
+
 
 For a single-server micro-quickstart you will need:  
 * 4 CPUs  
@@ -25,8 +28,8 @@ $: bin/start-micro-quickstart
 # Note: visit http://localhost:8888  
 ```
 
-Cluster metadata and segments are at: /path/to/druid/var  
-Logs are at: /path/to/druid/var/sv
+Cluster metadata and segments are at: `/path/to/druid/var`  
+Logs are at: `/path/to/druid/var/sv`
 
 ### [Loading a file](https://druid.apache.org/docs/latest/tutorials/tutorial-batch.html)
 

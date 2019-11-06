@@ -85,7 +85,6 @@ When testing don't be afraid to put each command in its own layer.
 Don't optimize too early! You can always reduce the image size later.  
 For production, merge all package update and install layers into one.  
 
-:
 ```
 RUN wget -O - http://example.com/big.tar.xz | tar -xJC /usr/src/things  # download and untar
 ```

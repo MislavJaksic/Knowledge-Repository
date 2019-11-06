@@ -2,6 +2,18 @@
 
 The Knowledge Repository is a collection of notes, references, book summaries and examples. Each piece of knowledge has a title and a source.  
 
+### The Problem
+
+The more I learn the more I forget.  
+To avoid forgetting, I have to revise.  
+The more knowledge I have the more time I'll spend revising instead acquiring new knowledge.  
+If I spend more time revising then learning, I will fall behind.  
+
+### The Solution
+
+To combat this, I've created a way to store knowledge outside my body: the Knowledge Repository.  
+In it I can store what I know and how I was able to acquiring this knowledge in the first place.  
+
 ### Contents
 
 * [Conventions](Conventions)
@@ -44,9 +56,10 @@ The Knowledge Repository is a collection of notes, references, book summaries an
         * VirtualMachine
             * [OpenStack](Technology/DevOps/VirtualMachine/OpenStack)
             * [VirtualBox](Technology/DevOps/VirtualMachine/VirtualBox)
-            * [VMWare](Technology/DevOps/VirtualMachine/VMWare)
     * Editor
         * [Atom](Technology/Editor/Atom)
+    * ERP
+        * [SAP](https://github.com/MislavJaksic/SAP-ABAP-Development)
     * IDE
         * [CodeBlocks](Technology/IDE/CodeBlocks)
         * [Eclipse](Technology/IDE/Eclipse)
@@ -60,6 +73,7 @@ The Knowledge Repository is a collection of notes, references, book summaries an
     * Software
         * BuildTool
             * [Bazel](Technology/Software/BuildTool/Bazel)
+            * [Gradle](https://github.com/MislavJaksic/Gradle-Tutorial)
             * [Maven](Technology/Software/BuildTool/Maven)
         * CodeQuality
             * [CleanCode](Technology/Software/CodeQuality/CleanCode)
@@ -67,49 +81,46 @@ The Knowledge Repository is a collection of notes, references, book summaries an
         * DataScience
             * [ComputerVision](Technology/Software/DataScience/ComputerVision)
         * DesignPattern
+            * [DesignPatterns](https://github.com/MislavJaksic/Design-Patterns)
             * [MicroserviceGuide](Technology/Software/DesignPattern/MicroserviceGuide)
         * ProgrammingLanguage
-            * [ABAP](Technology/Software/ProgrammingLanguage/ABAP)
+            * [ABAP](https://github.com/MislavJaksic/SAP-ABAP-Development/tree/master/ABAP)
             * [C++](Technology/Software/ProgrammingLanguage/C++)
             * [Elm](Technology/Software/ProgrammingLanguage/Elm)
             * [Haskell](Technology/Software/ProgrammingLanguage/Haskell)
             * [Java](Technology/Software/ProgrammingLanguage/Java)
+                * [Spring](https://github.com/MislavJaksic/Spring-Guides-Tutorials)
             * [JavaScript](Technology/Software/ProgrammingLanguage/JavaScript)
             * [Lisp](Technology/Software/ProgrammingLanguage/Lisp)
             * [Python3.x](Technology/Software/ProgrammingLanguage/Python3.x)
     * Streaming
+        * [ApacheKafka](https://github.com/MislavJaksic/Kafka-In-Theory-And-Practice)
         * [ApacheSpark](Technology/Streaming/ApacheSpark)
     * Utility
+        * [CollageLabs](https://github.com/MislavJaksic/College-Labs)
         * [HomeNetworking](Technology/Utility/HomeNetworking)
+        * [Latex](https://github.com/MislavJaksic/Latex-Overleaf)
         * PackageManager
             * [Chocolatey](Technology/Utility/PackageManager/Chocolatey)
             * [Scoop](Technology/Utility/PackageManager/Scoop)
+        * [Practise](https://github.com/MislavJaksic/Practise)
     * Video
+        * [Asciinema](Technology/Video/Asciinema)
         * [OBS](Technology/Video/OBS)
         * [OpenShot](Technology/Video/OpenShot)
     * Visualize
         * [Grafana](Technology/Visualize/Grafana)
     * Web
         * API
+            * [GraphQL](https://github.com/MislavJaksic/GraphQL-Tutorial)
             * [Postman](Technology/Web/API/Postman)
             * REST
                 * [RESTFulWebServices](Technology/Web/API/REST/RESTFulWebServices)
         * Framework
+            * [Flask](https://github.com/MislavJaksic/Flask-Tutorial)
             * [RubyOnRails](Technology/Web/Framework/RubyOnRails)
         * StaticSiteGenerator
             * [Jekyll](Technology/Web/StaticSiteGenerator/Jekyll)
-
-### The Problem
-
-The more I learn the more I forget.  
-To avoid forgetting, I have to revise.  
-The more knowledge I have the more time I'll spend revising instead acquiring new knowledge.  
-If I spend more time revising then learning, I will fall behind.  
-
-### The Solution
-
-To combat this, I've created a way to store knowledge outside my body: the Knowledge Repository.  
-In it I can store what I know and how I was able to acquiring this  knowledge in the first place.  
 
 ### Contact
 

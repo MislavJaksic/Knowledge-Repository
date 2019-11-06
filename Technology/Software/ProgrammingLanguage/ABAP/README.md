@@ -1,3 +1,3 @@
 ## ABAP
 
-ABAP is explained in the [SAP-ABAP-Development repository](https://github.com/MislavJaksic/SAP-ABAP-Development/tree/master/ABAP).
+Extracted to an external [repository](https://github.com/MislavJaksic/SAP-ABAP-Development/tree/master/ABAP).

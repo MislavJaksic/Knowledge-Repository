@@ -11,3 +11,5 @@ It balances speed, security and verbosity.
 * LibrariesFrameworks: libraries and tools
 
 * Logging:
+
+* Spring: a popular framework

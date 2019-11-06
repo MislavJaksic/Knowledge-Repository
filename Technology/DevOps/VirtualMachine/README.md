@@ -1,17 +1,18 @@
 ## Virtual machines
 
-VM is an isolated guest operating system running on a host operating system. VMs are isolated from one another and from the host OS.  
+VM is an isolated guest operating system running on a host operating system.  
+VMs are isolated from one another and from the host OS.  
 
 VMs can be easily destroyed and rebuilt which means that making mistakes in a VM is cheap.  
 VMs preserve OS settings, making deployment easier.  
 
 ### Benefits of using a virtual machine
 
-Increases hardware utilisation.  
-Allows the installation of a different OS on an existing OS.  
-Bundles OS configuration and programs so they can be transported.  
-Makes catastrophic errors that would normally crash an OS very easy to repair.  
-Emulators can even run 64-bit instructions on 32-bit hardware.  
+* increases hardware utilisation.
+* allows the installation of a different OS on an existing OS
+* bundles OS configuration and programs so they can be transported
+* makes catastrophic errors that would normally crash an OS very easy to repair
+* emulators can even run 64-bit instructions on 32-bit hardware
 
 ### Virtualisation software
 

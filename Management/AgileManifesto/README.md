@@ -1,10 +1,16 @@
 ## [Agile Manifesto](https://agilemanifesto.org/)
 
+[Elucidation](http://www.ambysoft.com/essays/agileManifesto.html)
+
 ```
-Individuals and interactions over processes and tools  
-Working software             over comprehensive documentation  
-Customer collaboration       over contract negotiation  
-Responding to change         over following a plan  
+Individuals and interactions > processes and tools
+* It is more important to have competent people working together effectively
+Working software             > comprehensive documentation
+* Development is about creating software, not documentation
+Customer collaboration       > contract negotiation
+* A contract is no substitute for working closely with customers to discover what they need
+Responding to change         > following a plan
+* Accommodate changes in technology or the environment
 ```
 
 Principles:

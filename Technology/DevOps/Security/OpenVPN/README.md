@@ -17,17 +17,6 @@ $: apt-get upgrade
 $: sudo apt-get install build-essential
 ```
 
-...or if you are feeling adventurous:  
-```
--> Download openvpn-x.y.z.tar.gz
-
-$: tar xfz openvpn-x.y.z.tar.gz
-$: cd openvpn-x.y.z
-$: ./configure
-$: make
-$: make install
-```
-
 ### Running
 
 #### Windows
@@ -95,7 +84,7 @@ mute 10
 
 Double click the file or execute:
 ```
-openvpn --config File-Name.ovpn
+$: openvpn --config File-Name.ovpn
 ```
 
 ##### [Windows Service](https://openvpn.net/community-resources/running-openvpn-as-a-windows-service/)

@@ -1,6 +1,6 @@
-## "Clean code" from Clean Code
+## Clean Code
 
-Clean code is written by Robert C. Martin.  
+Clean Code is written by Robert C. Martin.  
 It is code that can be easily read and understood by programmers.  
 Clean code is easier to maintain.  
 

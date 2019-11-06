@@ -5,8 +5,19 @@ import sys
 output_file = "Contents.md"
 init_dir = "E:/GreatRepository/Publishing/GitHubRepositories/Knowledge-Repository"
 init_dir_offset = 5
-semiterminal_dir = ["Linux"]
-terminal_dir = ["Jekyll", "RubyOnRails", "RESTFulWebServices", "Postman", "Grafana", "OpenShot", "OBS", "Scoop", "Chocolatey", "HomeNetworking", "ApacheSpark", "Python3.x", "Lisp", "JavaScript", "Java", "Haskell", "Elm", "C++", "ABAP", "MicroserviceGuide", "ComputerVision", "CodeComplete", "CleanCode", "Maven", "Bazel", "Ubuntu", "ShellScripting", "MSYS2", "Cygwin", "IntelliJIDEA", "Eclipse", "CodeBlocks", "Atom", "VMWare", "VirtualBox", "OpenStack", "GitLab", "GitHub", "Git", "Nginx", "SSH", "Putty", "OpenVPN", "Prometheus", "Portainer", "Kubernetes", "Helm", "Docker", "Ambassador", "Jenkins", "SQLite", "Redis", "PostgreSQL", "MongoDB", "Graphite", "ApacheHive", "ApacheHadoop", "ApacheDruid", "LeadershipTheoryAndPractice", "Kanban", "AgileManifesto", "Conventions"]
+external_repo = {"ApacheKafka": "https://github.com/MislavJaksic/Kafka-In-Theory-And-Practice",
+                 "ABAP": "https://github.com/MislavJaksic/SAP-ABAP-Development/tree/master/ABAP",
+                 "Gradle": "https://github.com/MislavJaksic/Gradle-Tutorial",
+                 "GraphQL": "https://github.com/MislavJaksic/GraphQL-Tutorial",
+                 "Flask": "https://github.com/MislavJaksic/Flask-Tutorial",
+                 "Latex": "https://github.com/MislavJaksic/Latex-Overleaf",
+                 "DesignPatterns": "https://github.com/MislavJaksic/Design-Patterns",
+                 "Spring": "https://github.com/MislavJaksic/Spring-Guides-Tutorials",
+                 "SAP": "https://github.com/MislavJaksic/SAP-ABAP-Development",
+                 "CollageLabs": "https://github.com/MislavJaksic/College-Labs",
+                 "Practise": "https://github.com/MislavJaksic/Practise"}
+semiterminal_dir = ["Linux", "Java"]
+terminal_dir = ["Jekyll", "Flask", "RubyOnRails", "RESTFulWebServices", "GraphQL", "Postman", "Grafana", "OpenShot", "OBS", "Practise", "Asciinema", "Scoop", "Chocolatey", "Latex", "HomeNetworking", "CollageLabs", "ApacheSpark", "ApacheKafka", "Python3.x", "Lisp", "JavaScript", "Spring", "Haskell", "Elm", "C++", "ABAP", "MicroserviceGuide", "DesignPatterns", "ComputerVision", "CodeComplete", "CleanCode", "Maven", "Gradle", "Bazel", "Ubuntu", "ShellScripting", "MSYS2", "Cygwin", "IntelliJIDEA", "Eclipse", "CodeBlocks", "SAP", "Atom", "VMWare", "VirtualBox", "OpenStack", "GitLab", "GitHub", "Git", "Nginx", "SSH", "Putty", "OpenVPN", "Prometheus", "Portainer", "Kubernetes", "Helm", "Docker", "Ambassador", "Jenkins", "SQLite", "Redis", "PostgreSQL", "MongoDB", "Graphite", "ApacheHive", "ApacheHadoop", "ApacheDruid", "LeadershipTheoryAndPractice", "Kanban", "AgileManifesto", "Conventions"]
 
 
 def main(args):
@@ -50,7 +61,10 @@ def write_absolute_dir_to_file(dir_name, file):
     whitespace_offset = "    " * (offset - 1)
 
     if (dir_name in terminal_dir) or (dir_name in semiterminal_dir):
-        link = "[" + dir_name + "]" + "(" + relative_child_dir + ")"
+        if dir_name in external_repo:
+            link = "[" + dir_name + "]" + "(" + external_repo.get(dir_name) + ")"
+        else:
+            link = "[" + dir_name + "]" + "(" + relative_child_dir + ")"
         file.write(whitespace_offset + "* " + link)
     else:
         file.write(whitespace_offset + "* " + dir_name)

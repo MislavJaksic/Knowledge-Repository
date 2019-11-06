@@ -1,21 +1,23 @@
 ## [Prometheus](https://prometheus.io/)
 
 Prometheus is a monitoring and alerting toolkit.  
-Prometheus scrapes targets for metrics, stores them in a time series database and allows graphing tools to consume them.  
+Prometheus:
+* scrapes targets for metrics
+* stores metrics in a time series database
+* has graphing tools to consume metrics
 
 ### [First steps](https://prometheus.io/docs/introduction/first_steps/)
 
 Collects metrics from HTTP endpoints on targets.  
 
-Install by executing:
 ```
 $: tar xvfz prometheus-*.tar.gz
 $: cd prometheus-*
 ```
 
-Configure it using YAML, "prometheus.yml":
 ```
-global: # -> 
+# Note: see prometheus.yml
+global: # ->
   scrape_interval:     15s # -> scraping frequency
   evaluation_interval: 15s # -> rule eval frequency
 #   external_labels:
@@ -29,23 +31,17 @@ scrape_configs: # -> monitoring configs
 #     scrape_interval: 5s -> override global scraping frequency
     static_configs:
       - targets: ['localhost:9090'] # -> scrapes from "http://localhost:9090/metrics"
-#         labels: # -> groups targets 
+#         labels: # -> groups targets
 #           group: 'production'
 ```
 
-Run Prometheus by executing:  
 ```
-./prometheus --config.file=prometheus.yml
-```
-
-View Prometheus HTTP endpoint which exposes metrics by visiting:  
-```
-http://localhost:9090/metrics
+$: ./prometheus --config.file=prometheus.yml  # start Prometheus
+# Note: visit http://localhost:9090/metrics
 ```
 
-View metrics using the Prometheus' expression browser:  
 ```
-http://localhost:9090/graph
+# Note: visit http://localhost:9090/graph
 
 Filter query:  promhttp_metric_handler_requests_total{code="200"}
 Count query:   count(promhttp_metric_handler_requests_total)
@@ -56,20 +52,20 @@ You should explore other metric exporters.
 
 ### [Getting Started](https://prometheus.io/docs/prometheus/latest/getting_started/)
 
-Start Prometheus by executing:  
 ```
-./prometheus --config.file=prometheus.yml
+$: ./prometheus --config.file=prometheus.yml  # start Prometheus
+# Note: visit http://localhost:9090/metrics
 ```
 
-Instead of ad hoc querying you can create a rule file "prometheus.rules.yml":
 ```
+# Note: see prometheus.rules.yml
 groups:
 - name: example
   rules:
   - record: job_service:rpc_durations_seconds_count:avg_rate5m
     expr: avg(rate(rpc_durations_seconds_count[5m])) by (job, service)
 ```
-Don't forget to add the rule to "prometheus.yml".  
+Don't forget to add the rule to `prometheus.yml`.  
 
 ### [Configuration](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
 

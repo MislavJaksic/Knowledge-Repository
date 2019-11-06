@@ -3,6 +3,8 @@
 Apache Spark performs computations in a computer cluster. It has a rich API including Spark SQL, MLlib,
 GraphX and Spark Streaming.
 
+TODO
+
 ### [Quick start](https://spark.apache.org/docs/latest/quick-start.html)
 
 #### Interactive Analysis with the Spark Shell
@@ -22,7 +24,7 @@ public class SimpleApp {
 
     long numAs = file_data.filter(s -> s.contains("a")).count(); //filter with predicate function then count
     long numBs = file_data.filter(s -> s.contains("b")).count();
-    
+
     spark.stop();
   }
 }
@@ -67,7 +69,7 @@ The list of transformations is quite big, but some of the most commo nones are:
 * distinct - return a dataset without any duplicates
 
 * groupByKey - when given (K, V) pairs return (K, Iterable<V>) pairs
-* reduceByKey - 
+* reduceByKey -
 * aggreateByKey
 * sortByKey
 * join
@@ -147,7 +149,7 @@ spark_session.sql(...);
 
 The following are just some of the DataFrame operations:
 ```
-data_frame.select("name"); //-> select only the "name" column 
+data_frame.select("name"); //-> select only the "name" column
 data_frame.select(col("name"), col("age").plus(1)); //-> select name and age, but increment age by 1
 data_frame.filter(col("age").gt(21)); //-> select people older then 21
 data_frame.groupBy("age").count(); //-> count people by age
@@ -197,4 +199,3 @@ Find out which version Hive and Spark are using with "find / -iname...".
 Create a SparkSession; set .master().config("spark.sql.warehouse.dir", _value).config("hive.metastore.uris", _value).enableHiveSupport().
 
 #### [Hive as a data sink](http://spark.apache.org/docs/latest/sql-programming-guide.html#saving-to-persistent-tables)
-

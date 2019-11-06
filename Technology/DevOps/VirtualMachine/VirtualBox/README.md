@@ -59,12 +59,12 @@ Port forwarding is telling VirtualBox to which host ports it should listen.
 When the host receives a packet, they are then resent to the VM on the specified port.  
 You can never have a service on a VM and on a host listen to the same port.  
 
-To configure port forwarding click on "Settings", "Network", choose a NAT adapter, expand the options with "Advanced" and then click "Port forwarding".  
+To configure port forwarding click on Settings -> Network -> choose a NAT adapter -> expand the options with Advanced -> click Port forwarding
 
 | Examples | Protocol | Host IP | Host Port | Guest IP | Guest IP |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Guest ssh | tcp | - | 2222 | - | 22 |
 | Interface | tcp | 127.0.0.1 | 2222 | - | 22 |
 
-"Guest ssh" rule means: forward all TCP traffic arriving on any host interface via port 2222 to port 22 in the guest.  
-"Interface" rule means: forward all TCP traffic arriving on the localhost interface (127.0.0.1) via port 2222 to port 22 in the guest.  
+`Guest SSH`: forward all TCP traffic arriving on any host interface via port 2222 to port 22 in the guest.  
+`Interface`: forward all TCP traffic arriving on the localhost interface (127.0.0.1) via port 2222 to port 22 in the guest.  

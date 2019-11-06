@@ -138,10 +138,10 @@ $: sbin/stop-dfs.sh  # stop the DFS deamons
 ### [Cluster setup](http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html)
 
 The following site configurations are of great import:
-* etc/hadoop/core-site.xml
-* etc/hadoop/hdfs-site.xml
-* etc/hadoop/yarn-site.xml
-* etc/hadoop/mapred-site.xml
+* `etc/hadoop/core-site.xml`
+* `etc/hadoop/hdfs-site.xml`
+* `etc/hadoop/yarn-site.xml`
+* `etc/hadoop/mapred-site.xml`
 
 TODO: it continues by talking in greater detail about the configuration.
 
