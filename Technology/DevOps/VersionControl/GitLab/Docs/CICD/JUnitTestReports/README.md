@@ -1,7 +1,7 @@
 ## [JUnit test reports](https://docs.gitlab.com/ee/ci/junit_test_reports.html)
 
 If the test fails the user gets notified and has to check the output logs.  
-JUnit test reports display the report on the merge request.  
+JUnit test reports are displayed on the merge request.  
 
 ### How it works
 
@@ -85,7 +85,7 @@ java:
 #### Java Maven (Surefire/Failsafe)
 
 ```
-image: ?
+image: maven:3.6.2-jdk-8
 
 java:
   stage: test

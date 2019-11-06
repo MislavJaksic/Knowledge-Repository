@@ -10,12 +10,12 @@ GitLab is a Git repository which covers the entire DevOps Lifecycle.
     2) Label the task with your "Doing::Your-Name" label.
     3) Assign it to yourself.
 3) Create a "New branch and merge request" with "dev" as its source by clicking on the "V" arrow.
-4) Click "Check out branch" and execute "Step 1: Fetch and check out..." in your computer terminal.
+4) Click "Check out branch" and execute "Step 1: Fetch and check out..." in your computer terminal. You may need to clone the git repository first.
     1) Construct software and put knowledge to paper.
-    2) In issues: ask questions, find microtasks (up to 15min tasks) and bugs. Solve them.
+    2) Open and comment on issues: ask questions, find 15min sub-tasks and bugs. Solve them.
     3) Stage all your work with "git add .".
-    4) Commit your work with "git commit -m 'Example commit message'".
-    5) Push it to a remote branch with "git push".
+    4) Commit your work with "git commit -m 'Example-Commit-Message'".
+    5) Push commits to a remote branch with "git push".
 5) Remove the Work In Progress (WIP) status of a merge request.
 6) Complete the merge request by pressing "Merge".
 7) Repeat appropriate steps until the task and milestone are satisfied.
@@ -30,17 +30,11 @@ GitLab workflow ties together GitLab and Git:
 
 ### [Create and add your SSH public key](https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html)
 
-To use Git over SSH you need to create and add your SSH PUBLIC key.  
+To use Git over SSH you need to:
+*  [generate and add an SSH key](Docs/User/General/SSH)
+* setup Git over SSH
 
-```
-# Note: make sure to setup your Git identity
-$: git config --global user.name "User-Name"
-$: git config --global user.email User-Name@Email-Domain
-```
-
-[Instructions](Docs/User/General/SSH)
-
-Check that you are using Git over SSH:
+Check if you are using Git over SSH:
 ```
 $: git remote -v  # ->
   # origin	git@_domain:path/to/file.git (fetch)
@@ -87,4 +81,9 @@ TODO: a gitlab-ci that covers "all" (most) functionalities: when:manual, when:de
 
 ### Permissions
 
-TODO (see nothing, see docs/wiki, see everything)
+If a GitLab project is private then:
+* the public only see public GitLab pages
+* Guest permission users:
+    * DO see: activity, issues, wiki pages
+    * DON'T see: code, branches, commits, confidential issues, merge requests
+* higher permission users can see almost everything
