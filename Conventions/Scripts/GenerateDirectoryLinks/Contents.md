@@ -56,7 +56,7 @@
         * BuildTool
             * [Bazel](Technology/Software/BuildTool/Bazel)
             * [Gradle](https://github.com/MislavJaksic/Gradle-Tutorial)
-            * [Maven](Technology/Software/BuildTool/Maven)
+            * [Maven](https://github.com/MislavJaksic/Maven-Tutorial)
         * CodeQuality
             * [CleanCode](Technology/Software/CodeQuality/CleanCode)
             * [CodeComplete](Technology/Software/CodeQuality/CodeComplete)

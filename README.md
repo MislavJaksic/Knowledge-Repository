@@ -6,8 +6,8 @@ The Knowledge Repository is a collection of notes, references, book summaries an
 
 The more I learn the more I forget.  
 To avoid forgetting, I have to revise.  
-The more knowledge I have the more time I'll spend revising instead acquiring new knowledge.  
-If I spend more time revising then learning, I will fall behind.  
+The more knowledge I have the more time I have to spend revising instead acquiring new knowledge.  
+At some point I will spend all my time revising.  
 
 ### The Solution
 
@@ -74,7 +74,7 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
         * BuildTool
             * [Bazel](Technology/Software/BuildTool/Bazel)
             * [Gradle](https://github.com/MislavJaksic/Gradle-Tutorial)
-            * [Maven](Technology/Software/BuildTool/Maven)
+            * [Maven](https://github.com/MislavJaksic/Maven-Tutorial)
         * CodeQuality
             * [CleanCode](Technology/Software/CodeQuality/CleanCode)
             * [CodeComplete](Technology/Software/CodeQuality/CodeComplete)

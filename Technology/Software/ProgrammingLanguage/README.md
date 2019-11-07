@@ -1,8 +1,8 @@
 ## Programming languages
 
-Each languages has its own folder which is further subdevided by topic. Topics range from how to setup
+Each languages has its own folder which is further subdivided by topic. Topics range from how to setup
 a language to constructs such as lambda expressions. Each folder has a simple program designed to teach the
-reader and optinally a short README.
+reader and optionally a short README.
 
 ### Program structure
 

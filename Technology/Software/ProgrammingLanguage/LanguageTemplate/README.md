@@ -16,6 +16,8 @@ Each folder has a program and maybe a README.
 
 * InputOutput: files, command line
 
+* Logging: writing events to a file
+
 * ObjectOriented: classes, objects, methods, fields, interfaces, keywords, inheritance, composition
 
 * ProjectManagement: project foundation, structure and organisation

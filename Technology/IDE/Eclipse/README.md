@@ -7,3 +7,9 @@ TODO
 ### Installation
 
 Installing Eclipse is quite easy.  
+
+### Generate JUnit test
+
+```
+Select class -> File -> New... -> JUnit Test Case -> ...
+```
