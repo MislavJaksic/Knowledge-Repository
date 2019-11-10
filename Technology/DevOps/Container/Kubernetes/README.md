@@ -2,6 +2,20 @@
 
 Kubernetes is a container orchestra conductor.
 
+### Kubernetes Dashboard
+
+#### Setup browser certificate
+
+[Instructions](Other/RemoteKubernetesDashboard)
+
+### Get Bearer Token
+
+[Instructions](Other/DashboardDocs/UserGuide/AccessControl)
+
+
+
+TODO
+
 ### [Glossary](https://kubernetes.io/docs/reference/glossary/?fundamental=true)
 
 Kubernetes uses a lot of terms. You can look them up here.  
@@ -14,7 +28,7 @@ Steps to produce a result.
 
 How to accomplish a goal larger than a task.  
 
-<!-- ### [Install a single-node Kubernetes](https://kubernetes.io/docs/setup/minikube/)
+### [Install a single-node Kubernetes](https://kubernetes.io/docs/setup/minikube/)
 
 This setup will create a single node inside a VM.
 
@@ -25,7 +39,7 @@ Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) using
 Install [minikube](https://github.com/kubernetes/minikube/releases).
 * curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.28.2/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 
-After install all ofhe required programs you can continue with the tutorial.
+After install all of the required programs you can continue with the tutorial.
 
 ### [Running Kubernetes locally](https://kubernetes.io/docs/setup/minikube/#managing-your-cluster)
 

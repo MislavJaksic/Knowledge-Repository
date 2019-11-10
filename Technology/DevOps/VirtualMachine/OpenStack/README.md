@@ -1,18 +1,22 @@
 ## [OpenStack](https://www.openstack.org/)
 
-### [Installation and Configuration]()
+TODO
+
+### Configure access and security for instances
+
+Secure OpenStack with a private-public key pair and connect with SSH.  
+
+[Instructions](Docs/TrainRelease/DashboardHorizon/UserDocs/ConfigureAccessAndSecurity)
+
+
 
 TODO
 
-### Operations
-
-After logging in with an account you can perform different operations.  
-
-#### Create an Image Instance
+### Create an Image Instance
 
 Instances are Virtual Machines.  
 
-Project->Compute->Images->Choose a Base Image:
+Project -> Compute -> Images -> Choose a Base Image:  
 ```
 Details - fill in Instance Name
 Source - select Create New Volume: No
@@ -21,7 +25,7 @@ Networks - pick MGMT first, DEV second
 Key Pairs - choose a key for authentication
 ```
 
-#### Connect to an Image Instance
+### Connect to an Image Instance
 
 Connect to a remote computer:  
 * using [Putty](../../Security/Putty)
@@ -30,7 +34,7 @@ Connect to a remote computer:
 Connect using MGMT network IP. DEV network is for intra cluster communication.  
 You may need to provide a key for authentication.  
 
-#### Transfer file to and from an Image Instance
+### Transfer file to and from an Image Instance
 
 If logged in to the <source> system:  
 ```

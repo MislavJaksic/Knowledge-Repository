@@ -117,7 +117,7 @@ $: ip route ->
 $: ss ->
 $: ip -s ->
 
-$: scp [-P PORT] /source/path/File-Name USERNAME@HOST/IP-PORT:/destination/path
+$: scp [-P _port] /source/path/File-Name _username@_ip:/destination/path
 ```
 
 ### Setting PATH and DNS
