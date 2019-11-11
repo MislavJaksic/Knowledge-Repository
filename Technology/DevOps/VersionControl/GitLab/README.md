@@ -2,6 +2,14 @@
 
 GitLab is a Git repository which covers the entire DevOps Lifecycle.  
 
+### Setup a new project
+
+* Create a new `dev` branch from which `feature` branches will fork
+* Make `dev` a protected branch to prevent improper commits and merges
+* Make `dev` the `Default branch` instead of `master`
+
+* Create `Milestones` and `Labels` (`ToDo`, `Doing`)
+
 ### GitLab Workflow
 
 1) Review the milestones.
