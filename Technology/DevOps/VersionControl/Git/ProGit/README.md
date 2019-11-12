@@ -1,6 +1,6 @@
-### [ProGit](https://git-scm.com/book/en/v2)
+## [ProGit](https://git-scm.com/book/en/v2)
 
-#### Getting started
+### Getting started
 
 Git doesn't use delta based version control, that is, it doesn't track file changes.  
 Instead, Git takes a snapshot of every file every time you make a commit and references each file.  
@@ -17,11 +17,11 @@ Git is made up of three parts:
 * working tree - local files  
 * staging area / index - what will be committed next to the Git repository  
 
-### Installing Command Line Git
+## Installing Command Line Git
 
 Covered in another topic.  
 
-#### Git Basics
+### Git Basics
 
 Initialize a Git repository in a folder by executing:  
 ```
@@ -82,7 +82,7 @@ $: git reset HEAD File-Name.any  -> unstage file
 $: git checkout -- File-Name.any -> discard local changes
 ```
 
-#### Working with Remotes
+### Working with Remotes
 
 List remote repositories by executing:  
 ```
@@ -105,7 +105,7 @@ Push commits by executing:
 $: git push Repository-Name Branch-Name
 ```
 
-#### Git Branching
+### Git Branching
 
 TODO
 
@@ -114,7 +114,7 @@ TODO
 ???git merge BRANCH_NAME???
 ???git rebase BRANCH_NAME???
 
-### GitIgnore
+## GitIgnore
 
 * [GitHub's .gitignore collection](https://github.com/github/gitignore)
 
@@ -128,7 +128,7 @@ $: git commit -m "Applied .gitignore"
 $: git push Repository-Name Branch-Name
 ```
 
-#### Git Cheatsheet
+### Git Cheatsheet
 
 ```
 $: git init -> init local Git repository, add README.md and .gitignore
@@ -153,4 +153,22 @@ $: git pull Repository-Name -> get files you don't have and merge them
 $: git push Repository-Name Branch-Name -> set commited files into a Git repositroy
 
 $: git log [-p / --stat / --graph] -> and many more flags to inspect the log
+```
+
+### Rewriting History
+
+TODO
+
+#### The Nuclear Option: filter-branch
+
+Rewrite many commits.  
+Use cases:
+* uploaded a large binary file
+* change your email address
+* uploaded a secret
+
+```
+$: git filter-branch --tree-filter "rm -f File-Name" HEAD
+
+$: git filter-branch --tree-filter "rm -rf Directory-Name" HEAD
 ```
