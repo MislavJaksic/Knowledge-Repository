@@ -1,8 +1,8 @@
 ## [Testing made sweet with a Mockito](https://www.youtube.com/watch?v=DJDBl0vURD4)
 
-Test should be fast.  
-Unit tests should test only one thing.  
-Tests should either always fail or succeed.  
+Tests should be fast.  
+Unit tests test only one thing.  
+Tests either always fail or succeed.  
 
 Isolate classes to increase reliability.  
 
@@ -10,8 +10,8 @@ Isolate classes to increase reliability.
 Test double: doppelganger; pretends to be the real class
 
 Test double types:
-    Mock: generated; does nothing; verify behaviour
-    Stub: hardcoded; returns responses; state verification
+  Mock: generated; does nothing; verify behaviour
+  Stub: hardcoded; returns responses; state verification
 ```
 
 ### Mock
@@ -48,7 +48,8 @@ _paramX:
   # start
   # isNotNull
 ```
-Can test order of actions.  
+
+You can test the order in which actions are executed.  
 
 ### Stubbing
 
@@ -92,7 +93,7 @@ Isolate untestable code.
 Don't use spies.  
 Don't nest mocks.  
 Setup a testing strategy.  
-Avoid an object creating an object. It is impossible to test.  
+Avoid an object creating an object. It's impossible to test and mock those.  
 ```
 DON'T:
 public User(...) {
