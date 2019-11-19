@@ -30,10 +30,10 @@ spec:
 ```
 
 ```
-$: cat <<EOF >./kustomization.yaml          configMapGenerator:
-configMapGenerator:                 CREATE  - name: ConfigMap-Name
-- name: ConfigMap-Name                ->      files:
-  files:                                      - File-Name
+$: cat <<EOF >./kustomization.yaml           configMapGenerator:
+configMapGenerator:                  CREATE  - name: ConfigMap-Name
+- name: ConfigMap-Name                 ->      files:
+  files:                                       - File-Name
   - File-Name
 EOF
 
@@ -53,17 +53,18 @@ $: kubectl apply -k .
 $: kubectl get -k .
 $: kubectl get configmaps
 
-                                    Name: ConfigMap-Name-ID
-                                    ...
-                                    Annotations: ...: {...,
-                                                       "data":{"_key":"maxmemory 2mb
-                                                                       maxmemory-policy allkeys-lru"},
-$: kubectl describe configmaps  ->  Data               ...
-                                    ====
-                                    _key:
-                                    ----
-                                    maxmemory 2mb
-                                    maxmemory-policy allkeys-lru
+                                                         Name: ConfigMap-Name-ID
+                                                         ...
+                                                         Annotations: ...: {...,
+                                                                            "data":{"_key":"maxmemory 2mb
+                                                                                            maxmemory-policy allkeys-lru"},
+$: kubectl describe configmaps                       ->  Data               ...
+                                                         ====
+                                                         _key:
+                                                         ----
+                                                         maxmemory 2mb
+                                                         maxmemory-policy allkeys-lru
+
 
                                                          apiVersion: v1
                                                          data:

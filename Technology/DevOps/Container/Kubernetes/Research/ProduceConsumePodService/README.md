@@ -1,7 +1,7 @@
 ## Demo
 
-In a single Node a generator Pod sends a message to the filter Pod when the user signals the generator Pod.  
-Both Pods are accessible from the outside.  
+In a single `Node` a generator `Pod` sends a message to the filter `Pod` when the user signals the generator `Pod`.  
+Both `Pod`s are accessible from the outside.  
 
 ### Microservices
 
@@ -78,6 +78,6 @@ spec:                      spec:
 
 ### Scripts
 
-Build, tag and upload with build-tag-upload.sh.  
-Run with kubernetize.sh.  
-Delete with unkubernetize.sh.  
+`build-tag-upload.sh`: build, tag and upload.  
+`kubernetize.sh`: run.  
+`unkubernetize.sh`: delete.  

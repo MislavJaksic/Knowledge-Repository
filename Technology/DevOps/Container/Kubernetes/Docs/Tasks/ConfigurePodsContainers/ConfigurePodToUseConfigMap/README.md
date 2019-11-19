@@ -1,7 +1,7 @@
 ## [Configure a Pod to Use a ConfigMap](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)
 
-ConfigMaps decouple configuration from the image.  
-ConfigMaps are Secrets that don’t contain sensitive information.  
+`ConfigMaps` decouple configuration from the image.  
+`ConfigMaps` are `Secrets` that don’t contain sensitive information.  
 
 ### Create a ConfigMap
 
@@ -109,10 +109,10 @@ spec:
 
 ### Understanding ConfigMaps and Pods
 
-Think of ConfigMaps as Linux's /etc directory.  
+Think of `ConfigMaps` as Linux's `/etc` directory.  
 
 Restrictions:
-* create a ConfigMap before using it
-* invalid envFrom ENV VARS will be skipped
-* ConfigMaps reside in a namespace
-* ConfigMaps cannot be used by pods not found on the API server (pods created with Kubelet's --manifest-url, --config or REST API)
+* create a `ConfigMap` before using it
+* invalid `envFrom` environmental variables will be skipped
+* `ConfigMaps` reside in a namespace
+* `ConfigMaps` cannot be used by pods not found on the API server (pods created with Kubelet's --manifest-url, --config or REST API)

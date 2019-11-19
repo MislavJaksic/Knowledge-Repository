@@ -1,9 +1,9 @@
 ## [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
 
-StatefulSet manages stateful apps (unlike Deployments which manage replicated apps).  
-StatefulSet provides guarantees about the ordering and uniqueness of Pods.  
-A StatefulSet maintains a sticky identity for each of their Pods.  
-StatefulSet Pods are not interchangeable and persist across rescheduling.  
+`StatefulSet` manages stateful apps (unlike Deployments which manage replicated apps).  
+`StatefulSet` provides guarantees about the ordering and uniqueness of `Pod`s.  
+A `StatefulSet` maintains a sticky identity for each of their `Pod`s.  
+`StatefulSet` `Pod`s are not interchangeable and persist across rescheduling.  
 
 ### Using StatefulSets
 
@@ -13,15 +13,15 @@ Useful if an apps requires:
 * ordered deployment and scaling
 * ordered rolling updates
 
-Stable means: will persist across Pod (re)scheduling.  
+Stable means: will persist across `Pod` (re)scheduling.  
 
 ### Limitations
 
-* storage must be provisioned manually or by a Provisioner/StorageClass
-* deleting a StatefulSet will not delete the volumes
-* StatefulSets require a Headless Service for the network identity of the Pods (you have to create this Headless Service)
-* there are no termination guarantees then you delete a StatefulSet
-* may enter into a broken state if using Rolling Updates
+* storage must be provisioned manually or by a `Provisioner`/`StorageClass`
+* deleting a `StatefulSet` will not delete the volumes
+* `StatefulSet`s require a `Headless Service` for the network identity of the `Pod`s (you have to create this Headless Service)
+* there are no termination guarantees then you delete a `StatefulSet`
+* may enter into a broken state if using `Rolling Updates`
 
 ### Components
 
@@ -79,16 +79,16 @@ spec:
 
 ### Pod Identity
 
-Stable means: will persist across Pod (re)scheduling.  
+Stable means: will persist across `Pod` (re)scheduling.  
 
-StatefulSet Pods have a unique identity made of:
+`StatefulSet` `Pod`s have a unique identity made of:
 * an ordinal (think: positive number)
 * a stable network identity
 * a stable storage
 
-Each Pod in a StatefulSet has a hostname $(statefulset name)-$(ordinal).  
-The domain managed by a Headless Service is $(service name).$(namespace).svc.cluster.local (cluster.local is the cluster domain).  
-Each Pod gets a matching DNS subdomain $(podname).$(governing service domain) (governing service is the serviceName field).  
+Each `Pod` in a `StatefulSet` has a hostname $(statefulset name)-$(ordinal).  
+The domain managed by a `Headless Service` is $(service name).$(namespace).svc.cluster.local (cluster.local is the cluster domain).  
+Each `Pod` gets a matching DNS subdomain $(podname).$(governing service domain) (governing service is the serviceName field).  
 
 | Cluster Domain | Service (ns/name) | StatefulSet (ns/name) | StatefulSet Domain              | Pod DNS                                      | Pod Hostname |
 |----------------|:-----------------:|----------------------:|---------------------------------|----------------------------------------------|--------------|
@@ -96,16 +96,16 @@ Each Pod gets a matching DNS subdomain $(podname).$(governing service domain) (g
 | cluster.local  |   default/nginx   |           default/web | nginx.default.svc.cluster.local | web-{0..N-1}.nginx.default.svc.cluster.local | web-{0..N-1} |
 | kube.local     |     foo/nginx     |               foo/web | nginx.foo.svc.kube.local        | web-{0..N-1}.nginx.foo.svc.kube.local        | web-{0..N-1} |
 
-Kubernetes creates one PersistentVolume for each VolumeClaimTemplate.  
+Kubernetes creates one `PersistentVolume` for each `VolumeClaimTemplate`.  
 
-A Pod is given a label, statefulset.kubernetes.io/Pod-Name by the StaefulState controller.  
+A `Pod` is given a label, statefulset.kubernetes.io/Pod-Name by the `StatefulState` controller.  
 
 ### Deployment and Scaling Guarantees
 
-* Pods are created in order
-* Pods are terminated in reverse order
-* before scaling all Pod's predecessors must be Running and Ready
-* before a Pod is terminated all its successors must be shutdown
+* `Pod`s are created in order
+* `Pod`s are terminated in reverse order
+* before scaling all `Pod`'s predecessors must be Running and Ready
+* before a `Pod` is terminated all its successors must be shutdown
 
 DO NOT specify a pod.Spec.TerminationGracePeriodSeconds of 0.  
 

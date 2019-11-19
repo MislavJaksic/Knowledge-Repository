@@ -18,9 +18,9 @@ $: minikube dashboard  # enable dashboard add-on and open proxy in browser
 
 ### Create a Deployment
 
-A Pod is a group of Containers.  
-A Deployment restarts the Pod’s Container if it terminates.  
-Deployments should be used to manage Pods.  
+A `Pod` is a group of `Container`s.  
+A `Deployment` restarts the `Pod`’s Container if it terminates.  
+`Deployment`s should be used to manage `Pod`s.  
 
 ```
 $: kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
@@ -33,8 +33,8 @@ $: kubectl config view  # list cluster, context and user configurations
 
 ### Create a Service
 
-A Pod is only accessible within the cluster.  
-To expose a Pod create a Service.  
+A `Pod` is only accessible within the cluster.  
+To expose a `Pod` create a `Service`.  
 
 ```
 $: kubectl expose deployment hello-node --type=LoadBalancer --port=8080

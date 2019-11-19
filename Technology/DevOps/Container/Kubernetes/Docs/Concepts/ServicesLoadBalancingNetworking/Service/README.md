@@ -4,14 +4,14 @@ TODO
 
 ## Headless Service
 
-Services that don't need load balancing or proxying.  
-Headless services don't have a ClusterIP.  
+`Service`s that don't need load balancing or proxying.  
+`Headless Service`s don't have a `ClusterIP`.  
 
 If a selector:  
-* is defined Endpoints records are defined and the DNS configuration will point to the Pod backing the headless Service  
-* is NOT defined the DNS configures either the CNAME records for ExternalName-type Services or records for any Endpoints that share a name with the Service, for all other types
+* is defined Endpoints records are defined and the DNS configuration will point to the Pod backing the `Headless Service`  
+* is NOT defined the DNS configures either the CNAME records for ExternalName-type `Service`s or records for any Endpoints that share a name with the `Service`, for all other types
 
-Headless services can still interface with other service discovery mechanisms.  
+`Headless Service`s can still interface with other service discovery mechanisms.  
 
 ```
 apiVersion: v1

@@ -1,6 +1,6 @@
 ## [StatefulSet Basics](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/)
 
-StatefulSets are used with stateful apps: ordered or unique Pods with sticky identities.  
+`StatefulSet`s are used with stateful apps: ordered or unique `Pod`s with sticky identities.  
 
 ### Creating a StatefulSet
 
@@ -76,8 +76,8 @@ $: for i in 0 1; do kubectl exec web-$i -- sh -c 'hostname'; done  #-> get stick
   # web-1
 ```
 
-The CNAME of the headless service points to a SRV record, one for each Pod.  
-The SRV records point to A record entries that contain the Pods’ IP addresses.  
+The CNAME of the `Headless Service` points to a SRV record, one for each `Pod`.  
+The SRV records point to A record entries that contain the `Pod`s’ IP addresses.  
 
 ```
 $: kubectl run -i --tty --image busybox:1.28 dns-test --restart=Never --rm  #-> test in-cluster DNS visibility
@@ -93,9 +93,9 @@ $: kubectl run -i --tty --image busybox:1.28 dns-test --restart=Never --rm  #-> 
   #   Address 1: 172.17.0.8 web-1.nginx.default.svc.cluster.local
 ```
 
-To find StatefulSet Pods query the CNAME of the Headless Service like:  
+To find `StatefulSet` `Pod`s query the CNAME of the `Headless Service` like:  
 * nginx.default.svc.cluster.local  
-You can also use the SRV records of the Pods like:  
+You can also use the SRV records of the `Pod`s like:  
 * web-0.nginx.default.svc.cluster.local  
 * web-1.nginx.default.svc.cluster.local  
 
@@ -117,14 +117,14 @@ $: kubectl patch statefulset web --type='json' -p='[{"op": "replace", "path": "/
 $: kubectl rollout status sts/web
 ```
 
-A staged update keeps all Pods in the StatefulSet at the current version while allowing mutations to the .spec.template.  
+A staged update keeps all `Pod`s in the `StatefulSet` at the current version while allowing mutations to the .spec.template.  
 
 ```
 $: kubectl patch statefulset web -p '{"spec":{"updateStrategy":{"type":"RollingUpdate","rollingUpdate":{"partition":3}}}}'
 $: kubectl patch statefulset web --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/image", "value":"k8s.gcr.io/nginx-slim:0.7"}]'
 ```
 
-A StatefulSet Pod in staged update mode is updated only if its ordinal number is greater then the rollingUpdate.partition number.  
+A `StatefulSet` `Pod` in staged update mode is updated only if its ordinal number is greater then the rollingUpdate.partition number.  
 This is called a canary update.  
 
 ```
@@ -139,8 +139,8 @@ $: kubectl patch statefulset web -p '{"spec":{"updateStrategy":{"type":"RollingU
 
 ### Deleting StatefulSets
 
-* Non-Cascading Delete - when the StatefulSet is deleted the Pods are NOT deleted
-* Cascading Delete - when the StatefulSet is deleted the Pods are deleted
+* Non-Cascading Delete - when the `StatefulSet` is deleted the `Pod`s are NOT deleted
+* Cascading Delete - when the `StatefulSet` is deleted the `Pod`s are deleted
 
 ```
 $: kubectl delete statefulset web --cascade=false

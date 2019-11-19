@@ -3,10 +3,10 @@
 ### [Create a Kubernetes cluster](https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/)
 
 Kubernetes cluster has:
-* a Master which coordinates the Kubernetes cluster
-* many Nodes which are VM/physical machines that run applications
+* a `Master` which coordinates the Kubernetes cluster
+* many `Node`s which are VM/physical machines that run applications
 
-Each Node has a Kubelet, an agent that talks between the Master and the Node.  
+Each `Node` has a `Kubelet`, an agent that talks between the `Master` and the `Node`.  
 
 Minikube is a lightweight Kubernetes implementation.  
 
@@ -24,9 +24,9 @@ $: kubectl get nodes  #-> list nodes
 
 ### [Deploy an app](https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/)
 
-Kubectl can create Deployments.  
-Deployment instructs Kubernetes how to create an instances of your application.  
-Deployment Controller continuously monitors created instances.  
+kubectl can create Deployments.  
+`Deployment` instructs Kubernetes how to create an instances of your application.  
+`Deployment Controller` continuously monitors created instances.  
 
 ```
 $: kubectl run kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --port=8080  # DEPRECATED
@@ -39,11 +39,11 @@ $: curl http://localhost:8001/version
 
 ### [Explore your app](https://kubernetes.io/docs/tutorials/kubernetes-basics/explore/explore-intro/)
 
-Deployment creates a Pod on a Node.  
+`Deployment` creates a `Pod` on a `Node`.  
 
-Pod is a group of containers that share a resource.  
-All Pod containers are deployed, scheduled and share context on the same Node.  
-Pods are atomic.  
+`Pod` is a group of containers that share a resource.  
+All `Pod` containers are deployed, scheduled and share context on the same Node.  
+`Pod`s are atomic.  
 Resources are:
 * storage, volumes
 * network, IP
@@ -51,12 +51,12 @@ Resources are:
 
 #### Nodes
 
-Node is a worker and may be a VM or physical machine.  
-Nodes are managed by a Master.  
-Node can run many Pods.  
+`Node` is a worker and may be a VM or physical machine.  
+`Node`s are managed by a `Master`.  
+`Node` can run many `Pod`s.  
 
 Each Node must have:
-* Kubelet, a process for communication, Pod and container management
+* `Kubelet`, a process for communication, `Pod` and container management
 * container runtime such as rkt or Docker
 
 ```
@@ -76,9 +76,9 @@ $: kubectl exec Pod-Name
 
 ### [Expose your app publicly](https://kubernetes.io/docs/tutorials/kubernetes-basics/expose/expose-intro/)
 
-Service defines a logical set of Pods and enables external traffic exposure, load balancing and service discovery.  
-Service is defined using YAML.  
-Service targets a set of Pods using a LabelSelector.  
+`Service` defines a logical set of `Pod`s and enables external traffic exposure, load balancing and service discovery.  
+`Service` is defined using YAML.  
+`Service` targets a set of `Pod`s using a LabelSelector.  
 
 Service is exposed through a type in the Service spec:
 * ClusterIP (default) - Service only reachable from within the cluster
@@ -88,7 +88,7 @@ Service is exposed through a type in the Service spec:
 Note: LoadBalancer is a superset of NodePort is a superset of ClusterIP.  
 Note: you don't have to include selector in the Service spec
 
-Services match a set of Pods using labels and selectors.  
+`Service`s match a set of `Pod`s using labels and selectors.  
 
 Labels are key/value which:
 * designate objects for development, test or production
@@ -110,7 +110,7 @@ $: kubectl delete service -l _label  # Pod still exits but is unreachable from t
 
 ### [Scale up your app](https://kubernetes.io/docs/tutorials/kubernetes-basics/scale/scale-intro/)
 
-Scaling is accomplished by changing the number of Pod replicas in a Deployment.  
+Scaling is accomplished by changing the number of `Pod` replicas in a `Deployment`.  
 
 ```
 $: kubectl scale deployments/Deployment-Name --replicas=4
@@ -118,7 +118,7 @@ $: kubectl scale deployments/Deployment-Name --replicas=4
 
 ### [Update your app](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)
 
-Rolling updates incrementally update Pod instances with new ones.
+Rolling updates incrementally update `Pod` instances with new ones.
 
 Rolling updates allow:
 * container update

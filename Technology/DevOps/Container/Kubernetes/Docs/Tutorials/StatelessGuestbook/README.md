@@ -1,6 +1,5 @@
 ## [Example: Deploying PHP Guestbook application with Redis](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/)
 
-
 ### Setup Redis Master
 
 ```
@@ -152,7 +151,7 @@ $: kubectl get pods  #-> the number of Pods increased
 
 ### Clean up
 
-Don't do it if you canto do the next [tutorial](https://kubernetes.io/docs/tutorials/stateless-application/guestbook-logs-metrics-with-elk/).
+Don't do it if you will do this [tutorial](https://kubernetes.io/docs/tutorials/stateless-application/guestbook-logs-metrics-with-elk/) next.
 
 ```
 $: kubectl delete deployment -l app=redis
