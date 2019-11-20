@@ -2,6 +2,10 @@
 
 Steps to produce a result.  
 
+### Access multiple Kubernetes
+
+[Instructions](AccessAppsInCluster/ConfigureAccessToClusters)
+
 ### Kubernetes Dashboard
 
 [Instructions](AccessAppsInCluster/WebUiDashboard)

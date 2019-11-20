@@ -1,5 +1,9 @@
 ## Other sources of knowledge
 
+### Remote kubectl
+
+[Instructions](RemoteKubectl)
+
 ### Connect to a remote Dashboard
 
 [Instructions](RemoteKubernetesDashboard)

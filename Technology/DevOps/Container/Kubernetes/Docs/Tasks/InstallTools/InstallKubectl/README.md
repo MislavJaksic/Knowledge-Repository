@@ -4,7 +4,7 @@ kubectl is a Kubernetes command-line tool.
 
 Before you begin
 
-### On Linux
+### Linux
 
 #### Ubuntu, Fedora or HypriotOS
 
@@ -44,11 +44,11 @@ $: sudo mv ./kubectl /usr/local/bin/kubectl
 $: kubectl version
 ```
 
-### On macOS
+### macOS
 
 TODO
 
-### On Windows
+### Windows
 
 ```
 $: scoop install kubectl

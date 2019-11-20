@@ -7,7 +7,8 @@
 ### Quickstart
 
 ```
-$: minikube start --vm-driver=virtualbox
+$: minikube config view
+$: minikube start [--vm-driver=virtualbox]
 ```
 
 ```

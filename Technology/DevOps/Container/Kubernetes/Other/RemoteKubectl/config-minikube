@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Config
+preferences: {}
+current-context: Remote-Context
+clusters:
+- cluster:
+    certificate-authority: /path/to/.minikube/ca.crt
+    server: https://192.168.99.103:8443
+  name: minikube
+- cluster:
+    certificate-authority-data: Long-Ca-String
+    server: https://Remote-Ip:Remote-Port
+  name: Remote-Cluster
+contexts:
+- context:
+    cluster: minikube
+    user: minikube
+  name: minikube
+- context:
+    cluster: Remote-Cluster
+    user: Remote-User
+  name: Remote-Context
+users:
+- name: minikube
+  user:
+    client-certificate: /path/to/.minikube/client.crt
+    client-key: /path/to/.minikube/client.key
+- name: Remote-User
+  user:
+    client-certificate-data: Long-User-Crt-String
+    client-key-data: Long-User-Key-String
