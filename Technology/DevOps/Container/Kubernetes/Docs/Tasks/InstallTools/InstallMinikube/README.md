@@ -52,3 +52,27 @@ $: minikube config set memory 4096
 
 $: minikube config view
 ```
+
+### Optional: create PersistentVolume
+
+```
+# Note: if you get `pod has unbound immidiate PersistentVolumeCliam` error
+# Note: check if you defined a `PersistentVolume`
+```
+
+```
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: hostname-ten
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 10Gi
+  storageClassName: standard
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/hostname-ten"
+```

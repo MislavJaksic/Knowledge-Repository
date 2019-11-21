@@ -16,7 +16,7 @@ $: minikube dashboard  # enable dashboard add-on and open proxy in browser
 $: kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta4/aio/deploy/recommended.yaml
 ```
 
-[TODO] (https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md)
+[Create a Sample User](../../../../Other/DashboardDocs/UserGuide/AccessControl)
 
 ```
 $: kubectl proxy  #-> localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/

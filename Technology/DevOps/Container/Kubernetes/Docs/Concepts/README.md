@@ -1,8 +1,8 @@
 ## [Concepts](https://kubernetes.io/docs/concepts/)
 
-About how Kubernetes cluster works and its abstractions.
+About how Kubernetes works and its abstractions.
 
-### (Headless) Service
+### About Services: expose apps
 
 [Instructions](ServicesLoadBalancingNetworking/Service)
 

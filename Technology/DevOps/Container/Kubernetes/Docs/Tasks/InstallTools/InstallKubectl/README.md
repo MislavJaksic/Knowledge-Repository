@@ -54,7 +54,7 @@ TODO
 $: scoop install kubectl
 $: kubectl version
 
-# Note: configure kubectl to use a remote Kubernetes cluster
+# Note: configure kubectl to use a remote Kubernetes
 
 $: cd %USERPROFILE%
 $: mkdir .kube
@@ -71,7 +71,7 @@ TODO
 Kubernetes needs a kubeconfig file at "~/.kube/config".  
 It is created when you either:
 * kube-up.sh
-* deploy a Minikube cluster
+* deploy Minikube
 
 ```
 $: kubectl cluster-info [dump]

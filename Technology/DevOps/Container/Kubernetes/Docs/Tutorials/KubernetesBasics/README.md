@@ -2,8 +2,8 @@
 
 ### [Create a Kubernetes cluster](https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/)
 
-Kubernetes cluster has:
-* a `Master` which coordinates the Kubernetes cluster
+Kubernetes has:
+* a `Master` which coordinates the Kubernetes
 * many `Node`s which are VM/physical machines that run applications
 
 Each `Node` has a `Kubelet`, an agent that talks between the `Master` and the `Node`.  
@@ -24,7 +24,7 @@ $: kubectl get nodes  #-> list nodes
 
 ### [Deploy an app](https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/)
 
-kubectl can create Deployments.  
+kubectl can create `Deployment`s.  
 `Deployment` instructs Kubernetes how to create an instances of your application.  
 `Deployment Controller` continuously monitors created instances.  
 
@@ -57,7 +57,7 @@ Resources are:
 
 Each Node must have:
 * `Kubelet`, a process for communication, `Pod` and container management
-* container runtime such as rkt or Docker
+* container runtime such as `rkt` or `Docker`
 
 ```
 $: kubectl get - list resource
@@ -78,15 +78,15 @@ $: kubectl exec Pod-Name
 
 `Service` defines a logical set of `Pod`s and enables external traffic exposure, load balancing and service discovery.  
 `Service` is defined using YAML.  
-`Service` targets a set of `Pod`s using a LabelSelector.  
+`Service` targets a set of `Pod`s using a `LabelSelector`.  
 
-Service is exposed through a type in the Service spec:
-* ClusterIP (default) - Service only reachable from within the cluster
-* NodePort - Service accessible from outside the cluster using <NodeIP>:<NodePort>
-* LoadBalancer - an external load balancer assigns a fixed, external IP to the Service
-* ExternalName - expose the Service using a name by returning a CNAME record with the name; no proxy is used
-Note: LoadBalancer is a superset of NodePort is a superset of ClusterIP.  
-Note: you don't have to include selector in the Service spec
+Service is exposed through a type in the `Service` spec:
+* `ClusterIP` (default) - `Service` only reachable from within Kubernetes
+* `NodePort` - `Service` accessible from outside Kubernetes using <NodeIP>:<NodePort>
+* `LoadBalancer` - an external load balancer assigns a fixed, external IP to the `Service`
+* `ExternalName` - expose the `Service` using a name by returning a CNAME record with the name; no proxy is used
+Note: `LoadBalancer` is a superset of `NodePort` is a superset of `ClusterIP`.  
+Note: you don't have to include selector in the `Service` spec
 
 `Service`s match a set of `Pod`s using labels and selectors.  
 

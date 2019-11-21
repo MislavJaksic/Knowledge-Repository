@@ -1,7 +1,7 @@
 ## [DNS for Services and Pods](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
 
 Kubernetes DNS schedules a DNS `Pod` and `Service`.  
-They tell containers to use the DNS Service’s IP to resolve DNS names.  
+They tell containers to use the DNS `Service`’s IP to resolve DNS names.  
 
 Every `Service` is assigned a DNS name.  
 ```
@@ -12,7 +12,7 @@ Every `Service` is assigned a DNS name.
 
 ### Services
 
-`Headless Service`s are those without cluster IP.  
+`Headless Service`s are those with `.spec.clusterIP = None`.  
 
 #### A records
 

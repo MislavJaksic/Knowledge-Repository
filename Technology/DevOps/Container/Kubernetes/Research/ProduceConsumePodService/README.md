@@ -76,8 +76,24 @@ spec:                      spec:
     targetPort: 5001           targetPort: 5002
 ```
 
-### Scripts
+### Usage
 
-`build-tag-upload.sh`: build, tag and upload.  
-`kubernetize.sh`: run.  
-`unkubernetize.sh`: delete.  
+Run `kubernetize.sh`. Wait until the `Pod`s are online.  
+```
+$: kubectl config view --minify  # ->
+  # ...
+  # clusters:
+  # - cluster:
+  #     certificate-authority: /path/to/k8n/ca.crt
+  #     server: https://Kubernetes-Ip:Kubernetes-Port
+  #   name: Cluster-Name
+  # ...
+$: kubectl get service  # ->
+  # NAME                TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)
+  # filter-service      NodePort    ...          <none>        5002:Assigned-Filter-Port/TCP
+  # generator-service   NodePort    ...          <none>        5001:Assigned-Generator-Port/TCP
+  # kubernetes          ClusterIP   ...          <none>        443/TCP
+```
+Visit `http://Kubernetes-Ip:Assigned-Service-Port`.  
+
+Run `unkubernetize.sh` to delete all `Service`s and `Deployment`s.  

@@ -1,6 +1,6 @@
 ## [Reference](https://kubernetes.io/docs/reference/)
 
-References about nomenclature, Kubernetes API, CLI tools, cluster installation and other.
+References about nomenclature, Kubernetes API, CLI tools, Kubernetes installation and other.
 
 ### Kubernetes tools
 

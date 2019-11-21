@@ -19,7 +19,7 @@ Stable means: will persist across `Pod` (re)scheduling.
 
 * storage must be provisioned manually or by a `Provisioner`/`StorageClass`
 * deleting a `StatefulSet` will not delete the volumes
-* `StatefulSet`s require a `Headless Service` for the network identity of the `Pod`s (you have to create this Headless Service)
+* `StatefulSet`s require a `Headless Service` for the network identity of the `Pod`s (you have to create a `Headless Service`)
 * there are no termination guarantees then you delete a `StatefulSet`
 * may enter into a broken state if using `Rolling Updates`
 
@@ -33,6 +33,7 @@ metadata:
   labels:
     app: nginx
 spec:
+  type: ClusterIP
   ports:
   - port: 80
     name: web

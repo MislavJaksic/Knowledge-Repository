@@ -49,7 +49,7 @@ TODO
 
 You can share mounted `Volume`s with `Container`s in the same `Pod` or on the same Node.  
 
-Mount propagation is controlled by the mountPropagation field in Container.volumeMounts.  
+Mount propagation is controlled by the `mountPropagation` field in Container.volumeMounts.  
 * None - default; no subsequent mounts and mounts are not visible on the host
 * HostToContainer - receive all subsequent mounts; if the host mounts anything inside the `Volume` mount, the `Container` will see it mounted there
 * Bidirectional - allowed only in privileged containers; same as HostToContainer; all `Volume` mounts created by the `Container` will be propagated back to the host and to all `Container`s of all `Pod`s that use the same `Volume`

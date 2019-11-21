@@ -10,11 +10,11 @@ $: minikube ssh
 
 ### Create a PersistentVolume
 
-In this exercise you'll use hostPath PersistentVolume to emulate network-attached storage.  
+In this exercise you'll use `hostPath` `PersistentVolume` to emulate network-attached storage.  
 
 In production use: EBS for AWS, Persistent Disk for Google Cloud, Cinder for OpenStack, vSphere Volumes on vSphere, NFS share or the like.  
 
-Setup dynamic provisioning using StorageClasses.  
+Setup dynamic provisioning using `StorageClasses`.  
 
 ```
 apiVersion: v1

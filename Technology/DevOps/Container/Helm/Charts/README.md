@@ -33,5 +33,5 @@ opa - policy engine
 prisma - GraphQL
 rabbitmq - message broker
 
-and many more...
+... and many more!
 ```

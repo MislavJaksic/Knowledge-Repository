@@ -10,7 +10,7 @@ How to accomplish a goal larger than a task.
 
 [Instructions](HelloMinikube)
 
-### Kubernetes: Master-Node, Pod, Service, Deployment, scale and update
+### Kubernetes: Master-Node, Pod, expose Service, Deployment, scale and update
 
 [Instructions](KubernetesBasics)
 

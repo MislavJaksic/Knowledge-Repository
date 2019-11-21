@@ -1,7 +1,7 @@
-`PersistentVolume`## [Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
+## [Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
 
 A `PersistentVolume` (PV) is storage provisioned by an administrator or dynamically provisioned using `StorageClass`es.  
-A `PersistentVolume` is a resource in the cluster just like a node is a cluster resource.  
+A `PersistentVolume` is a resource in Kubernetes just like a node is a Kubernetes resource.  
 `PersistentVolume` is a volume plugin, but it has an independent lifecycle.  
 
 A `PersistentVolumeClaim` (PVC) is a request for storage.  
@@ -12,12 +12,12 @@ A `StorageClass` resource allows admins to offer a variety of `PersistentVolume`
 
 ### Lifecycle of a volume and claim
 
-PVs are resources in the cluster.  
+PVs are resources in Kubernetes.  
 PVCs are requests for PVs.  
 
 PVs can be provisioned statically or dynamically.
-If statically, a cluster admin has to create a PV.  
-If dynamically, a cluster admin has to create a `StorageClass`. They also have to enable the `DefaultStorageClass` admission controller on the API server.  
+If statically, a Kubernetes admin has to create a PV.  
+If dynamically, a Kubernetes admin has to create a `StorageClass`. They also have to enable the `DefaultStorageClass` admission controller on the API server.  
 
 When a PVC is created the control loop will assign it to a PV.  
 The PV may be in access of what the PVC is asking.  
@@ -30,7 +30,7 @@ A PVC is protected when the Finalizers list in a PVC includes kubernetes.io/pvc-
 a PV is protected when the Finalizers list includes kubernetes.io/pv-protection.  
 
 When done using the `Volume`, delete the PVC.  
-The reclaim policy for a PV tells the cluster what to do with the volume after it has been released of its claim.
+The reclaim policy for a PV tells Kubernetes what to do with the volume after it has been released of its claim.
 * retain - when the PVC is deleted the PV will exist until manually reclaimed
 * delete - deletion removes both the PV and the storage asset (AWS EBS, GCE PD, Azure Disk, Cinder, ...); dynamically provisioned volumes inherit a reclim policy from `StorageClass`
 * recycle - DEPRECATED; use dynamic provisioning
