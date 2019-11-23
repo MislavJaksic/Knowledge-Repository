@@ -4,26 +4,26 @@
 
 #### Begineer Linux
 
-Docker container in not the same as a Docker image. A Docker image is a template from which many Docker
-containers can be constructed.
+Docker container != Docker image.  
+A Docker image is a template for container construction.
 
 Docker containers can be used in different ways:
 * to execute a single task
-* to intecract with
+* to interact with
 * to create a long running job
 
 Linux containers run on Linux hosts and Windows containers run on Windows hosts.
 
-Example of a Dockerfile:
+Example Dockerfile:
 ```
-FROM nginx:latest # specify base image
+FROM nginx:latest  # specify base image
 
 COPY index.html /usr/share/nginx/html # transfer file from where the Dockerfile is located into the image
 COPY linux.png /usr/share/nginx/html
 
-EXPOSE 80 443 # document which port should be published with -p
+EXPOSE 80 443  # document ports to be published with -p
 
-CMD ["nginx", "-g", "daemon off;"] # specify command and arguments for a command that will be run after the container is started
+CMD ["nginx", "-g", "daemon off;"]  # specify command and arguments for a command that will be run after the container is started
 ```
 
 If you want to make changes to the files in the container, you don't have to stop it. You can use bind mount.

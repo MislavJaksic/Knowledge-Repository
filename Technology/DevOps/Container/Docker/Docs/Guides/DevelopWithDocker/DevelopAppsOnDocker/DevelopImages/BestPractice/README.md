@@ -1,7 +1,7 @@
 ## [Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
-Use .dockerignore to keep image size and built time to a minimum.  
-Use different "docker build" build syntax when it is convenient.  
+Use `.dockerignore` to keep image size and built time to a minimum.  
+Use different `docker build` build syntax when it is convenient.  
 Use multi-stage builds by ordering layers from most frequently used to least frequently used.  
 Install only necessary packages.  
 Keep containers modular.  
@@ -147,7 +147,7 @@ For any mutable or user-serviceable parts an image.
 #### USER
 
 Set to the least privilege user.  
-Don't set it to "sudo".  
+Don't set it to `sudo`.  
 
 #### WORKDIR
 

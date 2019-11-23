@@ -15,7 +15,7 @@ $: kubectl --kubeconfig=/path/to/config  # manipulate specific kubectl `config`
 
 ### Add a new Cluster, User and Context
 
-Access can be further restricted to certain `namespace`s.  
+Access can be further restricted to certain `Namespace`s.  
 
 ```
 # Note: use `*.crt` and `*.key` file or plaintext string commands

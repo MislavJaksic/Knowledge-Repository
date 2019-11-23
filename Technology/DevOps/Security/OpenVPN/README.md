@@ -1,21 +1,10 @@
-## [OpenVPN](https://openvpn.net/download-open-vpn/)
+## [OpenVPN](https://openvpn.net/)
 
-### [Installation](https://openvpn.net/community-resources/installing-openvpn/)
+TODO
 
-#### Windows
 
-Download, double click the executable and install OpenVPN.  
 
-#### Linux
 
-```
-$: sudo apt install openvpn
-
-# Note: if you get an error "... no acceptable C compiler in $PATH" do:
-$: apt-get update
-$: apt-get upgrade
-$: sudo apt-get install build-essential
-```
 
 ### Running
 
@@ -80,17 +69,6 @@ verb 4
 mute 10
 ```
 
-##### [Command Line Interface](https://openvpn.net/community-resources/running-openvpn-from-a-console-window/)
-
-Double click the file or execute:
-```
-$: openvpn --config File-Name.ovpn
-```
-
-##### [Windows Service](https://openvpn.net/community-resources/running-openvpn-as-a-windows-service/)
-
-TODO
-
 ### Linux
 
 ##### Command Line Interface
@@ -111,17 +89,3 @@ $: route -n -> show IP routing table
 Connect to a remote computer:  
 * using [Putty](../Putty)
 * or [SSH](../SSH)
-
-### Other topics
-
-#### [HOW-TO OpenVPN 2.2.x](https://openvpn.net/community-resources/how-to/)
-
-TODO
-
-#### [Autorun on system startup](https://openvpn.net/community-resources/configuring-openvpn-to-run-automatically-on-system-startup/)
-
-TODO
-
-#### [Client/server quickstart](https://openvpn.net/community-resources/openvpn-quickstart/)
-
-TODO

@@ -23,7 +23,8 @@ $: sudo docker run hello-world
 
 #### [Post-installation for Linux](https://docs.docker.com/install/linux/linux-postinstall/)
 
-Non-root users will have to prefix every command with "sudo". Avoid it by executing:
+Non-root users will have to prefix every command with `sudo`.  
+Avoid this by executing:
 ```
 $: sudo groupadd docker
 $: sudo usermod -aG docker $USER

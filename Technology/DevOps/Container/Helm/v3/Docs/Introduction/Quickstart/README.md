@@ -15,7 +15,7 @@ They are:
 ### Initialize a Helm Chart Repository
 
 ```
-$: helm repo add Chart-Repo-Name Chart-Repo-Url
+$: helm repo add Repo-Name Repo-Url
 
 $: helm repo add stable https://kubernetes-charts.storage.googleapis.com/  # add chart repository
 
@@ -34,14 +34,14 @@ $: helm search repo stable  # ->
 
 ```
 $: helm repo update
-$: helm install stable/mysql --generate-name  # create release
+$: helm install stable/mysql --generate-name  # create release and generate Release-Name
 
-$: helm show chart Chart-Repo-Name/Chart-Name  # list chart
-$: helm show all Chart-Repo-Name/Chart-Name  # list chart docs
+$: helm show chart Repo-Name/Chart-Name  # list chart
+$: helm show all Repo-Name/Chart-Name  # list chart docs
 ```
 
 ```
-# Note: if you get `pod has unbound immidiate PersistentVolumeCliam` error
+# Note: if you get `pod has unbound immediate PersistentVolumeClaim` error
 # Note: check if you defined a `PersistentVolume`
 ```
 
@@ -72,7 +72,10 @@ $: helm list  # ->
 
 ### Uninstall a Release
 
+
 ```
+$: helm uninstall Release-Name [--keep-history]
+
 $: helm uninstall smiling-penguin [--keep-history]
 ```
 

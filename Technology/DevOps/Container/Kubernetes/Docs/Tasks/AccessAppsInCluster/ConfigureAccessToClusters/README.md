@@ -4,7 +4,7 @@ Using `config` files with `cluster`, `user` and `context` definitions you can sw
 ```
 $: kubectl version
 
-$: kubectl config use-context New-Context
+$: kubectl config use-context Context-Name
 ```
 
 ### Define cluster, user, and context triple

@@ -2,8 +2,8 @@
 
 | Capabilities                                                      | Docker Engine \- Community | Docker Engine \- Enterprise | Docker Enterprise |
 |-------------------------------------------------------------------|----------------------------|-----------------------------|-------------------|
-| Container engine and built in orchestration, networking, security |                            |                             |                   |
-| Certified infrastructure, plugins and ISV containers              |                            |                             |                   |
-| Image management                                                  |                            |                             |                   |
-| Container app management                                          |                            |                             |                   |
-| Image security scanning                                           |                            |                             |                   |
+| Container engine and built in orchestration, networking, security | yes                        | yes                         | yes               |
+| Certified infrastructure, plugins and ISV containers              |                            | yes                         | yes               |
+| Image management                                                  |                            |                             | yes               |
+| Container app management                                          |                            |                             | yes               |
+| Image security scanning                                           |                            |                             | yes               |

@@ -1,9 +1,10 @@
 ## [Get Started: Docker overview](https://docs.docker.com/engine/docker-overview/)
 
-Docker is an open platform for running applications.  
+Docker (is an open platform, it) runs applications.  
 Docker separates applications from infrastructure.  
 
-Containers are loosely isolated environment. They are light because they use the host kernel not a hypervisor.  
+Containers are loosely isolated environment.  
+Containers are light because they use the host kernel not a hypervisor.  
 
 Docker Engine has:  
 * a server, a daemon process
@@ -19,22 +20,22 @@ Docker Engine has:
 ### Docker architecture
 
 ```
-Daemon - builds, runs and distributes Docker containers; manages images, containers, networks, and volumes
+Daemon: builds, runs and distributes Docker containers; manages images, containers, networks, and volumes
 
-Client - talks to the Docker daemon
+Client: talks to the Docker daemon
 
-Registry - stores Docker images; it can be public like Docker Hub or private
+Registry: stores Docker images; it can be public like Docker Hub or private
 ```
 
 ```
-Objects - images, containers, networks, volumes, plugins, and other objects
+Objects: images, containers, networks, volumes, plugins, and other objects
 
-Image - template for creating a Docker container; build using a Dockerfile
-Dockerfile - each instruction is an image layer
+Image: template for creating a Docker container; build using a Dockerfile
+Dockerfile: creates image layers
 
-Container - instance of an image; you can connect to it or attach storage
+Container: instance of an image; you can connect to it or attach storage
 
-Service - scales containers across multiple daemons (a swarm with managers and workers); to a consumer it appears as a single app
+Service: scales containers across multiple daemons (a swarm with managers and workers); to a consumer it appears as a single app
 ```
 
 ### Underlying technology

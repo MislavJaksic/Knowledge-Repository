@@ -5,7 +5,7 @@
 Dockerfile contains all the commands to assemble an image.  
 Build an image from a Dockerfile and a context:
 ```
-$: docker build . - recursively send the context to Docker daemon
+$: docker build .  # recursively send the context to Docker daemon
 ```
 Each instruction builds an intermediate image layer.
 Every instruction is independent.  
@@ -13,7 +13,7 @@ Every instruction is independent.
 ### Format
 
 ```
-# - Dockerfile comment
+#: Dockerfile comment
 Must begin with FROM and can be preceded by ARG.
 Has directives.
 ```
@@ -21,73 +21,73 @@ Has directives.
 ### Parser directives
 
 ```
-syntax - enabled if Buildkit is used
-escape - set escape character
+syntax: enabled if Buildkit is used
+escape: set escape character
 ```
 
 ### Environment replacement
 
 ```
-$Var-Name OR ${Var-Name} - var replacement syntax
+$Var-Name OR ${Var-Name}: var replacement syntax
 
-${Var-Name:-Var-Value} - if Var-Name is not set then Var-Value will because the result
-${Var-Name:+Var-Value} - if Var-Name is set then Var-Value will because the result, otherwise it will be an empty string
+${Var-Name:-Var-Value}: if Var-Name is not set then Var-Value will because the result
+${Var-Name:+Var-Value}: if Var-Name is set then Var-Value will because the result, otherwise it will be an empty string
 ```
 
 ```
 FROM busybox
 ENV foo /bar
-WORKDIR ${foo}   # WORKDIR /bar
-ADD . $foo       # ADD . /bar
-COPY \$foo /quux # COPY $foo /quux
+WORKDIR ${foo}    # WORKDIR /bar
+ADD . $foo        # ADD . /bar
+COPY \$foo /quux  # COPY $foo /quux
 ```
 
 ### .dockerignore file
 
 ```
-.dockerignore - exclude files from build context
+.dockerignore: exclude files from build context
 ```
 
 ### FROM
 
 ```
-FROM Image-Name[:Image-Tag] [AS Substitute-Name] - set base image
+FROM Image-Name[:Image-Tag] [AS Substitute-Name]  # set base image
 ```
 
 ### RUN
 
 ```
-RUN ["_executable", "_param1", "_param2"] - create a new layer and execute the command
+RUN ["_executable", "_param1", "_param2"]  # create a new layer and execute the command
 ```
 Like CMD and ENTRYPOINT.  
 
 ### CMD
 
 ```
-CMD ["_executable","_param1","_param2"] - set default executable command
+CMD ["_executable","_param1","_param2"]  # set default executable command
 ```
 Like RUN and ENTRYPOINT.  
 
 ### LABEL
 
 ```
-LABEL _key1=_value1 _key2=_value2 - add image metadata
+LABEL _key1=_value1 _key2=_value2  # add image metadata
 
-$: docker inspect Image-Name - list labels
+$: docker inspect Image-Name  # list labels
 ```
 
 ### EXPOSE
 
 ```
-EXPOSE _port [_port/_protocol] - documents that a port should be published; DOES NOT PUBLISH A PORT
+EXPOSE _port [_port/_protocol]  # documents that a port should be published; DOES NOT PUBLISH A PORT
 
-$: docker run -P Docker-Id/_repository - publish all ports and run the container
+$: docker run -P Docker-Id/_repository  # publish all ports and run the container
 ```
 
 ### ENV
 
 ```
-ENV _key1=_value1 _key2=_value2 - set key to value for all following build stage instructions and all resulting containers
+ENV _key1=_value1 _key2=_value2  # set key to value for all following build stage instructions and all resulting containers
 ```
 Like ARG, but for run-time.  
 
@@ -99,49 +99,49 @@ ENV myName="John Doe" myDog=Rex\ The\ Dog \
 ### ADD
 
 ```
-ADD ["Source-Path1","Source-Path2","Destination-Path"] - copy a file, directory or URL to destination
+ADD ["Source-Path1","Source-Path2","Destination-Path"]  # copy a file, directory or URL to destination
 ```
 Like COPY but with tar and URL handling.  
 
 ### COPY
 
 ```
-COPY ["Source-Path1","Source-Path2","Destination-Path"] - copy a file or directory to destination
+COPY ["Source-Path1","Source-Path2","Destination-Path"]  # copy a file or directory to destination
 ```
 Like ADD but without tar and URL handling.  
 
 ### ENTRYPOINT
 
 ```
-ENTRYPOINT ["_executable","_param1","_param2"] - set a command that must be executed
+ENTRYPOINT ["_executable","_param1","_param2"]  # set a command that must be executed
 ```
 Like RUN and CMD.  
 
 ### VOLUME
 
 ```
-VOLUME ["/Mount-Point-Name"] - create mount point and mark it as holding externally mounted volumes from native host or other containers
+VOLUME ["/Mount-Point-Name"]  # create mount point and mark it as holding externally mounted volumes from native host or other containers
 ```
 
 ### USER
 
 ```
-USER _user>[:_group] OR USER _uid[:_gid] - set username and usergroup for RUN, CMD and ENTRYPOINT
+USER _user>[:_group] OR USER _uid[:_gid]  # set username and usergroup for RUN, CMD and ENTRYPOINT
 ```
 
 ### WORKDIR
 
 ```
-WORKDIR /path/to/workdir - set absolute working directory
-WORKDIR add/relative - set relative working directory
+WORKDIR /path/to/workdir  # set absolute working directory
+WORKDIR add/relative  # set relative working directory
 ```
 
 ### ARG
 
 ```
-ARG Var-Name[=Default-Value] - define variable to be passed at build-time
+ARG Var-Name[=Default-Value]  # define variable to be passed at build-time
 
-$: docker build --build-args Var-Name=_value ... - NOT FOR PASSING IN SECRETS
+$: docker build --build-args Var-Name=_value ...  # NOT FOR PASSING IN SECRETS
 ```
 Like ENV, but for build-time.  
 
@@ -156,7 +156,7 @@ NO_PROXY
 ### ONBUILD
 
 ```
-ONBUILD [_instruction] - add any build instruction as trigger instruction
+ONBUILD [_instruction]  # add any build instruction as trigger instruction
 ```
 Triggered when used as a base image for another image.  
 If you need access to apps source code.  
@@ -187,13 +187,13 @@ CMD ["run.py"]
 ### STOPSIGNAL
 
 ```
-STOPSIGNAL signal - set which signal will be sent to the container to exit
+STOPSIGNAL signal  # set which signal will be sent to the container to exit
 ```
 
 ### HEALTHCHECK
 
 ```
-HEALTHCHECK [OPTIONS] CMD _command - set how to test that the container is still working
+HEALTHCHECK [OPTIONS] CMD _command  # set how to test that the container is still working
 
 OPTIONS:
   --interval=DURATION (default: 30s)
@@ -230,7 +230,7 @@ RUN apt-get install python3
 CMD echo "Hello world"
 ENTRYPOINT echo "Hello world"
 ```
-Executes "/bin/sh -c _command" under the hood.  
+Executes `/bin/sh -c _command` under the hood.  
 Shell form is a subset of exec form.  
 
 ##### Exec form
@@ -268,7 +268,7 @@ Like CMD, but its arguments cannot be overwritten. Prefer ENTRYPOINT over CMD wh
 #### ADD vs COPY
 
 ```
-COPY is same as ADD but without the tar and remote url handling.
+COPY is the same as ADD but without the tar and remote URL handling.
 ```
 
 Source: [code comment](https://github.com/moby/moby/blob/670c8696a29825b23208496bd4d8e88b5faa7773/builder/dispatchers.go#L77)

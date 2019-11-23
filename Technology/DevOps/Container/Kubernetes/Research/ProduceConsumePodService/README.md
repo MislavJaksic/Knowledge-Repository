@@ -85,7 +85,7 @@ $: kubectl config view --minify  # ->
   # clusters:
   # - cluster:
   #     certificate-authority: /path/to/k8n/ca.crt
-  #     server: https://Kubernetes-Ip:Kubernetes-Port
+  #     server: https://Kubectl-Server-Ip:Kubernetes-Port
   #   name: Cluster-Name
   # ...
 $: kubectl get service  # ->
@@ -94,6 +94,6 @@ $: kubectl get service  # ->
   # generator-service   NodePort    ...          <none>        5001:Assigned-Generator-Port/TCP
   # kubernetes          ClusterIP   ...          <none>        443/TCP
 ```
-Visit `http://Kubernetes-Ip:Assigned-Service-Port`.  
+Visit `http://Kubectl-Server-Ip:Assigned-Service-Port`.  
 
 Run `unkubernetize.sh` to delete all `Service`s and `Deployment`s.  
