@@ -60,10 +60,10 @@ Each Node must have:
 * container runtime such as `rkt` or `Docker`
 
 ```
-$: kubectl get - list resource
-$: kubectl describe - show detailed information about a resource
-$: kubectl logs - print the logs from a container in a pod
-$: kubectl exec - execute a command on a container in a pod
+$: kubectl get  # list resource
+$: kubectl describe  # show detailed information about a resource
+$: kubectl logs  # print the logs from a container in a pod
+$: kubectl exec  # execute a command on a container in a pod
 ```
 
 ```
@@ -81,10 +81,10 @@ $: kubectl exec Pod-Name
 `Service` targets a set of `Pod`s using a `LabelSelector`.  
 
 Service is exposed through a type in the `Service` spec:
-* `ClusterIP` (default) - `Service` only reachable from within Kubernetes
-* `NodePort` - `Service` accessible from outside Kubernetes using <NodeIP>:<NodePort>
-* `LoadBalancer` - an external load balancer assigns a fixed, external IP to the `Service`
-* `ExternalName` - expose the `Service` using a name by returning a CNAME record with the name; no proxy is used
+* `ClusterIP` (default): `Service` only reachable from within Kubernetes
+* `NodePort`: `Service` accessible from outside Kubernetes using <NodeIP>:<NodePort>
+* `LoadBalancer`: an external load balancer assigns a fixed, external IP to the `Service`
+* `ExternalName`: expose the `Service` using a name by returning a CNAME record with the name; no proxy is used
 Note: `LoadBalancer` is a superset of `NodePort` is a superset of `ClusterIP`.  
 Note: you don't have to include selector in the `Service` spec
 

@@ -4,4 +4,15 @@ References about nomenclature, Kubernetes API, CLI tools, Kubernetes installatio
 
 ### Kubernetes tools
 
-Minikube, CLI, Dashboard, Helm, Kompose, kubeadm.  
+More well known tools:
+* `Minikube`
+* `kubectl`
+* `Dashboard`
+* `Helm`
+* `Kompose`
+* `kubeadm`
+
+### kubectl
+
+[Overview: examples, operations and resource types](Docs/References/KubectlCLI/Overview)  
+[Commands](Docs/References/KubectlCLI/KubectlCommands)

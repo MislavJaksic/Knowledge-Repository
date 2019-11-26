@@ -64,4 +64,9 @@ $: docker stack ls  # list stacks
 $: docker stack services Stack-Name  # list stack services
 $: docker stack deploy -c docker-compose.yml Stack-Name  # run service stack
 $: docker service ps Service-Name  # list services
+
+$: docker network ls  # list networks
+$: docker network inspect Network-Name  # inspect network
+$: docker network create Network-Name  # create network
+$: docker network inspect Network-Name --format '{{index .Peers 0 "IP"}}'  # list network IP
 ```

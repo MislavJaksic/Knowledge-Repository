@@ -1,7 +1,7 @@
 #!/bin/bash
 
-kubectl delete service generator-service
-kubectl delete service filter-service
+kubectl delete -f generator/deployment.yaml
+kubectl delete -f filter/deployment.yaml
 
-kubectl delete deployment generator-deployment
-kubectl delete deployment filter-deployment
+kubectl delete -f generator/service.yaml
+kubectl delete -f filter/service.yaml

@@ -1,7 +1,7 @@
 ## [Kubernetes Dashboard is forbidden](https://www.australtech.net/kubernetes-unable-to-login-to-the-dashboard/)
 
 ```
-# Note: response to URL https://_ip:_port/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#!/login
+# Note: response to URL https://Kubectl-Server-IP:Kubectl-Server-Port/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#!/login
 {
   "kind": "Status",
   "apiVersion": "v1",
@@ -26,7 +26,7 @@ $: kubectl -n kube-system get pod  # ->
 ```
 
 ```
-# Note: verify that kubectl can access Kubernetes locally
+# Note: verify that `kubectl` can access Kubernetes locally
 $: kubectl cluster-info
 ```
 

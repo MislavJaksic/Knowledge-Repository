@@ -45,7 +45,7 @@ CPU and Memory - set limits
 Run command - same as Docker's ENTRYPOINT; cannot be overridden
 Run command arguments - same as Docker's CMD; can be overridden
 Run as privileged? - if yes: as if it has root privileges
-Environment variables - env var for use in the container: can refrence other env var with $(VAR_NAME)
+Environment variables - ENV VAR for use in the container: can reference other ENV VAR with $(VAR_NAME)
 ```
 
 ### Using the Dashboard

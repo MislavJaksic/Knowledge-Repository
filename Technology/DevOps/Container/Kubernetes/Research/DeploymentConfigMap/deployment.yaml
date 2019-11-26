@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tier: test-tier
+  template:
+    metadata:
+      labels:
+        tier: test-tier
+    spec:
+      containers:
+      - name: test
+        image: user123/test:0.0.1
+        command: ["java"]
+        args: ["-jar", "./javaprogram.jar"]
+        envFrom:
+          - configMapRef:
+              name: test-configmap
+        env:
+          - name: MY_HOST_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: test-configmap
+                key: SERVER_HOST_PORT
+      restartPolicy: Always
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap
+data:
+  NAME: my-test
+#
+  ID: my-test-id
+  SERVER_HOST_PORT: localhost:8080

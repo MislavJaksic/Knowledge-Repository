@@ -46,7 +46,7 @@ You can create a second `config` file and reference it with:
 $: kubectl --kubeconfig=/path/to/Second-Kubectl-Config  # manipulate specific kubectl `config`
 ```
 
-### Set the KUBECONFIG environment variable
+### Set the KUBECONFIG ENV VAR
 
 TODO
 
@@ -54,6 +54,6 @@ TODO
 
 TODO
 
-### Append $HOME/.kube/config to your KUBECONFIG environment variable
+### Append $HOME/.kube/config to your KUBECONFIG ENV VAR
 
 TODO
