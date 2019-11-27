@@ -2,7 +2,7 @@
 
 ### The Downward API
 
-`DownwardAPI` is how `Pod`s expose fields to their `Container`s:
+`Downward API` is how `Pod`s expose fields to their `Container`s:
 * by using ENV VAR
 * through `VolumeFile`s
 

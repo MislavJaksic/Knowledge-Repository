@@ -1,6 +1,6 @@
 ## [Install kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
-kubectl is a Kubernetes command-line tool.  
+`kubectl` is a Kubernetes command-line tool.  
 
 Before you begin
 
@@ -79,4 +79,19 @@ $: kubectl cluster-info [dump]
 ```
 ### Optional kubectl configurations: enabling shell autocompletion
 
-TODO
+```
+$: type _init_completion  # check if you have bash-completion
+
+$: sudo apt-get install bash-completion
+$: sudo yum install bash-completion
+```
+
+```
+$: source <(kubectl completion bash)
+$: echo "source <(kubectl completion bash)" >> ~/.bashrc
+```
+
+```
+$: source <(kubectl completion zsh)
+$: echo "if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi" >> ~/.zshrc
+```

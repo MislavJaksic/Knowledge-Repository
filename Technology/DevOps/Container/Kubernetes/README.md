@@ -8,9 +8,6 @@ A few other installers are: `kubeadm`, `kops`, `KRIB`, `kubespray`, ...
 
 #### Minikube: local Kubernetes
 
-[Install instructions](Docs/Tasks/InstallTools)  
-[User instructions](Docs/GettingStarted/Learning/InstallingKubernetesWithMinikube)
-
 ```
 $: minikube start
 $: minikube stop
@@ -18,40 +15,33 @@ $: minikube stop
 $: minikube delete
 ```
 
+[Install instructions](Docs/Tasks/InstallTools)  
+[User instructions](Docs/GettingStarted/Learning/InstallingKubernetesWithMinikube)  
+
 ### kubectl
 
 ```
 # Note: restrict namespace with [-n K8s-Namespace]
+# Note: Resource-Type Resource-Name == Resource-Type/Resource-Name
 
-$: kubectl apply -f File-Name.yaml
-$: kubectl apply -f /path/to/dir
+$: kubectl get Resource-Type/Resource-Name [-f] [-k] [-o Output-Option] [--watch] [--field-selector=field.subfield=Field-Value]
+$: kubectl run Id-Name --image=Image-Name [--env="Env-Var-Name=Env-Var-Value"] [--port=Expose-Port] [--replicas=X] [--dry-run] [--command -- _command _arg0.._argN]
+$: kubectl delete Resource-Type/Resource-Name [-f] [-k] [-l name=Label-Name] [--now] [--force] [--grace-period=X]
 
-$: kubectl get Resource-Type [-o Output-Option] [--watch] [--field-selector=field.subfield=Field-Value]  # like `describe`, but with flags
-$: kubectl get Resource-Type Resource-Name
-$: kubectl get Resource-Type,Resource-Type
-
-$: kubectl describe Resource-Type  # like `get`, but more details
-$: kubectl describe Resource-Type Resource-Name
-$: kubectl describe Resource-Type/Resource-Name
-
-$: kubectl delete Resource-Type [--all]
-$: kubectl delete -f File-Name.yaml  # delete that type and name
-$: kubectl delete Resource-Type,Resource-Type -l name=Label-Name
-
-$: kubectl exec Pod-Name [-c Container-Name] _command  # defaults to first container
-$: kubectl exec -ti Pod-Name /bin/bash
-
-$: kubectl logs [-f] Pod-Name
-  #-f: streams logs; like `tail -f`
-
-
-$: kubectl rollout restart Resource-Type/Resource-Name
-
+$: kubectl apply (-f file-Name | -f /path/to/dir) [-k] [URL]
 $: [KUBE_EDITOR="nano"] kubectl edit Resource-Type/Resource-Name
+$: kubectl rollout restart Specific-Type/Resource-Name
+
+$: kubectl describe Resource-Type/Resource-Name [-f]
+$: kubectl exec Pod-Name [-c Container-Name] [-it] -- _command [_arg0.._argN]
+$: kubectl exec Resource-Type/Resource-Name [-c Container-Name] [-it] -- _command [_arg0.._argN]
+$: kubectl logs Pod-Name [-f] [-l Label-Name=Label-Value] [--since=X] [-c Container-Name] [--all-containers]
 ```
 
-[Overview: examples, operations and resource types](Docs\References\KubectlCLI\Overview)  
-[Commands](Docs\References\KubectlCLI\KubectlCommands)
+[Installation instruction](Docs/Tasks/InstallTools/InstallKubectl)  
+[Overview: examples, operations and resource types](Docs/References/KubectlCLI/Overview)  
+[Cheat sheet](Docs/References/KubectlCLI/CheatSheet)  
+[Commands](Docs/References/KubectlCLI/Commands)  
 
 ### Remote kubectl and accessing multiple Kubernetes
 
@@ -59,11 +49,17 @@ kubectl `config` file location: `~/.kube/config`
 `config`s can be merged (by copy-pasting).  
 
 ```
+# Note: use multiple `config` files
+# Note: it's as if they were merged
+  # KUBECONFIG=~/.kube/config-0:~/.kube/config-1
+
 $: kubectl version  # list client, server version
 $: kubectl cluster-info [--dump]  # list client, cluster info
-$: kubectl config view [--minify]  # list `config` file
 
-$: kubectl config use-context Context-Name  # change `current-context` field
+$: kubectl config view [--minify]  # list `config` file
+$: kubectl config use-context Context-Name  # switch context
+
+$: kubectl config set-context --current --namespace=Namespace-Name  # set namespace to avoid writing [-n K8n-Namespace]
 ```
 
 [Instructions](Other/RemoteKubectl)  

@@ -14,5 +14,6 @@ More well known tools:
 
 ### kubectl
 
-[Overview: examples, operations and resource types](Docs/References/KubectlCLI/Overview)  
-[Commands](Docs/References/KubectlCLI/KubectlCommands)
+[Overview: examples, operations and resource types](KubectlCLI/Overview)  
+[Cheat sheet](KubectlCLI/CheatSheet)  
+[Commands](KubectlCLI/Commands)  

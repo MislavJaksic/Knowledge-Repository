@@ -123,7 +123,7 @@ List a resource.
 Like `kubectl describe`, but has powerful flags like `--watch`, which watches for updates.  
 
 ```
-$: kubectl get Resource-Type [-o Output-Option] [--field-selector=field.subfield=Field-Value]
+$: kubectl get Resource-Type [-o Output-Option] [--field-selector=.field.subfield=Field-Value]
 $: kubectl get Resource-Type Resource-Name
 $: kubectl get Resource-Type,Resource-Type
 ```
@@ -156,7 +156,7 @@ $: kubectl delete Resource-Type,Resource-Type -l name=Label-Name
 Execute a command against a `Container` in a `Pod`.  
 
 ```
-$: kubectl exec Pod-Name [-c Container-Name] _command  # defaults to first container
+$: kubectl exec Pod-Name _command [-c Container-Name]  # defaults to first container
 $: kubectl exec -ti Pod-Name /bin/bash
 ```
 
@@ -165,8 +165,9 @@ $: kubectl exec -ti Pod-Name /bin/bash
 Print the logs for a `Container` in a `Pod`.  
 
 ```
-$: kubectl logs [-f] Pod-Name
-  #-f: streams logs; like `tail -f`
+$: kubectl logs Pod-Name [-f] [-c Container-Name]
+  # -f: streams logs; like `tail -f`
+  # -c: specify container
 ```
 
 ### Examples: Creating and using plugins

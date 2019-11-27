@@ -48,6 +48,12 @@ $: kubectl --kubeconfig=/path/to/Second-Kubectl-Config  # manipulate specific ku
 
 ### Set the KUBECONFIG ENV VAR
 
+```
+# Note: use multiple `config` files
+# Note: it's as if they were merged
+  # KUBECONFIG=~/.kube/config-0:~/.kube/config-1
+```
+
 TODO
 
 ### Explore the $HOME/.kube directory
