@@ -15,6 +15,21 @@ spec:
       containers:
       - name: filter
         image: mj753951/filter:demo
+        command: ["python"]
+        args: ["server.py"]
         ports:
           - containerPort: 5002
       restartPolicy: Always
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: filter-service
+spec:
+  type: NodePort
+  selector:
+    tier: filter-tier
+  ports:
+  - port: 15002
+    targetPort: 5002

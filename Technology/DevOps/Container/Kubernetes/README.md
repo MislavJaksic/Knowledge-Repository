@@ -9,14 +9,20 @@ A few other installers are: `kubeadm`, `kops`, `KRIB`, `kubespray`, ...
 #### Minikube: local Kubernetes
 
 ```
+$: minikube config view
 $: minikube start
-$: minikube stop
 
+$: minikube ip
+$: minikube dashboard
+$: minikube service Service-Name [-n K8n-Namespace] [--url]
+
+$: minikube stop
 $: minikube delete
 ```
 
 [Install instructions](Docs/Tasks/InstallTools)  
 [User instructions](Docs/GettingStarted/Learning/InstallingKubernetesWithMinikube)  
+[Hello World: Minikube](Docs/Tutorials/HelloMinikube)  
 
 ### kubectl
 
@@ -45,7 +51,7 @@ $: kubectl logs Pod-Name [-f] [-l Label-Name=Label-Value] [--since=X] [-c Contai
 
 ### Remote kubectl and accessing multiple Kubernetes
 
-kubectl `config` file location: `~/.kube/config`  
+`kubectl` `config` file location: `~/.kube/config`  
 `config`s can be merged (by copy-pasting).  
 
 ```
@@ -79,7 +85,39 @@ Setup browser certificate.
 
 [Instructions](Other/DashboardDocs/UserGuide/AccessControl)
 
-### Running Containers in Pods
+### Services: how to expose apps to the outside world
+
+`ServiceType`s specify the kind of service you want:
+* `ClusterIP` (default): `Service` only reachable from within Kubernetes; expose `Service` on a cluster-internal IP
+* `NodePort`: `Service` accessible from outside Kubernetes using `Node-IP:Node-Port`; expose `Service` on each `Node`’s IP at a static port (`Node-Port`); creates a `ClusterIP` `Service` to which it routes
+* `LoadBalancer`: an external load balancer assigns a fixed, external IP to the `Service`; expose `Service` using a cloud provider’s load balancer; creates a `ClusterIP` and `NodePort` `Service`s to which it routes
+* `ExternalName`: maps `Service` to `externalName` field by returning a CNAME record; no proxy is used
+
+[Details](Docs/Concepts/ServicesLoadBalancingNetworking/Service)
+
+### Ingress
+
+`Ingress` is not a `ServiceType`.  
+`Ingress` will expose your `Service`.  
+`Ingress` is an entry point for your cluster.  
+`Ingress` consolidates routing rules and will expose multiple `Service`s under the same IP address.  
+
+TODO
+
+[Minikube NGINX with /etc/host](Docs/Tasks/AccessAppsInCluster/SetupIngressOnMinikube)  
+[Ingress](Docs/Concepts/ServicesLoadBalancingNetworking/Ingress)
+[Ingress Controllers](Docs/Concepts/ServicesLoadBalancingNetworking/IngressController)  
+
+### Containers
+
+[command and args](Docs/Tasks/InjectDataIntoApps/CommandArgumentContainer)  
+
+### ENV VARs: how Containers in Pods use them
+
+[Intro](Docs/Tasks/InjectDataIntoApps/EnvironmentVariablesContainer)  
+[Configuration of Downward API](Docs/Tasks/InjectDataIntoApps/PodInfoThroughEnvVar)  
+
+### ConfigMaps: how Containers in Pods use them
 
 ```
 # Note: restrict namespace with [-n K8s-Namespace]

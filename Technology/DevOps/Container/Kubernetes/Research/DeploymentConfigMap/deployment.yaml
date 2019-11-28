@@ -26,6 +26,8 @@ spec:
               configMapKeyRef:
                 name: test-configmap
                 key: SERVER_HOST_PORT
+          - name: "UNUSED"
+            value: "unused-id"
       restartPolicy: Always
 
 ---

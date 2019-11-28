@@ -73,6 +73,14 @@ spec:
   storageClassName: standard
   accessModes:
     - ReadWriteOnce
-  hostPath:
+  hostPath:  # only works for single Node clusters!
     path: "/data/hostname-ten"
+```
+
+### Optional: Ingress
+
+If you want to play with `Ingress` and `Ingress Controller`.  
+
+```
+$: minikube addons enable ingress  # enable NGINX Ingress Controller
 ```

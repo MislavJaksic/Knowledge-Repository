@@ -29,7 +29,7 @@ spec:
     storage: 10Gi
   accessModes:
     - ReadWriteOnce
-  hostPath:
+  hostPath:  # only works for single Node clusters!
     path: "/mnt/data"
 ```
 

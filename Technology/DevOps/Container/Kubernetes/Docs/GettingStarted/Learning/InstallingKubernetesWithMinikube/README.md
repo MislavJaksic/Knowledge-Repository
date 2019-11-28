@@ -41,15 +41,9 @@ TODO
 ### Interacting with Your Cluster
 
 ```
-$: minikube dashboard
-```
-
-```
-$: minikube service [-n _namespace] [--url] _service
-```
-
-```
 $: minikube ip
+$: minikube dashboard
+$: minikube service Service-Name [-n K8n-Namespace] [--url]
 ```
 
 #### Persistent Volumes
@@ -57,7 +51,7 @@ $: minikube ip
 TODO
 
 ```
-# Note: if you get `pod has unbound immidiate PersistentVolumeCliam` error
+# Note: if you get `pod has unbound immediate PersistentVolumeClaim` error
 # Note: check if you defined a `PersistentVolume`
 ```
 
@@ -74,7 +68,7 @@ spec:
   storageClassName: standard
   accessModes:
     - ReadWriteOnce
-  hostPath:
+  hostPath:  # only works for single Node clusters!
     path: "/data/hostname-ten"
 ```
 

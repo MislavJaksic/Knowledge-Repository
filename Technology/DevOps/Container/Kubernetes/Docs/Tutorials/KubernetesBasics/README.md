@@ -8,9 +8,9 @@ Kubernetes has:
 
 Each `Node` has a `Kubelet`, an agent that talks between the `Master` and the `Node`.  
 
-Minikube is a lightweight Kubernetes implementation.  
+`Minikube` is a lightweight Kubernetes implementation.  
 
-kubectl is a CLI for executing Kubernetes API.  
+`kubectl` is a CLI for executing Kubernetes API.  
 
 ```
 $: minikube version
@@ -24,7 +24,7 @@ $: kubectl get nodes  #-> list nodes
 
 ### [Deploy an app](https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/)
 
-kubectl can create `Deployment`s.  
+`kubectl` can create `Deployment`s.  
 `Deployment` instructs Kubernetes how to create an instances of your application.  
 `Deployment Controller` continuously monitors created instances.  
 
@@ -82,7 +82,7 @@ $: kubectl exec Pod-Name
 
 Service is exposed through a type in the `Service` spec:
 * `ClusterIP` (default): `Service` only reachable from within Kubernetes
-* `NodePort`: `Service` accessible from outside Kubernetes using <NodeIP>:<NodePort>
+* `NodePort`: `Service` accessible from outside Kubernetes using `Node-IP:Node-Port`
 * `LoadBalancer`: an external load balancer assigns a fixed, external IP to the `Service`
 * `ExternalName`: expose the `Service` using a name by returning a CNAME record with the name; no proxy is used
 Note: `LoadBalancer` is a superset of `NodePort` is a superset of `ClusterIP`.  

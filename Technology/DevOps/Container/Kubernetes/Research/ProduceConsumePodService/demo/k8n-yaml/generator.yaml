@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: generator-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tier: generator-tier
+  template:
+    metadata:
+      labels:
+        tier: generator-tier
+    spec:
+      containers:
+      - name: generator
+        image: mj753951/generator:demo
+        command: ["python"]
+        args: ["server.py"]
+        ports:
+          - containerPort: 5001
+        envFrom:
+          - configMapRef:
+              name: generator-configmap
+        env:
+          - name: "UNUSED"
+            value: "unused-id"
+      restartPolicy: Always
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: generator-configmap
+data:
+  ADDRESS: "http://filter-service:15002/filter"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: generator-service
+spec:
+  type: NodePort
+  selector:
+    tier: generator-tier
+  ports:
+  - port: 15001
+    targetPort: 5001

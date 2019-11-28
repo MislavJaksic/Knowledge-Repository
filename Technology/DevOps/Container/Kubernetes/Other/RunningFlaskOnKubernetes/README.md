@@ -180,4 +180,39 @@ $: kubectl exec flask-ID --stdin --tty -- python manage.py seed_db
 
 ### Ingress
 
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: minikube-ingress
+  annotations:
+spec:
+  rules:
+  - host: Kubectl-Service-IP.nip.io  # `nip.io` is a wildcard DNS service
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: vue
+          servicePort: 8080
+      - path: /books
+        backend:
+          serviceName: flask
+          servicePort: 5000
+```
+
+Use `nip.io` so you don't have to edit `/etc/hosts`.  
+
+```
+$: minikube addons enable ingress
+
+$: kubectl apply -f minikube-ingress.yml
+
+$: minikube ip
+```
+
+Visit:
+* http://Kubectl-Service-IP.nip.io/books/ping
+* http://Kubectl-Service-IP.nip.io/books
+
 TODO

@@ -21,3 +21,7 @@ How to accomplish a goal larger than a task.
 ### Redis Master-Slave and Guestbook Deployments, Services and DNS
 
 [Instructions](StatelessGuestbook)
+
+### About Source IP and Services
+
+[Instructions](UsingSourceIP)

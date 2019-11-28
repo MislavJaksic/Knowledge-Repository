@@ -44,7 +44,7 @@ $: kubectl get services  #->
   # hello-node   LoadBalancer   10.100.31.217   <pending>     8080:31887/TCP
   # kubernetes   ClusterIP      10.96.0.1       <none>        443/TCP
 
-$: minikube service hello-node  #-> access the app
+$: minikube service hello-node  # -> access the app
 ```
 
 ### Addons

@@ -1,7 +1,9 @@
 ## Demo
 
 In a single `Node` a generator `Pod` sends a message to the filter `Pod` when the user signals the generator `Pod`.  
-Both `Pod`s are accessible from the outside.  
+Both `Pod`s are accessible from the outside because of `NodePort`.  
+You can also use an `Ingress` and an `Ingress Controller` as a single point on entry.  
+`ConfigMap` allows resources like `Deployment`s to be reconfigured.  
 
 ### Microservices
 
@@ -52,12 +54,25 @@ spec:                                                   spec:
       containers:                                             containers:
       - name: generator                                       - name: filter
         image: */generator:demo                                 image: */filter:demo
+        command: ["python"]                                     command: ["python"]
+        args: ["server.py"]                                     args: ["server.py"]
         ports:                                                  ports:
           - containerPort: 5001                                   - containerPort: 5002
-        env:                                                  restartPolicy: Always
-          - name: "ADDRESS"                             
-            value: "http://filter-service:5002/filter"  
+        envFrom:                                              restartPolicy: Always
+          - configMapRef:
+              name: generator-configmap
+        env:
+          - name: "UNUSED"
+            value: "unused-id"
       restartPolicy: Always
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: generator-configmap
+data:
+  ADDRESS: "http://filter-service:15002/filter"
 ```
 
 ### Services
@@ -72,14 +87,39 @@ spec:                      spec:
   selector:                  selector:
     tier: generator-tier       tier: filter-tier
   ports:                     ports:
-  - port: 5001               - port: 5002
+  - port: 15001               - port: 15002
     targetPort: 5001           targetPort: 5002
+```
+
+### Ingress
+
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: demo-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: demo.Kubectl-Server-Ip.nip.io
+    http:
+      paths:
+      - path: /generator
+        backend:
+          serviceName: generator-service
+          servicePort: 15001
+      - path: /filter
+        backend:
+          serviceName: filter-service
+          servicePort: 15002
 ```
 
 ### Usage
 
-Run `kubernetize.sh`. Wait until the `Pod`s are online.  
 ```
+$: kubectl apply -f k8n-yaml
+
 $: kubectl config view --minify  # ->
   # ...
   # clusters:
@@ -90,10 +130,14 @@ $: kubectl config view --minify  # ->
   # ...
 $: kubectl get service  # ->
   # NAME                TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)
-  # filter-service      NodePort    ...          <none>        5002:Assigned-Filter-Port/TCP
-  # generator-service   NodePort    ...          <none>        5001:Assigned-Generator-Port/TCP
-  # kubernetes          ClusterIP   ...          <none>        443/TCP
-```
-Visit `http://Kubectl-Server-Ip:Assigned-Service-Port`.  
+  # filter-service      NodePort    ...          <none>        15002:Filter-Note-Port/TCP
+  # generator-service   NodePort    ...          <none>        15001:Generator-Note-Port/TCP
 
-Run `unkubernetize.sh` to delete all `Service`s and `Deployment`s.  
+# Note: visit http://Kubectl-Server-Ip:Service-Node-Port
+
+# Note: or use `Ingress`
+$: curl demo.Kubectl-Server-Ip.nip.io/generator
+$: curl demo.Kubectl-Server-Ip.nip.io/filter
+
+$: kubectl delete -f k8n-yaml
+```

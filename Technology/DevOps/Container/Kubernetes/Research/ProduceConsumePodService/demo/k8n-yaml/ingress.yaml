@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: demo-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: demo.192.168.99.107.nip.io
+    http:
+      paths:
+      - path: /generator
+        backend:
+          serviceName: generator-service
+          servicePort: 15001
+      - path: /filter
+        backend:
+          serviceName: filter-service
+          servicePort: 15002

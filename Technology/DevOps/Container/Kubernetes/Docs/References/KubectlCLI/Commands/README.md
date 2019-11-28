@@ -205,4 +205,27 @@ TODO
 
 ### CLUSTER MANAGEMENT
 
+#### api-versions
+
+TODO
+
 ### KUBECTL SETTINGS AND USAGE
+
+#### api-resources
+
+TODO
+
+#### explain
+
+List the fields for supported resources.  
+Use case:
+* learn more about a resource
+*
+
+```
+$: kubectl explain Resource-Type[.field.subfield]
+```
+
+#### kustomize
+
+TODO

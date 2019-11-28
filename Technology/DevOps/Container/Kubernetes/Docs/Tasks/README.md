@@ -6,6 +6,10 @@ Steps to produce a result.
 
 [Instructions](AccessAppsInCluster/ConfigureAccessToClusters)
 
+### Ingress on Minikube
+
+[Instructions](AccessAppsInCluster/SetupIngressOnMinikube)
+
 ### Kubernetes Dashboard
 
 [Instructions](AccessAppsInCluster/WebUiDashboard)
