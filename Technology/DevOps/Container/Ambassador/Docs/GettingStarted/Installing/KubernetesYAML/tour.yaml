@@ -1,67 +1,62 @@
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: tour
-spec:
-  ports:
-  - name: ui
-    port: 5000
-    targetPort: 5000
-  - name: backend
-    port: 8080
-    targetPort: 8080
-  selector:
-    app: tour
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tour
+  name: tour-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tour
+      app: tour-app
   strategy:
     type: RollingUpdate
   template:
     metadata:
       labels:
-        app: tour
+        app: tour-app
     spec:
       containers:
-      - name: tour-ui
+      - name: tour-ui-container
         image: quay.io/datawire/tour:ui-0.2.6
         ports:
-        - name: http
+        - name: http-port
           containerPort: 5000
-      - name: quote
+      - name: quote-container
         image: quay.io/datawire/tour:backend-0.2.6
         ports:
-        - name: http
+        - name: http-port
           containerPort: 8080
         resources:
           limits:
             cpu: "0.1"
             memory: 100Mi
 ---
-apiVersion: getambassador.io/v1
-kind: Mapping
+apiVersion: v1
+kind: Service
 metadata:
-  name: tour-ui
+  name: tour-service
 spec:
-  prefix: /
-  service: tour:5000
+  ports:
+  - name: tour-ui-port
+    port: 15000
+    targetPort: 5000
+  - name: backend-port
+    port: 18080
+    targetPort: 8080
+  selector:
+    app: tour-app
 ---
 apiVersion: getambassador.io/v1
 kind: Mapping
 metadata:
-  name: tour-backend
+  name: tour-ui-mapping
+spec:
+  prefix: /
+  service: tour-service:15000
+---
+apiVersion: getambassador.io/v1
+kind: Mapping
+metadata:
+  name: tour-backend-mapping
 spec:
   prefix: /backend/
-  service: tour:8080
-  labels:
-    ambassador:
-      - request_label:
-        - backend
+  service: tour-service:18080

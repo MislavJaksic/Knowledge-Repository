@@ -6,4 +6,18 @@ Provides:
 * app security: authentication, access control, rate limiting
 * API development: self-service portal
 
+### Install
+
+[Instructions](Docs/GettingStarted/Installing/KubernetesYAML)
+
+### Mapping external requests to Services
+
 TODO
+
+### Enable HTTPS (enable TLS)
+
+[Instructions](Docs\Guides\Security\EnablingHTTPS)
+
+TODO
+### cert-manager
+### Ambassador ID != default?

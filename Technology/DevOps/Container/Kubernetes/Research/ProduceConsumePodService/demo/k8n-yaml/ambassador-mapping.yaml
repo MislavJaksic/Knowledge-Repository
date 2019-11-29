@@ -1,0 +1,16 @@
+apiVersion: getambassador.io/v1
+kind: Mapping
+metadata:
+  name: generator-mapping
+spec:
+  prefix: /generator-ambassador/
+  service: generator-service:15001
+
+---
+apiVersion: getambassador.io/v1
+kind: Mapping
+metadata:
+  name: filter-mapping
+spec:
+  prefix: /filter-ambassador/
+  service: filter-service:15002

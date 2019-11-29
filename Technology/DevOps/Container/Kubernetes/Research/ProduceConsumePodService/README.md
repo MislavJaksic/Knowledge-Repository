@@ -2,7 +2,8 @@
 
 In a single `Node` a generator `Pod` sends a message to the filter `Pod` when the user signals the generator `Pod`.  
 Both `Pod`s are accessible from the outside because of `NodePort`.  
-You can also use an `Ingress` and an `Ingress Controller` as a single point on entry.  
+You can use an `Ingress` and an `Ingress Controller` as a single point on entry.  
+You can use an API Gateway, Ambassador, which is more powerful then an `Ingress`.  
 `ConfigMap` allows resources like `Deployment`s to be reconfigured.  
 
 ### Microservices
@@ -115,6 +116,18 @@ spec:
           servicePort: 15002
 ```
 
+### Ambassador API Gateway
+
+```
+apiVersion: getambassador.io/v1           apiVersion: getambassador.io/v1
+kind: Mapping                             kind: Mapping
+metadata:                                 metadata:
+  name: generator-mapping                   name: filter-mapping
+spec:                                     spec:
+  prefix: /generator-ambassador/            prefix: /filter-ambassador/
+  service: generator-service:15001          service: filter-service:15002
+```
+
 ### Usage
 
 ```
@@ -138,6 +151,13 @@ $: kubectl get service  # ->
 # Note: or use `Ingress`
 $: curl demo.Kubectl-Server-Ip.nip.io/generator
 $: curl demo.Kubectl-Server-Ip.nip.io/filter
+
+# Note: or use `Ambassador`
+$: kubectl get svc -o wide ambassador  #->
+  # NAME        EXTERNAL-IP       PORT(S)         
+  # ambassador  LoadBalancer-IP   80:HTTP-Node-Port/TCP,443:HTTPS-Node-Port
+# Note: visit http://LoadBalancer-IP/
+# Note: visit http://Kubectl-Service-IP:HTTP-Node-Port
 
 $: kubectl delete -f k8n-yaml
 ```

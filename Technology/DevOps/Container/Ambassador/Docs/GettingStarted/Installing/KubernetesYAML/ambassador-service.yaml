@@ -4,10 +4,16 @@ kind: Service
 metadata:
   name: ambassador
 spec:
-  type: NodePort/LoadBalancer/loadBalancerIP
-  externalTrafficPolicy: Local
+  type: Supported-Service-Type  # choose one
+  externalTrafficPolicy: Local  # propagate the (request) source IP
   ports:
-   - port: 80
-     targetPort: 8080
+  - name: http  # may have different ports
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  - name: https  # may have different ports
+    port: 443
+    protocol: TCP
+    targetPort: 8443
   selector:
     service: ambassador

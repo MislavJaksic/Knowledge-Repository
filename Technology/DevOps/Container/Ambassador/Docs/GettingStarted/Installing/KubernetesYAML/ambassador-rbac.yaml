@@ -57,7 +57,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: ambassador
-  namespace: K8n-Namespace
+  namespace: K8n-Namespace  # change the namespace
 ---
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition

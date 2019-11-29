@@ -27,7 +27,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: ambassador
-  namespace: K8n-Namespace  # remember to change the namespace!
+  namespace: K8n-Namespace  # change the namespace
 ```
 
 ```
@@ -46,7 +46,7 @@ For production you need to customize the YAML.
 ```
 ...
 spec:
-  type: NodePort/LoadBalancer/loadBalancerIP  # choose one
+  type: Supported-Service-Type  # choose one
   externalTrafficPolicy: Local  # propagate the (request) source IP
 ...
 ```
@@ -62,97 +62,76 @@ $: $ kubectl apply -f ambassador-service.yaml
 
 ### 3. Creating your first service
 
-```
-apiVersion: v1
-kind: Service
-metadata:
-  name: tour
-spec:
-  ports:
-  - name: ui
-    port: 5000
-    targetPort: 5000
-  - name: backend
-    port: 8080
-    targetPort: 8080
-  selector:
-    app: tour
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: tour
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: tour
-  strategy:
-    type: RollingUpdate
-  template:
-    metadata:
-      labels:
-        app: tour
-    spec:
-      containers:
-      - name: tour-ui
-        image: quay.io/datawire/tour:ui-0.2.6
-        ports:
-        - name: http
-          containerPort: 5000
-      - name: quote
-        image: quay.io/datawire/tour:backend-0.2.6
-        ports:
-        - name: http
-          containerPort: 8080
-        resources:
-          limits:
-            cpu: "0.1"
-            memory: 100Mi
----
-apiVersion: getambassador.io/v1
-kind: Mapping
-metadata:
-  name: tour-ui
-spec:  # maps / to the service "tour", port 5000
-  prefix: /
-  service: tour:5000
----
-apiVersion: getambassador.io/v1
-kind: Mapping
-metadata:
-  name: tour-backend
-spec:  # maps /backend/ to the service "tour", port 8000
-  prefix: /backend/
-  service: tour:8080
-  labels:
-    ambassador:
-      - request_label:
-        - backend
-```
+If you installed Ambassador using Helm, you are in the right place.  
 
 ```
 $: kubectl apply -f tour.yaml
 ```
 
+`Mapping` `CustomResourceDefinition`s (CRDs) are used to configure routing.  
+
+```
+apiVersion: v1                apiVersion: getambassador.io/v1
+kind: Service                 kind: Mapping
+metadata:                     metadata:
+  name: tour-service            name: tour-ui-mapping
+spec:                         spec:
+  ports:                        prefix: /
+  - name: tour-ui-port          service: tour-service:15000
+    port: 15000               ---
+    targetPort: 5000          apiVersion: getambassador.io/v1
+  - name: backend-port        kind: Mapping
+    port: 18080               metadata:
+    targetPort: 8080            name: tour-backend-mapping
+  selector:                   spec:
+    app: tour-app               prefix: /backend/
+                                service: tour-service:18080
+```
+
+`Mapping`s do the following:
+* route `http://Kubectl-Service-IP:Node-Port/*` to `tour-service` and its port 15000
+* route `http://Kubectl-Service-IP:Node-Port/backend/` to `tour-service` and its port 18080
+
 ### 4. Testing the Mapping
 
 ```
 $: kubectl get svc -o wide ambassador  #->
-  # NAME         TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        SELECTOR
-  # ambassador   NodePort   10.109.214.20   <none>        80:32387/TCP   service=ambassador
+  # NAME        EXTERNAL-IP       PORT(S)         
+  # ambassador  LoadBalancer-IP   80:HTTP-Node-Port/TCP,443:HTTPS-Node-Port
 ```
 
 ```
-$: minikube service ambassador
+# Note: visit http://LoadBalancer-IP/
+# Note: visit http://Kubectl-Service-IP:HTTP-Node-Port
+
+$: minikube service list
 ```
+
+[Tour](../../../../Other/Tour)
 
 ### 5. The Diagnostics Service in Kubernetes
 
 ```
-http://AMBASSADOR-SERVICE-IP:PORT/ambassador/v0/diag/
+# Note: visit http://Ambassador-Service-IP:Ambassador-Port/ambassador/v0/diag/
+```
+
+[Diagnostics](../../../../Other/Diagnostics)
+
+You can disable the public diagnostics tool with an Ambassador `Module`, a global configuration resource.  
+To view diagnostics, you'll have to port-forward.  
+
+```
+$: kubectl apply -f ambassador-module.yaml
+
+$ kubectl get pods  # ->
+  # NAME                          READY     STATUS
+  # ambassador-Pod-ID   1/1       Running
+
+$: kubectl port-forward ambassador-Pod-ID Local-Port
+
+# Note: visit http://localhost:Local-Port/ambassador/v0/diag/
 ```
 
 ### 6. Enable HTTPS
 
-Can be done.  
+[Security Guide: Enabling HTTPS](../../../Guides/Security/EnablingHTTPS)  
