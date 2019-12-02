@@ -17,6 +17,7 @@ $: kubectl get pods -n kube-system
 
 ```
 $: kubectl run web --image=gcr.io/google-samples/hello-app:1.0 --port=8080
+$: kubectl run web2 --image=gcr.io/google-samples/hello-app:2.0 --port=8080
 
 $: kubectl expose deployment web --target-port=8080 --type=NodePort
 
@@ -38,7 +39,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
   rules:
-  - host: Ingress-Host  # put it into /etc/hosts  # use `Kubectl-Service-IP.nip.io` if you don't want to edit `/etc/hosts`
+  - host: Ingress-Host  # put it into /etc/hosts  # or use `Kubectl-Service-IP.nip.io`
     http:
       paths:
       - path: /
@@ -56,13 +57,15 @@ $: kubectl apply -f example-ingress.yaml
 ```
 
 ```
-$: kubectl run web2 --image=gcr.io/google-samples/hello-app:2.0 --port=8080
+$: kubectl get ingress  # ->
+  # NAME              HOSTS          ADDRESS             PORTS
+  # example-ingress   Ingress-Host   Kubectl-Server-IP   80   
 ```
 
 ```
 # Note: get Kubectl-Server-IP from `minikube ip`
-# Note: append `Kubectl-Server-IP Ingress-Host` to `/etc/hosts`
+# Note: append `Kubectl-Server-IP Ingress-Host` to `/etc/hosts` if you didn't use `nip.io`
 
-$: curl hello-world.info
-$: curl hello-world.info/v2
+$: curl Ingress-Host
+$: curl Ingress-Host/v2
 ```

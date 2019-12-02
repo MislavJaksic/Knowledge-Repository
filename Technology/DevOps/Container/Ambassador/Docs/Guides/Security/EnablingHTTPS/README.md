@@ -4,8 +4,8 @@ Ambassador supports TLS encryption and termination.
 
 Prerequisites:
 * Kubernetes v1.11 or newer
-* kubectl
-* openssl
+* `kubectl`
+* `openssl`
 * Ambassador installed
 
 ### Create a Self-Signed Certificate

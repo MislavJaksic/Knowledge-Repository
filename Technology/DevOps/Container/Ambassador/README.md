@@ -8,6 +8,26 @@ Provides:
 
 ### Install
 
+In `ambassador-no-rbac.yaml` or `ambassador-no-rbac.yaml`:
+```
+...
+kind: ClusterRoleBinding
+subjects:
+- namespace: K8n-Namespace  # change the namespace
+...
+```
+
+```
+$: kubectl cluster-info dump --namespace kube-system | grep authorization-mode  #-> if you see "...RBAC" then RBAC is enabled
+
+$: kubectl apply -f ambassador-rbac.yaml
+
+$: kubectl create clusterrolebinding my-cluster-admin-binding --clusterrole=cluster-admin --user=$(gcloud info --format="value(config.account)")
+$: kubectl apply -f
+```
+
+Deploy both the RBAC and the `Service`.  
+
 [Instructions](Docs/GettingStarted/Installing/KubernetesYAML)
 
 ### Mapping external requests to Services

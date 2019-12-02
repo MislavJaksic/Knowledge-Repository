@@ -4,14 +4,14 @@ TODO
 
 ## Headless Service
 
-`Service`s that don't need load balancing or proxying.  
-`Headless Service`s don't have a `ClusterIP`.  
+`Service`s that don't need load balancing or proxying, but need a single `Service` IP.  
+`Headless Service`s have a `.spec.clusterIP` field set to `none`.  
 
-If a selector:  
-* IS defined `Endpoints` records are defined and the DNS configuration will point to the Pod backing the `Headless Service`  
-* IS NOT defined the DNS configures either the CNAME records for `ExternalName`-type `Service`s or records for any `Endpoints` that share a name with the `Service`, for all other types
+`Headless Service`s are used to interface with other service discovery mechanisms, without being tied to Kubernetes.  
 
-`Headless Service`s can still interface with other service discovery mechanisms.  
+DNS is configured depending if a selector:  
+* IS defined: `Endpoint`s records are created, DNS is modified to return records (addresses) that point to the `Pod`s backing the `Service`
+* IS NOT defined: DNS configures either the CNAME records for `ExternalName`-type `Service`s or records for any `Endpoint`s that share a name with the `Service`, for all other types
 
 ```
 apiVersion: v1
@@ -19,13 +19,13 @@ kind: Service
 ...
 spec:
   type: ClusterIP
-  clusterIP: None  # makes it a headless service
+  clusterIP: None  # creates a `Headless Service`
   ...
 ```
 
 ### Publishing Services (ServiceTypes)
 
-Services expose IP address.  
+`Service`s expose apps.  
 
 `ServiceType`s specify the kind of service you want:
 * `ClusterIP` (default): `Service` only reachable from within Kubernetes; expose `Service` on a cluster-internal IP

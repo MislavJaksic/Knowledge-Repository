@@ -93,6 +93,8 @@ Setup browser certificate.
 * `LoadBalancer`: an external load balancer assigns a fixed, external IP to the `Service`; expose `Service` using a cloud provider’s load balancer; creates a `ClusterIP` and `NodePort` `Service`s to which it routes
 * `ExternalName`: maps `Service` to `externalName` field by returning a CNAME record; no proxy is used
 
+`Headless Service`s are used to interface with other service discovery mechanisms, without being tied to Kubernetes.  
+
 [Details](Docs/Concepts/ServicesLoadBalancingNetworking/Service)
 
 ### Ingress
@@ -105,7 +107,7 @@ Setup browser certificate.
 TODO
 
 [Minikube NGINX with /etc/host](Docs/Tasks/AccessAppsInCluster/SetupIngressOnMinikube)  
-[Ingress](Docs/Concepts/ServicesLoadBalancingNetworking/Ingress)
+[Ingress](Docs/Concepts/ServicesLoadBalancingNetworking/Ingress)  
 [Ingress Controllers](Docs/Concepts/ServicesLoadBalancingNetworking/IngressController)  
 
 ### Containers
