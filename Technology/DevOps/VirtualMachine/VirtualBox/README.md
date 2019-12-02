@@ -24,10 +24,14 @@ Guest additions allow data to be transferred between the VM and the host OS.
 Open VM -> "Devices" -> "Insert Guest Additions" -> Install
 ```
 
+#### Shared clipboard
+
 ```
 # Share a copy-paste clipboard
 Open VM -> "Devices" -> "Shared Clipboard"
 ```
+
+#### Shared folders
 
 ```
 # Shared folders

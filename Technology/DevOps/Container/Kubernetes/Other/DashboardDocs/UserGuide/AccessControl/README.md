@@ -24,7 +24,7 @@ $: kubectl apply -f cluster-binding-adminuser.yaml
 
 ```
 $: kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')  # ->
-  # Name:         admin-user-token-h57mb
+  # Name:         admin-user-token-ID
   # Namespace:    kubernetes-dashboard
   # Labels:       <none>
   # Annotations:  kubernetes.io/service-account.name: admin-user
@@ -32,8 +32,8 @@ $: kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashb
   # Type:  kubernetes.io/service-account-token
   # Data
   # ====
-  # ca.crt:     1066 bytes
-  # namespace:  20 bytes
+  # ca.crt:     X bytes
+  # namespace:  Y bytes
   # token:      Bearer-Token
 ```
 

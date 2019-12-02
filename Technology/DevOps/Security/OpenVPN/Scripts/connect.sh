@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo ssh -i Private-Key-File.ppk.openssh.key Username@Ip
+sudo ssh -i Private-Key-File.key Username@Ip

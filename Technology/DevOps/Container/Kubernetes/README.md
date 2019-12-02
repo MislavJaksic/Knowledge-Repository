@@ -55,6 +55,9 @@ $: kubectl logs Pod-Name [-f] [-l Label-Name=Label-Value] [--since=X] [-c Contai
 `config`s can be merged (by copy-pasting).  
 
 ```
+# Note: connect to a remote machine with a `config` file
+$: sudo scp -i Private-Key.key _username@_ip:/path/to/.kube/config .
+
 # Note: use multiple `config` files
 # Note: it's as if they were merged
   # KUBECONFIG=~/.kube/config-0:~/.kube/config-1
@@ -65,7 +68,7 @@ $: kubectl cluster-info [--dump]  # list client, cluster info
 $: kubectl config view [--minify]  # list `config` file
 $: kubectl config use-context Context-Name  # switch context
 
-$: kubectl config set-context --current --namespace=Namespace-Name  # set namespace to avoid writing [-n K8n-Namespace]
+$: kubectl config set-context --current --namespace=Namespace-Name  # set namespace to avoid writing `-n K8n-Namespace`
 ```
 
 [Instructions](Other/RemoteKubectl)  
@@ -73,7 +76,19 @@ $: kubectl config set-context --current --namespace=Namespace-Name  # set namesp
 
 ### Connect to a remote Dashboard
 
-Setup browser certificate.  
+```
+# Note: connect to a remote machine with a `config` file
+# Note: locate your kubeconfig or config file
+# Note: most likely locations are `~/.kube/config`, `/home/ubuntu/.kube`, `/etc/kubernetes/# admin.conf`, ...
+
+$: grep 'client-certificate-data' ~/.kube/config | head -n 1 | awk '{print $2}' | base64 -d >> kubecfg.crt
+$: grep 'client-key-data' ~/.kube/config | head -n 1 | awk '{print $2}' | base64 -d >> kubecfg.key
+$: openssl pkcs12 -export -clcerts -inkey kubecfg.key -in kubecfg.crt -out kubecfg.p12
+
+$: sudo scp -i Private-Key.key _username@_ip:/path/to/.kube/kubecfg.p12 .
+```
+
+Import the certificate into your browser.  
 
 ```
 # Note: visit https://Kubectl-Server-IP:Kubectl-Server-Port/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#!/login
@@ -82,6 +97,23 @@ Setup browser certificate.
 [Instructions](Other/RemoteKubernetesDashboard)
 
 ### Create a Bearer token
+
+```
+# Note: create ServiceAccount and ClusterRoleBinding first
+
+$: kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')  # ->
+  # Name:         admin-user-token-ID
+  # Namespace:    kubernetes-dashboard
+  # Labels:       <none>
+  # Annotations:  kubernetes.io/service-account.name: admin-user
+  #               kubernetes.io/service-account.uid:  ...
+  # Type:  kubernetes.io/service-account-token
+  # Data
+  # ====
+  # ca.crt:     X bytes
+  # namespace:  Y bytes
+  # token:      Bearer-Token
+```
 
 [Instructions](Other/DashboardDocs/UserGuide/AccessControl)
 
