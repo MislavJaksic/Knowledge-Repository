@@ -101,11 +101,11 @@ $: kubectl describe services/Service-Name
 $: curl Minikube-IP:Service-NodePort
 
 $: kubectl describe deployment
-$: kubectl get pods -l _label
-$: kubectl get services -l _label
-$: kubectl label pod Pod-Name _label
+$: kubectl get pods -l Label-Name=Label-Value
+$: kubectl get services -l Label-Name=Label-Value
+$: kubectl label pod Pod-Name Label-Name=Label-Value
 
-$: kubectl delete service -l _label  # Pod still exits but is unreachable from the outside
+$: kubectl delete service -l Label-Name=Label-Value  # Pod still exits but is unreachable from the outside
 ```
 
 ### [Scale up your app](https://kubernetes.io/docs/tutorials/kubernetes-basics/scale/scale-intro/)

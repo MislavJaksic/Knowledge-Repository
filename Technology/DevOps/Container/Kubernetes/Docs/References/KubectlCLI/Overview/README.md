@@ -148,7 +148,7 @@ Delete resources from:
 ```
 $: kubectl delete Resource-Type [--all]
 $: kubectl delete -f File-Name.yaml  # delete that type and name
-$: kubectl delete Resource-Type,Resource-Type -l name=Label-Name
+$: kubectl delete Resource-Type,Resource-Type -l Label-Name=Label-Value
 ```
 
 #### exec

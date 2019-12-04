@@ -16,11 +16,11 @@ Steps to produce a result.
 
 ### Pod uses ConfigMap
 
-[Instructions](ConfigurePodsContainers/ConfigurePodToUseConfigMap)
+[Instructions](ConfigurePodsContainers/PodToUseConfigMap)
 
 ### Pod uses a PersistentVolume
 
-[Instructions](ConfigurePodsContainers/ConfigurePodToUsePersistentVolume)
+[Instructions](ConfigurePodsContainers/PodToUsePersistentVolume)
 
 ### Pod's ENV VARs
 

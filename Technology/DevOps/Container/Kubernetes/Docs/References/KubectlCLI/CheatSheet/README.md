@@ -53,7 +53,7 @@ $: kubectl explain Resource-Type,Resource-Type
 
 ### Viewing, Finding Resources
 ```
-$: kubectl get Resource-Type Resource-Name [-o Output-Option] [-n K8n-Namespace] [--selector=Label-Name=Label-Value] [--field-selector=.field.subfield=Field-Value] [--sort-by=.field.subfield]
+$: kubectl get Resource-Type Resource-Name [-o Output-Option] [-n K8n-Namespace] [-l Label-Name=Label-Value] [--field-selector=.field.subfield=Field-Value] [--sort-by=.field.subfield]
 
 $: kubectl describe Resource-Type Resource-Name
 ```
@@ -86,7 +86,7 @@ $: [KUBE_EDITOR="nano"] kubectl edit Resource-Type/Resource-Name
 
 $: kubectl scale Resource-Type/Resource-Name --replicas=X [--current-replicas=Y]
 
-$: kubectl delete Resource-Type/Resource-Name [-l name=Label-Name] [--now] [--force] [--grace-period=X]
+$: kubectl delete Resource-Type/Resource-Name [-l Label-Name=Label-Name] [--now] [--force] [--grace-period=X]
 ```
 
 ### Interacting with running Pods

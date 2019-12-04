@@ -4,12 +4,10 @@ About how Kubernetes works and its abstractions.
 
 ### Kubernetes resource management
 
-TODO
 [Instructions](ClusterAdministration/ManagingResources)
 
 ### Ingress
 
-TODO
 [Instructions](ServicesLoadBalancingNetworking/Ingress)
 
 ### Ingress Controllers

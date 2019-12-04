@@ -40,6 +40,7 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
             * [Docker](Technology/DevOps/Container/Docker)
             * [Helm](Technology/DevOps/Container/Helm)
             * [Kubernetes](Technology/DevOps/Container/Kubernetes)
+            * [OperatorFramework](Technology/DevOps/Container/OperatorFramework)
             * [Portainer](Technology/DevOps/Container/Portainer)
         * Monitoring
             * [Prometheus](Technology/DevOps/Monitoring/Prometheus)
@@ -119,8 +120,10 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
         * Framework
             * [Flask](https://github.com/MislavJaksic/Flask-Tutorial)
             * [RubyOnRails](Technology/Web/Framework/RubyOnRails)
+        * [Selenium](https://github.com/MislavJaksic/Selenium-Tutorial)
         * StaticSiteGenerator
             * [Jekyll](Technology/Web/StaticSiteGenerator/Jekyll)
+
 
 ### Contact
 

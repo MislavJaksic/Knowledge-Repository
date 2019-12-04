@@ -16,9 +16,10 @@ external_repo = {"ApacheKafka": "https://github.com/MislavJaksic/Kafka-In-Theory
                  "SAP": "https://github.com/MislavJaksic/SAP-ABAP-Development",
                  "CollageLabs": "https://github.com/MislavJaksic/College-Labs",
                  "Practise": "https://github.com/MislavJaksic/Practise",
-                 "Maven": "https://github.com/MislavJaksic/Maven-Tutorial"}
+                 "Maven": "https://github.com/MislavJaksic/Maven-Tutorial",
+                 "Selenium": "https://github.com/MislavJaksic/Selenium-Tutorial"}
 semiterminal_dir = ["Linux", "Java"]
-terminal_dir = ["Jekyll", "Flask", "RubyOnRails", "RESTFulWebServices", "GraphQL", "Postman", "Grafana", "OpenShot", "OBS", "Practise", "Asciinema", "Scoop", "Chocolatey", "Latex", "HomeNetworking", "CollageLabs", "ApacheSpark", "ApacheKafka", "Python3.x", "Lisp", "JavaScript", "Spring", "Haskell", "Elm", "C++", "ABAP", "MicroserviceGuide", "DesignPatterns", "ComputerVision", "CodeComplete", "CleanCode", "Maven", "Gradle", "Bazel", "Ubuntu", "ShellScripting", "MSYS2", "Cygwin", "IntelliJIDEA", "Eclipse", "CodeBlocks", "SAP", "Atom", "VMWare", "VirtualBox", "OpenStack", "GitLab", "GitHub", "Git", "Nginx", "SSH", "Putty", "OpenVPN", "Prometheus", "Portainer", "Kubernetes", "Helm", "Docker", "Ambassador", "Jenkins", "SQLite", "Redis", "PostgreSQL", "MongoDB", "Graphite", "ApacheHive", "ApacheHadoop", "ApacheDruid", "LeadershipTheoryAndPractice", "Kanban", "AgileManifesto", "Conventions"]
+terminal_dir = ["Jekyll", "Selenium", "RubyOnRails",  "Flask", "RESTFulWebServices", "GraphQL", "Postman", "Grafana", "OpenShot", "OBS", "Practise", "Asciinema", "Scoop", "Chocolatey", "Latex", "HomeNetworking", "CollageLabs", "ApacheSpark", "ApacheKafka", "Python3.x", "Lisp", "JavaScript", "Spring", "Haskell", "Elm", "C++", "ABAP", "MicroserviceGuide", "DesignPatterns", "ComputerVision", "CodeComplete", "CleanCode", "Maven", "Gradle", "Bazel", "Ubuntu", "ShellScripting", "MSYS2", "Cygwin", "IntelliJIDEA", "Eclipse", "CodeBlocks", "SAP", "Atom", "VMWare", "VirtualBox", "OpenStack", "GitLab", "GitHub", "Git", "Nginx", "SSH", "Putty", "OpenVPN", "Prometheus", "Portainer", "OperatorFramework", "Kubernetes", "Helm", "Docker", "Ambassador", "Jenkins", "SQLite", "Redis", "PostgreSQL", "MongoDB", "Graphite", "ApacheHive", "ApacheHadoop", "ApacheDruid", "LeadershipTheoryAndPractice", "Kanban", "AgileManifesto", "Conventions"]
 
 
 def main(args):

@@ -30,11 +30,11 @@ $: minikube delete
 # Note: restrict namespace with [-n K8s-Namespace]
 # Note: Resource-Type Resource-Name == Resource-Type/Resource-Name
 
-$: kubectl get Resource-Type/Resource-Name [-f] [-k] [-o Output-Option] [--watch] [--field-selector=field.subfield=Field-Value]
+$: kubectl get Resource-Type/Resource-Name [-f] [-k] [-o Output-Option] [--watch] [--field-selector=field.subfield=Field-Value] [-LLabel-Name]
 $: kubectl run Id-Name --image=Image-Name [--env="Env-Var-Name=Env-Var-Value"] [--port=Expose-Port] [--replicas=X] [--dry-run] [--command -- _command _arg0.._argN]
-$: kubectl delete Resource-Type/Resource-Name [-f] [-k] [-l name=Label-Name] [--now] [--force] [--grace-period=X]
+$: kubectl delete Resource-Type/Resource-Name [-f] [-k] [-l Label-Name=Label-Value] [--now] [--force] [--grace-period=X]
 
-$: kubectl apply (-f file-Name | -f /path/to/dir) [-k] [URL]
+$: kubectl apply (-f File-Name | -f /path/to/dir | -f URL) [-k] [-R]
 $: [KUBE_EDITOR="nano"] kubectl edit Resource-Type/Resource-Name
 $: kubectl rollout restart Specific-Type/Resource-Name
 
@@ -131,16 +131,14 @@ $: kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashb
 
 ### Ingress
 
-`Ingress` is not a `ServiceType`.  
-`Ingress` will expose your `Service`.  
+`Ingress` is not a `ServiceType`, but it does exposes `Service`s.  
 `Ingress` is an entry point for your cluster.  
 `Ingress` consolidates routing rules and will expose multiple `Service`s under the same IP address.  
+`Ingress` doesn't expose ports or protocols, just HTTP(S)!  
 
-TODO
-
-[Minikube NGINX with /etc/host](Docs/Tasks/AccessAppsInCluster/SetupIngressOnMinikube)  
 [Ingress](Docs/Concepts/ServicesLoadBalancingNetworking/Ingress)  
 [Ingress Controllers](Docs/Concepts/ServicesLoadBalancingNetworking/IngressController)  
+[Minikube NGINX with /etc/host](Docs/Tasks/AccessAppsInCluster/SetupIngressOnMinikube)  
 
 ### Containers
 
@@ -177,3 +175,16 @@ spec:
 ```
 
 [Instructions](Docs/Tasks/ConfigurePodsContainers/ConfigurePodToUseConfigMap)
+
+### Managing resources
+
+Group related resources into a single YAML with `---`.  
+Use labels and label selectors.  
+Chain (nest) `kubectl` commands.  
+Recursively apply a `kubectl` command on each directory with `-R`.  
+Distinguish (canary) releases with labels.  
+Label with `label`.  
+Annotate with `annotate`.  
+Scale with `scale` or `autoscale`.  
+
+[Instructions](Docs/Concepts/ClusterAdministration/ManagingResources)

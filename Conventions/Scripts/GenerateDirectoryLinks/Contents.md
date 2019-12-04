@@ -22,6 +22,7 @@
             * [Docker](Technology/DevOps/Container/Docker)
             * [Helm](Technology/DevOps/Container/Helm)
             * [Kubernetes](Technology/DevOps/Container/Kubernetes)
+            * [OperatorFramework](Technology/DevOps/Container/OperatorFramework)
             * [Portainer](Technology/DevOps/Container/Portainer)
         * Monitoring
             * [Prometheus](Technology/DevOps/Monitoring/Prometheus)
@@ -101,5 +102,6 @@
         * Framework
             * [Flask](https://github.com/MislavJaksic/Flask-Tutorial)
             * [RubyOnRails](Technology/Web/Framework/RubyOnRails)
+        * [Selenium](https://github.com/MislavJaksic/Selenium-Tutorial)
         * StaticSiteGenerator
             * [Jekyll](Technology/Web/StaticSiteGenerator/Jekyll)

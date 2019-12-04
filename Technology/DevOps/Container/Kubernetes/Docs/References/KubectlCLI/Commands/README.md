@@ -9,12 +9,13 @@
 Displays resource. Like `describe`, but with flags.  
 
 ```
-$: kubectl get Resource-Type/Resource-Name [-f] [-k] [-o Output-Option] [--watch] [--field-selector=field.subfield=Field-Value]
+$: kubectl get Resource-Type/Resource-Name [-f] [-k] [-o Output-Option] [--watch] [--field-selector=field.subfield=Field-Value] [-LLabel-Name]
   # -f: use file
   # -k: use kustomize
   # -o: specify output option
   # --watch: watch for changes
   # --field-selector: field query
+  # -L: show and select labels
 ```
 
 #### run
@@ -44,10 +45,10 @@ Delete resource. Supports graceful deletion.
 Careful with force deletion.  
 
 ```
-$: kubectl delete Resource-Type/Resource-Name [-f] [-k] [-l name=Label-Name] [--now] [--force] [--grace-period=X]
+$: kubectl delete Resource-Type/Resource-Name [-f] [-k] [-l Label-Name=Label-Value] [--now] [--force] [--grace-period=X]
   # -f: use file
   # -k: use kustomize
-  # -l name: label query
+  # -l: label query
 ```
 
 ### APP MANAGEMENT
@@ -59,9 +60,10 @@ TODO
 Apply a configuration to a resource.  
 
 ```
-$: kubectl apply (-f file-Name | -f /path/to/dir) [-k] [URL]
+$: kubectl apply (-f File-Name | -f /path/to/dir | -f URL) [-k] [-R]
   # -f: use file
   # -k: use kustomize
+  # -R: recursively operate on directories
 ```
 
 #### annotate
@@ -94,9 +96,10 @@ $: [KUBE_EDITOR="nano"] kubectl edit Resource-Type/Resource-Name
 Update labels.  
 
 ```
-$: kubectl label Resource-Type/Resource-Name Label-Name=Label-Value [--overwrite] [Annotation-Name-]
+$: kubectl label Resource-Type/Resource-Name Label-Name=Label-Value [--overwrite] [Label-Name-] [-l Label-Name=Label-Value]
   # --overwrite: overwrite existing annotation
-  # Label-Name-: delete annotation
+  # Label-Name-: delete label
+  # -l: label query
 ```
 
 #### patch
