@@ -1,20 +1,22 @@
-## Ubuntu
+## [Ubuntu](https://ubuntu.com/)
 
-### Install
+### [Install Ubuntu desktop](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop#0)
 
-Use a virtual machine.  
-VirtualBox can create a virtual machine.  
-Install Guest Additions.  
-[Instructions]()
+[Download Ubuntu](https://ubuntu.com/download)  
 
-Run Software Update
-Run sudo apt-get update
+#### On a Virtual Machine (VM)
 
-Setup Git
+Use a virtual machine creator like [VirtualBox](../../../DevOps/VirtualMachine/VirtualBox).  
+Create a new VM and mount Ubuntu.  
+[Install Guest Additions](../../../DevOps/VirtualMachine/VirtualBox)  
 
-Install Docker: [Instructions]()
+Type `Software Update` into the terminal and run it.  
 
-#### Installing software
+```
+$: sudo apt-get update
+```
 
-Git
-Docker
+### Install software
+
+[Install Git](../../../DevOps/VersionControl/Git)  
+[Install Docker](../../../DevOps/VersionControl/Container/Docker)  

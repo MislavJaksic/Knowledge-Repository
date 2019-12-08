@@ -91,7 +91,7 @@ $: sudo scp -i Private-Key.key _username@_ip:/path/to/.kube/kubecfg.p12 .
 Import the certificate into your browser.  
 
 ```
-# Note: visit https://Kubectl-Server-IP:Kubectl-Server-Port/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#!/login
+https://Kubectl-Server-IP:Kubectl-Server-Port/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#!/login
 ```
 
 [Instructions](Other/RemoteKubernetesDashboard)
