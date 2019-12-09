@@ -10,8 +10,8 @@ $: ./get_helm.sh  # upgrade or install
 
 ```
 # Note: uninstall?
-Note: delete /usr/local/bin/helm
-Note: delete /path/to/.helm
+# Note: delete /usr/local/bin/helm
+# Note: delete /path/to/.helm
 ```
 
 ### Windows

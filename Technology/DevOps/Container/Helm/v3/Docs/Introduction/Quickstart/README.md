@@ -66,8 +66,8 @@ spec:
 
 ```
 $: helm list  # ->
-  # NAME             VERSION   UPDATED                   STATUS    CHART
-  # smiling-penguin  1         Wed Sep 28 12:59:46 2016  DEPLOYED  mysql-0.1.0
+  # NAME          VERSION   UPDATED                   STATUS    CHART
+  # Release-Name  1         Wed Sep 28 12:59:46 2016  DEPLOYED  mysql-0.1.0
 ```
 
 ### Uninstall a Release
@@ -75,8 +75,6 @@ $: helm list  # ->
 
 ```
 $: helm uninstall Release-Name [--keep-history]
-
-$: helm uninstall smiling-penguin [--keep-history]
 ```
 
 ### Reading the Help Text

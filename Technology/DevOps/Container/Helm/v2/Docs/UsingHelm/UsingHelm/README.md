@@ -1,9 +1,9 @@
 ## [Using Helm](https://helm.sh/docs/using_helm/#using-helm)
 
 ```
-Chart: a Helm package
-Repository: where charts are collected and shared
-Release: instance of a chart running in a Kubernetes
+`Chart`: a Helm package
+`Repository`: where `chart`s are collected and shared
+`Release`: instance of a `chart` running in a Kubernetes
 ```
 
 ### Install a chart
