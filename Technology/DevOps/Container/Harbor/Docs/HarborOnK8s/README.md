@@ -6,6 +6,10 @@ $: helm repo update
 
 $: helm install harbour harbor/harbor -f config.yaml  # install and configure
 
+# Note: if `Deployment` is `extensions/v1beta1`, download the chart, apply changes and install it manually
+$: helm pull harbor/harbor
+$: helm install harbour harbor -f config.yaml
+
 $: helm uninstall harbour
 ```
 

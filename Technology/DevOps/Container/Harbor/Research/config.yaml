@@ -1,7 +1,0 @@
-expose:
-  type: nodePort  # important
-  tls:
-    enabled: false  # important
-persistence:
-  enabled: false  # important
-externalURL: http://10.64.1.81  # important

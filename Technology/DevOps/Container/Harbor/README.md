@@ -23,7 +23,22 @@ Having a registry closer to the build and run environment improves the image tra
 
 ### Install
 
-TODO
+```
+$: helm repo add harbor https://helm.goharbor.io
+$: helm repo update
+
+$: helm install harbour harbor/harbor -f config.yaml  # install and configure
+
+$: helm uninstall harbour
+```
+
+[Instructions](Docs/HarborOnK8s)
+
+### First Login
+
+Default:
+* username: `admin`
+* password: `Harbor12345`
 
 ### Upgrade or Migrate
 

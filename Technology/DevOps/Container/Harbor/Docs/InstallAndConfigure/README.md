@@ -5,6 +5,6 @@ Always get the latest (stable) release.
 [Release installers](https://github.com/goharbor/harbor/releases):
 * online
 * offline
-* [Helm chart for Kubernetes](UsingHelm)
+* [Helm chart for Kubernetes](../HarborOnK8s)
 
 TODO
