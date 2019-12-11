@@ -34,11 +34,20 @@ $: helm uninstall harbour
 
 [Instructions](Docs/HarborOnK8s)
 
+### Connect
+
+Using:
+* `NodePort`: with or without TLS, `http(s)://externalURL-field:Node-Port`
+
 ### First Login
 
 Default:
 * username: `admin`
 * password: `Harbor12345`
+
+### Push images
+
+### Pull images
 
 ### Upgrade or Migrate
 

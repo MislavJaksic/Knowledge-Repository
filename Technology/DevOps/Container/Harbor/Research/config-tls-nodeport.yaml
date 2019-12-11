@@ -1,0 +1,7 @@
+expose:
+  type: nodePort  # choose how to expose a Service
+  tls:
+    commonName: harbour-common-name
+persistence:
+  enabled: false
+externalURL: http://Kubectl-Server-IP  # different for every type of Service
