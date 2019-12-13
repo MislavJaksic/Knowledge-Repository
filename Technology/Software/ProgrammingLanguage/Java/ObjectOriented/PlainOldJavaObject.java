@@ -1,11 +1,11 @@
 import java.util.Objects;
 
-public class Pojo {
+public class PlainOldJavaObject {
 	public Integer before;
-	public String ip;
+	public String middle;
 	public Integer after;
 
-	public Pojo() {
+	public PlainOldJavaObject() {
 
 	}
 
@@ -20,10 +20,10 @@ public class Pojo {
 	    // type check and cast
 	    if (getClass() != o.getClass())
 	        return false;
-	    Pojo ip_message = (Pojo) o;
+	    PlainOldJavaObject pojo = (PlainOldJavaObject) o;
 	    // field comparison
-	    return Objects.equals(this.before, ip_message.before)
-	            && Objects.equals(this.ip, ip_message.ip)
-	            && Objects.equals(this.after, ip_message.after);
+	    return Objects.equals(this.before, pojo.before)
+	            && Objects.equals(this.middle, pojo.middle)
+	            && Objects.equals(this.after, pojo.after);
 	}
 }

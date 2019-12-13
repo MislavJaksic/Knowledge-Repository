@@ -5,30 +5,30 @@ public class Generics {
         GenericClass<Integer> integer_generic = new GenericClass<>();
         integer_generic.setGenericMethod(25);
         System.out.println(integer_generic.getGenericMethod());  // -> 25
-        
+
         GenericClass<String> string_generic = new GenericClass<>();
         string_generic.setGenericMethod("Twenty five");
-        System.out.println(string_generic.getGenericMethod()); // -> Twenty five
+        System.out.println(string_generic.getGenericMethod());  // -> Twenty five
 
-        System.out.println(GenericFunction(5));  // -> 5
-        System.out.println(GenericFunction("Return me!"));  // -> Return me!
-        
+        System.out.println(genericFunction(5));  // -> 5
+        System.out.println(genericFunction("Return me!"));  // -> Return me!
 
-        PrintData(string_generic);// -> Twenty five
 
-        BoundedMethod((Integer) 25);  // -> 25
+        printData(string_generic);  // -> Twenty five
+
+        boundedMethod((Integer) 25);  // -> 25
     }
 
-    public static <P> P GenericFunction(P input) {
+    public static <P> P genericFunction(P input) {
         return input;
     }
 
-    public static <V> void PrintData(GenericClass<V> param_object) {
+    public static <V> void printData(GenericClass<V> param_object) {
         V output = param_object.getGenericMethod();
         System.out.println(output);
     }
 
-    public static <V extends Number> void BoundedMethod(V bounded_object) {
+    public static <V extends Number> void boundedMethod(V bounded_object) {
         System.out.println(bounded_object.intValue());
     }
 }

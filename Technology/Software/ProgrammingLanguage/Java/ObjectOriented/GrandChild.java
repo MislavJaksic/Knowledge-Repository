@@ -7,15 +7,15 @@ public final class GrandChild extends Child {
     }
 
     @Override
-    public void NoModifiers() {
+    public void noModifiersMethod() {
         System.out.println("GRANDCHILD no modifiers");
     }
 
-    public static void Static() {
+    public static void staticMethod() {
         System.out.println("GRANDCHILD static");
     }
 
-    public void GrandChildMethod() {
+    public void grandChildMethod() {
         System.out.println("GRANDCHILD method");
     }
 }

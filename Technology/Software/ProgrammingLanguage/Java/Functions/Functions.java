@@ -6,7 +6,7 @@ public class Functions {
         double x_to_nth = nPowerX(x, n);
         System.out.println(x_to_nth);  // -> a big number
 
-        PassByValue(x, n);
+        passByValue(x, n);
         System.out.println(x);  // -> 2
         System.out.println(n);  // -> 10
 
@@ -27,7 +27,7 @@ public class Functions {
         return power;
     }
 
-    private static void PassByValue(Integer x, Integer y) {
+    private static void passByValue(Integer x, Integer y) {
         int swapper = x;
         x = y;
         y = swapper;

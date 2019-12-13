@@ -13,6 +13,7 @@ $: javac -version
 #### Windows
 
 [Download](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) the JDK from the website.  
+[Download](https://www.java.com/en/download/manual.jsp) the JRE from the website.  
 
 Setup your environment variables:
 * add `/path/to/Java/jdk-x.y.z/bin` to PATH

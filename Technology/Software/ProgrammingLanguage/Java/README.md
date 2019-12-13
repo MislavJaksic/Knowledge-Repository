@@ -8,6 +8,4 @@ It balances speed, security and verbosity.
 
 * Generics: about generic types, how to use and handle them
 
-* LibrariesFrameworks: libraries and tools
-
 * Spring: a popular framework

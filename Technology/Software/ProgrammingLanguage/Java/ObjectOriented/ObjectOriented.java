@@ -1,7 +1,7 @@
 public class ObjectOriented {
     // Class name and <file_name>.java have to match
 
-    // Fields
+    // Fields (arguments)
     int number;
 
     // Methods
@@ -18,34 +18,34 @@ public class ObjectOriented {
         // child = parent;  // -> cannot cast into a more specialised class
         Parent parent_ref_child_object = new Child();
 
-        parent_ref_and_object.NoModifiers();     // -> PARENT
-        parent_ref_and_object.Static();          // -> PARENT
-        parent_ref_and_object.Final();           // -> PARENT
-        parent_ref_and_object.FinalStatic();     // -> PARENT
-        parent_ref_and_object.ParentMethod();    // -> PARENT
+        parent_ref_and_object.noModifiersMethod();  // -> PARENT
+        parent_ref_and_object.staticMethod();  // -> PARENT
+        parent_ref_and_object.finalMethod();  // -> PARENT
+        parent_ref_and_object.finalStaticMethod();  // -> PARENT
+        parent_ref_and_object.parentMethod();  // -> PARENT
         System.out.println("- - - - -");
 
-        child_ref_and_object.NoModifiers();     // -> CHILD, overridden
-        child_ref_and_object.Static();          // -> CHILD, owner
-        child_ref_and_object.Final();           // -> PARENT, inherited
-        child_ref_and_object.FinalStatic();     // -> PARENT, inherited
-        child_ref_and_object.ParentMethod();    // -> PARENT, inherited
-        child_ref_and_object.ChildMethod();     // -> CHILD, owner
+        child_ref_and_object.noModifiersMethod();  // -> CHILD, overridden
+        child_ref_and_object.staticMethod();  // -> CHILD, owner
+        child_ref_and_object.finalMethod();  // -> PARENT, inherited
+        child_ref_and_object.finalStaticMethod();  // -> PARENT, inherited
+        child_ref_and_object.parentMethod();  // -> PARENT, inherited
+        child_ref_and_object.childMethod();  // -> CHILD, owner
         System.out.println("- - - - -");
 
-        parent_ref_child_object.NoModifiers();    // -> CHILD, invoke based on object, non-static overridden by object
-        parent_ref_child_object.Static();         // -> PARENT, invoke based on reference, static hidden by reference
-        parent_ref_child_object.Final();          // -> PARENT, inherited
-        parent_ref_child_object.FinalStatic();    // -> PARENT, inherited
-        parent_ref_child_object.ParentMethod();   // -> PARENT, inherited
-        // parent_ref_child_object.ChildMethod();  // -> not possible, parent doesen't have child methods
+        parent_ref_child_object.noModifiersMethod();  // -> CHILD, invoke based on object, non-static overridden by object
+        parent_ref_child_object.staticMethod();  // -> PARENT, invoke based on reference, static hidden by reference
+        parent_ref_child_object.finalMethod();  // -> PARENT, inherited
+        parent_ref_child_object.finalStaticMethod();  // -> PARENT, inherited
+        parent_ref_child_object.parentMethod();   // -> PARENT, inherited
+        // parent_ref_child_object.childMethod();  // -> not possible, parent doesen't have child methods
         System.out.println("- - - - -");
 
         // Statics method can be invoked without instantiation
-        Parent.Static();
-        Parent.FinalStatic();
-        Child.Static();
-        Child.FinalStatic();
+        Parent.staticMethod();
+        Parent.finalStaticMethod();
+        Child.staticMethod();
+        Child.finalStaticMethod();
         System.out.println("- - - - -");
 
 
@@ -54,31 +54,31 @@ public class ObjectOriented {
         Child child_ref_grand_object = new GrandChild();
         Parent parent_ref_grand_object = new GrandChild();
 
-        grand_ref_and_object.NoModifiers();       // -> GRANDCHILD, overridden
-        grand_ref_and_object.Static();            // -> GRANDCHILD, owner
-        grand_ref_and_object.Final();             // -> PARENT, inherited
-        grand_ref_and_object.FinalStatic();       // -> PARENT, inherited
-        grand_ref_and_object.ParentMethod();      // -> PARENT, inherited
-        grand_ref_and_object.ChildMethod();       // -> CHILD, inherited
-        grand_ref_and_object.GrandChildMethod();  // -> GRANDCHILD, owner
+        grand_ref_and_object.noModifiersMethod();  // -> GRANDCHILD, overridden
+        grand_ref_and_object.staticMethod();  // -> GRANDCHILD, owner
+        grand_ref_and_object.finalMethod();  // -> PARENT, inherited
+        grand_ref_and_object.finalStaticMethod();  // -> PARENT, inherited
+        grand_ref_and_object.parentMethod();  // -> PARENT, inherited
+        grand_ref_and_object.childMethod();  // -> CHILD, inherited
+        grand_ref_and_object.grandChildMethod();  // -> GRANDCHILD, owner
         System.out.println("- - - - -");
 
-        child_ref_grand_object.NoModifiers();         // -> GRANDCHILD, overridden by object
-        child_ref_grand_object.Static();              // -> CHILD, hidden by reference
-        child_ref_grand_object.Final();               // -> PARENT, inherited
-        child_ref_grand_object.FinalStatic();         // -> PARENT, inherited
-        child_ref_grand_object.ParentMethod();        // -> PARENT, inherited
-        child_ref_grand_object.ChildMethod();         // -> CHILD, inherited
-        // child_ref_grand_object.GrandChildMethod();  // -> not possible, child doesen't have grandchild methods
+        child_ref_grand_object.noModifiersMethod();  // -> GRANDCHILD, overridden by object
+        child_ref_grand_object.staticMethod();  // -> CHILD, hidden by reference
+        child_ref_grand_object.finalMethod();  // -> PARENT, inherited
+        child_ref_grand_object.finalStaticMethod();  // -> PARENT, inherited
+        child_ref_grand_object.parentMethod();  // -> PARENT, inherited
+        child_ref_grand_object.childMethod();  // -> CHILD, inherited
+        // child_ref_grand_object.grandChildMethod();  // -> not possible, child doesen't have grandchild methods
         System.out.println("- - - - -");
 
-        parent_ref_grand_object.NoModifiers();         // -> GRANDCHILD, overridden by object
-        parent_ref_grand_object.Static();              // -> PARENT, hidden by reference
-        parent_ref_grand_object.Final();               // -> PARENT, inherited
-        parent_ref_grand_object.FinalStatic();         // -> PARENT, inherited
-        parent_ref_grand_object.ParentMethod();        // -> PARENT, inherited
-        // parent_ref_grand_object.ChildMethod();       // -> not possible, parent doesen't have child methods
-        // parent_ref_grand_object.GrandChildMethod();  // -> not possible, parent doesen't have grandchild methods
+        parent_ref_grand_object.noModifiersMethod();  // -> GRANDCHILD, overridden by object
+        parent_ref_grand_object.staticMethod();  // -> PARENT, hidden by reference
+        parent_ref_grand_object.finalMethod();  // -> PARENT, inherited
+        parent_ref_grand_object.finalStaticMethod();  // -> PARENT, inherited
+        parent_ref_grand_object.parentMethod();  // -> PARENT, inherited
+        // parent_ref_grand_object.childMethod();  // -> not possible, parent doesen't have child methods
+        // parent_ref_grand_object.grandChildMethod();  // -> not possible, parent doesen't have grandchild methods
         System.out.println("- - - - -");
 
         Parent[] family = {new Parent(), new Child(), new GrandChild()};

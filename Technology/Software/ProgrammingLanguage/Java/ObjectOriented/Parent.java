@@ -6,19 +6,19 @@ public class Parent {
     public String public_string = "Public";           // -> seen by everyone
 
     // Class fields
-    // Static fields belong to a class; shared among all objects
-    static String static_string = "Static";
-    // Final fields cannot be changed
-    final String final_string = "Final";
-    static final String static_final_string = "Static and final";
-    
+    // staticMethod fields belong to a class; shared among all objects
+    static String static_string = "staticMethod";
+    // finalMethod fields cannot be changed
+    final String final_string = "finalMethod";
+    static final String static_final_string = "staticMethod and final";
+
     static {
-        // Static block is executed after field declaration
-        static_string = "Static";
+        // staticMethod block is executed after field declaration
+        static_string = "staticMethod";
     }
-    
-    
-    
+
+
+
     // Constructors are invoked upon object creation
     // Same name as the class, no return type
     public Parent() {
@@ -30,39 +30,39 @@ public class Parent {
         this(); // this(<parm1, param2, ...>) calls another constructor in same class
     }
 
-    
-    
+
+
     // Getters and setters are methods that control access to fields
-    public String getPrivate_string() {
+    public String getPrivateString() {
         // Never reutrn a reference to a private field; always create a new one
         return this.private_string; //"this." references the object's field
     }
-    
-    public void setPrivate_string(String private_string) {
+
+    public void setPrivateString(String private_string) {
         this.private_string = private_string;
     }
 
-    
-    
-    public void NoModifiers() {
+
+
+    public void noModifiersMethod() {
         System.out.println("PARENT no modifiers");
     }
 
     // Classes can invoke static methods with <class_name>.<static_method_name>(<arguments>)
-    public static void Static() {
+    public static void staticMethod() {
         System.out.println("PARENT static");
     }
 
     // Methods marked with final cannot be overridden or hidden
-    public final void Final() {
+    public final void finalMethod() {
         System.out.println("PARENT final");
     }
 
-    public final static void FinalStatic() {
+    public final static void finalStaticMethod() {
         System.out.println("PARENT final and static");
     }
 
-    public void ParentMethod() {
+    public void parentMethod() {
         System.out.println("PARENT method");
     }
 }
