@@ -1,12 +1,12 @@
 > import System.Random
-> import System.Environment  
-> import System.IO  
-> import System.IO.Error 
+> import System.Environment
+> import System.IO
+> import System.IO.Error
 
 === CONVENTIONS ===
 
 Use camelCase for function and variable names.
-_ means: ignore this value.
+_: ignore this value.
 
 === RANDOMNESS ===
 

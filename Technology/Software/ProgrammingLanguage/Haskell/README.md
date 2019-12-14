@@ -1,6 +1,6 @@
 ## [Haskell](https://www.haskell.org/)
 
-Haskell is a functional programming language which is:
+Haskell is a functional programming language that is:
 * strongly statically typed
 * purely functional (no side effects, everything is a function)
 * lazy evaluated (not eager)
@@ -18,26 +18,24 @@ Haskell is a functional programming language which is:
 
 ### Haskell specific folders
 
-There are a lot of specific folders because Haskell is a functional language.  
+Functional languages are very different from imperative languages.  
 
-* Basics:
+* Basics: boolean algebra
 
-* Interpreter:
+* ControlFlow: if-then-else, pattern matching, case expression, guard
 
-* ListComprehension:
+* DataStructures: list, list comprehension, tuple
 
-* Module:
+* DataTypes: type, type synonym, type variable, typeclass, algebraic data type, type and data constructor, records, type parameter, maybe, either, infix notation, recursive data structure, kinds, functor, foldable,
 
-* Other:
+* Functions: value, function, currying, partial application, section, higher-order function, map, filter, take-while, lambda expression, composition, pointfree style, function application, fold, scan
 
-* PatternMatchingGuards:
+* Interpreter: Haskell interactive interpreter
 
-* Recursion:
+* Module: working with Haskell files
 
-* Types:
+* Other: unsorted concepts
 
-* WhereLet:
+* Recursion: recursion, accumulators, recursion
 
-* Document, ProjectManagement and Testing: deleted in favour of a project template repository
-
-* ObjectOriented: deleted because it isn't supported by Haskell
+* WhereLet: local definitions where and let

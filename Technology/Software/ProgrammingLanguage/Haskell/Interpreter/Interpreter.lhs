@@ -1,3 +1,7 @@
+=== INTERPRETER ===
+
+Start by running "ghci".
+
 === INTERPRETER COMMANDS ===
 
 :type

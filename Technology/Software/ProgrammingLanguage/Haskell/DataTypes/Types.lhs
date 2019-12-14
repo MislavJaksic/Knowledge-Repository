@@ -1,4 +1,4 @@
-=== TYPES ===
+=== TYPE ===
 
 A type begins with a capital letter.
 Common types are: Int, Integer, Float, Double, Bool, Char, Ordering, ().
@@ -22,7 +22,7 @@ The last type is the return type.
 > addThree' :: (Int, Int, Int) -> Int
 > addThree' (x y z) = x + y + z
 
-=== TYPE SYNONYMS ===
+=== TYPE SYNONYM ===
 
 A type alias (synonym) begins with a capital letter.
 
@@ -38,9 +38,9 @@ A type alias (synonym) begins with a capital letter.
 > type Customers = [Customer]
 > type Triangle  = (Point, Point, Point)
 
-=== POLYMORPHIC TYPES ===
+=== TYPE VARIABLE ===
 
-A type variable, polymorphic type begins with a lowercase letter.
+A type variable, polymorphic type, begins with a lowercase letter.
 A generic type.
 Polymorphic functions have type variables.
 
@@ -49,23 +49,24 @@ Polymorphic functions have type variables.
 > swap' :: (a, b) -> (b, a)
 > swap' x = (snd x, fst x)
 
-=== TYPECLASSES AND ANNOTATIONS ===
+=== TYPECLASS AND ANNOTATION ===
 
-Typeclasses are a set of types. They are analogues to interfaces.
-Types are a set of values. They are analogues to classes.
+Typeclasses are a set of types. Typeclasses are interfaces from the OO world.
+Types are a set of values. They are classes from the OO world.
 
 Typeclass is a type interface.
 A type that implements a typeclass instances its behaviour.
 
-Eq       - support equality testing.
-Ord      - can be ordered.
-Show     - can be represented as a string.
-Read     - take a String type and transform it into another type.
-Enum     - has predecessors and successors.
-Bounded  - has an upper and lower bound.
-Num      - behaves like a number.
-Integral - behaves like a whole number, integer.
-Floating - behaves like a decimal number, floating point.
+Eq         - support equality testing.
+Ord        - can be ordered.
+Show       - can be represented as a string.
+Read       - take a String type and transform it into another type.
+Enum       - has predecessors and successors.
+Bounded    - has an upper and lower bound.
+Num        - behaves like a number.
+Integral   - behaves like a whole number, integer.
+Floating   - behaves like a decimal number, floating point.
+Fractional - can be divided
 
 Type annotations are explicit annotation after the expression.
 
@@ -83,22 +84,25 @@ Algebraic data types enumerate all possible values.
 
 > data Tricolour = Red | Green | Blue
 
-"Tricolour" is a new type while "Red", "Green" and "Blue" are data constructors.
-"Red", "Green" and "Blue" are nullary constructors because they are values, parameterless functions.
-"Tricolour" is an enumeration.
+New type: "Tricolour".
+Data constructors: "Red", "Green" and "Blue".
+Nullary constructors, parameterless functions, values: "Red", "Green" and "Blue".
 Data constructors are functions just like any other.
 
-Type and data constructor name have the same name ("Point") when there is only one data constructor.
-"Circle" and "Rectangle" data constructors are of type "Shape".
+When there is only one data constructor type and data constructor have the same name ("Point").
+"Circle" and "Rectangle" are data constructors of type "Shape".
 An analogy: "True" and "False" are of type "Bool".
+
 Types can derive typeclasses (Show, Ord, ...).
 
-> data Point = Point Float Float deriving (Show)
-> data Shape = Circle Point Float | Rectangle Point Point deriving (Show)
+> data Point = Point Float Float deriving (Show, Eq)
+> data Shape = Circle Point Float | Rectangle Point Point deriving (Show, Eq)
 
 > surface :: Shape -> Float
 > surface (Circle _ r) = pi * r ^ 2
 > surface (Rectangle (Point x1 y1) (Point x2 y2)) = (abs $ x2 - x1) * (abs $ y2 - y1)
+
+=== ALGEBRAIC DATA TYPES ===
 
 === RECORDS ===
 
@@ -135,7 +139,7 @@ You can set default values in the same way.
 
 > newTimer = oldTimer {year=2000}
 
-=== TYPE PARAMETERS ===
+=== TYPE PARAMETER ===
 
 Type constructors take types as parameters and output a type.
 
@@ -165,7 +169,7 @@ data Either a b = Left a | Right b
 
 Operator priority ranges from 0 to 9.
 
-=== RECURSIVE DATA STRUCTURES ===
+=== RECURSIVE DATA STRUCTURE ===
 
 A binary search tree.
 A "Tree" is either "EmptyTree" or is a "Node" with value "a", left sub-"Tree" and right sub-"Tree".
@@ -196,7 +200,7 @@ Either insert value "a" into an "EmptyTree" or value "a" into a "Node".
 > nums = [8,6,4,1,7,3,5]
 > numsTree = foldr treeInsert EmptyTree nums -- -> constructs a complex tree
 
-=== NEW TYPECLASSS ===
+=== NEW TYPECLASS ===
 
 "Class" is used to define a new typeclass.
 "a" is a type variable that will become an instance of typeclass "Eq".
@@ -256,7 +260,7 @@ Better definition:
 > yesnoIf :: (YesNo y) => y -> a -> a -> a
 > yesnoIf yesnoVal yesResult noResult = if yesno yesnoVal then yesResult else noResult
 
-=== KINDS ===
+=== KIND ===
 
 Kinds are "types of types".
 "Int", "Maybe", and "Either" are type constructors of different kind.

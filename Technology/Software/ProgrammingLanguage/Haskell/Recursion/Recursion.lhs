@@ -1,4 +1,4 @@
-=== RECURSION ===
+=== (GUARDED) RECURSION ===
 
 A recursive function is one which calls itself.
 Most problems can be solved recursively.
@@ -20,6 +20,8 @@ Structural recursion processes a data structure.
 > getMax [x] = x
 > getMax (x:xs) = max x (getMax xs)
 
+Standard (guarded) recursion is like 'foldr'.
+
 === ACCUMULATOR RECURSION ===
 
 Return the result once you've hit the base case.
@@ -35,7 +37,9 @@ Don't traverse upwords if you don't have to.
 >   where rev []     ys = ys
 >         rev (x:xs) ys = rev xs (x:ys)
 
-Save memory and time.
+Saves memory and time.
+
+Accumulator recursion is like 'foldl'.
 
 === CORECURSION ===
 

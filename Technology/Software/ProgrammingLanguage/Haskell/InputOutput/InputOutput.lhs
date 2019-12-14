@@ -20,18 +20,18 @@ A program with a "main" function can be compiled and run.
 
 A Hello World program:
   main1 = putStrLn "Hello, world!" -- -> takes a string, prints it on screen and returns an IO action
-  
+
 You can join multiple actions into one action with "do":
 main2 = do
   name <- getLine -- -> perform an IO action, unwraps the type and binds the result to a variable
-  putStrLn $ "Hello," ++ name
+  putStrLn \$ "Hello," ++ name
 
 The return value of the "do" block is the return value of the last action.
 
 "return" in Haskell is not the same as in other programming languages:
-main3 = do  
+main3 = do
     return "Hello" -- -> does not end execution!
-    line <- getLine  
+    line <- getLine
     return "World" -- -> takes a value, wraps it into an IO action and returns an IO action
 
 > main = do
@@ -92,15 +92,15 @@ IO Handle -- -> represents file location
 hGetContents -- -> continously read from the Handle
 hClose -- -> close the file Handle
 
-> main31 = do  
->   handle <- openFile "girlfriend.txt" ReadMode  
->   contents <- hGetContents handle  
->   putStr contents  
->   hClose handle  
+> main31 = do
+>   handle <- openFile "girlfriend.txt" ReadMode
+>   contents <- hGetContents handle
+>   putStr contents
+>   hClose handle
 
 withFile -- -> takes a string and IOMode and a function then closes the file
 hPutStr
-hPutStrLn 
+hPutStrLn
 hGetLine
 hGetChar
 hGetContents

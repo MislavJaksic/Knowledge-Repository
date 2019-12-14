@@ -13,19 +13,19 @@ Infix notation:
 > one = 5 `div` 3 -- -> 1
 
 Function are declared like so:
-_type_declaration :: (_class_constraint)..(_class_constraint) => _param -> .. -> _param -> _output
-_function_name _param.._param = _expression
+Type-Declaration :: (Class-Constraint)..(Class-Constraint) => _param -> .. -> _param -> _output
+Function-Name _param.._param = _expression
 
 > number :: (Num a) => a -> a -> a -- -> Num is a _class_constraint; x and y are a and a
 > number x y = x*10 + y
 
 === CURRIED FUNCTIONS ===
 
-A higher-order function is a function that takes a function as input or output.
+A higher-order function is a function that output or takes a function as input.
 On paper, a function can take only one parameter.
 If it takes two or more it has to be curried.
 
-"->" is right associative, meaning they group up to the right:
+'->' is right associative, meaning they group up to the right:
 number :: (Num a) => a -> (a -> a) -- -> takes one parameter, returns a function that takes one parameter and returns a value
 EQUAL TO
 number :: (Num a) => a -> a -> a -- -> takes two parameters
@@ -33,17 +33,23 @@ number :: (Num a) => a -> a -> a -- -> takes two parameters
 Function application is right associative.
 
 (number 1) 2 -- -> takes one parameter, returns a function that takes one parameter and returns a value
-EQUAL  TO
+OR
 number 1 2 -- -> takes two parameters
 
 === PARTIAL APPLICATION ===
 
 Define a new function by giving another function too few arguments.
 The order of parameters is important when defining a partially applied function.
-This is called eta reduction.
+
+Eta reduction.
 
 > fifty = number 5 -- -> defined x, but not y
 > fiftySeven = fifty 7 -- -> 57
+
+You can also use tricks to swap the order of the arguments.
+
+> indexSecond :: String -> [(Char, Int)]
+> indexSecond = flip (zip) [0..]
 
 === SECTIONS ===
 
@@ -108,7 +114,7 @@ Takes a predicate functions and a list, then returns all elements before the pre
 === LAMBDA EXPRESSIONS ===
 
 Lambda are anonymous, throwaway functions.
-Lambda begins with \ and defines parameters before ->.
+Lambda begins with '\' and defines parameters before '->'.
 
 incList = map (+1)
 EQUAL TO
@@ -118,7 +124,7 @@ Use sparingly!
 
 === COMPOSITION AND POINTFREE STYLE ===
 
-Mathematical composition: (f . g . h)(x) = f (g (h x))
+Mathematical composition: (f . g . h)(x) == f (g (h x))
 Composition is right associative.
 
 > applyTwice' :: (a -> a) -> a -> a
@@ -131,24 +137,26 @@ Pointfree style is a way of defining functions without writing parameters.
 
 === FUNCTION APPLICATION ===
 
-$ is an operator with the lowest infixl (precedence).
+'\$' is an operator with the lowest infixl (precedence).
 Removes the need for brackets.
 
 > fa = sum (map sqrt [1..130])
 > fa' = sum $ map sqrt [1..130]
+
+Similar to function composition.
 
 === FOLD AND SCAN ===
 
 Folds take a binary function, an accumulator starting value and a list.
 Folds return a single value, an accumulator.
 
-Right fold takes a combining function, a starting value and a list.
+'foldr' takes a combining function, a starting value and a list.
 It evaluates to:
 f x1 (f x2 (f x3 z))
 OR
 x1 `f` (x2 `f` (x3 `f` z)))
 
-Left fold takes a combining function, a starting value and a list.
+'foldl' takes a combining function, a starting value and a list.
 It evaluates to:
 f (f (f z x1) x2) x3
 
@@ -158,6 +166,9 @@ f (f (f z x1) x2) x3
 > map'' :: (a -> b) -> [a] -> [b]
 > map'' f xs = foldr (\x acc -> f x : acc) [] xs
 
-foldl is more efficient then foldr.
+'foldl' is more efficient then 'foldr'.
+
+'foldl' is like an accumulator-style recursion.
+'foldr' is like a standard (guarded) recursion.
 
 Scans are similar to folds, but output all intermediate accumulators.

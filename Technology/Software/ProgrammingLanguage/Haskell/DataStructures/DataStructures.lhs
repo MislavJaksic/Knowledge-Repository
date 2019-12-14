@@ -44,8 +44,11 @@ Basic functions:
 > getMin = minimum [1,2,3]  -- -> 1
 > getSum = sum [1,2,3]  -- -> 6
 > getProduct = product [1,2,3]  -- -> 6
+
 > isElemInList = 2 `elem` [1,2,3]  -- -> True
 > withoutDuplicates = L.nub [1, 2, 3, 1, 1, 2]  -- -> [1,2,3]
+> concatLists = L.concat [[1,2],[3,4,5]] -- -> [1,2,3,4,5]
+> splitList = splitAt 3 [1,2,3,4,5] -- -> ([1,2,3],[4,5])
 
 === LIST RANGES ===
 
@@ -58,6 +61,13 @@ Infinite ranges:
 > takeInfinite = take 4 [5,10..] -- -> [5,10,15,20]
 > takeCycle = take 4 (cycle [1,2,3]) -- -> [1,2,3,1]
 > takeRepeat = take 4 (repeat 5) -- -> [5,5,5,5]
+
+=== LIST COMPREHENSION ===
+
+List comprehension are a mathematical construct:
+[ _expression | _element.._element, _predicate.._predicate]
+
+> trueFalse = [p `mod` 2 == 0 | x <- [1..3], y <- [1..3], let p = x*y, p /= 1, p /= 9] -- -> [T, F, T, T, T, F, T]
 
 === TUPLES ===
 
