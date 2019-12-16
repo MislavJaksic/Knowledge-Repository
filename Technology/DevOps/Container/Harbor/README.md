@@ -45,6 +45,8 @@ Default:
 * username: `admin`
 * password: `Harbor12345`
 
+You should change the password.  
+
 ### Push images
 
 ### Pull images
@@ -52,3 +54,9 @@ Default:
 ### Upgrade or Migrate
 
 TODO
+
+
+must set common name!!!
+  -- specific to nodePort (its an IP)
+extract the certificates from the secret: harbor-nginx
+-> ca.crt tls.cert tls.key
