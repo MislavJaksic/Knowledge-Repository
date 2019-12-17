@@ -14,19 +14,19 @@ GitLab is a Git repository which covers the entire DevOps Lifecycle.
 
 1) Review the milestones.
 2) Review and/or create an issue (task).
-    1) Take a task from the "Issue Board's" "To Do" pile and put it into the "Doing" pile.
-    2) Label the task with your "Doing::Your-Name" label.
-    3) Assign it to yourself.
-3) Create a "New branch and merge request" with "dev" as its source by clicking on the "V" arrow.
-4) Click "Check out branch" and execute "Step 1: Fetch and check out..." in your computer terminal. You may need to clone the git repository first.
+    1) Take a task from the `Issue Board's` `To Do` pile and put it into the `Doing` pile.
+    2) Assign it to yourself.
+3) Create a `New branch and merge request` with `dev` as its source by clicking on the `V` arrow.
+4) Click `Check out branch` and execute `Step 1: Fetch and check out...` in your terminal.
     1) Construct software and put knowledge to paper.
-    2) Open and comment on issues: ask questions, find 15min sub-tasks and bugs. Solve them.
-    3) Stage all your work with "git add .".
-    4) Commit your work with "git commit -m 'Example-Commit-Message'".
-    5) Push commits to a remote branch with "git push".
-5) Remove the Work In Progress (WIP) status of a merge request.
-6) Complete the merge request by pressing "Merge".
-7) Repeat appropriate steps until the task and milestone are satisfied.
+    2) In issues: ask questions, find microtasks (require up to 15min of effort) and bugs. Solve them.
+    3) Stage all your work with `git add .`.
+    4) Commit your work with `git commit -m 'Example commit message'`.
+    5) Push it to a remote branch with `git push`.
+    6) Resolve merge conflicts if they exist
+5) Remove the `Work In Progress` (WIP) status of a merge request.
+6) Complete the merge request by pressing `Merge`.
+7) Repeat appropriate steps until the task and milestone are complete.
 
 GitLab workflow ties together GitLab and Git:
 * milestones

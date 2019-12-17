@@ -1,7 +1,0 @@
-expose:
-  type: nodePort  # choose how to expose a Service
-  tls:
-    enabled: false
-persistence:
-  enabled: false
-externalURL: http://Kubectl-Server-IP  # different for every type of Service

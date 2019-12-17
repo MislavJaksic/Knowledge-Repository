@@ -33,7 +33,7 @@ Set `persistence.*`:
 * `Persistent Volume Claim` (`PVC`): default; a default `StorageClass` is needed in the cluster to dynamic provision the volumes; specify another `StorageClass` in the `storageClass` or set `existingClaim` if you have existing `Persistance Volume`s (`PV`s) to use
 * External Storage (only for images and charts): supported external storages are: `azure`, `gcs`, `s3 swift` and `oss`
 
-Set `Secret` values:
+Optionally, set `Secret` values:
 * `core.secret`
 * `jobservice.secret`
 * `registry.secret`

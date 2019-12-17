@@ -34,29 +34,44 @@ $: helm uninstall harbour
 
 [Instructions](Docs/HarborOnK8s)
 
-### Connect
+### Usage
 
-Using:
-* `NodePort`: with or without TLS, `http(s)://externalURL-field:Node-Port`
+#### Using Helm and NodePort
 
-### First Login
+##### Login
 
-Default:
+```
+https://Kubectl-Server-IP:30003
+
+First time, default:
 * username: `admin`
 * password: `Harbor12345`
+```
 
-You should change the password.  
+```
+$: bash get-harbor-docker-tls.sh
 
-### Push images
+$: docker login Kubectl-Server-IP:30003  # ->
+  # Username: admin
+  # Password: Harbor12345
+  # ...
+  # Login Succeeded
+```
 
-### Pull images
+##### Push images
+
+```
+$: docker tag Image-Name:Image-Tag Kubectl-Server-IP:30003/Harbor-Project-Name/Image-Name:Image-Tag
+
+$: docker push Kubectl-Server-IP:30003/Harbor-Project-Name/Image-Name:Image-Tag
+```
+
+##### Pull images
+
+```
+$: docker pull Kubectl-Server-IP:30003/Harbor-Project-Name/Image-Name:Image-Tag
+```
 
 ### Upgrade or Migrate
 
 TODO
-
-
-must set common name!!!
-  -- specific to nodePort (its an IP)
-extract the certificates from the secret: harbor-nginx
--> ca.crt tls.cert tls.key
