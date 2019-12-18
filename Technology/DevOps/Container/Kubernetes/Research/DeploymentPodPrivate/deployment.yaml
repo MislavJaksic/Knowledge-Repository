@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tier: test-tier
+  template:
+    metadata:
+      labels:
+        tier: test-tier
+    spec:
+      containers:
+      - name: test
+        image: Private-Registry-Ip-Port/Repository-Name/Image-Name:Image-Tag
+        command: ["java"]
+        args: ["-jar", "./javaprogram.jar"]
+      imagePullSecrets:
+      - name: Private-Repo-Secret
+      restartPolicy: Always

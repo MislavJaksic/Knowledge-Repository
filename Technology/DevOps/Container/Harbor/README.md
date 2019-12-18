@@ -38,6 +38,8 @@ $: helm uninstall harbour
 
 #### Using Helm and NodePort
 
+[Instructions](Docs/UserGuide)
+
 ##### Login
 
 ```
@@ -61,15 +63,15 @@ $: docker login Kubectl-Server-IP:30003  # ->
 ##### Push images
 
 ```
-$: docker tag Image-Name:Image-Tag Kubectl-Server-IP:30003/Harbor-Project-Name/Image-Name:Image-Tag
+$: docker tag Image-Name:Image-Tag Kubectl-Server-IP:30003/Repository-Name/Image-Name:Image-Tag
 
-$: docker push Kubectl-Server-IP:30003/Harbor-Project-Name/Image-Name:Image-Tag
+$: docker push Kubectl-Server-IP:30003/Repository-Name/Image-Name:Image-Tag
 ```
 
 ##### Pull images
 
 ```
-$: docker pull Kubectl-Server-IP:30003/Harbor-Project-Name/Image-Name:Image-Tag
+$: docker pull Kubectl-Server-IP:30003/Repository-Name/Image-Name:Image-Tag
 ```
 
 ### Upgrade or Migrate

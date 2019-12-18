@@ -14,9 +14,24 @@ $: docker login Domain-Name[:port]  # ->
   # ...
   # Login Succeeded
 
-$: docker tag Image-Name:Image-Tag Domain-Name[:port]/Harbor-Project-Name/Image-Name:Image-Tag
+$: docker tag Image-Name:Image-Tag Domain-Name[:port]/Repository-Name/Image-Name:Image-Tag
 
-$: docker push Domain-Name[:port]/Harbor-Project-Name/Image-Name:Image-Tag
+$: docker push Domain-Name[:port]/Repository-Name/Image-Name:Image-Tag
 
-$: docker pull Domain-Name[:port]/Harbor-Project-Name/Image-Name:Image-Tag
+$: docker pull Domain-Name[:port]/Repository-Name/Image-Name:Image-Tag
 ```
+
+### Vulnerability Scanning
+
+Harbor uses Clair.  
+Images can be scanned manually or at a set time interval.  
+
+### Connect Harbor to Additional Vulnerability Scanners
+
+Current Helm Harbor chart (Chart version 1.2.3, App version 1.9.3) is not in sync with the documentation!  
+
+### Pulling Images from Harbor in Kubernetes
+
+### Managing Helm Charts
+
+TODO

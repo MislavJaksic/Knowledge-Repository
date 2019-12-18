@@ -22,6 +22,10 @@ Steps to produce a result.
 
 [Instructions](ConfigurePodsContainers/PodToUsePersistentVolume)
 
+### Pod uses an image from a private registry
+
+[Instructions](ConfigurePodsContainers/PullImageFromPrivateRegistry)
+
 ### Pod's ENV VARs
 
 [Instructions](InjectDataIntoApps)

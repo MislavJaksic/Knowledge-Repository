@@ -176,6 +176,20 @@ spec:
 
 [Instructions](Docs/Tasks/ConfigurePodsContainers/ConfigurePodToUseConfigMap)
 
+### Private repositories and images
+
+```
+$: docker login Private-Registry-Ip-Port
+
+$: kubectl create secret generic Private-Repo-Secret --from-file=.dockerconfigjson=/path/to/.docker/config.json --type=kubernetes.io/dockerconfigjson
+
+# Note: setup Docker TLS certificates
+```
+
+[Create Secret](Docs/Tasks/ConfigurePodsContainers/PullImageFromPrivateRegistry)  
+[Docker TLS certificates](../Docker)  
+[Get private images](Research/DeploymentPodPrivate)
+
 ### Managing resources
 
 Group related resources into a single YAML with `---`.  

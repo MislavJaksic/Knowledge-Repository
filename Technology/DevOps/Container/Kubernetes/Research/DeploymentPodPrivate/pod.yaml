@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: private-pod
+spec:
+  containers:
+  - name: pod-container
+    image: Private-Registry-Ip-Port/Repository-Name/Image-Name:Image-Tag
+  imagePullSecrets:
+  - name: Private-Repo-Secret
