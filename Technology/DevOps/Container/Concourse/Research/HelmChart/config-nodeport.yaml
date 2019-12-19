@@ -1,0 +1,12 @@
+persistence:
+  enabled: false
+postgresql:
+  persistence:
+    enabled: false
+web:
+  service:
+    type: NodePort
+    atcNodePort: 30010  # pick any free port
+concourse:
+  web:
+    externalUrl: http://Kubectl-Server-Ip:30010  # found in values.yaml
