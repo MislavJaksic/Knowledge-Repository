@@ -70,3 +70,9 @@ $: docker network inspect Network-Name  # inspect network
 $: docker network create Network-Name  # create network
 $: docker network inspect Network-Name --format '{{index .Peers 0 "IP"}}'  # list network IP
 ```
+
+### Private Docker registry
+
+#### TLS
+
+[Instructions](Docs\ProductManuals\OpenSourceProjects\DockerRegistry\Recepies\TestInsecureRegistry)
