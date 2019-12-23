@@ -68,7 +68,7 @@ $: kubectl cluster-info [--dump]  # list client, cluster info
 $: kubectl config view [--minify]  # list `config` file
 $: kubectl config use-context Context-Name  # switch context
 
-$: kubectl config set-context --current -n=Namespace-Name  # set namespace to avoid writing `-n K8n-Namespace`
+$: kubectl config set-context --current --namespace=Namespace-Name  # set namespace to avoid writing `-n K8n-Namespace`
 ```
 
 [Instructions](Other/RemoteKubectl)  

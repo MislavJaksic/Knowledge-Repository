@@ -4,7 +4,7 @@
 $: helm repo add concourse https://concourse-charts.storage.googleapis.com/
 $: helm install concourse concourse/concourse -f config.yaml
 
-$: helm delete concourse
+$: helm uninstall concourse
 $: kubectl delete namespace concourse-main
 
 $: kubectl delete pvc -l app=concourse-worker
