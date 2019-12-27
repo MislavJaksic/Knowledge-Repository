@@ -258,77 +258,112 @@ STOPPED HERE
 ### Chapter 7: processes, jobs and shells
 
 Every process has a PID (Process ID).  
-ps - Process Status, list all processes; \[-e\] list all processes; \[-f\] more info
-Process states are R for running, S for sleeping, I for idle, T for stopped, Z for zombie.
+```
+$: ps [-e] [-f]  # -> process states: R for running, S for sleeping, I for idle, T for stopped, Z for zombie
+  # -e: list all processes
+  # -f: more info
+```
 
-Signals allow processes to communicate.
-"signal_handler" functions can intercept and interpret signals.
-man 7 signal - list all signals
-kill _PID - send SIGTERM to a process; \[_signal_code\] send a signal other then SIGTERM
+Signals allow processes to communicate.  
+`signal_handler` functions can intercept and interpret signals.  
+```
+$: man 7 signal  # list all signals
+$: kill _PID [Signal-Code]  # send SIGTERM to a process
+  # Signal-Code: send a signal other then SIGTERM
+```
 
-A Parent process can create another process, a Child.
-The Child has a PPID (Parent PID).
-fork() - Parent creates a Child process
-wait()/waitpid() - Parent waits for the Child to terminate
+A Parent process can create another process, a Child.  
+The Child has a PPID (Parent PID).  
+```
+$: fork()  # Parent creates a Child process
+$: wait()/waitpid()  # Parent waits for the Child to terminate
+```
 
-Shells may automate scripts.
-There are different shells in Linux: sh, bash, csh, ksh, ...
+Shells may automate scripts.  
+There are different shells in Linux:
+* sh
+* bash
+* csh
+* ksh
+* ...
 
-Bash is a popular shell.
-Can be used interactively.
-Each script can specify a preferred shell.
+Bash is a popular shell.  
+Can be used interactively.  
+Each script can specify a preferred shell.  
 ```
 #! /bin/bash
 ```
 
-When a shell executes a process it creates a job.
-Jobs can be executing in the background.
+When a shell executes a process it creates a job.  
+Jobs can be executing in the background.  
 ```
 _command &
 ```
 
-CTRL+Z - suspend process in the foreground
-fg/bg - unsuspend process in foreground/background
-jobs - list jobs running in the shell
+```
+CTRL+Z  # suspend process in the foreground
 
-Processes have a PGID (Group PID).
-Groups can be part of a session.
+$: fg/bg  # unsuspend process in foreground/background
+$: jobs  # list jobs running in the shell
+```
+
+Processes have a PGID (Group PID).  
+Groups can be part of a session.  
 
 ### Chapter 8: environment variables, program installation and networking basics
 
-Env vars (Environment Variables) are values which all processes can access.
-echo _var_name - show env var value
-printenv - list env vars
-
-export _var_name=_var_value - set env var value for this shell
-To set env vars such as PATH, you should edit a login scripts.
-
-make _target - compile and install
-tarball - unpack and install
-Program package managers: dpkg, RPM, pacman.
-Each package manager has a "front end" program: apt, yum,
-Front end program are commands that can be invoked.
-
-Network interfaces: eth0, eth1, ...; - ethernet
-                    w10, wifi0, ...; - WLAN
-                    lo; - loopback
-ifconfig, route or ip - make transient TCP/IP configuration changes
-/etc/network/interfaces - interface configuration
+ENV VARs (Environment Variables) are values which all processes can access.  
 ```
-auto eth0 //-> start eth0 at startup
-iface eth0 inet static //-> eth0 is given a static IP
-iface eth1 inet dhcp //-> eth1 will look for a dynamic IP
+$: echo _var_name  # show ENV VAR value
+$: printenv  # list ENV VARs
+$: export _var_name=_var_value  # set ENV VAR value for this shell
+```
+To set ENV VARs such as PATH, you should edit a login scripts.  
+
+```
+$: make _target  # compile and install
+$: tarball  # unpack and install
 ```
 
-/etc/init.d/networking restart - restart networking service
-iwconfig, iw - wireless configuration
+Program package managers:
+* dpkg
+* RPM
+* pacman
 
-/etc/resolv.conf - DNS config
+Each package manager has a "front end" program:
+* apt
+* yum
+
+Front end program are commands that can be invoked.  
+
+Network interfaces:
+* eth0, eth1, ...;  # ethernet
+* w10, wifi0, ...;  # WLAN
+* lo;               # loopback
+
 ```
+$: ifconfig, route or ip  # make transient TCP/IP configuration changes
+
+/etc/network/interfaces  # interface configuration
+```
+
+```
+$: auto eth0  # start eth0 at startup
+$: iface eth0 inet static  # eth0 is given a static IP
+$: iface eth1 inet dhcp  # eth1 will look for a dynamic IP
+```
+
+```
+$: /etc/init.d/networking restart  # restart networking service
+$: iwconfig, iw  # wireless configuration
+
+/etc/resolv.conf  # DNS config
 nameserver 8.8.8.8
 nameserver 8.8.4.4
 ```
 
-dhclient, dhcpcd - DHCP clients
+DHCP clients:
+* dhclient
+* dhcpcd
 
-There is a Network manager which has a GUI and does not use the previously mentioned files.
+There is a Network manager which has a GUI and does not use the previously mentioned files.  
