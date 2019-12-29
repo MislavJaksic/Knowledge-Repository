@@ -23,7 +23,7 @@ Highlights the same words in a file.
 ```
 Base   -> linter
 Java   -> linter-checkstyle
-Python -> linter-flake8      # needs flake8 installed
+Python -> python-black      # need `$: pip install black`
 ```
 
 ### minimap

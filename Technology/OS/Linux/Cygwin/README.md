@@ -9,5 +9,5 @@ Run the installer.
 ### Access host filesystem
 
 ```
-$: cd /cygdrive/_partition/path/to/file
+$: cd /cygdrive/Partition-Letter/path/to/file
 ```

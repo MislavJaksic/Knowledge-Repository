@@ -20,15 +20,26 @@ Linux distributions can be installed using a USB, a DVD or a virtualisation soft
 ### Paths and directories
 
 ```
-Absolute path: begins with /  
-Relative path: begins without /  
+Absolute path: prefixed with /  
+Relative path: without prefix /  
 
-Current directory: is .
-Parent directory: is ..
-Hidden directory: begins with .
+Current directory: .
+Parent directory: ..
+Hidden directory: prefixed with .
 ```
 
-### Common hotkeys and commands
+### Common Hotkeys
+
+```
+Paste: SHIFT+INSERT
+Search: SHIFT+W
+
+Autocomplete: TAB; double TAB
+
+Switch workspace: CTRL+ALT+UP/DOWN
+```
+
+### Common Commands
 
 ```
 $: man Command-Name  # show manual; "q" to exit
@@ -41,9 +52,9 @@ $: ls [-l] [-d] [-R]  # list directory contents
 $: pwd  # show current directory path
 $: cd /path/to  # change directory
 
-apt/apt-get: Ubuntu package manager
-yum: CentOS package manager
-apk: Alpine package manager
+$: apt/apt-get: Ubuntu package manager
+$: yum: CentOS package manager
+$: apk: Alpine package manager
 $: tar -xzvf Package-Name  # extract/untar
 
 $: bash Script-Name  # run script
@@ -103,15 +114,6 @@ $: ... | grep "term1\|term2"  # OR
 $: ... | grep -E "term1|term2"  # OR
 ```
 
-```
-Paste: SHIFT+INSERT
-Search: SHIFT+W
-
-Autocomplete: TAB; double TAB
-
-Switch workspace: CTRL+ALT+UP/DOWN
-```
-
 ### Network commands
 
 ```
@@ -120,6 +122,7 @@ $: nc ...
 
 $: ifconfig  # network interfaces
 $: netstat  # network statistics
+$: netstat -plunt  # discover which service exposes which port
 $: ip addr  #
 $: ip link  #
 $: ip route  #
@@ -127,6 +130,8 @@ $: ss  #
 $: ip -s  #
 
 $: scp [-P _port] /source/path/File-Name _username@_ip:/destination/path
+
+$: sftp -oPort=Post-Number User-Name@Host-Name  # manipulate files on a remotely
 ```
 
 ### Setting PATH and DNS
@@ -143,6 +148,8 @@ Set DNS in:
 ### Generating an SSH key pair
 
 #### Windows
+
+See [PuTTY](../../DevOps/Security/Putty).  
 
 ```
 $: git-gui
