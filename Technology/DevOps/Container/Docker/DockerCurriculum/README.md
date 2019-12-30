@@ -23,7 +23,7 @@ $: docker container prune  # delete stopped containers
 ### Webapps with Docker
 
 ```
-$: docker run --rm Docker-Id/_repository:_tag
+$: docker run --rm _repository/Image-Name:Image-Tag
   # --rm: delete container after it stopped
 
 $: docker run -d -P --name Container-Name Docker-Id/_repository  # run without terminal and with port map
@@ -108,7 +108,7 @@ docker-compose.yml:
 version: "3"
 services:
   Service-Name:
-    image: Docker-Id/_repository:_tag  # pull this image
+    image: _repository/Image-Name:Image-Tag  # pull this image
     environment:
       - discovery.type=single-node  # set environmental variable
     ports:
@@ -116,7 +116,7 @@ services:
     volumes:
       - esdata1:/usr/share/elasticsearch/data  # define mount point in container
   Service-Name:
-    image: Docker-Id/_repository:_tag
+    image: _repository/Image-Name:Image-Tag
     command: _command _param1 _param2 ...
     depends_on:
       - Service-Name

@@ -75,10 +75,10 @@ Repository is a collection of images.
 ```
 $: docker login  # connect to a registry
 
-$: docker tag Image-Tag Docker-Id/_repository:_tag  # associate a local image with a repository on a registry
-$: docker push Docker-Id/_repository:_tag  # upload image to registry
+$: docker tag Image-Tag _repository/Image-Name:Image-Tag  # associate a local image with a repository on a registry
+$: docker push _repository/Image-Name:Image-Tag  # upload image to registry
 
-$: docker run -p Outside-Port:Image-Port Docker-Id/_repository:_tag  # run remote image from a registry
+$: docker run -p Outside-Port:Image-Port _repository/Image-Name:Image-Tag  # run remote image from a registry
 ```
 
 #### Remove resources
@@ -108,7 +108,7 @@ Task: a single container running in a service
 version: "3"
 services:
   Service-Name:
-    image: Docker-Id/_repository:_tag  # pull this image
+    image: _repository/Image-Name:Image-Tag  # pull this image
     deploy:
       replicas: N # replication factor
       resources:
@@ -248,7 +248,7 @@ services:
   ...
 
   Service-Name2:
-    image: Docker-Id/_repository:_tag
+    image: _repository/Image-Name:Image-Tag
     ports:
       - "Outside-Port:Image-Port"
     volumes:
@@ -285,7 +285,7 @@ services:
   ...
 
   Service-Name3:
-    image: Docker-Id/_repository:_tag
+    image: _repository/Image-Name:Image-Tag
     ports:
       - "Outside-Port:Image-Port"
     volumes:

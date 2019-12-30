@@ -1,5 +1,16 @@
 ## [Install Docker](https://docs.docker.com/install/)
 
+### [Windows](https://docs.docker.com/docker-for-windows/install/)
+
+Prerequisites:
+* Windows 10 64-bit: Pro, Enterprise, or Education (Home will not do!)
+* Hyper-V and Containers Windows are enabled
+
+Follow the link.  
+Login to` Docker Hub`.  
+Download the installer.  
+Double-click the `*.exe`.  
+
 ### Linux
 
 #### [Ubuntu Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/)

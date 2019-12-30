@@ -8,7 +8,7 @@ Docker is a containerization program.
 
 ### Install
 
-[Instructions](Docs/Guides/GetDocker/DockerEngineCommunity)
+[Instructions for Windows and Linux](Docs/Guides/GetDocker/DockerEngineCommunity)
 
 ### Dockerfile
 
@@ -34,12 +34,12 @@ $: docker system prune [--all]  # delete cache
 
 $: docker container ls -a  # list all containers
 
-$: docker build --tag=Image-Tag Dockerfile-Path  # build and tag image
-$: docker run -d -P --name Container-Name Docker-Id/_repository  # run without terminal and with port map
+$: docker build --tag=_repository/Image-Name:Image-Tag Dockerfile-Path  # build and tag image
+$: docker run [-d] [-P] [--name Container-Name] [-it] [--rm] _repository/Image-Name:Image-Tag  # run without terminal and with port map
   # -d: detach container from the terminal
   # -P: publish exposed ports to random ports
   # --name: give container a name
-  # -i: interactive
+  # -it: interactive and pretty print
   # --rm: remove container after shutdown
 
 $: docker container stop Container-Name  # stop container
@@ -49,13 +49,15 @@ $: docker container logs Container-Name  # list logs
 $: docker container top Container-Name  # list running processes
 
 $: docker container exec -it Container-Name _command  # execute a command in container
-$: docker container exec -it Container-Name bash  # browse container
   # -i: interact
   # -t: TTY; pretty print
 
+$: docker save Image-Name:Image-Tag | gzip > Archive-Name.tar.gz
+$: docker load < Archive-Name.tar.gz
+
 $: docker login  # connect to registry
-$: docker tag Image-Tag Docker-Id/_repository:_tag  # tag image with a repository on a registry
-$: docker push Docker-Id/_repository:_tag  # upload image to registry
+$: docker tag Image-Tag _repository/Image-Name:Image-Tag  # tag image with a registry repository
+$: docker push _repository/Image-Name:Image-Tag  # upload image to registry
 
 $: docker swarm init  # create swarm and add a manager
 $: docker swarm join --token Swarm-Join-Token _ip  # add a worker
