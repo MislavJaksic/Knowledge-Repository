@@ -1,21 +1,10 @@
 ## Setup Elm
 
-Features:  
-* no runtime exceptions
-* has a virtual DOM
-* clever versioning system
-* small app size
-* JavaScript interoperability
-
 ### [Installation](https://guide.elm-lang.org/install.html)
 
-#### Through npm
+Each OS has its own installer or set of instructions.  
 
-Install [Node.js](https://nodejs.org/en/download/). It comes with a package manager npm.  
-Install Chocolatey (or Scoop) package manager if you are using Windows.  
-Restart the computer.  
-
-Install Elm with "npm install -g elm".  
+On Windows you ca use the `Scoop` package manager.  
 
 ### Terminal tools
 
