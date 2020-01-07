@@ -20,7 +20,15 @@ Iskreno priznajem da kada razmišljam o neopravdivoj grešci koja je vratila izv
 
 Izuzev svakog drugog obzira, postoji jedna okolnost u njegovom životu koja bi trebala pokriti ili barem ublažiti njegov velik broj prijestupa i ovom okolnosti priušiti Francuskom narodu blaženu priliku da sebe izvuče iz jarema kraljeva bez okaljavanja sebe u nečistoćama njihove krvi.
 
+Sjedinjene Američke Države duguju Francuskoj jer im je omogućila otresti nepravedan i tiranijski jarem. Žar i revnost koju je pokazala u davanju ljudi i novca bile su prirodne posljedice žeđi za slobodom. Kao narod u to vrijeme, suzdržan okovima njihove vlastite vlade, djelujući samo koristeći monarhiju, koja, koja god postojala druga pritužba, je sigurno napravila dobro djelo.
+
+Dopustite Sjedinjenim Državama da budu čuvar i utočište Louis Carpeta. Ondje, daleko od bijede i zločina plemstva, on može učiti o javnom blagostanju, da se istinski sustav vladavine sastoji od pravednog, jednakog i časnog predstavništva. Kada govorim o ovoj okolnosti, kada predlažem ovaj prijedlog, sebe smatram građaninom obje države.
+
+Ovo predlažem kao građanin Amerike koji osjeća i duguje zahvalnost svakom Francuzu. Ovo predlažem kao čovjek koji ne može zaboraviti da su kraljevi podložni ljudskim manama. Podržavam ovaj prijedlog kao građanin francuske republike, jer mi se čini najboljom, najpolitičnijom mjerom koja se može usvojiti.
+
+Tijekom mojeg cijelog javnog života, primijetio sam da je veliki broj ljudi naposljetku pravedan, u namjerama i ciljevima, ali prava metoda postizanja ovog učinka se ne pokaže u prvom pokušaju. Na primjer, engleski je narod stenjao tijekom tiranije Stuarta. Stoga je Charles I izgubio život, ipak Charles II je vraćena sva silina moći koju je izgubio njegov otac. Nije proteklo niti četrdeset godina, a da ista obitelj nije ponovno pokušala uspostaviti svoje drevno ugnjetavanje, pa ih je onda narod protjerao iz zemlje. Lijek je bio djelotvoran: obitelj Stuart potonula je u mrak, zbunjena i izumrla.
+
 
 
 STOPPED
-It is to France alone, ...
+The French nation has, ...
