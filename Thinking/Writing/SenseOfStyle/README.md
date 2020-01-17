@@ -30,3 +30,11 @@ Style still matters because:
 * adds beauty to the world
 
 ### Chapter 1: Good Writing
+
+Good writers are avid readers.  
+Examining good prose is more pleasurable then obeying stern advice.  
+
+Good writing starts strong, not with a cliché or a banality.  
+Use parallel constructions.  
+Use colourful, poetic language, vivid imagery and uncommon superlatives.  
+Make use of the mind's eye, conjure images with unusually precise descriptions.  
