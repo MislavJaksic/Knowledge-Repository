@@ -38,3 +38,10 @@ Good writing starts strong, not with a cliché or a banality.
 Use parallel constructions.  
 Use colourful, poetic language, vivid imagery and uncommon superlatives.  
 Make use of the mind's eye, conjure images with unusually precise descriptions.  
+Write with nouns and verbs.  
+When choosing between expressing yourself using a plain or a fancy word, always choose plain.  
+Varied vocabulary and unusual words grab attention.  
+Be wary of dehumanizing, euphemistic language.  
+Don't say, show.  
+
+### Chapter 2: A Window onto the World
