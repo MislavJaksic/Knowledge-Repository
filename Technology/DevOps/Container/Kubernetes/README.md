@@ -4,7 +4,7 @@ Kubernetes is a container orchestra conductor.
 
 ### Install
 
-A few other installers are: `kubeadm`, `kops`, `KRIB`, `kubespray`, ...
+Installers are: `kubeadm`, `kops`, `KRIB`, `kubespray`, ...
 
 #### Minikube: local Kubernetes
 
@@ -33,6 +33,7 @@ $: minikube delete
 $: kubectl get Resource-Type/Resource-Name [-f] [-k] [-o Output-Option] [--watch] [--field-selector=field.subfield=Field-Value] [-LLabel-Name]
 $: kubectl run Id-Name --image=Image-Name [--env="Env-Var-Name=Env-Var-Value"] [--port=Expose-Port] [--replicas=X] [--dry-run] [--command -- _command _arg0.._argN]
 $: kubectl delete Resource-Type/Resource-Name [-f] [-k] [-l Label-Name=Label-Value] [--now] [--force] [--grace-period=X]
+$: kubectl delete Resource-Type/Resource-Name --grace-period=0 --force  # delete "stuck" resources
 
 $: kubectl apply (-f File-Name | -f /path/to/dir | -f URL) [-k] [-R]
 $: [KUBE_EDITOR="nano"] kubectl edit Resource-Type/Resource-Name
@@ -183,6 +184,7 @@ $: docker login Private-Registry-Ip-Port
 
 $: kubectl create secret generic Private-Repo-Secret --from-file=.dockerconfigjson=/path/to/.docker/config.json --type=kubernetes.io/dockerconfigjson
 
+# Note: pods can only reference image pull secrets in their own namespace!
 # Note: setup Docker TLS certificates
 ```
 

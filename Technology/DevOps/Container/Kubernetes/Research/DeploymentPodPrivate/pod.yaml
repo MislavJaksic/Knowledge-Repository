@@ -6,5 +6,6 @@ spec:
   containers:
   - name: pod-container
     image: Private-Registry-Ip-Port/Repository-Name/Image-Name:Image-Tag
+    imagePullPolicy: Always
   imagePullSecrets:
   - name: Private-Repo-Secret

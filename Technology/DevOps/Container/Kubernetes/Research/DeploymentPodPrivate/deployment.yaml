@@ -15,6 +15,7 @@ spec:
       containers:
       - name: test
         image: Private-Registry-Ip-Port/Repository-Name/Image-Name:Image-Tag
+        imagePullPolicy: Always
         command: ["java"]
         args: ["-jar", "./javaprogram.jar"]
       imagePullSecrets:

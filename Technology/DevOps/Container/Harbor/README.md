@@ -1,26 +1,5 @@
 ## [Harbour](https://goharbor.io/)
 
-Harbour is a registry that stores, signs and scans content.   
-Harbour adds security, identity and management.  
-Harbour manages users, access control and activity auditing.  
-Harbour replicates images between registries.  
-Having a registry closer to the build and run environment improves the image transfer efficiency.  
-
-### Features
-
-* Cloud native registry: supports images and Helm charts
-* Role based access control (RBAC): users and repositories are organized via `projects`
-* Policy based replication: images and charts can be replicated or synchronized between registry instances
-* Vulnerability Scanning: scans images regularly and warns users of vulnerabilities.
-* LDAP/AD: integrates with LDAP/AD for user authentication and management
-* OpenID Connect (OIDC): authenticate users with an authorization server or identity provider. Supports single sign-on
-* Image deletion and garbage collection: images can be deleted and recycled
-* Notary: image authenticity
-* Graphical user portal: users can browse, search repositories and manage projects
-* Auditing: all the operations to the repositories are tracked
-* RESTful API: RESTful APIs for admin operations with a Swagger UI
-* Deployment: online, offline and Helm chart installation
-
 ### Install
 
 ```
@@ -51,7 +30,7 @@ First time, default:
 ```
 
 ```
-$: bash get-harbor-docker-tls.sh
+$: bash get-harbor-docker-tls.sh  # see Research
 
 $: docker login Kubectl-Server-IP:30003  # ->
   # Username: admin
@@ -72,6 +51,17 @@ $: docker push Kubectl-Server-IP:30003/Repository-Name/Image-Name:Image-Tag
 
 ```
 $: docker pull Kubectl-Server-IP:30003/Repository-Name/Image-Name:Image-Tag
+```
+
+### As a private repository
+
+```
+$: docker login Private-Registry-Ip-Port
+
+$: kubectl create secret generic Private-Repo-Secret --from-file=.dockerconfigjson=path/to/.docker/config.json --type=kubernetes.io/dockerconfigjson
+
+# Note: pods can only reference image pull secrets in their own namespace!
+# Note: setup Docker TLS certificates
 ```
 
 ### Upgrade or Migrate
