@@ -45,3 +45,9 @@ Be wary of dehumanizing, euphemistic language.
 Don't say, show.  
 
 ### Chapter 2: A Window onto the World
+
+Writing is a one way street. No one is coming from the other direction.  
+Imagine your readers. Imagine them talking to you.  
+"Classic style" is about orienting the reader's gaze. It is not about arguing or thinking out loud. Let the reader see the truth for himself.  
+Classic prose shows the reader concrete things and engages him in conversation.  
+Use analogies to everyday objects.  
