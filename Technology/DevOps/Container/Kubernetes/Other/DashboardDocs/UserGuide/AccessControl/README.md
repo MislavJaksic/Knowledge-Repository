@@ -7,7 +7,7 @@ TODO
 ### Create Service Account
 
 ```
-$: kubectl get serviceaccounts --kubernetes-dashboard kubernetes-dashboard admin-user
+$: kubectl -n kubernetes-dashboard get serviceaccounts kubernetes-dashboard admin-user  # do they exist already?
 
 $: kubectl apply -f service-account-adminuser.yaml
 ```

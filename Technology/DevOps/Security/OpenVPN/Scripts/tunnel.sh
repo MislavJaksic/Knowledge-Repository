@@ -1,3 +1,6 @@
 #!/bin/bash
 
-sudo openvpn --config File-Name.ovpn --auth-user-pass Username-Password-File.txt
+CONFIG_FILE=File-Name.ovpn
+USERNAME_PASSWORD_FILE=Username-Password-File.txt
+
+sudo openvpn --config $CONFIG_FILE --auth-user-pass $PASSWORD_USERNAME_FILE

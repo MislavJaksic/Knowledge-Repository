@@ -78,12 +78,14 @@ $: kubectl config set-context --current --namespace=Namespace-Name  # set namesp
 ### Connect to a remote Dashboard
 
 ```
+$: kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta8/aio/deploy/recommended.yaml  # deploy dashboard
+
 # Note: connect to a remote machine with a `config` file
 # Note: locate your kubeconfig or config file
-# Note: most likely locations are `~/.kube/config`, `/home/ubuntu/.kube`, `/etc/kubernetes/# admin.conf`, ...
+# Note: most likely locations are `~/.kube/config`, `/home/ubuntu/.kube/config`, `/etc/kubernetes/admin.conf`, ...
 
-$: grep 'client-certificate-data' ~/.kube/config | head -n 1 | awk '{print $2}' | base64 -d >> kubecfg.crt
-$: grep 'client-key-data' ~/.kube/config | head -n 1 | awk '{print $2}' | base64 -d >> kubecfg.key
+$: grep 'client-certificate-data' /path/to/config | head -n 1 | awk '{print $2}' | base64 -d >> kubecfg.crt
+$: grep 'client-key-data' /path/to/config | head -n 1 | awk '{print $2}' | base64 -d >> kubecfg.key
 $: openssl pkcs12 -export -clcerts -inkey kubecfg.key -in kubecfg.crt -out kubecfg.p12
 
 $: sudo scp -i Private-Key.key _username@_ip:/path/to/.kube/kubecfg.p12 .

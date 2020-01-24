@@ -1,3 +1,7 @@
 #!/bin/bash
 
-sudo ssh -i Private-Key-File.key Username@Ip
+USERNAME=Username
+IP=Ip
+PRIVATE_KEY=Private-Key-File.key
+
+sudo ssh -i $PRIVATE_KEY $USERNAME@$IP
