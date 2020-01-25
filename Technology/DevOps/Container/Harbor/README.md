@@ -1,4 +1,4 @@
-## [Harbour](https://goharbor.io/)
+## [Harbor](https://goharbor.io/)
 
 ### Install
 
@@ -6,9 +6,9 @@
 $: helm repo add harbor https://helm.goharbor.io
 $: helm repo update
 
-$: helm install harbour harbor/harbor -f config.yaml  # install and configure
+$: helm install harbor harbor/harbor -f config.yaml  # install and configure
 
-$: helm uninstall harbour
+$: helm uninstall harbor
 ```
 
 [Instructions](Docs/HarborOnK8s)
@@ -56,7 +56,7 @@ $: docker pull Kubectl-Server-IP:30003/Repository-Name/Image-Name:Image-Tag
 ### As a private repository
 
 ```
-$: docker login Private-Registry-Ip-Port
+$: docker login Kubectl-Server-IP:30003
 
 $: kubectl create secret generic Private-Repo-Secret --from-file=.dockerconfigjson=path/to/.docker/config.json --type=kubernetes.io/dockerconfigjson
 

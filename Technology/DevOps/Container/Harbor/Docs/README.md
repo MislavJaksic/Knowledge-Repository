@@ -1,9 +1,9 @@
 ## [Harbor Documentation](https://goharbor.io/docs/)
 
-Harbour is a registry that stores, signs and scans content.   
-Harbour adds security, identity and management.  
-Harbour manages users, access control and activity auditing.  
-Harbour replicates images between registries.  
+Harbor is a registry that stores, signs and scans content.   
+Harbor adds security, identity and management.  
+Harbor manages users, access control and activity auditing.  
+Harbor replicates images between registries.  
 Having a registry closer to the build and run environment improves the image transfer efficiency.  
 
 ### Features
