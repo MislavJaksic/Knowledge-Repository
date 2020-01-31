@@ -1,0 +1,75 @@
+# This is not a recommended configuration, and further support should be available
+# from the Prometheus and Grafana communities.
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grafana
+  labels:
+    app: Grafana-Label  # change
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: grafana
+  template:
+    metadata:
+      labels:
+        name: grafana
+    spec:
+      containers:
+      - name: grafana
+        image: grafana/grafana:6.2.5
+        env:
+          # - name: "GF_<SectionName>_<KeyName>"  # override settings with ENV VARs
+          #   value: ""
+          # - name: "GF_AUTH_ANONYMOUS_ENABLED"  # can view link without login
+          #   value: "true"
+          # - name: "GF_AUTH_ANONYMOUS_ORG_NAME"
+          #   value: "DataFlux"
+          # - name: "GF_AUTH_ANONYMOUS_ORG_ROLE"
+          #   value: "Admin"
+          # - name: "GF_SECURITY_ALLOW_EMBEDDING"  # can embbed links
+          #   value: "true"
+        ports:
+        - name: grafana
+          containerPort: 3000
+          protocol: TCP
+        volumeMounts:
+        - name: grafana-data
+          mountPath: /var/lib/grafana
+        - name: grafana-logs
+          mountPath: /var/log/grafana
+        readinessProbe:
+          httpGet:
+            path: /api/health
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /api/health
+            port: 3000
+          initialDelaySeconds: 15
+          periodSeconds: 20
+      volumes:
+      - name: grafana-data
+        emptyDir: {}
+      - name: grafana-logs
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana
+  labels:
+    app: Grafana-Label  # change
+spec:
+  ports:
+  - name: grafana
+    nodePort: 30901
+    port: 3000
+    protocol: TCP
+  selector:
+    name: grafana
+  type: NodePort
