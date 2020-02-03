@@ -6,14 +6,23 @@ Prometheus:
 * stores metrics in a time series database
 * has graphing tools to consume metrics
 
-### [Configuration](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
+### Prometheus in Kubernetes
 
-TODO  
+[Instructions](PrometheusKubernetesOperator)
 
-### [Query expressions](https://prometheus.io/docs/prometheus/latest/querying/basics/)
+#### Install
 
-TODO  
+```
+$: kubectl apply -f prometheus-operator-rbac.yaml
 
-### [Guides](https://prometheus.io/docs/guides/)
+$: kubectl apply -f example-app.yaml
+$: kubectl apply -f service-monitor.yaml
 
-TODO  
+$: kubectl apply -f prometheus-rbac.yaml
+
+$: kubectl apply -f prometheus.yaml
+```
+
+```
+http://Kubectl-Server-Ip:30900
+```

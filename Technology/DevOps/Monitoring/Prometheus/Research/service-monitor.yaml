@@ -1,0 +1,12 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: Monitor-Name  # change
+  labels:
+    team: Monitor-Label  # change
+spec:
+  selector:
+    matchLabels:
+      app: App-Label  # change
+  endpoints:
+  - port: web

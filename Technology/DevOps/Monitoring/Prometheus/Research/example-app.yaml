@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Deployment-Name  # change
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: App-Label  # change
+  template:
+    metadata:
+      labels:
+        app: App-Label  # change
+    spec:
+      containers:
+      - name: example-app
+        image: fabxc/instrumented_app
+        ports:
+        - name: web
+          containerPort: 8080
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: Service-Name  # change
+  labels:
+    app: Service-Label  # change
+spec:
+  selector:
+    app: App-Label  # change
+  ports:
+  - name: web
+    port: 8080
