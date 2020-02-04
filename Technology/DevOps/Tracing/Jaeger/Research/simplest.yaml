@@ -1,0 +1,12 @@
+apiVersion: jaegertracing.io/v1
+kind: Jaeger
+metadata:
+  name: simplest
+spec:
+  allInOne:
+    options:
+      query:
+        base-path: /jaeger/query  # base path for all HTTP routes, for when running behind a proxy, an ingress
+  # ingress:
+  #   enabled: false  # don't create ingress rule
+  #   secretName: my-tls-secret  # enable ingress TLS

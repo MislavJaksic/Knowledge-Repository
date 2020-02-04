@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hotrod-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tier: hotrod-tier
+  template:
+    metadata:
+      labels:
+        tier: hotrod-tier
+    spec:
+      containers:
+      - name: jaeger-hotrod
+        image: jaegertracing/example-hotrod:latest
+        args: ["all"]
+        env:
+          - name: "JAEGER_AGENT_HOST"
+            value: "simplest-agent"
+          - name: "JAEGER_AGENT_PORT"
+            value: "6831"
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hotrod-service
+spec:
+  type: NodePort
+  selector:
+    tier: hotrod-tier
+  ports:
+  - port: 8080
+    targetPort: 8080
