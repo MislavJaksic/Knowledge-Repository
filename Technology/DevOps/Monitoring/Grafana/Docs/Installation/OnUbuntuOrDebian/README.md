@@ -2,7 +2,7 @@
 
 ### 1. Download and install
 
-Install either the paying Enterprise edition or OSS release.  
+Install either the paying `Enterprise edition` or `OSS release`.  
 
 #### OSS release
 
