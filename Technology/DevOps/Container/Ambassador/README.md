@@ -1,43 +1,37 @@
 ## [Ambassador](https://www.getambassador.io/)
 
-Ambassador is an API Gateway, self-service edge proxy, a control plane for Envoy Proxy in Kubernetes.  
-Provides:
-* traffic management: declarative policy engine
-* app security: authentication, access control, rate limiting
-* API development: self-service portal
-
 ### Install
 
-In `ambassador-no-rbac.yaml` or `ambassador-no-rbac.yaml`:
 ```
-...
-kind: ClusterRoleBinding
-subjects:
-- namespace: K8n-Namespace  # change the namespace
-...
-```
+$: helm repo add datawire https://www.getambassador.io
+$: helm repo update
 
-```
-$: kubectl cluster-info dump --namespace kube-system | grep authorization-mode  #-> if you see "...RBAC" then RBAC is enabled
-
-$: kubectl apply -f ambassador-rbac.yaml
-
-$: kubectl create clusterrolebinding my-cluster-admin-binding --clusterrole=cluster-admin --user=$(gcloud info --format="value(config.account)")
-$: kubectl apply -f
+$: kubectl create namespace ambassador
+$: helm install ambassador --namespace ambassador datawire/ambassador -f config.yaml  # see Research
 ```
 
-Deploy both the RBAC and the `Service`.  
+You should also install the `Edge Policy Console`.  
 
-[Instructions](Docs/GettingStarted/Installing/KubernetesYAML)
+[Instructions](Docs/Install/OtherInstallAndUpgrade/KubernetesHelm)
 
-### Mapping external requests to Services
+### TLS and HTTPS
 
 TODO
 
-### Enable HTTPS (enable TLS)
+[Instructions](Docs/Guides/Security/EnablingHTTPS)
 
-[Instructions](Docs\Guides\Security\EnablingHTTPS)
+### Mapping Service Resource
 
-TODO
-### cert-manager
-### Ambassador ID != default?
+```
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: Mapping-Name # REQUIRED
+  namespace: K8s-Ambassador-Namespace
+spec:
+  prefix: /url/prefix/  # REQUIRED; https://Ambassador-Hostname/url/prefix/...
+  service: 'Service-Name.Namespace:Port'  # REQUIRED; [Scheme://]Service-Name[.Namespace][:Port]
+  rewrite: /url/rewrite/  # URL prefix for talking to the service; https://Service-Name.Namespace:Port/url/rewrite/...
+```
+
+[Instructions](Docs/References/ConfigK8sService/MappingsServices)

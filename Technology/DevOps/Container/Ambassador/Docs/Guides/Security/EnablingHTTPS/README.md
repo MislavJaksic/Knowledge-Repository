@@ -1,12 +1,6 @@
 ## [Enabling HTTPS in Ambassador](https://www.getambassador.io/user-guide/tls-termination/)
 
-Ambassador supports TLS encryption and termination.  
-
-Prerequisites:
-* Kubernetes v1.11 or newer
-* `kubectl`
-* `openssl`
-* Ambassador installed
+IF you don't have a Fully Qualified Domain Name (FQDN) you have to enable TLS and HTTPS manually.  
 
 ### Create a Self-Signed Certificate
 
@@ -29,7 +23,7 @@ $: kubectl create secret tls ambassador-tls-cert --cert=cert-for-ambassador.pem 
 `TLSContext` will tell Ambassador to terminate TLS.  
 
 ```
-$: kubectl apply -f tls-context.yaml
+$: kubectl apply -f tls-context.yaml  # see Research
 
 # Note: if hosts is ['*'], you will have to use TLS for all services; plain HTTP will not work!
 ```
@@ -68,4 +62,3 @@ Self signed certificates are not trusted.
 For that, you need a Certificate Authority (CA).  
 
 [Get a Certificate from a Certificate Authority](../CertManagerAmbassador)
-[More about TLS and Ambassador](../../../Reference/ConfigAmbassador/GlobalConfig/TLSConfig)

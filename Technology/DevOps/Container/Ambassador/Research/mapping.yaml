@@ -1,0 +1,9 @@
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: Mapping-Name # REQUIRED
+  namespace: K8s-Ambassador-Namespace
+spec:
+  prefix: /url/prefix/  # REQUIRED; https://Ambassador-Hostname/url/prefix/...
+  service: 'Service-Name.Namespace:Port'  # REQUIRED; [Scheme://]Service-Name[.Namespace][:Port]
+  rewrite: /url/rewrite/  # URL prefix for talking to the service; https://Service-Name.Namespace:Port/url/rewrite/...

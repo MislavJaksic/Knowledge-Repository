@@ -1,7 +1,0 @@
-apiVersion: getambassador.io/v1
-kind: TLSContext
-metadata:
-  name: tls-context
-spec:
-  hosts: ["*"]  # terminate TLS for all hosts and endpoints
-  secret: ambassador-tls-cert

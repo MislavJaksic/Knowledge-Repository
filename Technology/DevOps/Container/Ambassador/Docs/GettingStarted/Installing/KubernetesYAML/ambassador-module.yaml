@@ -1,8 +1,0 @@
-apiVersion: getambassador.io/v1
-kind: Module  # global configuration
-metadata:
-  name: ambassador
-spec:
-  config:
-    diagnostics:
-      enabled: false  # disable publicly available diagnostics
