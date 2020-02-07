@@ -8,12 +8,10 @@ Prometheus:
 
 ### Prometheus in Kubernetes
 
-[Instructions](PrometheusKubernetesOperator)
-
 #### Install
 
 ```
-$: kubectl apply -f prometheus-operator-rbac.yaml
+$: kubectl apply -f prometheus-operator-rbac.yaml  # see Research
 
 $: kubectl apply -f example-app.yaml
 $: kubectl apply -f service-monitor.yaml
@@ -26,3 +24,26 @@ $: kubectl apply -f prometheus.yaml
 ```
 http://Kubectl-Server-Ip:30900
 ```
+
+[Instructions](PrometheusKubernetesOperator/Docs/GettingStarted)
+
+#### Alerting
+
+TODO
+
+[Instructions](PrometheusKubernetesOperator/Docs/Alerting)
+
+#### Monitoring Ingress with Ambassador
+
+TODO
+
+[Instructions](PrometheusKubernetesOperator/Docs/MonitoringK8sIngress)
+
+### Querying
+
+```
+jaeger_collector_batch_size  # valid query
+{namespace='tracing',service='jaeger-operator-metrics'}  # valid query
+```
+
+[Instructions](Docs/Prometheus/Querying)

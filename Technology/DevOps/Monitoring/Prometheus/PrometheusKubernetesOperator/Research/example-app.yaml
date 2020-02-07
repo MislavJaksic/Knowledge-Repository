@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: Deployment-Name  # change
+  namespace: App-Namespace  # change
 spec:
   replicas: 3
   selector:
@@ -16,18 +17,17 @@ spec:
       - name: example-app
         image: fabxc/instrumented_app
         ports:
-        - name: web
+        - name: Port-Name  # change
           containerPort: 8080
 ---
 kind: Service
 apiVersion: v1
 metadata:
   name: Service-Name  # change
-  labels:
-    app: Service-Label  # change
+  namespace: App-Namespace  # change
 spec:
   selector:
     app: App-Label  # change
   ports:
-  - name: web
+  - name: Port-Name  # change
     port: 8080

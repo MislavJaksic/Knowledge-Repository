@@ -3,10 +3,13 @@ kind: ServiceMonitor
 metadata:
   name: Monitor-Name  # change
   labels:
-    team: Monitor-Label  # change
+    monitor: Monitor-Label  # change
 spec:
   selector:
     matchLabels:
       app: App-Label  # change
+  namespaceSelector:
+    matchNames:
+      - App-Namespace  # change
   endpoints:
-  - port: web
+  - port: Port-Name  # change
