@@ -8,8 +8,6 @@
 
 #### Installing the Operator on Kubernetes
 
-Create a namespace `K8s-Tracing-Namespace`.  
-
 ```
 $: kubectl create namespace K8s-Tracing-Namespace
 
@@ -34,7 +32,7 @@ $: kubectl apply -f simplest.yaml  # see Research
 
 ### Deployment Strategies
 
-Possible valus:
+Possible values:
 * `allInOne`
 * `production`
 * `streaming`
@@ -78,6 +76,7 @@ spec:
 
 You can also open a `NodePort` by FORCE.  
 Edit the `Service` `simplest-query` and change `spec.type`.  
+See Research.  
 
 ### Upgrading the Operator and its managed instances
 
@@ -100,6 +99,7 @@ TODO
 ### Monitoring the operator
 
 The `Jaeger Operator` starts a `Prometheus`-compatible endpoint on `0.0.0.0:8383/metrics`.  
+See Research.  
 
 ### Uninstalling the operator
 

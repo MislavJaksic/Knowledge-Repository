@@ -1,7 +1,9 @@
 ## [Jaeger](https://www.jaegertracing.io/)
 
 End-to-end distributed tracing.  
-Problems with the distributed architecture are networking and observability.  
+Problems with the distributed architecture:
+* networking
+* observability
 
 ### Install using Kubernetes Operator
 
@@ -25,3 +27,15 @@ You can also open a `NodePort` by FORCE.
 Edit the `Service` `simplest-query` and change `spec.type`.  
 
 [Instructions](Docs/Deployment/Kubernetes)
+
+#### More information
+
+```
+$: kubectl describe crd jaegers.jaegertracing.io
+```
+
+### Configuration
+
+TODO
+
+[Instructions](Docs/Deployment)

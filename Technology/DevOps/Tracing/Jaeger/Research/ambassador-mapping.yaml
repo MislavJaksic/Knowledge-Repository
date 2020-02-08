@@ -1,9 +1,9 @@
 apiVersion: getambassador.io/v2
 kind: Mapping
 metadata:
-  name: jaeger-query
-  namespace: ambassador
+  name: jaeger-query-mapping
+  namespace: K8s-Ambassador-Namespace  # change
 spec:
   prefix: /jaeger/query/  # same as base-path
-  service: 'simplest-query.tracing:16686'  # Service-Name.Namespace:Port
+  service: 'simplest-query.K8s-Tracing-Namespace:16686'  # [Scheme://]Service-Name[.Namespace][:Port]
   rewrite: /jaeger/query/  # same as base-path
