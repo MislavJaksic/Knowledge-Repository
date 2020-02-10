@@ -1,0 +1,23 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: elastic-exporter-service-monitor
+  labels:
+    monitor: Prometheus-Monitor-Label  # change
+  namespace: K8s-Monitoring-Namespace  # change
+  annotations:
+    developer/name: "Mislav Jakšić"
+    developer/email: "jaksicmislav@gmail.com"
+    developer/url: "https://github.com/MislavJaksic"
+    developer/role: "technical lead"
+    developer/timezone: "Europe/Zagreb"
+    developer/picUrl: "https://images.app.goo.gl/PCHZgd8oattge1i96"
+spec:
+  selector:
+    matchLabels:
+      app: elastic-exporter-service-app
+  namespaceSelector:
+    matchNames:
+      - K8s-Elastic-Namespace  # change
+  endpoints:
+  - port: metrics
