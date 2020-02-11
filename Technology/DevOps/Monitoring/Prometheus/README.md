@@ -11,13 +11,10 @@ Prometheus:
 #### Install
 
 ```
+$: kubectl create namespace K8s-Monitoring-Namespace
+
 $: kubectl apply -f prometheus-operator-rbac.yaml  # see Research
-
-$: kubectl apply -f example-app.yaml
-$: kubectl apply -f service-monitor.yaml
-
 $: kubectl apply -f prometheus-rbac.yaml
-
 $: kubectl apply -f prometheus.yaml
 ```
 

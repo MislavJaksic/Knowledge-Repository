@@ -2,7 +2,16 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: grafana
+  labels:
+    app: grafana-app
   namespace: K8s-Monitoring-Namespace  # change
+  annotations:
+    developer/name: "Mislav Jakšić"
+    developer/email: "jaksicmislav@gmail.com"
+    developer/url: "https://github.com/MislavJaksic"
+    developer/role: "technical lead"
+    developer/timezone: "Europe/Zagreb"
+    developer/picUrl: "https://images.app.goo.gl/PCHZgd8oattge1i96"
 spec:
   replicas: 1
   selector:
@@ -19,7 +28,7 @@ spec:
         env:
           # - name: "GF_<SectionName>_<KeyName>"  # override settings with ENV VARs
           #   value: ""
-          # - name: "GF_AUTH_ANONYMOUS_ENABLED"  # can view link without login
+          # - name: "GF_AUTH_ANONYMOUS_ENABLED"  # view dashboards without login
           #   value: "true"
           # - name: "GF_AUTH_ANONYMOUS_ORG_NAME"
           #   value: "DataFlux"
@@ -58,6 +67,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: grafana
+  labels:
+    app: grafana-service-app
   namespace: K8s-Monitoring-Namespace  # change
 spec:
   ports:

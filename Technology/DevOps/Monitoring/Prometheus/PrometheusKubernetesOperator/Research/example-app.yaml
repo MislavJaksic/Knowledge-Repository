@@ -2,16 +2,25 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: Deployment-Name  # change
+  labels:
+    app: Deployment-App-Label  # change
   namespace: App-Namespace  # change
+  annotations:
+    developer/name: "Mislav Jakšić"
+    developer/email: "jaksicmislav@gmail.com"
+    developer/url: "https://github.com/MislavJaksic"
+    developer/role: "technical lead"
+    developer/timezone: "Europe/Zagreb"
+    developer/picUrl: "https://images.app.goo.gl/PCHZgd8oattge1i96"
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: App-Label  # change
+      tier: Tier-Label  # change
   template:
     metadata:
       labels:
-        app: App-Label  # change
+        tier: Tier-Label  # change
     spec:
       containers:
       - name: example-app
@@ -24,10 +33,19 @@ kind: Service
 apiVersion: v1
 metadata:
   name: Service-Name  # change
+  labels:
+    app: Service-App-Label  # change
   namespace: App-Namespace  # change
+  annotations:
+    developer/name: "Mislav Jakšić"
+    developer/email: "jaksicmislav@gmail.com"
+    developer/url: "https://github.com/MislavJaksic"
+    developer/role: "technical lead"
+    developer/timezone: "Europe/Zagreb"
+    developer/picUrl: "https://images.app.goo.gl/PCHZgd8oattge1i96"
 spec:
   selector:
-    app: App-Label  # change
+    tier: Tier-Label  # change
   ports:
   - name: Port-Name  # change
     port: 8080

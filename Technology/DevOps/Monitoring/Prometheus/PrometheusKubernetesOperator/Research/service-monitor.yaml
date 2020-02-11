@@ -3,11 +3,18 @@ kind: ServiceMonitor
 metadata:
   name: Monitor-Name  # change
   labels:
-    monitor: Monitor-Label  # change
+    monitor: Prometheus-Monitor-Label  # change
+  annotations:
+    developer/name: "Mislav Jakšić"
+    developer/email: "jaksicmislav@gmail.com"
+    developer/url: "https://github.com/MislavJaksic"
+    developer/role: "technical lead"
+    developer/timezone: "Europe/Zagreb"
+    developer/picUrl: "https://images.app.goo.gl/PCHZgd8oattge1i96"
 spec:
   selector:
     matchLabels:
-      app: App-Label  # change
+      app: Service-App-Label  # change
   namespaceSelector:
     matchNames:
       - App-Namespace  # change
