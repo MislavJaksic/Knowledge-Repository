@@ -2,7 +2,16 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hotrod-deployment
+  labels:
+    app: hotrod-app
   namespace: K8s-Tracing-Namespace  # change
+  annotations:
+    developer/name: "Mislav Jakšić"
+    developer/email: "jaksicmislav@gmail.com"
+    developer/url: "https://github.com/MislavJaksic"
+    developer/role: "technical lead"
+    developer/timezone: "Europe/Zagreb"
+    developer/picUrl: "https://images.app.goo.gl/PCHZgd8oattge1i96"
 spec:
   replicas: 1
   selector:
@@ -28,7 +37,16 @@ apiVersion: v1
 kind: Service
 metadata:
   name: hotrod-service
+  labels:
+    app: hotrod-service-app
   namespace: K8s-Tracing-Namespace  # change
+  annotations:
+    developer/name: "Mislav Jakšić"
+    developer/email: "jaksicmislav@gmail.com"
+    developer/url: "https://github.com/MislavJaksic"
+    developer/role: "technical lead"
+    developer/timezone: "Europe/Zagreb"
+    developer/picUrl: "https://images.app.goo.gl/PCHZgd8oattge1i96"
 spec:
   type: NodePort
   selector:

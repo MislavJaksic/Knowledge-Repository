@@ -4,7 +4,6 @@
 
 ```
 $: kubectl apply -f all-in-one.yaml  # see Research
-$: kubectl -n K8s-Elastic-Namespace logs -f statefulset.apps/elastic-operator
 $: kubectl apply -f elasticsearch.yaml
 
 $: PASSWORD=$(kubectl get secret Elastic-Cluster-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode)

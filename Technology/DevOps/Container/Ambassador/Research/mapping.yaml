@@ -2,7 +2,14 @@ apiVersion: getambassador.io/v2
 kind: Mapping
 metadata:
   name: Mapping-Name # REQUIRED
-  namespace: K8s-Ambassador-Namespace
+  namespace: K8s-Ambassador-Namespace  # change
+  annotations:
+    developer/name: "Mislav Jakšić"
+    developer/email: "jaksicmislav@gmail.com"
+    developer/url: "https://github.com/MislavJaksic"
+    developer/role: "technical lead"
+    developer/timezone: "Europe/Zagreb"
+    developer/picUrl: "https://images.app.goo.gl/PCHZgd8oattge1i96"
 spec:
   prefix: /url/prefix/  # REQUIRED; https://Ambassador-Hostname/url/prefix/...
   service: 'Service-Name.Namespace:Port'  # REQUIRED; [Scheme://]Service-Name[.Namespace][:Port]

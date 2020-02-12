@@ -29,8 +29,14 @@ $: sudo service grafana-server stop
 ```
 $: kubectl apply -f grafana.yaml  # see Research
 
-# Note: visit http://localhost:30901/
+# Note: visit http://Kubectl-Server-Ip::30901/
 # Note: default username and password are "admin"
+```
+
+### Grafana Data Sources
+
+```
+Prometheus: http://Kubernetes-Service-Name:9090 OR http://localhost:9090
 ```
 
 ### Share panel

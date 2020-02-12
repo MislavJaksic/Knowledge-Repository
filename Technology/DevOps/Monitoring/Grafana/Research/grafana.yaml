@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: grafana
+  name: grafana-deployment
   labels:
     app: grafana-app
   namespace: K8s-Monitoring-Namespace  # change
@@ -16,11 +16,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      name: grafana
+      tier: grafana-tier
   template:
     metadata:
       labels:
-        name: grafana
+        tier: grafana-tier
     spec:
       containers:
       - name: grafana
@@ -66,10 +66,17 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: grafana
+  name: grafana-service
   labels:
     app: grafana-service-app
   namespace: K8s-Monitoring-Namespace  # change
+  annotations:
+    developer/name: "Mislav Jakšić"
+    developer/email: "jaksicmislav@gmail.com"
+    developer/url: "https://github.com/MislavJaksic"
+    developer/role: "technical lead"
+    developer/timezone: "Europe/Zagreb"
+    developer/picUrl: "https://images.app.goo.gl/PCHZgd8oattge1i96"
 spec:
   ports:
   - name: grafana
@@ -78,5 +85,5 @@ spec:
     port: 3000
     protocol: TCP
   selector:
-    name: grafana
+    tier: grafana-tier
   type: NodePort
