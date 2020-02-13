@@ -1,10 +1,11 @@
 ## Demo
 
-In a single `Node` a generator `Pod` sends a message to the filter `Pod` when the user signals the generator `Pod`.  
-Both `Pod`s are accessible from the outside because of `NodePort`.  
-You can use an `Ingress` and an `Ingress Controller` as a single point on entry.  
-You can use an API Gateway, Ambassador, which is more powerful then an `Ingress`.  
+The generator app in a `Pod` sends a message to the filter app in a `Pod`.  
 `ConfigMap` allows resources like `Deployment`s to be reconfigured.  
+
+`Pod`s can be accessed using a `NodePort` `Service`.  
+`Pod`s can be accessed using an `Ingress` and an `Ingress Controller`.  
+You can use an API Gateway, `Ambassador`, which is more powerful then an `Ingress`.  
 
 ### Microservices
 

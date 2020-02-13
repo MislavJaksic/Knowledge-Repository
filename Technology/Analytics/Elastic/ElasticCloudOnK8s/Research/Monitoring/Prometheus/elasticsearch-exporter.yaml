@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: elastic-exporter-deployment
   labels:
-    app: elastic-exporter-app
+    app: elastic-exporter-deployment-app
   namespace: K8s-Elastic-Namespace  # change
   annotations:
     developer/name: "Mislav Jakšić"

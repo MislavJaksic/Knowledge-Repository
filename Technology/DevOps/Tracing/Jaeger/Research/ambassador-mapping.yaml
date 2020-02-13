@@ -3,7 +3,7 @@ kind: Mapping
 metadata:
   name: jaeger-query-mapping
   labels:
-    app: jaeger-query-app
+    app: jaeger-query-mapping-app
   namespace: K8s-Ambassador-Namespace  # change
   annotations:
     developer/name: "Mislav Jakšić"

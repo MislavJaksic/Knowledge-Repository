@@ -15,7 +15,7 @@ metadata:
 spec:
   version: 7.5.1
   nodeSets:
-  - name: Elastic-Name  # change
+  - name: Elastic-Cluster-name  # change
     count: 2
     config:
       node.master: true

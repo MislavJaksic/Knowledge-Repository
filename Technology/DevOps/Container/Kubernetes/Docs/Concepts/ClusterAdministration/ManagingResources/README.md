@@ -15,7 +15,7 @@ kind: Deployment
 ```
 
 ```
-$: kubectl apply -f File-Name.yaml  # created in order they appear in
+$: kubectl apply -f File-Name.yaml  # created in order in which they appear
 $: kubectl apply -f /path/to/dir
 $: kubectl apply -f URL
 ```

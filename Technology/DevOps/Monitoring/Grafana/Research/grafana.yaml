@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: grafana-deployment
   labels:
-    app: grafana-app
+    app: grafana-deployment-app
   namespace: K8s-Monitoring-Namespace  # change
   annotations:
     developer/name: "Mislav Jakšić"

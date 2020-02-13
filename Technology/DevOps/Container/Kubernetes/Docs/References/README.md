@@ -11,9 +11,3 @@ More well known tools:
 * `Helm`
 * `Kompose`
 * `kubeadm`
-
-### kubectl
-
-[Overview: examples, operations and resource types](KubectlCLI/Overview)  
-[Cheat sheet](KubectlCLI/CheatSheet)  
-[Commands](KubectlCLI/Commands)  

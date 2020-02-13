@@ -1,6 +1,6 @@
 #!/bin/bash
 
-KUBECTL_SERVER_IP=
+KUBECTL_SERVER_IP=0
 
 TLS_SOURCE_PATH=/etc/docker/certs.d
 TLS_SINK_PATH=/home/centos

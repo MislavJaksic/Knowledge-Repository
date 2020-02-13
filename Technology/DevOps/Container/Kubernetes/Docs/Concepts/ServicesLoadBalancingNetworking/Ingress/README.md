@@ -1,7 +1,7 @@
 ## [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 
 Manages external access to the cluster.  
-Ingress:
+`Ingress`:
 * gives `Service`s externally-reachable URLs
 * load balance traffic
 * terminate SSL / TLS
@@ -52,7 +52,7 @@ scheme         authority                     path(HTTP URI)         query       
 ```
 
 `Ingress` rules:
-* host: optional, if host (for example, foo.bar.com) matches. apply the rules
+* host: optional, if host (for example, foo.bar.com) matches, apply the rules
 * paths: if the path matches, direct traffic to a backend, a `Service`
 * backend: HTTP(S) requests that match the host and path are sent to the backend, a `Service`
 
