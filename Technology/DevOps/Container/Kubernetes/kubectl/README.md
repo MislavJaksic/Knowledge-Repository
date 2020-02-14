@@ -2,7 +2,7 @@
 
 ### Install
 
-[Instruction](Other/Kubernetes/Docs/Tasks/InstallTools/InstallKubectl)  
+[Instructions](Other/Kubernetes/Docs/Tasks/InstallTools/InstallKubectl)  
 
 ### Config file
 

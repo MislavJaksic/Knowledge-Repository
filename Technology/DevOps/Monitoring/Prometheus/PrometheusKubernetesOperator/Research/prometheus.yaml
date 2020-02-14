@@ -14,10 +14,10 @@ metadata:
     developer/picUrl: "https://images.app.goo.gl/PCHZgd8oattge1i96"
 spec:
   serviceAccountName: prometheus
-  serviceMonitorSelector:  # monitor through services
+  serviceMonitorSelector:  # monitor through Services
     matchLabels:
       monitor: Prometheus-Monitor-Label  # change
-  # podMonitorSelector:  # monitor through pods
+  # podMonitorSelector:  # monitor through Pods
   #   matchLabels:
   #     monitor: Prometheus-Monitor-Label  # change
   # ruleSelector:  # select rules

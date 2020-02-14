@@ -3,7 +3,7 @@ kind: Elasticsearch
 metadata:
   name: Elastic-Cluster  # change
   labels:
-    app: elastic-search-app
+    app: Elastic-Cluster-app  # change
   namespace: K8s-Elastic-Namespace  # change
   annotations:
     developer/name: "Mislav Jakšić"
