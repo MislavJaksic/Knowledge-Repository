@@ -36,6 +36,14 @@ GitLab workflow ties together GitLab and Git:
 * git
 * CICD
 
+### Create a OAuth2 token
+
+For authenticating against Git over HTTP.  
+
+```
+User Settings -> Access Tokens
+```
+
 ### [Create and add your SSH public key](https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html)
 
 To use Git over SSH you need to:
