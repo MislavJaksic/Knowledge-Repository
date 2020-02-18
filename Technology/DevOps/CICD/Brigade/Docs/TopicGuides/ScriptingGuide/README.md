@@ -15,6 +15,7 @@ See Research.
 
 `brigade-15.js`:
 * share files between `Job`s using `PVC`
+* shared files are stored in `/mnt/brigade/share`
 * 50 megabytes of storage per build (override in project configuration)
 
 `brigade-16.js`:

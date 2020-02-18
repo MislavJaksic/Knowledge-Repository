@@ -1,0 +1,5 @@
+vacuum:
+  age: "90m"  # max Build age
+  maxBuilds: 5  # max number of Builds
+  successfulJobsHistoryLimit: 3  # max number of successful Vacuums
+  failedJobsHistoryLimit: 3  # max number of failed Vacuums

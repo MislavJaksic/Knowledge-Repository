@@ -10,7 +10,7 @@ Brigade is a tool for running scriptable, automated tasks in Kubernetes.
 
 ```
 $: helm repo add brigade https://brigadecore.github.io/charts
-$: helm install brigade brigade/brigade -n K8s-Cicd-Namespace [--set Key=Value]
+$: helm install brigade brigade/brigade -n K8s-Cicd-Namespace [--set Key=Value || -f config.yaml]
 
 # Note: genericGateway.enabled=true if activating Generic Gateway
 
@@ -44,15 +44,15 @@ $: brig project list
 
 $: brig project create
 
-$: brig run Project-Name -f Brigade-Js [-r Branch-Name]
+$: brig run Project-Name -f Brigade-Build-Js [-r Branch-Name]
 ```
 
 ### Using Kashti
 
 ```
-$: kubectl port-forward service/brigade-kashti 8000:80 -n K8s-Cicd-Namespace
-OR
 $: brig dashboard -n K8s-Cicd-Namespace
+OR
+$: kubectl port-forward service/brigade-kashti 8000:80 -n K8s-Cicd-Namespace
 ```
 
 ```
