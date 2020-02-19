@@ -44,3 +44,15 @@ $: helm get values Release-Name  # list set config values
 $: helm list  # list Release-Names
 $: helm uninstall Release-Name [--keep-history]  # uninstall chart
 ```
+
+### Errors
+
+```
+Error: could not get apiVersions from Kubernetes: unable to retrieve the complete list of server APIs
+```
+
+```
+$: kubectl get apiservice
+
+# Note: remove all failures
+```

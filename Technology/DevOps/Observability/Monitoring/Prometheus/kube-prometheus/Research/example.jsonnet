@@ -12,6 +12,7 @@ local kp =
 
     prometheus+:: {
         replicas: 1,  // for simplicity
+        namespaces+: ["ambassador", "cicd"],  // ServiceMonitor additional namespaces
     },
 
     alertmanager+:: {

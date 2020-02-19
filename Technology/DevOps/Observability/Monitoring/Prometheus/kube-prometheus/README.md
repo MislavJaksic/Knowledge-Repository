@@ -17,7 +17,7 @@
 
 $: pwd  # -> .../kube-prometheus-master
 $: docker run --rm -v $(pwd):$(pwd) --workdir $(pwd) quay.io/coreos/jsonnet-ci jb update
-$: docker run --rm -v $(pwd):$(pwd) --workdir $(pwd) quay.io/coreos/jsonnet-ci ./build.sh simple.jsonnet  # see Research (override repository defaults!)
+$: docker run --rm -v $(pwd):$(pwd) --workdir $(pwd) quay.io/coreos/jsonnet-ci ./build.sh example.jsonnet  # see Research (override repository defaults!)
 ```
 
 #### Apply compiled files
@@ -27,6 +27,8 @@ $: pwd  # -> .../kube-prometheus-master
 
 $: kubectl apply -f manifests/setup
 $: kubectl apply -f manifests/
+
+$: kubectl delete --ignore-not-found=true -f manifests/ -f manifests/setup
 ```
 
 ### Configuration
@@ -37,3 +39,15 @@ See Research.
 ### Customization Examples
 
 Even more examples of configuration options!  
+
+### Errors
+
+```
+Error: could not get apiVersions from Kubernetes: unable to retrieve the complete list of server APIs
+```
+
+```
+$: kubectl get apiservice
+
+# Note: if `v1beta1.metrics.k8s.io` failed, remove all `prometheus-adapter` manifests
+```
