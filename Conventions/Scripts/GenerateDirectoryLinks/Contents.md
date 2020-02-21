@@ -6,6 +6,7 @@
 * Technology
     * Analytics
         * [ApacheDruid](Technology/Analytics/ApacheDruid)
+        * [Elastic](Technology/Analytics/Elastic)
     * Database
         * [ApacheHadoop](Technology/Database/ApacheHadoop)
         * [ApacheHive](Technology/Database/ApacheHive)
@@ -16,23 +17,30 @@
         * [SQLite](Technology/Database/SQLite)
     * DevOps
         * CICD
+            * [Brigade](Technology/DevOps/CICD/Brigade)
+            * [Concourse](Technology/DevOps/CICD/Concourse)
             * [Jenkins](Technology/DevOps/CICD/Jenkins)
         * Container
             * [Ambassador](Technology/DevOps/Container/Ambassador)
-            * [Concourse](Technology/DevOps/Container/Concourse)
             * [Docker](Technology/DevOps/Container/Docker)
             * [Harbor](Technology/DevOps/Container/Harbor)
             * [Helm](Technology/DevOps/Container/Helm)
             * [Kubernetes](Technology/DevOps/Container/Kubernetes)
             * [OperatorFramework](Technology/DevOps/Container/OperatorFramework)
             * [Portainer](Technology/DevOps/Container/Portainer)
-        * Monitoring
-            * [Prometheus](Technology/DevOps/Monitoring/Prometheus)
+        * Observability
+            * Monitoring
+                * [Grafana](Technology/DevOps/Observability/Monitoring/Grafana)
+                * [Prometheus](Technology/DevOps/Observability/Monitoring/Prometheus)
+            * Tracing
+                * [Jaeger](Technology/DevOps/Observability/Tracing/Jaeger)
         * Security
             * [OpenVPN](Technology/DevOps/Security/OpenVPN)
             * [Putty](Technology/DevOps/Security/Putty)
             * [SSH](Technology/DevOps/Security/SSH)
         * Server
+            * Hosting
+                * [DigitalOcean](Technology/DevOps/Server/Hosting/DigitalOcean)
             * [Nginx](Technology/DevOps/Server/Nginx)
         * VersionControl
             * [Git](Technology/DevOps/VersionControl/Git)
@@ -93,14 +101,16 @@
         * [Asciinema](Technology/Video/Asciinema)
         * [OBS](Technology/Video/OBS)
         * [OpenShot](Technology/Video/OpenShot)
-    * Visualize
-        * [Grafana](Technology/Visualize/Grafana)
     * Web
         * API
             * [GraphQL](https://github.com/MislavJaksic/GraphQL-Tutorial)
             * [Postman](Technology/Web/API/Postman)
             * REST
                 * [RESTFulWebServices](Technology/Web/API/REST/RESTFulWebServices)
+        * CMS
+            * [Ghost](Technology/Web/CMS/Ghost)
+        * DNS
+            * [DomeneHR](Technology/Web/DNS/DomeneHR)
         * Framework
             * [Flask](https://github.com/MislavJaksic/Flask-Tutorial)
             * [RubyOnRails](Technology/Web/Framework/RubyOnRails)

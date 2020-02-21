@@ -46,8 +46,25 @@ Don't say, show.
 
 ### Chapter 2: A Window onto the World
 
-Writing is a one way street. No one is coming from the other direction.  
+Writing is a one way street. No one is coming in the other direction.  
 Imagine your readers. Imagine them talking to you.  
-"Classic style" is about orienting the reader's gaze. It is not about arguing or thinking out loud. Let the reader see the truth for himself.  
+Classic style is about orienting the reader's gaze. It is not about arguing or thinking out loud. Let the reader see the truth for himself.  
 Classic prose shows the reader concrete things and engages him in conversation.  
-Use analogies to everyday objects.  
+Use analogies to everyday objects and events.  
+Classic style is direct.  
+
+Signpost, meta-discuss, sparingly: writing about what you will write next.  
+Instead, formulate a question or use just enough key words to make a self-contained summary.  
+Don't talk about your guild or profession, talk about the subject.  
+Don't write self-consciously: assume a subject is controversial, complex and difficult.  
+Don't hedge, be confident. Specify under which circumstances your statement is wrong.  
+Don't use intensifiers such as 'very'.  
+Don't use clichés. Unpack idioms and play with the image.  
+Don't use meta-concepts, concepts about concepts: level, condition, context, level, ...  
+Don't turn verbs, actions, into nouns, objects, or adjectives, descriptions.  
+Use first instead of second person pronouns.  
+
+### Chapter 3: The Curse of Knowledge
+
+It is difficult to imagine how other people don't know what you do.  
+Related to it are: egocentrism, hindsight bias, false consensus, illusory transparency and mind-blindness.  
