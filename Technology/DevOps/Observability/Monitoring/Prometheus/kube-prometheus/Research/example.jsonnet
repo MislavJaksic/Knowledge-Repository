@@ -6,13 +6,14 @@ local kp =
   (import 'kube-prometheus/kube-prometheus-node-ports.libsonnet') +  // for simplicity
   // (import 'kube-prometheus/kube-prometheus-static-etcd.libsonnet') +
   // (import 'kube-prometheus/kube-prometheus-thanos-sidecar.libsonnet') +
+  (import 'kube-prometheus/kube-prometheus-all-namespaces.libsonnet') + // monitor all namespaces
   {
   _config+:: {
     namespace: "monitoring",
 
     prometheus+:: {
         replicas: 1,  // for simplicity
-        namespaces+: ["ambassador", "cicd"],  // ServiceMonitor additional namespaces
+        // namespaces+: ["ambassador", "cicd"],  // monitor existing, specific namespaces
     },
 
     alertmanager+:: {

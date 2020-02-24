@@ -1,0 +1,26 @@
+replicas: 1
+logstashConfig: {}  # add to /usr/share/logstash/config/
+  # logstash.yml: |
+  #   http.host: 0.0.0.0
+  # log4j2.properties: |
+  #   key = value
+logstashPipeline: {}  # add to /usr/share/logstash/pipeline/
+  # uptime.conf: |
+  #   input {
+  #     exec {
+  #       command => "uptime"
+  #       interval => 30
+  #     }
+  #   }
+  #   output { stdout { } }
+imageTag: "7.5.1"
+rbac:
+  create: true
+service:
+  type: NodePort
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+    nodePort: 30908

@@ -21,13 +21,13 @@ spec:
       node.master: true
       node.data: true
       node.ingest: true
-      node.store.allow_mmap: false  # turn off for production!
+      node.store.allow_mmap: false  # true for production!
     podTemplate:  # ephemeral!
       spec:
         volumes:
         - name: elasticsearch-data
           emptyDir: {}
-        # - name: sysctl    # turn on for production!
+        # - name: sysctl    # for production!
         #   securityContext:
         #     privileged: true
         #   command: ['sh', '-c', 'sysctl -w vm.max_map_count=262144']
@@ -39,5 +39,5 @@ spec:
     #     - ReadWriteOnce
     #     resources:
     #       requests:
-    #         storage: 5Gi
-    #     storageClassName: standard
+    #         storage: 1Gi
+    #     storageClassName: Storage-Class-Name  # change
