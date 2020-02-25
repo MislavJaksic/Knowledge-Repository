@@ -23,8 +23,11 @@ local kp =
     nodeExporter+:: {
       port: 9101,  // avoid `address already in use` errors
     },
-	},
-  };
+  },
+//  grafanaDashboards+:: {
+//    'extra-dashboard.json': (import 'extra-dashboard.json'),
+//  },
+};
 
 { ['setup/0namespace-' + name]: kp.kubePrometheus[name] for name in std.objectFields(kp.kubePrometheus) } +
 {

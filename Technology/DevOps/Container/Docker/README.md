@@ -14,11 +14,11 @@ Docker is a containerization program.
 
 Keep it modular.  
 Put each command in its own layer when testing.  
-Don't optimize size too early!  
+Don't optimize too early!  
 For production, merge all package update and install layers into one.  
 
 ```
-RUN wget -O - http://example.com/big.tar.xz | tar -xJC /usr/src/things  # download, untar and delete tar
+RUN wget -O - http://example.com/big.tar.xz | tar -xJC /usr/src/things  # download, extract and delete `*.tar`
 ```
 
 ```

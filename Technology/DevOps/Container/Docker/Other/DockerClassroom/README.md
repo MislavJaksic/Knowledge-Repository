@@ -2,7 +2,7 @@
 
 ### [Docker for developers](https://training.play-with-docker.com/dev-stage1/)
 
-#### Begineer Linux
+#### Beginner Linux
 
 Docker container != Docker image.  
 A Docker image is a template for container construction.
