@@ -2,38 +2,38 @@
 
 `Ingress` resources work only when an `Ingress Controller` is running.
 Kubernetes supports and maintains:
-* GCE controller
-* nginx controller
+* `GCE` controller
+* `nginx` controller
 
 ### Additional controllers
 
-* Ambassador API Gateway is an Envoy based ingress controller with community or commercial support from Datawire.
+* `Ambassador` `API Gateway` is an `Envoy` based ingress controller with community or commercial support from `Datawire`.
 
-* AppsCode Inc. offers support and maintenance for the most widely used HAProxy based ingress controller Voyager.
+* `AppsCode Inc.` offers support and maintenance for the most widely used `HAProxy` based ingress controller `Voyager`.
 
-* AWS ALB Ingress Controller enables ingress using the AWS Application Load Balancer.
+* `AWS ALB` `Ingress Controller` enables ingress using the `AWS Application` `Load Balancer`.
 
-* Contour is an Envoy based ingress controller provided and supported by VMware.
+* `Contour` is an `Envoy` based ingress controller provided and supported by `VMware`.
 
-* Citrix provides an Ingress Controller for its hardware (MPX), virtualized (VPX) and free containerized (CPX) ADC for baremetal and cloud deployments.
+* `Citrix` provides an `Ingress Controller` for its hardware (MPX), virtualized (VPX) and free containerized (CPX) ADC for baremetal and cloud deployments.
 
-* F5 Networks provides support and maintenance for the F5 BIG-IP Controller for Kubernetes.
+* `F5 Networks` provides support and maintenance for the `F5 BIG-IP Controller` for Kubernetes.
 
-* Gloo is an open-source ingress controller based on Envoy which offers API Gateway functionality with enterprise support from solo.io.
+* `Gloo` is an open-source ingress controller based on `Envoy` which offers `API Gateway` functionality with enterprise support from solo.io.
 
-* HAProxy Ingress is a highly customizable community-driven ingress controller for HAProxy.
+* `HAProxy Ingress` is a highly customizable community-driven ingress controller for `HAProxy`.
 
-* HAProxy Technologies offers support and maintenance for the HAProxy Ingress Controller for Kubernetes. See the official documentation.
+* `HAProxy Technologies` offers support and maintenance for the `HAProxy` `Ingress Controller` for Kubernetes. See the official documentation.
 
-* Istio based ingress controller Control Ingress Traffic.
+* `Istio` based ingress controller `Control Ingress Traffic`.
 
-* Kong offers community or commercial support and maintenance for the Kong Ingress Controller for Kubernetes.
+* `Kong` offers community or commercial support and maintenance for the `Kong` `Ingress Controller` for Kubernetes.
 
-* NGINX, Inc. offers support and maintenance for the NGINX Ingress Controller for Kubernetes.
+* `NGINX, Inc.` offers support and maintenance for the `NGINX` `Ingress Controller` for Kubernetes.
 
-* Skipper HTTP router and reverse proxy for service composition, including use cases like Kubernetes Ingress, designed as a library to build your custom proxy
+* `Skipper` HTTP router and reverse proxy for service composition, including use cases like Kubernetes `Ingress`, designed as a library to build your custom proxy
 
-* Traefik is a fully featured ingress controller (Let’s Encrypt, secrets, http2, websocket), and it also comes with commercial support by Containous.
+* `Traefik` is a fully featured ingress controller (`Let’s Encrypt`, secrets, http2, websocket), and it also comes with commercial support by `Containous`.
 
 ### Using multiple Ingress controllers
 
