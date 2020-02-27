@@ -1,6 +1,7 @@
 ## [Docker Curriculum](https://docker-curriculum.com/)
 
-Note: I didn't followed this tutorial from beginning to end. It repeats concepts from [Get started: get started with Docker](https://docs.docker.com/get-started/).
+I didn't followed this tutorial from beginning to end.  
+It repeats concepts from [Get started: get started with Docker](https://docs.docker.com/get-started/).
 
 ### Introduction
 

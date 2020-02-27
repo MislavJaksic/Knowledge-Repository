@@ -3,7 +3,7 @@
 ### [Windows](https://docs.docker.com/docker-for-windows/install/)
 
 Prerequisites:
-* Windows 10 64-bit: Pro, Enterprise, or Education (Home will not do!)
+* Windows 10 64-bit: Pro, Enterprise, or Education (doesn't work on Home)
 * Hyper-V and Containers Windows are enabled
 
 Follow the link.  
@@ -16,7 +16,7 @@ Double-click the `*.exe`.
 #### [Ubuntu Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 ```
-$: sudo apt-get remove docker docker-engine docker.io containerd runc  # uninstall older Docker
+$: sudo apt-get remove docker docker-engine docker.io containerd runc  # uninstall old Docker
 ```
 
 ```
@@ -35,7 +35,7 @@ $: sudo docker run hello-world
 #### [Post-installation for Linux](https://docs.docker.com/install/linux/linux-postinstall/)
 
 Non-root users will have to prefix every command with `sudo`.  
-Avoid this by executing:
+Avoid it with:
 ```
 $: sudo groupadd docker
 $: sudo usermod -aG docker $USER

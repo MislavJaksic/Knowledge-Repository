@@ -5,8 +5,6 @@ TAG=""
 
 IMAGE=""
 
-docker build --tag=$IMAGE $IMAGE/
-
-docker tag $IMAGE $DOCKER_ID/$IMAGE:$TAG
-
+docker build --tag=$IMAGE:$TAG $IMAGE/
+docker tag $IMAGE:$TAG $DOCKER_ID/$IMAGE:$TAG
 docker push $DOCKER_ID/$IMAGE:$TAG

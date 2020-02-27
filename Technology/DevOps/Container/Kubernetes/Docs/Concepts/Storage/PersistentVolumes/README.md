@@ -26,13 +26,13 @@ Pods use claims as `Volume`s.
 A PV belongs to the PVC for as long as it needs it.  
 `Pod`s access claimed PVs by including a `PersistentVolumeClaim` in their `Pod`’s volumes block.  
 
-A PVC is protected when the Finalizers list in a PVC includes kubernetes.io/pvc-protection.  
-a PV is protected when the Finalizers list includes kubernetes.io/pv-protection.  
+A PVC is protected when the Finalizers list in a PVC includes `kubernetes.io/pvc-protection`.  
+a PV is protected when the Finalizers list includes `kubernetes.io/pv-protection`.  
 
 When done using the `Volume`, delete the PVC.  
 The reclaim policy for a PV tells Kubernetes what to do with the volume after it has been released of its claim.
 * retain - when the PVC is deleted the PV will exist until manually reclaimed
-* delete - deletion removes both the PV and the storage asset (AWS EBS, GCE PD, Azure Disk, Cinder, ...); dynamically provisioned volumes inherit a reclim policy from `StorageClass`
+* delete - deletion removes both the PV and the storage asset (`AWS EBS`, `GCE PD`, `Azure Disk`, `Cinder`, ...); dynamically provisioned volumes inherit a reclim policy from `StorageClass`
 * recycle - DEPRECATED; use dynamic provisioning
 
 TODO

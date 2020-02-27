@@ -1,0 +1,38 @@
+# Note: https://github.com/kubernetes/kubernetes/issues/85454#issuecomment-555639080
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ceph-admin-secret
+  namespace: kube-system
+type: "kubernetes.io/rbd"
+data:
+  # ceph auth get-key client.admin | base64
+  key: Very-Long-String
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ceph-user-secret
+  namespace: kube-system
+type: "kubernetes.io/rbd"
+data:
+  # ceph auth add client. User-Id 'allow r' osd 'allow rwx pool=User-Id '
+  # ceph auth get-key client.User-Id | base64
+  key: Very-Long-String
+---
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: rbd
+provisioner: kubernetes.io/rbd
+parameters:
+  monitors: Ip-0:Port-0,Ip-1:Port-1,Ip-2:Port-2
+  pool: Pool-Name
+  adminId: admin
+  adminSecretNamespace: kube-system
+  adminSecretName: ceph-admin-secret
+  userId: User-Id
+  userSecretNamespace: kube-system
+  userSecretName: ceph-user-secret
+  imageFormat: "2"
+  imageFeatures: layering
