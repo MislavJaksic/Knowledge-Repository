@@ -5,7 +5,7 @@
 #### Windows (recommended)
 
 Download Haskell [Stack](https://docs.haskellstack.org/en/stable/README/), a project manager.  
-`Stack` prevents "Cabal hell", a dependency conflict.  
+`Stack` prevents a dependency hell.  
 
 `stack ghci` installs and runs the interactive interpreter.  
 

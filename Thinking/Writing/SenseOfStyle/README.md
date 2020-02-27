@@ -66,5 +66,10 @@ Use first instead of second person pronouns.
 
 ### Chapter 3: The Curse of Knowledge
 
-It is difficult to imagine how other people don't know what you do.  
+It's difficult to imagine what other people don't know.  
 Related to it are: egocentrism, hindsight bias, false consensus, illusory transparency and mind-blindness.  
+Imagine the reader helps, but not a lot.  
+Avoid jargon and abbreviations.  
+Use examples and explain terms with a handful of adjectives.  
+Chunking: bundling data. M D P H D R S V P C E O I H O P into MD PHD RSVP CEO IHOP.  
+Useful only if another person knows about the chunk.  
