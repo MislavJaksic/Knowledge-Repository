@@ -47,7 +47,7 @@ TODO
 
 ```
 $: helm create Chart-Name
-$: helm lint
+$: helm lint Chart-Name
 $: helm package Chart-Name
 
 $: helm install Chart-Package
