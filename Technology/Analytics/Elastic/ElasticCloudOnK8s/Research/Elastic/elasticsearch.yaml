@@ -14,6 +14,13 @@ metadata:
     developer/picUrl: "https://images.app.goo.gl/PCHZgd8oattge1i96"
 spec:
   version: 7.5.1
+  http:
+    service:
+      spec:
+        type: NodePort
+        ports:
+        - nodePort: 32000
+          port: 9200
   nodeSets:
   - name: Elastic-Cluster-name  # change
     count: 2

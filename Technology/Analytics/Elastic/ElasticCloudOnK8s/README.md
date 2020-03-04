@@ -7,8 +7,7 @@ $: kubectl apply -f all-in-one.yaml  # see Research
 $: kubectl apply -f elasticsearch.yaml
 
 $: PASSWORD=$(kubectl get secret Elastic-Cluster-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode)
-$: kubectl port-forward service/Elastic-Cluster-es-http 9200  # outside Kubernetes
-$: curl -u "elastic:$PASSWORD" -k "https://localhost:9200"
+$: curl -u "elastic:$PASSWORD" -k "https://Kubectl-Server-Ip:32000"
 ```
 
 [Instructions](Docs/Quickstart)
@@ -18,13 +17,9 @@ $: curl -u "elastic:$PASSWORD" -k "https://localhost:9200"
 ```
 $: kubectl apply -f kibana.yaml  # see Research
 
-$: kubectl port-forward service/Kibana-Cluster-kb-http 5601
-
-# Note: visit https://localhost:5601
+# Note: visit https://Kubectl-Server-Ip:32001
   # Username_ elastic
   # Password: `kubectl get secret Elastic-Cluster-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode`
-
-# Note: if using NodePort visit https://Kubectl-Server-Ip:Node-Port
 ```
 
 [Instructions](Docs/Quickstart)

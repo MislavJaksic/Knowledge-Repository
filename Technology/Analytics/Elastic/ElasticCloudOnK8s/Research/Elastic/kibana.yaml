@@ -22,6 +22,9 @@ spec:
     service:
       spec:
         type: NodePort
+        ports:
+        - nodePort: 32001
+          port: 5601
   # podTemplate:  # not supported as of 06.02.2020.
   #   spec:
   #     initContainers:
