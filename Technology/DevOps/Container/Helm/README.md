@@ -44,7 +44,7 @@ $: helm _command [--wait [--timeout _time]] [--no-hooks]
 
 $: helm search repo Repo-Name  # search for chart
 $: helm show values Repo-Name/Chart-Name  # list config fields and values
-$: helm install Release-Name Repo-Name/Chart-Name [-f Config-File.yaml]  # install chart
+$: helm install Release-Name Repo-Name/Chart-Name [-f Config-File.yaml] [--debug --dry-run]  # install chart
 
 $: helm status Release-Name  # list release status
 $: helm get values Release-Name  # list set config values
@@ -67,7 +67,7 @@ $: helm dependency update Chart-Name  # download dependency Charts to charts/
 $: helm lint Chart-Name
 $: helm template Chart-Name  # output filled in templates to stdout
 $: helm package Chart-Name  # create Chart-Name-Chart-Version.tgz
-$: helm install Release-Name Chart-Package-Tgz-Name
+$: helm install Release-Name Chart-Package-Tgz-Name [--debug --dry-run]
 ```
 
 If a template uses Go templating, replace `{{` with `{{ "{{" }}`.  
