@@ -40,28 +40,6 @@ $: helm show chart Repo-Name/Chart-Name  # list chart
 $: helm show all Repo-Name/Chart-Name  # list chart docs
 ```
 
-```
-# Note: if you get `pod has unbound immediate PersistentVolumeClaim` error
-# Note: check if you defined a `PersistentVolume`
-```
-
-```
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: hostname-ten
-  labels:
-    type: local
-spec:
-  capacity:
-    storage: 10Gi
-  storageClassName: standard
-  accessModes:
-    - ReadWriteOnce
-  hostPath:
-    path: "/data/hostname-ten"
-```
-
 ### Learn About Releases
 
 ```
@@ -71,7 +49,6 @@ $: helm list  # ->
 ```
 
 ### Uninstall a Release
-
 
 ```
 $: helm uninstall Release-Name [--keep-history]

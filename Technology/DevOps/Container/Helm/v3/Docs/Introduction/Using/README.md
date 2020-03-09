@@ -1,14 +1,14 @@
 ## [Using Helm](https://helm.sh/docs/intro/using_helm/)
 
-TODO
-
 ### Three Big Concepts
 
-TODO
+`Chart` is a Helm package.  
+`Repository` is the where `Chart`s are collected.  
+`Release` is an instance of a `Chart` running in a `Kubernetes` cluster.  
 
-### `helm search`: Finding Charts
+### `helm search repo`: Finding Charts
 
-TODO
+Fuzzy search for `Chart`s in `Repository`s.  
 
 ### `helm install`: Installing a Package
 
@@ -21,7 +21,7 @@ $: helm install Release-Name path/to/dir  # install from unpacked chart director
 $: helm install Release-Name https://example.com/charts/File-Name.tgz)  # install from URL
 ```
 
-Many charts require Docker images that are over 600M in size.  
+Many `Chart`s require `Docker` images that are over 600M in size.  
 Install them will take a long time.  
 
 ```
@@ -81,4 +81,42 @@ You can also skip creating `*.yaml` and set configs from the CLI:
 
 ### `helm upgrade` and `helm rollback`: Upgrading a Release, and Recovering on Failure
 
-TODO
+```
+$: helm upgrade -f config.yaml Release-Name Repo-Name/Chart-Name  # upgrade chart
+$: helm history Release-Name  # show Revision-Ids
+$: helm rollback Release-Name Revision-Id  # revert upgrade
+```
+
+### Helpful Options for Install/Upgrade/Rollback
+
+```
+$: helm _command [--wait [--timeout _time]] [--no-hooks]
+  # --timeout _time: max wait time to completion
+  # --wait: wait until Pods are in Ready state
+  # --no-hooks: skip running hooks
+```
+
+### `helm uninstall`: Uninstalling a Release
+
+```
+$: helm list [--all]  # list Release-Names
+$: helm uninstall Release-Name [--keep-history]  # uninstall chart
+  # --keep-history: keep Release record
+```
+
+### `helm repo`: Working with Repositories
+
+```
+$: helm repo list
+$: helm repo add Repo-Name Repo-Name Repo-Url
+$: helm repo update
+$: helm repo remove Repo-Name
+```
+
+### Creating Your Own Charts
+
+```
+$: helm create Chart-Name
+$: helm lint Chart-Name
+$: helm package Chart-Name
+```
