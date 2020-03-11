@@ -73,3 +73,11 @@ Avoid jargon and abbreviations.
 Use examples and explain terms with a handful of adjectives.  
 Chunking: bundling data. M D P H D R S V P C E O I H O P into MD PHD RSVP CEO IHOP.  
 Useful only if another person knows about the chunk.  
+You would rather confuse then be condescending by spelling out chunks. Do the opposite.  
+Clarity is not the same as condescension. It's in how you tell it.  
+Functional fixity: thinking how to use it, not what it is and what's it made of. Reverse it.  
+Use material, concrete, everyday words to invoke an image in the reader.  
+Show a draft to another person. Ask him if it's clear.  
+Show a draft to yourself after some time has passed.  
+
+### Chapter 4: The Web, the Tree and the String
