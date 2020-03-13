@@ -81,3 +81,7 @@ Show a draft to another person. Ask him if it's clear.
 Show a draft to yourself after some time has passed.  
 
 ### Chapter 4: The Web, the Tree and the String
+
+Reed-Kellogg notation creates diagrams from sentences.  
+Grammar rules help us share ideas.  
+Syntax turns a web of thought into an array of words.  
