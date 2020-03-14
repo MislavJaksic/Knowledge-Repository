@@ -84,4 +84,12 @@ Show a draft to yourself after some time has passed.
 
 Reed-Kellogg notation creates diagrams from sentences.  
 Grammar rules help us share ideas.  
-Syntax turns a web of thought into an array of words.  
+Syntax turns a web of thoughts into an array of words.  
+Grammatical categories: nouns, verbs, prepositions, adjectives, adverbs, articles and determinatives, coordinators and subordinators.  
+Rules of syntax specify the order of categories.  
+Grammatical functions: head, object, subject, predicate, modifier and determiner.  
+Head can stand alone, instead of the whole phrase. You can add as many words to it as you like.  
+Object is a noun phrase following a verb.  
+Subject does the verb. It sits outside the verb phrase.  
+Determiner answers: "How many?" and "Which one?".  
+Semantic categories: action, physical object, possessor, doer and done-to.  
