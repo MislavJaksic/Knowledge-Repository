@@ -52,7 +52,7 @@ $: oci setup config
 Enter a location for your config [/home/.../.oci/config]:
 Enter a user OCID: ocid1.user.oc1..Very-Long-String
 Enter a tenancy OCID: ocid1.tenancy.oc1..Another-Very-Long-String
-Enter a region (e.g. ap-melbourne-1, ...): eu-frankfurt-1
+Enter a region (e.g. ap-melbourne-1, ...): Region-Name
 Do you want to generate a new RSA key pair? (If you decline you will be asked to supply the path to an existing key.) [Y/n]: n
 Enter the location of your private key file: /home/.../.oci/oci_api_key.pem
 Enter the passphrase for your private key: ***

@@ -4,6 +4,7 @@ metadata:
   name: Monitor-Name  # change
   labels:
     monitor: Prometheus-Monitor-Label  # change
+  namespace: K8s-Monitoring-Namespace  # change
   annotations:
     developer/name: "Mislav Jakšić"
     developer/email: "jaksicmislav@gmail.com"
