@@ -1,9 +1,13 @@
+local k = import 'ksonnet/ksonnet.beta.3/k.libsonnet';
+
+local pvc = k.core.v1.persistentVolumeClaim;
+
 local kp =
   (import 'kube-prometheus/kube-prometheus.libsonnet') +
   // Uncomment the following imports to enable its patches
   // (import 'kube-prometheus/kube-prometheus-anti-affinity.libsonnet') +
   // (import 'kube-prometheus/kube-prometheus-managed-cluster.libsonnet') +
-  (import 'kube-prometheus/kube-prometheus-node-ports.libsonnet') +  // for simplicity
+  (import 'kube-prometheus/kube-prometheus-node-ports.libsonnet') +  // open Node Ports
   // (import 'kube-prometheus/kube-prometheus-static-etcd.libsonnet') +
   // (import 'kube-prometheus/kube-prometheus-thanos-sidecar.libsonnet') +
   (import 'kube-prometheus/kube-prometheus-all-namespaces.libsonnet') + // monitor all namespaces
@@ -12,8 +16,8 @@ local kp =
     namespace: "monitoring",
 
     prometheus+:: {
-        replicas: 1,  // for simplicity
-        // namespaces+: ["ambassador", "cicd"],  // monitor existing, specific namespaces
+      replicas: 1,  // for simplicity
+      // namespaces+: ["ambassador", "cicd"],  // monitor existing namespaces
     },
 
     alertmanager+:: {
@@ -24,6 +28,22 @@ local kp =
       port: 9101,  // avoid `address already in use` errors
     },
   },
+
+  prometheus+:: {
+    prometheus+: {
+      spec+: {
+        retention: '30d',
+        storage: {
+          volumeClaimTemplate:
+            pvc.new() +
+            pvc.mixin.spec.withAccessModes('ReadWriteOnce') +
+            pvc.mixin.spec.resources.withRequests({ storage: '50Gi' }) +
+            pvc.mixin.spec.withStorageClassName('Storage-Class-Name'),  // change
+        },
+      },
+    },
+  },
+
 //  grafanaDashboards+:: {
 //    'extra-dashboard.json': (import 'extra-dashboard.json'),
 //  },

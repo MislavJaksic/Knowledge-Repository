@@ -10,6 +10,18 @@ $: kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.
 
 ### Connect
 
+#### Using kubectl proxy
+
+```
+$: kubectl proxy
+```
+
+```
+localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#!/login
+```
+
+#### Using a certificate
+
 ```
 # Note: find kubectl config file on a remote machine
 
