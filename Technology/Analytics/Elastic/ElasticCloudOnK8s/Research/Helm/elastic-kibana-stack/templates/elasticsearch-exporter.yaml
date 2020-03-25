@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elastic-exporter-deployment
+  labels:
+    app: elastic-exporter-deployment-app
+  namespace: {{ .Values.kubernetesElasticNamespace }}  # change
+  annotations:
+    developer/name: "Mislav Jakšić"
+    developer/email: "jaksicmislav@gmail.com"
+    developer/url: "https://github.com/MislavJaksic"
+    developer/role: "technical lead"
+    developer/timezone: "Europe/Zagreb"
+    developer/picUrl: "https://images.app.goo.gl/PCHZgd8oattge1i96"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tier: elastic-exporter-tier
+  template:
+    metadata:
+      labels:
+        tier: elastic-exporter-tier
+    spec:
+      containers:
+      - name: elastic-exporter
+        image: justwatch/elasticsearch_exporter:1.1.0
+        args: ["--es.uri=https://elastic:$(ELASTIC_PASSWORD)@{{ .Values.elasticClusterName }}-es-http:9200", "--es.all", "--es.ssl-skip-verify"]  # <protocol>://<user>:<password>@<host>:<port>;query all nodes in cluster ;don't verify TLS certificate; change
+        env:
+          - name: ELASTIC_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ .Values.elasticClusterName }}-es-elastic-user  # change
+                key: elastic
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: elastic-exporter-service
+  labels:
+    app: elastic-exporter-service-app
+  namespace: {{ .Values.kubernetesElasticNamespace }}  # change
+  annotations:
+    developer/name: "Mislav Jakšić"
+    developer/email: "jaksicmislav@gmail.com"
+    developer/url: "https://github.com/MislavJaksic"
+    developer/role: "technical lead"
+    developer/timezone: "Europe/Zagreb"
+    developer/picUrl: "https://images.app.goo.gl/PCHZgd8oattge1i96"
+spec:
+  type: ClusterIP
+  selector:
+    tier: elastic-exporter-tier
+  ports:
+  - name: metrics
+    port: 9114
+    targetPort: 9114

@@ -1,0 +1,7 @@
+apiVersion: "test.crd/v1"
+kind: TestCrdHelm  # change
+metadata:
+  name: another-test-helm-crd-resource  # change
+spec:
+  number: "67890"  # change
+
