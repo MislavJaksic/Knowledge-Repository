@@ -19,11 +19,11 @@ I dream about founding and leading a society.
 
 #### Minimize Opportunity Cost
 
-Intermediate goals of `found and lead a society`:
-* improve health
-* find new ideas
-* find niches I can solve
-* meet capable people
+Intermediate goals of `Found a Society`:
+* `Improve health`
+* `Find new ideas`
+* `Find niches I can solve`
+* `Meet capable people`
 
 #### Maximize Expected Value
 
@@ -40,22 +40,32 @@ Intermediate goals of `found and lead a society`:
 
 #### Experiments
 
-Improve health:
-* exercise using Home Workout phone app on Monday, Wednesday, Friday
-* after morning routine (~7:20)
-* for 4 weeks (until 30.03.2020.)
+Think of goals as experiments.  
+Commit for a month and then review them.  
+How can you improve your goals? Do you still think they are worth pursuing?  
 
-Find new ideas:
-* read half a chapter of Steven Pinker's book
-* before evening routine (~22:00)
+Experiment:
+* STEP 1: What is a SMART goal that could improve your life?
+* STEP 2: What are the hypotheses that need to be tested?
+* STEP 3: Which hypothesis is critical to the experiment’s success? What is the result necessary to support completion on this goal?
+* STEP 4: How will you quickly test this hypothesis? How will you adjust if your test does not have the desired result?
+
+`Improve health`:
+* exercise using Home Workout phone app
+* do it every day
+* during morning routine (~6:35)
+
+`Find new ideas`:
+* read Steven Pinker's book Sense of Style for an hour
+* do it every day
+* during evening routine (~21:30)
 * until you read it
 * take notes!
 * other books: Farnam Street, Code Complete, Thinking Fast and Slow
 
-Find niches I can solve:
-* TODO
-* Hacker News? Job postings?
+`Find niches I can solve`:
+* Hacker News? Job postings? Open Source Projects?
 
-Meet capable people:
-* every odd Saturday in a month call a friend from the list
+`Meet capable people`:
+* every Friday call a friend
 * arrange a meeting, coffee or just chat

@@ -1,17 +1,19 @@
-## Morning routine (7:00 - 8:00)
+## Morning routine (6:30 - 7:00)
 
 Alarm rings.  
 Get up.  
 Open window.  
-Turn on computer.  
 Make bed.  
-Get dressed.  
+Dress for workout.  
 Close window.  
 Brush teeth.  
+Workout.  
+Turn on computer.  
 Eat breakfast.  
 
-## Evening routine (22:00 - 23:00)
+## Evening routine (21:30 - 23:00)
 
+Read.  
 Turn off computer.  
 Shower.  
 Brush teeth.  
