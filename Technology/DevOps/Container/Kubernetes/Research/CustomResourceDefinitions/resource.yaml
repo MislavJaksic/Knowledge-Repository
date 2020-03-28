@@ -1,0 +1,6 @@
+apiVersion: "Plural-Name.Group-Name/v1"  # change
+kind: CamelCased-Singular-Name  # change
+metadata:
+  name: Resource-Name  # change
+spec:
+  stringFieldName: "Field-Value"  # change

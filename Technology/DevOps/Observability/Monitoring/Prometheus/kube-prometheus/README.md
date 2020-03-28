@@ -42,6 +42,8 @@ Even more examples of configuration options!
 
 ### Errors
 
+#### apiVersion
+
 ```
 Error: could not get apiVersions from Kubernetes: unable to retrieve the complete list of server APIs
 ```
@@ -50,4 +52,10 @@ Error: could not get apiVersions from Kubernetes: unable to retrieve the complet
 $: kubectl get apiservice
 
 # Note: if `v1beta1.metrics.k8s.io` failed, remove all `prometheus-adapter` manifests
+```
+
+#### Prometheus rules use {{
+
+```
+Replace every {{ with {{ "{{" }}
 ```

@@ -1,10 +1,10 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: Monitor-Name  # change
+  name: elastic-exporter-service-monitor
   labels:
-    monitor: Prometheus-Monitor-Label  # change
-  namespace: K8s-Monitoring-Namespace  # change
+    monitor: dataflux  # change
+  namespace: {{ .Values.kubernetesElasticNamespace }}  # change
   annotations:
     developer/name: "Mislav Jakšić"
     developer/email: "jaksicmislav@gmail.com"
@@ -15,9 +15,9 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: Service-App-Label  # change
+      app: elastic-exporter-service-app
   namespaceSelector:
     matchNames:
-      - App-Namespace  # change
+      - {{ .Values.kubernetesElasticNamespace }}  # change
   endpoints:
-  - port: Port-Name  # change
+  - port: metrics
