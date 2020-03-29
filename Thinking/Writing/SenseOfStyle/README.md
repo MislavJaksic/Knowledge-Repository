@@ -9,7 +9,7 @@ Strunk and White's (The Element of Style) gems:
 * "Omit needless words"
 
 Style is the effective use of words to engage the human mind.  
-Strunk and White misdefine terms, appeal to the reader's "ear" and give contradicting advice.  
+Strunk and White mis-define terms, appeal to the reader's "ear" and give contradicting advice.  
 Language changes over time and their style guides, written in the beginning of the previous century should be adapted as well.  
 Examples of nonsensical or bad advice:
 * don't use the passive (often argued for in the passive voice)
@@ -85,11 +85,38 @@ Show a draft to yourself after some time has passed.
 Reed-Kellogg notation creates diagrams from sentences.  
 Grammar rules help us share ideas.  
 Syntax turns a web of thoughts into an array of words.  
-Grammatical categories: nouns, verbs, prepositions, adjectives, adverbs, articles and determinatives, coordinators and subordinators.  
+Grammatical categories:
+* nouns
+* verbs
+* prepositions
+* adjectives
+* adverbs
+* articles and determinatives
+* coordinators
+* subordinators
+
 Rules of syntax specify the order of categories.  
-Grammatical functions: head, object, subject, predicate, modifier and determiner.  
+Grammatical functions:
+* head
+* object
+* subject
+* predicate
+* modifier
+* determiner
+
 Head can stand alone, instead of the whole phrase. You can add as many words to it as you like.  
 Object is a noun phrase following a verb.  
 Subject does the verb. It sits outside the verb phrase.  
-Determiner answers: "How many?" and "Which one?".  
-Semantic categories: action, physical object, possessor, doer and done-to.  
+Determiner answers:
+* "How many?"
+* "Which one?"
+
+Semantic categories:
+* action
+* physical object
+* possessor
+* doer
+* done-to
+
+Don't confuse grammatical functions with categories.  
+Trees link ideas.  
