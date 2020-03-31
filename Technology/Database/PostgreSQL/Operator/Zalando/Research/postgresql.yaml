@@ -6,7 +6,8 @@ metadata:
 spec:
   teamId: "Team-Name"  # change
   volume:
-    size: 1Gi
+    size: 50Gi
+    # storageClass: default  # specify StorageClass
   numberOfInstances: 1
   users:
     zalando:  # database owner

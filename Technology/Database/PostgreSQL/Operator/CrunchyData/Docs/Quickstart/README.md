@@ -81,6 +81,7 @@ $: kubectl -n pgo port-forward svc/postgres-operator 8443:8443
 $: pgo version !!!FAILS!!!
 ```
 
+!!!ABANDONED!!!
 TODO
 
 If successful, you should see output similar to this:
