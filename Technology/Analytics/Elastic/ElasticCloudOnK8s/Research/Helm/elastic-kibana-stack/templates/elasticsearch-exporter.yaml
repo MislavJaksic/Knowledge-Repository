@@ -4,7 +4,7 @@ metadata:
   name: elastic-exporter-deployment
   labels:
     app: elastic-exporter-deployment-app
-  namespace: {{ .Values.kubernetesElasticNamespace }}  # change
+  namespace: {{ .Release.Namespace }}  # change
   annotations:
     developer/name: "Mislav Jakšić"
     developer/email: "jaksicmislav@gmail.com"
@@ -40,7 +40,7 @@ metadata:
   name: elastic-exporter-service
   labels:
     app: elastic-exporter-service-app
-  namespace: {{ .Values.kubernetesElasticNamespace }}  # change
+  namespace: {{ .Release.Namespace }}  # change
   annotations:
     developer/name: "Mislav Jakšić"
     developer/email: "jaksicmislav@gmail.com"

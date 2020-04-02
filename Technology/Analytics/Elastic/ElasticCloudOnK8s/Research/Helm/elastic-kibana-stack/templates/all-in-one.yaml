@@ -130,20 +130,20 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: elastic-operator
-  namespace: {{ .Values.kubernetesElasticNamespace }}  # change
+  namespace: {{ .Release.Namespace }}  # change
 
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: {{ .Values.kubernetesElasticNamespace }}  # change
+  name: {{ .Release.Namespace }}  # change
 
 ---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: elastic-operator
-  namespace: {{ .Values.kubernetesElasticNamespace }}  # change
+  namespace: {{ .Release.Namespace }}  # change
   labels:
     control-plane: elastic-operator
 spec:
@@ -199,7 +199,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: elastic-operator
-  namespace: {{ .Values.kubernetesElasticNamespace }}  # change
+  namespace: {{ .Release.Namespace }}  # change
 
 ---
 apiVersion: admissionregistration.k8s.io/v1beta1
@@ -211,7 +211,7 @@ webhooks:
       caBundle: Cg==
       service:
         name: elastic-webhook-server
-        namespace: {{ .Values.kubernetesElasticNamespace }}  # change
+        namespace: {{ .Release.Namespace }}  # change
         path: /validate-elasticsearch-k8s-elastic-co-v1-elasticsearch
     failurePolicy: Ignore
     name: elastic-es-validation-v1.k8s.elastic.co
@@ -229,7 +229,7 @@ webhooks:
       caBundle: Cg==
       service:
         name: elastic-webhook-server
-        namespace: {{ .Values.kubernetesElasticNamespace }}  # change
+        namespace: {{ .Release.Namespace }}  # change
         path: /validate-elasticsearch-k8s-elastic-co-v1beta1-elasticsearch
     failurePolicy: Ignore
     name: elastic-es-validation-v1beta1.k8s.elastic.co
@@ -248,7 +248,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: elastic-webhook-server
-  namespace: {{ .Values.kubernetesElasticNamespace }}  # change
+  namespace: {{ .Release.Namespace }}  # change
 spec:
   ports:
     - port: 443
@@ -260,4 +260,4 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: elastic-webhook-server-cert
-  namespace: {{ .Values.kubernetesElasticNamespace }}  # change
+  namespace: {{ .Release.Namespace }}  # change

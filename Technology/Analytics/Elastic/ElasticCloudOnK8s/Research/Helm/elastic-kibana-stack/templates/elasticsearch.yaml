@@ -4,7 +4,7 @@ metadata:
   name: {{ .Values.elasticClusterName }}  # change
   labels:
     app: {{ .Values.elasticClusterName }}-app  # change
-  namespace: {{ .Values.kubernetesElasticNamespace }}  # change
+  namespace: {{ .Release.Namespace }}  # change
   annotations:
     developer/name: "Mislav Jakšić"
     developer/email: "jaksicmislav@gmail.com"

@@ -4,7 +4,7 @@ metadata:
   name: {{ .Values.kibanaClusterName }}  # change
   labels:
     app: {{ .Values.kibanaClusterName }}-app  # change
-  namespace: {{ .Values.kubernetesElasticNamespace }}  # change
+  namespace: {{ .Release.Namespace }}  # change
   annotations:
     developer/name: "Mislav Jakšić"
     developer/email: "jaksicmislav@gmail.com"
@@ -17,7 +17,7 @@ spec:
   count: 1
   elasticsearchRef:
     name: {{ .Values.elasticClusterName }}  # change
-    namespace: {{ .Values.kubernetesElasticNamespace }}  # change
+    namespace: {{ .Release.Namespace }}  # change
   http:
     service:
       spec:
