@@ -23,7 +23,7 @@ Under Advanced Options:
 * Kubernetes Labels
 
 Activate Add Ons:
-* `Kubernetes Dashboard`: enable it to ease administration
+* `Kubernetes Dashboard`: don't enable it! It's a very old version
 * `Tiller` (for `Helm` 2.x): disable it if not using `Helm` 2.x
 
 ```

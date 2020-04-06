@@ -12,12 +12,12 @@
 
 ### Step 3: Install and configure the Oracle Cloud Infrastructure CLI
 
-[Install Oracle CLI](../../..\DeveloperResources\SDKAndCLI\CLI\Quickstart)
+[Install Oracle CLI](../../../DeveloperResources/SDKAndCLI/CLI/Quickstart)
 
 ### Step 4: Download the kubeconfig file
 
 ```
-Navigation menu -> Solutions and Platform -> Developer Services -> Container Clusters -> Compartment -> select cluster -> Access Kubeconfig
+Navigation menu -> Solutions and Platform -> Developer Services -> Container Clusters -> Compartment -> select a cluster -> Access Cluster
 ```
 
 ```

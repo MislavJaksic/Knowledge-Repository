@@ -5,8 +5,6 @@ You can:
 * access `Kubernetes`
 * use `Oracle Cloud Infrastructure Identity and Access Management` (IAM)
 
-TODO
-
 ### Ways to Access Oracle Cloud Infrastructure
 
 Using:
