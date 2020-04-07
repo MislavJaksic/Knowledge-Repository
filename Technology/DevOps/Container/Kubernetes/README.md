@@ -99,3 +99,15 @@ Annotate with `annotate`.
 Scale with `scale` or `autoscale`.  
 
 [Instructions](Docs/Concepts/ClusterAdministration/ManagingResources)
+
+### Errors
+
+Force delete a `Terminating` namespace.  
+```
+(
+NAMESPACE=Terminating-Namespace  # change
+kubectl proxy &
+kubectl get namespace $NAMESPACE -o json |jq '.spec = {"finalizers":[]}' >temp.json
+curl -k -H "Content-Type: application/json" -X PUT --data-binary @temp.json 127.0.0.1:8001/api/v1/namespaces/$NAMESPACE/finalize
+)
+```

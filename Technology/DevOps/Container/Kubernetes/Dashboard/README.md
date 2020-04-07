@@ -5,7 +5,7 @@
 ```
 # Note: install Kubernetes and configure kubectl
 
-$: kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta8/aio/deploy/recommended.yaml  # deploy dashboard
+$: kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-rc6/aio/deploy/recommended.yaml  # deploy dashboard
 ```
 
 ### Connect
@@ -17,7 +17,7 @@ $: kubectl proxy
 ```
 
 ```
-localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#!/login
+http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/login
 ```
 
 #### Using a certificate

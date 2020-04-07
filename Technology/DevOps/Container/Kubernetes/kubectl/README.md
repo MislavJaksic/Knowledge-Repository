@@ -14,7 +14,7 @@ Common `/path/to/kubectl/config`:
 `config`s can be merged. See Research.  
 
 ```
-# Note: connect to a remote machine with a `config` file
+# Note: connect to a remote machine
 $: sudo scp -i Private-Key.key _username@_ip:/path/to/kubectl/config .
 
 # Note: use multiple `config` files
@@ -24,6 +24,9 @@ $: sudo scp -i Private-Key.key _username@_ip:/path/to/kubectl/config .
 $: kubectl config view [--minify]  # list `config` file
 $: kubectl version  # list client, server version
 $: kubectl cluster-info [--dump]  # list client, cluster info
+
+$: kubectl config delete-cluster Cluster-Name
+$: kubectl config delete-context Context-Name
 
 $: kubectl config use-context Context-Name  # switch context
 $: kubectl config set-context --current --namespace=Namespace-Name  # set namespace to avoid writing `-n K8n-Namespace`
