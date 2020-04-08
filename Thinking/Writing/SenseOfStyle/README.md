@@ -120,3 +120,21 @@ Semantic categories:
 
 Don't confuse grammatical functions with categories.  
 Trees link ideas.  
+Rules:
+* agreement (singular/plural agreement)
+* movement rule (who, what, where and others come first)
+Noam Chomsky's surface structure.  
+Branches of coordination, conjunctions, are phrases connected with a coordinator. Phrases must be able to stand alone.  
+Carefully assign case to pronouns. Nominative, accusative and genitive pronouns each have a place in a sentence.  
+Who is nominative, whom is accusative. Who kissed the bride? Whom did Henry kiss?  
+
+Prime directive: omit needless words!  
+Trim obese phrases, remove light verbs (make, do, have, ...) and avoid talking about concepts of concepts.  
+Keep phrases short and to the point.  
+Create right-branching, not left-branching trees. Don't create noun piles.  
+Read your sentence aloud. Can you do it easily?  
+Avoid garden paths:
+* prosody: read it aloud
+* punctuation: helps with prosody and marks phrases
+* words that signal syntactic structure: small words (the) signal phrases
+* frequent strings and senses
