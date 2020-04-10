@@ -133,8 +133,23 @@ Trim obese phrases, remove light verbs (make, do, have, ...) and avoid talking a
 Keep phrases short and to the point.  
 Create right-branching, not left-branching trees. Don't create noun piles.  
 Read your sentence aloud. Can you do it easily?  
-Avoid garden paths:
+How to avoid garden paths:
 * prosody: read it aloud
 * punctuation: helps with prosody and marks phrases
-* words that signal syntactic structure: small words (the) signal phrases
-* frequent strings and senses
+* words that signal syntactic structure: small words (the, are, that, which is, ...) signal phrases
+* frequent strings and senses: use the most frequent pair of words (data point, horse race, ...)
+* structural parallelism: repeat parts of the previous tree structure
+* attachment to the phrase next door: pull unrelated phrases apart; use subject-verb-object
+* save heavy phrases for last: put ambiguous phrases and analogies at the end of a sentence
+* topic, then comment: put the emphatic words of a sentence at the end; append new information at the end
+
+Subject before object, light before heavy phrases, topic before comment.  
+To achieve such structure use:
+* rewrite with the opposite verb (gave, received, ...)
+* passive voice
+* preposing moves phrases to the left
+* postposing, prepositional dative, existential and extraposed clause move phrases to the right
+* clefting inverts ordering
+* pseudo-clefting presupposes information
+
+### Chapter 5: Arcs of Coherence
