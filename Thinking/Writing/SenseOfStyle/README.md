@@ -153,3 +153,11 @@ To achieve such structure use:
 * pseudo-clefting presupposes information
 
 ### Chapter 5: Arcs of Coherence
+
+Apply the same rules to paragraphs as you would to sentences:
+* be aware of the curse of knowledge
+* treat words not as strings but as trees
+
+SKIPPED
+
+### Chapter 6: Telling Right from Wrong
