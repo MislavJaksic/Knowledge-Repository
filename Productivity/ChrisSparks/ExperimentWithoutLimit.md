@@ -52,6 +52,8 @@ Experiment:
 
 `Improve health`:
 * exercise using Home Workout phone app
+* review exercises the morning before exercising
+* find replacement exercises
 * do it every day
 * during morning routine (~6:35)
 
@@ -65,6 +67,7 @@ Experiment:
 
 `Find niches I can solve`:
 * Hacker News? Job postings? Open Source Projects?
+* commit two hours to doing a personal project
 
 `Meet capable people`:
 * every Friday call a friend

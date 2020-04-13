@@ -4,9 +4,9 @@ Alarm rings.
 Get up.  
 Open window.  
 Make bed.  
-Dress for workout.  
 Close window.  
 Brush teeth.  
+Dress for workout.  
 Workout.  
 Turn on computer.  
 Eat breakfast.  
