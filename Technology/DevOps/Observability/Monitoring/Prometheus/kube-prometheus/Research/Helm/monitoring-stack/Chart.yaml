@@ -1,0 +1,11 @@
+apiVersion: v2
+name: monitoring-stack
+version: 1.0.0
+kubeVersion: ">= 1.14.0"
+description: Templated kube-prometheus
+type: application
+maintainers:
+  - name: Mislav Jaksic
+    email: jaksicmislav@gmail.com
+    url: https://github.com/MislavJaksic
+appVersion: 1.0.0
