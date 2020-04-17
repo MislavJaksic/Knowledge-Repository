@@ -161,3 +161,30 @@ Apply the same rules to paragraphs as you would to sentences:
 SKIPPED
 
 ### Chapter 6: Telling Right from Wrong
+
+Prescriptivists and descriptivists, a false dichotomy.  
+If nine tenth of people use a word incorrectly, are they incorrect?  
+Tacit conventions describe correct usage.  
+
+If unsure how to use a word, look it up in a dictionary.  
+Word usage depends on the style of writing: formal or informal, inscpition or email, ...  
+
+#### Grammar
+
+Adverbs modify verbs and end in -ly.  
+Flat adverbs can be both an adjective and an adverb.  
+Adjectives modify either nouns or complement verbs.  
+
+You are permitted to use ain't.  
+
+You may start a sentence with a conjunction: and, because, but, or, so, also.  
+
+Say between you and me not between you and I.  
+
+Use may when asking for permission and can to ask for capability or possibility.  
+Don't worry if you mix it up.  
+
+Avoid dangling modifiers by inserting a subject.  
+Don't force or repeat subjects if you can help it.  
+
+Don't worry about fused participles, that is, possessives with gerunds.  
