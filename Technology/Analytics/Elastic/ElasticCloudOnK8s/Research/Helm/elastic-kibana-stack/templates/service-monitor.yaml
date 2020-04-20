@@ -1,10 +1,11 @@
+{{- if .Values.monitoringNamespace }}
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: elastic-exporter-service-monitor
   labels:
     monitor: dataflux  # change
-  namespace: {{ .Release.Namespace }}  # change
+  namespace: {{ .Values.monitoringNamespace }}  # change
   annotations:
     developer/name: "Mislav Jakšić"
     developer/email: "jaksicmislav@gmail.com"
@@ -21,3 +22,4 @@ spec:
       - {{ .Release.Namespace }}  # change
   endpoints:
   - port: metrics
+{{- end }}
