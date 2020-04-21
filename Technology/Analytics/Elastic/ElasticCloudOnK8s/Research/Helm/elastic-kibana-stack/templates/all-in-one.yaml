@@ -133,12 +133,6 @@ subjects:
   namespace: {{ .Release.Namespace }}  # change
 
 ---
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: {{ .Release.Namespace }}  # change
-
----
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
