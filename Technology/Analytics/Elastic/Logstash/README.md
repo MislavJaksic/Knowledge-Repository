@@ -16,8 +16,6 @@ $: helm install logstash elastic/logstash -f config.yaml -n K8s-Elastic-Namespac
 
 ```
 $: bin/logstash -e 'input { stdin { } } output { stdout {} }' [--path.data Writable-Path]
-
-$: bin/logstash -e 'input { stdin { } } output { elasticsearch { hosts => ["localhost:9200"] } stdout {} }' [--path.data Writable-Path]
 ```
 
 Place pipeline `.conf` files into `/etc/logstash/conf.d`.  

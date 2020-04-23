@@ -6,14 +6,25 @@ logstashConfig: {}  # add to /usr/share/logstash/config/
   # log4j2.properties: |
   #   key = value
 logstashPipeline: {}  # add to /usr/share/logstash/pipeline/
-  # uptime.conf: |
+  # kafka-strimzi-elasticsearch.conf: |  # for Strimzi Kafka and ElasticSearch without TLS
   #   input {
-  #     exec {
-  #       command => "uptime"
-  #       interval => 30
+  #     kafka {
+  #       bootstrap_servers => "Kafka-Cluster-kafka-bootstrap.K8s-Strimzi-Namespace:9092"
+  #       topics => [ "Topic-Name" ]
+  #       codec => "json"
+  #       decorate_events => true
   #     }
+  #     }
+  #     stdin { }
   #   }
-  #   output { stdout { } }
+  #   output {
+  #     elasticsearch {
+  #       hosts => ["http://Elastic-Cluster-es-http:9200"]
+  #       user => "elastic"
+  #       password => "$(ELASTIC_PASSWORD)"
+  #     }
+  #     stdout { }
+  #   }
 imageTag: "7.5.1"
 rbac:
   create: true
