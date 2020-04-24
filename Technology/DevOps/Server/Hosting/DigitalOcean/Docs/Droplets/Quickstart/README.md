@@ -13,6 +13,6 @@ Choose a plan.
 
 Optionally:
 * add block storage
-* choose a datacenter
+* choose a data centre
 * elect additional options
 * choose an SSH key
