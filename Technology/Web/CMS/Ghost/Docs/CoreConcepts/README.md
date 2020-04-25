@@ -22,14 +22,14 @@ TODO
 
 ## Data Models
 
-### Posts
+### [Posts](https://ghost.org/docs/concepts/posts/)
 
 Primary entity-type.  
 Created in the editor.  
 Can have `Card`s.  
 Grouped.  
 
-### Pages
+### [Pages](https://ghost.org/docs/concepts/pages/)
 
 Pages are special posts.  
 Static and independent pages like `About` or `Contact`.  

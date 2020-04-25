@@ -10,8 +10,10 @@ It works in a fashion similar to Ubuntu's "apt" and Fedora's "dnf".
 $: iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 ```
 
-### Usage: install
+### Usage
 
 ```
 $: scoop install curl
+
+$: scoop add bucket versions
 ```

@@ -40,7 +40,7 @@ Ghost integrates well with `Zapier`.
 
 Custom integrations and API extensions are possible.  
 
-## Creating a ctuom theme
+## Creating a custom theme
 
 Default theme: `Casper`.  
 Check the marketplace for more.  
