@@ -21,9 +21,11 @@ spec:
         ports:
         - nodePort: 32000
           port: 9200
-    # tls:  # disable TLS 
-    #   selfSignedCertificate:
-    #     disabled: true
+{{- if .Values.disableTLS }}
+    tls:  # disable TLS
+      selfSignedCertificate:
+        disabled: true
+{{- end }}
   nodeSets:
   - name: {{ .Values.elasticClusterName }}-name  # change
     count: 2

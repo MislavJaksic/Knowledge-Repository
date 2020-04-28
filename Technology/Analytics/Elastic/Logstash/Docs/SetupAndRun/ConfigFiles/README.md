@@ -4,7 +4,6 @@ Pipeline configuration files define the processing pipeline.
 Settings files control Logstash startup and execution.  
 
 ### Pipeline Configuration Files
-edit
 
 Place pipeline files in `/etc/logstash/conf.d`.  
 Logstash loads only files with `.conf` extension.  

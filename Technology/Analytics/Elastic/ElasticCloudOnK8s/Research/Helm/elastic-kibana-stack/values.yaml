@@ -1,4 +1,6 @@
 elasticClusterName: "elastic-cluster-0"
 kibanaClusterName: "kibana-cluster-0"
 
+disableTLS: false
+
 monitoringNamespace: "monitoring"

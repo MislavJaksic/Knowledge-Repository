@@ -7,15 +7,25 @@
 ```
 $: helm repo add elastic https://helm.elastic.co
 
-# Note: set configuration files, `logstash.yml`, using `ConfigMap` and `logstashConfig` in `config.yaml`
-
 $: helm install logstash elastic/logstash -f config.yaml -n K8s-Elastic-Namespace  # see Research
 ```
 
+[Installation instructions](Docs/GettingStarted/Install)
+
 ### Usage
+
+Use plugins to create a data pipeline.  
 
 ```
 $: bin/logstash -e 'input { stdin { } } output { stdout {} }' [--path.data Writable-Path]
 ```
 
 Place pipeline `.conf` files into `/etc/logstash/conf.d`.  
+
+[Plugins](Docs/Plugins)
+
+### Configure
+
+See Research.  
+
+[Configuration files](Docs/SetupAndRun/ConfigFiles)

@@ -18,13 +18,23 @@ logstashPipeline: {}  # add to /usr/share/logstash/pipeline/
   #     stdin { }
   #   }
   #   output {
-  #     elasticsearch {
-  #       hosts => ["http://Elastic-Cluster-es-http:9200"]
-  #       user => "elastic"
-  #       password => "$(ELASTIC_PASSWORD)"
+  #     if [@metadata][kafka][topic] == "Topic-Name" {
+  #       elasticsearch {
+  #         hosts => ["http://Elastic-Cluster-es-http:9200"]
+  #         user => "elastic"
+  #         password => "${ELASTIC_PASSWORD}"
+  #         index => "Topic-Name-index-%{+YYYY.MM.dd}"
+  #         document_type => "Document-Type"
+  #       }
   #     }
   #     stdout { }
   #   }
+# extraEnvs:
+#   - name: ELASTIC_PASSWORD
+#     valueFrom:
+#       secretKeyRef:
+#         name: Secret-Name
+#         key: Key-Name-In-Secret
 imageTag: "7.5.1"
 rbac:
   create: true

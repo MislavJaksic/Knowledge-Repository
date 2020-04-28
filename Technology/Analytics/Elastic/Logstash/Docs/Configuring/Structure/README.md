@@ -1,4 +1,4 @@
-## [Structure of a Config File](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#configuration-file-structure)
+## [Structure of a Config File](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html)
 
 Has a separate section for each type of plugin.  
 
