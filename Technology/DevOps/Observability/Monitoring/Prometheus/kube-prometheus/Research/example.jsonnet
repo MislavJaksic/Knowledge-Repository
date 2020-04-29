@@ -16,7 +16,7 @@ local kp =
     namespace: "monitoring",
 
     prometheus+:: {
-      replicas: 1,  // for simplicity
+      replicas: 2,  // for simplicity
       // namespaces+: ["ambassador", "cicd"],  // monitor existing namespaces
     },
 

@@ -14,7 +14,7 @@ $: helm install logstash elastic/logstash -f config.yaml -n K8s-Elastic-Namespac
 
 ### Usage
 
-Use plugins to create a data pipeline.  
+Connect Logstash plugins to create a data pipeline.  
 
 ```
 $: bin/logstash -e 'input { stdin { } } output { stdout {} }' [--path.data Writable-Path]
@@ -28,4 +28,5 @@ Place pipeline `.conf` files into `/etc/logstash/conf.d`.
 
 See Research.  
 
-[Configuration files](Docs/SetupAndRun/ConfigFiles)
+[Configuration files](Docs/SetupAndRun/ConfigFiles)  
+[ENV VARs](Docs/Configuring/EnvVars)  

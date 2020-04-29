@@ -16,7 +16,7 @@ spec:
     kubernetes.io/os: linux
   podMonitorNamespaceSelector: {}
   podMonitorSelector: {}
-  replicas: 1
+  replicas: 2
   resources:
     requests:
       memory: 400Mi
