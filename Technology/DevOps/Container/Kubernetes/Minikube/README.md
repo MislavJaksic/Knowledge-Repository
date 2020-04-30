@@ -33,7 +33,7 @@ $: minikube config view
 ```
 
 
-[Install instructions](Other/Kubernetes/Docs/Tasks/InstallTools/InstallMinikube)  
+[Install minikube](Other/Kubernetes/Docs/Tasks/InstallTools/InstallMinikube)  
 
 ### Usage
 

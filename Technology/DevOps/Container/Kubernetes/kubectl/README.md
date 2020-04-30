@@ -2,7 +2,7 @@
 
 ### Install
 
-[Instructions](Other/Kubernetes/Docs/Tasks/InstallTools/InstallKubectl)  
+[Install kubectl](Other/Kubernetes/Docs/Tasks/InstallTools/InstallKubectl)  
 
 ### Config file
 
@@ -25,15 +25,15 @@ $: kubectl config view [--minify]  # list `config` file
 $: kubectl version  # list client, server version
 $: kubectl cluster-info [--dump]  # list client, cluster info
 
-$: kubectl config delete-cluster Cluster-Name
-$: kubectl config delete-context Context-Name
-
 $: kubectl config use-context Context-Name  # switch context
 $: kubectl config set-context --current --namespace=Namespace-Name  # set namespace to avoid writing `-n K8n-Namespace`
+
+$: kubectl config delete-cluster Cluster-Name
+$: kubectl config delete-context Context-Name
 ```
 
-[Instructions](Other/RemoteKubectl)  
 [Official instructions](Other/Kubernetes/Docs/Tasks/AccessAppsInCluster/ConfigureAccessToClusters)
+[Supplementary instructions](Other/RemoteKubectl)  
 
 ### Autocomplete
 
@@ -57,6 +57,9 @@ $: echo "if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi" >
 ```
 # Note: restrict namespace with [-n K8s-Namespace]
 # Note: Resource-Type Resource-Name == Resource-Type/Resource-Name
+
+$: kubectl api-versions
+$: kubectl api-resources
 
 $: kubectl get Resource-Type/Resource-Name [-f] [-k] [-o Output-Option] [--watch] [--field-selector=field.subfield=Field-Value] [-LLabel-Name]
 $: kubectl run Id-Name --image=Image-Name [--env="Env-Var-Name=Env-Var-Value"] [--port=Expose-Port] [--replicas=X] [--dry-run] [--command -- _command _arg0.._argN]

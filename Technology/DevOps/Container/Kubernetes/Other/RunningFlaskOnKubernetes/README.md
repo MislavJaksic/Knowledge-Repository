@@ -1,16 +1,16 @@
 ## [Running Flask on Kubernetes](https://testdriven.io/blog/running-flask-on-kubernetes/)
 
-Skip chapters until Minikube.  
+Skipped every chapter before `Minikube`.  
 
 ### Minikube
 
-Install Minikube.  
+Install `Minikube`.  
 
 ```
 $: minikube dashboard
 ```
 
-If there is a problem, reset Minikube:
+If there is a problem, reset `Minikube`:
 ```
 $: minikube stop; minikube delete
 $: rm /usr/local/bin/minikube
@@ -66,7 +66,7 @@ $: kubectl get pvc  #->
 
 ### Secret
 
-Secrets handling passwords, API tokens, SSH keys and similar sensitive information.  
+`Secret`s handling passwords, API tokens, SSH keys and similar sensitive information.  
 
 ```
 apiVersion: v1

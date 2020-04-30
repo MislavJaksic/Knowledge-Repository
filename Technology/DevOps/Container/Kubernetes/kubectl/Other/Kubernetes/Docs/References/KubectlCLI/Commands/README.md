@@ -210,13 +210,22 @@ TODO
 
 #### api-versions
 
-TODO
+Print the supported API versions.  
+Format: "group/version"
+
+```
+$: kubectl api-versions
+```
 
 ### KUBECTL SETTINGS AND USAGE
 
 #### api-resources
 
-TODO
+Print the supported API resources.  
+
+```
+$: kubectl api-resources
+```
 
 #### explain
 

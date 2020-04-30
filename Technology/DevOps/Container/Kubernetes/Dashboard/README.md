@@ -17,7 +17,7 @@ $: kubectl proxy
 ```
 
 ```
-http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/login
+http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
 ```
 
 #### Using a certificate
@@ -38,7 +38,7 @@ Import the `kubecfg.p12` certificate into your browser.
 https://Kubectl-Server-IP:Kubectl-Server-Port/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#!/login
 ```
 
-[Instructions](Other/RemoteKubernetesDashboard)
+[Dashboard, connection and certificate](Other/RemoteKubernetesDashboard)
 
 ### Create a Bearer token
 

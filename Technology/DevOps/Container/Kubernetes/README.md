@@ -1,6 +1,8 @@
 ## [Kubernetes](https://kubernetes.io/)
 
-Kubernetes is a container orchestra conductor.
+Kubernetes is a container orchestra conductor:
+* allocates node, CPU, memory, disk, IP and port
+* provides DNS, load balancing and fault tolerance
 
 ### Install
 
@@ -10,19 +12,28 @@ Installers:
 
 Command line tool [kubectl](kubectl).  
 
-Kubernetes [Dashboard](Dashboard).  
+[Kubernetes Dashboard](Dashboard).  
 
-### Expose apps through Services
+### Throwaway Ubuntu Pod
 
-`ServiceType`s specify the kind of service you want:
-* `ClusterIP` (default): `Service` only reachable from within Kubernetes; expose `Service` on a cluster-internal IP
-* `NodePort`: `Service` accessible from outside Kubernetes using `Node-IP:Node-Port`; expose `Service` on each `Node`’s IP at a static port (`Node-Port`); creates a `ClusterIP` `Service` to which it routes
+```
+$: kubectl run throwaway-shell --rm -i --tty --image ubuntu -- bash  # ->
+  # $: apt update
+  # $: apt install curl
+  # ...
+```
+
+### Services
+
+`ServiceType`s:
+* `ClusterIP` (default): `Service` only reachable inside Kubernetes; expose `Service` on a cluster-internal IP
+* `NodePort`: `Service` accessible outside Kubernetes using `Node-IP:Node-Port`; expose `Service` on each `Node`’s IP at a static port (`Node-Port`); creates a `ClusterIP` `Service` to which it routes
 * `LoadBalancer`: an external load balancer assigns a fixed, external IP to the `Service`; expose `Service` using a cloud provider’s load balancer; creates a `ClusterIP` and `NodePort` `Service`s to which it routes
 * `ExternalName`: maps `Service` to `externalName` field by returning a CNAME record; no proxy is used
 
 `Headless Service`s are used to interface with other service discovery mechanisms, without being tied to Kubernetes.  
 
-[Details](Docs/Concepts/ServicesLoadBalancingNetworking/Service)
+[Service details](Docs/Concepts/ServicesLoadBalancingNetworking/Service)
 
 ### Ingress
 
@@ -35,41 +46,14 @@ Kubernetes [Dashboard](Dashboard).
 [Ingress Controllers](Docs/Concepts/ServicesLoadBalancingNetworking/IngressController)  
 [Minikube NGINX with /etc/host](Docs/Tasks/AccessAppsInCluster/SetupIngressOnMinikube)  
 
-### Containers
+### Workloads
 
-[command and args](Docs/Tasks/InjectDataIntoApps/CommandArgumentContainer)  
+[Container: command and args](Docs/Tasks/InjectDataIntoApps/CommandArgumentContainer)  
 
-### ENV VARs: how Containers in Pods use them
+[Container: ENV VARs](Docs/Tasks/InjectDataIntoApps/EnvironmentVariablesContainer)  
+[Downward API: Pods expose info to their Containers](Docs/Tasks/InjectDataIntoApps/PodInfoThroughEnvVar)  
 
-[Intro](Docs/Tasks/InjectDataIntoApps/EnvironmentVariablesContainer)  
-[Configuration of Downward API](Docs/Tasks/InjectDataIntoApps/PodInfoThroughEnvVar)  
-
-### ConfigMaps: how Containers in Pods use them
-
-```
-# Note: restrict namespace with [-n K8s-Namespace]
-
-$: kubectl create configmap ConfigMap-Name --from-env-file=/path/to/ConfigMap-Dir/Config-0.properties
-$: kubectl describe configmaps ConfigMap-Name
-$: kubectl get configmaps ConfigMap-Name -o yaml
-```
-
-```
-spec:
-  containers:
-      command: [ "/bin/sh", "-c", "echo $(ENV_VAR_0)" ]
-      envFrom:
-        - configMapRef:
-            name: ConfigMap-Name-1
-      env:
-        - name: ENV_VAR_0
-          valueFrom:
-            configMapKeyRef:
-              name: ConfigMap-Name-0
-              key: Key-0
-```
-
-[Instructions](Docs/Tasks/ConfigurePodsContainers/ConfigurePodToUseConfigMap)
+[ConfigMaps used by Pods](Docs/Tasks/ConfigurePodsContainers/ConfigurePodToUseConfigMap)
 
 ### Private repositories and images
 
@@ -78,7 +62,7 @@ $: docker login Private-Registry-Ip-Port
 
 $: kubectl create secret generic Private-Repo-Secret --from-file=.dockerconfigjson=/path/to/.docker/config.json --type=kubernetes.io/dockerconfigjson
 
-# Note: pods can only reference image pull secrets in their own namespace!
+# Note: Pods can only reference image pull secrets in their own namespace!
 # Note: setup Docker TLS certificates
 ```
 
@@ -98,7 +82,7 @@ Label with `label`.
 Annotate with `annotate`.  
 Scale with `scale` or `autoscale`.  
 
-[Instructions](Docs/Concepts/ClusterAdministration/ManagingResources)
+[Resource Tips and Tricks](Docs/Concepts/ClusterAdministration/ManagingResources)
 
 ### Errors
 
