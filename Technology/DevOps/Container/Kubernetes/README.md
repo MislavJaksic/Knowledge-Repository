@@ -14,9 +14,21 @@ Command line tool [kubectl](kubectl).
 
 [Kubernetes Dashboard](Dashboard).  
 
-### Throwaway Ubuntu Pod
+### Workloads
+
+[Container: command and args](Docs/Tasks/InjectDataIntoApps/CommandArgumentContainer)  
+
+[Container: ENV VARs](Docs/Tasks/InjectDataIntoApps/EnvironmentVariablesContainer)  
+[Downward API: Pods expose info to their Containers](Docs/Tasks/InjectDataIntoApps/PodInfoThroughEnvVar)  
+
+[ConfigMaps used by Pods](Docs/Tasks/ConfigurePodsContainers/ConfigurePodToUseConfigMap)
+
+[Liveness, readiness and startup Probes](Docs/Tasks/ConfigurePodsContainers/LiveReadyStartProbes)
+
+[Production Best Practices](Other/ProductionBestPractices)
 
 ```
+# Note: a throwaway Ubuntu Pod
 $: kubectl run throwaway-shell --rm -i --tty --image ubuntu -- bash  # ->
   # $: apt update
   # $: apt install curl
@@ -45,15 +57,6 @@ $: kubectl run throwaway-shell --rm -i --tty --image ubuntu -- bash  # ->
 [Ingress](Docs/Concepts/ServicesLoadBalancingNetworking/Ingress)  
 [Ingress Controllers](Docs/Concepts/ServicesLoadBalancingNetworking/IngressController)  
 [Minikube NGINX with /etc/host](Docs/Tasks/AccessAppsInCluster/SetupIngressOnMinikube)  
-
-### Workloads
-
-[Container: command and args](Docs/Tasks/InjectDataIntoApps/CommandArgumentContainer)  
-
-[Container: ENV VARs](Docs/Tasks/InjectDataIntoApps/EnvironmentVariablesContainer)  
-[Downward API: Pods expose info to their Containers](Docs/Tasks/InjectDataIntoApps/PodInfoThroughEnvVar)  
-
-[ConfigMaps used by Pods](Docs/Tasks/ConfigurePodsContainers/ConfigurePodToUseConfigMap)
 
 ### Private repositories and images
 
