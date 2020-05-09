@@ -167,7 +167,7 @@ If nine tenth of people use a word incorrectly, are they incorrect?
 Tacit conventions describe correct usage.  
 
 If unsure how to use a word, look it up in a dictionary.  
-Word usage depends on the style of writing: formal or informal, inscpition or email, ...  
+Word usage depends on the style of writing: formal or informal, inscription or email, ...  
 
 #### Grammar
 
@@ -188,3 +188,33 @@ Avoid dangling modifiers by inserting a subject.
 Don't force or repeat subjects if you can help it.  
 
 Don't worry about fused participles, that is, possessives with gerunds.  
+
+Two conditional constructions: open and remote conditional.  
+Open conditional are not picky about tense.  
+Remote conditionals are formulaic: if caluse must have a past-tense verb and the then-caluse must contain would, should,could or might.  
+Past tense can refer to past time or to factual remoteness.  
+Use pluperfect when refering to a remote possibility in the past.  
+
+Like and as can be used interchangebly.  
+Such as is more formal then like.  
+
+Don't worry about possesive antecendants.  
+
+Don't worry about ending a sentence with a preposition.  
+You can use pied-piping to take at with the wh-word.  
+
+Don't worry about predicative nominative.  
+
+Make your perspective consistent: tense (present, past), person (first, third), voice (passive, active) and type of discourse (formal, informal).  
+
+Don't worry about when to use shell or when to use will.  
+
+You can split infinitives, no worries.  
+
+Don't worry about the rare subjunctive mood or irrealis were.  
+
+Don't worry about how than and as effect pronouns.  
+
+Use which when refering to a nonrestrictive and either that or which for restrictive relative clause. You can simplyfy your world by just using that.  
+
+You can turn words into verbs. Embrace neologisms.  
