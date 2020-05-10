@@ -26,13 +26,13 @@ TODO
 
 Primary entity-type.  
 Created in the editor.  
-Can have `Card`s.  
+Can have `card`s.  
 Grouped.  
 
 ### [Pages](https://ghost.org/docs/concepts/pages/)
 
-Pages are special posts.  
-Static and independent pages like `About` or `Contact`.  
+`page`s are special type of `post`.  
+Static and independent websites like `About` or `Contact`.  
 They are not crosslinked.  
 
 ### Tags
