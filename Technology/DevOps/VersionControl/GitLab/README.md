@@ -2,31 +2,31 @@
 
 GitLab is a Git repository which covers the entire DevOps Lifecycle.  
 
-### Setup a new project
+### Project
 
-* Create a new `dev` branch from which `feature` branches will fork
-* Make `dev` a protected branch to prevent improper commits and merges
-* Make `dev` the `Default branch` instead of `master`
+#### Setup
 
-* Create `Milestones` and `Labels` (`ToDo`, `Doing`)
+* create a `dev` branch; it will be forked by `feature` branches
+* make `dev` a `Protected branch` and `Default branch`
+* add `Milestones` and `Labels` (`ToDo`, `Doing`)
 
-### GitLab Workflow
+#### GitLab Workflow
 
 1) Review the milestones.
 2) Review and/or create an issue (task).
-    1) Take a task from the `Issue Board's` `To Do` pile and put it into the `Doing` pile.
-    2) Assign it to yourself.
-3) Create a `New branch and merge request` with `dev` as its source by clicking on the `V` arrow.
-4) Click `Check out branch` and execute `Step 1: Fetch and check out...` in your terminal.
+    1) Take a task from the `Issue Board`'s' `To Do` pile and put it into the `Doing` pile.
+    2) Assign the chosen task to yourself.
+3) Create a `New branch and merge request` with `dev` as its source; click on the `V` arrow.
+4) `Check out branch` and do `Step 1: Fetch and check out...` in your terminal.
     1) Construct software and put knowledge to paper.
     2) In issues: ask questions, find microtasks (require up to 15min of effort) and bugs. Solve them.
     3) Stage all your work with `git add .`.
-    4) Commit your work with `git commit -m 'Example commit message'`.
+    4) Commit your work with `git commit -m 'Descriptive commit message'`.
     5) Push it to a remote branch with `git push`.
-    6) Resolve merge conflicts if they exist
+    6) Resolve merge conflicts.
 5) Remove the `Work In Progress` (WIP) status of a merge request.
 6) Complete the merge request by pressing `Merge`.
-7) Repeat appropriate steps until the task and milestone are complete.
+7) Repeat until the task or milestone are complete.
 
 GitLab workflow ties together GitLab and Git:
 * milestones
@@ -36,49 +36,10 @@ GitLab workflow ties together GitLab and Git:
 * git
 * CICD
 
-### Create a OAuth2 token
-
-For authenticating against Git over HTTP.  
+#### GitLab CICD
 
 ```
-User Settings -> Access Tokens
-```
-
-### [Create and add your SSH public key](https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html)
-
-To use Git over SSH you need to:
-*  [generate and add an SSH key](Docs/User/General/SSH)
-* setup Git over SSH
-
-Check if you are using Git over SSH:
-```
-$: git remote -v  # ->
-  # origin	git@_domain:path/to/file.git (fetch)
-  # origin	git@_domain:path/to/file.git (push)
-```
-
-### Web IDE
-
-For tiny commits you can use your browser.  
-
-[Instructions](Docs/Projects/Repositories/WebIDE)
-
-### GitLab Pages
-
-For when you want to publish a static website.  
-
-[Instructions](Docs/CICD/GitLabPages/CICD/GitLabPages)
-
-### JUnit reports
-
-If you want JUnit test results displayed on a merge request after every push.  
-
-[Instructions](Docs/CICD/JUnitTestReports)
-
-### GitLab CICD
-
-```
-# Note: for publishing Jekyll GitLab Pages
+# Note: for publishing Jekyll `GitLab Pages`
 image: ruby:2.6.5  # Docker image
 
 pages:  # job name
@@ -95,7 +56,7 @@ pages:  # job name
 
 TODO: a gitlab-ci that covers "all" (most) functionalities: when:manual, when:delay, junit test reports ...
 
-### Permissions
+#### Permissions
 
 If a GitLab project is private then:
 * the public only see public GitLab pages
@@ -103,3 +64,36 @@ If a GitLab project is private then:
     * DO see: activity, issues, wiki pages
     * DON'T see: code, branches, commits, confidential issues, merge requests
 * higher permission users can see almost everything
+
+#### Other
+
+[Web IDE](Docs/Projects/Repositories/WebIDE)
+
+[GitLab Pages](Docs/CICD/GitLabPages/CICD/GitLabPages)
+
+[JUnit reports](Docs/CICD/JUnitTestReports)
+
+### Authentication
+
+#### Create an OAuth2/Access token
+
+```
+User Settings -> Access Tokens
+```
+
+#### [Create and add your SSH public key](https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html)
+
+To use Git over SSH you need to:
+*  [generate and add an SSH key](Docs/User/General/SSH)
+* setup Git over SSH
+
+Check if you are using Git over SSH:
+```
+$: git remote -v  # ->
+  # origin	git@_domain:path/to/file.git (fetch)
+  # origin	git@_domain:path/to/file.git (push)
+```
+
+#### Deploy Token
+
+[Create and use a Deploy Token](Docs/Projects/DeployTokens)  

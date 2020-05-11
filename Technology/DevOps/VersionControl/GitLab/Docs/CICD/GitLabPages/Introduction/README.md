@@ -1,11 +1,11 @@
 ## [Exploring GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/introduction.html)
 
-GitLab Pages requirements:
+`GitLab Pages` requirements:
 * instance domain
-* ".gitlab-ci.yml"file
+* `.gitlab-ci.yml`file
 * GitLab Runner
 
-GitLab Pages on GitLab.com:
+`GitLab Pages` on GitLab.com:
 * have a gitlab.io domain
 * custom domains and TLS support
 * shared runners
@@ -14,7 +14,7 @@ You can create custom error code pages (403, 404, ...).
 
 Redirecting is possible even with static pages.  
 
-You can control the visibility of GitLab Pages.  
+You can control the visibility of `GitLab Pages`.  
 
 ### .gitlab-ci.yml configurations
 

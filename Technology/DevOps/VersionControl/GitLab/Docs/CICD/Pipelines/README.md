@@ -1,12 +1,12 @@
 ## [Creating and using CI/CD pipelines](https://docs.gitlab.com/ee/ci/pipelines.html)
 
-Claim: Jenkins doesn't scale, is a plugin hell and has many points of failure.  
+Claim: `Jenkins` doesn't scale, is a plugin hell and has many points of failure.  
 
 ### Introduction
 
 Pipelines define jobs (eg. compile, test) and stages (eg. run tests after compiling).  
 
-Jobs are executed by Runners.  
+Jobs are executed by `Runners`.  
 
 ### Visualizing pipelines
 
@@ -18,7 +18,7 @@ A graph can be:
 
 ### Configuring pipelines
 
-Defined in ".gitlab-ci.yml".  
+Defined in `.gitlab-ci.yml`.  
 Additional configs are available though the GitLab UI.  
 
 Pipelines can be set to run only for merge requests.  
@@ -33,7 +33,7 @@ Pipelines are executed automatically, however ...
 
 You can manually execute a pipeline by:
 * clicking CICD -> Pipelines -> Run Pipelines
-* selecting a branch in "Create for"
+* selecting a branch in `Create for`
 * entering environment variables
 
 API endpoints can control pipelines.  
@@ -48,7 +48,7 @@ View the latest pipeline on https://gitlab.com/Group-Name/Subgroup-Name/Project-
 
 #### Pipeline requires manual action before proceeding
 
-Use "when:manual" in ".gitlab-ci.yml".  
+Use `when:manual` in `.gitlab-ci.yml`.  
 Here, you can also specify additional variables.  
 
 Example:
@@ -56,7 +56,7 @@ Example:
 
 #### Delay a pipeline job
 
-Use "when:delay" in ".gitlab-ci.yml".  
+Use `when:delay` in `.gitlab-ci.yml`.  
 
 Example:
 * gradual code rollout

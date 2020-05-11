@@ -18,7 +18,10 @@ $: cat /home/_user/.ssh/id_ed25519-gl-g.pub  -> prints the PUBLIC key
   # ssh-ed25519 A-Long-String gitlab-git
 ```
 
-Register the PUBLIC KEY at GitLab: click your profile picture -> Settings -> SSH Keys -> Copy-Paste the PUBLIC key  
+Register the PUBLIC KEY at GitLab:
+```
+Profile -> Settings -> SSH Keys -> copy-paste the PUBLIC key  
+```
 
 ```
 # Note: make sure to setup your identity
@@ -27,11 +30,10 @@ $: git config --global user.email johndoe@example.com
 ```
 
 ```
-$: git fetch origin  #-> test if it works
-  # The authenticity of host 'gitlab.com (35.231.145.151)' can't be established.
-  # ECDSA key fingerprint is SHA256:HbW3g8zUjNSksFbqTiUWPWg2Bq1x8xdGUrliXFzSnUw.
+$: git fetch origin  #-> test if you can access GitLab
+  # ...
   # Are you sure you want to continue connecting (yes/no)? yes
-  # Warning: Permanently added 'gitlab.com,35.231.145.151' (ECDSA) to the list of known hosts.
+  # ...
 OR
 $: ssh -T git@gitlab.com
 ```

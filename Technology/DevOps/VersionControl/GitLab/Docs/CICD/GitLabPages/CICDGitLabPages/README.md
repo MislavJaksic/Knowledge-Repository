@@ -18,4 +18,6 @@ $: git push [--set-upstream origin pages]
 # Note: the CICD pipeline will begin deploying the page
 ```
 
-To visit the website click Project -> Settings -> Pages -> GitLab Pages public link.  
+```
+Project -> Settings -> Pages -> GitLab Pages public link
+```

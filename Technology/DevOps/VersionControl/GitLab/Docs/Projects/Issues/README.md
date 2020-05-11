@@ -15,10 +15,10 @@ It avoids these problems:
 * you are solving an already solved problem
 
 Parts of an issue:
-Content: title, description, comments, activity
-People: author, assignee(s)
-State: open/closed, confidentiality
-Planning and tracking: milestone, due date, weight, time tracking, labels, linked issues, unique issue number and URL
+* Content: title, description, comments, activity
+* People: author, assignee(s)
+* State: open/closed, confidentiality
+* Planning and tracking: milestone, due date, weight, time tracking, labels, linked issues, unique issue number and URL
 
 Issues are managed from the issue page, list, board, reference and epic.  
 Issue page manages an issue.  
@@ -28,4 +28,4 @@ Issues boards are Kanban boards.
 ### Crosslinking issues
 
 Issues are crosslinked using an URL or ID:
-* Group-Name/Subgroup-Name/Project-Name#Issue-Number
+* `Group-Name/Subgroup-Name/Project-Name#Issue-Number`

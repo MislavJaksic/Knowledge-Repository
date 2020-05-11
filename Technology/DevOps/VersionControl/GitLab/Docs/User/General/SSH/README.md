@@ -21,18 +21,19 @@ $: cat /home/_user/.ssh/id_ed25519-gl-g.pub  -> prints the PUBLIC key
 
 ### Add an SSH key to GitLab
 
-Copy your PUBLIC key (.pub) into your clipboard.  
-
-Add your PUBLIC key to GitLab by clicking your profile picture -> Settings -> SSH Keys -> Copy-Paste the PUBLIC key.  
+Copy your PUBLIC key (.pub) to the clipboard.  
+Register the PUBLIC KEY at GitLab:
+```
+Profile -> Settings -> SSH Keys -> copy-paste the PUBLIC key  
+```
 
 ### Test
 
 ```
 $: ssh -T git@gitlab.com
-  # The authenticity of host 'gitlab.com (35.231.145.151)' can't be established.
-  # ECDSA key fingerprint is SHA256:HbW3g8zUjNSksFbqTiUWPWg2Bq1x8xdGUrliXFzSnUw.
+  # ...
   # Are you sure you want to continue connecting (yes/no)? yes
-  # Warning: Permanently added 'gitlab.com,35.231.145.151' (ECDSA) to the list of known hosts.
+  # ...
 ```
 
 If something goes wrong:
@@ -41,8 +42,25 @@ $: ssh -vvvT git@gitlab.com
 ```
 
 ### Working with non-default SSH key pair paths
+
+TODO
+
 ### Per-repository SSH keys
+
+TODO
+
 ### Deploy keys
+
+TODO
+
 ### Applications
+
+TODO
+
 ### SSH on the GitLab server
+
+TODO
+
 ### Troubleshooting
+
+TODO

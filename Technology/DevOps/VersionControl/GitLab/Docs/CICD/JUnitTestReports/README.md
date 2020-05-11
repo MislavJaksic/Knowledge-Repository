@@ -17,7 +17,7 @@ Results will appear in the merge request:
 
 [Supported languages on JUnit tests](https://en.wikipedia.org/wiki/JUnit#Ports)
 
-In ".gitlab-ci.yml" add:
+In `.gitlab-ci.yml` add:
 ```
 Job-Name:
   stage: Stage-Name

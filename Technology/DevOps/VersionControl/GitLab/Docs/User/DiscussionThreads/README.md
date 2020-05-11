@@ -16,9 +16,29 @@ TODO
 Add comments and threads under Repository -> Commits.  
 
 ### Threaded discussions
+
+TODO
+
 ### Image threads
+
+TODO
+
 ### Lock discussions
+
+TODO
+
 ### Merge Request Reviews
+
+TODO
+
 ### Filtering notes
+
+TODO
+
 ### Suggest Changes
+
+TODO
+
 ### Start a thread by replying to a standard comment
+
+TODO

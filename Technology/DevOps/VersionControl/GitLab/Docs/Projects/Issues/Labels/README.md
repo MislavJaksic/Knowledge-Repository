@@ -2,7 +2,7 @@
 
 Label are categories.  
 
-Scoped labels such as "Doing::My-Name" are for paying customers only.  
+Scoped labels such as `Doing::My-Name` are for paying customers only.  
 
 Labels can be created, edited and assigned.  
 
