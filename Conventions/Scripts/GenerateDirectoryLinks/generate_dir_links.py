@@ -20,7 +20,7 @@ external_repo = {
     "Maven": "https://github.com/MislavJaksic/Maven-Tutorial",
     "Selenium": "https://github.com/MislavJaksic/Selenium-Tutorial",
 }
-semiterminal_dir = ["Linux", "Java"]
+semiterminal_dir = ["Argo", "Linux", "Java"]
 terminal_dir = [
     "Jekyll",
     "Selenium",
@@ -76,6 +76,7 @@ terminal_dir = [
     "Git",
     "Jaeger",
     "Nginx",
+    "OracleCloud",
     "DigitalOcean",
     "SSH",
     "Putty",
@@ -83,6 +84,7 @@ terminal_dir = [
     "Prometheus",
     "Portainer",
     "OperatorFramework",
+    "Linkerd",
     "Kubernetes",
     "Helm",
     "Harbor",
@@ -91,6 +93,7 @@ terminal_dir = [
     "Brigade",
     "Ambassador",
     "Jenkins",
+    "ArgoCD",
     "SQLite",
     "Redis",
     "PostgreSQL",

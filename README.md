@@ -35,6 +35,8 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
         * [SQLite](Technology/Database/SQLite)
     * DevOps
         * CICD
+            * [Argo](Technology/DevOps/CICD/Argo)
+                * [ArgoCD](Technology/DevOps/CICD/Argo/ArgoCD)
             * [Brigade](Technology/DevOps/CICD/Brigade)
             * [Concourse](Technology/DevOps/CICD/Concourse)
             * [Jenkins](Technology/DevOps/CICD/Jenkins)
@@ -44,6 +46,7 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
             * [Harbor](Technology/DevOps/Container/Harbor)
             * [Helm](Technology/DevOps/Container/Helm)
             * [Kubernetes](Technology/DevOps/Container/Kubernetes)
+            * [Linkerd](Technology/DevOps/Container/Linkerd)
             * [OperatorFramework](Technology/DevOps/Container/OperatorFramework)
             * [Portainer](Technology/DevOps/Container/Portainer)
         * Observability
@@ -59,6 +62,7 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
         * Server
             * Hosting
                 * [DigitalOcean](Technology/DevOps/Server/Hosting/DigitalOcean)
+                * [OracleCloud](Technology/DevOps/Server/Hosting/OracleCloud)
             * [Nginx](Technology/DevOps/Server/Nginx)
         * VersionControl
             * [Git](Technology/DevOps/VersionControl/Git)

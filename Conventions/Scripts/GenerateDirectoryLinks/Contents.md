@@ -17,6 +17,8 @@
         * [SQLite](Technology/Database/SQLite)
     * DevOps
         * CICD
+            * [Argo](Technology/DevOps/CICD/Argo)
+                * [ArgoCD](Technology/DevOps/CICD/Argo/ArgoCD)
             * [Brigade](Technology/DevOps/CICD/Brigade)
             * [Concourse](Technology/DevOps/CICD/Concourse)
             * [Jenkins](Technology/DevOps/CICD/Jenkins)
@@ -26,6 +28,7 @@
             * [Harbor](Technology/DevOps/Container/Harbor)
             * [Helm](Technology/DevOps/Container/Helm)
             * [Kubernetes](Technology/DevOps/Container/Kubernetes)
+            * [Linkerd](Technology/DevOps/Container/Linkerd)
             * [OperatorFramework](Technology/DevOps/Container/OperatorFramework)
             * [Portainer](Technology/DevOps/Container/Portainer)
         * Observability
@@ -41,6 +44,7 @@
         * Server
             * Hosting
                 * [DigitalOcean](Technology/DevOps/Server/Hosting/DigitalOcean)
+                * [OracleCloud](Technology/DevOps/Server/Hosting/OracleCloud)
             * [Nginx](Technology/DevOps/Server/Nginx)
         * VersionControl
             * [Git](Technology/DevOps/VersionControl/Git)
@@ -96,6 +100,7 @@
         * PackageManager
             * [Chocolatey](Technology/Utility/PackageManager/Chocolatey)
             * [Scoop](Technology/Utility/PackageManager/Scoop)
+        * Parser
         * [Practise](https://github.com/MislavJaksic/Practise)
     * Video
         * [Asciinema](Technology/Video/Asciinema)
