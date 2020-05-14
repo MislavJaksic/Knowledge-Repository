@@ -2,18 +2,16 @@
 
 Manages hardware and software.  
 
-### Kubernetes
+### Container Engine (Kubernetes)
 
 #### Create
 
-Create a cluster using Oracle's GUI.  
-
-[Create Kubernetes cluster](Docs/Infrastructure/Services/ContainerEngine/CreateKubernetes)
+[Create a cluster using Oracle's GUI](Docs/Infrastructure/Services/ContainerEngine/CreateKubernetes)
 
 #### Access
 
 Setup keys and Oracle CLI (`oci`) once.  
-Download `kubectl` file for every cluster.  
+[Download `kubeconfig` file for kubectl](Docs/Infrastructure/Services/ContainerEngine/DownloadKubeconfig)  
 
 ```
 $: kubectl get nodes  # ->
@@ -24,13 +22,11 @@ $: kubectl get node Node-Name -o=jsonpath='{range .status.addresses[*]}{.type}{"
   # ExternalIP	Node-Ip OR Kubectl-Server-Ip
 ```
 
-[Download `kubeconfig` file for kubectl](Docs/Infrastructure/Services/ContainerEngine/DownloadKubeconfig)   
-
 #### Dashboard
 
-First, configure access to the cluster.  
-
-[Deploy the Dashboard](../../../../DevOps/Container/Kubernetes/Dashboard/README.md)  
+Steps:
+* configure access to the cluster
+* [Deploy the Dashboard](../../../../DevOps/Container/Kubernetes/Dashboard)  
 
 ```
 $: kubectl apply -f oke-admin-service-account.yaml  # see Research
@@ -44,3 +40,52 @@ $: kubectl proxy
 ```
 
 [Access the Dashboard](Docs/Infrastructure/Services/ContainerEngine/StartingK8sDashboard)
+
+### (Image) Registry
+
+Each region has a unique Registry endpoint.  
+
+```
+Germany Central (Frankfurt):
+    https://eu-frankfurt-1.ocir.io
+    https://fra.ocir.io
+```
+
+[Registry Endpoints](Docs\Infrastructure\Services\Registry\PrepareForRegistry)
+
+#### Auth Token
+
+```
+Profile -> User Settings -> Auth Tokens -> Generate Token -> fill in information -> Generate Token
+```
+
+Servers as a `docker login` password.  
+
+[Generate Auth Token](Docs\Infrastructure\Services\Registry\GetAuthToken)
+
+### Create
+
+```
+Solutions and Platform -> Developer Services -> Registry -> Create Repository -> Add Repository -> fill in info
+```
+
+[Create a Registry](Docs\Infrastructure\Services\Registry\GetAuthToken)
+
+### Push and Pull
+
+```
+$: docker login Registry-Endpoint.ocir.io  # ->
+  # Username: Tenancy-Object-Storage-Namespace/Tenancy-Username
+  # Password: Auth-Token
+
+$: docker images
+
+$: docker tag Image-Name:Image-Tag Registry-Endpoint.ocir.io/Tenancy-Object-Storage-Namespace/Registry-Name/Image-Name:Image-Tag
+
+$: docker push Registry-Endpoint.ocir.io/Tenancy-Object-Storage-Namespace/Registry-Name/Image-Name:Image-Tag
+```
+
+[Pushing Images](Docs\Infrastructure\Services\Registry\PushingImages)  
+[Pulling Images](Docs\Infrastructure\Services\Registry\PullingImages)  
+
+TODO

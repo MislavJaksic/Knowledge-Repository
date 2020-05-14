@@ -1,8 +1,8 @@
 ## [Creating a Kubernetes Cluster](https://docs.cloud.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengcreatingclusterusingoke.htm#create-quick-cluster)
 
 You can create a cluster only if:
-* belong to the tenancy's Administrators group or
-* to a group to which a policy grants the `CLUSTER_MANAGE` permission
+* you belong to the tenancy's Administrators group
+* you belong to a group to which a policy grants the `CLUSTER_MANAGE` permission
 
 ### Using the Console to create a 'Quick Cluster' with Default Settings
 
@@ -23,15 +23,15 @@ Under Advanced Options:
 * Kubernetes Labels
 
 Activate Add Ons:
-* `Kubernetes Dashboard`: don't enable it! It's a very old version
-* `Tiller` (for `Helm` 2.x): disable it if not using `Helm` 2.x
+* `Kubernetes Dashboard`: disable! Its version is ancient
+* `Tiller` (for `Helm` 2.x): disable! Use `Helm` 3.x
 
 ```
 Next -> Submit -> scroll to bottom -> Close
 ```
 
 Cluster will have a `Creating` status. Wait until it changes to `Active`.  
-Get yourself a `kubeconfig` file and access the cluster.  
+[Get a kubeconfig file and access the cluster](../DownloadKubeconfig)  
 
 ### Using the Console to create a 'Custom Cluster' with Explicitly Defined Settings
 
