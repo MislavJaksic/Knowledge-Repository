@@ -77,4 +77,4 @@ $: docker network inspect Network-Name --format '{{index .Peers 0 "IP"}}'  # lis
 
 #### TLS
 
-[Instructions](Docs\ProductManuals\OpenSourceProjects\DockerRegistry\Recepies\TestInsecureRegistry)
+[Instructions](Docs/ProductManuals/OpenSourceProjects/DockerRegistry/Recepies/TestInsecureRegistry)  

@@ -30,6 +30,7 @@ $: kubectl config set-context --current --namespace=Namespace-Name  # set namesp
 
 $: kubectl config delete-cluster Cluster-Name
 $: kubectl config delete-context Context-Name
+# Note: you need to delete the user manually
 ```
 
 [Official instructions](Other/Kubernetes/Docs/Tasks/AccessAppsInCluster/ConfigureAccessToClusters)

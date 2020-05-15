@@ -3,4 +3,4 @@ kibanaClusterName: "kibana-cluster-0"
 
 disableTLS: false
 
-monitoringNamespace: "monitoring"
+monitoringNamespace: ""

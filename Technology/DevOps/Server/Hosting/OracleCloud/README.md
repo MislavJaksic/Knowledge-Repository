@@ -63,7 +63,7 @@ Servers as a `docker login` password.
 
 [Generate Auth Token](Docs\Infrastructure\Services\Registry\GetAuthToken)
 
-### Create
+#### Create
 
 ```
 Solutions and Platform -> Developer Services -> Registry -> Create Repository -> Add Repository -> fill in info
@@ -71,21 +71,38 @@ Solutions and Platform -> Developer Services -> Registry -> Create Repository ->
 
 [Create a Registry](Docs\Infrastructure\Services\Registry\GetAuthToken)
 
-### Push and Pull
+#### Push and Pull
 
 ```
 $: docker login Registry-Endpoint.ocir.io  # ->
   # Username: Tenancy-Object-Storage-Namespace/Tenancy-Username
   # Password: Auth-Token
 
-$: docker images
-
 $: docker tag Image-Name:Image-Tag Registry-Endpoint.ocir.io/Tenancy-Object-Storage-Namespace/Registry-Name/Image-Name:Image-Tag
 
 $: docker push Registry-Endpoint.ocir.io/Tenancy-Object-Storage-Namespace/Registry-Name/Image-Name:Image-Tag
+
+$: docker pull Registry-Endpoint.ocir.io/Tenancy-Object-Storage-Namespace/Registry-Name/Image-Name:Image-Tag
 ```
 
 [Pushing Images](Docs\Infrastructure\Services\Registry\PushingImages)  
 [Pulling Images](Docs\Infrastructure\Services\Registry\PullingImages)  
 
-TODO
+#### Interact With Kubernetes
+
+```
+$: kubectl create secret docker-registry Pull-Secret-Name --docker-server=Registry-Endpoint.ocir.io --docker-username='Tenancy-Object-Storage-Namespace/Tenancy-Username' --docker-password='Auth-Token' --docker-email='Contact-Email'
+```
+
+```
+...
+spec:
+  containers:
+    - name: Container-Name
+      image: Registry-Endpoint.ocir.io/Tenancy-Object-Storage-Namespace/Registry-Name/Image-Name:Image-Tag
+      ...
+  imagePullSecrets:
+    - name: Pull-Secret-Name
+```
+
+[Pull from Registry into Kubernetes](Docs/Infrastructure/Services/Registry/PullFromRegistryToKubernetes)  

@@ -1,11 +1,11 @@
 replicas: 1
-logstashConfig: {}  # add to /usr/share/logstash/config/
+logstashConfig: {}  # is added to /usr/share/logstash/config/
   # logstash.yml: |
   #   http.host: "0.0.0.0"
   #   xpack.monitoring.elasticsearch.hosts: [ "http://elasticsearch:9200" ]
   # log4j2.properties: |
   #   key = value
-logstashPipeline: {}  # add to /usr/share/logstash/pipeline/
+logstashPipeline: {}  # is added to /usr/share/logstash/pipeline/
   # kafka-strimzi-elasticsearch.conf: |  # for Strimzi Kafka and ElasticSearch without TLS
   #   input {
   #     kafka {

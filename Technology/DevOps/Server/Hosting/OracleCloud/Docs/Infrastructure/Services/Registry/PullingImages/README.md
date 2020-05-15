@@ -8,9 +8,7 @@ $: docker login Registry-Endpoint.ocir.io  # ->
   # Username: Tenancy-Object-Storage-Namespace/Tenancy-Username
   # Password: Auth-Token
 
+$: docker pull Registry-Endpoint.ocir.io/Tenancy-Object-Storage-Namespace/Registry-Name/Image-Name:Image-Tag
+
 $: docker images
-
-$: docker tag Image-Name:Image-Tag Registry-Endpoint.ocir.io/Tenancy-Object-Storage-Namespace/Registry-Name/Image-Name:Image-Tag
-
-$: docker push Registry-Endpoint.ocir.io/Tenancy-Object-Storage-Namespace/Registry-Name/Image-Name:Image-Tag
 ```
