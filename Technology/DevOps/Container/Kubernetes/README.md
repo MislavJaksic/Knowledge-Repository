@@ -49,7 +49,7 @@ $: kubectl run throwaway-shell --rm -i --tty --image ubuntu -- bash  # ->
 
 ### Ingress
 
-`Ingress` is not a `ServiceType`, but it does exposes `Service`s.  
+`Ingress` is not a `ServiceType`, but it does expose a `Service`.  
 `Ingress` is an entry point for your cluster.  
 `Ingress` consolidates routing rules and exposes multiple `Service`s under the same IP address.  
 `Ingress` doesn't expose ports or protocols, just HTTP(S)!  
