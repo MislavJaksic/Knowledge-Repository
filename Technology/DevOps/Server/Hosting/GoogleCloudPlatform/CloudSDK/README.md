@@ -29,3 +29,12 @@ $: gcloud config set compute/zone Zone-Name
 ```
 
 [QuickStarts](QuickStarts)  
+
+### Commands
+
+```
+$: gcloud info
+
+$: gcloud auth list
+$: gcloud config list
+```

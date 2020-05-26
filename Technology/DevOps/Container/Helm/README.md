@@ -83,5 +83,5 @@ Error: could not get apiVersions from Kubernetes: unable to retrieve the complet
 ```
 $: kubectl get apiservice
 
-# Note: remove all failures
+# Note: remove all failed API services
 ```

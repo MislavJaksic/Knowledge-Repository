@@ -193,7 +193,7 @@ Use `helm pull`.
 
 Uses the `Go` templating language.  
 Templates are stored in `templates/`.  
-Template values are given either in `values.yaml` and overriden during `helm install`.  
+Template values are given either in `values.yaml` and overridden during `helm install`.  
 
 #### Template Files
 
@@ -208,6 +208,11 @@ metadata:
 spec:
   replicas: 1
   ...
+```
+
+values.yaml:
+```
+managed: "by-me!"
 ```
 
 #### Predefined Values
