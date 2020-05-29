@@ -17,12 +17,3 @@ $: gcloud compute zones list
 $: gcloud config set compute/region Region-Name
 $: gcloud config set compute/zone Zone-Name
 ```
-
-### After installing tmux
-
-Enable synchronize-panes:
-* `ctrl+b` then `shift+:`
-* `set synchronize-panes on`
-
-Disable synchronize-panes:
-* `set synchronize-panes off`

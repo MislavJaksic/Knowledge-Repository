@@ -1,8 +1,8 @@
 ## [Provisioning Compute Resources](https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/master/docs/03-compute-resources.md)
 
 Kubernetes requires a set of machines.  
-Machines host the control plane and the worker nodes.  
-Worker nodes run the application containers.  
+Machines host the `Control Plane` and the worker `Node`s.  
+Worker `Node`s run the application containers.  
 
 You will provision the compute resources across a single compute zone.  
 
@@ -14,47 +14,47 @@ Kubernetes networking model is flat.
 #### Virtual Private Cloud Network
 
 Create:
-* `Virtual Private Cloud` (`VPC`): virtual network
-* `subnet`: IP range partition of a `VPC`
+* `Virtual Private Cloud` (VPC): virtual network
+* `subnet`: an IP range partition of a VPC
 
 ```
-$: gcloud compute networks create Vpc-Network --subnet-mode custom
+$: gcloud compute networks create kthw-vpc-network --subnet-mode custom
 
-$: gcloud compute networks subnets create Vpc-Subnet --network Vpc-Network --range 10.240.0.0/24
+$: gcloud compute networks subnets create kthw-subnet --network kthw-vpc-network --range 10.240.0.0/24
 ```
 
 #### Firewall Rules
 
 Create:
-* `firewall`: for internal and external communication
-* `External Load Balancer`: for external access and balancing
+* `firewall`: to control protocol use, both internal and external
+* `External Load Balancer`: for remote access and traffic balancing
 
 ```
-$: gcloud compute firewall-rules create Firewall-Rule-Internal --allow tcp,udp,icmp --network Vpc-Network --source-ranges 10.240.0.0/24,10.200.0.0/16
+$: gcloud compute firewall-rules create kthw-firewall-internal --allow tcp,udp,icmp --network kthw-vpc-network --source-ranges 10.240.0.0/24,10.200.0.0/16
 
-$: gcloud compute firewall-rules create Firewall-Rule-External --allow tcp:22,tcp:6443,icmp --network Vpc-Network --source-ranges 0.0.0.0/0
+$: gcloud compute firewall-rules create kthw-firewall-external --allow tcp:22,tcp:6443,icmp --network kthw-vpc-network --source-ranges 0.0.0.0/0
 
-$: gcloud compute firewall-rules list --filter="network:Vpc-Network"
+$: gcloud compute firewall-rules list --filter="network:kthw-vpc-network"
 ```
 
 #### Kubernetes Public IP Address
 
 Create:
-* `static IP address`
+* `static IP address`: attached to the `External Load Balancer` to give it outside visibility
 
 ```
-$: gcloud compute addresses create Address-Name --region $(gcloud config get-value compute/region)
+$: gcloud compute addresses create kthw-address --region $(gcloud config get-value compute/region)
 
-$: gcloud compute addresses list --filter="name=('Address-Name')"
+$: gcloud compute addresses list --filter="name=('kthw-address')"
 ```
 
 ### Compute Instances
 
-Provision Ubuntu Servers 18.04 with `containerd` container runtime and fixed private IP addresses.  
+Provision `Ubuntu Servers` 18.04 with `containerd` container runtime and fixed private IP addresses.  
 
 #### Kubernetes Controllers
 
-Create the Kubernetes control plane hosts.  
+Create the Kubernetes `Control Plane` hosts.  
 
 ```
 $: for i in 0 1 2; do
@@ -67,7 +67,7 @@ $: for i in 0 1 2; do
     --machine-type n1-standard-1 \
     --private-network-ip 10.240.0.1${i} \
     --scopes compute-rw,storage-ro,service-management,service-control,logging-write,monitoring \
-    --subnet Vpc-Subnet \
+    --subnet kthw-subnet \
     --tags kthw,controller
 done
 ```
@@ -92,7 +92,7 @@ $: for i in 0 1 2; do
     --metadata pod-cidr=10.200.${i}.0/24 \
     --private-network-ip 10.240.0.2${i} \
     --scopes compute-rw,storage-ro,service-management,service-control,logging-write,monitoring \
-    --subnet Vpc-Subnet \
+    --subnet kthw-subnet \
     --tags kthw,worker
 done
 ```
