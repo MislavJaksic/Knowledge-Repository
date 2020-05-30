@@ -1,6 +1,3 @@
-## [Jekyll](https://jekyllrb.com/)
+## Jekyll
 
-Jekyll is a static site generator (SSG).  
-It creates HTML, CSS and JavaScript websites.  
-
-TODO
+Extracted to an external [repository](https://github.com/MislavJaksic/Jekyll-Tutorial).

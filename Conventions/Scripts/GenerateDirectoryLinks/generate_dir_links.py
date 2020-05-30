@@ -6,6 +6,7 @@ output_file = "Contents.md"
 init_dir = "E:/GreatRepository/Publishing/GitHubRepositories/Knowledge-Repository"
 init_dir_offset = 5
 external_repo = {
+    "Jekyll": "https://github.com/MislavJaksic/Jekyll-Tutorial",
     "ApacheKafka": "https://github.com/MislavJaksic/Kafka-In-Theory-And-Practice",
     "ABAP": "https://github.com/MislavJaksic/SAP-ABAP-Development/tree/master/ABAP",
     "Gradle": "https://github.com/MislavJaksic/Gradle-Tutorial",

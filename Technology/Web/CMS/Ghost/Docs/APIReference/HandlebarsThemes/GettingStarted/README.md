@@ -1,7 +1,7 @@
 ## [Overview](https://ghost.org/docs/api/v3/handlebars-themes/)
 
 Separates `HTML` from `JavaScript`.  
-Semantic language.  
+[Handlebars](../../TemplateProcessor/Handlebars) templating language.  
 Validate `theme`s with `GScan`.  
 
 ## [Structure](https://ghost.org/docs/api/v3/handlebars-themes/structure/)

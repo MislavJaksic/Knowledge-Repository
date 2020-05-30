@@ -1,14 +1,18 @@
 ## [Ghost](https://ghost.org/)
 
+Ghost is a publishing tool used most often for blogs.  
+
 Features:
 * simplicity
 * monetization
-* headless Node.js CMS
+* headless `Node.js` CMS
 * integrations
+
+[Customers](https://ghost.org/customers/)  
 
 ### Setup
 
-[In Cloud or locally](Docs/Setup)
+[In the Cloud or locally](Docs/Setup)
 
 ### Core Concepts
 
@@ -23,8 +27,8 @@ Pages:
 * Static and independent pages like `About` or `Contact`
 * They are not crosslinked
 
-[Details](Docs/CoreConcepts)
+[Details](Docs/CoreConcepts)  
 
 ### Theme Development
 
-[Custom Casper Theme](https://github.com/MislavJaksic/Blog/ThemeDevelopment)
+[Custom Casper Theme](https://github.com/MislavJaksic/Blog/tree/master/ThemeDevelopment)  
