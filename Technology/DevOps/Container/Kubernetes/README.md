@@ -87,6 +87,16 @@ Scale with `scale` or `autoscale`.
 
 [Resource Tips and Tricks](Docs/Concepts/ClusterAdministration/ManagingResources)
 
+### DNS
+
+[DNS Diagnostics and Debugging](Docs/Tasks/AdministerCluster/DebuggingDNSResolution)  
+
+### Security
+
+[Overview](Docs/Concepts/Security/Overview)  
+[Securing a Cluster](Docs/Tasks/AdministerCluster/SecuringCluster)  
+[Best Practices](Other/KubernetesSecurityBestPractices)  
+
 ### Errors
 
 Force delete a `Terminating` namespace.  
