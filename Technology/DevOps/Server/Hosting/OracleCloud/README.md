@@ -19,7 +19,7 @@ $: kubectl get nodes  # ->
   # Node-Name  Ready    ...     ...   ...
 $: kubectl get node Node-Name -o=jsonpath='{range .status.addresses[*]}{.type}{"\t"}{.address}{"\n"}'  # ->
   # InternalIP	Node-Name
-  # ExternalIP	Node-Ip OR Kubectl-Server-Ip
+  # ExternalIP	Node-Ip OR Kubectl-Server-Ip  # exists if VPN is public
 ```
 
 #### Dashboard
