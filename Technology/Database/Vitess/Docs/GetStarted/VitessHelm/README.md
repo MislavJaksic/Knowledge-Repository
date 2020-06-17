@@ -25,7 +25,7 @@ $: kubectl create namespace Vitess-Namespace
 ```
 
 ```
-$: helm install vitess ../../helm/vitess -f 101_initial_cluster_config.yaml -n Vitess-Namespace  # CAREFUL OF THE _config CHANGE
+$: helm install vitess ../../helm/vitess -f 101_initial_cluster.yaml -n Vitess-Namespace
 ```
 
 ### Verify cluster

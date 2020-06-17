@@ -97,6 +97,10 @@ Scale with `scale` or `autoscale`.
 [Securing a Cluster](Docs/Tasks/AdministerCluster/SecuringCluster)  
 [Best Practices](Other/KubernetesSecurityBestPractices)  
 
+### StorageClass
+
+[Change default StorageClass](Docs/Tasks/AdministerCluster/ChangeDefaultStorageClass)  
+
 ### Errors
 
 Force delete a `Terminating` namespace.  
