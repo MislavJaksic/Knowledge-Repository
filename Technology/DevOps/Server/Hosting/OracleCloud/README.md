@@ -41,6 +41,10 @@ $: kubectl proxy
 
 [Access the Dashboard](Docs/Infrastructure/Services/ContainerEngine/StartingK8sDashboard)
 
+### Upgrade
+
+[Upgrade Kubernetes Version](Docs\Infrastructure\Services\ContainerEngine\UpgradeCluster)  
+
 ### (Image) Registry
 
 Each region has a unique Registry endpoint.  
