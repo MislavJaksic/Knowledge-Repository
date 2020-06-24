@@ -76,7 +76,7 @@ Experiment:
 * during morning routine (~6:35)
 
 `Find new ideas`:
-* read Steven Pinker's book Sense of Style for an hour
+* read a book for two hours or a chapter, whichever comes first
 * do it every day
 * during evening routine (~21:30)
 * until you read it
@@ -84,6 +84,7 @@ Experiment:
 
 `Find niches I can solve`:
 * Hacker News? Job postings? Open Source Projects?
+* do `Cracking the Coding Interview` or `HackerRank` or `LeetCode` or `FireCode`
 * commit two hours to doing a personal project
 
 `Meet capable people`:
@@ -92,7 +93,7 @@ Experiment:
 
 ### Designing Systems
 
-Develop systems to drive lasting behavioural changes.  
+Develop systems to drive lasting behavioral changes.  
 Three principals:
 * bottlenecks
 * feedback loops
@@ -112,7 +113,7 @@ Steps:
 Systems where outputs effect the inputs.  
 
 Balancing feedback loops maintain the status quo.  
-Reinforcing feedback loops amply behaviour.  
+Reinforcing feedback loops amply behavior.  
 Improvement loop is made of planning, experimenting and reflecting.  
 Increase the frequency of measurement and experimentation.  
 
@@ -125,7 +126,7 @@ Pareto's principle or the 80/20 rule illustrates leverage perfectly.
 
 Greatest points of leverage:
 * change goals and values, realign the system
-* build self-organising systems that improve over time
+* build self-organizing systems that improve over time
 * improve information flow, take better measurements
 * install feedback loops
 * shorten the loop, measure and respond more quickly
@@ -141,7 +142,7 @@ Actions taken to change your habits precede the habit change.
 
 #### Habit Loop
 
-Habit loop is made up of triggers, behaviours and rewards.  
+Habit loop is made up of triggers, behaviors and rewards.  
 
 ##### Habit Triggers
 

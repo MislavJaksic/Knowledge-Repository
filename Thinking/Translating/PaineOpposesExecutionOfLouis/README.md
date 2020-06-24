@@ -1,4 +1,4 @@
-## [Paine Opposes the Execution of Louis](https://www.bartleby.com/400/prose/452.html)
+## [Paine Opposes the Execution of King Louis Carpet](https://www.bartleby.com/400/prose/452.html)
 
 Translation: Mislav Jakšić  
 Source language: English  

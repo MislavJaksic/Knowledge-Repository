@@ -4,7 +4,7 @@ Chocolatey is a package manager for Windows.
 
 ### Installation
 
-Comes with Node.js.
+Comes with `Node.js`.
 
 ### Usage: install
 

@@ -33,7 +33,9 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
         * [PostgreSQL](Technology/Database/PostgreSQL)
         * [Redis](Technology/Database/Redis)
         * [SQLite](Technology/Database/SQLite)
+        * [Vitess](Technology/Database/Vitess)
     * DevOps
+        * [Ansible](Technology/DevOps/Ansible)
         * CICD
             * [Argo](Technology/DevOps/CICD/Argo)
                 * [ArgoCD](Technology/DevOps/CICD/Argo/ArgoCD)
@@ -56,18 +58,21 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
             * Tracing
                 * [Jaeger](Technology/DevOps/Observability/Tracing/Jaeger)
         * Security
+            * [CloudFlare](Technology/DevOps/Security/CloudFlare)
             * [OpenVPN](Technology/DevOps/Security/OpenVPN)
             * [Putty](Technology/DevOps/Security/Putty)
             * [SSH](Technology/DevOps/Security/SSH)
         * Server
             * Hosting
                 * [DigitalOcean](Technology/DevOps/Server/Hosting/DigitalOcean)
+                * [GoogleCloudPlatform](Technology/DevOps/Server/Hosting/GoogleCloudPlatform)
                 * [OracleCloud](Technology/DevOps/Server/Hosting/OracleCloud)
             * [Nginx](Technology/DevOps/Server/Nginx)
         * VersionControl
             * [Git](Technology/DevOps/VersionControl/Git)
             * [GitHub](Technology/DevOps/VersionControl/GitHub)
             * [GitLab](Technology/DevOps/VersionControl/GitLab)
+            * [Guitar](Technology/DevOps/VersionControl/Guitar)
         * VirtualMachine
             * [OpenStack](Technology/DevOps/VirtualMachine/OpenStack)
             * [VirtualBox](Technology/DevOps/VirtualMachine/VirtualBox)
@@ -84,6 +89,7 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
             * [Cygwin](Technology/OS/Linux/Cygwin)
             * [MSYS2](Technology/OS/Linux/MSYS2)
             * [ShellScripting](Technology/OS/Linux/ShellScripting)
+            * [Tmux](Technology/OS/Linux/Tmux)
             * [Ubuntu](Technology/OS/Linux/Ubuntu)
     * Software
         * BuildTool
@@ -102,12 +108,15 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
             * [ABAP](https://github.com/MislavJaksic/SAP-ABAP-Development/tree/master/ABAP)
             * [C++](Technology/Software/ProgrammingLanguage/C++)
             * [Elm](Technology/Software/ProgrammingLanguage/Elm)
+            * [Go](Technology/Software/ProgrammingLanguage/Go)
             * [Haskell](Technology/Software/ProgrammingLanguage/Haskell)
             * [Java](Technology/Software/ProgrammingLanguage/Java)
                 * [Spring](https://github.com/MislavJaksic/Spring-Guides-Tutorials)
             * [JavaScript](Technology/Software/ProgrammingLanguage/JavaScript)
             * [Lisp](Technology/Software/ProgrammingLanguage/Lisp)
             * [Python3.x](Technology/Software/ProgrammingLanguage/Python3.x)
+            * [R](Technology/Software/ProgrammingLanguage/R)
+            * [Ruby](Technology/Software/ProgrammingLanguage/Ruby)
     * Streaming
         * [ApacheKafka](https://github.com/MislavJaksic/Kafka-In-Theory-And-Practice)
         * [ApacheSpark](Technology/Streaming/ApacheSpark)
@@ -115,9 +124,12 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
         * [CollageLabs](https://github.com/MislavJaksic/College-Labs)
         * [HomeNetworking](Technology/Utility/HomeNetworking)
         * [Latex](https://github.com/MislavJaksic/Latex-Overleaf)
+        * [Notion](Technology/Utility/Notion)
         * PackageManager
             * [Chocolatey](Technology/Utility/PackageManager/Chocolatey)
             * [Scoop](Technology/Utility/PackageManager/Scoop)
+        * Parser
+            * [TableConverter](Technology/Utility/Parser/TableConverter)
         * [Practise](https://github.com/MislavJaksic/Practise)
     * Video
         * [Asciinema](Technology/Video/Asciinema)
@@ -129,16 +141,23 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
             * [Postman](Technology/Web/API/Postman)
             * REST
                 * [RESTFulWebServices](Technology/Web/API/REST/RESTFulWebServices)
+        * Bookmark
+            * [Shiori](Technology/Web/Bookmark/Shiori)
         * CMS
             * [Ghost](Technology/Web/CMS/Ghost)
         * DNS
+            * [DNSChecker](Technology/Web/DNS/DNSChecker)
             * [DomeneHR](Technology/Web/DNS/DomeneHR)
         * Framework
             * [Flask](https://github.com/MislavJaksic/Flask-Tutorial)
             * [RubyOnRails](Technology/Web/Framework/RubyOnRails)
+        * [HackTheBox](Technology/Web/HackTheBox)
         * [Selenium](https://github.com/MislavJaksic/Selenium-Tutorial)
         * StaticSiteGenerator
-            * [Jekyll](Technology/Web/StaticSiteGenerator/Jekyll)
+            * [GatsbyJS](https://github.com/MislavJaksic/Gatsby-Tutorial)
+            * [Jekyll](https://github.com/MislavJaksic/Jekyll-Tutorial)
+        * TemplateProcessor
+            * [Handlebars](Technology/Web/TemplateProcessor/Handlebars)
 
 ### Contact
 
