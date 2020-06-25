@@ -6,7 +6,7 @@ Argo CD is a declarative, `GitOps` continuous delivery tool.
 
 ```
 $: kubectl create namespace argocd
-$: kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v1.5.4/manifests/install.yaml
+$: kubectl apply -n K8s-Argocd-Namespace -f https://raw.githubusercontent.com/argoproj/argo-cd/v1.5.4/manifests/install.yaml
 ```
 
 [Getting Started Guide](../GettingStarted)  

@@ -5,7 +5,7 @@
 ```
 # Note: install Kubernetes and configure kubectl
 
-$: kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-rc6/aio/deploy/recommended.yaml  # deploy dashboard
+$: kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml  # deploy dashboard
 ```
 
 ### Connect
