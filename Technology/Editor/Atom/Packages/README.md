@@ -2,13 +2,21 @@
 
 Note: after installing a package you may need to restart Atom.  
 
+### autoclose-html-plus
+
+Automatically closes HTML tags.  
+
 ### atom-beautify
 
 Formats code.  
 
+### emmet
+
+For HTML and CSS workflow.  
+
 ### file-icons
 
-Shows colourful icons.  
+Shows colorful icons.  
 
 ### git-plus
 
