@@ -1,0 +1,10 @@
+{
+  "development": {
+    "apiUrl": "https://Admin-Panel-Url",
+    "contentApiKey": "Integrations-Key"
+  },
+  "production": {
+    "apiUrl": "https://Admin-Panel-Url",
+    "contentApiKey": "Integrations-Key"
+  }
+}

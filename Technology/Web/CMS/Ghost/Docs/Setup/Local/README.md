@@ -3,7 +3,7 @@
 For development.  
 
 Prerequisites:
-* [supported `Node.js` version](https://ghost.org/faq/node-versions/)
+* [supported Node.js version](https://ghost.org/faq/node-versions/)
 * `yarn` or `npm` to manage packages (`npm` comes with `nodejs`)
 
 ```

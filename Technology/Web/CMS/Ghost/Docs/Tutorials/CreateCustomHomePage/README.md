@@ -6,4 +6,8 @@
 
 ### Rendering Ghost content
 
+TODO
+
 ### Adjusting page routes
+
+TODO
