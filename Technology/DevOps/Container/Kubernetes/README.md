@@ -101,6 +101,10 @@ Scale with `scale` or `autoscale`.
 
 [Change default StorageClass](Docs/Tasks/AdministerCluster/ChangeDefaultStorageClass)  
 
+### Kubernetes-based platforms
+
+[Platform on Kubernetes](Other/KubernetesBasedPlatform)  
+
 ### Errors
 
 Force delete a `Terminating` namespace.  

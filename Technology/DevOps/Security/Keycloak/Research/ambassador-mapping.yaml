@@ -1,0 +1,18 @@
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: keycloak-mapping
+  labels:
+    app: keycloak-mapping-app
+  namespace: K8s-Ambassador-Namespace  # change
+  annotations:
+    developer/name: "Mislav Jakšić"
+    developer/email: "jaksicmislav@gmail.com"
+    developer/url: "https://github.com/MislavJaksic"
+    developer/role: "technical lead"
+    developer/timezone: "Europe/Zagreb"
+    developer/picUrl: "https://images.app.goo.gl/PCHZgd8oattge1i96"
+spec:
+  prefix: /auth  # same as keycloak.basepath
+  service: 'keycloak-http.K8s-Keycloak-Namespace'  # [Scheme://]Service-Name[.Namespace][:Port]
+  rewrite: /auth  # same as keycloak.basepath
