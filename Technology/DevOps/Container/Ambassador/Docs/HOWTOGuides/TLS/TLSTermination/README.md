@@ -1,4 +1,6 @@
-## [Enabling HTTPS in Ambassador](https://www.getambassador.io/user-guide/tls-termination/)
+## [TLS Termination and Enabling HTTPS](https://www.getambassador.io/docs/latest/howtos/tls-termination/)
+
+TODO: refurbish!
 
 IF you don't have a Fully Qualified Domain Name (FQDN) you have to enable TLS and HTTPS manually.  
 

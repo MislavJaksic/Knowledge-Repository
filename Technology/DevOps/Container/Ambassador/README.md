@@ -6,11 +6,14 @@
 $: helm repo add datawire https://www.getambassador.io
 $: helm repo update
 
-$: kubectl create namespace ambassador
-$: helm install ambassador --namespace ambassador datawire/ambassador -f config.yaml  # see Research
-```
+# Note: if you see `manifest_sorter.go:175: info: skipping unknown hook: "crd-install"`, don't worry, it's not an error
 
-You should also install the `Edge Policy Console`.  
+$: kubectl create namespace K8s-Ambassador-Namespace
+$: helm install ambassador --namespace K8s-Ambassador-Namespace datawire/ambassador -f config.yaml  # see Research
+
+$: sudo curl -fL https://metriton.datawire.io/downloads/linux/edgectl -o /usr/local/bin/edgectl && sudo chmod a+x /usr/local/bin/edgectl
+$: edgectl install
+```
 
 [Instructions](Docs/Install/OtherInstallAndUpgrade/KubernetesHelm)
 
@@ -18,7 +21,12 @@ You should also install the `Edge Policy Console`.
 
 TODO
 
-[Instructions](Docs/Guides/Security/EnablingHTTPS)
+[Instructions](Docs\HOWTOGuides\TLS\TLSTermination)
+
+### Filters and Authentication
+
+[Filters and Authentication](Docs\RunAndUse\Using\FiltersAndAuthentication)  
+[Keycloak SSO and Ambassador](Docs\HOWTOGuides\Authentication\SSOKeycloak)  
 
 ### Mapping Service Resource
 
@@ -35,3 +43,8 @@ spec:
 ```
 
 [Instructions](Docs/References/ConfigK8sService/MappingsServices)
+
+### Errors
+
+`503: Service Unavailable`: check if the `spec.service` is correct  
+Did you use `spec.rewrite` and changed the base URL? If not, search the system documentation for how to do it.  

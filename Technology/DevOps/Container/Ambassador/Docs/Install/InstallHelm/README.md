@@ -1,18 +1,24 @@
-## [Installing Ambassador with Helm](https://www.getambassador.io/user-guide/helm)
+## [Installing Ambassador with Helm](https://www.getambassador.io/docs/latest/topics/install/helm/)
 
-### First Time Installation
+### Before You Begin
 
 ```
 $: helm repo add datawire https://www.getambassador.io
 $: helm repo update
 
+# Note: if you see `manifest_sorter.go:175: info: skipping unknown hook: "crd-install"`, don't worry, it's not an error
+```
+
+### Install with Helm
+
+```
 $: kubectl create namespace K8s-Ambassador-Namespace
 $: helm install ambassador --namespace K8s-Ambassador-Namespace datawire/ambassador -f config.yaml  # see Research
 
-# Note: if you see `manifest_sorter.go:175: info: skipping unknown hook: "crd-install"`, don't worry. Check if CRDs exist
+$: edgectl install
 ```
 
-Continue with the [Third step in Quick Start](../../QuickStart).  
+`Edge Control` provisions a domain and configures TLS.  
 
 ### Upgrading an Existing Edge Stack Installation
 

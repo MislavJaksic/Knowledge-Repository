@@ -1,2 +1,2 @@
 service:
-  type: NodePort  # important
+  type: NodePort
