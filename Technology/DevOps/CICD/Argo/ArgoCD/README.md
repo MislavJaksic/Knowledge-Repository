@@ -11,6 +11,8 @@ Requirements:
 ```
 $: kubectl create namespace K8s-Argocd-Namespace
 $: kubectl apply -n K8s-Argocd-Namespace -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+OR
+$: kubectl apply -n K8s-Argocd-Namespace -f Research/Manifests/  # see Research, 31Deployment-argocd-server.yaml
 ```
 
 #### ArgoCD CLI

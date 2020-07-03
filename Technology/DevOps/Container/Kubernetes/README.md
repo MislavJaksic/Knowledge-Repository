@@ -1,7 +1,7 @@
 ## [Kubernetes](https://kubernetes.io/)
 
-Kubernetes is a container orchestra conductor:
-* allocates node, CPU, memory, disk, IP and port
+Kubernetes is a container orchestrator:
+* allocates machine, CPU, memory, disk, IP and port
 * provides DNS, load balancing and fault tolerance
 
 ### Install
@@ -9,10 +9,11 @@ Kubernetes is a container orchestra conductor:
 Installers:
 * [`minikube`](Minikube)
 * `kubeadm`, `kops`, `KRIB`, `kubespray`, ...  
+* manually on the [Google Cloud Platform](Other/LearnKubernetesTheHardWay)
 
-Command line tool [kubectl](kubectl).  
+[kubectl Command Line Tool](kubectl)  
 
-[Kubernetes Dashboard](Dashboard).  
+[Kubernetes Dashboard](Dashboard)  
 
 ### Workloads
 
@@ -21,11 +22,14 @@ Command line tool [kubectl](kubectl).
 [Container: ENV VARs](Docs/Tasks/InjectDataIntoApps/EnvironmentVariablesContainer)  
 [Downward API: Pods expose info to their Containers](Docs/Tasks/InjectDataIntoApps/PodInfoThroughEnvVar)  
 
-[ConfigMaps used by Pods](Docs/Tasks/ConfigurePodsContainers/ConfigurePodToUseConfigMap)
+[ConfigMaps used by Pods](Docs/Tasks/ConfigurePodsContainers/ConfigurePodToUseConfigMap)  
 
-[Liveness, readiness and startup Probes](Docs/Tasks/ConfigurePodsContainers/LiveReadyStartProbes)
+[Liveness, Readiness and Startup Probes](Docs/Tasks/ConfigurePodsContainers/LiveReadyStartProbes)  
+[Probes: dangers, tips and tricks](Other/LivenessProbeDanger)  
 
-[Production Best Practices](Other/ProductionBestPractices)
+[Production Best Practices](Other/ProductionBestPractices)  
+
+[Flask and Kubernetes](Other/RunningFlaskOnKubernetes)  
 
 ```
 # Note: a throwaway Ubuntu Pod
@@ -116,3 +120,5 @@ kubectl get namespace $NAMESPACE -o json |jq '.spec = {"finalizers":[]}' >temp.j
 curl -k -H "Content-Type: application/json" -X PUT --data-binary @temp.json 127.0.0.1:8001/api/v1/namespaces/$NAMESPACE/finalize
 )
 ```
+
+[Kubernetes Problems and Errors](Other/ShootYourselfInTheFoot)  

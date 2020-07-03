@@ -7,7 +7,7 @@ image:
 service:
   type: NodePort  # change
   port: 80
-  # cannot set nodePort!
+  # cannot set static nodePort port!
 
 db:
   port: 3306  # same for both mariadb and mysql

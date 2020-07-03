@@ -61,6 +61,7 @@ $: echo "if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi" >
 
 $: kubectl api-versions
 $: kubectl api-resources
+$: kubectl explain Resource-Type[.field.subfield]
 
 $: kubectl get Resource-Type/Resource-Name [-f] [-k] [-o Output-Option] [--watch] [--field-selector=field.subfield=Field-Value] [-LLabel-Name]
 $: kubectl run Id-Name --image=Image-Name [--env="Env-Var-Name=Env-Var-Value"] [--port=Expose-Port] [--replicas=X] [--dry-run] [--command -- _command _arg0.._argN]

@@ -232,7 +232,6 @@ $: kubectl api-resources
 List the fields for supported resources.  
 Use case:
 * learn more about a resource
-*
 
 ```
 $: kubectl explain Resource-Type[.field.subfield]

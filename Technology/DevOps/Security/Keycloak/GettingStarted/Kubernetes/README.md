@@ -9,7 +9,7 @@ $: minikube addons enable ingress
 
 ### Run Keycloak
 
-Use the Helm Chart instead.  
+Use the `Helm` `Chart` instead.  
 
 TODO
 
@@ -43,9 +43,9 @@ Clients -> Create
 ```
 
 Data:
-* Client ID: Client-Name
-* Client Protocol: openid-connect
-* Root URL: https://www.keycloak.org/app/
+* `Client ID`: Client-Name
+* `Client Protocol`: `openid-connect`
+* `Root URL`: https://www.keycloak.org/app/
 
 ```
 https://www.keycloak.org/app/
