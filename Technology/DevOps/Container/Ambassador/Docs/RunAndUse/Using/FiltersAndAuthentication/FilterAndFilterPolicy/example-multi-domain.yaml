@@ -1,0 +1,14 @@
+apiVersion: getambassador.io/v2
+kind: FilterPolicy
+metadata:
+  name: multi-domain-policy
+spec:
+  rules:
+  - host: foo.bar.com
+    path: *
+    filters:
+      - name: foo-keycloak
+  - host: example.com
+    path: *
+    filters:
+      - name: example-auth0

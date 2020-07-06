@@ -1,0 +1,15 @@
+---
+apiVersion: getambassador.io/v2
+kind: Filter
+metadata:
+  name: Filter-Keycloak-Name
+  namespace: K8s-Ambassador-Namespace
+spec:
+  OAuth2:
+    authorizationURL: https://Keycloak-Hostname/auth/realms/Keycloak-Realm
+    grantType: "AuthorizationCode"  # or "Password" or "ClientCredentials"
+    audience: Client-Name
+    clientID: Client-Name
+    secret: Keycloak-Client-Secret  # in Keycloak under Client -> Credentials -> Secret
+    protectedOrigins:  # at least one
+    - origin: https://Host-Name

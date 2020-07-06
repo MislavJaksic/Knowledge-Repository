@@ -1,0 +1,22 @@
+---
+apiVersion: getambassador.io/v2
+kind: FilterPolicy
+metadata:
+  name: "Filter-Policy-Name"
+  namespace: "K8s-Ambassador-Namespace"
+spec:
+  rules:
+  - host: "Host-Value"
+    path: "Path-Value"
+    filters:  # [] to apply no Filters
+    - name: "Filter-Name"
+      namespace: "K8s-Ambassador-Namespace"
+      # ifRequestHeader:  # default: apply to all requests matching the host & path
+      #   name: "Header-Name"
+      #   negate: false
+      #   # value and valueRegex can't both exist!
+      #   value: "Exact-Value"
+      #   valueRegex: "Regex-Value"
+      # onDeny: "break"
+      # onAllow: "continue"
+      # arguments: []  # see Path-Specific Arguments for each Filter type

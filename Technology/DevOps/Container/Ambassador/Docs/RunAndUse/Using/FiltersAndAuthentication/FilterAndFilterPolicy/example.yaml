@@ -1,0 +1,31 @@
+---
+apiVersion: getambassador.io/v2
+kind: Filter
+metadata:
+  name: param-filter
+  namespace: standalone
+spec:
+  Plugin:
+    name: param-filter
+---
+apiVersion: getambassador.io/v2
+kind: FilterPolicy
+metadata:
+  name: httpbin-policy
+spec:
+  rules:
+  # don't apply any filters to requests for /httpbin/ip
+  - host: "*"
+    path: /httpbin/ip
+    filters: null
+  # apply param-filter and auth0 to requests for /httpbin/
+  - host: "*"
+    path: /httpbin/*
+    filters:
+    - name: param-filter
+    - name: auth0
+  # default to authorizing all requests with auth0
+  - host: "*"
+    path: "*"
+    filters:
+    - name: auth0

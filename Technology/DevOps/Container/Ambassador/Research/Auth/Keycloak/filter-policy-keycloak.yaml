@@ -1,0 +1,16 @@
+---
+apiVersion: getambassador.io/v2
+kind: FilterPolicy
+metadata:
+  name: Filter-Policy-Keycloak-Name
+  namespace: K8s-Ambassador-Namespace
+spec:
+  rules:
+    - host: "*"
+      path: "*"
+      filters:
+        - name: Filter-Keycloak-Name
+          arguments:
+            scopes:  # add all Keycloak Client's Assigned Default Client Scopes
+            - "email"
+            - "profile"
