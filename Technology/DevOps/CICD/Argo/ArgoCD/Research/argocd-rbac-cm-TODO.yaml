@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-rbac-cm
+  namespace: argocd
+  labels:
+    app.kubernetes.io/name: argocd-rbac-cm
+    app.kubernetes.io/part-of: argocd
+data:
+  # see https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/rbac.md
+  policy.default: role:readonly
+  policy.csv: |
+    p, role:Role-Name-1, applications, *, */*, allow
+    p, role:Role-Name-1, clusters, get, *, allow
+    p, role:Role-Name-1, repositories, get, *, allow
+    p, role:Role-Name-1, repositories, create, *, allow
+    p, role:Role-Name-1, repositories, update, *, allow
+    p, role:Role-Name-1, repositories, delete, *, allow
+
+    g, Group-Name, role:Role-Name-1
+
+    p, role:Role-Name-2, applications, create, Role-Name-2/*, allow
+    p, role:Role-Name-2, applications, delete, Role-Name-2/*, allow
+    p, role:Role-Name-2, applications, get, Role-Name-2/*, allow
+    p, role:Role-Name-2, applications, override, Role-Name-2/*, allow
+    p, role:Role-Name-2, applications, sync, Role-Name-2/*, allow
+    p, role:Role-Name-2, applications, update, Role-Name-2/*, allow
+    p, role:Role-Name-2, projects, get, Role-Name-2, allow
+
+    g, Group-Name, role:Role-Name-2
+
+    # Keycloak policy example
+    g, Keycloak-Group-Name, role:readonly
+
+  # scopes controls which OIDC scopes to examine during rbac enforcement (in addition to `sub` scope).
+  # If omitted, defaults to: '[groups]'. The scope value can be a string, or a list of strings.
+  scopes: '[cognito:groups, email]' ???

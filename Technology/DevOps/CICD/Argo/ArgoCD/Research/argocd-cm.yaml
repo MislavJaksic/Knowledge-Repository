@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cm
+  namespace: K8s-Argocd-Namespace
+  labels:
+    app.kubernetes.io/name: argocd-cm
+    app.kubernetes.io/part-of: argocd
+data:
+  statusbadge.enabled: "true"
+  users.anonymous.enabled: "true"  # default role permissions defined in argocd-rbac-cm.yaml
+  # integrate with OICD identity providers
+  url: ArgoCD-Url  # externally facing base URL
+  oidc.config: |
+    name: Keycloak
+    issuer: https://Keycloak-Url/auth/realms/Keycloak-Realm
+    clientID: Client-Name
+    clientSecret: $oidc.keycloak.clientSecret
+    requestedScopes: ["openid", "profile", "email", Client-Scope-Name]
+  # add local users
+  accounts.User-Name: apiKey, login  # user can generate tokens and login through the UI
+  accounts.User-Name.enabled: "true"
+  admin.enabled: "false"  # highly recommended!

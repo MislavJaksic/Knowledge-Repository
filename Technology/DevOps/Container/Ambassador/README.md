@@ -21,12 +21,12 @@ $: edgectl install
 
 TODO
 
-[Instructions](Docs\HOWTOGuides\TLS\TLSTermination)
+[Instructions](Docs/HOWTOGuides/TLS/TLSTermination)
 
 ### Filters and Authentication
 
-[Filters and Authentication](Docs\RunAndUse\Using\FiltersAndAuthentication)  
-[Keycloak SSO and Ambassador](Docs\HOWTOGuides\Authentication\SSOKeycloak)  
+[Filters and Authentication](Docs/RunAndUse/Using/FiltersAndAuthentication)  
+[Keycloak SSO and Ambassador](Docs/HOWTOGuides/Authentication/SSOKeycloak)  
 
 ### Mapping Service Resource
 
