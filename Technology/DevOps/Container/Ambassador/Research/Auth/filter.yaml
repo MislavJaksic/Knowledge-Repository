@@ -1,0 +1,11 @@
+---
+apiVersion: getambassador.io/v2
+kind: Filter
+metadata:
+  name: "Filter-Name"
+  namespace: "K8s-Ambassador-Namespace"
+spec:
+  ambassador_id:
+  - "default"
+  Filter-Type:  # change Filter type
+    Global-Arguments  # different for each Filter type
