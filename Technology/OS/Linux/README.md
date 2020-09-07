@@ -129,7 +129,12 @@ $: ip route  #
 $: ss  #
 $: ip -s  #
 
-$: scp [-P _port] /source/path/File-Name _username@_ip:/destination/path
+$: scp [-i Private-Key][-P Port] /source/path/File-Name User-Name@_ip:/destination/path
+  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  # @         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  # ...
+  # Note: use $: sudo chmod 600 Private-Key
 
 $: sftp -oPort=Post-Number User-Name@Host-Name  # manipulate files on a remotely
 ```
