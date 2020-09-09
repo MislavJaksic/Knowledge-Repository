@@ -25,6 +25,7 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
     * Analytics
         * [ApacheDruid](Technology/Analytics/ApacheDruid)
         * [Elastic](Technology/Analytics/Elastic)
+        * [GoogleSheets](Technology/Analytics/GoogleSheets)
     * Database
         * [ApacheHadoop](Technology/Database/ApacheHadoop)
         * [ApacheHive](Technology/Database/ApacheHive)
@@ -59,13 +60,17 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
                 * [Jaeger](Technology/DevOps/Observability/Tracing/Jaeger)
         * Security
             * [CloudFlare](Technology/DevOps/Security/CloudFlare)
+            * [Keycloak](Technology/DevOps/Security/Keycloak)
+            * [OpenPolicyAgent](Technology/DevOps/Security/OpenPolicyAgent)
             * [OpenVPN](Technology/DevOps/Security/OpenVPN)
             * [Putty](Technology/DevOps/Security/Putty)
             * [SSH](Technology/DevOps/Security/SSH)
         * Server
+            * [Gunicorn](Technology/DevOps/Server/Gunicorn)
             * Hosting
                 * [DigitalOcean](Technology/DevOps/Server/Hosting/DigitalOcean)
                 * [GoogleCloudPlatform](Technology/DevOps/Server/Hosting/GoogleCloudPlatform)
+                * [Netlify](Technology/DevOps/Server/Hosting/Netlify)
                 * [OracleCloud](Technology/DevOps/Server/Hosting/OracleCloud)
             * [Nginx](Technology/DevOps/Server/Nginx)
         * VersionControl
@@ -148,13 +153,16 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
         * DNS
             * [DNSChecker](Technology/Web/DNS/DNSChecker)
             * [DomeneHR](Technology/Web/DNS/DomeneHR)
+        * [Electron](Technology/Web/Electron)
         * Framework
             * [Flask](https://github.com/MislavJaksic/Flask-Tutorial)
             * [RubyOnRails](Technology/Web/Framework/RubyOnRails)
+        * [Google](Technology/Web/Google)
         * [HackTheBox](Technology/Web/HackTheBox)
+        * [NodeJS](Technology/Web/NodeJS)
         * [Selenium](https://github.com/MislavJaksic/Selenium-Tutorial)
         * StaticSiteGenerator
-            * [GatsbyJS](https://github.com/MislavJaksic/Gatsby-Tutorial)
+            * [GatsbyJS](Technology/Web/StaticSiteGenerator/GatsbyJS)
             * [Jekyll](https://github.com/MislavJaksic/Jekyll-Tutorial)
         * TemplateProcessor
             * [Handlebars](Technology/Web/TemplateProcessor/Handlebars)
