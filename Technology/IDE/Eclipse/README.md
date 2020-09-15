@@ -1,12 +1,23 @@
 ## [Eclipse](https://www.eclipse.org/)
 
-Eclipse is a language neutral IDE which has a lot of customisation options. Because of this, it is also very complicated.  
+Eclipse is a language neutral IDE which has a lot of customization options. Because of this, it is also very complicated.  
 
 TODO
 
-### Installation
+### Install
 
 Installing Eclipse is quite easy.  
+
+### Uninstall
+
+Delete its directories manually:
+* `.eclipse`
+* `.p2`
+* installation folder
+
+### Setup
+
+If you can't write `{`, then go to `Preferences`, `Hotkeys` and `Unbind Command` `Skip All Breakpoints`.  
 
 ### Generate JUnit test
 
