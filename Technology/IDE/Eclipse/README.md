@@ -1,14 +1,17 @@
 ## [Eclipse](https://www.eclipse.org/)
 
-Eclipse is a language neutral IDE which has a lot of customization options. Because of this, it is also very complicated.  
-
-TODO
+Eclipse is a language neutral IDE which has a lot of customization options.  
+It is most often used for Java development.  
 
 ### Install
 
-Installing Eclipse is quite easy.  
+[Download Tool Platforms](https://www.eclipse.org/downloads/):
+* Eclipse IDE: has many language packages, the most popular being Java
+* Eclipse Che: `Kubernetes` IDE that centralizes development
 
 ### Uninstall
+
+#### Eclipse IDE
 
 Delete its directories manually:
 * `.eclipse`
@@ -19,7 +22,11 @@ Delete its directories manually:
 
 If you can't write `{`, then go to `Preferences`, `Hotkeys` and `Unbind Command` `Skip All Breakpoints`.  
 
-### Generate JUnit test
+### Generate code
+
+```
+CTRL + SPACE - create code from a template
+```
 
 ```
 Select class -> File -> New... -> JUnit Test Case -> ...
