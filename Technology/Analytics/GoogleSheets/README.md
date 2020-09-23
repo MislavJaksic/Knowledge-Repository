@@ -17,6 +17,12 @@ SORTN - get first N rows sorted by condition applied to a column
 
 JOIN - concatenate
 SUBSTITUTE - replace
+
+ARRAYFORMULA - populate the formula through many cells; hotkey in CTRL + SHIFT + ENTER
+ISNA
+NA
+FILTER
+ENCODEURL - turn a cell into a URL ready data
 ```
 
 [Function list: Help](https://support.google.com/docs/table/25273)
