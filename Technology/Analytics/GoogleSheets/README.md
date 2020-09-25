@@ -18,14 +18,21 @@ SORTN - get first N rows sorted by condition applied to a column
 JOIN - concatenate
 SUBSTITUTE - replace
 
-ARRAYFORMULA - populate the formula through many cells; hotkey in CTRL + SHIFT + ENTER
-ISNA
-NA
-FILTER
+ARRAYFORMULA - populate the formula through many cells; hotkey is CTRL + SHIFT + ENTER
+ISNA - True if #N/A
+NA - #N/A value
+FILTER - filter by condition
 ENCODEURL - turn a cell into a URL ready data
 ```
 
 [Function list: Help](https://support.google.com/docs/table/25273)
+
+### Tips and Tricks
+
+ARRAYFORMULA and Filters conflict unless you use:
+```
+={"Column-Header-Name";ARRAYFORMULA(Array-Formula))}
+```
 
 ### Scripts
 
