@@ -24,8 +24,8 @@ GitLab is a Git repository which covers the entire DevOps Lifecycle.
     4) Commit your work with `git commit -m 'Descriptive commit message'`.
     5) Push it to a remote branch with `git push`.
     6) Resolve merge conflicts.
-5) Remove the `Work In Progress` (WIP) status of a merge request.
-6) Complete the merge request by pressing `Merge`.
+5) Click `Mark as ready`.
+6) Complete the merge request by pressing `Merge` and ticking the box `Delete source branch`.
 7) Repeat until the task or milestone are complete.
 
 GitLab workflow ties together GitLab and Git:
