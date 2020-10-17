@@ -70,15 +70,15 @@ Experiment:
 * STEP 4: How will you quickly test this hypothesis? How will you adjust if your test does not have the desired result?
 
 `Improve health`:
-* by exercising at home four to five times a week following a Nike Workout phone app Getting Started plan for four weeks I'll increase my functional strength
+* by exercising at home three times a week following a Nike Workout phone app Getting Started plan for four weeks I'll increase my functional strength
 * review exercises the morning before exercising
 * find replacement exercises if necessary  
 * during morning routine (~6:35)
 
 `Find new ideas`:
 * read a book for two hours or a chapter, whichever comes first
-* do it every day
-* during evening routine (~21:30)
+* do it four times a week
+* during evening routine (~20:30)
 * until you read it
 * take notes
 
@@ -90,6 +90,8 @@ Experiment:
 `Meet capable people`:
 * every Friday at 18:00 I'll call a friend that I haven't heard from the longest
 * arrange a meeting, coffee or just chat over the phone
+
+Note: optimize goals and priorities only on Friday 19:00
 
 ### Designing Systems
 
