@@ -4,19 +4,43 @@ Clean Code is written by Robert C. Martin.
 It is code that can be easily read and understood by programmers.  
 Clean code is easier to maintain.  
 
-### Meaningful names
+### Introduction
+
+Craftsmanship: knowledge and work:
+* Know your principles and patterns
+* Work hard, practice, watch yourself and others fail
+
+Takeaway lesson: heuristics must be applied to concrete problems to be useful
+Reading chapter two and following along in the thinking process is paramount!
+
+### 1 Clean Code
+
+There will always be code.  
+Bad code will catch up to you.  
+Develop a code-sense: identify and express what's wrong with the code.  
+Code is read far more then it is written.  
+
+
+### 2 Meaningful names
 
 ```
 Names are descriptive; reveal intent.  
-Names are distinct.  
-Avoid encoding names.  
-Names don't have a prefix or suffix.  
+Use names consistently.
+Names are distinct and can be easily distinguished.
+Create pronounceable and searchable names.
+Create long names for long scoped names.
+Avoid encoding scope or type into names as prefixes or suffixes. [1]
+Names come from the solution or problem domain.
+Class names are evocative nouns, methods are verbs.
+
 Have a consistent lexicon; get or fetch, choose one.  
 Same name, same purpose, same semantics.  
 Use solution domain names: algorithm and pattern names.  
 Use domain specific names when there are no solution domain names.  
 Provide context to the variables with other names; create a structure.  
 ```
+
+[1] Interfaces and their implementations are an exception: prefer ClassImpl over IInterface. Why? It hides that you are giving an interface, reduces difference between abstract classes and interfaces, prefixes are harder to ignore then suffixes.
 
 ### Functions
 
