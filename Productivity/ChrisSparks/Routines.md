@@ -11,7 +11,7 @@ Workout.
 Turn on computer.  
 Eat breakfast.  
 
-## Evening routine (21:30 - 23:00)
+## Evening routine (20:30 - 23:00)
 
 Read.  
 Turn off computer.  
