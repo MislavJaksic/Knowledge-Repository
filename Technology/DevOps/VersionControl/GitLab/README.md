@@ -8,7 +8,8 @@ GitLab is a Git repository which covers the entire DevOps Lifecycle.
 
 * create a `dev` branch; it will be forked by `feature` branches
 * make `dev` a `Protected branch` and `Default branch`
-* add `Milestones` and `Labels` (`ToDo`, `Doing`)
+* add `Milestones` and `Labels` (eg. `To Do`, `Doing`, `QA`, `Rejected`)
+* invite GitLab members
 
 #### GitLab Workflow
 
