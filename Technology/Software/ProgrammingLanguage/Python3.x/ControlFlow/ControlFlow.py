@@ -1,12 +1,12 @@
-i = 0
+i = 0  # -> or "", [], {}, None
 if i != 0:
     x = False
 else:
-    print("Zero is treated as False.")
+    print("False values.")
 
 i = -1
 if i:
-    print("Any other number is treated as True.")
+    print("Any other values are True.")
 elif i == 5:
     pass
 

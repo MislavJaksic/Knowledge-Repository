@@ -22,7 +22,7 @@ $: git config --global user.email johndoe@example.com
 
 $: git config --global core.editor Your-Editor
 ```
-Visit [AppendixC: config core.editor](https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config#_core_editor) for how to setup your favourite editor.  
+Visit [AppendixC: config core.editor](https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config#_core_editor) for how to setup your favorite editor.  
 
 ### Local commands
 

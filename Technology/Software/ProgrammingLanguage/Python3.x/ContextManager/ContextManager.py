@@ -1,6 +1,3 @@
-# Temporal coupling: when you have to run functions in an order
-
-
 class Bee(object):
     def __init__(self, role):
         self.role = role
