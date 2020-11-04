@@ -1,5 +1,70 @@
+import string
 from collections import namedtuple
 from functools import lru_cache
+
+# String
+str = "heLLo1"
+str.capitalize()  # -> "Hello1"
+str.title()  # -> 'Hello1'
+str.upper()  # -> 'HELLO1'
+str.lower()  # -> "hello1"
+str.casefold()  # -> "hello1", stronger .lowercase()
+str.swapcase()  # -> 'HEllO1'
+
+str.center(10, "i")  # -> 'iiheLLo1ii'
+str.ljust(8, "i")  # -> 'heLLo1ii'
+str.rjust(8, "i")  # -> 'iiheLLo1'
+str.zfill(10)  # -> '0000heLLo1'
+
+str.find("o1", 0, len(str))  # -> 4
+str.rfind("o1", 0, len(str))  # -> 4
+str.index("o1", 0, len(str))  # -> like .find() but raises an error
+str.rindex("o1", 0, len(str))  # -> like .rfind() but raises an error
+
+str.isalnum()  # -> True
+str.isalpha()  # -> False
+str.isascii()  # -> True, new in 3.7
+str.isdecimal()  # -> False
+str.isdigit()  # -> False
+str.isidentifier()  # -> True
+str.islower()  # -> False
+str.isnumeric()  # -> False
+str.isprintable()  # -> True
+str.isspace()  # -> False
+str.istitle()  # -> False
+str.isupper()  # -> False
+
+str.strip("eh1o")  # -> 'LL'
+str.lstrip("eh")  # -> 'LLo1'
+str.rstrip("1o")  # -> 'heLL'
+
+str.join(["A", "B", "C"])  # -> "AheLLo1BheLLo1C"
+str.split("L")  # -> ['he', '', 'o1']
+str.rsplit("L", 1)  # -> ['heL', 'o1'], like .split() but from the right
+str.splitlines()  # -> split string into list
+str.partition("L")  # -> ('he', 'L', 'Lo1')
+str.rpartition("L")  # -> ('heL', 'L', 'o1')
+
+str.count("o1", 0, len(str))  # -> 1
+str.translate(str.maketrans("heLo", "merl"))  # -> 'merrl1'
+str.replace("L", "l")  # -> 'hello1'
+str.startswith(("h", "1"), 0, len(str))  # -> True
+str.endswith(("h", "1"), 0, len(str))  # -> True
+str.encode(encoding="utf-8", errors="strict")  # -> b'heLLo1'
+str.expandtabs(tabsize=8)  # -> replace TAB with whitespace
+str.format(*args, **kwargs)  # -> format string
+str.format_map(mapping)  # -> format string
+
+# String library
+string.ascii_letters  # -> ascii_lowercase + ascii_uppercase
+string.ascii_lowercase  # -> abcdefghijklmnopqrstuvwxyz
+string.ascii_uppercase  # -> ABCDEFGHIJKLMNOPQRSTUVWXYZ
+string.digits  # -> 0123456789
+string.hexdigits  # -> 0123456789abcdefABCDEF
+string.octdigits  # -> 01234567
+string.punctuation  # -> !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+string.printable  # -> digits + ascii_letters + punctuation + whitespace
+string.whitespace  # -> space, tab, linefeed, return, formfeed, vertical tab
 
 # List
 # Like arrays, lists or queues
