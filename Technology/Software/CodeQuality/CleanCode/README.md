@@ -32,15 +32,17 @@ Create long names for long scoped names.
 Avoid encoding scope or type into names as prefixes or suffixes. [1]
 Names come from the solution or problem domain.
 Class names are evocative nouns, methods are verbs.
-
-Have a consistent lexicon; get or fetch, choose one.  
+Use get, set, is prefixes according to standard.
+Have a consistent lexicon; retrieve or fetch, manager or controller, choose one.  
 Same name, same purpose, same semantics.  
-Use solution domain names: algorithm and pattern names.  
+Use solution domain names: algorithm and pattern names. [2]
 Use domain specific names when there are no solution domain names.  
-Provide context to the variables with other names; create a structure.  
+Provide context to the variables with other names and structures.  
+Don't add unnecessary context.  
 ```
 
-[1] Interfaces and their implementations are an exception: prefer ClassImpl over IInterface. Why? It hides that you are giving an interface, reduces difference between abstract classes and interfaces, prefixes are harder to ignore then suffixes.
+[1] Interfaces and their implementations are an exception: prefer ClassImpl over IInterface. Why? It hides that you are giving an interface, reduces difference between abstract classes and interfaces, prefixes are harder to ignore then suffixes.  
+[2] Because programmers will read your code. Don't make them ask the customer about every single concept.
 
 ### Functions
 
@@ -85,16 +87,15 @@ Agree upon and stick to formatting rules; do not be tempted to break them.
 ### Objects and data structures
 
 ```
-Abstract data through an interface; do not allow other function to know how you store your data.  
+Abstract data through an interface and getters/setters; do not allow other function to know how you store your data.  
 Data structures expose data and have no functions.  
 Objects hide data and expose it through functions.  
 Data structures and objects are polar opposites.  
-Procedural code makes adding functionality easy; OO code makes adding new classes (data) easy.  
-Procedural code makes adding new data structures hard; OO code makes adding new functions hard.  
+Procedural code makes adding functionality easy, but adding new data structures to use them is hard.
+OO code makes adding new classes and reusing functions easy, but makes adding and overriding a new functions in every single previous class hard.  
 Avoid hybrids; they are the worst of both procedural and OO worlds.  
 Follow the Law of Demeter; function f of class C should only call functions of: C, objects that are instance variables of C and objects created by or passed to f.  
-Data transfer objects (DTO, no functions), beans (only getters and setters) and active records (beans with some other functions).  
-Treat all of the above like data structures; do not put business rules into them.  
+Treat all of the following as data structures; do not put business rules into them: Data transfer objects (no functions), Beans (only getters and setters) and Active Records (beans with some other functions)
 ```
 
 ### Error handling
@@ -106,7 +107,7 @@ Only use unchecked exceptions; those that are not checked at runtime.
 Create informative error messages.  
 Define exceptions by how they are caught.  
 Define the normal flow and the rest using SPECIAL CASE PATTERN.  
-Do not return or pass null; throw an exception or return an object.  
+Do not return or pass null; throw an exception or return an object instead.  
 ```
 
 ### Boundaries
