@@ -1,6 +1,19 @@
 ## [Getting Started](https://jenkins.io/doc/pipeline/tour/getting-started/)
 
-See Installing for how to install a local standalone Jenkins.  
+Prerequisites:
+* 512MB RAM
+* 10 GB of hard disk space
+* Java 8 or 11, JDE or JDK
+* [Docker](../../../../Container/Docker)
+
+Download and run Jenkins in `.war` by:
+* Downloading [jenkins.war](https://www.jenkins.io/download/)
+* Open up a terminal in the download directory
+* Run `java -jar jenkins.war --httpPort=Jenkins-Port`
+* Browse to http://localhost:Jenkins-Port
+* Follow the instructions to complete the installation
+
+Remember the username and password!
 
 ## [Creating your first Pipeline](https://jenkins.io/doc/pipeline/tour/hello-world/)
 
