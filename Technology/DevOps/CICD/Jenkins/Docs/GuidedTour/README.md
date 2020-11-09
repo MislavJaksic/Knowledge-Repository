@@ -14,12 +14,20 @@ Download and run Jenkins in `.war` by:
 * Follow the instructions to complete the installation
 
 Remember the username and password!
+```
+Sample Username: mjaksic
+Sample Password: 12345
+```
 
 ## [Creating your first Pipeline](https://jenkins.io/doc/pipeline/tour/hello-world/)
 
-A Jenkins Pipeline is a automated expression of your process for getting software from version control right through to your users and customers.  
+Jenkins `Pipeline` is a description of your process for getting software from version control to your users.  
 
-Pipelines are defined using Jenkinsfiles.  
+Pipelines are defined using `Jenkinsfiles`.  
+
+Steps:
+* Paste an [example](https://www.jenkins.io/doc/pipeline/tour/hello-world/#examples) `Jenkinsfiles`
+* In Jenkins click `New Item` -> enter name -> `Multibranch Pipeline` -> `Add Source` -> `Save`
 
 ## [Running multiple steps](https://jenkins.io/doc/pipeline/tour/running-multiple-steps/)
 
