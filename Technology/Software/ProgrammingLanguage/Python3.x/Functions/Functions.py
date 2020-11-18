@@ -38,7 +38,7 @@ def check_palindrome(string, check_position=0, *many_args):
     string_length = len(string)
     if string_length % 2 == 1:
         return "No"
-    if string_length/2 < check_position:
+    if string_length / 2 < check_position:
         return "Yes"
     if string[check_position] == string[string_length - check_position - 1]:
         return check_palindrome(string, check_position + 1)
@@ -49,17 +49,19 @@ def check_palindrome(string, check_position=0, *many_args):
 def functional_programming():
     numbers = range(1, 3)
 
-    list(map(lambda x: x**2, numbers))  # -> [1, 4, 9]
+    list(map(lambda x: x ** 2, numbers))  # -> [1, 4, 9]
 
     list(filter(lambda x: x < 2, numbers))  # -> [1]
 
     reduce((lambda x, y: x * y), numbers)  # -> 1*2*3=6
 
     # List comprehension
-    [x**2 for x in range(0, 29) if x % 2 == 0 if x % 3 == 0]  # -> [0, 36, 144, 324, 576]
+    [
+        x ** 2 for x in range(0, 29) if x % 2 == 0 if x % 3 == 0
+    ]  # -> [0, 36, 144, 324, 576]
 
 
 # Tell the program where to begin
 # Must be at the bottom of the program
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -4,7 +4,9 @@ from pathlib import Path  # for working with paths
 
 for command_line_arg in sys.argv:
     # sys.argv[0] is always the script name
-    print(command_line_arg, end=' ')  # prints "$: InputOutputAndFiles.py <first_command_line_arg> <second_...>"
+    print(
+        command_line_arg, end=" "
+    )  # prints "$: input_output.py <first_command_line_arg> <second_...>"
 
 print(input("Type something in:"))  # -> what the user inputs
 
@@ -15,7 +17,9 @@ file.close()
 with open("file_name.txt", "rU") as file:
     print(file.read(1))  # -> A
 
-file = open("file_name.txt", "w")  # destroy an existing file and create a new empty file
+file = open(
+    "file_name.txt", "w"
+)  # destroy an existing file and create a new empty file
 file.write("ABCD")
 file.close()
 

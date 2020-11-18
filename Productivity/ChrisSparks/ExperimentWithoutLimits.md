@@ -41,7 +41,7 @@ The lost value of an unselected goal when an alternative goal is selected.
 Intermediate goals of `Leading an Institution`:
 * `Improve health`
 * `Find new ideas`
-* `Find niches I can solve`
+* `Find and solve niches`
 * `Meet capable people`
 
 #### Maximize Expected Value
@@ -70,22 +70,25 @@ Experiment:
 * STEP 4: How will you quickly test this hypothesis? How will you adjust if your test does not have the desired result?
 
 `Improve health`:
-* by exercising at home three times a week following a Nike Workout phone app Getting Started plan for four weeks I'll increase my functional strength
-* review exercises the morning before exercising
+* by exercising at home up to three times a week following a Nike Workout phone app Getting Started plan for four weeks I'll increase my functional strength
+* after each exercise I'll write my thoughts about the workout in a Workout Diary on Notion
 * find replacement exercises if necessary  
 * during morning routine (~6:35)
 
 `Find new ideas`:
-* read a book for two hours or a chapter, whichever comes first
+* read Thinking Fast and Slow for two hours or a chapter, whichever comes first
 * do it four times a week
 * during evening routine (~20:30)
 * until you read it
 * take notes
 
-`Find niches I can solve`:
-* Hacker News? Job postings? Open Source Projects?
-* do `Cracking the Coding Interview` or `HackerRank` or `LeetCode` or `FireCode`
-* commit two hours to doing a personal project
+`Find and solve niches`:
+* pursue projects on a language, project setup and tooling level to create products beloved by users
+* doing Codewars puzzles will improve my algorithmic thinking and syntax
+* contributing to an open source project will expose me to new ideas, people, technology and teach me how to better communicate
+* reread Code Complete and Clean Code to extract more knowledge about development mastery
+* need more ideas: Hacker News, job postings, open source projects are all great sources
+* do only one thing each day to avoid context switching
 
 `Meet capable people`:
 * every Friday at 18:00 I'll call a friend that I haven't heard from the longest

@@ -111,11 +111,11 @@ set([1, 1, 5, 8, 8])  # -> [1, 5, 8]
 
 # Named tuples
 # Create a data object
-Point = namedtuple("Point", ["x", "y"])
+point = namedtuple("Point", ["x", "y"])
 p = Point(11, y=22)
 p[0] + p[1]  # -> 33
 p.x + p.y  # -> 33
-p  # -> Point(x=11, y=22)
+p  # -> point(x=11, y=22)
 
 x, y = p  # tuple unpacking
 

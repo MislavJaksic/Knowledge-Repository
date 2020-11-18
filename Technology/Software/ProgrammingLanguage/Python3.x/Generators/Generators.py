@@ -1,7 +1,7 @@
 def firstn(n):
     i = 0
     sum = 0
-    while(i <= n):
+    while i <= n:
         yield sum
         i = i + 1
         sum = sum + i

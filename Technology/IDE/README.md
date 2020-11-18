@@ -4,4 +4,4 @@ An IDE is a software designed to assist programmers in creating programs and org
 
 ### Common IDE features
 
-Resolves class paths, autocompletes functions, eases refactoring and automates testing.
+Resolves class paths, autocompletes functions, makes refactoring easier and automates testing.
