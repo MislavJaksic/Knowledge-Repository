@@ -8,7 +8,7 @@ $: kubectl apply -f elasticsearch.yaml
 ```
 
 ```
-$: PASSWORD=$(kubectl get secret Elastic-Cluster-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode)
+$: PASSWORD=$(kubectl get secret Elastic-Cluster-es-elastic-user -o=jsonpath='{.data.elastic}' -n K8s-Elastic-Namespace | base64 --decode)
 
 # Note: with TLS
 $: curl -u "elastic:$PASSWORD" -k "https://Kubectl-Server-Ip:32000"

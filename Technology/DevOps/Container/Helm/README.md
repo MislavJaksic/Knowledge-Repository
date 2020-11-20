@@ -44,7 +44,7 @@ $: helm _command [--wait [--timeout _time]] [--no-hooks]
 
 $: helm search repo Repo-Name  # search for chart
 $: helm show values Repo-Name/Chart-Name  # list config fields and values
-$: helm install Release-Name Repo-Name/Chart-Name [-f Config-File.yaml] [--debug --dry-run]  # install chart
+$: helm install Release-Name Repo-Name/Chart-Name [-f Config-File.yaml] [--version Chart-Version] [--debug --dry-run]  # install chart
 
 $: helm status Release-Name  # list release status
 $: helm get values Release-Name  # list set config values

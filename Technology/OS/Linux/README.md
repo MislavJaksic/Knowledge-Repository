@@ -62,6 +62,7 @@ $: sh Script-Name  # run script
 
 $: sudo Command-Name  # run as admin/superuser
 $: chmod Access-Modifiers File-Name  # modify access restrictions
+$: sudo su - # login as root/superuser
 
 
 $: touch File-Name  # create a file
@@ -85,6 +86,8 @@ $: export Value-Name=_value  # set ENV VAR value
 $: ps  # list Process IDs (PID)
 $: kill PID  # SIGTERM/soft shutdown
 $: kill -9 PID  # SIGKILL/hard shutdown
+
+$: find / -name 'Search-Name'
 
 $: lsb_release -a  # OS info
 $: uname -m  # list architecture
