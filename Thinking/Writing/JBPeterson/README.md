@@ -1,8 +1,6 @@
 # Writing
 
-[Writing an Essay, by Jordan B. Peterson](https://docs.google.com/viewer?url=http://jordanbpeterson.com/wp-content/uploads/2018/02/Essay_Writing_Guide.docx)
-
-## PART ONE: Introduction
+[Essay Writing Guide, by Jordan B. Peterson](https://docs.google.com/viewer?url=http://jordanbpeterson.com/wp-content/uploads/2018/02/Essay_Writing_Guide.docx)
 
 * Choose a topic to write about.
     * A very hard step. You should note if something peeks your interest. You will know what it is when you are gripped by the topic. The topic can be posed as a question that you think requires an answer.
@@ -18,6 +16,18 @@
 
 * Editing.
     * When you are finished writing, take a break. Return reinvigorated and start improving what you wrote.
+
+## PART ONE: Introduction
+
+* An essay is a short piece written to explore a topic or answer a question.
+* Write an essay to formulate and organize an informed, coherent and sophisticated set of ideas about an important topic.
+* There is little difference between writing and thinking.
+* You can write more then you can remember.
+* Written words can be organized more easily.
+* You are more powerful if you can think and communicate clearly.
+
+* A speedy hard drive, two monitors, a good keyboard, a mouse and a decent chair are highly recommended
+* Get up early and eat; plan to write between 90 and 180 minutes; if your mind rebels use willpower and wait it out; start writing
 
 ## PART TWO: Levels of resolution
 
