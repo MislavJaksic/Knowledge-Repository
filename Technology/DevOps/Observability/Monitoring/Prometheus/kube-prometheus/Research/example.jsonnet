@@ -29,20 +29,20 @@ local kp =
     },
   },
 
-  prometheus+:: {
-    prometheus+: {
-      spec+: {
-        retention: '30d',
-        storage: {
-          volumeClaimTemplate:
-            pvc.new() +
-            pvc.mixin.spec.withAccessModes('ReadWriteOnce') +
-            pvc.mixin.spec.resources.withRequests({ storage: '50Gi' }) +
-            pvc.mixin.spec.withStorageClassName('Storage-Class-Name'),  // change
-        },
-      },
-    },
-  },
+//  prometheus+:: {
+//    prometheus+: {
+//      spec+: {
+//        retention: '30d',
+//        storage: {
+//          volumeClaimTemplate:
+//            pvc.new() +
+//            pvc.mixin.spec.withAccessModes('ReadWriteOnce') +
+//            pvc.mixin.spec.resources.withRequests({ storage: '50Gi' }) +
+//            pvc.mixin.spec.withStorageClassName('Storage-Class-Name'),  // change
+//        },
+//      },
+//    },
+//  },
 
 //  grafanaDashboards+:: {
 //    'extra-dashboard.json': (import 'extra-dashboard.json'),

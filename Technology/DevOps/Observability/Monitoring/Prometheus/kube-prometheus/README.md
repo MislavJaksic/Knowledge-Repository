@@ -30,6 +30,12 @@ $: kubectl apply -f manifests/
 
 $: kubectl delete --ignore-not-found=true -f manifests/ -f manifests/setup
 ```
+OR
+```
+$: kubectl create namespace monitoring
+
+$: helm install monitoring-stack monitoring-stack -n monitoring
+```
 
 ### Configuration
 
