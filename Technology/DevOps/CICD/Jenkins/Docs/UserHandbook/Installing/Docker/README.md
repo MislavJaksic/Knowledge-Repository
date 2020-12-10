@@ -1,21 +1,8 @@
-## [Installing Jenkins](https://jenkins.io/doc/book/installing/)
+## [Docker](https://www.jenkins.io/doc/book/installing/docker/)
 
-### Prerequisites
+Install [Docker](../../../../../Container/Docker).
 
-#### Hardware
-
-Minimum hardware requirements:
-* 256 MB of RAM
-* 10 GB of drive space
-
-Recommended hardware configuration for a small team:
-* 1 GB+ of RAM
-* 50 GB+ of drive space
-
-#### Software
-
-Java 8.  
-Install Docker.  
+TODO
 
 ### Jenkins in Docker
 
@@ -45,10 +32,6 @@ TODO
 $: docker exec -it jenkins-blueocean bash
 $: docker logs jenkins-blueocean
 ```
-
-### Jenkins in WAR file
-
-TODO
 
 ### Post-installation setup wizard
 

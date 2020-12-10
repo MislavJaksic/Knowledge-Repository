@@ -10,3 +10,7 @@ You will learn how to:
 * use environmental variables
 * record and store artifacts
 * clean up, notify and deploy
+
+### Install
+
+[Installation Guide](Docs/Tutorial/Installing)
