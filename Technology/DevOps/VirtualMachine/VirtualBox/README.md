@@ -40,6 +40,8 @@ Open VM -> -> "Devices" -> "Shared Folders" -> "Shared Folders Settings" -> "Add
 # Restart is required
 ```
 
+On Ubuntu run `sudo usermod -a -G vboxsf User-Name` to remove the `You do not have the permissions necessary to view the contents of ‘shared_folder’` error.  
+
 ### [Networking](https://www.virtualbox.org/manual/ch06.html)
 
 By default, one virtual network card is enabled and it is set to NAT (Network Address Translation).  
