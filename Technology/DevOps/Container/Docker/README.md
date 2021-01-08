@@ -78,3 +78,27 @@ $: docker network inspect Network-Name --format '{{index .Peers 0 "IP"}}'  # lis
 #### TLS
 
 [Instructions](Docs/ProductManuals/OpenSourceProjects/DockerRegistry/Recepies/TestInsecureRegistry)  
+
+### DockerHub Docs Template
+
+```
+# Quick reference
+
+* **Maintained by:** []()
+* **Where to get help:** []()
+
+# Supported tags and respective `Dockerfile` links
+
+# Quick reference (cont.)
+
+* **Where to file issues:** []()
+* **Supported architectures:** []()
+* **Published image artifact details:** []()
+* **Image updates:** []()
+* **Source of this description:** []()
+
+# What is Image-Name?
+
+# License
+Describe it!
+```
