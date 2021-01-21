@@ -66,10 +66,11 @@ $: kubectl run throwaway-shell --rm -i --tty --image ubuntu -- bash  # ->
 
 ```
 $: docker login Private-Registry-Ip-Port
+# Note: input username and password
 
 $: kubectl create secret generic Private-Repo-Secret --from-file=.dockerconfigjson=/path/to/.docker/config.json --type=kubernetes.io/dockerconfigjson
 
-# Note: Pods can only reference image pull secrets in their own namespace!
+# Note: Pods can only reference image pull Secrets in their own Namespace!
 # Note: setup Docker TLS certificates
 ```
 
