@@ -1,6 +1,6 @@
 ## [Prometheus](https://prometheus.io/)
 
-Prometheus is a monitoring and alerting toolkit.  
+Prometheus is a monitoring, alerting toolkit and time series database.  
 Prometheus:
 * scrapes targets for metrics
 * stores metrics in a time series database

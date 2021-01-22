@@ -79,6 +79,8 @@ $: nano File-Name  # text editor
 $: vim File-Name  # text editor
 
 
+$: env  # print all ENV VAR
+$: printenv  # print all ENV VAR
 $: echo Value-Literal  # print value
 $: echo $Value-Name  # list ENV VAR value
 $: export Value-Name=_value  # set ENV VAR value
@@ -145,6 +147,8 @@ $: sftp -oPort=Post-Number User-Name@Host-Name  # manipulate files on a remotely
 ### Setting PATH and DNS
 
 Place an executable in `/usr/local/bin` and you'll be able to run it.  
+
+Set `ENV VAR` in `sudo nano ~/.bashrc`.
 
 Set `PATH` in:
 * `/etc/environment`

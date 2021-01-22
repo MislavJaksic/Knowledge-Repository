@@ -1,4 +1,4 @@
-## [Elasticsearch Exporter](https://github.com/justwatchcom/elasticsearch_exporter)
+## [ElasticSearch Exporter](https://github.com/justwatchcom/elasticsearch_exporter)
 
 Export ElasticSearch metrics to `Prometheus`.  
 
