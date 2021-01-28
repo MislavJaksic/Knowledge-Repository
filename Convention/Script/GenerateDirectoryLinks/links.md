@@ -1,4 +1,3 @@
-* [Conventions](Conventions)
 * Management
     * [AgileManifesto](Management/AgileManifesto)
     * [Kanban](Management/Kanban)
@@ -25,6 +24,8 @@
             * [Brigade](Technology/DevOps/CICD/Brigade)
             * [Concourse](Technology/DevOps/CICD/Concourse)
             * [Jenkins](Technology/DevOps/CICD/Jenkins)
+        * CodeExploration
+            * [Sourcetrail](Technology/DevOps/CodeExploration/Sourcetrail)
         * Container
             * [Ambassador](Technology/DevOps/Container/Ambassador)
             * [Docker](Technology/DevOps/Container/Docker)
@@ -32,8 +33,11 @@
             * [Helm](Technology/DevOps/Container/Helm)
             * [Kubernetes](Technology/DevOps/Container/Kubernetes)
             * [Linkerd](Technology/DevOps/Container/Linkerd)
+            * [OKD](Technology/DevOps/Container/OKD)
             * [OperatorFramework](Technology/DevOps/Container/OperatorFramework)
             * [Portainer](Technology/DevOps/Container/Portainer)
+        * Dataflow
+            * [NiFi](Technology/DevOps/Dataflow/NiFi)
         * Observability
             * Monitoring
                 * [Grafana](Technology/DevOps/Observability/Monitoring/Grafana)
@@ -71,6 +75,7 @@
         * [CodeBlocks](Technology/IDE/CodeBlocks)
         * [Eclipse](Technology/IDE/Eclipse)
         * [IntelliJIDEA](Technology/IDE/IntelliJIDEA)
+        * [PyCharm](Technology/IDE/PyCharm)
     * OS
         * [Linux](Technology/OS/Linux)
             * [Cygwin](Technology/OS/Linux/Cygwin)
@@ -99,11 +104,13 @@
             * [Haskell](Technology/Software/ProgrammingLanguage/Haskell)
             * [Java](Technology/Software/ProgrammingLanguage/Java)
                 * [Spring](https://github.com/MislavJaksic/Spring-Guides-Tutorials)
+                        * [Wiki](Technology/Software/ProgrammingLanguage/Java/Testing/Mockito/Wiki)
             * [JavaScript](Technology/Software/ProgrammingLanguage/JavaScript)
             * [Lisp](Technology/Software/ProgrammingLanguage/Lisp)
             * [Python3.x](Technology/Software/ProgrammingLanguage/Python3.x)
             * [R](Technology/Software/ProgrammingLanguage/R)
             * [Ruby](Technology/Software/ProgrammingLanguage/Ruby)
+        * [Wiki](Technology/Software/Wiki)
     * Streaming
         * [ApacheKafka](https://github.com/MislavJaksic/Kafka-In-Theory-And-Practice)
         * [ApacheSpark](Technology/Streaming/ApacheSpark)

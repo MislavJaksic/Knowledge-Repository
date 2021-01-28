@@ -1,15 +1,7 @@
 import sys
 from functools import reduce
 
-
-input_file = "input.txt"
-left_right_delimiter = "$$$\n"
-output_file = "output.txt"
-additional_spacing = 4
-
-
-def main(args):
-    align_vertically()
+import settings
 
 
 def align_vertically():
@@ -30,10 +22,10 @@ def align_vertically():
 
 
 def read_input():
-    with open(input_file, "r") as file:
+    with open(settings.input_file, "r") as file:
         lines_left = []
         for line in file:
-            if line == left_right_delimiter:
+            if line == settings.input_delimiter:
                 break
             lines_left.append(line)
 
@@ -52,7 +44,7 @@ def equalize_length(lines_left_right):
     lines_left, lines_right = lines_left_right
 
     lines_diff_len = len(lines_right) - len(lines_left)
-    if (lines_diff_len > 0):
+    if lines_diff_len > 0:
         for n in range(lines_diff_len):
             lines_left.append("")
     else:
@@ -65,7 +57,7 @@ def equalize_length(lines_left_right):
 def max_length(lines):
     lines_len = list(map(lambda x: len(x), lines))
     max_len = reduce(lambda x, y: max(x, y), lines_len)
-    return max_len + additional_spacing * 2
+    return max_len + settings.extra_whitespace * 2
 
 
 def pad_list(lines, padding):
@@ -78,10 +70,14 @@ def merge_lists(lines):
 
 
 def write_output(lines):
-    with open(output_file, "w") as file:
+    with open(settings.output_file, "w") as file:
         for line in lines:
             file.write(line)
             file.write("\n")
+
+
+def main(args):
+    align_vertically()
 
 
 def run():

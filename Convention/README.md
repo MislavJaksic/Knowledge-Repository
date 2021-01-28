@@ -1,10 +1,15 @@
 ## Convention
 
-### Code conventions
+Conventions describe arbitrary rules used to harmonize the knowledge format.  
 
-Look up:
-* Clean Code
-* Code Complete
+###
+
+Folders names are singular.
+
+### Language neutral code conventions
+
+* [Clean Code](../Technology\Software\CodeQuality\CleanCode)
+* [Code Complete](../Technology\Software\CodeQuality\CodeComplete)
 
 ### Scripts
 
@@ -18,11 +23,12 @@ Use scripts to:
 
 ```
 DO
-CamelCase folder names.
+Make names CamelCase, singular.
 Explain extraction: Extracted to an external [repository]().
 
 DON'T
 Have special characters.
+Twenty character names.
 ```
 
 #### Hyperlink conventions
@@ -44,15 +50,11 @@ DO
 Top title size: ##
 Command prefix: $:
 Variable names are: Separated-By-Minus
-                    OR
-                    _underscored
-Special reference: `_ref`
-Break up contant: ---
 Line comment:  #
 Output comment:  # ->
 Long output comment:  # ->
-  # -a _descriptionA
-  # -b _descriptionB
+  # -a Description-A
+  # -b Description-B
 Follow the knowledge source structure.
 Horizontally align text if it fits the screen.
 
