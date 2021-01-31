@@ -8,8 +8,8 @@ Close window.
 Brush teeth.  
 Dress for workout.  
 Workout.  
-Turn on computer.  
 Eat breakfast.  
+Turn on computer.  
 
 ## Evening routine (20:30 - 23:00)
 

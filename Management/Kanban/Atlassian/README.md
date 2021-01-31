@@ -29,7 +29,36 @@ The benefits of Kanban are:
 
 ### [Kanban boards](https://www.atlassian.com/agile/kanban/boards)
 
-TODO
+Components:
+* Visual Signals: each card could encapsulate one user story or work item
+* Columns: cards flow through the workflow until completion: `To Do`, `In Progress`, `Complete` or much more complex
+* Work In Progress (WIP) Limits: maximum number of cards that can be in one column at any given time. Exposes bottlenecks and work over commitment.  
+* Commitment point: where the workflow begins
+* Delivery point: where the workflow ends
+
+Lead Time is the time it takes a card to go from the Commitment to the Delivery point.  
+
+#### Kanban vs. Scrum board
+
+| Differences     | Scrum                          | Kanban                       |
+|-----------------|--------------------------------|------------------------------|
+| Work            | Sprints start and end          | Continous                    |
+| Roles           | Clearly defined                | Self-organized               |
+| Lifecycle       | Cleared and recycled           | Throughout the lifecycle     |
+| Task management | Set, strict and with deadlines | Flexible, can be reorganized |
+
+#### Getting started with kanban boards
+
+You'll need to:
+* understand the processes
+* pursue continuous improvement through evolution
+* encourage leadership at every level
+
+Figure out:
+* what columns do you need?
+* how do you submit a new card?
+* how will you make all cards relatively uniform in effort?
+* what is the delivery and commitment point?
 
 ### [Work in progress limits](https://www.atlassian.com/agile/kanban/wip-limits)
 

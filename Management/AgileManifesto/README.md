@@ -1,6 +1,6 @@
 ## [Agile Manifesto](https://agilemanifesto.org/)
 
-[Elucidation](http://www.ambysoft.com/essays/agileManifesto.html)
+[Agile Manifesto: Explained](http://www.ambysoft.com/essays/agileManifesto.html)
 
 ```
 Individuals and interactions > processes and tools
@@ -17,8 +17,7 @@ Principles:
 * deliver software early and continuously
 * embrace change
 * deliver software in short intervals
-* business people and developers must work
-together throughout the project
+* business people and developers must work together throughout the project
 * build projects and support environments around motivated and trusted individuals
 * conveying information face-to-face
 * working software is the primary measure of progress

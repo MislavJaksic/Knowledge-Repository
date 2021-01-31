@@ -1,6 +1,6 @@
 ## Knowledge Repository
 
-The Knowledge Repository is a collection of notes, references, book summaries and examples. Each piece of knowledge has a title and a source.  
+The Knowledge Repository is a [memex](https://en.wikipedia.org/wiki/Memex), a personal knowledge database, a collection of notes, references, book summaries and examples.
 
 ### The Problem
 
@@ -16,7 +16,6 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
 
 ### Contents
 
-* [Conventions](Conventions)
 * Management
     * [AgileManifesto](Management/AgileManifesto)
     * [Kanban](Management/Kanban)
@@ -43,6 +42,8 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
             * [Brigade](Technology/DevOps/CICD/Brigade)
             * [Concourse](Technology/DevOps/CICD/Concourse)
             * [Jenkins](Technology/DevOps/CICD/Jenkins)
+        * CodeExploration
+            * [Sourcetrail](Technology/DevOps/CodeExploration/Sourcetrail)
         * Container
             * [Ambassador](Technology/DevOps/Container/Ambassador)
             * [Docker](Technology/DevOps/Container/Docker)
@@ -50,8 +51,11 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
             * [Helm](Technology/DevOps/Container/Helm)
             * [Kubernetes](Technology/DevOps/Container/Kubernetes)
             * [Linkerd](Technology/DevOps/Container/Linkerd)
+            * [OKD](Technology/DevOps/Container/OKD)
             * [OperatorFramework](Technology/DevOps/Container/OperatorFramework)
             * [Portainer](Technology/DevOps/Container/Portainer)
+        * Dataflow
+            * [NiFi](Technology/DevOps/Dataflow/NiFi)
         * Observability
             * Monitoring
                 * [Grafana](Technology/DevOps/Observability/Monitoring/Grafana)
@@ -89,6 +93,7 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
         * [CodeBlocks](Technology/IDE/CodeBlocks)
         * [Eclipse](Technology/IDE/Eclipse)
         * [IntelliJIDEA](Technology/IDE/IntelliJIDEA)
+        * [PyCharm](Technology/IDE/PyCharm)
     * OS
         * [Linux](Technology/OS/Linux)
             * [Cygwin](Technology/OS/Linux/Cygwin)
@@ -117,11 +122,13 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
             * [Haskell](Technology/Software/ProgrammingLanguage/Haskell)
             * [Java](Technology/Software/ProgrammingLanguage/Java)
                 * [Spring](https://github.com/MislavJaksic/Spring-Guides-Tutorials)
+                        * [Wiki](Technology/Software/ProgrammingLanguage/Java/Testing/Mockito/Wiki)
             * [JavaScript](Technology/Software/ProgrammingLanguage/JavaScript)
             * [Lisp](Technology/Software/ProgrammingLanguage/Lisp)
             * [Python3.x](Technology/Software/ProgrammingLanguage/Python3.x)
             * [R](Technology/Software/ProgrammingLanguage/R)
             * [Ruby](Technology/Software/ProgrammingLanguage/Ruby)
+        * [Wiki](Technology/Software/Wiki)
     * Streaming
         * [ApacheKafka](https://github.com/MislavJaksic/Kafka-In-Theory-And-Practice)
         * [ApacheSpark](Technology/Streaming/ApacheSpark)
