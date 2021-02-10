@@ -18,7 +18,7 @@ Goal setting prompts:
 * What would you attempt if you knew could not fail?
 * What would you do if money was unnecessary?
 * What do you want you obituary to say?
-* If you were the last person of Earth, what would you do?
+* If you were the last person on Earth, what would you do?
 * If you were an outsider what advice would you give yourself?
 
 Whittle down the list of wants with:

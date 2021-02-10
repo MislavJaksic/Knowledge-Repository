@@ -69,7 +69,7 @@ WHERE "__time" BETWEEN TIMESTAMP '2015-09-12 00:00:00' AND TIMESTAMP '2015-09-13
 GROUP BY page ORDER BY Edits DESC
 LIMIT 10
 ```
-Query via the console, via dsql or over HTTP.  
+Query via the console, via `dsql` or over HTTP.  
 
 ### [Roll-up](https://druid.apache.org/docs/latest/tutorials/tutorial-rollup.html)
 
@@ -77,7 +77,7 @@ A way to summarize data.
 
 ### [Updating existing data](https://druid.apache.org/docs/latest/tutorials/tutorial-update-data.html)
 
-Using dsql.  
+Using `dsql`.  
 
 ### [Writing an ingestion spec](https://druid.apache.org/docs/latest/tutorials/tutorial-ingestion-spec.html)
 
