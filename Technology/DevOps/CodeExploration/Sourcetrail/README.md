@@ -24,4 +24,4 @@ $: sourcetrail
 
 ### Tutorial
 
-[An Excellent Tutoria!l](Tutorial)  
+[An Excellent Tutorial!](Tutorial)  

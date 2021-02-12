@@ -49,7 +49,10 @@ $: kubectl run throwaway-shell --rm -i --tty --image ubuntu -- bash  # ->
 
 `Headless Service`s are used to interface with other service discovery mechanisms, without being tied to Kubernetes.  
 
-[Service details](Docs/Concepts/ServicesLoadBalancingNetworking/Service)
+Non-`Headless Service` DNS syntax is `Service-Name.Namespace:Service-Port`. For example, `flask-app.frontend:18080`.  
+
+[Service details](Docs/Concepts/ServicesLoadBalancingNetworking/Service)  
+[DNS for Services and Pods](Docs/Concepts/ServicesLoadBalancingNetworking/DNSForServicesPods)
 
 ### Ingress
 
