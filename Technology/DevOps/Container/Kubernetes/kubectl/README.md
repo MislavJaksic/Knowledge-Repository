@@ -21,7 +21,7 @@ $: sudo scp -i Private-Key.key _username@_ip:/path/to/kubectl/config .
 # Note: it's as if they were merged
   # KUBECONFIG=~/.kube/config-0:~/.kube/config-1
 
-$: kubectl config view [--minify]  # list `config` file
+$: kubectl config view [--minify] [--raw]  # list `config` file
 $: kubectl version  # list client, server version
 $: kubectl cluster-info [--dump]  # list client, cluster info
 

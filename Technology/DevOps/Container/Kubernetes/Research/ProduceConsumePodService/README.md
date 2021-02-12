@@ -77,6 +77,8 @@ data:
   ADDRESS: "http://filter-service:15002/filter"
 ```
 
+You can also use the `Service-Name.Namespace:Service-Port` syntax.  
+
 ### Services
 
 ```
