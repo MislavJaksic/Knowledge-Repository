@@ -1,0 +1,20 @@
+apiVersion: "acid.zalan.do/v1"
+kind: postgresql
+metadata:
+  name: Team-Name-Postgresql-Cluster-Name  # change
+  namespace: K8s-Postgres-Namespace  # change
+spec:
+  teamId: "Team-Name"  # change
+  volume:
+    size: 50Gi
+    # storageClass: default  # specify StorageClass
+  numberOfInstances: 1
+  users:
+    zalando:  # database owner
+    - superuser
+    - createdb
+    foo_user: []  # role for application foo
+  databases:
+    foo: zalando  # dbname: owner
+  postgresql:
+    version: "12"

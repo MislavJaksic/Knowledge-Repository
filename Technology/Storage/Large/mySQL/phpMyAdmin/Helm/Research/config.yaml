@@ -1,0 +1,91 @@
+image:
+  registry: docker.io
+  repository: bitnami/phpmyadmin
+  tag: 5.0.2-debian-10-r75
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort  # change
+  port: 80
+  # cannot set static nodePort port!
+
+db:
+  port: 3306  # same for both mariadb and mysql
+  host: Service-Name  # change; `Vitess` `Service-Name`: `vtgate-*`
+  bundleTestDB: false
+  enableSsl: false
+  ssl:
+    clientKey: |-
+    clientCertificate: |-
+    caCertificate: |-
+    verify: true
+
+ingress:
+  enabled: false
+  certManager: false
+  rewriteTarget: true
+  hosts:
+    - name: phpmyadmin.local
+      path: /
+      tls: false
+      tlsSecret: phpmyadmin.local-tls
+
+## Ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+podSecurityContext:
+  fsGroup: 1001
+
+## Ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+containerSecurityContext:
+  runAsUser: 1001
+
+## Ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes
+livenessProbe:
+  initialDelaySeconds: 30
+  timeoutSeconds: 30
+  periodSeconds: 10
+  successThreshold: 1
+  failureThreshold: 6
+  httpGet:
+    path: /
+    port: http
+readinessProbe:
+  initialDelaySeconds: 30
+  timeoutSeconds: 30
+  periodSeconds: 10
+  successThreshold: 1
+  failureThreshold: 6
+  httpGet:
+    path: /
+    port: http
+
+## Ref: http://kubernetes.io/docs/user-guide/compute-resources
+resources:
+  limits: {}
+  requests: {}
+
+## Ref: https://kubernetes.io/docs/user-guide/node-selection/
+nodeSelector: {}
+
+## Ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+tolerations: []
+
+## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+affinity: {}
+
+podLabels: {}
+
+podAnnotations: {}
+
+metrics:
+  enabled: false
+  image:
+    registry: docker.io
+    repository: bitnami/apache-exporter
+    tag: 0.8.0-debian-10-r63
+    pullPolicy: IfNotPresent
+    ## Ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+  podAnnotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "9117"
+  ## Ref: http://kubernetes.io/docs/user-guide/compute-resources/
+  resources: {}
