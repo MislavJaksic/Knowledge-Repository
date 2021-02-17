@@ -119,6 +119,10 @@ $: ... | grep "term1\|term2"  # OR
 $: ... | grep -E "term1|term2"  # OR
 ```
 
+```
+&  # detach process
+```
+
 ### Network commands
 
 ```
@@ -133,7 +137,11 @@ $: ip link  #
 $: ip route  #
 $: ss  #
 $: ip -s  #
+```
 
+### Remote files
+
+```
 $: scp [-i Private-Key][-P Port] /source/path/File-Name User-Name@_ip:/destination/path
   # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   # @         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
