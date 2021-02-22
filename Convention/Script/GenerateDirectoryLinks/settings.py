@@ -17,15 +17,21 @@ external_repo = {
     "Practise": "https://github.com/MislavJaksic/Practise",
     "Maven": "https://github.com/MislavJaksic/Maven-Tutorial",
     "Selenium": "https://github.com/MislavJaksic/Selenium-Tutorial",
+    "Interviewing": "https://github.com/MislavJaksic/Client-Interviews",
+    "CSS": "https://github.com/MislavJaksic/MDN-Tutorial",
+    "HTML": "https://github.com/MislavJaksic/MDN-Tutorial",
+    "Scrapy": "https://github.com/MislavJaksic/Scrapy-Project",
 }
 semiterminal_dir = ["Argo", "Linux", "Java"]
 terminal_dir = [
     "Handlebars",
     "GatsbyJS",
     "Jekyll",
+    "Scrapy",
     "Selenium",
     "NodeJS",
     "HackTheBox",
+    "HTML",
     "Google",
     "RubyOnRails",
     "Flask",
@@ -33,6 +39,7 @@ terminal_dir = [
     "DomeneHR",
     "DNSChecker",
     "Ghost",
+    "CSS",
     "Shiori",
     "RESTFulWebServices",
     "GraphQL",
@@ -132,6 +139,7 @@ terminal_dir = [
     "ApacheDruid",
     "LeadershipTheoryAndPractice",
     "Kanban",
+    "Interviewing",
     "AgileManifesto",
     "Conventions",
 ]
