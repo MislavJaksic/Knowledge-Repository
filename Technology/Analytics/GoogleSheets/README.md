@@ -16,6 +16,7 @@ SUMIFS - sum, but also used to specify multiple column search conditions
 SORTN - get first N rows sorted by condition applied to a column
 
 JOIN - concatenate
+A1&B2 - like join but it can be used with ARRAYFORMULA
 SUBSTITUTE - replace
 
 ARRAYFORMULA - populate the formula through many cells; hotkey is CTRL + SHIFT + ENTER
