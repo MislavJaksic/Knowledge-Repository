@@ -15,7 +15,9 @@ def main():
     print(check_palindrome(string="nonnon"))  # -> "Yes"
 
     store_function = check_palindrome  # functions are values
-    print(store_function("abba", 1, "Other", "arguments"))  # -> "Yes"
+    print(
+        store_function("abba", 1, "Other", "arguments", example="Hello World")
+    )  # -> "Yes"
 
     functional_programming()
 
@@ -28,13 +30,15 @@ def change_array(inputArray):
     inputArray.append(3)
 
 
-def check_palindrome(string, check_position=0, *many_args):
+def check_palindrome(string, check_position=0, *extra_unnamed_args, **dict_args):
     """Default arguments are evaluated only once -> check_position.
-       If it was a list, it would accumulate data in subsequent calls.
-       Variable number of arguments are stored in *many_args.
+    If it was a list, it would accumulate data in subsequent calls.
+    Variable number of arguments are stored in *extra_unnamed_args and **extra_named_args.
     """
-    if many_args is not ():
-        print(many_args)  # -> ("Other", "arguments")
+    if extra_unnamed_args is not ():
+        print(extra_unnamed_args)  # -> ("Other", "arguments")
+    if extra_named_args is not {}:
+        print(extra_named_args)  # -> {"example": "Hello World"}
     string_length = len(string)
     if string_length % 2 == 1:
         return "No"

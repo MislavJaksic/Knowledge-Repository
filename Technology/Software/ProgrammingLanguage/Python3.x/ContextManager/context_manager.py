@@ -8,6 +8,7 @@ class Bee(object):
 
 class ManagerClass(object):
     def __init__(self, bee_role):
+        print("Set")
         self.bee_role = bee_role
 
     def __enter__(self):
@@ -21,10 +22,10 @@ class ManagerClass(object):
 
 with ManagerClass("Queen") as queen_bee:
     print("Queen created")
-    print(queen_bee.get_role())  # -> "Enter", "Queen created", "Queen", "Exit"
+    print(queen_bee.get_role())  # -> "Set", "Enter", "Queen created", "Queen", "Exit"
 
 with ManagerClass("Worker") as workerBee:
     print("Worker created")
-    print(workerBee.get_role())  # -> "Enter", "Worker created", "Worker", "Exit"
+    print(workerBee.get_role())  # -> "Set", "Enter", "Worker created", "Worker", "Exit"
     raise Exception("Exception raised after exitting")  # raises an exception
     print("Will never be printed")
