@@ -9,7 +9,7 @@ codecs: for encoding and decoding data
 collections: a variety of useful data structures (named tuples)
 copy: for copying data
 csv: for reading and writing CSV files
-datetime:classes for handling dates and times
+datetime: classes for handling dates and times
 fnmatch: for matching Unix-style filename patterns
 glob: for matching Unix-style path patterns
 io: for handling I/O streams
