@@ -1,14 +1,14 @@
 ## [Atom packages](https://atom.io/packages)
 
-Note: after installing a package you may need to restart Atom.  
-
-### autoclose-html-plus
-
-Automatically closes HTML tags.  
+Note: after installing a package you may need to restart Atom.
 
 ### atom-beautify
 
 Formats code.  
+
+### autoclose-html-plus
+
+Automatically closes HTML tags.  
 
 ### emmet
 
@@ -26,12 +26,16 @@ Perform git commands.
 
 Highlights the same words in a file.  
 
-### linter
+### ide-haskell
+
+To Do
+
+### Programming language linters
 
 ```
 Base   -> linter
 Java   -> linter-checkstyle
-Python -> python-black      # need `$: pip install black`
+Python -> python-black      # needs `$: pip install black`
 ```
 
 ### minimap
