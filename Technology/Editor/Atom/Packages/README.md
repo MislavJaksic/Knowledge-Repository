@@ -26,12 +26,16 @@ Perform git commands.
 
 Highlights the same words in a file.  
 
-### linter
+### ide-haskell
+
+To Do
+
+### Programming language linters
 
 ```
 Base   -> linter
 Java   -> linter-checkstyle
-Python -> python-black      # need `$: pip install black`
+Python -> python-black      # needs `$: pip install black`
 ```
 
 ### minimap
