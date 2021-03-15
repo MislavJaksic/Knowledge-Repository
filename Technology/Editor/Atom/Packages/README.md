@@ -2,13 +2,13 @@
 
 Note: after installing a package you may need to restart Atom.  
 
-### autoclose-html-plus
-
-Automatically closes HTML tags.  
-
 ### atom-beautify
 
 Formats code.  
+
+### autoclose-html-plus
+
+Automatically closes HTML tags.  
 
 ### emmet
 
