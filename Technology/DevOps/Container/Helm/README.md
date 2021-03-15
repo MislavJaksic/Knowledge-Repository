@@ -2,11 +2,11 @@
 
 A "package manager" for Kubernetes.  
 
-### [Helm Hub](https://hub.helm.sh/)
+### [Artifact HUB](../ArtifactHub)
 
-Public Helm `chart` repository.  
+Take a look at already built `Chart`s.  
 
-[Sample Charts](Charts)
+[Old Sample Charts](Charts)
 
 ### Install
 
