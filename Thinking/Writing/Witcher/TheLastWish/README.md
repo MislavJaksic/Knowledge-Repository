@@ -51,7 +51,7 @@ Geralt finds and inspects a dead armorer, a woman, a blue rose and a ring he fou
 #### II
 
 Nivellen, a bear-like monster, plays host to Geralt, tells him a story of how he became a monster while walking through an enchanted house. He'd rather remain a monster then be transformed back into a human.
-TODO
+
 #### III
 
 Geralt rests in the woods, against Nivellen's advice.
@@ -68,19 +68,19 @@ Geralt kills a Bruxa, a vampire. Nivellen turns back into a human after the Brux
 
 #### The Voice of Reason
 
-Knights of the Order of the White Rose try to chase away Geralt from the Temple of Melitele because he is the "Butcher of Blavikin", but Nenneke chases away the knights and allows Geralt to stay.
+Knights of the Order of the White Rose try to chase away Geralt from the Temple of Melitele because he is the "Butcher of Blavikin". Nenneke chases away the knights and convinces Geralt to stay.
 
 #### I
 
-Geralt brings a dead kikimora to alderman Caldemeyn in Blavikin who suggests taking it to Master Irion, a magus, for a reward.
+Geralt brings a dead kikimora to alderman Caldemeyn in Blavikin who suggests taking it to Master Irion, a mage, for a reward.
 
 #### II
 
-Master Irion turns out to be a mage called Stregobor who is hiding from Renfri, Shrike, and her gang and urges Geralt to kill her. Geralt refuses.
+Master Irion turns out to be a mage called Stregobor who is hiding from Renfri, Shrike, and her gang of thugs. Stregobor urges Geralt to kill her. Geralt refuses.
 
 #### III
 
-Geralt talks to Renfri and her band who tries to convince Geralt to kill Stregobor for her.
+Geralt talks to Renfri and her gang who tries to convince Geralt to kill Stregobor for her. Geralt refuses.
 
 #### IV
 
@@ -88,7 +88,7 @@ Renfri sneaks into Geralt's room, mentions the Tridam ultimatum and tries to tal
 
 #### V
 
-Geralt realizes what the Tridam ultimatum means: Renfri and her gang will kill Blavikin villages one by one until Stegobor comes down from his tower. Geralt rushes to stop her despite Caldemeyn telling him not to kill anyone.
+Geralt realizes what the Tridam ultimatum means: Renfri and her gang will kill Blavikin villages one by one until Stegobor comes down from his tower. Geralt rushes to stop her despite Caldemeyn telling him not to kill anyone: they haven't done anything bad yet.  
 
 #### VI
 
@@ -102,11 +102,11 @@ Geralt talks to mute Iota about his witcher upbringing.
 
 #### I
 
-Castellan Haxo bathes, dresses and disguises Geralt for Pavetta's engagement banquet at Queen Calanthe's castle.
+Castellan Haxo bathes, dresses and disguises Geralt for Pavetta's engagement banquet at Queen Calanthe's castle. Pavetta is Calanthe's daughter.  
 
 #### II
 
-Duny, Urcheon of Erlenwald, claims Pavetta as payment for the Law of Surprise, a reward given to him for saving King Roegner of Ebbing from death. Calenthe refuses until Pavetta explodes with magic and is contained by druid Mousesack and Geralt.
+Duny, Urcheon of Erlenwald, claims Pavetta as payment for the Law of Surprise, a reward given to him for saving King Roegner of Ebbing's life. Calenthe refuses and makes Duny reveal himself as a hedgehog. Pavetta explodes with magic and is contained by druid Mousesack and Geralt.
 
 #### III
 
@@ -120,7 +120,7 @@ Bard Dandelion and Geralt talk about how there are fewer and fewer monsters and 
 
 #### I
 
-Peasant Nettly offers Geralt and Dandilion real work after overhearing the villages tell nonsensical stories.
+Peasant Nettly offers Geralt and Dandilion real work after they overheard the villages tell nonsensical stories.
 
 #### II
 
@@ -128,11 +128,11 @@ A devil is pulling pranks on the villager, so Nettly and Dhun hire Geralt to get
 
 #### III
 
-A goat like monster was given food as tribute and throws iron balls at Dandillion and Geralt as they run away.  
+A goat like monster was given food mixed in with iron, a poison. The monster is furious and throws iron balls at Dandillion and Geralt as they run away.  
 
 #### IV
 
-Lille, the village prophetess who owns the book about all monsters forbade the villagers from killing the devil and Geralt is sent to reason with it.  
+Lille, the village prophetess who owns the "book of monsters" forbade the villagers from killing the devil and Geralt is sent to reason with it.  
 
 #### V
 
@@ -144,29 +144,29 @@ Geralt and Dandillion are captured by the elves who are starving because they do
 
 #### VII
 
-Torque the sylvan promised to be more careful around humans, Dandellion the bard recieved a new lute as compensation from the elves and Geralt the witcher reads aloud about the Lady of the Fields.  
+Torque the sylvan promises to be more careful around humans, Dandellion the bard receives a new lute as compensation from the elves and Geralt the witcher reads aloud about the Lady of the Fields.  
 
 ### The Last Wish
 
 #### The Voice of Reason (202)
 
-Geralt and Nenneke talk in a hot cave garden about Yennerer the Sorceresses' inability to have children.   
+Geralt and Nenneke talk in a hot cave garden about Yennefer the Sorceresses' inability to have children.   
 
 #### I
 
-Geralt and Dendillion fail to catch a fish but catch a djinn bottle instead. Dandillion opens the seal and releases the djinn who attacks him throat.  
+Geralt and Dendillion fail to catch a fish but find a djinn bottle instead. Dandillion opens the seal and releases the djinn who attacks his throat.  
 
 #### II
 
-Geralt meets Chireadan, the elf healer, at the barbican because neither can go though the city gates at night. Chireadan inspects Dandillion's wound and refers them to Yennefer of Vengeberg, a Sorceress staying in town.  
+Geralt meets Chireadan, the elf healer, at the barbican because neither can go though the city gates at night. Chireadan inspects Dandillion's wound and refers them to Yennefer of Vengeberg, a sorceress staying in town.  
 
 #### III
 
-Geralt knocks out a guard, finds the merchant fast asleep and brings Yennifer, who was sleeping, apple juice.  
+Geralt knocks out a guard, finds the merchant fast asleep and brings Yennefer, who was sleeping, apple juice.  
 
 #### IV
 
-Geralt and Yennifer take a bath, talk about the djinn and then take a portal to Dandillion.   
+Geralt and Yennefer take a bath, talk about the djinn and then take a portal to Dandillion.   
 
 #### V
 
@@ -178,47 +178,47 @@ Geralt finds himself in the dungeon with Chireadan after rampaging across town. 
 
 #### VII
 
-Geralt and Chireadan and in from of mayor Neville and priest Krepp, accused of many crimes. Dandillion falls through the portal and Yennefer catches the djinn like a bumblebee tied to a thread and starts destryoing the town. Krepp summons a portal for Geralt to go through.  
+Geralt and Chireadan are accused of many crimes by mayor Neville and priest Krepp. Dandillion falls through the portal and Yennefer catches the djinn like a bumblebee: tied to a magical thread. The djinn furiously begins to destroy every building within his reach. Krepp summons a portal for Geralt to go through.  
 
 #### VIII
 
-Geralt tries to escape from the djinn with Yennifer while she furiously demands that she could control the djinn. They both jump twice using a portal and return to where they started.
+Geralt tries to escape from the djinn with Yennefer while she furiously demands that she could control the djinn. They both jump twice using a portal and return to where they started.
 
 #### IX
 
-Dandillion, Neville, Krepp and Errdil watch Garealt and Yennifer fighting from afar fearing that the djinn will destroy the town when he breaks loose.  
+Dandillion, Neville, Krepp and Errdil watch Garealt and Yennefer fight from afar fearing that the djinn will destroy the town when he breaks loose.  
 
 #### X
 
-Yennifer immobilizes Geralt with a magical red hot spiderweb and Geralt implores her to run away, but she is defiant.  
+Yennefer immobilizes Geralt with a magical red hot spiderweb and Geralt implores her to run away. She is defiant.  
 
 #### XI
 
-Krepp revelas that Geralt has the djinn's wishes. The first one was to destroy the town, the second to kill the dungeon guard and the third. prays Krepp, he should revel to Yennifer.
+Krepp reveals that Geralt has the djinn's wishes. The first one was to destroy the town, the second to kill the dungeon guard and the third, prays Krepp, he should reveal to Yennefer.
 
 #### XII
 
-Yennifer asks Geralt to make the final wish because she wants to capture it, but Geralts insists that it'll kill her.
+Yennefer asks Geralt to make the final wish because she wants to capture the djinn. Geralt insists that it'll kill her.
 
 #### XIII
 
-Krepp and Dendillion ponder what might be the wish that would save both Geralt and Yennifer from the djinn's wrath.  
+Krepp and Dendillion ponder what might be the wish that would save both Geralt and Yennefer from the djinn's wrath.  
 
 #### XIV
 
-Geralt finds out Yennifer was a hunchback while she goads him into making the final wish, which he does.  
+Geralt finds out Yennefer was a hunchback while she goads him into making the final wish, which he does.  
 
 #### XV
 
-Krepp and Dandillion are convinced Geralt died after the djinn escapes into the sky.  
+Krepp and Dandillion are convinced Geralt and Yennefer died after the djinn escaped into the sky.  
 
 #### XVI
 
-Geralt and Yennifer survived and Geralt wished that they be togather.  
+Geralt and Yennefer survived and Geralt wished that they be together.  
 
 #### XVII
 
-Chireadan reveals that Geralt and Yennifer are both alive and are mking love.  
+Chireadan reveals that Geralt and Yennifer are both alive and are making love.  
 
 ### Voice of Reason
 
@@ -228,4 +228,4 @@ Geralt has an elaborate duel with a spoiled knight.
 
 #### II
 
-Dandillion and Geralt leave the Temple but not before Geralt induces a vision of Geral'ts bloody future within Iota.  
+Dandillion and Geralt leave the Temple but not before Geralt induces a bloody and gory vision of the future within prophetess Iota.
