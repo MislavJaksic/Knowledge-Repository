@@ -74,6 +74,22 @@ If a template uses Go templating, replace `{{` with `{{ "{{" }}`.
 
 [Details](v3/Docs/Topics/Charts)
 
+### Tips and tricks
+
+[Tips and tricks](Docs/HowTo/ChartDevTips):
+* Helm uses [Go templates](https://pkg.go.dev/text/template) and [Sprig library](https://masterminds.github.io/sprig/)
+* Quote Strings, but not Integers except ENV VARs
+* `include`
+* `required`
+* `tpl` evaluates strings as templates inside a template. It will pass a template string as a value to a Chart!
+* Create an image pull Secret; see Research
+* Roll Pods using unique identifiers
+* Prevent Helm from deleting selected resources
+* Helper templates and partials are placed in a `_helpers.tpl` file
+* YAML is a Superset of JSON, so pick which one works best for you
+* Random data changes will update a resource
+* Install or upgrade `helm upgrade --install Release-Name --values values.yaml Chart-Dir`
+
 ### Errors
 
 ```
