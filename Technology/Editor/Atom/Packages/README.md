@@ -30,6 +30,10 @@ Highlights the same words in a file.
 
 To Do
 
+### pretty-json
+
+Formats JSON.  
+
 ### Programming language linters
 
 ```
