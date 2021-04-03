@@ -44,7 +44,7 @@ Don't add unnecessary context.
 [1] Interfaces and their implementations are an exception: prefer ClassImpl over IInterface. Why? It hides that you are giving an interface, reduces difference between abstract classes and interfaces, prefixes are harder to ignore then suffixes.  
 [2] Because programmers will read your code. Don't make them ask the customer about every single concept.
 
-### Functions
+### 3 Functions
 
 ```
 Functions are short; 4 lines tops.  
@@ -65,13 +65,13 @@ Extract error handling code into a function.
 Eliminate code duplication; do not repeat yourself.  
 ```
 
-### Comments
+### 4 Comments
 
 ```
 Good comments inform, explain, clarify, warn and amplify. Everything else is a bad comment.
 ```
 
-### Formatting
+### 5 Formatting
 
 ```
 Small files are better then big files.  
@@ -84,7 +84,7 @@ Lines should not be longer then 80 characters; have a good reason to break the r
 Agree upon and stick to formatting rules; do not be tempted to break them.  
 ```
 
-### Objects and data structures
+### 6 Objects and data structures
 
 ```
 Abstract data through an interface and getters/setters; do not allow other function to know how you store your data.  
@@ -98,25 +98,29 @@ Follow the Law of Demeter; function f of class C should only call functions of: 
 Treat all of the following as data structures; do not put business rules into them: Data transfer objects (no functions), Beans (only getters and setters) and Active Records (beans with some other functions)
 ```
 
-### Error handling
+### 7 Error handling
 
 ```
 Use exceptions, not return codes.  
 If you are going to handle errors, start the function by writing the try block.  
-Only use unchecked exceptions; those that are not checked at runtime.  
+Only use unchecked exceptions; those that are not checked at runtime. [1]  
 Create informative error messages.  
 Define exceptions by how they are caught.  
 Define the normal flow and the rest using SPECIAL CASE PATTERN.  
 Do not return or pass null; throw an exception or return an object instead.  
 ```
 
+[1] [Java recommends using checked exceptions](https://docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html). Don't. If you do and have to change the exception, you will have to change it on every level above because it is declared in the function signature. Don't violate the Open/Close Principal.    
+
 ### Boundaries
 
 ```
-Wrap third party code into a class.
-Write learning tests, tests for third party code.
+Wrap third party code into a class. [1]
+Write learning tests, tests for third party code. !!!
 If you don't know what another part of the program is going to look like, create an interface.
 ```
+
+[1] Helps with testing, switching dependencies and naming. However, YAGNI or "You Ain't Gonna Need It": it takes more work, bloats code, has no immediate benefit and complicates design. Think about this twice.  
 
 ### Unit tests
 
