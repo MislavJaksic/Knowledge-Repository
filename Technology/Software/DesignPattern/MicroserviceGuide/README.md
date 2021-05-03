@@ -17,7 +17,7 @@ Library - component that is linked into a program and called using in-memory fun
 Service - component who communicates with HTTP request-response or a binary protocol
 Service over library - easier redeployment, explicit interface, but expensive API calls and high risk of failure
 
-Conway's law - software design mirrors organisational structure
+Conway's law - software design mirrors organizational structure
 Organize around business capabilities - cross-functional teams over specialist teams; each team has a variety of skills
 
 Product over project - you build it, you run it; development and operations are one and the same
