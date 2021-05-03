@@ -101,55 +101,74 @@ Treat all of the following as data structures; do not put business rules into th
 ### 7 Error handling
 
 ```
+Error handling shouldn't obscure logic.  
 Use exceptions, not return codes.  
 If you are going to handle errors, start the function by writing the try block.  
 Only use unchecked exceptions; those that are not checked at runtime. [1]  
-Create informative error messages.  
+Create informative error messages that describe operation's intent. Log it in the catch block.  
 Define exceptions by how they are caught.  
-Define the normal flow and the rest using SPECIAL CASE PATTERN.  
+Wrap third-party code: it minimizes your dependency on it, makes it easier to mock, makes an API better suited for your needs.
+Define the normal flow and the rest using SPECIAL CASE PATTERN (similar to the Null Object Pattern).  
 Do not return or pass null; throw an exception or return an object instead.  
 ```
 
 [1] [Java recommends using checked exceptions](https://docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html). Don't. If you do and have to change the exception, you will have to change it on every level above because it is declared in the function signature. Don't violate the Open/Close Principal.    
 
-### Boundaries
+### 8 Boundaries
 
 ```
-Wrap third party code into a class. [1]
-Write learning tests, tests for third party code. !!!
+Restrict what third-party libraries offer.
+If a third-party library changes, wrapped up third-party code has to be changed only in one place. [1]
+Not all third-party code needs to be wrapped up.
+Write learning tests, tests for third party code, rather then production code that you then debug.
 If you don't know what another part of the program is going to look like, create an interface.
 ```
 
 [1] Helps with testing, switching dependencies and naming. However, YAGNI or "You Ain't Gonna Need It": it takes more work, bloats code, has no immediate benefit and complicates design. Think about this twice.  
 
-### Unit tests
+### 9 Unit tests
 
 ```
 TDD laws: fail a test before writing production code,
           write a test only until it can fail,
           write production code until it passes the test.
-Test are as important as production code. Keep them clean.
-Build test data, operate on test data and check results.
+Test are as important as production code. Keep them clean: readable.
+Clean tests made code flexible, maintainable and reusable.
+BUILD-OPERATE-CHECK pattern: build test data, operate on test data and check results.
+Construct a domain specific test language through continual refactoring and test code evolution.  
+Tests needn't be efficient and may even break production code rules as long at they are clean.  
 Strive for one assert and one concept per test.
 Remember, tests are what makes your code flexible and resistant to bugs in the face of change.
 ```
 
-### Classes
+### 10 Classes
 
 ```
 Class variables should be written at the start of the class.
-Classes should have as few responsibilities as possible.
+Classes should have as few responsibilities as possible. If you cannot concisely name a class, it has too many responsibilities.
 A class has only one reason to change (Single Responsibility Principle).
-A system is made up of many small classes, not a few large ones.
-Aim for high cohesion: most functions use most instance variables.
+A system is made up of many small classes, not a few large ones. Each small class encapsulates a single responsibility, has a single reason to change, and collaborates with a few other classes.
+Aim for high class variable-function cohesion: most functions should use most class instance variables. When cohesion is low, split a class into two classes.  
 Transform parameters into instance variable -> class looses cohesion -> split it into multiple classes.
 Classes should be open for extension but closed for modification (Open Closed Principle).
 Classes should depend upon abstract classes or interfaces (Dependency Inversion Principle).
 ```
 
-### Systems
+### 11 Systems
 
-TODO
+```
+Using and construction is not the same. Seperate the startup and wiering process from the runtime logic.  
+LAZY INITIALIZATION is hard to mock and test. Runtime and startup are mixed togather.  
+Use the main() function to startup, wire and then pass the objects to the application.  
+ABSTRACT FACTORY gives the application control over when to construct an object.  
+Dependancy Injection and Inversion of Control move responsibilities to other objects. The Spring Framework does this for Java.  
+Cross-cutting concerns like logging and persistance should be made modular using aspects.
+Aspects declare or program how an object should be modified. Aspects are managed by a framework.  
+Aspects should be tested.  
+Make sure your architecture can change course if needed.  
+Use standards when they add demonstrable value for the customer.  
+Use the simplest thing that can possibly work.  
+```
 
 ### Emergence
 
