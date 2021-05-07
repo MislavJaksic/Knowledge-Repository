@@ -61,3 +61,62 @@ Propaganda House is home to the Music, Television and Newspaper Berauxes and the
 Helmholtz Watson is powerfully built handsome Alpha-Plus that works as a writer. He too felt like an individual like Bernard because he was too smart.  
 Helmholtz wants their newly invented phrases to be used for good. He feels a power within that he can't tap into.  
 Helmholtz teaches students to write piercingly. Bernard is paranoid.  
+
+### Chapter 5, Part 1
+
+"We can't do without anyone, even Epsilons."
+"Everyone works for everyone else."  
+"Everybody is happy now."  
+Lenina and Henry take the soma drug and then dance and listen to music before using contraceptives.  
+
+### Chapter 5, Part 2
+
+Alternate Thursdays were Bernard's Solidarity Service days.  
+Bernard is late to the Singery. When he arrives Morgana Rothschild asks what instrument has he been playing. He answers neither.  
+Twelve participants, including Bernard, perform a ritual where they sing hymns, listen to music, dance and drink soma.  
+Bernard feels nothing and lies to get through the ritual.  
+
+### Chapter 6, Part 1
+
+Bernard rebels against his inculcated society.  
+Bernard blasphemes: "I want privacy", "I want to be myself", "I don't want soma", "I'm not just a  cell in a social body", "I don't want to be enslaved by my conditioning", "I want to be happy in my own way", "We went to bed like infants rather then waiting as adults".  
+Lenina disagreed with Bernard at every single point.  
+
+### Chapter 6, Part 2
+
+Bernard hands a permit bearing the World Controller's Office and Mustapha Mond's signature to D.H.C. for him to sing it.  
+The permit is for the New Mexican Reservation.  
+D.H.C. once visited it with a girl, but she got lost and was never found.  
+D.H.C. threatens Bernard that he'll transfer him to Iceland if he doesn't conform and become emotionally infantile.  
+Helmholtz hates Bernard's boasting, self-pity and cowardice.  
+
+### Chapter 6, Part 3
+
+"Progress is lovely."  
+The Reservation Warden explained that Savages within are like people in before Ford's time.  
+Bernard learns the D.H.C. publicly said he's looking for Bernard's replacement and is sending Bernard to Iceland.  
+If and when savages transgress, they throw gas bombs at them.  
+
+### Chapter 7
+
+
+
+### Chapter 6, Part 1
+
+### Chapter 6, Part 2
+
+### Chapter 6, Part 1
+
+### Chapter 6, Part 2
+
+### Chapter 6, Part 1
+
+### Chapter 6, Part 2
+
+### Chapter 6, Part 1
+
+### Chapter 6, Part 2
+
+### Chapter 6, Part 1
+
+### Chapter 6, Part 2
