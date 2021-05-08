@@ -74,6 +74,7 @@ Lenina and Henry take the soma drug and then dance and listen to music before us
 Alternate Thursdays were Bernard's Solidarity Service days.  
 Bernard is late to the Singery. When he arrives Morgana Rothschild asks what instrument has he been playing. He answers neither.  
 Twelve participants, including Bernard, perform a ritual where they sing hymns, listen to music, dance and drink soma.  
+In the end they engage in drug induced sex which they call "orgy-porgy".  
 Bernard feels nothing and lies to get through the ritual.  
 
 ### Chapter 6, Part 1
@@ -99,11 +100,24 @@ If and when savages transgress, they throw gas bombs at them.
 
 ### Chapter 7
 
+Bernard and Lenina travel up the Malpais mesa together with an Indian guide.  
+"Cleanliness is next to fordliness."  
+"Civilization is sterilization."  
+They are startled by animals, see filth, old desiccated men, mothers breastfeeding all while out of soma.  
+Bernard and Lenina observe a ritual in which Indians sacrifice a young boy t osummo nrain, to please Jesus and Pookong.  
+Bernard recognizes Thomas, the D.H.C's, and Linda's son John. Lenina hurt her head so many years ago when she went missing with the D.H.C..  
+
+### Chapter 8
+
+Bernard wants John to explain how do they live like this.  
+John explains the difficulties Linda had ina djusting to savage life: when she slept with many men, their wifes whiped her, she was too ashamed to go to the Inspector witha child, savages cruly rapped her, she did not know how to repair clothes, she even knew very little about the world she was previouslly living in.
+John tired to kil Pope, but Pope caught him and let him run.
+Mitsima taught John how to make a clay pot and a bow.  
+Bernard has a plan and it involves inviting John and Linda back into the "brave new world". John is overjoyed at the offer!  
+
+### Chapter 9
 
 
-### Chapter 6, Part 1
-
-### Chapter 6, Part 2
 
 ### Chapter 6, Part 1
 
