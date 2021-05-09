@@ -117,11 +117,27 @@ Bernard has a plan and it involves inviting John and Linda back into the "brave 
 
 ### Chapter 9
 
+Lenina swollows 18 hours worth of soma to rest at the resthouse.  
+Bernard meanwhile goes to Santa Fe to get permission from the World Controller Mustapha Mond. He gets them.  
+John breaks into the rest-house not knowing that Bernard was away.  
+
+### Chapter 10
+
+D.H.C. wants to publicly exile Bernard to Iceland in front of Alpha workers for his: heretical views of sport and soma, scandaloous unorthodox sexlife and out of work activities.  
+Bernard lets Linda come into the room. Linda names the Director by name, Tomakin.  
+Linda, middle-aged and saggy, hugs the Director. She later calls in John and who calls the Director his father.  
+The room of Alphas is roaring with histerical laughter and the Director rushes out of the room.  
+
+### Chapter 11
+
+D.H.C. resigned and never stepped inside the Hatcheries and Conditioning.  
+No one wants to see linda: fat, old, bad teeth, blotched complexion and figure.  
+Linda took increasing amounts of soma. Dr. Shaw prescribed them and said she would live about a month or two.
+John objected to Dr. Shaw, but then relents.  
+Bernard is exceptionally popular because everyone wants to see John.  
+Helmholtz is saddened by Bernards boasting and Bernard no longer want to talk to him.  
 
 
-### Chapter 6, Part 1
-
-### Chapter 6, Part 2
 
 ### Chapter 6, Part 1
 
