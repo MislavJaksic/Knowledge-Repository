@@ -71,11 +71,30 @@ Principles
 
 #### Moves
 
+You make a move when:
+* When everyone looks to you to find out what happens
+* When the players give you a golden opportunity
+* When they roll a 6-
+
+Make a soft move when players are just looking at you to find out what happens, otherwise make a hard move.  
+Hard moves have immediate and irrevocable consequences.  
+Soft moves not all bad: offer an opportunity with cost, show signs of an approaching threat, ...
+A soft move ignored can become a hard move.  
+When you can make a hard move, you can opt to use a soft one instead.  
+
+Make it a real thing that happens to them.  
+Always follow up a move with: what do you do?
+Make your moves snowball.  
+
+Moves:
 * Use a monster, danger, or location move
 * Reveal an unwelcome truth
+    * Reveal to the players just how much trouble they’re in
 * Show signs of an approaching threat
+    * Show them that something’s going to happen unless they do something about it
 * Deal damage
 * Use up them resources
+    * It doesen't have to be permanent: a sword could be flung away not shattered
 * Turn their move back on them
 * Separate them
 * Give an opportunity that fits a class' abilities
@@ -83,22 +102,25 @@ Principles
 * Offer an opportunity, with or without cost
 * Put someone in a spot
 * Tell them the requirements or consequences and ask
-en to Make a Move
-* When everyone looks to you to find out what happens
-* When the players give you a golden opportunity
-* When they roll a 6-
-Hard moves have immediate consequences; soft moves do not.
 
 #### Dungeon Moves
-Thesäare particularly well-suited for when the characters enter a new
-room or hallway and want toknow what they find there.
+
+Use these if your players are exploring a hostile area that you don’t already have planned completely.  
+They're particularly well-suited for when the characters enter a new room or hallway and want to know what they find there.  
+
+Dungeon moves:
 * Change the environment
+    * Vary the types of areas and creatures the players will face
 * Point to a looming threat
 * Introduce a new faction or type of creature
+    * Give some clear sensory evidence or substantiated information; don't be coy nor too obvious
 * Use a threat from an existing faction or type of creature
 * Make them backtrack
+    * Show the effect that time has had on the areas they’ve left behind
 * Present riches at a price
+    * Glory? Money? Respect? Time? Health?
 * Present a challenge to one of the characters
+    * Give a thief a lock, a wizard a megical mystery a fighter skulls to crack
 
 #### Dealing With Common Situations
 
