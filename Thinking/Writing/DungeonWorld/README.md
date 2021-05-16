@@ -120,13 +120,45 @@ Dungeon moves:
 * Present riches at a price
     * Glory? Money? Respect? Time? Health?
 * Present a challenge to one of the characters
-    * Give a thief a lock, a wizard a megical mystery a fighter skulls to crack
+    * Give a thief a lock, a wizard a magical mystery, a fighter skulls to crack
 
 #### Dealing With Common Situations
 
+Fights:
+* try to think about more then exchanging damage
+* understand what the fight is about, what each side wants
+* move in and out of range, take cover, retreat, shift the battlefield
+* make sure everyone has a chance to act
+* make maps of complex battle location so everyone knows what's going on
+
+Traps:
+* players may find traps through clever plans, trap sense, or discerning realities
+
+People:
+* NPCs are not mindless stooges, but they’re not what we’re playing to find out about either
+* use them to illustrate what the world is like
+* common people struggling for recognition, nobles uplifting their people
+* people, just like dungeons, change over time: they may become enraged or inspired
+* when characters revisit a town, show them how it changed
+* if the players want to make real, lasting connections with the people of the world, they need to act
+
 ### Chapter 14: First Session
 
+#### Prep
+
+#### After the First Session
+
 ### Chapter 15: Fronts
+
+#### Creating Fronts
+
+#### Creating Dangers
+
+#### Types of Dangers
+
+#### Resolving a Front
+
+#### Multiple Adventure Fronts
 
 ### Chapter 16: The World
 
