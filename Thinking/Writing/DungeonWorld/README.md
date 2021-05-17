@@ -144,9 +144,51 @@ People:
 
 ### Chapter 14: First Session
 
+Begin with character creation, world creation and questions that establish who lives in it and what's going on.  
+
 #### Prep
 
+Print out handouts.  
+Read about Fonts but don't create any.  
+At a bareminimum bring a head full of stories to the table.  
+You could also think up of avillain or a few monsters and draw a few maps with a few locations.  
+Do NOT bring a planned storyline or plot to the table.  
+
+During character creation:
+* help everyone
+* ask questions
+* take notes
+
+When a player makes a choice, ask them about it, get details.  
+Set expectations.  
+Be curious about player characters, search for interesting facts.  
+Pay attention to player questions. You can turn questions about the setting back on them and get them to answer it.  
+Work togather to find interesting answers.  
+Make sure everyone is excited about the broad strokes of the world.  
+
+The first adventure is about discovering the direction that future sessions will take.  
+Keep your eye out for unresolved threats, dangers mentioned but unresolved. They will be fuel for sessions to come.  
+Start the session with the characters in a tense situation.  
+Ask questions right away.  
+
+First session goals:
+* Establish details, describe
+    * Establish the basics of what things look like, who’s in charge, what they wear, what the world is like, what the immediate location is like
+    * Keep it brief
+    * Use a detail or two to make a description stand out as real
+* Use what they give you
+* Ask questions
+* Leave blanks
+* Look for interesting facts
+* Help the players understand the moves
+* Give each character a chance to shine
+* Introduce NPCs
+    * Give characters life especially if players show interest in them
+
 #### After the First Session
+
+Take some time to relax, for the ideas to ferment.  
+Don't rush into the next session.  
 
 ### Chapter 15: Fronts
 
