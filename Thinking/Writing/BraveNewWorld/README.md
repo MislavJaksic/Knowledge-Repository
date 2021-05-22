@@ -131,19 +131,45 @@ The room of Alphas is roaring with histerical laughter and the Director rushes o
 ### Chapter 11
 
 D.H.C. resigned and never stepped inside the Hatcheries and Conditioning.  
-No one wants to see linda: fat, old, bad teeth, blotched complexion and figure.  
+No one wants to see Linda: fat, old, bad teeth, blotched complexion and figure.  
 Linda took increasing amounts of soma. Dr. Shaw prescribed them and said she would live about a month or two.
 John objected to Dr. Shaw, but then relents.  
 Bernard is exceptionally popular because everyone wants to see John.  
-Helmholtz is saddened by Bernards boasting and Bernard no longer want to talk to him.  
+Helmholtz is saddened by Bernard's boasting and Bernard no longer want to talk to him.  
+Bernard, now successful did not give up the privilege of criticizing the order which celebrates him. It made him feel gigantic.  
+People around Bernard tolerated his unorthodoxy only because of John, the Savage.  
+Bernard is writing a report to the World Controller Mustapha Mond and showing John around.  
+The World Controller was angered by Bernard's lecturing and he intends to teach Bernard a lesson.  
+Bernard and John visit a factory where specialized ethno-caste clones work.  
+Bernard and John visit the School where upper casts are educated. Books are considered solitary amo+usements and are frowned upon.  
+Bernard asks Lenina to take John to the feelies.  
+Lenina is sharing in Bernard's glory, but everyone asks her what's it like to have sex with John the Savage which she never had.  
+Lenina and John watch a simple film filled with sex and pleasure.  
+Lenina tries to seduce John, but when she failes she is made speechless.
+
+### Chapter 12
+
+John doesen't want to be shown around by Bernard to the dignetaries that came to see him. They are furious at Bernard.  
+Bernard's triumph turned into the greatest humiliation.  
+World Controler Mustapha Mond censors an excellent book that pursues knowledge, because it could decondition the higher casts whi ch must always believe that the ultimate goal of life is hapiness.  
+John tells Bernard that he likes him more when he is unhappy but thruthful then when he is falsly happy. Bernard likes the lying happiness and is vengeful towards John.  
+John explains that your true friends do not turn against you so easily. Bernard remembers Helmholtz and they mend their friendship.  
+Helmholtz confides that he is in truble for making a poem about lonliness. The Principal almost had him sacked.  
+Bernard is jealous and resentful that John and Helmholtz are getting along so well. They in turn resent him back.  
+Helmholtz laughts meniaclly about a scene from Romeo and Juliet which John reads to him.  
+
+### Chapter 13
+
+"A doctor a day keeps the jim-jams away."  
+Lenina is speechless and dosn't answer Henry Foster about who is she going out with.  
+Lenina wants John, the Savage, but it convinced that he will reject her advances  
+John, on the other hand, thinks he is unworthy a beautiful create such as Lenina.  
+John wants to prove to Lenina that he is worth her.  
+Lenina think s John's desire to prove hmself is unneccessary andshe thrusts herself upon him.  
+John is furious and calls Lenina a whore. He sands her away in aganer.  
 
 
-
-### Chapter 6, Part 1
-
-### Chapter 6, Part 2
-
-### Chapter 6, Part 1
+### Chapter 14
 
 ### Chapter 6, Part 2
 
