@@ -166,13 +166,90 @@ Lenina wants John, the Savage, but it convinced that he will reject her advances
 John, on the other hand, thinks he is unworthy a beautiful create such as Lenina.  
 John wants to prove to Lenina that he is worth her.  
 Lenina think s John's desire to prove hmself is unneccessary andshe thrusts herself upon him.  
-John is furious and calls Lenina a whore. He sands her away in aganer.  
-
+John is furious and calls Lenina a whore. He sands her running for the bathroom.  
+John runs out of the department after finding out someone is ill.  
 
 ### Chapter 14
 
-### Chapter 6, Part 2
+John goes to visit his dieing mother, Linda, in a very plesent hospital.  
+A group of clones started pouring into the room for death conditioning.  
+Linda dies as John recalls his childhood of growing up in Malpais.  
+John's reaction of grief has the Head Nurse worried it might uncondition the clone group.  
 
-### Chapter 6, Part 1
+### Chapter 15
 
-### Chapter 6, Part 2
+John pushes through an angry group of clones. They forget about him when an Alpha starts dispensing soma.  
+John thinks that Linda has been a slave and that now she is dead.  
+John makes a scene and tries to decondition the Deltas: "Throw it (soma) all away!".  
+Bernard and Helmholtz come to the Hospital. John is asking Deltas : "Don't ou want to be free and men?" rather then babies and slaves.  
+John begins to throw away the soma. Deltas charge at him. Helmholtz goes to help John. Bernard fears for his life and dosn't help.  
+Police arrive with goggles, gas masks, some spraying machines, Synthetic Music Boxes and water pistols with anesthetic.  
+Bernard is squirted with the anesthetic and collapses on the floor.  
+Police turn on the Music Box which says words that condition them to hug and kiss each other.  
+The pilice Sargent takes John, Helmholtz and Bernard prisoner.  
+
+### Chapter 16
+
+John, Helmholtz and Bernard are in the Controller's study.  
+Mustapha Mond asks John is he likes civilization. He says no. Bernard can only think of what that means for him.  
+Mustapha Mond says he can break the rules because he makes them. He turns to Bernard and tells him that Bernard can't break them.  
+The World Controller tells John that Othello is forbidden because people have to like the new not the old.  
+Helmholtz says he's been trying to write Othello, but the Controller assures him he'll never allow it.  
+Mustapha Mond explains:
+* You can't make tragedies without social instability
+* This world is stable, people are happy
+* People get what they want and they never want what they can't get
+* People are well off, they are safe, they are never ill, do not fear death and they have no mothers or lovers to feel strongly about
+* People are condition to behave how they ought to behave. If anything goes wrong, there is soma
+* Not having high art like Othello is the price of stability. High art was exchanged for the feelies and the scent organ
+* The feelies and the scent organ mean themselves
+* Enormous inginutiy is required when you need to write without saying anything, to make art out of pure sensation
+* Actual hapiness is squalid compared to overcompensations for misery
+* Stability isn't as spectacular as instability, being contented isn't as glamorous as a goof fight against misfortune, none of the picturesqueness against temptation or a fatal overthrow by passion or doubt. Happiness is never grand  
+* Clones are the foundation of stability
+
+Not everyone is an Aplha Double Plus because they'd go mad working the menial work of Epsilon Semi-Morons.  
+Alphas a socialized by doing Alpha work. Epsilons make sacrifices because to them its the poath of least resistance.  
+The Cyprus experiment: a society of only Alphas killed 19/22 thousands of their own on the island of Cyprus. Strikes, work, laws and orders were all disobeyed.  
+Even after decanting, everyone is still isnide an invisible bottle thanks to conditioning.  
+Lower casts are condition to love their work. They are happy thanks to soma, games, unrestricted copulation and feelies.  
+Reducing the working hours from 8 to 3 will only increase soma consumption and unrest. Leisure does not increase happiness.  
+"The Inventions Office is full of labor saving processes. Deploying them would be cruel because it would inflict excessive leisure."  
+Scientific discoveries can cause changes, changes cause instability which is why even science is treated as an enemy.  
+The World Controller was a physisict before. They did actual scienece and were almost sent to an island.  
+Mustahpa Mond threatens Bernard that he'll send him to an island. Bernard grovels and acusses that others not him are causing truble.  
+Bernard is taken to his room and given soma. The Controller muses that Bernard is actually being rewarded: the island is filled with people who are too self-conciously individual to fit into community life, people who don't like orthodoxy.  
+The Controller chose not to go on the island and let science go to become a Controller.  
+"Hapiness is a hard master - particualrly other people's hapiness. Much harder then truth."  
+"Truth is a menace, scienece is a public danger."  
+"We have stability thanks to scienece, but we cannot allow science to undo its own good work."  
+"Our Ford shifted the focus from truth and beauty to comfort and hapiness."  
+"Hapiness can keep the wheels turning indefinatly. Truth and beauty cannot."  
+People clamoured for a quite life and gave up their appetites, truth, beauty and knowledge.  
+"Hapiness has to be paid for."  
+If there weren't so many islands, individuals who dislike orthodoxy would be put in the lethal chamber.  
+Controller asks where Helmholtz would liek to be exiled. Helmholtz wants to be transfered to an island with a bad climate to help him focus on writing.  
+
+### Chapter 17
+
+God and religion are superflous thanks to youth and prosperity, no losses to compensate, endless youthful desire and no solitude.  
+God is not compatible with machinery, medicine and happiness.  
+People engage in plesent vices without risks.  
+No person needs to do something unpleasent.  
+There is no need to be heroic or courageous. The need for it never arrises  
+If you are unlucky, take soma. You needn't work for girls: they belong to everyone.  
+Violent Passion Surrogate (V.P.S.) is compulsory every month to flood you with adrenaline to satisfy the need for fear and rage.  
+John claims the right to be unhappy. The Controlled says he is welcome to.  
+
+### Chapter 18
+
+John asked the Controller to go to the island with Bernard and Helmholtz. He refused and said the experiment must go on. John refused to let the experiment continue.  
+John went to be alone in a lighthouse and made a hermitage.  
+Isolated from the outside world, John likes doing work that requires skil and patieence.  
+John whips himself in front of three Delta minus workers.  
+John made a bow and arrors.  
+Reporters came to do an interview with John. John kicked him the in behind. The news reported on this.  
+John hugs a prickley bush to punish himself for thinking about Lenina rather then Linda.  
+Darwin Bonaparte films John's hermit life and publishes a movie about it.  
+Darwin's film attracted hundreds to John's lighthouse. They wanted to see him whip himself.  
+They do the orgy-porgy. Next day, John hangs himself.  
