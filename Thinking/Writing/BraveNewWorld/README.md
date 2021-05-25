@@ -13,6 +13,12 @@ In 1984, Orwell added, people are controlled by inflicting pain. In Brave New Wo
 In short, Orwell feared that what we fear will ruin us. Huxley feared that what we desire will ruin us.
 ```
 
+`Huxely` reviews `Orwell`'s `1984`:
+```
+Whether in actual fact the policy of the boot-on-the-face can go on indefinitely seems doubtful. My own belief is that the ruling oligarchy will find less arduous and wasteful ways of governing and of satisfying its lust for power...
+The lust for power can just as completely be satisfied by suggesting people into loving their servitude as by flogging and kicking them into obedience.  
+```
+
 ### Chapter 1
 
 Central London Hatchery and Conditioning Centre is run by a Director. It has a Fertilizing Room, Bottling Room, Social Predestination Room, Embryo Store and many more where people are grown rather then born.  
