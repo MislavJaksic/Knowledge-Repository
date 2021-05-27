@@ -160,7 +160,7 @@ During character creation:
 * take notes
 
 When a player makes a choice, ask them about it, get details.  
-Set expectations.  
+Set expectations: the players are to play their characters as people, real people.  
 Be curious about player characters, search for interesting facts.  
 Pay attention to player questions. You can turn questions about the setting back on them and get them to answer it.  
 Work together to find interesting answers.  
@@ -257,7 +257,6 @@ A front representing a single dungeon may have its dangers killed, turned to goo
 Some dangers might be unresolved and the front lives on.  
 
 When the front is resolved, look at the aftermath. Is there anyone who could be moved from the now-defeated front to somewhere else? Anyone get promoted or reduced in stature?  
-
 
 #### Multiple Adventure Fronts
 
