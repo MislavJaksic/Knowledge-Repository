@@ -1,3 +1,61 @@
+## Dungeon World
+
+### Chapter 2: Playing the Game
+
+#### Making Moves
+
+#### Harm and Healing
+
+#### Magic
+
+#### Character Change
+
+The world changes. So do the characters by gaining XP.  
+The character's sheet should change if the character changes in fiction and the other way around.  
+If a character gains an ability, it should be obvious why.  
+
+Explore, fight and gather treasure.  
+Acting according to your alignment grants you extra XP:  
+
+Characters can gain moves and abilities of other classes including starting moves.  
+
+Instead of taking level 11th you either:
+* Retire to safety: play a new character
+* Take on an apprentice: play a character alongside your current one
+* Change entirely to a new class: keeping your ability scores, race, HP, and whatever moves you and the GM agree are core to who your character is
+
+#### Bonds
+
+Feelings, thoughts, and shared history that tie the adventure party together.  
+
+ToDo
+
+Hint: for experienced groups you can use [Flags](https://rpg.divnull.com/wiki/index.php?title=Dungeon_World_Flags) instead
+
+#### Alignment
+
+Character’s way of thinking and moral compass.  
+
+The player must have a reason for the alignment change which they can explain to the other players.  
+
+#### Hirelings
+
+Hirelings are:
+* venture along with adventurers into the gloom and danger for money, glory, or stranger needs
+* they help characters in return for pay
+* players use them as a resource
+* to GMs they are a useful face characters can turn to
+
+Hirelings aren't heroes but they can become one by being a replacement character.  
+They are a Skill, a Cost and Loyalty.  
+No hireling works for free!  
+
+There is a Order Hireling move.  
+
+#### Making a Hireling
+
+#### The Adventurer’s Life
+
 ### Chapter 13: GM
 
 Dungeon World is designed for a world of elves, orcs, dragons and magic where dark dangers mix with lighthearted adventure.  
