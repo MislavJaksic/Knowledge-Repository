@@ -31,7 +31,7 @@ Decentralized data management - data is seen from different points of view; doma
 
 Infrastructure automation - CIDC is a must; automate testing; requires skillful operations team
 
-Design for failure - need high robustness; emergent, unexpected behaviour; circuit breaker pattern
+Design for failure - need high robustness; emergent, unexpected behavior; circuit breaker pattern
 
 Evolutionary design - replacement and upgradeability; modular design
 ```
