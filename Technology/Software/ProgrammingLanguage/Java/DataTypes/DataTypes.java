@@ -48,6 +48,9 @@ public class DataTypes {
         new_string.append("ello");
         System.out.println(new_string.toString());  // -> hello
 
+        // String formatting
+        MessageFormat.format("Hello! My name is {0}.", "Alice");
+
         // String to number
         // <data_type>.parse<data_type>(<string_name>)
         String string_number = "39.999";
