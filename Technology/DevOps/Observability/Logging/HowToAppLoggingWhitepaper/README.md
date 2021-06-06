@@ -5,7 +5,7 @@ It talks about building audit logs for security analysts.
 Beware of horrific log messages:
 * `Aug 11 09:11:19 xx null pif ? exit! 0` - meaningless
 * `Message 202 User tran-sitioning priv level` - omits the user identity and has a secret code
-* `userenv[error] 1040 XYZ-CORP\wsupx No descrip-tionavailable` - honest and useless
+* `userenv[error] 1040 XYZ-CORP\wsupx No description available` - honest and useless
 
 Log events such as:
 * authentication, authorization, and access events:
