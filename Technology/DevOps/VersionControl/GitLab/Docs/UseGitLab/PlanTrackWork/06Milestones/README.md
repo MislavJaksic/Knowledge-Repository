@@ -1,4 +1,4 @@
-## [Milestones](https://docs.gitlab.com/ee/user/project/milestones/index.html)
+## [Milestones](https://docs.gitlab.com/ee/user/project/milestones/)
 
 Track issues and merge requests.  
 
