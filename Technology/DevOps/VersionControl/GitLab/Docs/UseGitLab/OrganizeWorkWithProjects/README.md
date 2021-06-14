@@ -1,4 +1,4 @@
-## [Projects](https://docs.gitlab.com/ee/user/project/index.html)
+## [Projects](https://docs.gitlab.com/ee/user/project/)
 
 For hosting your codebase, collaborating, issue tracking and GitLab CI/CD.  
 

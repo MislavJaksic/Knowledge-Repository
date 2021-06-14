@@ -1,4 +1,4 @@
-## [Issues](https://docs.gitlab.com/ee/user/project/issues/index.html)
+## [Issues](https://docs.gitlab.com/ee/user/project/issues/)
 
 Issues can be:
 * ideas

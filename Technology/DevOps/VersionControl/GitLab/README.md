@@ -2,6 +2,8 @@
 
 GitLab is a Git repository which covers the entire DevOps Lifecycle.  
 
+TODO: remap relative links!  
+
 ### Project
 
 #### Setup
@@ -66,6 +68,18 @@ If a GitLab project is private then:
     * DO see: activity, issues, wiki pages
     * DON'T see: code, branches, commits, confidential issues, merge requests
 * higher permission users can see almost everything
+
+#### Project Import and Export
+
+```
+Settings -> General -> Advanced -> Export
+```
+
+```
+New Project -> Import project -> select export type -> follow instructions ...
+```
+
+[Project import/export](Docs/UseGitLab/OrganizeWorkWithProjects/17ProjectImportExport)
 
 #### Other
 
