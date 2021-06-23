@@ -18,3 +18,15 @@ Change or set virtualenv: `Open a project -> Settings -> Project -> Project Inte
 Find [poetry](../../Software/BuildTool/poetry)'s virtualenv with `poetry env info`.  
 
 Delete virtualenv: `$: sudo rm -rf venv`
+
+### Testing
+
+Pick your default runner under: `Ctrl+Alt+S -> Tools -> Python Integrated Tools -> Default Test Runner`
+
+#### Generate Python Tests
+
+```
+open a Python script -> Navigate -> Test -> pick test options
+```
+
+Shortcut: `CTRL+SHIFT+T`
