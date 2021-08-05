@@ -30,15 +30,18 @@ def change_array(inputArray):
     inputArray.append(3)
 
 
-def check_palindrome(string, check_position=0, *extra_unnamed_args, **dict_args):
+def check_palindrome(string, check_position=0, *tuple_args, **dict_args):
     """Default arguments are evaluated only once -> check_position.
     If it was a list, it would accumulate data in subsequent calls.
     Variable number of arguments are stored in *extra_unnamed_args and **extra_named_args.
     """
-    if extra_unnamed_args is not ():
-        print(extra_unnamed_args)  # -> ("Other", "arguments")
-    if extra_named_args is not {}:
-        print(extra_named_args)  # -> {"example": "Hello World"}
+    if tuple_args:
+        print("Tuple *: {}".format(*tuple_args))  # -> Other
+        print("Tuple -: {}".format(tuple_args))  # -> ("Other", "arguments")
+    if dict_args:
+        # print(**dict_args) -> invalid!
+        print("Dict *: {}".format(*dict_args))  # -> example
+        print("Dict -: {}".format(dict_args))  # -> {"example": "Hello World"}
     string_length = len(string)
     if string_length % 2 == 1:
         return "No"
