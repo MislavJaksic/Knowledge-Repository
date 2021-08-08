@@ -28,5 +28,9 @@ $: jq '[].[0] | {message: ..., name: ...}]'  # collect previous results into a s
 When creating commands, always construct them piece by piece and check their output.  
 
 ```
-jq -c '. | select(.foo | contains("bar")) | select(.alice | contains("bruce"))'  # output JSONs that contain the value 'bar' in key 'foo' and ...
+$: jq -c '. | select(.foo | contains("bar")) | select(.alice | contains("bruce"))'  # output JSONs that contain the value 'bar' in key 'foo' and ...
+```
+
+```
+$: cat input.json | jq [-s] -c 'sort_by(.Key-Name) | .[]' > output.json  # sort JSONs by value
 ```
