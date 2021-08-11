@@ -1,3 +1,3 @@
 ## [Swagger Editor](https://editor.swagger.io/)
 
-Generate code: `File -> Import URL/file -> Generate Client`
+Generate client code: `File -> Import URL/file -> Generate Client`

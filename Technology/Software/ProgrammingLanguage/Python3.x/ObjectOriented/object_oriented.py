@@ -1,7 +1,8 @@
 class Mom(object):
-    class_field = "MOM CLASS VALUE"
+    class_field: ClassVar[str] = "MOM CLASS VALUE"
+    instance_field: str
 
-    def __init__(self, mom_param, *args):
+    def __init__(self, mom_param: str, *args):
         print("MOM INIT")
         super(Mom, self).__init__(*args)
         self.instance_field = mom_param
@@ -14,9 +15,10 @@ class Mom(object):
 
 
 class Dad(object):
-    class_field = "DAD CLASS VALUE"
+    class_field: ClassVar[str] = "DAD CLASS VALUE"
+    instance_field: str
 
-    def __init__(self, dad_param, *args):
+    def __init__(self, dad_param: str, *args):
         print("DAD INIT")
         super(Dad, self).__init__(*args)
         self.instance_field = dad_param
@@ -29,9 +31,10 @@ class Dad(object):
 
 
 class Child(Mom, Dad):  # multiple inheritance
-    class_field = "CHILD CLASS VALUE"
+    class_field: ClassVar[str] = "CHILD CLASS VALUE"
+    instance_field: str
 
-    def __init__(self, child_param, mom_param, dad_param):
+    def __init__(self, child_param: str, mom_param: str, dad_param: str):
         print("CHILD INIT")
         super(Child, self).__init__(mom_param, dad_param)
         self.instance_field = child_param
