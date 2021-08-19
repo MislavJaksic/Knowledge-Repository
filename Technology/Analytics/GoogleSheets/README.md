@@ -47,7 +47,7 @@ ARRAYFORMULA and Filters conflict unless you use:
 
 ```
 whitespace is %20
-neline is %0A
+newline is %0A
 ```
 
 ### Script Editor
