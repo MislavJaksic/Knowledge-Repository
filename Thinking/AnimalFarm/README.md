@@ -16,3 +16,12 @@ Old Major advocates a rebellion and the overthrow of the humans.
 Animals burst into song, the "Beasts of England".  
 
 ### 2
+
+Old Major died.  
+Snowball, Napoleon and Squaler are pigs who elaborated on Major's thoughts and create Animalism.  
+After being hungry for too long, Jones and his men are chased away from the farm.  
+Farmhouse was turned into a museum.  
+Commandements on Animalism were written on the wall.  
+Animals went to harvest they hey.  
+
+### 3
