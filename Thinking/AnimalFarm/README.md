@@ -25,3 +25,11 @@ Commandements on Animalism were written on the wall.
 Animals went to harvest they hey.  
 
 ### 3
+
+...
+
+### Notes
+
+The book is analogous to what had happened during Stalin's reign in the Soviet Union.  
+
+[Wikipedia](https://en.wikipedia.org/wiki/Animal_Farm) Page on Animal Farm has excellent notes. The book is very easy to read.  

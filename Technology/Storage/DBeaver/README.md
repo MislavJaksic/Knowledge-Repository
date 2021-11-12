@@ -1,7 +1,12 @@
-## [DBeaver](https://dbeaver.io/)
+## [DBeaver](https://dbeaver.com)
 
 Universal database manager.
 
 ### Setup
 
-Download and import JDBC drivers for each database. Check that you don't have placeholder drivers.  
+[Install](Docs\GeneralUserGuide\Installation)  
+[Database drivers](Docs\DatabaseManagement\DatabaseDrivers)
+
+### Search
+
+* Tables: CTRL+SHIFT+D, Open database meta object window, "%customer%"

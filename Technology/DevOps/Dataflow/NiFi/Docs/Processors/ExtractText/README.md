@@ -1,0 +1,5 @@
+## ExtractText
+
+### Properties
+
+### Usage

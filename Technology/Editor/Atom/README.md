@@ -4,6 +4,8 @@ A free, open-source and package upgradeable editor.
 
 Works best with scripting languages.  
 
+Note: I no longer use it because it is far too slow to load.
+
 ### Install
 
 Use the installer for Linux/Windows.  

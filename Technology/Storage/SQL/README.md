@@ -1,4 +1,10 @@
+# Todo, find a "complete" tutorial
+
 ## SQL  
+
+### TABLES
+
+### VIEWS
 
 ### JOINS
 
