@@ -1,7 +1,7 @@
 // Objects serve as templates/prototypes from which other objects are created
 
 // Objects have properties associated with them
-var car = new Object()
+let car = new Object()
 car["colour"] = "red"
 car.year = "1999"
 

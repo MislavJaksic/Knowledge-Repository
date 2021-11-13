@@ -6,4 +6,4 @@ Every browser supports JavaScript in one form or another often embedded into a H
 
 ### Tutorial sources
 
-[Mozzila Developer Network](https:// developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+[Mozzila Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)

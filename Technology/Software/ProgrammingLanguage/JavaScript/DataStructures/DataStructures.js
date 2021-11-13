@@ -1,5 +1,5 @@
 // Array methods: https:// developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections
-var array = [0,1,2,3,4,5]
+let array = [0,1,2,3,4,5]
 
 array.length  // -> 6
 array[0]  // -> 0
