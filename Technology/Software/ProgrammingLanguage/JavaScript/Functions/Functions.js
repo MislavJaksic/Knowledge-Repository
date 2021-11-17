@@ -30,3 +30,23 @@ let closureNineNine = outside(99);
 
 closureOne(1);  // -> 2
 closureNineNine(2);  // -> 101
+
+
+let array = [1,2,3];
+array.map((element, index, array) => {
+  const output = {"element": element, "index": index, "array": array};
+  return output;}); /* index and array are optional parameters! */
+/*
+[
+{element: 1, index: 0, array: [1,2,3]},
+{element: 2, index: 1, array: [1,2,3]},
+{element: 3, index: 2, array: [1,2,3]}]
+*/
+
+// Traditional Function
+function bob (a){
+  return a + 100;
+}
+
+// Arrow Function
+let bob = a => a + 100;
