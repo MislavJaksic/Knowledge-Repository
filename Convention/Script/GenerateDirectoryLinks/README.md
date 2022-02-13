@@ -1,6 +1,6 @@
 ## Generate Directory Links
 
-Generates relative links to directoryies.  
+Generates relative links to directories.  
 
 ### generate dir links
 

@@ -1,6 +1,6 @@
 output_file = "links.md"
-init_dir = "D:/Repositories/Knowledge-Repository"
-init_dir_offset = 3  # number of '/' in init_dir + 1
+init_dir = "E:/GreatRepository/Publishing/GitHubRepositories/Knowledge-Repository"
+init_dir_offset = 5  # number of '/' in init_dir + 1
 external_repo = {
     "Gatsby": "https://github.com/MislavJaksic/Gatsby-Tutorial",
     "Jekyll": "https://github.com/MislavJaksic/Jekyll-Tutorial",
@@ -21,6 +21,7 @@ external_repo = {
     "CSS": "https://github.com/MislavJaksic/MDN-Tutorial",
     "HTML": "https://github.com/MislavJaksic/MDN-Tutorial",
     "Scrapy": "https://github.com/MislavJaksic/Scrapy-Project",
+    "SQL": "https://github.com/MislavJaksic/SQL-Tutorial",
 }
 semiterminal_dir = ["Argo", "Linux", "Java"]
 terminal_dir = [
@@ -46,6 +47,24 @@ terminal_dir = [
     "ThinkingFastAndSlow",
     "PaineOpposesExecutionOfLouis",
     "BraveNewWorld",
+    "JBPeterson",
+    "Stonetop",
+    "MobaXterm",
+    "DungeonWorld",
+    "TheLiesOfLockeLamora",
+    "CallOfCathulu",
+    "AnimalFarm",
+    "FileZilla",
+    "ApacheFlink",
+    "SQL",
+    "SQLiteBrowser",
+    "DBeaver",
+    "DataWarehouse",
+    "WSL",
+    "SublimeText",
+    "WinSCP",
+    "OWASPCheatSheet",
+    "Freelancing",
     "SenseOfStyle",
     "TheLastWish",
     "Handlebars",

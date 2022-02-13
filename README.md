@@ -38,6 +38,7 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
     * ErikDietrich
         * [HowToPickNiche](Productivity/ErikDietrich/HowToPickNiche)
         * [Marketing101](Productivity/ErikDietrich/Marketing101)
+    * [Freelancing](Productivity/Freelancing)
     * [IDEvsEditor](Productivity/IDEvsEditor)
     * RayDalio
         * [PrinciplesForSuccess](Productivity/RayDalio/PrinciplesForSuccess)
@@ -79,8 +80,8 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
             * ChaosEngineering
                 * [blockade](Technology/DevOps/Observability/ChaosEngineering/blockade)
             * Logging
-                * [Elastic](Technology/DevOps/Observability/Logging/Elastic)
                 * [HowToAppLoggingWhitepaper](Technology/DevOps/Observability/Logging/HowToAppLoggingWhitepaper)
+                * [OWASPCheatSheet](Technology/DevOps/Observability/Logging/OWASPCheatSheet)
             * Monitoring
                 * [Grafana](Technology/DevOps/Observability/Monitoring/Grafana)
                 * [Prometheus](Technology/DevOps/Observability/Monitoring/Prometheus)
@@ -89,11 +90,13 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
         * Security
             * [CloudFlare](Technology/DevOps/Security/CloudFlare)
             * [Keycloak](Technology/DevOps/Security/Keycloak)
+            * [MobaXterm](Technology/DevOps/Security/MobaXterm)
             * [OpenPolicyAgent](Technology/DevOps/Security/OpenPolicyAgent)
             * [OpenVPN](Technology/DevOps/Security/OpenVPN)
             * [pscp](Technology/DevOps/Security/pscp)
             * [Putty](Technology/DevOps/Security/Putty)
             * [SSH](Technology/DevOps/Security/SSH)
+            * [WinSCP](Technology/DevOps/Security/WinSCP)
         * Server
             * [Gunicorn](Technology/DevOps/Server/Gunicorn)
             * Hosting
@@ -112,6 +115,7 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
             * [VirtualBox](Technology/DevOps/VirtualMachine/VirtualBox)
     * Editor
         * [Atom](Technology/Editor/Atom)
+        * [SublimeText](Technology/Editor/SublimeText)
     * ERP
         * [SAP](https://github.com/MislavJaksic/SAP-ABAP-Development)
     * GameEngine
@@ -128,6 +132,8 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
             * [ShellScripting](Technology/OS/Linux/ShellScripting)
             * [Tmux](Technology/OS/Linux/Tmux)
             * [Ubuntu](Technology/OS/Linux/Ubuntu)
+        * Windows
+            * [WSL](Technology/OS/Windows/WSL)
     * Parser
         * [jq](Technology/Parser/jq)
         * [TableConverter](Technology/Parser/TableConverter)
@@ -146,6 +152,10 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
         * DesignPattern
             * [DesignPatterns](https://github.com/MislavJaksic/Design-Patterns)
             * [MicroserviceGuide](Technology/Software/DesignPattern/MicroserviceGuide)
+        * Linter
+        * PackageManager
+            * [Chocolatey](Technology/Software/PackageManager/Chocolatey)
+            * [Scoop](Technology/Software/PackageManager/Scoop)
         * ProgrammingLanguage
             * [ABAP](https://github.com/MislavJaksic/SAP-ABAP-Development/tree/master/ABAP)
             * [C++](Technology/Software/ProgrammingLanguage/C++)
@@ -154,6 +164,7 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
             * [Haskell](Technology/Software/ProgrammingLanguage/Haskell)
             * [Java](Technology/Software/ProgrammingLanguage/Java)
                 * [Spring](https://github.com/MislavJaksic/Spring-Guides-Tutorials)
+                        * [Wiki](Technology/Software/ProgrammingLanguage/Java/Testing/Mockito/Wiki)
             * [JavaScript](Technology/Software/ProgrammingLanguage/JavaScript)
             * [Lisp](Technology/Software/ProgrammingLanguage/Lisp)
             * [Python3.x](Technology/Software/ProgrammingLanguage/Python3.x)
@@ -164,8 +175,12 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
         * Cache
             * [memcached](Technology/Storage/Cache/memcached)
             * [Redis](Technology/Storage/Cache/Redis)
+        * [DataWarehouse](Technology/Storage/DataWarehouse)
         * Embedded
             * [SQLite](Technology/Storage/Embedded/SQLite)
+        * Inspector
+            * [DBeaver](Technology/Storage/Inspector/DBeaver)
+            * [SQLiteBrowser](Technology/Storage/Inspector/SQLiteBrowser)
         * Large
             * [ApacheHadoop](Technology/Storage/Large/ApacheHadoop)
             * [ApacheHive](Technology/Storage/Large/ApacheHive)
@@ -175,7 +190,9 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
                 * [phpMyAdmin](Technology/Storage/Large/mySQL/phpMyAdmin)
             * [PostgreSQL](Technology/Storage/Large/PostgreSQL)
             * [Vitess](Technology/Storage/Large/Vitess)
+        * [SQL](https://github.com/MislavJaksic/SQL-Tutorial)
     * Streaming
+        * [ApacheFlink](Technology/Streaming/ApacheFlink)
         * [ApacheKafka](https://github.com/MislavJaksic/Kafka-In-Theory-And-Practice)
         * [ApacheSpark](Technology/Streaming/ApacheSpark)
     * Utility
@@ -183,9 +200,6 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
         * [HomeNetworking](Technology/Utility/HomeNetworking)
         * [Latex](https://github.com/MislavJaksic/Latex-Overleaf)
         * [Notion](Technology/Utility/Notion)
-        * PackageManager
-            * [Chocolatey](Technology/Utility/PackageManager/Chocolatey)
-            * [Scoop](Technology/Utility/PackageManager/Scoop)
         * [Practise](https://github.com/MislavJaksic/Practise)
         * Regex
             * [LibreOffice](Technology/Utility/Regex/LibreOffice)
@@ -193,7 +207,7 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
         * [UtilityScript](Technology/Utility/UtilityScript)
         * [WindowsPowerTools](Technology/Utility/WindowsPowerTools)
     * Video
-        * [asciinema](Technology/Video/asciinema)
+        * [Asciinema](Technology/Video/Asciinema)
         * [Bandicut](Technology/Video/Bandicut)
         * [OBS](Technology/Video/OBS)
         * [OpenShot](Technology/Video/OpenShot)
@@ -217,6 +231,8 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
             * [DNSChecker](Technology/Web/DNS/DNSChecker)
             * [DomeneHR](Technology/Web/DNS/DomeneHR)
         * [Electron](Technology/Web/Electron)
+        * File
+            * [FileZilla](Technology/Web/File/FileZilla)
         * Framework
             * [Flask](https://github.com/MislavJaksic/Flask-Tutorial)
             * [RubyOnRails](Technology/Web/Framework/RubyOnRails)
@@ -233,16 +249,21 @@ In it I can store what I know and how I was able to acquiring this knowledge in 
         * TemplateProcessor
             * [Handlebars](Technology/Web/TemplateProcessor/Handlebars)
 * Thinking
-    * Origami
-        * [OrigamiDesignSecrets](Thinking/Origami/OrigamiDesignSecrets)
+    * [AnimalFarm](Thinking/AnimalFarm)
+    * [BraveNewWorld](Thinking/BraveNewWorld)
+    * [CallOfCathulu](Thinking/CallOfCathulu)
+    * [DungeonWorld](Thinking/DungeonWorld)
+    * [OrigamiDesignSecrets](Thinking/OrigamiDesignSecrets)
+    * [Stonetop](Thinking/Stonetop)
+    * [TheLiesOfLockeLamora](Thinking/TheLiesOfLockeLamora)
     * [ThinkingFastAndSlow](Thinking/ThinkingFastAndSlow)
     * Translating
         * [PaineOpposesExecutionOfLouis](Thinking/Translating/PaineOpposesExecutionOfLouis)
+    * Witcher
+        * [TheLastWish](Thinking/Witcher/TheLastWish)
     * Writing
-        * [BraveNewWorld](Thinking/Writing/BraveNewWorld)
+        * [JBPeterson](Thinking/Writing/JBPeterson)
         * [SenseOfStyle](Thinking/Writing/SenseOfStyle)
-        * Witcher
-            * [TheLastWish](Thinking/Writing/Witcher/TheLastWish)
 
 ### Contact
 
