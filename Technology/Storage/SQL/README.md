@@ -1,14 +1,3 @@
-# Todo, find a "complete" tutorial
+## SQL
 
-## SQL  
-
-### TABLES
-
-### VIEWS
-
-### JOINS
-
-(INNER) JOIN
-LEFT (OUTER) JOIN
-RIGHT (OUTER) JOIN
-FULL JOIN / CROSS JOIN
+Extracted to an external [repository](https://github.com/MislavJaksic/SQL-Tutorial).

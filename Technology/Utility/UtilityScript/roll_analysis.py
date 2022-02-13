@@ -95,6 +95,8 @@ class Rolls2d6(object):
 
 
 def main(args):
+    test()
+    exit()
     sample_size = 100000
     smart_threshold = 7
     modifier = 0
@@ -103,6 +105,48 @@ def main(args):
     rolls = Rolls2d6(sample_size, modifier, smart_threshold, reroll_penalty)
     rolls.smart_reroll_all()
     print(rolls)
+
+def test():
+    sample_size = 10000
+    for roll_type in range(0, 3):
+        print("roll_type:{}".format(roll_type))
+        for modifier in range(-3,4,1):
+            #print("modifier:{}".format(modifier))
+            rolls = []
+            for case in range (sample_size):
+                if roll_type == 0:
+                    rolls.append(roll_adv() + modifier)
+                elif roll_type == 1:
+                    rolls.append(roll_normal() + modifier)
+                else:
+                    rolls.append(roll_dis() + modifier)
+
+            bucket10, bucket79, bucket6 = get_buckets(rolls)
+            print("{} {:.2f}/{:.2f}/{:.2f}".format(modifier,
+                len(bucket10)/sample_size,
+                    len(bucket79)/sample_size,
+                    len(bucket6)/sample_size))
+
+def roll_adv():
+    rolls = [roll_1d6() for x in range(3)]
+    return sum(rolls) - min(rolls)
+
+def roll_normal():
+    return sum([roll_1d6() for x in range(2)])
+
+def roll_dis():
+    rolls = [roll_1d6() for x in range(3)]
+    return sum(rolls) - max(rolls)
+
+def roll_1d6():
+    return randint(1, 6)
+
+def get_buckets(rolls):
+    bucket10 = list(filter(lambda x: x >= 10, rolls))
+    bucket79 = list(filter(lambda x: x >= 7 and x <= 9, rolls))
+    bucket6 = list(filter(lambda x: x <= 6, rolls))
+
+    return (bucket10, bucket79, bucket6)
 
 
 def run():
