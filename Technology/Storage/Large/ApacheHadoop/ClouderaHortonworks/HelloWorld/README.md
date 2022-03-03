@@ -105,7 +105,7 @@ store final_data into 'riskfactor' using org.apache.hive.hcatalog.pig.HCatStorer
 
 ```
 The line a = loads the geolocation table from HCatalog.
-The line b = filters out all the rows where the event is not ‘Normal’.
+The line b = filters out all the rows where the event is not ‘Normal'.
 Then we add a column called occurrence and assign it a value of 1.
 We then group the records by driverid and sum up the occurrences for each driver.
 At this point we need the miles driven by each driver, so we load the table we created using Hive.

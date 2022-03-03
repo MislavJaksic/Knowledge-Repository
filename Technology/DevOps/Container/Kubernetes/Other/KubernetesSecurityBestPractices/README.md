@@ -28,7 +28,7 @@ Make use of `NodePool`s, `Namespace`s, `Taint`s and `Toleration`s.
 
 ### Secure Cloud Metadata Access
 
-Conceal Kubernetes metadata using GKE’s metadata concealment feature or a similar mechanism.  
+Conceal Kubernetes metadata using GKE's metadata concealment feature or a similar mechanism.  
 
 ### Create and Define Cluster Network Policies
 

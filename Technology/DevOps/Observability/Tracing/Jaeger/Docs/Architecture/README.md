@@ -54,7 +54,7 @@ It abstracts the routing and discovery of the `Collector`s.
 
 Receives `Trace`s from `Agent`s and runs them through a processing pipeline. Currently our pipeline validates traces, indexes them, performs any transformations, and finally stores them.  
 
-Jaeger’s storage is a pluggable component which currently supports `Cassandra`, `Elasticsearch` and `Kafka`.
+Jaeger's storage is a pluggable component which currently supports `Cassandra`, `Elasticsearch` and `Kafka`.
 
 #### Query
 

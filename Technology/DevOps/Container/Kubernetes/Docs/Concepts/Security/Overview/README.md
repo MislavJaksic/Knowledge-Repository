@@ -2,10 +2,10 @@
 
 The overview will construct a mental model for Cloud Native Security.  
 
-### The 4C’s of Cloud Native Security
+### The 4C's of Cloud Native Security
 
 Security in layers is known as Defense in Depth.  
-The 4C’s are:
+The 4C's are:
 * Cloud (outermost)
 * Clusters
 * Containers

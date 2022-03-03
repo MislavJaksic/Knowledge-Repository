@@ -56,7 +56,7 @@ Mount propagation is controlled by the `mountPropagation` field in `Container.vo
 
 #### Enable Docker mount propagation
 
-Edit your `Docker`’s `systemd` service file.
+Edit your `Docker`'s `systemd` service file.
 * set `MountFlags=shared`
 * remove `MountFlags=slave`
 * then restart Docker daemon

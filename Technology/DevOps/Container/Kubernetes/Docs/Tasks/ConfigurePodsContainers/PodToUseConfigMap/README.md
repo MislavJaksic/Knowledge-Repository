@@ -1,7 +1,7 @@
 ## [Configure a Pod to Use a ConfigMap](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)
 
 `ConfigMap`s decouple configuration from the image.  
-`ConfigMap`s are `Secret`s that don’t contain sensitive information.  
+`ConfigMap`s are `Secret`s that don't contain sensitive information.  
 
 ### Create a ConfigMap
 

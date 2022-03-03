@@ -19,11 +19,11 @@ def test_create_file(tmp_path):
 
 `tmp_path_factory` is a `pathlib.Path` instance session-scoped fixture for creating temporary directories from any other fixture or test.  
 
-### The ‘tmpdir’ fixture
+### The ‘tmpdir' fixture
 
 `py` library recommends using `tmp_path`.  
 
-### The ‘tmpdir_factory’ fixture
+### The ‘tmpdir_factory' fixture
 
 `py` library recommends using `tmp_path_factory`.  
 

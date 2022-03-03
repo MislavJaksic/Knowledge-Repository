@@ -19,7 +19,7 @@ Set `expose.type`:
 * `Ingress`: ingress controller must be present. If TLS is disabled, the port must be included in the command when pulling/pushing images
 * `ClusterIP`: services can only be reached within the cluster
 * `NodePort`: services are assigned a port on each `Node`
-* `LoadBalancer`: use a cloud provider’s load balancer
+* `LoadBalancer`: use a cloud provider's load balancer
 
 Set `externalURL` in `protocol://domain[:port]` format:
 * if behind the proxy, set it as the URL of proxy

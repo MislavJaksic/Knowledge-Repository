@@ -19,7 +19,7 @@ $: minikube dashboard  # enable dashboard add-on and open proxy in browser
 ### Create a Deployment
 
 A `Pod` is a group of `Container`s.  
-A `Deployment` restarts the `Pod`’s Container if it terminates.  
+A `Deployment` restarts the `Pod`'s Container if it terminates.  
 `Deployment`s should be used to manage `Pod`s.  
 
 ```

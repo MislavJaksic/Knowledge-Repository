@@ -68,7 +68,7 @@ kubectl get -n emojivoto deploy -o yaml \
   | linkerd inject - \
   | kubectl apply -f -
 
-This command retrieves all of the deployments running in the emojivoto namespace, runs the manifest through linkerd inject, and then reapplies it to the cluster. The linkerd inject command adds annotations to the pod spec instructing Linkerd to add (“inject”) the proxy as a container to the pod spec. (See Automatic Proxy Injection for more.)
+This command retrieves all of the deployments running in the emojivoto namespace, runs the manifest through linkerd inject, and then reapplies it to the cluster. The linkerd inject command adds annotations to the pod spec instructing Linkerd to add ("inject") the proxy as a container to the pod spec. (See Automatic Proxy Injection for more.)
 
 As with install, inject is a pure text operation, meaning that you can inspect the input and output before you use it. Once piped into kubectl apply, Kubernetes will execute a rolling deploy and update each pod with the data plane's proxies, all without any downtime.
 
@@ -82,7 +82,7 @@ You can now view the Linkerd dashboard and see all the services in the demo app.
 
 linkerd -n emojivoto stat deploy
 
-This will show the “golden” metrics for each deployment:
+This will show the "golden" metrics for each deployment:
 
     Success rates
     Request rates

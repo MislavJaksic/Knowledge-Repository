@@ -252,7 +252,7 @@ services:
     ports:
       - "Outside-Port:Image-Port"
     volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"  # gives access to the host’s socket file; map files; define mount point in container
+      - "/var/run/docker.sock:/var/run/docker.sock"  # gives access to the host's socket file; map files; define mount point in container
     deploy:
       placement:
         constraints: [node.role == manager]  # service will only run on a swarm manager (never a worker)
@@ -289,7 +289,7 @@ services:
     ports:
       - "Outside-Port:Image-Port"
     volumes:
-      - "/home/docker/data:/data"  # gives access to the host’s file; persist data on host; map files
+      - "/home/docker/data:/data"  # gives access to the host's file; persist data on host; map files
     deploy:
       placement:
         constraints: [node.role == manager]  # service will only run on a swarm manager (never a worker)

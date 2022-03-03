@@ -43,7 +43,7 @@ Benefits:
 ### NiFi Architecture
 
 Components:
-* Web Server: hosst NiFi’s HTTP-based command and control API
+* Web Server: hosst NiFi's HTTP-based command and control API
 * Flow Controller: provides threads for extensions to run on, and manages the schedule of when extensions receive resources to execute
 * Extensions: operate and execute within the JVM
 * FlowFile Repository: keeps track of the state of each FlowFile; default approach is a persistent Write-Ahead Log

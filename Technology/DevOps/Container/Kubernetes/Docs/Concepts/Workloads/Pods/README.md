@@ -9,7 +9,7 @@ In terms of Docker constructs, a Pod is modelled as a group of Docker containers
 ```
 
 A `Pod` has containers which share storage/network and instructions for how to run them.  
-A `Pod`’s containers are co-located, co-schedule, and run in a shared context.  
+A `Pod`'s containers are co-located, co-schedule, and run in a shared context.  
 
 Containers in a `Pod` share an IP/port space and can find each other via localhost.  
 Containers in different `Pod`s (usually) communicate using `Pod` IP addresses.  

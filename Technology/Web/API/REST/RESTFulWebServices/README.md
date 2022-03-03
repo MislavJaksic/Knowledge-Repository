@@ -1,4 +1,4 @@
-﻿## RESTful Web Services
+## RESTful Web Services
 
 Written by Leonard Richardson and Sam Ruby. The book talks about RESTful, Resource-Oriented web services.  
 
@@ -281,7 +281,7 @@ TODO
 ### Example: Object-Oriented Design of S3
 
 
-Two well known RESTful services are: the Atom Publishing Protocol (APP) and Amazon’s Simple Storage Service (S3).
+Two well known RESTful services are: the Atom Publishing Protocol (APP) and Amazon's Simple Storage Service (S3).
 
 S3:
 - made to be accessed programmatically
@@ -297,8 +297,8 @@ for objects. Buckets cannot be nested.
 | Resource URI | GET | HEAD | PUT | DELETE |
 | -- | -- | -- | -- | -- |
 | The bucket list (/) | List your buckets | - | - | - |
-| A bucket (/{bucket}) | List the bucket’s objects | - | Create the bucket | Delete the bucket |
-| An object (/{bucket}/{object}) | Get the object’s value and metadata | Get the object’s metadata | Set the object’s value and metadata | Delete the object |
+| A bucket (/{bucket}) | List the bucket's objects | - | Create the bucket | Delete the bucket |
+| An object (/{bucket}/{object}) | Get the object's value and metadata | Get the object's metadata | Set the object's value and metadata | Delete the object |
 
 In a well designed RESTful service, everything does what it says. No need to invent a language.
 
@@ -325,7 +325,7 @@ It says how to turn a problem into URIs, HTTP and XML.
 Turns requirements into resources.  
 An architecture among many.  
 
-### What’s a Resource?
+### What's a Resource?
 
 A construct that deserves to have an address.  
 
@@ -480,7 +480,7 @@ For each resource type:
   Design the representation(s) accepted from the client
   Design the representation(s) served to the client
   Integrate this resource into existing resources, using hypermedia links and forms
-  Consider the typical course of events: what’s supposed to happen?
+  Consider the typical course of events: what's supposed to happen?
   Consider error conditions: what might go wrong?
 ```
 
@@ -759,7 +759,7 @@ Procedure for turning requirements into read/write resources:
   - Design the representation(s) served to the client
   - Integrate this resource into existing resources, using hypermedia links and
 forms
-  - Consider the typical course of events: what’s supposed to happen?
+  - Consider the typical course of events: what's supposed to happen?
   - Consider error conditions: what might go wrong?
 
 Figure out the data set: user account is made up of a name and password.
@@ -791,7 +791,7 @@ representation to every resource which is a hypermedia that shows the client how
 to retrieve data about its user account. The home page should include a
 hypermedia link to how a user can create an account.
 
-What’s supposed to happen: a PUT request will create a new user if one doesn't
+What's supposed to happen: a PUT request will create a new user if one doesn't
 exist and respond with code 201 and send back a response with Location header
 containing the URI of the account. If the account already exists, the password
 is modified and the code 200 is sent back. All other HTTP methods, GET, DELETE,
@@ -838,7 +838,7 @@ Link This Resource to Existing Resources: when an account is DELETEed, delete
 all the custom places as well. Custom place will have links to user who created
 it, instructions on how to create a custom place, ...
 
-What’s Supposed to Happen?: as you would expect.
+What's Supposed to Happen?: as you would expect.
 
 What Might Go Wrong?: as you would expect.
 
@@ -940,8 +940,8 @@ posts/get: Search your posts by tag or date, or search for a specific bookmarked
 URI.
 
 posts/recent: Fetch the n most recent posts by the authenticated user. The
-client may apply a tag filter: “fetch the n most recent posts that the
-authenticated user tagged with tag t”.
+client may apply a tag filter: "fetch the n most recent posts that the
+authenticated user tagged with tag t".
 
 posts/dates: Fetch the number of posts by the authenticated user for each day:
 perhaps five posts on the 12th, two on the 15th, and so on. The client may apply
@@ -959,29 +959,29 @@ timestamp. A bookmark may be public or private (the default is public). A client
 may not bookmark the same URI more than once: calling posts/add again overwrites
 the old post with new information.
 
-posts/delete: Deletes a user’s post for a particular URI.
+posts/delete: Deletes a user's post for a particular URI.
 Tags API:
 tags/get: Fetch a list of tags used by the authenticated user.
 
-tags/rename: Rename one of the authenticated user’s tags. All posts tagged with
+tags/rename: Rename one of the authenticated user's tags. All posts tagged with
 the old name will now be tagged with the new name instead.
 Bundles API:
-tags/bundles/all: Fetch the user’s bundles. The resulting document lists the
+tags/bundles/all: Fetch the user's bundles. The resulting document lists the
 bundles, and each bundle lists the tags it contains.
 
 tags/bundles/set: Group several tags together into a (possibly new) bundle.
 
 tags/bundles/delete: Delete a bundle.
 Interesting functions:
-/{username}: Fetch any user’s bookmarks.
+/{username}: Fetch any user's bookmarks.
 
-/{username}/{tag}: Fetch any user’s bookmarks, applying a tag filter.
+/{username}/{tag}: Fetch any user's bookmarks, applying a tag filter.
 
 /tag/{tag-name}: Fetch bookmarks tagged with a particular tag, from all users.
 
 /url/{URI-MD5}: Fetch the list of users who have bookmarked a particular URI.
-The {URI-MD5} happens to be the MD5 hash of the URI, but from the average client’s
-point of view that’s not important: it’s an opaque string of bytes that somehow
+The {URI-MD5} happens to be the MD5 hash of the URI, but from the average client's
+point of view that's not important: it's an opaque string of bytes that somehow
 identifies a URI within the del.icio.us system.
 
 /recent: Fetch the most recently posted bookmarks, from all users. The
@@ -1064,7 +1064,7 @@ end
 
 18) Connect Resources to Each Other:
 
-19) What’s Supposed to Happen?:
+19) What's Supposed to Happen?:
 
 20) What Might Go Wrong?:
 

@@ -2,12 +2,12 @@
 
 Did you ever experience:
 * Working on a detailed presentation only for the meeting to get derailed 5 slides in.
-* Ritually showing our face at our desks at the appropriate time to signal that we’re working.
+* Ritually showing our face at our desks at the appropriate time to signal that we're working.
 * Attending weekly status meetings to create the performance of keeping things moving.
 * Brainstorm sessions to create the illusion of inclusive creativity.
 * Workshops with scripted games and exercises and sticky notes to ensure everyone has a good time.
-* Jealousy of colleagues who don’t do good work but excel at presenting their work.
-* People who talk about their work getting promoted more than those that don’t.
+* Jealousy of colleagues who don't do good work but excel at presenting their work.
+* People who talk about their work getting promoted more than those that don't.
 
 Silent success, work that speaks for itself is a myth!  
 Do the opposite: performance of the work is work!  
@@ -20,7 +20,7 @@ Examples of performance of work:
 * Crafting the wrapper and positioning of your work
 * Changing the language of your work to match others
 * Including wider contexts of the organization, the industry and the market in your work
-* Reformatting your presentations to fit other team’s strategies
+* Reformatting your presentations to fit other team's strategies
 
 ### Being present, public and acting with voice
 

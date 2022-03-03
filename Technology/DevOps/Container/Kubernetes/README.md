@@ -43,8 +43,8 @@ $: kubectl run throwaway-shell --rm -i --tty --image ubuntu -- bash  # ->
 
 `ServiceType`s:
 * `ClusterIP` (default): `Service` only reachable inside Kubernetes; expose `Service` on a cluster-internal IP
-* `NodePort`: `Service` accessible outside Kubernetes using `Node-IP:Node-Port`; expose `Service` on each `Node`’s IP at a static port (`Node-Port`); creates a `ClusterIP` `Service` to which it routes
-* `LoadBalancer`: an external load balancer assigns a fixed, external IP to the `Service`; expose `Service` using a cloud provider’s load balancer; creates a `ClusterIP` and `NodePort` `Service`s to which it routes
+* `NodePort`: `Service` accessible outside Kubernetes using `Node-IP:Node-Port`; expose `Service` on each `Node`'s IP at a static port (`Node-Port`); creates a `ClusterIP` `Service` to which it routes
+* `LoadBalancer`: an external load balancer assigns a fixed, external IP to the `Service`; expose `Service` using a cloud provider's load balancer; creates a `ClusterIP` and `NodePort` `Service`s to which it routes
 * `ExternalName`: maps `Service` to `externalName` field by returning a CNAME record; no proxy is used
 
 `Headless Service`s are used to interface with other service discovery mechanisms, without being tied to Kubernetes.  

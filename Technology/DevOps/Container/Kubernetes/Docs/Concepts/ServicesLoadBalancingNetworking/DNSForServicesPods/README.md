@@ -1,7 +1,7 @@
 ## [DNS for Services and Pods](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
 
 Kubernetes DNS schedules a DNS `Pod` and `Service`.  
-They tell containers to use the DNS `Service`’s IP to resolve DNS names.  
+They tell containers to use the DNS `Service`'s IP to resolve DNS names.  
 
 Every `Service` is assigned a DNS name.  
 ```
@@ -49,7 +49,7 @@ subdomain: BAR            ->   FQDN: foo.bar.my-namespace.svc.cluster-domain.exa
 namespace: my-namespace
 ```
 
-#### Pod’s DNS Policy
+#### Pod's DNS Policy
 
 ```
 Default - inherits name resolution configuration from the node
@@ -58,8 +58,8 @@ ClusterFirstWithHostNet - for Pods running with hostNetwork
 None - ignore DNS settings; DNS settings are given using the dnsConfig field
 ```
 
-#### Pod’s DNS Config
+#### Pod's DNS Config
 
-`Pod`’s DNS Config gives more DNS control.
+`Pod`'s DNS Config gives more DNS control.
 
 TODO

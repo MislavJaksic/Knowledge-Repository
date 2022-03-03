@@ -83,7 +83,7 @@ Now that your application is deployed, you can trigger a new version of that ima
 
 $ oc tag --source=docker openshift/deployment-example:v2 deployment-example:latest
 
-Your application’s deployment config is watching deployment-example:latest and will trigger a new rolling deployment when the latest tag is updated to the value from v2.
+Your application's deployment config is watching deployment-example:latest and will trigger a new rolling deployment when the latest tag is updated to the value from v2.
 
 
 You can also use an alternate version of the command:
@@ -91,7 +91,7 @@ You can also use an alternate version of the command:
 $ oc tag docker.io/openshift/deployment-example:v2 deployment-example:latest
 
 Return to the browser or use curl again and you should see the v2 text displayed on the page.
-	For this next step we’ll need to ensure that Docker is able to pull images from the host system. Ensure you have completed the instructions about setting the --insecure-registry flag from Host Preparation.
+	For this next step we'll need to ensure that Docker is able to pull images from the host system. Ensure you have completed the instructions about setting the --insecure-registry flag from Host Preparation.
 
 As a developer, building new container images is as important as deploying them. OKD provides tools for running builds as well as building source code from within predefined builder images via the Source-to-Image toolchain.
 

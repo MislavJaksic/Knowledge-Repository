@@ -150,8 +150,8 @@ $: helm install --set tags.front-end=true --set subchart2.enabled=false
 
 Considerations:
 * `condition`s override `tags`. The first condition path that exists wins and subsequent ones for that chart are ignored
-* `tags` are evaluated as "if any of the chart’s tags are true then enable the chart"
-* `tags` and `condition`s are set in the top parent’s values
+* `tags` are evaluated as "if any of the chart's tags are true then enable the chart"
+* `tags` and `condition`s are set in the top parent's values
 * `tags` must be a top level key; `global`s and nested `tags` tables are not  supported
 
 ##### Importing Child Values via dependencies

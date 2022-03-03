@@ -64,7 +64,7 @@ Protocol-based
 
 * Protocol-based providers are those that rely on a specific protocol in order to authenticate and authorize users. They allow you to connect to any identity provider compliant with a specific protocol. Keycloak provides support for SAML v2.0 and OpenID Connect v1.0 protocols. It makes it easy to configure and broker any identity provider based on these open standards.
 
-Although each type of identity provider has its own configuration options, all of them share some very common configuration. Regardless of which identity provider you are creating, you’ll see the following configuration options available:
+Although each type of identity provider has its own configuration options, all of them share some very common configuration. Regardless of which identity provider you are creating, you'll see the following configuration options available:
 Table 1. Common Configuration Configuration 	Description
 
 Alias

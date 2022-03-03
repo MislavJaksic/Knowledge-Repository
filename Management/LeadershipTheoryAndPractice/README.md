@@ -97,7 +97,7 @@ What counts is how a leader behaves in a situation.
 
 Effective leadership: identify the D and match it with an S.  
 
-Questionnaires about leader’s diagnostic ability, flexibility, and effectiveness help them identify how to become better.  
+Questionnaires about leader's diagnostic ability, flexibility, and effectiveness help them identify how to become better.  
 
 Situation approach can be trained, is practical, prescriptive and requires flexibility.  
 Situation approach hasn't been researched, isn't clear on how followers move between development levels and cannot be applied to group leadership.  
@@ -144,7 +144,7 @@ Path-goal theory is complex, is not supported by research, isn't clear how leade
 Or vertical dyad linkage (VDL) theory.  
 What counts is how leaders and followers interact.  
 Leader's in-group followers are those that expand their role responsibilities and get along with the leader. They get extra benefits.  
-Leader’s out-group followers are those that just do their formal job description.  
+Leader's out-group followers are those that just do their formal job description.  
 High-quality exchanges between leaders and followers produce positive outcomes.  
 
 Leaders should expand their in-group by leading followers though phases:  
@@ -200,7 +200,7 @@ Servant Leadership is paradoxical, not a framework, utopian and unclear.
 
 Leaders are transparent, morally grounded, and responsive.  
 Authentic leadership:  
-* rests on the leader’s knowledge, self-regulation and self-concept  
+* rests on the leader's knowledge, self-regulation and self-concept  
 * is created by both leaders and followers  
 * develops over a lifetime  
 Authentic leadership has:  

@@ -19,7 +19,7 @@ How it works:
 
 These steps can be tested by creating a GitLab project from a `GitLab Pages` template.  
 
-Things are a bit different if you’re using self-managed instances.  
+Things are a bit different if you're using self-managed instances.  
 
 ## [Projects for GitLab Pages and URL structure](https://docs.gitlab.com/ee/user/project/pages/getting_started_part_two.html)
 

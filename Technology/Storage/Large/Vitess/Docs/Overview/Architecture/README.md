@@ -4,7 +4,7 @@ To arrive at a full Vitess implementation either:
 * define the database topology
 * scale existing databases
 
-Vitess’ components:
+Vitess' components:
 * Vitess Runtime:
     * Application
     * VTGate

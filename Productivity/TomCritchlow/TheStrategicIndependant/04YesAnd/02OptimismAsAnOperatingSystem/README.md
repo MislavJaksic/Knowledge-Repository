@@ -22,7 +22,7 @@ You should aim for the middle when:
 Sometimes, being excited, positive and enthusiastic is enough.  
 These are precursors for real change.  
 
-### On client frustration and the word “just…”
+### On client frustration and the word "just…"
 
 What seemed like a problem might be because of the client's strength.  
 Hunt for systems, not problems. A change will effect the whole system.  

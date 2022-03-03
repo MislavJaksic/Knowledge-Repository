@@ -18,13 +18,13 @@ Log events such as:
     * application and component installation and changes.
 * availability issues:
     * startups and shutdowns of systems, applications, and application modules or components
-    * faults and errors, especially errors affecting the application’s availability
+    * faults and errors, especially errors affecting the application's availability
     * backup successes and failures that affect availability
 * resource issues:
     * exhausted resources, exceeded capacities
     * connectivity issues and problems
     * reached limits
-* “badness” or threats:
+* "badness" or threats:
     * invalid inputs and other likely application abuses
     * other security issues known to affect the application
 

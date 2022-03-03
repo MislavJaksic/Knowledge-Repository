@@ -4,6 +4,15 @@
 
 [Additional instructions](http://www.postgresqltutorial.com/)
 
+#### Windows
+
+Download and install Postgre togahter with pgAdmin and StackBuilder.  
+
+```
+Username: postgres
+Password: Your-Choice
+```
+
 #### Linux
 
 ```
@@ -36,40 +45,6 @@ $: createuser --interactive
 $: psql
   # \q  # quit
 ```
-
-### [Installing pgadmin](http://queirozf.com/entries/installing-postgresql-and-pgadmin-on-ubuntu)
-
-```
-$: sudo apt-get install pgadmin3
-```
-
-```
-$: psql
-\password _username
-Enter your password: _password
-```
-
-```
-$: pgadmin3
-```
-
-```
-# Note: click "Add a connection to a server"
-Name: Catchy-Name
-Host: localhost
-Port: by default, its 5432
-Maintenance DB: postgres
-Username: _username
-Password: _password
-```
-
-### PgAdmin interface
-
-Buttons:
-* Refresh
-* Execute arbitrary SQL queries
-* Expand schemas list
-* Show data in selected table
 
 ### [PostgreSQL and Python psycopg](http://www.postgresqltutorial.com/postgresql-python/)
 

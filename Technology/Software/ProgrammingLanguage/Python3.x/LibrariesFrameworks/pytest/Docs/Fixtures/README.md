@@ -11,7 +11,7 @@ Pytest has many built-in fixtures.
 
 ### Fixtures as Function arguments
 
-Test functions can receive fixture objects by naming them as an input argument. For each argument name, a fixture function with that name provides the fixture object. Fixture functions are registered by marking them with @pytest.fixture. Let’s look at a simple self-contained test module containing a fixture and a test function using it:
+Test functions can receive fixture objects by naming them as an input argument. For each argument name, a fixture function with that name provides the fixture object. Fixture functions are registered by marking them with @pytest.fixture. Let's look at a simple self-contained test module containing a fixture and a test function using it:
 
 # content of ./test_smtpsimple.py
 import pytest
@@ -64,7 +64,7 @@ In the failure traceback we see that the test function was called with a smtp_co
 
     test_ehlo(<smtp_connection instance>) is called and fails in the last line of the test function.
 
-Note that if you misspell a function argument or want to use one that isn’t available, you’ll see an error with a list of available function arguments.
+Note that if you misspell a function argument or want to use one that isn't available, you'll see an error with a list of available function arguments.
 
 Note
 
@@ -75,10 +75,10 @@ pytest --fixtures test_simplefactory.py
 to see available fixtures (fixtures with leading _ are only shown if you add the -v option).
 Fixtures: a prime example of dependency injection
 
-Fixtures allow test functions to easily receive and work against specific pre-initialized application objects without having to care about import/setup/cleanup details. It’s a prime example of dependency injection where fixture functions take the role of the injector and test functions are the consumers of fixture objects.
+Fixtures allow test functions to easily receive and work against specific pre-initialized application objects without having to care about import/setup/cleanup details. It's a prime example of dependency injection where fixture functions take the role of the injector and test functions are the consumers of fixture objects.
 conftest.py: sharing fixture functions
 
-If during implementing your tests you realize that you want to use a fixture function from multiple test files you can move it to a conftest.py file. You don’t need to import the fixture you want to use in a test, it automatically gets discovered by pytest. The discovery of fixture functions starts at test classes, then test modules, then conftest.py files and finally builtin and third party plugins.
+If during implementing your tests you realize that you want to use a fixture function from multiple test files you can move it to a conftest.py file. You don't need to import the fixture you want to use in a test, it automatically gets discovered by pytest. The discovery of fixture functions starts at test classes, then test modules, then conftest.py files and finally builtin and third party plugins.
 
 You can also use the conftest.py file to implement local per-directory plugins.
 Sharing test data
@@ -281,7 +281,7 @@ def smtp_connection():
 
 The print and smtp.close() statements will execute when the last test in the module has finished execution, regardless of the exception status of the tests.
 
-Let’s execute it:
+Let's execute it:
 
 $ pytest -s -q --tb=no
 FFteardown smtp
@@ -335,7 +335,7 @@ Note that if an exception happens during the setup code (before the yield keywor
 
 An alternative option for executing teardown code is to make use of the addfinalizer method of the request-context object to register finalization functions.
 
-Here’s the smtp_connection fixture changed to use addfinalizer for cleanup:
+Here's the smtp_connection fixture changed to use addfinalizer for cleanup:
 
 # content of conftest.py
 import smtplib
@@ -353,7 +353,7 @@ def smtp_connection(request):
     request.addfinalizer(fin)
     return smtp_connection  # provide the fixture value
 
-Here’s the equipments fixture changed to use addfinalizer for cleanup:
+Here's the equipments fixture changed to use addfinalizer for cleanup:
 
 # content of test_yield3.py
 
@@ -383,7 +383,7 @@ def equipments(request):
 Both yield and addfinalizer methods work similarly by calling their code after the test ends. Of course, if an exception happens before the finalize function is registered then it will not be executed.
 Fixtures can introspect the requesting test context
 
-Fixture functions can accept the request object to introspect the “requesting” test function, class or module context. Further extending the previous smtp_connection fixture example, let’s read an optional server URL from the test module which uses our fixture:
+Fixture functions can accept the request object to introspect the "requesting" test function, class or module context. Further extending the previous smtp_connection fixture example, let's read an optional server URL from the test module which uses our fixture:
 
 # content of conftest.py
 import pytest
@@ -408,7 +408,7 @@ FAILED test_module.py::test_ehlo - assert 0
 FAILED test_module.py::test_noop - assert 0
 2 failed in 0.12s
 
-Let’s quickly create another test module that actually sets the server URL in its module namespace:
+Let's quickly create another test module that actually sets the server URL in its module namespace:
 
 # content of test_anothersmtp.py
 
@@ -460,7 +460,7 @@ def test_fixt(fixt):
 
 Factories as fixtures
 
-The “factory as fixture” pattern can help in situations where the result of a fixture is needed multiple times in a single test. Instead of returning data directly, the fixture instead returns a function which generates the data. This function can then be called multiple times in the test.
+The "factory as fixture" pattern can help in situations where the result of a fixture is needed multiple times in a single test. Instead of returning data directly, the fixture instead returns a function which generates the data. This function can then be called multiple times in the test.
 
 Factories can have parameters as needed:
 
@@ -518,7 +518,7 @@ def smtp_connection(request):
     print("finalizing {}".format(smtp_connection))
     smtp_connection.close()
 
-The main change is the declaration of params with @pytest.fixture, a list of values for each of which the fixture function will execute and can access a value via request.param. No test function code needs to change. So let’s just do another run:
+The main change is the declaration of params with @pytest.fixture, a list of values for each of which the fixture function will execute and can access a value via request.param. No test function code needs to change. So let's just do another run:
 
 $ pytest -q test_module.py
 FFFF                                                                 [100%]
@@ -613,7 +613,7 @@ def b(request):
 def test_b(b):
     pass
 
-The above shows how ids can be either a list of strings to use or a function which will be called with the fixture value and then has to return a string to use. In the latter case if the function returns None then pytest’s auto-generated ID will be used.
+The above shows how ids can be either a list of strings to use or a function which will be called with the fixture value and then has to return a string to use. In the latter case if the function returns None then pytest's auto-generated ID will be used.
 
 Running the above tests results in the following test IDs being used:
 
@@ -695,7 +695,7 @@ def app(smtp_connection):
 def test_smtp_connection_exists(app):
     assert app.smtp_connection
 
-Here we declare an app fixture which receives the previously defined smtp_connection fixture and instantiates an App object with it. Let’s run it:
+Here we declare an app fixture which receives the previously defined smtp_connection fixture and instantiates an App object with it. Let's run it:
 
 $ pytest -v test_appsetup.py
 =========================== test session starts ============================
@@ -711,7 +711,7 @@ test_appsetup.py::test_smtp_connection_exists[mail.python.org] PASSED [100%]
 
 Due to the parametrization of smtp_connection, the test will run twice with two different App instances and respective smtp servers. There is no need for the app fixture to be aware of the smtp_connection parametrization because pytest will fully analyse the fixture dependency graph.
 
-Note that the app fixture has a scope of module and uses a module-scoped smtp_connection fixture. The example would still work if smtp_connection was cached on a session scope: it is fine for fixtures to use “broader” scoped fixtures but not the other way round: A session-scoped fixture could not use a module-scoped one in a meaningful way.
+Note that the app fixture has a scope of module and uses a module-scoped smtp_connection fixture. The example would still work if smtp_connection was cached on a session scope: it is fine for fixtures to use "broader" scoped fixtures but not the other way round: A session-scoped fixture could not use a module-scoped one in a meaningful way.
 Automatic grouping of tests by fixture instances
 
 pytest minimizes the number of active fixtures during test runs. If you have a parametrized fixture, then all the tests using it will first execute with one instance and then finalizers are called before the next fixture instance is created. Among other things, this eases testing of applications which create and use global state.
@@ -749,7 +749,7 @@ def test_1(modarg):
 def test_2(otherarg, modarg):
     print("  RUN test2 with otherarg {} and modarg {}".format(otherarg, modarg))
 
-Let’s run the tests in verbose mode and with looking at the print-output:
+Let's run the tests in verbose mode and with looking at the print-output:
 
 $ pytest -v -s test_module.py
 =========================== test session starts ============================
@@ -793,7 +793,7 @@ PASSED  TEARDOWN otherarg 2
 
 ============================ 8 passed in 0.12s =============================
 
-You can see that the parametrized module-scoped modarg resource caused an ordering of test execution that lead to the fewest possible “active” resources. The finalizer for the mod1 parametrized resource was executed before the mod2 resource was setup.
+You can see that the parametrized module-scoped modarg resource caused an ordering of test execution that lead to the fewest possible "active" resources. The finalizer for the mod1 parametrized resource was executed before the mod2 resource was setup.
 
 In particular notice that test_0 is completely independent and finishes first. Then test_1 is executed with mod1, then test_2 with mod1, then test_1 with mod2 and finally test_2 with mod2.
 
@@ -837,7 +837,7 @@ class TestDirectoryInit:
     def test_cwd_again_starts_empty(self):
         assert os.listdir(os.getcwd()) == []
 
-Due to the usefixtures marker, the cleandir fixture will be required for the execution of each test method, just as if you specified a “cleandir” function argument to each of them. Let’s run it to verify our fixture is activated and the tests pass:
+Due to the usefixtures marker, the cleandir fixture will be required for the execution of each test method, just as if you specified a "cleandir" function argument to each of them. Let's run it to verify our fixture is activated and the tests pass:
 
 $ pytest -q
 ..                                                                   [100%]
@@ -1051,7 +1051,7 @@ tests/
         def test_username_other(other_username):
             assert other_username == 'other-directly-overridden-username-other'
 
-In the example above, a fixture value is overridden by the test parameter value. Note that the value of the fixture can be overridden this way even if the test doesn’t use it directly (doesn’t mention it in the function prototype).
+In the example above, a fixture value is overridden by the test parameter value. Note that the value of the fixture can be overridden this way even if the test doesn't use it directly (doesn't mention it in the function prototype).
 Override a parametrized fixture with non-parametrized one and vice versa
 
 Given the tests file structure is:

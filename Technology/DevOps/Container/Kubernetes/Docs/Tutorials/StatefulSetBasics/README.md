@@ -77,7 +77,7 @@ $: for i in 0 1; do kubectl exec web-$i -- sh -c 'hostname'; done  #-> get stick
 ```
 
 The CNAME of the `Headless Service` points to a SRV record, one for each `Pod`.  
-The SRV records point to A record entries that contain the `Pod`s’ IP addresses.  
+The SRV records point to A record entries that contain the `Pod`s' IP addresses.  
 
 ```
 $: kubectl run -i --tty --image busybox:1.28 dns-test --restart=Never --rm  #-> test in-cluster DNS visibility

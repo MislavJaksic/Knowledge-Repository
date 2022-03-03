@@ -3249,7 +3249,7 @@ spec:
                 for deletion will be performed on the underlying objects.
               type: boolean
             podMetadata:
-              description: 'Standard object’s metadata. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#metadata
+              description: 'Standard object's metadata. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#metadata
                 Metadata Labels and Annotations gets propagated to the prometheus
                 pods.'
               type: object

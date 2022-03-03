@@ -34,7 +34,7 @@ Hint: for experienced groups you can use [Flags](https://rpg.divnull.com/wiki/in
 
 #### Alignment
 
-Character’s way of thinking and moral compass.  
+Character's way of thinking and moral compass.  
 
 The player must have a reason for the alignment change which they can explain to the other players.  
 
@@ -54,7 +54,7 @@ There is a Order Hireling move.
 
 #### Making a Hireling
 
-#### The Adventurer’s Life
+#### The Adventurer's Life
 
 ### Chapter 13: GM
 

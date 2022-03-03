@@ -91,7 +91,7 @@ pgo-apiserver version 4.2.2
 
 Step 5: Have Some Fun - Create a PostgreSQL Cluster
 
-The quickstart installation method creates two namespaces that you can deploy your PostgreSQL clusters into called pgouser1 and pgouser2. Let’s create a new PostgreSQL cluster in pgouser1:
+The quickstart installation method creates two namespaces that you can deploy your PostgreSQL clusters into called pgouser1 and pgouser2. Let's create a new PostgreSQL cluster in pgouser1:
 
 pgo create cluster -n pgouser1 hippo
 

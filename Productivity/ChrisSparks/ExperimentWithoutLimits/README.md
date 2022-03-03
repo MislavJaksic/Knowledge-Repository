@@ -52,7 +52,7 @@ How can you improve? Do you still think a goal is worth pursuing?
 Experiment:
 * STEP 1: What is a SMART goal that could improve your life?
 * STEP 2: What are the hypotheses that need to be tested?
-* STEP 3: Which hypothesis is critical to the experiment’s success? What is the result necessary to support completion on this goal?
+* STEP 3: Which hypothesis is critical to the experiment's success? What is the result necessary to support completion on this goal?
 * STEP 4: How will you quickly test this hypothesis? How will you adjust if your test does not have the desired result?
 
 ### Designing Systems

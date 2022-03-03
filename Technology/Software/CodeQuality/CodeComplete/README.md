@@ -107,7 +107,7 @@ where code will have to change.
 
 - General architectural quality - characterised by discussions of classes,
 information that is hidden in them and reasons why classes are designed in a
-particular way, architecture’s objectives should be clearly stated, architecture
+particular way, architecture's objectives should be clearly stated, architecture
 should describe the motivations for all major decisions, architecture should be
 machine and language independent, architecture should explicitly identify risky
 areas and should contain multiple views.
@@ -383,7 +383,7 @@ which creates good abstractions.
 Minimizing accessibility to the methods and data, the stricter the better.
 Preserve a good abstraction by exposing a few cohesive methods.
 
-Avoid putting private implementation details into a class’s interface. Hide how
+Avoid putting private implementation details into a class's interface. Hide how
 the class performs a function as it will decrease complexity by a lot.
 
 Don't make assumptions about the users. They can and will use methods in the
@@ -431,7 +431,7 @@ class of the parent class.
 Inheritance should be either prohibited or designed and documented.
 
 Observe the Liskov Substitution Principle(LSP). All the routines defined in the
-parent class should mean the same thing when they’re used in each of the child
+parent class should mean the same thing when they're used in each of the child
 classes.
 
 Don't inherit an implementation because you want to inherit an interface or the
@@ -585,7 +585,7 @@ solved by creating separate routines for each of the operations. That way other
 routines will be able to call one of them without invoking the other.
 
 Communicational cohesion occurs when operations in a routine make use of the
-same data and aren’t related in any other way. Split it into separate routines
+same data and aren't related in any other way. Split it into separate routines
 and make another higher level routine that would call both of them.
 
 Temporal cohesion occurs when operations are combined into a routine because
@@ -596,11 +596,11 @@ themselves.
 There are cohesions that must be avoided:
 Procedural cohesion occurs when operations in a routine are done in a specified
 order. The routine has procedural cohesion because it puts a set of operations
-in a specified order and the operations don’t need to be combined for any other
+in a specified order and the operations don't need to be combined for any other
 reason. Solve it by separating the routines.
 
 Logical cohesion occurs when several operations are stuffed into the same
-routine and one of the operations is selected by a control flag that’s passed in.
+routine and one of the operations is selected by a control flag that's passed in.
 Break it into multiple routines. The only exception is if the routine is an
 event handler that only executes other routine and doesn't do anything itself.
 
@@ -881,9 +881,9 @@ it is not systematic, this approach will drive you into a corner
 
 You should declare variables even if the compiler doesn't require you to.
 
-Initialize each variable as it’s declared.
+Initialize each variable as it's declared.
 
-Initialize each variable close to where it’s first used. Principle of Proximity:
+Initialize each variable close to where it's first used. Principle of Proximity:
 keep related actions together.
 
 Use final or const when possible. If not, use a coding convention such as
@@ -891,7 +891,7 @@ capitalize a name if it is a constant.
 
 Make sure counters are reset at proper times.
 
-Initialize a class’s member data in its constructor.
+Initialize a class's member data in its constructor.
 
 Don't ignore your compiler's warnings when it comes to variables.
 
@@ -914,7 +914,7 @@ Group related statements.
 
 Break groups of related statements into separate routines.
 
-Begin with most restricted visibility, and expand the variable’s scope only if
+Begin with most restricted visibility, and expand the variable's scope only if
 necessary.
 
 By minimizing scope, it is harder to write the program because the area where
@@ -1010,9 +1010,9 @@ Avoid variables with different meanings but similar names.
 
 Avoid numerals in names. Avoid misspelled words in names.
 
-Don’t differentiate variable names solely by capitalization.
+Don't differentiate variable names solely by capitalization.
 
-Don’t use names that are totally unrelated to what the variables represent.
+Don't use names that are totally unrelated to what the variables represent.
 
 ## Chapter 12: Fundamental Data Types
 

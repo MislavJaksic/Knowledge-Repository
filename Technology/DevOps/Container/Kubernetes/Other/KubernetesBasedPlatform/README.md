@@ -63,7 +63,7 @@ Iterating faster provides a competitive advantage.
 It takes advantage of traffic control and `Observability`.  
 Developers must be able to define, modify and maintain pipelines that codify all of the build, quality and security assertions.  
 
-#### Evolving an Organisation’s Approach to Continuous Delivery
+#### Evolving an Organisation's Approach to Continuous Delivery
 
 Jenkins X is Jenkins that supports Kubernetes natively.  
 Jenkins X supports `Progressive Delivery`.  

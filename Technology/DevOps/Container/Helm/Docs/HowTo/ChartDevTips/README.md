@@ -60,7 +60,7 @@ metadata:
 [...]
 ```
 
-### Using “Partials” and Template Includes
+### Using "Partials" and Template Includes
 
 Helper templates and partials are placed in a `_helpers.tpl` file.
 

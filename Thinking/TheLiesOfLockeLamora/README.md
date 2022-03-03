@@ -327,7 +327,7 @@ The Don says he can't be seen teaching Jean by the noble boys: they are learning
 
 Locke will excuse himself from being at Capa's side.  
 
-Calo and Galdo go to the Black Alchemist: Jessaline d’Aubart and her daughter Janellaine.  
+Calo and Galdo go to the Black Alchemist: Jessaline d'Aubart and her daughter Janellaine.  
 They are looking to purchase something that'll make Jean and Locke sick.  
 The Alchemist mother-daughter give them two plants, one to make him sick and another as an antidote.  
 They pay five crowns for it, a huge amount!  
@@ -421,6 +421,10 @@ Reynart says his men did not visit the Salvaras.
 Dona Vorchenza set a plan in motion that will trap the Thorn of Camorr: invitation to Raven's Reach, observation of Thumblehome and Meraggio's, check up on Evante Eccari and Lucas Fehrwight.  
 
 #### Interlude: The schoolmaster of Roses
+
+Don Maranzalla is training Jean Tannen at the House of Glass Roses.  
+
+#### Chapter Ten: Teeth lessons
 
 
 

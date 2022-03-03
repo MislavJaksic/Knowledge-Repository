@@ -7,7 +7,7 @@ Objectives:
 
 Terminology:
 * [NAT](https://en.wikipedia.org/wiki/Network_address_translation): Network Address Translation; remap the IP address by modifying the IP header of packets
-* [Source NAT](https://en.wikipedia.org/wiki/Network_address_translation#SNAT: replacing the source IP on a packet, usually with a `Node`’s IP
+* [Source NAT](https://en.wikipedia.org/wiki/Network_address_translation#SNAT: replacing the source IP on a packet, usually with a `Node`'s IP
 * [Destination NAT](https://en.wikipedia.org/wiki/Network_address_translation#DNAT): replacing the destination IP on a packet, usually with a `Pod` IP
 * VIP: a virtual IP, such as the one assigned to every Kubernetes `Service`
 * `Kube-proxy`: a network daemon that orchestrates Service VIP management on every `Node`
@@ -45,7 +45,7 @@ $: kubectl run busybox -it --image=busybox --restart=Never --rm
   # ...
 ```
 
-The `client_address` is always the `Pod`’s IP address.  
+The `client_address` is always the `Pod`'s IP address.  
 
 ### Source IP for Services with Type=NodePort
 
@@ -72,8 +72,8 @@ Received not the client's IP, but the cluster's internal IP.
 node 1 <--- node 2   node2 replaces the source IP address with its own IP address (SNAT)
 | ^   SNAT           node2 replaces the destination IP on the packet with the pod IP
 | |   --->           packet is routed to node 1, and then to the endpoint
-v |                  the pod’s reply is routed back to node2
-endpoint             the pod’s reply is sent back to the client
+v |                  the pod's reply is routed back to node2
+endpoint             the pod's reply is sent back to the client
 ```
 
 Kubernetes has a feature to preserve the client source IP.  

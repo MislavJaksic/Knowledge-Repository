@@ -29,8 +29,8 @@ spec:
 
 `ServiceType`s specify the kind of service you want:
 * `ClusterIP` (default): `Service` only reachable from within Kubernetes; expose `Service` on a cluster-internal IP
-* `NodePort`: `Service` accessible from outside Kubernetes using `Node-IP:Node-Port`; expose `Service` on each `Node`’s IP at a static port (`Node-Port`); creates a `ClusterIP` `Service` to which it routes
-* `LoadBalancer`: an external load balancer assigns a fixed, external IP to the `Service`; expose `Service` using a cloud provider’s load balancer; creates a `ClusterIP` and `NodePort` `Service`s to which it routes
+* `NodePort`: `Service` accessible from outside Kubernetes using `Node-IP:Node-Port`; expose `Service` on each `Node`'s IP at a static port (`Node-Port`); creates a `ClusterIP` `Service` to which it routes
+* `LoadBalancer`: an external load balancer assigns a fixed, external IP to the `Service`; expose `Service` using a cloud provider's load balancer; creates a `ClusterIP` and `NodePort` `Service`s to which it routes
 * `ExternalName`: maps `Service` to `externalName` field by returning a CNAME record; no proxy is used
 
 `Ingress` is not a `ServiceType`.  
@@ -61,7 +61,7 @@ Specific port number in `nodePort` field.
 Cloud providers must support external load balancers for it to work.  
 `Minikube` can expose a `LoadBalancer` `Service` using `$: minikube service LoadBalancer-Service-Name`.
 `LoadBalancer` provisions a load balancer for your `Service`.  
-See `Service`’s `LoadBalancer` status in `.status.loadBalancer`.  
+See `Service`'s `LoadBalancer` status in `.status.loadBalancer`.  
 
 ```
 apiVersion: v1

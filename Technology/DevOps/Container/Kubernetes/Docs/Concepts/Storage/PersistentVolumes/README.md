@@ -24,7 +24,7 @@ The PV may be in access of what the PVC is asking.
 
 Pods use claims as `Volume`s.  
 A PV belongs to the PVC for as long as it needs it.  
-`Pod`s access claimed PVs by including a `PersistentVolumeClaim` in their `Pod`’s volumes block.  
+`Pod`s access claimed PVs by including a `PersistentVolumeClaim` in their `Pod`'s volumes block.  
 
 A PVC is protected when the Finalizers list in a PVC includes `kubernetes.io/pvc-protection`.  
 a PV is protected when the Finalizers list includes `kubernetes.io/pv-protection`.  

@@ -33,7 +33,7 @@ Kubernetes supports and maintains:
 
 * `Skipper` HTTP router and reverse proxy for service composition, including use cases like Kubernetes `Ingress`, designed as a library to build your custom proxy
 
-* `Traefik` is a fully featured ingress controller (`Let’s Encrypt`, secrets, http2, websocket), and it also comes with commercial support by `Containous`.
+* `Traefik` is a fully featured ingress controller (`Let's Encrypt`, secrets, http2, websocket), and it also comes with commercial support by `Containous`.
 
 ### Using multiple Ingress controllers
 

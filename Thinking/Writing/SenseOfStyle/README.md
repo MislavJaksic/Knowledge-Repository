@@ -273,7 +273,7 @@ Look things up. Don't be afraid to say I don't know.
 Make sound arguments. Start from what resonable people agree with and use `if-then` steps to arrive at your conclusion.  
 An anectode or personal experience is not a trend.  
 Beware of false dichotomies. Great ideas are more complex then that.  
-Base arguments on reason not people. It's not about being right. It’s about getting it right.  
+Base arguments on reason not people. It's not about being right. It's about getting it right.  
 
 Style is about:
 * enhancing the spread of ideas

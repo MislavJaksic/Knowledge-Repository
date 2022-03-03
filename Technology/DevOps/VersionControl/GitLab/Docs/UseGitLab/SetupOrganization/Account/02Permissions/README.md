@@ -2,7 +2,7 @@
 
 Permissions allow users to perform actions.  
 
-The highest permission level is used if a user is both in a group’s project and the project itself.  
+The highest permission level is used if a user is both in a group's project and the project itself.  
 
 On public and internal projects the Guest role is not enforced.
 
@@ -105,7 +105,7 @@ On public and internal projects the Guest role is not enforced.
 | Create and edit wiki pages                                       |         |          | ✓         | ✓          | ✓     |
 | Rewrite/remove Git tags                                          |         |          | ✓         | ✓          | ✓     |
 | Use environment terminals                                        |         |          |           | ✓          | ✓     |
-| Run Web IDE’s Interactive Web Terminals
+| Run Web IDE's Interactive Web Terminals
                         |         |          |           | ✓          | ✓     |
 | Add new team members                                             |         |          |           | ✓          | ✓     |
 | Enable/disable branch protection                                 |         |          |           | ✓          | ✓     |
