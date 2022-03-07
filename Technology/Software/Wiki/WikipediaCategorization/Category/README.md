@@ -1,4 +1,4 @@
-## [https://en.wikipedia.org/wiki/Help:Category](https://en.wikipedia.org/wiki/Help:Category)
+## [Help:Category](https://en.wikipedia.org/wiki/Help:Category)
 
 Categories group together pages on similar subjects. Use markup `[[Category:XYZ|Sortkey]]`.  
 
