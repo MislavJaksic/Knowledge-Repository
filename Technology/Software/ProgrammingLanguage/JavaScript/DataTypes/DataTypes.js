@@ -48,6 +48,6 @@ if (bool === true){ //  -> false
 }
 
 // String methods: https:// developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Text_formatting
-let string_number = "123.45"
-parseInt(string_number)  // -> 123
-parseFloat(string_number)  // -> 123.45
+let stringNumber = "123.45"
+parseInt(stringNumber)  // -> 123
+parseFloat(stringNumber)  // -> 123.45

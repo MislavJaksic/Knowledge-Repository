@@ -37,8 +37,8 @@ for (let i = 0; i < 3; i++){  // define "let i" or the counter variable may leek
 // Iterates over all the enumerable properties of an object
 let array = [0,1]
 array.prop = "property"
-for (let property_name in array){
-	console.log("property:" + property_name)  // -> 0 1 prop
+for (let propertyName in array){
+	console.log("property:" + propertyName)  // -> 0 1 prop
 }
 // Iterates over property values
 for (let value of array){

@@ -25,7 +25,7 @@ map.get(2)  // -> undefined
 map.has(5); //  true
 map.delete(4);
 
-map.forEach(function (value, key, map_itself) {
+map.forEach(function (value, key, mapItself) {
   console.log(value)  // -> "five"
 });
 

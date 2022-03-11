@@ -32,47 +32,47 @@ rareHoney.writeProperties()  // -> purple, 3
 
 // A demonstration of true inheritance
 
-function ParentObject(parent_value){
-  this.parent_value = parent_value;
+function ParentObject(parentValue){
+  this.parentValue = parentValue;
 };
 
-ParentObject.prototype.ImpliedMethod = function() {
-  alert("Parent implied " + this.parent_value);
+ParentObject.prototype.impliedMethod = function() {
+  alert("Parent implied " + this.parentValue);
 };
 
-ParentObject.prototype.OverridenMethod = function() {
-  alert("Parent overriden " + this.parent_value);
+ParentObject.prototype.overridenMethod = function() {
+  alert("Parent overriden " + this.parentValue);
 };
 
-ParentObject.prototype.AlteredMethod = function() {
-  alert("Parent altered " + this.parent_value);
+ParentObject.prototype.alteredMethod = function() {
+  alert("Parent altered " + this.parentValue);
 };
 
-function ChildObject(parent_value, child_value){
-  ParentObject.call(this, parent_value);
-  this.child_value = child_value;
+function ChildObject(parentValue, childValue){
+  ParentObject.call(this, parentValue);
+  this.childValue = childValue;
 };
 
 ChildObject.prototype = Object.create(ParentObject.prototype);
 ChildObject.prototype.constructor = ChildObject;
 
-ChildObject.prototype.OverridenMethod = function() {
-  alert("Child overriden " + this.child_value);
+ChildObject.prototype.overridenMethod = function() {
+  alert("Child overriden " + this.childValue);
 };
 
-ChildObject.prototype.AlteredMethod = function() {
-  ParentObject.prototype.AlteredMethod.call(this)
-  alert("Child altered " + this.child_value);
-  ParentObject.prototype.AlteredMethod.call(this)
+ChildObject.prototype.alteredMethod = function() {
+  ParentObject.prototype.alteredMethod.call(this)
+  alert("Child altered " + this.childValue);
+  ParentObject.prototype.alteredMethod.call(this)
 };
 
 parent = new ParentObject(2);
 
 child = new ChildObject(3, 5);
 
-parent.ImpliedMethod();  // -> 2
-parent.OverridenMethod();  // -> 2
+parent.impliedMethod();  // -> 2
+parent.overridenMethod();  // -> 2
 
-child.ImpliedMethod();  // -> 3
-child.OverridenMethod();  // -> 5
-child.AlteredMethod();  // -> 3 5 3
+child.impliedMethod();  // -> 3
+child.overridenMethod();  // -> 5
+child.alteredMethod();  // -> 3 5 3
