@@ -1,6 +1,6 @@
 ## Threats
 
-A threat is an ongoing problem that will cause trouble for the PCs if left unchecked.  
+A threat is an ongoing problem that will cause trouble for the PCs if left unchecked. It has to be worsening or an recurring issue. Don’t bother writing up a threat unless you know it’s going to be a big deal.  
 
 ### When to write up threats
 
@@ -47,7 +47,7 @@ When you realize that a threat contains sub-threats:
 * fully write up that other threat, as its own entry on the threat tracker and in your notes
 * pick a type and instinct for the lesser threat, and include them (in parentheses) as part of the main threat's description
 
-#### 5) Impending doom
+#### 5) Impending doom and grim portents
 
 Add the impending doom:
 * what irrevocable bad thing that will happen if it proceeds unchecked?

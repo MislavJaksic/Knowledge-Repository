@@ -87,6 +87,12 @@ Before you set your first scene, ask a bunch of loaded questions.
 
 #### Make things personal
 
+Ask questions of each player.  
+Try to balance how much you are asking each player.  
+Ask the questions in such a way that:
+* they presume the character’s direct involvement
+* the player is telling you what their character believes or has heard, rather than what they know
+
 ### Setting the scene
 
 Your goal is to establish what mundane, daily life looks like.  

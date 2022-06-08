@@ -13,7 +13,8 @@ def main():
     outside_string = "abdcba"
     print(check_palindrome(outside_string))  # -> "No"
     print(check_palindrome(string="nonnon"))  # -> "Yes"
-
+    print(check_palindrome(**{"string":"nonnon"}))  # -> "Yes"
+    exit()
     store_function = check_palindrome  # functions are values
     print(
         store_function("abba", 1, "Other", "arguments", example="Hello World")

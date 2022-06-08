@@ -5,6 +5,14 @@
 $: poetry env info  # show project virtualenv info
 ```
 
+### Commands
+
+```
+$: poetry self update  # poetry updates itself; poetry often breaks down!
+
+$: poetry add request@latest  # update existing dependency
+```
+
 ### [PyCharm](../../../IDE/PyCharm)  
 
 `PyCharm` is a free helpful IDE for Python that is fully compatible with `poetry`.  
