@@ -2,22 +2,13 @@
 
 ### [Windows](https://docs.docker.com/docker-for-windows/install/)
 
-Prerequisites:
-* Windows 10 64-bit: Pro, Enterprise, or Education (doesn't work on Home)
-* Hyper-V and Containers Windows are enabled
-
-Follow the link.  
-Login to` Docker Hub`.  
-Download the installer.  
-Double-click the `*.exe`.  
+Follow the guide.  
 
 ### Linux
 
-#### [Ubuntu Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+#### [Ubuntu Linux](https://docs.docker.com/engine/install/ubuntu/)
 
-```
-$: sudo apt-get remove docker docker-engine docker.io containerd runc  # uninstall old Docker
-```
+Uninstall the old version first.  
 
 ```
 $: sudo apt-get update
@@ -32,7 +23,7 @@ $: sudo apt-get install docker-ce docker-ce-cli containerd.io
 $: sudo docker run hello-world
 ```
 
-#### [Post-installation for Linux](https://docs.docker.com/install/linux/linux-postinstall/)
+#### [Post-installation for Linux](https://docs.docker.com/engine/install/linux-postinstall/)
 
 Non-root users will have to prefix every command with `sudo`.  
 Avoid it with:

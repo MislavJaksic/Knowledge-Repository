@@ -1,10 +1,6 @@
 ## [OpenVPN](https://openvpn.net/)
 
-TODO
-
-
-
-
+ToDO
 
 ### Running
 
