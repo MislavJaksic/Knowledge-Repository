@@ -14,30 +14,93 @@ Refer to this list when you need something interesting to say.
 
 See [GettingStarted](BookOne\01GettingStarted).  
 
-### Establish the situation
+### Running Stonetop
+
+#### Your agenda
+
+GM goals:
+* Portray a rich and mysterious world
+* Punctuate the characters' lives with adventure
+* Play to find out what happens
+
+#### Establish the situation
 
 * Frame the action: who?, when?, where?
 * Describe the environment: 3 strong impressions, smell, sound, sight, focusing on what matters
-* Give details and specifics: it'll give the situation texture
-* Ask questions, ask for input: don't ask them to make up details, but what they are feeling or experiencing or what they are doing or what they are thinking about
+* Give details and specifics: it'll give the situation texture; what's happening, who is doing what, where is everyone relative to everyone else, what can you sense
+* Ask questions, ask for input: don't ask them to make up key details only deatils that fit a theme, ask what they are feeling or experiencing or what they are doing or what they are thinking about
+* Portray NPCs and monsters: speak and describe, say how they respond to PCs
+* Answer questions, clarify: be honest and generous with truth and details; if the answer isn't clear to the PCs, tell them how they can find out
 
-See [RunningStonetop](BookOne\02RunningStonetop).  
+#### Make a soft GM move
 
-### Prep
+Provoke action or increase tension by using a GM move.  
+Make something happen or describe what is in the process of happening, but give the PCs a chance to act.  
+Offer an opportunity or present options and prompt them to pick.  
+Use up their stuff, foreshadow trouble or add trouble.  
 
-Gives you interesting stuff to say.  
+#### Your GM moves
 
-* Threats: ongoing, recurring problems that cause trouble for the PCs, things that are going to get worse if left unchecked
-* Hooks: when you want to push the PCs into the field with a threat or an opportunity
-* Expeditions: prepare your choices for the Chart a Course move; drawing a map, prepping points of interest and roughly imagining a few encounters
-* Locations: important place you expect the PCs to explore or encounter during a session. What's it like? How will you describe it? What questions will you ask about it? What's its story? Do you need a map or a visual aid? Are there dangers or discoveries within?
-* Dangers: hazards and monsters and hostile NPCs
-* Discoveries: puzzles, clues, mysteries, treasures, arcana
-* NPCs: think about their names, the questions you'll ask about them, their defining traits, how you'll describe them and potray them
+Your GM moves should inspire and empower you; they shouldn't constrain you. Don't stress if your move isn't on the list.  
 
-See [RunningStonetop](BookOne\02RunningStonetop).  
+* Announce trouble (future or offscreen)
+* Reveal an unwelcome truth
+* Ask a provocative question
+* Put someone in a spot
+* Use up their resources
+* Turn their move back on them
+* Demonstrate a downside
+* Hurt someone: problematic injury or wound a PC or an NPC they care about, something more than just losing HP; take tags and the amount of damage into account; telegraph or demonstrate the danger if you are going to inflict a permanent debilitating wound
+* Separate them
+* Capture someone
+* Offer an opportunity (with or without a cost)
+* Tell them the consequences/requirements (then ask)
+* Advance a countdown/grim portent
 
-### After each session
+#### Your principles
+
+* Follow the rules
+* Begin and end with the fiction
+* Address the characters, not the players
+* Ask questions and build on the answers:
+    * establish intent
+    * clarify intent
+    * clarify the fiction
+    * ask the characters what they are thinking or feeling
+    * ask about their past or their day to day lives
+    * ask things they would know
+    * about what they have heard or believe
+    * ask questions that assert details while asking for input
+    * ask the characters to paint the scene for you
+* Be a fan of the player characters
+* Embrace the fantastic and the mundane: if the focus is on the mundane, add a dash of the fantastic and vice-versa
+* Exploit the setting guide
+* Respect your prep
+* Bring your characters to life
+* Think offscreen, too
+* Bring it home: make the village the foundation, let them make improvements and put down threats, show how the neighbours, far and near, react, during adventure ask questions about their lives in the village, talk about how they are greeted when they return and about their daily lives
+* Let things breathe: avoid following the PCs day to day, hour to hour, allow straches of time to pass between adventures
+* Let things burn: play to find out what happens, nothing is sacred, protect no one and nothing
+
+#### Other things to do
+
+* Takes notes: NPC names, historical notes, interesting details, summary of events
+* Draw maps: and lots of them
+* Leave blanks: leave blanks in your maps, wonder about things, leave questions unanswered
+* Keep things moving: keep up the momentum, frame sceens agressively, skip ahead or make a GM move
+* Involve everyone
+* Take breaks
+* Engage players in worldbuilding
+* Sometimes, disclaim descision making: put the outcome in the PCs hands, discuss and outcome or let the dice decide
+
+#### What not to do
+
+* Plan a storyline or plot
+* Tell them to roll before they tell you want they are doing
+* Tell them to roll just because
+* Stop making GM moves
+
+#### After each session
 
 * Review your agenda:
     * Did the world feel flat, hollow, arbitrary?
@@ -55,6 +118,18 @@ See [RunningStonetop](BookOne\02RunningStonetop).
 * Did you miss to trigger certain moves?
     * Did you miss any moves getting triggered?
     * Did you call for a player move, even though its trigger wasn't really met?
+
+#### Prep
+
+Gives you interesting stuff to say.  
+
+* Threats: ongoing, recurring problems that cause trouble for the PCs, things that are going to get worse if left unchecked
+* Hooks: when you want to push the PCs into the field with a threat or an opportunity
+* Expeditions: prepare your choices for the Chart a Course move; drawing a map, prepping points of interest and roughly imagining a few encounters
+* Locations: important place you expect the PCs to explore or encounter during a session. What's it like? How will you describe it? What questions will you ask about it? What's its story? Do you need a map or a visual aid? Are there dangers or discoveries within?
+* Dangers: hazards and monsters and hostile NPCs
+* Discoveries: puzzles, clues, mysteries, treasures, arcana
+* NPCs: think about their names, the questions you'll ask about them, their defining traits, how you'll describe them and potray them
 
 See [RunningStonetop](BookOne\02RunningStonetop).  
 

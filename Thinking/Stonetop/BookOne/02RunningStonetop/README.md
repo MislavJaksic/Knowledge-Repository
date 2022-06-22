@@ -52,14 +52,17 @@ GM goals:
 
 * Frame the action: who?, when?, where?
 * Describe the environment: 3 strong impressions, smell, sound, sight, focusing on what matters
-* Give details and specifics: it'll give the situation texture
-* Ask questions, ask for input: don't ask them to make up details, but what they are feeling or experiencing or what they are doing or what they are thinking about
-* Portray NPCs and monsters
-* Answer questions, clarify
+* Give details and specifics: it'll give the situation texture; what's happening, who is doing what, where is everyone relative to everyone else, what can you sense
+* Ask questions, ask for input: don't ask them to make up key details only deatils that fit a theme, ask what they are feeling or experiencing or what they are doing or what they are thinking about
+* Portray NPCs and monsters: speak and describe, say how they respond to PCs
+* Answer questions, clarify: be honest and generous with truth and details; if the answer isn't clear to the PCs, tell them how they can find out
 
 #### Make a soft GM move
 
+Provoke action or increase tension by using a GM move.  
+Make something happen or describe what is in the process of happening, but give the PCs a chance to act.  
 Offer an opportunity or present options and prompt them to pick.  
+Use up their stuff, foreshadow trouble or add trouble.  
 
 #### "What do you do?"
 
@@ -129,14 +132,14 @@ Your GM moves should inspire and empower you; they shouldn't constrain you. Don'
 
 ### Other things to do
 
-* Takes notes
-* Draw maps
-* Leave blanks
-* Keep things moving
+* Takes notes: NPC names, historical notes, interesting details, summary of events
+* Draw maps: and lots of them
+* Leave blanks: leave blanks in your maps, wonder about things, leave questions unanswered
+* Keep things moving: keep up the momentum, frame sceens agressively, skip ahead or make a GM move
 * Involve everyone
 * Take breaks
 * Engage players in worldbuilding
-* Sometimes, disclaim descision making
+* Sometimes, disclaim descision making: put the outcome in the PCs hands, discuss and outcome or let the dice decide
 
 #### What not to do
 

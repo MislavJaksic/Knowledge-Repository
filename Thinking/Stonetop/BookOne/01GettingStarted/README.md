@@ -1,6 +1,6 @@
 ## Getting Started
 
-Main concept: play a group of heroes if s small isolated village  
+Main concept: play a group of heroes if s small isolated village.  
 
 Read Setting Overview first.  
 
