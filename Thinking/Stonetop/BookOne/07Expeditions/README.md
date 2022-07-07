@@ -33,7 +33,7 @@ Decise the load: light, medium or heavy.
 Small Items don't count as load.  
 Have What You Need move gives them items.  
 
-Followers need to Outfit too! Either you or the palyers decide.  
+Followers need to Outfit too! Either you or the players decide.  
 
 Ask questions about what they bring and maybe even have a little scene.  
 
@@ -55,7 +55,7 @@ The same is true if they fail to return the asset they borrowed: reduce Fortune 
 Zoom in and out of scenes and loose play.  
 They might not have enough time to Trade and Barter.  
 Let them do research, but if they dawdl tell them the requirements and consequences.  
-Followers, including Marshal's Crew, will join the expedition unless the mission if fulish or against the goals of the followers.  
+Followers, including Marshal's Crew, will join the expedition unless the mission is fulish or against the goals of the followers.  
 If PCs seek followers, offer an opportunity or introduce someone through Know Things, Seek Insight or Persuade. Candidates can come from a Muster too.  
 Followers also Outfit.  
 
@@ -156,7 +156,7 @@ You can decide yourself based on the story or you can roll the Die of Fate.
 Have what you need:  
 Recover:  
 Struggle as one: when you make everyone Defy Danger  
-Keep company: ask at a lul in the story, but don't overdo it; best when thy are coming back home  
+Keep company: ask at a lul in the story, but don't overdo it; best when they are coming back home  
 Make camp: ask questions from the GM cheatsheet and decide what'll happen: show downsides, tell them the consequences or offer them opportunities at a cost  
 Forage: travel-foraging halfs distance travelled; if danger isn't avoided, present it; if it was avoided, they find a plant or meat based product, maybe even let them decide  
 
@@ -205,4 +205,8 @@ Return triumphant: feel this one out, but make sure PCs indeed return triumphant
     * questions you want to ask PCs
     * any challenges from the Chart a Course
     * any dangers or discoveries
-6) Prepare up to seven possible encounters: dangers, discoveries, events for when the PCs miss a roll on 7-9; make sure you tie these encounters into the greater story
+6) Prepare up to seven possible encounters: dangers, discoveries, events for when the PCs miss a roll on 7-9
+    * 1-3 sentences
+    * tie into large story
+    * for creatures include disposition or activity - what are they up to and how are they likely to react to the characters?
+    * for any encounter, use it to show the characters the bigger picture

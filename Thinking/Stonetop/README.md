@@ -162,13 +162,18 @@ See [HarmAndHealing](BookOne\04HarmAndHealing).
 
 See [FirstAdventure](BookOne\05FirstAdventure).  
 
-### Running the journey
+### Expeditions
+
+Travel is an important. Don't gloss over it.  
+It is a chance to flesh out and explore the winder world and reinforce the relative safety of their Steading.  
+
+#### Running the journey
 
 Break the journey up into:
 * points of interest
 * legs of travel
 
-#### Legs of travel
+##### Legs of travel
 
 Follow the steps:
 * Frame the action: where they find themsleves, how long have they been travelling
@@ -187,7 +192,7 @@ Follow the steps:
 * Resolve their actions
 * Repeat
 
-#### Points of interest
+##### Points of interest
 
 Points of interest:
 * a landmark that has not yet been seen in play (or that has changed since the PC's last visit)
@@ -214,6 +219,27 @@ Follow the steps:
     * Use your exploration moves.
 * Resolve their actions
 * Repeat
+
+##### What to prep
+
+1) Chart a Course: make your choices with tick boxes, so you can tick them as you present them
+2) Draw a map
+3) Identify points of interest:
+    * any landmarks
+    * any places where you plan to have a scene
+    * the journey's destination
+4) Identify legs of journey between points of interest
+5) Make notes about each point of interest or leg of journey:
+    * brief description
+    * 2-3 impressions
+    * questions you want to ask PCs
+    * any challenges from the Chart a Course
+    * any dangers or discoveries
+6) Prepare up to seven possible encounters: dangers, discoveries, events for when the PCs miss a roll on 7-9
+    * 1-3 sentences
+    * tie into large story
+    * for creatures include disposition or activity - what are they up to and how are they likely to react to the characters?
+    * for any encounter, use it to show the characters the bigger picture
 
 See [Expeditions](BookOne\07Expeditions).  
 
