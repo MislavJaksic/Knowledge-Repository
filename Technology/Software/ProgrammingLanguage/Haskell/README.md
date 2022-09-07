@@ -6,6 +6,8 @@ Haskell is a functional programming language that is:
 * lazy evaluated (not eager)
 * general purpose
 
+Partly extracted to an external [repository](https://github.com/MislavJaksic/Haskell-Tutorial).  
+
 ### Resources
 
 [Haskell Wiki](https://wiki.haskell.org/Haskell)

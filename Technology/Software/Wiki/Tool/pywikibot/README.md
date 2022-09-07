@@ -29,9 +29,14 @@ $: poetry run python pwb.py replace -page:Page-Name-1..-page:Page-Name-N "Old-St
 $: poetry run python pwb.py replace -cat:Category-Name "Old-String" "New-String"  # Replace old with new string on pages in category
 $: poetry run python pwb.py replace -page:Page-Name-1..-page:Page-Name-N -regex "Find-Regex" "Replace-Regex"  # Replace old with new string on selected pages using regex
 
-$: poetry run python pwb.py category action add -cat:Category-Name  # ToDo
+$: poetry run python pwb.py category add  # ToDo
+$: poetry run python pwb.py category add -to:Category-Name -redirect -page:Page-Name-1..-page:Page-Name-N  # Add category to a list of pages and follow redirects
+$: poetry run python pwb.py category move -from:Category-Name -to:Category-Name -redirect -match:Regular-Expression  # Move a page that satisfies the RegEx
+$: poetry run python pwb.py category remove -from:Category-Name -redirect -page:Page-Name-1..-page:Page-Name-N  # Remove category from a list of pages and follow redirects
 
 $: poetry run python pwb.py add_text -cat:Category-Name -up -text:"{{Template-Name}}" -grepnot:"\{\{Template-Name\}\}"  # Add template to the top of the page, unless it is already present
 
 $: poetry run python pwb.py movepages -pairsfile:"move-pairsfile.txt" -noredirect  # Move "[[Old-Page]] [[New-Page]] [[Old-Page]] [[New-Page]]" page pairs leaving no redirect behind
+
+$: poetry run python pwb.py delete -cat:Category-Name  # Delete all pages in a category
 ```

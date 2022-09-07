@@ -3,7 +3,7 @@
 ### I wonder...
 
 A running list of open questions, things that you wonder about but:
-* you don't know how to ansswer
+* you don't know how to answer
 * you want to leave unanswered for now and see it get answered through play
 
 Use the list to help identify:

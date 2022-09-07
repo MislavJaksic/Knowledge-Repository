@@ -9,4 +9,6 @@ Features:
 * small app size
 * JavaScript interoperability
 
+Partly extracted to an external [repository](https://github.com/MislavJaksic/Elm-Tutorial).
+
 ### Elm specific folders
