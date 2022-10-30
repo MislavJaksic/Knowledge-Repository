@@ -8,6 +8,25 @@ Anything that isn't a PC. This includes ouls of the departed and animals too.
 
 ### Creating NPCs
 
+#### 1 Name
+
+#### 2 Concept
+
+#### 3 Impressions
+
+#### 4 Additional details
+
+##### Instinct
+
+In format: "to [do something]."
+If the NPC is:
+* a monster or threat, their instinct should bring them
+into conflict with others.
+* a follower, their instinct should cause trouble for the PC who leads them.
+* anyone else, their instinct should reflect their basic outlook and how they approach the world.
+
+Use an NPC's instinct to guide how they behave and react. If you're unsure what an NPC would do, look to their instinct. Have them do that.  
+
 ### Followers
 
 Followers are NPCs who generally take orders from a PC and follower their lead.  
@@ -48,12 +67,12 @@ Loyalty can be spent to overcome these limitations.
 If Loyalty isn't spend, make the PC convience them or resist freezing up or panicing.  
 
 Followers won't do what they are told if:
-* they’re angry, miserable, shocked, or otherwise overwhelmed
+* they're angry, miserable, shocked, or otherwise overwhelmed
 * the order is unreasonable, foolish, degrading, distasteful, etc.
-* the order goes against the follower’s instinct, tags, cost, or other traits
+* the order goes against the follower's instinct, tags, cost, or other traits
 
-Play up a follower’s instinct, tags, and traits as a source of trouble for the PCs.  
-Emphasizing a follower’s fear, foibles, and troublesome behaviors makes their Loyalty valuable.  
+Play up a follower's instinct, tags, and traits as a source of trouble for the PCs.  
+Emphasizing a follower's fear, foibles, and troublesome behaviors makes their Loyalty valuable.  
 
 #### Off-screne orders
 

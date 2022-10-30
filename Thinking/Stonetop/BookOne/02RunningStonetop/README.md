@@ -17,6 +17,8 @@ GM goals:
 * Punctuate the characters' lives with adventure
 * Play to find out what happens
 
+Everything you do should support one of these goals. If it doesn't, than do something else.
+
 ### The core loop
 
 1) Establish the situation
