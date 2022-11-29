@@ -2,8 +2,6 @@
 
 GitLab is a Git repository which covers the entire DevOps Lifecycle.  
 
-TODO: remap relative links!  
-
 ### Project
 
 #### Setup
@@ -58,8 +56,6 @@ pages:  # job name
   - pages  # run job only after pushing to the "pages" branch
 ```
 
-TODO: a gitlab-ci that covers "all" (most) functionalities: when:manual, when:delay, junit test reports ...
-
 #### Permissions
 
 If a GitLab project is private then:
@@ -79,16 +75,6 @@ Settings -> General -> Advanced -> Export
 New Project -> Import project -> select export type -> follow instructions ...
 ```
 
-[Project import/export](Docs/UseGitLab/OrganizeWorkWithProjects/17ProjectImportExport)
-
-#### Other
-
-[Web IDE](Docs/Projects/Repositories/WebIDE)
-
-[GitLab Pages](Docs/CICD/GitLabPages/CICD/GitLabPages)
-
-[JUnit reports](Docs/CICD/JUnitTestReports)
-
 ### Authentication
 
 #### Create an OAuth2/Access token
@@ -100,7 +86,7 @@ User Settings -> Access Tokens
 #### [Create and add your SSH public key](https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html)
 
 To use Git over SSH you need to:
-*  [generate and add an SSH key](Docs/User/General/SSH)
+*  generate and add an SSH key
 * setup Git over SSH
 
 Check if you are using Git over SSH:
@@ -109,7 +95,3 @@ $: git remote -v  # ->
   # origin	git@_domain:path/to/file.git (fetch)
   # origin	git@_domain:path/to/file.git (push)
 ```
-
-#### Deploy Token
-
-[Create and use a Deploy Token](Docs/Projects/DeployTokens)  

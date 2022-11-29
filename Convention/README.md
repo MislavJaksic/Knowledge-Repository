@@ -1,25 +1,27 @@
-## Convention
+## Knowledge Repository Notetaking Conventions and Scripts
 
-Conventions describe arbitrary rules used to harmonize the knowledge format.  
+Conventions describe rules that harmonize knowledge gathering and are set to avoid ambiguity and time waste.  
 
-###
+### Conventions
 
-Folders names are singular.
+#### Content
 
-### Language neutral code conventions
+```
+DO
+Write down personal insights, references and links.
+Write down concisely explained and often used commands.  
+Write down words and phrases for a lexicon.  
+Write down mental models, ideas and conclusions from books, blogs and videos.  
+Be concise and terse.  
 
-* [Clean Code](../Technology\Software\CodeQuality\CleanCode)
-* [Code Complete](../Technology\Software\CodeQuality\CodeComplete)
+DON'T
+Write down installation instructions since they change often.  
+Place ToDos you'll nenver come back to.
+Note a feature is for paid users only.  
+Mimic another website's knowledge structure.  
+```
 
-### Scripts
-
-Use scripts to:
-* align text (horizontally)
-* generate directory link list
-
-### GitHub conventions
-
-#### Folder conventions
+#### Folder
 
 ```
 DO
@@ -28,10 +30,10 @@ Explain extraction: Extracted to an external [repository]().
 
 DON'T
 Have special characters.
-Twenty character names.
+Twenty+ character names.
 ```
 
-#### Hyperlink conventions
+#### Hyperlink
 
 ```
 DO
@@ -43,7 +45,7 @@ DON'T
 [Absolute file](https://github.com/MislavJaksic/Knowledge-Repository/tree/master/Conventions/RelativeLink/README.md)
 ```
 
-#### Text conventions
+#### Text
 
 ```
 DO
@@ -55,9 +57,14 @@ Output comment:  # ->
 Long output comment:  # ->
   # -a Description-A
   # -b Description-B
-Follow the knowledge source structure.
 Horizontally align text if it fits the screen.
 
 DON'T
 Break up sentences if they are longer then X characters.
 ```
+
+### Scripts
+
+Use scripts to:
+* align text (horizontally)
+* generate directory link list

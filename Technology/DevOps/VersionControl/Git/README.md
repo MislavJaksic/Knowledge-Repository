@@ -2,6 +2,26 @@
 
 Git is a Distributed Version Control System (DVCS). It tracks file changes as a stream of snapshots.  
 
+### Branch Workflow
+
+* [github-flow](https://docs.github.com/en/get-started/quickstart/github-flow): simple, for small or web projects
+* [git-flow](https://nvie.com/posts/a-successful-git-branching-model/): complex, for when software is explicitly versioned or you need to support multiple versions of your software in the wild
+
+### Guides
+
+* [Git Immersion Tour](http://gitimmersion.com/index.html)
+
+### Lexicon
+```
+Master Branch: where the main code dwells, the production, the deployment code. You should never attempt to directly change the Master Branch.  
+Branch: a modified copy of the Master Branch. It is here that you can add new features or clean up the project.  
+Commit: the process of submitting changes to a Branch. It is made up of changes, a comment and a timeline.  
+Pull Request: a request for merging two Branches into a single Branch, most often a Master Branch. Pull Requests can be discussed and they have to be approved.  
+
+Merge: a process of combining two Branches into a single Branch.  
+Deploy: a phase just before merging when tests are run to insure compatibility and quality of the merging code.  
+```
+
 ### Install (Command Line) Git
 
 ```

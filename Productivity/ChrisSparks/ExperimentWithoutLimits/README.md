@@ -3,47 +3,37 @@
 Chapters stand on their own. Feel free to skip.  
 Invest. You only get what you put in.  
 
-### Goal Generation
+### Setting Goals
+
+#### Goal Generation
 
 Generate them through stories, values or taking the outside view.  
 Think big.  
 Use one of three types of prompts.  
 
-#### Life Story
-
 Write a life story.  
 Shift your thinking from happiness to what is most meaningful.  
-
-#### Values
 
 Prioritize your values.  
 How do you want to spend your days?  
 
-#### Take the Outside View
-
 Be objective.  
 How can you make the most in your current situation and with your current knowledge and skills?  
 
-### Goal Selection
-
-#### Minimize Opportunity Cost
+#### Goal Selection
 
 The lost value of an unselected goal when an alternative goal is selected.  
 
-#### Maximize Expected Value
-
 [Expected Value Calculator](https://docs.google.com/spreadsheets/d/1Lou-ujL8SBvkxqnpiXhnVGEPnHp3bk_Iw1CDrLOXjzU)  
 
-### Goal Framing
+#### Goal Framing
 
 `SMART` goal:
 * Specific: pinpoint what you want and how to achieve it
-* Measurable: create measurements to track your progress
-* Actionable: an input (not: "4% body fat", "get rich"; these are outcomes)
-* Rewarding: should be challenging and meaningful
-* Time-Based: has a clear endpoint or deadline
-
-#### Experiments
+* Measurable: create measurements to track your progress and illuminate opportunities to improve
+* Actionable: an input, an action under your control (not: "4% body fat", "get rich"; these are outcomes)
+* Rewarding: should be challenging and meaningful to stay the course
+* Time-Based: has a clear endpoint or deadline which creates urgency
 
 Think of your life as an experiment and your goals as hypotheses.  
 Commit for a month and then review them.  

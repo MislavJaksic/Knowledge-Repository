@@ -30,7 +30,7 @@ Everything you do should support one of these goals. If it doesn't, than do some
 * Frame the action: who?, when?, where?
 * Describe the environment: 3 strong impressions, smell, sound, sight, focusing on what matters
 * Give details and specifics: it'll give the situation texture; what's happening, who is doing what, where is everyone relative to everyone else, what can you sense
-* Ask questions, ask for input: don't ask them to make up key details only deatils that fit a theme, ask what they are feeling or experiencing or what they are doing or what they are thinking about
+* Ask questions, ask for input: don't ask them to make up key details, but prompt them for a detail that fits a theme; ask what they are feeling or experiencing or what they are doing or what they are thinking about
 * Portray NPCs and monsters: speak and describe, say how they respond to PCs
 * Answer questions, clarify: be honest and generous with truth and details; if the answer isn't clear to the PCs, tell them how they can find out
 
@@ -75,7 +75,7 @@ Your GM moves should inspire and empower you; they shouldn't constrain you. Don'
     * ask questions that assert details while asking for input
     * ask the characters to paint the scene for you
 * Be a fan of the player characters
-* Embrace the fantastic and the mundane: if the focus is on the mundane, add a dash of the fantastic and vice-versa
+* Embracekill the fantastic and the mundane: if the focus is on the mundane, add a dash of the fantastic and vice-versa
 * Exploit the setting guide
 * Respect your prep
 * Bring your characters to life
