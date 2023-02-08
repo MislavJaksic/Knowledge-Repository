@@ -2,17 +2,60 @@
 
 ### NPCs
 
-Anything that isn't a PC. This includes ouls of the departed and animals too.  
+Anything that isn't a PC: people, spirits, bounds entities, beasts like dogs.
+
+Many NPCs are threats or monsters who can be fought.
+
+If an NPC takes orders from a PC, deferring to them and generally doing what the PC says, then that NPC is a
+follower.  
+Players can trigger moves via their followers and followers can hold Loyalty that makes them more likely to do what a PC wants.  
 
 ### NPCs in play
 
+GM potrays them: what they say, how they feel, what they do as part of the core loop.  
+
+When you establish the situation you say what NPCs are there, what they look like, how they carry themselves.
+
+When you make a GM move, you can use an NPC to make it.  
+
+When resolving player actions, account for how the NPC react or are effected.  
+
+Portraying NPCs — framing scenes with them, describing them, making moves with them, saying how they react to PC actions—is a big part of running the game.  
+
+#### Modes of potrayal
+
 ### Creating NPCs
+
+Give your characters life: belivable, distinct, memorable, compelling.  
+
+You want PCs to care about NPCs and their fates.  
+
+You want NPCs to act with integrity and internal logic.  
 
 #### 1 Name
 
 #### 2 Concept
 
+Figure out who this person is.  
+What are the most obvious and important things about them?
+How old they are?
+Where are they from?
+If you had to describe them in just a few words, what would they be?
+
+Build on what's established
+
+Ask questions
+
+Assign memorable trait
+
 #### 3 Impressions
+
+Give three strong impressions about them, their surroundings or what's it like being near them.  
+
+Impressions should:
+* be short, simple, evocative
+* give less detail than you think you need, let PCs imagination fill in the rest
+* reflect or contrast the NPC's concept
 
 #### 4 Additional details
 
@@ -29,7 +72,7 @@ Use an NPC's instinct to guide how they behave and react. If you're unsure what 
 
 ### Followers
 
-Followers are NPCs who generally take orders from a PC and follower their lead.  
+Followers are NPCs who generally take orders from a PC and follow their lead.  
 GM ultimately decides what happens with them. However:  
 * they generally do what their PC say
 * Loyalty makes them easier to manage

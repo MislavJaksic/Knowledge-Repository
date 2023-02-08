@@ -22,12 +22,13 @@ $: poetry run python pwb.py redirect broken  # Fix broken redirects
 $: poetry run python pwb.py weblinkchecker -start:!  # Check dead links for the first time for all pages on the wiki
 $: poetry run python pwb.py weblinkchecker -repeat  # After the bot has checked some pages, run it on these pages again at a later time
 
-$: poetry run python pwb.py template -remove "Template-Name"  # Remove every occurrence of the template from every article
+$: poetry run python pwb.py template -cat:Category-Name -remove "Template-Name"  # Remove every occurrence of the template from pages in category
 $: poetry run python pwb.py template "Old-Template-Name" "New-Template-Name"  # Replace one template with the other
 
 $: poetry run python pwb.py replace -page:Page-Name-1..-page:Page-Name-N "Old-String" "New-String"  # Replace old with new string on selected pages
 $: poetry run python pwb.py replace -cat:Category-Name "Old-String" "New-String"  # Replace old with new string on pages in category
 $: poetry run python pwb.py replace -page:Page-Name-1..-page:Page-Name-N -regex "Find-Regex" "Replace-Regex"  # Replace old with new string on selected pages using regex
+$: poetry run python pwb.py replace -cat:Category-Name -regex "\| some-exact-words=.*\n \| " "| " "\| some-other-exact-words=.*\n \| " "| "  # How to replace a line with nothing without errors
 
 $: poetry run python pwb.py category add  # ToDo
 $: poetry run python pwb.py category add -to:Category-Name -redirect -page:Page-Name-1..-page:Page-Name-N  # Add category to a list of pages and follow redirects

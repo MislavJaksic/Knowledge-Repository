@@ -13,8 +13,10 @@ The GM:
 ### Your agenda
 
 GM goals:
-* Portray a rich and mysterious world
-* Punctuate the characters' lives with adventure
+* Portray a rich and mysterious world:
+    * Mundane concerns — crops, trade, weather, the opinions of your neighbors — are important.
+    * Fantastic elements are important, too, but they are strange and scary and poorly understood. The past sleeps unquietly. Questions abound.
+* Punctuate the characters' lives with adventure: PCs have lives to live, homes to take care of, families to feed. They have demands on their time. Your job is to make that stuff matter, but also to interrupt it with threats and opportunities
 * Play to find out what happens
 
 Everything you do should support one of these goals. If it doesn't, than do something else.
@@ -52,19 +54,31 @@ Everything you do should support one of these goals. If it doesn't, than do some
 
 #### Establish the situation
 
-* Frame the action: who?, when?, where?
-* Describe the environment: 3 strong impressions, smell, sound, sight, focusing on what matters
+* Frame the action: establish who, when and where; PC/NPC, place and time
+* Describe the environment: 3 strong impressions
+    * Senses like smell, sound or sight
+    * Emotions like grief or tension 
+    * Morality like dirty and desperate next to well-fed gentry
+    * Focus on what matters
 * Give details and specifics: it'll give the situation texture; what's happening, who is doing what, where is everyone relative to everyone else, what can you sense
-* Ask questions, ask for input: don't ask them to make up key details, but prompt them for a detail that fits a theme; ask what they are feeling or experiencing or what they are doing or what they are thinking about
-* Portray NPCs and monsters: speak and describe, say how they respond to PCs
+* Ask questions, ask for input
+    * Don't ask them to make up key details
+    * Prompt them for a detail that fits a theme
+    * Ask what they are feeling or experiencing or what they are doing or what they are thinking about
+* Portray NPCs and monsters
+    * NPCs: describe them, what they are doing, how thy are reacting, speak in their voice
+    * Monsters: desribe them, their size, movement, sounds, smells, what they are focused on
 * Answer questions, clarify: be honest and generous with truth and details; if the answer isn't clear to the PCs, tell them how they can find out
 
 #### Make a soft GM move
 
-Provoke action or increase tension by using a GM move.  
-Make something happen or describe what is in the process of happening, but give the PCs a chance to act.  
-Offer an opportunity or present options and prompt them to pick.  
-Use up their stuff, foreshadow trouble or add trouble.  
+It should either:
+* Provoke action
+    * Something bad is about to ahppen or in the process of happening, but PCs have a chance to react to it
+    * Offer an opportunity or present options and prompt them to pick
+    * In social scenes NPCs can say something vulnerable or emotional and look to a PC for a reaction
+* Increase tension
+    * Use up their stuff, foreshadow trouble or add trouble that can't be acted on right away
 
 #### "What do you do?"
 
@@ -76,8 +90,17 @@ Make it when a PC:
 * ignores a threat or trouble entirely; or
 * triggers a move but rolls a 6-
 
-You are establishing badness.  
+Establish badness:
+* Describe consequences
+* Say how things went wrong
+* Make the situation significantly worse
+
 It doesn't always mean that the PC has failed.  
+The badness might not even be directly connected to the action they took — it could simply follow directly on its heels.  
+
+A hard move should always establish badness, but you decide just how bad it is.  
+Use the situation, the fiction, the description of the player’s actions, and so forth to inform your hard moves.  
+Sometimes, a hard move isn’t much worse than a soft one.  
 
 #### Repeat
 
@@ -85,27 +108,62 @@ It doesn't always mean that the PC has failed.
 
 Whoever you're talking to right now is in the spotlight.
 
-The most obvious time to move the spotlight is after you resolve a PC's action.
+Move the spotlight:
+* after you resolve a PC's action - then make a soft GM move on a different character and talk to them
+* when a player freezes or stalls; resolve it later
+* when the PC does something that will take time
+* when they make a move and you're not sure how to resolve it; buy time by shifting to a different PC, then come back and resolve the move
 
 ### Scenes and loose play
+
+Scenes are zoomed-in.  
+
+Good scenes have a purpose:
+* What are the PCs trying to accomplish?
+* What are you trying to convey?
+* What questions are you hoping to answer?
+If a scene has no purpose, skip it!    
+
+Loose play is what happens between scenes.  
+
+Push loose play towards scenes.  
 
 ### Your GM moves
 
 Your GM moves should inspire and empower you; they shouldn't constrain you. Don't stress if your move isn't on the list.  
 
 * Announce trouble (future or offscreen)
+    * Soft - provoke reaction, create worry or crank up the tension
+    * Hard - turn a peaceful scene into a fight or conflict or make it clear that there will be strong consequences later
 * Reveal an unwelcome truth
+    * Soft - great for Know Things or Seek Insight, the answer is honest or interesting, but they don't have to be happy about it
+    * Hard - let them know a bad thing is true; twist the screws
 * Ask a provocative question
+    * Soft - ask the player a question that spurs a decision or response
+    * Hard - ask the player to author badness you asserted through the question
 * Put someone in a spot
+    * More aggressive Announcing trouble - do something now or it'll get ugly
 * Use up their resources
+    * Can be items, supplies, ammo, reputation, trust, loyalty, HP or similar
+    * Make it together with other GM Moves
 * Turn their move back on them
+    * Hard - flip the Move on them
 * Demonstrate a downside
-* Hurt someone: problematic injury or wound a PC or an NPC they care about, something more than just losing HP; take tags and the amount of damage into account; telegraph or demonstrate the danger if you are going to inflict a permanent debilitating wound
+    * Show the Move's limit or baggage or item's tag effect
+* Hurt someone
+    * More than losing HP: inflict a wound or problematic injury or debility based on tags, damage and fiction
+    * Announce permanent, disabling injuries before inflicting them
 * Separate them
+    * Split the party by putting obstacles or foes between them
 * Capture someone
+    * Soft - capture, but give a chance to react
+    * Hard - cut to them being bound, captured, dragged off
 * Offer an opportunity (with or without a cost)
-* Tell them the consequences/requirements (then ask)
-* Advance a countdown/grim portent
+    * Give them an opening, a chance to act
+* Tell them the consequences/requirements
+    * Use as an interrupt, to clarify, to set the stakes or force meaningful a decision or give a path forward or to make them pay to take an action
+* Advance towards impending doom
+    * Show that a grim portent of a hazard or threat has come to pass
 
 ### Your principles
 

@@ -16,7 +16,7 @@ On 6-:
 
 Advantage: 3d6 and discard the lowest  
 Disadvantage: 3d6 and discard the highest  
-Always apply the advantage/disadvantage to he main, highest die.  
+Always apply the advantage/disadvantage to the main, highest die.  
 
 Interesting move tid-bits:
 * Defy Danger: move of least prescedence

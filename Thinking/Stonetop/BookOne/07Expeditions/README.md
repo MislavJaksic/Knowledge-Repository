@@ -210,3 +210,4 @@ Return triumphant: feel this one out, but make sure PCs indeed return triumphant
     * tie into large story
     * for creatures include disposition or activity - what are they up to and how are they likely to react to the characters?
     * for any encounter, use it to show the characters the bigger picture
+7) Consider the weather, Make Camp, perilous area encounters, sites, dangers, discoveries, NPCs and followers
