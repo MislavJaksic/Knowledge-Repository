@@ -90,3 +90,15 @@ $: git merge Branch-Name  # merge Branch-Name into current branch
 # Note: a "recursive" strategy does a three-point merge (common ancestor, snapshot to merge into, snapshot to merge in)
 # Note: if there are conflicts, change file contents and use `git add/rm` until there are no unmerged paths and you can perform a `git commit`
 ```
+
+### Remove big or sensitive files
+
+Download a repository with `git` or `GitHub Desktop`.  
+
+Discover them with `discover_big_files.bash` script.  
+
+Download and use [BFG](https://rtyley.github.io/bfg-repo-cleaner/) to remove big or sensitive files.  
+
+Do `git push --force`.  
+
+Eveyone will have to redownload the repository.  
