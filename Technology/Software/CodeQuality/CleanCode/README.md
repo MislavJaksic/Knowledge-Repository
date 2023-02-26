@@ -184,6 +184,14 @@ TODO
 
 ### Smells and Heuristics
 
+#### General
+
+##### G23: Prefer Polymorphism to If/Else or Switch/Case
+
+Cases where functions are more volatile than types are rare.  
+
+"“"ONE SWITCH" rule: There may be no more than one switch statement for a given type of selection. The cases in that switch statement must create polymorphic objects that take the place of other such switch statements in the rest of the system.  
+
 TODO
 
 PATTERNS: abstract factory, special case pattern, adapter pattern, build operate check pattern, template method pattern, strategy pattern, decorator
