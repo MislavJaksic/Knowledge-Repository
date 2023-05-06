@@ -9,16 +9,19 @@ Conventions describe rules that harmonize knowledge gathering and are set to avo
 ```
 DO
 Write down personal insights, references and links.
-Write down concisely explained and often used commands.  
 Write down words and phrases for a lexicon.  
 Write down mental models, ideas and conclusions from books, blogs and videos.  
 Be concise and terse.  
+Pick a tool and get good at it.  
+Do a project, extract commonalities into a template.  
+Focus knowledge retention on insights, workflow, concepts, architecture, tooling, operational details and productivity.
 
 DON'T
 Write down installation instructions since they change often.  
-Place ToDos you'll nenver come back to.
+Place ToDos you'll never come back to.
 Note a feature is for paid users only.  
 Mimic another website's knowledge structure.  
+Go through documentation.
 ```
 
 #### Folder
@@ -62,9 +65,3 @@ Horizontally align text if it fits the screen.
 DON'T
 Break up sentences if they are longer then X characters.
 ```
-
-### Scripts
-
-Use scripts to:
-* align text (horizontally)
-* generate directory link list

@@ -199,7 +199,7 @@ Your GM moves should inspire and empower you; they shouldn't constrain you. Don'
 * Involve everyone
 * Take breaks
 * Engage players in worldbuilding
-* Sometimes, disclaim descision making: put the outcome in the PCs hands, discuss and outcome or let the dice decide
+* Sometimes, disclaim descision making: put the outcome in the PCs hands, discuss the outcome or let the dice decide
 
 #### What not to do
 

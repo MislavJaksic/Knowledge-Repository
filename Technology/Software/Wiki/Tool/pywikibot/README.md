@@ -28,7 +28,12 @@ $: poetry run python pwb.py template "Old-Template-Name" "New-Template-Name"  # 
 $: poetry run python pwb.py replace -page:Page-Name-1..-page:Page-Name-N "Old-String" "New-String"  # Replace old with new string on selected pages
 $: poetry run python pwb.py replace -cat:Category-Name "Old-String" "New-String"  # Replace old with new string on pages in category
 $: poetry run python pwb.py replace -page:Page-Name-1..-page:Page-Name-N -regex "Find-Regex" "Replace-Regex"  # Replace old with new string on selected pages using regex
-$: poetry run python pwb.py replace -cat:Category-Name -regex "\| some-exact-words=.*\n \| " "| " "\| some-other-exact-words=.*\n \| " "| "  # How to replace a line with nothing without errors
+$: poetry run python pwb.py replace -cat:Category-Name -regex "\Wan-exact-word=\w*\n(\W)" "\1" "\Wan-exact-word=\w*\n(\W)" "\1"  # Delete a line with pipe character without pipe errors
+$: poetry run python pwb.py replace -cat:Category-Name -regex "\n[\W\s]+<Chars>.*" " "  # Replace template line with nothing
+$: poetry run python pwb.py replace -cat:Category-Name -regex "\W<Chars>\W([\w\s]+)\W<Chars>\n\W(.*)\n(\W).*" "\3<Chars>\3\1\3<Chars>\n\3\2\n\3<Chars>\3\1<Chars>" # Replace table entry with template and pipe character
+
+
+
 
 $: poetry run python pwb.py category add  # ToDo
 $: poetry run python pwb.py category add -to:Category-Name -redirect -page:Page-Name-1..-page:Page-Name-N  # Add category to a list of pages and follow redirects
