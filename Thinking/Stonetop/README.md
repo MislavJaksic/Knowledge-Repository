@@ -58,7 +58,7 @@ It should either:
 * Increase tension
     * Use up their stuff, foreshadow trouble or add trouble that can't be acted on right away
 
-#### Your GM moves
+### Your GM moves
 
 Your GM moves should inspire and empower you; they shouldn't constrain you. Don't stress if your move isn't on the list.  
 
@@ -95,7 +95,7 @@ Your GM moves should inspire and empower you; they shouldn't constrain you. Don'
 * Advance towards impending doom
     * Show that a grim portent of a hazard or threat has come to pass
 
-#### Your principles
+### Your principles
 
 * Follow the rules
 * Begin and end with the fiction
@@ -111,7 +111,7 @@ Your GM moves should inspire and empower you; they shouldn't constrain you. Don'
     * ask questions that assert details while asking for input
     * ask the characters to paint the scene for you
 * Be a fan of the player characters
-* Embracekill the fantastic and the mundane: if the focus is on the mundane, add a dash of the fantastic and vice-versa
+* Embrace the fantastic and the mundane: if the focus is on the mundane, add a dash of the fantastic and vice-versa
 * Exploit the setting guide
 * Respect your prep
 * Bring your characters to life
@@ -120,7 +120,7 @@ Your GM moves should inspire and empower you; they shouldn't constrain you. Don'
 * Let things breathe: avoid following the PCs day to day, hour to hour, allow straches of time to pass between adventures
 * Let things burn: play to find out what happens, nothing is sacred, protect no one and nothing
 
-#### Other things to do
+### Other things to do
 
 * Takes notes: NPC names, historical notes, interesting details, summary of events
 * Draw maps: and lots of them
@@ -129,7 +129,7 @@ Your GM moves should inspire and empower you; they shouldn't constrain you. Don'
 * Involve everyone
 * Take breaks
 * Engage players in worldbuilding
-* Sometimes, disclaim descision making: put the outcome in the PCs hands, discuss and outcome or let the dice decide
+* Sometimes, disclaim descision making: put the outcome in the PCs hands, discuss the outcome or let the dice decide
 
 #### What not to do
 
@@ -138,8 +138,19 @@ Your GM moves should inspire and empower you; they shouldn't constrain you. Don'
 * Tell them to roll just because
 * Stop making GM moves
 
-#### After each session
+### GMing is a practice
 
+Even if you are experienced running Dungeon World, you may need to unlearn certain habits.  
+
+Ask players for feedback:
+* what did they enjoy?
+* what felt rocky?
+* what do you want to see more next session?
+
+Ask for clarification if you need it, but don't get defensive and don't try to explain yourself.  
+Try to be humble and receptive.  
+
+After each session:
 * Review your agenda:
     * Did the world feel flat, hollow, arbitrary?
     * Did you let things drag?
@@ -157,10 +168,16 @@ Your GM moves should inspire and empower you; they shouldn't constrain you. Don'
     * Did you miss any moves getting triggered?
     * Did you call for a player move, even though its trigger wasn't really met?
 
-#### Prep
+### Prep
 
-Gives you interesting stuff to say.  
+* To give you interesting stuff to say
+* To speed up play, and not make everyone wait while you decide what happens
+* To shore up your weaknesses; if you always forget about the PCs' followers, prep what they might do or say
+* To hone your craft, make it more consistent or thematic, it flows better, it builds on stuff that came up earlier
+* To give yourself permission to play hard and visit badness on the PCs
+* Prep only as much as you find useful and valuable
 
+Consider prepping:
 * Threats: ongoing, recurring problems that cause trouble for the PCs, things that are going to get worse if left unchecked
 * Hooks: when you want to push the PCs into the field with a threat or an opportunity
 * Expeditions: prepare your choices for the Chart a Course move; drawing a map, prepping points of interest and roughly imagining a few encounters
@@ -168,6 +185,10 @@ Gives you interesting stuff to say.
 * Dangers: hazards and monsters and hostile NPCs
 * Discoveries: puzzles, clues, mysteries, treasures, arcana
 * NPCs: think about their names, the questions you'll ask about them, their defining traits, how you'll describe them and potray them
+
+It doesn't go against playing to find out what happens.  
+You're prepping things that give you interesting stuff to say.  
+Prepping involves laying a groundwork to help you improvise.
 
 See [RunningStonetop](BookOne\02RunningStonetop).  
 

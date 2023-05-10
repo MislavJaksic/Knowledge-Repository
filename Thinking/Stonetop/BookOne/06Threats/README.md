@@ -1,6 +1,6 @@
 ## Threats
 
-A threat is an ongoing problem that will cause trouble for the PCs if left unchecked. It has to be worsening or an recurring issue. Don’t bother writing up a threat unless you know it’s going to be a big deal.  
+A threat is an ongoing problem that will cause trouble for the PCs if left unchecked. It has to be worsening or an recurring issue. Don't bother writing up a threat unless you know it's going to be a big deal.  
 
 ### When to write up threats
 

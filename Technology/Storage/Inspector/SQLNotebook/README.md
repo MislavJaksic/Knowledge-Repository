@@ -1,3 +1,3 @@
 ## [SQL Notebook](https://sqlnotebook.com/)
 
-ToDo
+Jupyter notebook for SQLite databases.  

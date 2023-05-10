@@ -59,11 +59,3 @@ Figure out:
 * how do you submit a new card?
 * how will you make all cards relatively uniform in effort?
 * what is the delivery and commitment point?
-
-### [Work in progress limits](https://www.atlassian.com/agile/kanban/wip-limits)
-
-### [Kanban or Scrum](https://www.atlassian.com/agile/kanban/kanban-vs-scrum)
-
-### [Kanplan](https://www.atlassian.com/agile/kanban/kanplan)
-
-### [Kanban cards](https://www.atlassian.com/agile/kanban/cards)
