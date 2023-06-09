@@ -21,8 +21,9 @@ Lambda: max function time is 15 min
 
 Recommended way:
 * use IAM IC (previously AWS SSO)
-    * Follow [AWS Programmatic Access](https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds.html#access-keys-and-secret-access-keys) and use `aws configure sso`
+    * Follow [AWS Programmatic Access](https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds.html#access-keys-and-secret-access-keys) and use `aws configure sso --profile <profile-name>` and leave `SSO session name (Recommended):` empty for legacy formatted config
     * On Windows: `setx AWS_PROFILE "<profile-name>"`, on Linux: `export AWS_PROFILE="<profile-name>"` to set the named profile
     * Check: `aws configure list`
     * Login: `aws login --profile <profile-name>`
+    * Authenticate: `aws/sam <command> --profile <profile-name>`
 

@@ -23,6 +23,20 @@ Component resource - abstracts and encapsulates building blocks
 Pulumi API - for creating infrastructure platforms other developers can use
 ```
 
+### AWS Credentials
+
+Known bug with AWS SSO Session: [support sso-session](https://github.com/pulumi/pulumi-aws/issues/2272)
+Resolved with `aws configure sso` and leaving `SSO session name (Recommended):` empty:
+```
+[profile cli-admin]
+sso_start_url = https://<value>.awsapps.com/start#
+sso_region = <value>
+sso_account_id = <value>
+sso_role_name = <value>
+region = <value>
+output = json
+```
+
 ### Import
 
 `pulumi import <package>:<module>:<typename> <pulumi-name> <resource-provider-name>`
