@@ -2,20 +2,21 @@
 
 [The Open Guide to Amazon Web Services](https://github.com/open-guides/og-aws)
 
+### Quick notes
+
 ```
-IAM: AWS permissions only
 IAM IC: AWS permission, programmatic access
-Cognito: user groups, user sign-up/out, user domai, authentication/authorization, JWT tokens, 
+Cognito: user groups, user sign-up/out, user domai, authentication/authorization, JWT tokens
 API Gateway: expose data
 CloudFormation: like Helm Chart, stacks are connected resources
 CloudWatch: for observability
-SNS: send emails, SMS, ...
 S3: stores files
-DynamoDB: all values are string, can't perform aggregate functions, PartiSQL can only do SELECT, FROM and WHERE, scan operation only fetch 1 MB at a time which requires lenghty and quirky pagination
 Lambda: max function time is 15 min
 ```
 
-### IAM
+### IAM: Identity and Access Management
+
+Answers: who can access what.
 
 #### Configuring Programmatic Access
 
@@ -27,3 +28,13 @@ Recommended way:
     * Login: `aws login --profile <profile-name>`
     * Authenticate: `aws/sam <command> --profile <profile-name>`
 
+### DynamoDB
+
+All values are string.  
+Can't perform aggregate functions.  
+PartiSQL can only do SELECT, FROM and WHERE.  
+Scan operation only fetch 1 MB at a time which requires lenghty and quirky pagination.  
+
+### SNS: Simple Notification Service
+
+For sending text messages. If you want to send pretty HTML tables, use SES.  

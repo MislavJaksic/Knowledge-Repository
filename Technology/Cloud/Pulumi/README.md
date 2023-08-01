@@ -1,5 +1,7 @@
 ## Pulumi
 
+Prefer Terraform over Pulumi due to maturity and documentation.  
+
 ### Lexicon
 
 ```
