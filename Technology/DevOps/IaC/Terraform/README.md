@@ -4,6 +4,12 @@
 
 Pick Pycharm over VS Code because it has a much better working plugin.  
 
+### Backend State
+
+#### S3
+
+[Bootstrapping](https://stackoverflow.com/questions/47913041/initial-setup-of-terraform-backend-using-terraform)
+
 ### terraform-aws-modules/lambda
 
 [RuntimeError: Python interpreter version equal to defined lambda runtime ...](https://github.com/terraform-aws-modules/terraform-aws-lambda/issues/452)

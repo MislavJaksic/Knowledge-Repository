@@ -34,7 +34,11 @@ All values are string.
 Can't perform aggregate functions.  
 PartiSQL can only do SELECT, FROM and WHERE.  
 Scan operation only fetch 1 MB at a time which requires lenghty and quirky pagination.  
+Cannot rename table. Must use backup or import.  
+Import can only be done when creating a new empty table.  
+Importing into existing tables can be done using Lambda.  
 
 ### SNS: Simple Notification Service
 
 For sending text messages. If you want to send pretty HTML tables, use SES.  
+Cannot customize message branding.  
